@@ -39,14 +39,26 @@ export default async function CategoryPage({ params }: PageProps) {
     <div className="container mx-auto px-4 py-8">
       <Breadcrumbs links={[{ href: '/', text: 'Home' }, { href: '/shop', text: 'Shop' }]} currentPage={category.name} />
       <h1 className="text-4xl font-bold my-8">{category.name} Collection</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProducts.map((product) => (
-          <div key={product.slug} className="border rounded-xl p-4 shadow-sm">
-            <h2 className="font-bold text-xl mb-4">{product.name}</h2>
-            <Link href={`/shop/product/${product.slug}`} className="text-pink-600 hover:underline">
-              View Product
-            </Link>
-          </div>
+          <Link key={product.slug} href={`/shop/product/${product.slug}`} className="group border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="relative h-72 w-full bg-gray-100">
+              {product.images?.[0] && (
+                <Image 
+                  src={`/images/products/${product.images[0].url}`} 
+                  alt={product.images[0].alt || product.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform"
+                  unoptimized 
+                />
+              )}
+            </div>
+            <div className="p-4">
+              <h2 className="font-bold text-xl mb-2">{product.name}</h2>
+              <span className="text-pink-600 font-semibold">View Details →</span>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
