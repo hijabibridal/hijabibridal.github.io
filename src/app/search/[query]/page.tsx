@@ -5,6 +5,12 @@ type PageProps = {
   params: { query: string | string[] };
 };
 
+// 1. ADDED: This function is required for GitHub Pages (Static Export)
+// It tells Next.js not to pre-build any search result pages at build time.
+export function generateStaticParams() {
+  return [];
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -14,15 +20,16 @@ export async function generateMetadata({
   const decodedQuery = decodeURIComponent(query);
   
   return {
-    title: `Search: ${decodedQuery} - Pet Gadget Insider`,
-    description: `Search results for "${decodedQuery}" on Pet Gadget Insider`,
+    // Updated titles to match your USA Bridal focus
+    title: `Search: ${decodedQuery} - Hijabi Bridal`,
+    description: `Search results for "${decodedQuery}" on Hijabi Bridal`,
     openGraph: {
-      title: `Search: ${decodedQuery} - Pet Gadget Insider`,
-      description: `Find the best pet gadgets related to ${decodedQuery}`,
+      title: `Search: ${decodedQuery} - Hijabi Bridal`,
+      description: `Find the best bridal accessories related to ${decodedQuery}`,
     },
     twitter: {
-      title: `Search: ${decodedQuery} - Pet Gadget Insider`,
-      description: `Discover pet gadgets for ${decodedQuery}`,
+      title: `Search: ${decodedQuery} - Hijabi Bridal`,
+      description: `Discover bridal wear for ${decodedQuery}`,
     },
     robots: {
       index: true,

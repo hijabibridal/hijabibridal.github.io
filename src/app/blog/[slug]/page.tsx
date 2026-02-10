@@ -8,6 +8,10 @@ import type { Metadata, ResolvingMetadata } from "next";
 import { getKeywords } from "@/lib/seo-utils";
 import Link from "next/link";
 
+export function generateStaticParams() {
+  return []; // Tells the builder there are no pre-generated search results
+}
+
 // Type assertion for blogData
 const typedBlogData = blogData as {
   mainCategories: {

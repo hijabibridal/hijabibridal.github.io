@@ -3,6 +3,10 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
 import type { Metadata } from 'next'
 
+export function generateStaticParams() {
+  return []; // Tells the builder there are no pre-generated search results
+}
+
 interface Product {
   name: string
   slug: string
