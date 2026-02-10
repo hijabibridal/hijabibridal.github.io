@@ -41,10 +41,12 @@ export default async function ProductPage({ params }: PageProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
         {/* LEFT COLUMN: IMAGES */}
         <div>
+          {/* Main Image */}
           <div className="relative aspect-square w-full rounded-2xl overflow-hidden border bg-white">
             {product.images?.[0] && (
               <Image
-                src={`/images/products/${product.images[0].url}`}
+                // CORRECTED PATH: Removed 'products/' subfolder
+                src={`/images/${product.images[0].url}`}
                 alt={product.images[0].alt || product.name}
                 fill
                 className="object-contain"
@@ -59,7 +61,8 @@ export default async function ProductPage({ params }: PageProps) {
             {product.images?.map((img, index) => (
               <div key={index} className="relative h-24 w-24 flex-shrink-0 border rounded-lg overflow-hidden bg-gray-50">
                 <Image
-                  src={`/images/products/${img.url}`}
+                  // CORRECTED PATH: Removed 'products/' subfolder
+                  src={`/images/${img.url}`}
                   alt={img.alt || `${product.name} thumbnail ${index + 1}`}
                   fill
                   className="object-cover"
@@ -80,14 +83,15 @@ export default async function ProductPage({ params }: PageProps) {
           {/* Amazon Button */}
           <div className="mt-10">
             <a 
-              href={product.images[0]?.amazonLink || "#"} 
+              // Pulls the Amazon link from the first image object in your JSON
+              href={product.images[0]?.amazon_link || "#"} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-center shadow-md transition-all w-full md:w-auto"
+              className="inline-block bg-[#FF9900] hover:bg-[#e68a00] text-white font-bold py-4 px-8 rounded-full text-center shadow-md transition-all w-full md:w-auto"
             >
               Check Price on Amazon
             </a>
-            <p className="text-xs text-gray-500 mt-2 text-center md:text-left">
+            <p className="text-xs text-gray-500 mt-2 text-center md:text-left italic">
               * As an Amazon Associate, we earn from qualifying purchases.
             </p>
           </div>

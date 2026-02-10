@@ -46,7 +46,8 @@ export default async function CategoryPage({ params }: PageProps) {
             <div className="relative h-72 w-full bg-gray-100">
               {product.images?.[0] && (
                 <Image 
-                  src={`/images/products/${product.images[0].url}`} 
+                  // FIXED: Path changed to /images/ to match your public folder
+                  src={`/images/${product.images[0].url}`} 
                   alt={product.images[0].alt || product.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform"

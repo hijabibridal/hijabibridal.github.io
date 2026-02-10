@@ -1,58 +1,32 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import SearchBar from './SearchBar';
 
 export default function Header() {
-  // Mobile menu items (same as desktop for consistency)
-  const mobileMenuItems = [
-    { name: 'Pet Supplies Reviews', path: '/blog' },
+  const menuItems = [
+    { name: 'Shop', path: '/shop' },
+    { name: 'Bride and Groom Guide', path: '/blog' }, // Updated Name
     { name: 'FAQ', path: '/faq' },
   ];
 
   return (
-    <header className="bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-2">
-        {/* Mobile Horizontal Menu (shows only on mobile) */}
-        <div className="md:hidden mb-2 overflow-x-auto">
-          <nav className="flex space-x-4 py-2">
-            {mobileMenuItems.map((item) => (
-              <Link 
-                key={item.path}
-                href={item.path}
-                className="whitespace-nowrap text-gray-700 hover:text-blue-600 font-medium text-sm"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        {/* Single Row Layout */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Left Side - Logo and Nav */}
-          <div className="flex items-center space-x-6 w-full md:w-auto">
-            {/* Logo */}
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          
+          {/* Logo - Updated Branding */}
+          <div className="flex items-center space-x-8 w-full md:w-auto justify-between md:justify-start">
             <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/images/Logo/pet-gadget-insider-logo.png"
-                alt="Pet Gadget Insider"
-                width={300}
-                height={100}
-                priority
-                className="h-auto"
-                style={{
-                  minWidth: '280px',
-                }}
-              />
+              <div className="text-2xl font-bold text-pink-600 tracking-tight uppercase">
+                HIJABI BRIDAL
+              </div>
             </Link>
             
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-4">
-              {mobileMenuItems.map((item) => (
+            <nav className="hidden md:flex space-x-6">
+              {menuItems.map((item) => (
                 <Link 
                   key={item.path}
                   href={item.path}
-                  className="text-gray-700 hover:text-blue-600 font-medium text-base"
+                  className="text-gray-600 hover:text-pink-600 font-medium transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -60,15 +34,10 @@ export default function Header() {
             </nav>
           </div>
 
-          {/* Right Side - Search Bar */}
-          <div className="hidden md:block w-full md:w-auto">
+          {/* Search Bar */}
+          <div className="w-full md:w-80">
             <SearchBar />
           </div>
-        </div>
-
-        {/* Mobile Search */}
-        <div className="mt-2 md:hidden">
-          <SearchBar />
         </div>
       </div>
     </header>
