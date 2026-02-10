@@ -7,8 +7,7 @@ type PageProps = {
 
 /**
  * Required for GitHub Pages (Static Export).
- * This tells Next.js not to pre-build any search result pages at build time,
- * allowing the search to function as a client-side feature.
+ * This tells Next.js not to pre-build any search result pages at build time.
  */
 export function generateStaticParams() {
   return [];
@@ -34,7 +33,7 @@ export async function generateMetadata({
       description: `Discover bridal wear for ${decodedQuery}`,
     },
     robots: {
-      index: false, // Standard practice to keep search results out of search engines
+      index: false,
       follow: true
     }
   };
