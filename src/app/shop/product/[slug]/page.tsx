@@ -1,17 +1,14 @@
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import ProductGallery from '@/components/ProductGallery'
+import Script from 'next/script'
 
-type PageProps = {
-  params: Promise<{ slug: string }>;
-};
+type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return productData.products.map((product) => ({
-    slug: product.slug,
-  }));
+  return productData.products.map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -19,82 +16,103 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return { title: 'Product Not Found' };
 
+  const siteUrl = 'https://hijabibridal.github.io'; 
+  const imageUrl = `${siteUrl}/images/${product.images[0]?.url}`;
+
   return {
     title: product.title_tag || product.name,
     description: product.meta_description,
+    openGraph: {
+      title: product.title_tag || product.name,
+      description: product.meta_description,
+      images: [{ url: imageUrl }],
+    },
   };
 }
 
 export default async function ProductPage({ params }: PageProps) {
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
-
   if (!product) notFound();
+
+  const isGroom = product.mainCategorySlugs.includes('groom');
+
+  const AmazonButton = ({ className }: { className?: string }) => {
+    if (isGroom) return null;
+    return (
+      <a 
+        href={product.images[0]?.amazonLink || "#"} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className={`inline-block bg-[#FF1493] hover:bg-[#C71585] text-white font-black py-4 px-10 rounded-full shadow-lg transition-all uppercase tracking-widest text-sm text-center ${className}`}
+      >
+        Shop This Item on Amazon
+      </a>
+    );
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
+      {product.FAQ_schema && (
+        <Script id="product-schema" type="application/ld+json" strategy="beforeInteractive">
+          {product.FAQ_schema}
+        </Script>
+      )}
+
       <Breadcrumbs 
         links={[{ href: '/', text: 'Home' }, { href: '/shop', text: 'Shop' }]} 
         currentPage={product.name} 
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
-        {/* LEFT COLUMN: IMAGES */}
-        <div>
-          {/* Main Image */}
-          <div className="relative aspect-square w-full rounded-2xl overflow-hidden border bg-white">
-            {product.images?.[0] && (
-              <Image
-                // CORRECTED PATH: Removed 'products/' subfolder
-                src={`/images/${product.images[0].url}`}
-                alt={product.images[0].alt || product.name}
-                fill
-                className="object-contain"
-                unoptimized
-                priority
-              />
-            )}
-          </div>
+        <ProductGallery images={product.images} productName={product.name} />
 
-          {/* Thumbnails Row */}
-          <div className="flex gap-4 mt-4 overflow-x-auto pb-2">
-            {product.images?.map((img, index) => (
-              <div key={index} className="relative h-24 w-24 flex-shrink-0 border rounded-lg overflow-hidden bg-gray-50">
-                <Image
-                  // CORRECTED PATH: Removed 'products/' subfolder
-                  src={`/images/${img.url}`}
-                  alt={img.alt || `${product.name} thumbnail ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* RIGHT COLUMN: DETAILS */}
         <div className="flex flex-col">
-          <h1 className="text-4xl font-bold text-gray-900">{product.name}</h1>
-          <div className="mt-6 prose text-gray-700">
-            <p className="text-lg leading-relaxed">{product.description}</p>
+          {/* BOLDED HEADER */}
+          <h1 className="text-4xl font-black text-gray-900 leading-tight uppercase tracking-tighter mb-4">
+            {product.name}
+          </h1>
+
+          <AmazonButton className="mt-2" />
+
+          <hr className="my-8 border-pink-50" />
+
+          {/* FORMATTED DESCRIPTION */}
+          <div className="prose prose-pink max-w-none">
+            <h3 className="text-2xl font-black text-gray-800 mb-6 uppercase tracking-wide">
+              Product Details
+            </h3>
+            
+            {/* Targeting the first paragraph (Amazon link part) via CSS 
+              and ensuring HTML from your JSON renders correctly.
+            */}
+            <div 
+              className="text-gray-700 leading-relaxed text-lg 
+                         [&>p:first-of-type]:font-bold [&>p:first-of-type]:text-pink-700 
+                         [&_a]:text-pink-600 [&_a]:underline [&_a]:font-bold"
+              dangerouslySetInnerHTML={{ __html: product.description }}
+            />
           </div>
 
-          {/* Amazon Button */}
-          <div className="mt-10">
-            <a 
-              // Pulls the Amazon link from the first image object in your JSON
-              href={product.images[0]?.amazon_link || "#"} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-[#FF9900] hover:bg-[#e68a00] text-white font-bold py-4 px-8 rounded-full text-center shadow-md transition-all w-full md:w-auto"
-            >
-              Check Price on Amazon
-            </a>
-            <p className="text-xs text-gray-500 mt-2 text-center md:text-left italic">
-              * As an Amazon Associate, we earn from qualifying purchases.
-            </p>
-          </div>
+          <AmazonButton className="mt-10" />
+
+          {/* BOLDED FAQ SECTION */}
+          {product.FAQ_schema && (
+            <div className="mt-12 p-8 bg-pink-50 rounded-3xl border border-pink-100">
+              <h3 className="text-2xl font-black text-pink-600 mb-6 uppercase tracking-tighter">
+                Common Questions
+              </h3>
+              <div className="space-y-6">
+                {JSON.parse(product.FAQ_schema).map((item: any, i: number) => (
+                  <div key={i} className="border-b border-pink-100 pb-4 last:border-0">
+                    {/* BOLDED QUESTION */}
+                    <p className="font-black text-gray-900 text-lg">Q: {item.name}</p>
+                    <p className="text-gray-700 mt-2">A: {item.acceptedAnswer.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
