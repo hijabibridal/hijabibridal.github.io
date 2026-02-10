@@ -2,14 +2,19 @@ import { Metadata } from 'next';
 import SearchResults from '@/components/SearchResults';
 
 type PageProps = {
-  params: { query: string | string[] };
+  params: Promise<{ query: string | string[] }>;
 };
 
-// Forces Next.js to treat this as a static export route
+// This is critical for static export: it tells Next.js not to attempt
+// to generate any dynamic paths beyond what is in generateStaticParams.
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return []; 
+/**
+ * Required for GitHub Pages (Static Export).
+ * We return an empty array because search is handled on the client-side.
+ */
+export async function generateStaticParams() {
+  return [];
 }
 
 export async function generateMetadata({
