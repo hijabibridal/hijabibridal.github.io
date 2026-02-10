@@ -2,17 +2,23 @@ import { Metadata } from 'next';
 import SearchResults from '@/components/SearchResults';
 
 type PageProps = {
-  params: Promise<{ query: string | string[] }>;
+  params: Promise<{ query: string }>;
 };
 
-// Required for Next.js 15 static export with dynamic routes
+/**
+ * THE PLACEHOLDER:
+ * This tells Next.js to create a static page at /search/results/
+ * This prevents the 404 error during the GitHub build.
+ */
 export async function generateStaticParams() {
-  return [{ query: 'results' }]; // Returns a placeholder to satisfy the builder
+  return [
+    { query: 'results' } 
+  ];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { query } = await params;
-  const decodedQuery = decodeURIComponent(Array.isArray(query) ? query[0] : query || "");
+  const decodedQuery = decodeURIComponent(query || "");
   
   return {
     title: `Search: ${decodedQuery} - Hijabi Bridal`,
@@ -23,7 +29,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function SearchPage({ params }: PageProps) {
   const { query } = await params;
-  const decodedQuery = decodeURIComponent(Array.isArray(query) ? query[0] : query || "");
   
-  return <SearchResults query={decodedQuery} />;
+  // We decode the URL query (e.g., "Pink%20Hijab" becomes "Pink Hijab")
+  const decodedQuery = decodeURIComponent(query || "");
+  
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <SearchResults query={decodedQuery} />
+    </div>
+  );
 }
