@@ -4,6 +4,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 
+export function generateStaticParams() {
+  // This tells the builder: "For now, don't worry about pre-building any specific categories."
+  return []; 
+}
+
 interface Product {
   name: string
   slug: string
