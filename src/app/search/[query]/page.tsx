@@ -7,7 +7,8 @@ type PageProps = {
 
 /**
  * Required for GitHub Pages (Static Export).
- * This tells Next.js not to pre-build any search result pages at build time.
+ * Returns an empty array to tell the builder not to pre-generate 
+ * any search results at build time.
  */
 export function generateStaticParams() {
   return [];
