@@ -1,3 +1,4 @@
+// Force Cache Refresh - Hijabi Bridal Search Fix
 import { Metadata } from 'next';
 import SearchResults from '@/components/SearchResults';
 
@@ -5,11 +6,7 @@ type PageProps = {
   params: { query: string | string[] };
 };
 
-/**
- * Required for GitHub Pages (Static Export).
- * Returns an empty array to tell the builder not to pre-generate 
- * any search results at build time.
- */
+// This export is required for GitHub Pages static export
 export function generateStaticParams() {
   return [];
 }
@@ -28,10 +25,6 @@ export async function generateMetadata({
     openGraph: {
       title: `Search: ${decodedQuery} - Hijabi Bridal`,
       description: `Find the best bridal accessories related to ${decodedQuery}`,
-    },
-    twitter: {
-      title: `Search: ${decodedQuery} - Hijabi Bridal`,
-      description: `Discover bridal wear for ${decodedQuery}`,
     },
     robots: {
       index: false,
