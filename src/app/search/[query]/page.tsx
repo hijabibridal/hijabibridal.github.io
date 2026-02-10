@@ -1,20 +1,17 @@
 import { Metadata } from 'next';
 import SearchResults from '@/components/SearchResults';
+import { notFound } from 'next/navigation';
 
 type PageProps = {
   params: Promise<{ query: string | string[] }>;
 };
 
-// This is critical for static export: it tells Next.js not to attempt
-// to generate any dynamic paths beyond what is in generateStaticParams.
-export const dynamicParams = false;
-
 /**
- * Required for GitHub Pages (Static Export).
- * We return an empty array because search is handled on the client-side.
+ * FIX: Next.js 15 requires at least one value in the array 
+ * for static exports to succeed.
  */
 export async function generateStaticParams() {
-  return [];
+  return [{ query: 'results' }]; 
 }
 
 export async function generateMetadata({
@@ -24,15 +21,13 @@ export async function generateMetadata({
   const query = Array.isArray(resolvedParams.query) 
     ? resolvedParams.query[0] 
     : resolvedParams.query || "";
+  
   const decodedQuery = decodeURIComponent(query);
   
   return {
     title: `Search: ${decodedQuery} - Hijabi Bridal`,
     description: `Search results for "${decodedQuery}" on Hijabi Bridal`,
-    robots: {
-      index: false,
-      follow: true
-    }
+    robots: { index: false, follow: true }
   };
 }
 
@@ -41,6 +36,9 @@ export default async function SearchPage({ params }: PageProps) {
   const query = Array.isArray(resolvedParams.query) 
     ? resolvedParams.query[0] 
     : resolvedParams.query || "";
+
+  // Optional: If someone visits the literal placeholder, you can handle it
+  // but usually, it's fine to just let the SearchResults handle it.
   
   return <SearchResults query={decodeURIComponent(query)} />;
 }
