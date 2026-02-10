@@ -1,10 +1,13 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
 import type { Metadata } from 'next'
 
+// Required for GitHub Pages static export
 export function generateStaticParams() {
-  return []; // Tells the builder there are no pre-generated search results
+  // Returns an empty array to skip pre-building every product page during the build
+  return []; 
 }
 
 interface Product {
@@ -24,17 +27,17 @@ interface Product {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const product = productData.products.find((p: Product) => p.slug === params.slug)
+  const product = (productData.products as Product[]).find((p) => p.slug === params.slug)
   if (!product) return { title: 'Product Not Found' }
 
   return {
-    title: product.title_tag || product.name,
+    title: `${product.title_tag || product.name} | Hijabi Bridal`,
     description: product.meta_description,
   }
 }
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = productData.products.find((p: Product) => p.slug === params.slug)
+  const product = (productData.products as Product[]).find((p) => p.slug === params.slug)
 
   if (!product) {
     notFound()
@@ -48,7 +51,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       <Breadcrumbs 
         links={[
           { href: '/', text: 'Home' },
-          { href: '/blog', text: 'Bridal Resources' },
+          { href: '/shop', text: 'Bridal Shop' },
         ]} 
         currentPage={product.name} 
       />
@@ -56,12 +59,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
         {/* --- LEFT SIDE: IMAGE GALLERY --- */}
         <div className="space-y-4">
-          <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-            <a href={mainAmazonLink} target="_blank" rel="noopener noreferrer">
-              <img 
-                src={`/images/${product.images[0]?.url}`} 
+          <div className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm relative aspect-square">
+            <a href={mainAmazonLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+              <Image 
+                src={`/images/products/${product.images[0]?.url}`} 
                 alt={product.images[0]?.alt} 
-                className="w-full h-auto object-cover hover:opacity-95 transition-opacity"
+                fill
+                className="object-cover hover:opacity-95 transition-opacity"
+                unoptimized
               />
             </a>
           </div>
@@ -74,12 +79,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 href={img.amazonLink || mainAmazonLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="border border-gray-200 rounded-lg overflow-hidden hover:border-black transition-all"
+                className="border border-gray-200 rounded-lg overflow-hidden hover:border-black transition-all relative h-24"
               >
-                <img 
-                  src={`/images/${img.url}`} 
+                <Image 
+                  src={`/images/products/${img.url}`} 
                   alt={img.alt} 
-                  className="w-full h-24 object-cover" 
+                  fill
+                  className="object-cover" 
+                  unoptimized
                 />
               </a>
             ))}
@@ -111,7 +118,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* --- UPDATED FAQ SECTION --- */}
+      {/* --- FAQ SECTION --- */}
       {product.FAQ_schema && (
         <div className="mt-20 border-t border-gray-200 pt-12">
           <h2 className="text-3xl font-serif font-bold mb-10 text-gray-900 text-center">

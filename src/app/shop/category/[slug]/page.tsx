@@ -4,8 +4,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 
+// This version is safe for GitHub Pages static export
 export function generateStaticParams() {
-  return []; // Tells the builder there are no pre-generated search results
+  // If you want to pre-build specific category pages later, 
+  // you can map productData.mainCategories here.
+  return []; 
 }
 
 interface Product {
@@ -20,7 +23,7 @@ interface Product {
   }[]
   title_tag?: string
   meta_description?: string
-  [key: string]: any // For all the extra CSV columns we kept
+  [key: string]: any 
 }
 
 interface Category {
@@ -31,26 +34,24 @@ interface Category {
   description: string
 }
 
-// Dynamic Metadata for SEO
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const category = productData.mainCategories.find((c: Category) => c.slug === params.slug)
+  const category = (productData.mainCategories as Category[]).find((c) => c.slug === params.slug)
   if (!category) return { title: 'Category Not Found' }
 
   return {
-    title: category.titleTag,
+    title: `${category.titleTag} | Hijabi Bridal`,
     description: category.metaDescription,
   }
 }
 
 export default function CategoryPage({ params }: { params: { slug: string } }) {
-  const category = productData.mainCategories.find((c: Category) => c.slug === params.slug)
+  const category = (productData.mainCategories as Category[]).find((c) => c.slug === params.slug)
   
   if (!category) {
     notFound()
   }
 
-  // Filter products that contain this category's slug in their mainCategorySlugs array
-  const filteredProducts = productData.products.filter((product: Product) => 
+  const filteredProducts = (productData.products as Product[]).filter((product) => 
     product.mainCategorySlugs.includes(params.slug)
   )
 
@@ -59,7 +60,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       <Breadcrumbs 
         links={[
           { href: '/', text: 'Home' },
-          { href: '/blog', text: 'Bridal Resources' }
+          { href: '/shop', text: 'Bridal Shop' }
         ]} 
         currentPage={category.name} 
       />
@@ -73,22 +74,22 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filteredProducts.map((product: Product) => (
+          {filteredProducts.map((product) => (
             <div key={product.slug} className="group border border-gray-100 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300">
-              {/* Product Image Section */}
               <div className="relative h-72 w-full bg-gray-50 overflow-hidden">
                 {product.images && product.images[0] ? (
-                  <img
-                    src={`/images/products/${product.images[0].url}`} // Ensure your images are in this folder
+                  <Image
+                    src={`/images/products/${product.images[0].url}`} 
                     alt={product.images[0].alt}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
                   />
                 ) : (
                   <div className="flex items-center justify-center h-full text-gray-400">No Image Available</div>
                 )}
               </div>
 
-              {/* Product Info Section */}
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h2>
                 <div 
@@ -119,7 +120,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       ) : (
         <div className="text-center py-20 bg-gray-50 rounded-xl">
           <p className="text-gray-500 text-lg">No products found in this collection yet.</p>
-          <Link href="/blog" className="text-pink-600 font-medium mt-4 inline-block">Return to Collections</Link>
+          <Link href="/" className="text-pink-600 font-medium mt-4 inline-block">Return Home</Link>
         </div>
       )}
     </div>
