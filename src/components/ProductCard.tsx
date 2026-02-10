@@ -1,0 +1,39 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+interface ProductCardProps {
+  product: {
+    slug: string;
+    name: string;
+    images: { url: string; alt: string }[];
+  }
+}
+
+export default function ProductCard({ product }: ProductCardProps) {
+  return (
+    <Link 
+      href={`/shop/product/${product.slug}`} 
+      className="group border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all bg-white"
+    >
+      <div className="relative h-64 w-full bg-gray-50">
+        {product.images?.[0] && (
+          <Image 
+            src={`/images/products/${product.images[0].url}`} 
+            alt={product.images[0].alt || product.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            unoptimized 
+          />
+        )}
+      </div>
+      <div className="p-4">
+        <h3 className="font-bold text-lg text-gray-900 group-hover:text-pink-600 transition-colors">
+          {product.name}
+        </h3>
+        <p className="text-pink-600 font-medium mt-2 text-sm uppercase tracking-wider">
+          View Details →
+        </p>
+      </div>
+    </Link>
+  )
+}

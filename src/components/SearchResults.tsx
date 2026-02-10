@@ -1,8 +1,8 @@
-'use client' // Essential for client-side filtering
+'use client'
 
 import { useState, useEffect } from 'react'
 import productData from '@/data/bridal-products.json'
-import ProductCard from '@/components/ProductCard'
+import ProductCard from '@/components/ProductCard' // This now works!
 
 export default function SearchResults({ query }: { query: string }) {
   const [results, setResults] = useState<any[]>([])
