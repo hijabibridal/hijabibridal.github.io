@@ -1,0 +1,517 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #FFAC1C;
+  --color-primary-light: #FFC470;
+  --color-primary-dark: #E59419;
+  --color-grey: #363636;
+  --spacing-60%: 60%;
+  --spacing-70%: 70%;
+  --tracking-widest: 0.515em;
+  --radius-Newsletter: 30px 400px 30px 30px;
+}
+
+/* ==================== */
+/* RESPONSIVE BASE STYLES */
+/* ==================== */
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    @apply text-[15px] sm:text-[16px] md:text-[17px];
+  }
+
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  section {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+
+  :target {
+    scroll-margin-top: 5rem;
+  }
+  
+  /* ARTICLE CONTENT SPACING FIXES */
+  .blog-article .prose > div > * {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.25rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .blog-article .prose > div > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  .blog-article .prose > div > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* FIXED H2 STYLING */
+  .prose h2 {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    color: #d97706 !important;
+  }
+
+  .dark .prose h2 {
+    color: #b45309 !important;
+  }
+
+  .prose h3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 1.5rem !important;
+  }
+
+  .prose a:not(.internal-link) {
+    color: #d97706 !important;
+    text-decoration: underline;
+  }
+
+  .prose a:not(.internal-link):hover {
+    color: #b45309 !important;
+    text-decoration-thickness: 2px;
+  }
+
+  .internal-link {
+    color: #d97706 !important;
+    text-decoration: underline;
+  }
+
+  .internal-link:hover {
+    color: #b45309 !important;
+    text-decoration-thickness: 2px;
+  }
+
+  /* CHART TEXT SIZE REDUCTION */
+  .google-visualization-table-table {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+
+  .google-visualization-table-td, 
+  .google-visualization-table-th {
+    padding: 4px 8px !important;
+  }
+  
+  /* CHART SIZE REDUCTION */
+  .prose .chart-table {
+    max-width: 85% !important;
+    margin: 1.5rem auto !important;
+    font-size: 0.9375rem !important;
+  }
+  
+  .prose .chart-table th,
+  .prose .chart-table td {
+    padding: 0.375rem 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .prose .chart-table img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* FONT SIZE REDUCTION */
+  .font-size-reduced,
+  .font-size-reduced *:not(.reset-font-size):not(.reset-font-size *) {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .font-size-reduced h1 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* FIXED H2 IN REDUCED MODE - ONLY MARGINS */
+  .font-size-reduced .prose h2 { 
+    margin-top: 1.3rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+  
+  .font-size-reduced h3 { 
+    font-size: 1.5rem !important; 
+    margin-top: 1.1rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  .font-size-reduced h4 { 
+    font-size: 1.3rem !important; 
+    margin-top: 1rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .font-size-reduced h5 { 
+    font-size: 1.1rem !important; 
+    margin-top: 0.9rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  .font-size-reduced h6 { 
+    font-size: 1rem !important; 
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .font-size-reduced p {
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .font-size-reduced ul,
+  .font-size-reduced ol {
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.8rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .font-size-reduced li {
+    margin-bottom: 0.4rem !important;
+  }
+
+  .font-size-reduced table {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .font-size-reduced th,
+  .font-size-reduced td {
+    padding: 0.5rem !important;
+  }
+
+  .font-size-reduced .card,
+  .font-size-reduced .card *,
+  .font-size-reduced .top-pick,
+  .font-size-reduced .top-pick *,
+  .font-size-reduced .question,
+  .font-size-reduced .question *,
+  .font-size-reduced .chart,
+  .font-size-reduced .chart * {
+    font-size: inherit !important;
+  }
+}
+
+/* COMPONENTS */
+@layer components {
+  .container-responsive {
+    @apply w-full px-4 sm:px-6 md:px-8 mx-auto;
+    max-width: 1400px;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium 
+           py-2 px-4 sm:py-3 sm:px-6 rounded-lg transition-all 
+           duration-200 text-sm sm:text-base;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
+           focus:outline-none focus:ring-2 focus:ring-primary 
+           focus:border-transparent transition-all duration-200;
+  }
+}
+
+/* UTILITIES */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scroll-mt-header {
+    scroll-margin-top: 80px;
+  }
+
+  @media (max-width: 640px) {
+    .prose img {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      max-width: calc(100% + 2rem);
+    }
+    
+    .prose .chart-table {
+      max-width: 95% !important;
+      font-size: 0.875rem !important;
+    }
+    
+    .prose .chart-table th,
+    .prose .chart-table td {
+      padding: 0.25rem 0.5rem !important;
+    }
+    
+    .font-size-reduced {
+      font-size: 0.85rem !important;
+    }
+    
+    .font-size-reduced h1 { 
+      font-size: 2rem !important;
+    }
+    
+    /* MOBILE H2 FIX - ONLY MARGINS */
+    .font-size-reduced .prose h2 { 
+      margin-top: 1.3rem !important;
+      margin-bottom: 0.9rem !important;
+    }
+    
+    .font-size-reduced h3 { 
+      font-size: 1.3rem !important; 
+    }
+  }
+}
+
+/* DARK MODE */
+.dark {
+  --color-primary: #E59419;
+  --color-primary-light: #FFAC1C;
+  --color-primary-dark: #CC7A00;
+  --color-grey: #e5e7eb;
+
+  .search-input {
+    @apply focus:ring-primary-dark focus:border-primary-dark;
+  }
+  
+  .prose > div > * {
+    color: #e5e7eb !important;
+  }
+
+  .prose a:not(.internal-link) {
+    color: #fbbf24 !important;
+  }
+
+  .prose a:not(.internal-link):hover {
+    color: #f59e0b !important;
+  }
+
+  .internal-link {
+    color: #fbbf24 !important;
+  }
+
+  .internal-link:hover {
+    color: #f59e0b !important;
+  }
+  
+  .prose .chart-table {
+    color: #e5e7eb !important;
+    border-color: #4b5563 !important;
+  }
+  
+  .prose .chart-table th {
+    background-color: #374151 !important;
+    color: #f9fafb !important;
+  }
+  
+  .prose .chart-table tr:nth-child(even) {
+    background-color: #1f2937 !important;
+  }
+  
+  .font-size-reduced,
+  .font-size-reduced *:not(.reset-font-size):not(.reset-font-size *) {
+    color: #e5e7eb !important;
+  }
+  
+  .font-size-reduced a {
+    color: #fbbf24 !important;
+  }
+  
+  .font-size-reduced a:hover {
+    color: #f59e0b !important;
+  }
+}
+
+/* ==================== */
+/* GUARANTEED H2 SOLUTION */
+/* ==================== */
+/* Fix H1 on blog article pages */
+.blog-article h1 {
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
+  color: #1f2937 !important;
+}
+
+.dark .blog-article h1 {
+  color: #f9fafb !important;
+}
+
+/* GUARANTEED H2 STYLING */
+.blog-heading {
+  font-size: 2rem !important; /* 32px */
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: #d97706 !important;
+  display: block !important;
+}
+
+/* Desktop sizing */
+@media (min-width: 768px) {
+  .blog-heading {
+    font-size: 2.5rem !important; /* 40px */
+  }
+}
+
+.dark .blog-heading {
+  color: #b45309 !important;
+}
+
+/* Force override Tailwind text size utilities */
+.blog-heading.text-xl,
+.blog-heading.text-2xl,
+.blog-heading.text-3xl,
+.blog-heading.text-4xl,
+.blog-heading.text-5xl {
+  font-size: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .blog-heading.text-xl,
+  .blog-heading.text-2xl,
+  .blog-heading.text-3xl,
+  .blog-heading.text-4xl,
+  .blog-heading.text-5xl {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Spacing fixes */
+.blog-article .prose > div:first-child {
+  margin-top: 1.5rem !important;
+}
+
+.blog-article .prose > div:last-child {
+  margin-bottom: 1.5rem !important;
+}
+
+.blog-article + .mt-6 {
+  margin-top: 2rem !important;
+}
+
+p:empty {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Adjust orange to match FAQ page */
+.text-primary, 
+.prose h3 {
+  color: #d97706 !important;
+}
+
+.dark .text-primary,
+.dark .prose h3 {
+  color: #b45309 !important;
+}
+
+/* Orange box background */
+.bg-primary\/10 {
+  background-color: rgba(217, 119, 6, 0.1) !important;
+}
+
+.dark .bg-primary\/10 {
+  background-color: rgba(180, 83, 9, 0.1) !important;
+}
+
+/* Fix spacing after description */
+.blog-article .prose > .mb-4 + div {
+  margin-top: 0.5rem !important;
+}
+
+/* Reduce spacing between sections */
+.blog-article .prose > * + * {
+  margin-top: 0.5rem !important;
+}
+
+/* Author note spacing */
+.blog-article .author-note {
+  margin-top: 1.5rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .blog-article .author-note {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== */
+/* COMPREHENSIVE SPACING FIXES */
+/* ==================== */
+/* Reset all element spacing */
+.blog-article .prose > div > p,
+.blog-article .prose > div > ul,
+.blog-article .prose > div > ol,
+.blog-article .prose > div > table,
+.blog-article .prose > div > div,
+.blog-article .prose > div > section {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Remove extra spacing between list items */
+.blog-article .prose > div > ul > li,
+.blog-article .prose > div > ol > li {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Remove spacing before first element */
+.blog-article .prose > div > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Remove spacing after last element */
+.blog-article .prose > div > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Normalize section spacing */
+.blog-article .prose > div > section {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Fix spacing between consecutive headings */
+.blog-article .prose > div > h2 + h3,
+.blog-article .prose > div > h3 + h4 {
+  margin-top: 0.75rem !important;
+}
+
+/* Remove extra space after images */
+.blog-article .prose > div > img + * {
+  margin-top: 0.75rem !important;
+}
+
+/* Remove extra space before lists */
+.blog-article .prose > div > p + ul,
+.blog-article .prose > div > p + ol {
+  margin-top: 0.25rem !important;
+}
+
+/* Reduce spacing between paragraphs and headings */
+.blog-article .prose > div > p + h2,
+.blog-article .prose > div > p + h3 {
+  margin-top: 1rem !important;
+}
+
+/* Fix spacing after headings */
+.blog-article .prose > div > h2 + p,
+.blog-article .prose > div > h3 + p {
+  margin-top: 0.5rem !important;
+}
+
+/* Remove extra space around tables */
+.blog-article .prose > div > table {
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}

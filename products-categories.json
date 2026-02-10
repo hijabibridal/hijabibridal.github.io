@@ -1,0 +1,165 @@
+{
+  "mainCategories": [
+    {
+      "slug": "blue",
+      "name": "Blue",
+      "titleTag": "Blue Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of blue wedding items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our blue category. We offer a range of high-quality wedding products designed to meet your needs and enhance your bride and groom style."
+    },
+    {
+      "slug": "bridal-belt",
+      "name": "Bridal Belt",
+      "titleTag": "Bridal Belt Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of bridal belts. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our bridal belt category. We offer bridal belts in different colors to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "bridal-dupatta",
+      "name": "Bridal Dupatta",
+      "titleTag": "Bridal Dupatta Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of bridal dupatta items. Find the perfect color and quality for your special occasion.",
+      "description": "Welcome to our bridal dupatta category. We offer a range of high-quality dupattas in different colors to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "bridal-hijab",
+      "name": "Bridal Hijab",
+      "titleTag": "Bridal Hijab Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of bridal hijab items. Find the perfect color and quality for your special occasion.",
+      "description": "Welcome to our bridal hijab category. We offer a range of high-quality hijabs in colors designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "cape",
+      "name": "Cape",
+      "titleTag": "Cape Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of cape items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our cape category. We offer high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "champagne",
+      "name": "Champagne",
+      "titleTag": "Champagne Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of champagne color items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our champagne color category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "faux-fur",
+      "name": "Faux Fur",
+      "titleTag": "Faux Fur Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of faux fur items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our faux fur category. We offer a range of high-quality products in different colors to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "fuschia",
+      "name": "Fuschia",
+      "titleTag": "Fuschia Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of fuschia items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our fuschia category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "gold",
+      "name": "Gold",
+      "titleTag": "Gold Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of gold color items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our gold color category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "green",
+      "name": "Green",
+      "titleTag": "Green Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of green items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our green category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "halal-nails",
+      "name": "Halal Nails",
+      "titleTag": "Halal Nails Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of halal nails items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our halal nails category. We offer a range of high-quality hijabi nails designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "jutti",
+      "name": "Jutti",
+      "titleTag": "Jutti Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of jutti items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our jutti category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "lilac",
+      "name": "Lilac",
+      "titleTag": "Lilac Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of lilac items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our lilac category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "muslim-groom-outfit",
+      "name": "Muslim Groom Outfit",
+      "titleTag": "Muslim Groom Outfit Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of Muslim groom outfit items. Find the perfect style and color for your special occasion.",
+      "description": "Welcome to our Muslim groom outfit category. We offer a range of high-quality products and colors designed to meet your needs and enhance your groom style."
+    },
+    {
+      "slug": "muslim-lehenga",
+      "name": "Muslim Lehenga",
+      "titleTag": "Muslim Lehenga Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of hijabi lehenga items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our hijabi lehenga category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "muslim-wedding-dresses",
+      "name": "Muslim Wedding Dresses",
+      "titleTag": "Muslim Wedding Dresses Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of Muslim wedding dresses items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our Muslim wedding dresses category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "nikkah-jewelry",
+      "name": "Nikkah Jewelry",
+      "titleTag": "Nikkah Jewelry Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of nikkah jewelry items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our nikkah jewelry category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "peach",
+      "name": "Peach",
+      "titleTag": "Peach Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of peach items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our peach category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "pink",
+      "name": "Pink",
+      "titleTag": "Pink Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of pink items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our pink category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "red",
+      "name": "Red",
+      "titleTag": "Red Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of red items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our red category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "sharara",
+      "name": "Sharara",
+      "titleTag": "Sharara Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of sharara items. Find the perfect style and color for your special occasion.",
+      "description": "Welcome to our sharara category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "silver",
+      "name": "Silver",
+      "titleTag": "Silver Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of silver items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our silver category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    },
+    {
+      "slug": "white",
+      "name": "White",
+      "titleTag": "White Collection | Hijabi Bridal",
+      "metaDescription": "Explore our curated selection of white items. Find the perfect style and quality for your special occasion.",
+      "description": "Welcome to our white category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+    }
+  ]
+}
