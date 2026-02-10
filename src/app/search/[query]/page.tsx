@@ -34,7 +34,7 @@ export async function generateMetadata({
       description: `Discover bridal wear for ${decodedQuery}`,
     },
     robots: {
-      index: false, // Generally recommended to keep search results out of Google index
+      index: false, // Standard practice to keep search results out of search engines
       follow: true
     }
   };
