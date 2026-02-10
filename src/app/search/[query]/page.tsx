@@ -5,8 +5,11 @@ type PageProps = {
   params: { query: string | string[] };
 };
 
-// 1. ADDED: This function is required for GitHub Pages (Static Export)
-// It tells Next.js not to pre-build any search result pages at build time.
+/**
+ * Required for GitHub Pages (Static Export).
+ * This tells Next.js not to pre-build any search result pages at build time,
+ * allowing the search to function as a client-side feature.
+ */
 export function generateStaticParams() {
   return [];
 }
@@ -20,7 +23,6 @@ export async function generateMetadata({
   const decodedQuery = decodeURIComponent(query);
   
   return {
-    // Updated titles to match your USA Bridal focus
     title: `Search: ${decodedQuery} - Hijabi Bridal`,
     description: `Search results for "${decodedQuery}" on Hijabi Bridal`,
     openGraph: {
@@ -32,7 +34,7 @@ export async function generateMetadata({
       description: `Discover bridal wear for ${decodedQuery}`,
     },
     robots: {
-      index: true,
+      index: false, // Generally recommended to keep search results out of Google index
       follow: true
     }
   };
