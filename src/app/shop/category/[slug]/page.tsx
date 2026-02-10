@@ -4,10 +4,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 
-// This version is safe for GitHub Pages static export
+/**
+ * Required for GitHub Pages (Static Export).
+ * This tells Next.js to treat this as a static route during the build.
+ */
 export function generateStaticParams() {
-  // If you want to pre-build specific category pages later, 
-  // you can map productData.mainCategories here.
   return []; 
 }
 
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!category) return { title: 'Category Not Found' }
 
   return {
-    title: `${category.titleTag} | Hijabi Bridal`,
+    title: `${category.titleTag} - Hijabi Bridal`,
     description: category.metaDescription,
   }
 }
@@ -120,7 +121,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       ) : (
         <div className="text-center py-20 bg-gray-50 rounded-xl">
           <p className="text-gray-500 text-lg">No products found in this collection yet.</p>
-          <Link href="/" className="text-pink-600 font-medium mt-4 inline-block">Return Home</Link>
+          <Link href="/blog" className="text-pink-600 font-medium mt-4 inline-block">Return to Collections</Link>
         </div>
       )}
     </div>
