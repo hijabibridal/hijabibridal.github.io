@@ -1,4 +1,6 @@
 // app/sitemap.xml/route.js
+export const dynamic = "force-static";
+export const revalidate = false;
 import blogData from '@/data/blog-articles.json';
 import { promises as fs } from 'fs';
 import path from 'path';
