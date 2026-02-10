@@ -1,4 +1,5 @@
 // src/app/api/search/route.ts
+export const dynamic = "force-static";
 import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
