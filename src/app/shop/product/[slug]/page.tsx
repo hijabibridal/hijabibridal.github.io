@@ -27,6 +27,7 @@ export default async function ProductPage({ params }: PageProps) {
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) notFound();
 
+  // GROOM LOGIC: Check if product belongs to the groom category
   const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit') || 
                   product.mainCategorySlugs.includes('groom');
                   
@@ -46,51 +47,58 @@ export default async function ProductPage({ params }: PageProps) {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
-        {/* IMAGE SECTION */}
+        {/* LEFT: GALLERY */}
         <div className="relative">
+          {/* Only wrap gallery in a link if it's NOT a groom (standard bridal behavior) */}
           {!isGroom ? (
             <a href={primaryAmazonLink} target="_blank" rel="noopener" className="cursor-pointer block">
                <ProductGallery images={product.images} productName={product.name} />
             </a>
           ) : (
-            <ProductGallery images={product.images} productName={product.name} />
+            <div className="block">
+               <ProductGallery images={product.images} productName={product.name} />
+            </div>
           )}
         </div>
 
-        {/* CONTENT SECTION */}
+        {/* RIGHT: CONTENT */}
         <div className="flex flex-col">
           <h1 className="text-4xl font-black text-gray-900 uppercase tracking-tighter mb-4">
             {product.name}
           </h1>
 
-          {!isGroom && (
+          {/* BUTTON LOGIC: Show big button for Bridal, hide for Groom */}
+          {!isGroom ? (
             <a href={primaryAmazonLink} target="_blank" rel="noopener" 
                className="mt-2 inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg transition-transform hover:scale-105">
               Order this product on Amazon
             </a>
+          ) : (
+            <p className="mt-2 text-pink-600 font-bold italic">
+              See individual item links in the description below to complete the look.
+            </p>
           )}
 
           <hr className="my-8 border-pink-50" />
 
-          {/* CLEAN DESCRIPTION (No extra headers) */}
+          {/* THE FORMATTED DESCRIPTION */}
           <div className="prose prose-pink max-w-none">
             <div 
               className="text-gray-700 leading-relaxed text-lg 
-                         [&_a]:text-pink-600 [&_a]:font-bold [&_a]:underline
-                         [&_strong]:text-gray-900 [&_strong]:font-black
                          [&_p]:mb-6 last:[&_p]:mb-0"
               dangerouslySetInnerHTML={{ __html: product.description }}
             />
           </div>
 
+          {/* BOTTOM BUTTON: Also hidden for Groom */}
           {!isGroom && (
             <a href={primaryAmazonLink} target="_blank" rel="noopener" 
-               className="mt-10 inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg transition-transform hover:scale-105">
+               className="mt-10 inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg">
               Order this product on Amazon
             </a>
           )}
 
-          {/* DEDICATED FAQ SECTION */}
+          {/* FAQ SECTION */}
           {product.FAQ_schema && (
             <div className="mt-12 p-8 bg-pink-50 rounded-3xl border border-pink-100">
               <h2 className="text-2xl font-black text-pink-600 mb-6 uppercase tracking-tighter">
