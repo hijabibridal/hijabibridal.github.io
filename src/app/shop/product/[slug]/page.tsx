@@ -10,13 +10,10 @@ export async function generateStaticParams() {
   return productData.products.map((p) => ({ slug: p.slug }));
 }
 
-// SEO & Social Media (OG/Twitter) Meta Tags
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return {};
-
-  const imageUrl = `/images/products/${product.images[0]?.url.replace(/^\//, '')}`;
 
   return {
     title: product.title_tag || product.name,
@@ -24,15 +21,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: product.title_tag || product.name,
       description: product.meta_description,
-      images: [{ url: imageUrl, alt: product.images[0]?.alt || product.name }],
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: product.title_tag || product.name,
-      description: product.meta_description,
-      images: [imageUrl],
-    },
+      images: [{ url: `/images/${product.images[0]?.url}` }],
+    }
   }
 }
 
@@ -41,10 +31,10 @@ export default async function ProductPage({ params }: PageProps) {
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) notFound();
 
-  // Split the description by lines to identify headers and paragraphs
-  const paragraphs = product.description.split('\n');
+  // Split description into lines and filter empty ones
+  const paragraphs = product.description.split('\n').filter(p => p.trim() !== '');
 
-  // FAQ Schema Injection
+  // Parse FAQ Schema
   const faqData = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : null;
   const jsonLd = faqData ? {
     "@context": "https://schema.org",
@@ -70,7 +60,7 @@ export default async function ProductPage({ params }: PageProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
         <div>
-          {/* Gallery with Main Image Link and Thumbnails */}
+          {/* Gallery handles the main linked image and thumbnails */}
           <ProductGallery images={product.images} productName={product.name} />
         </div>
 
@@ -79,44 +69,40 @@ export default async function ProductPage({ params }: PageProps) {
             {product.name}
           </h1>
 
-          <div className="description-area mt-4 space-y-6">
+          <div className="description-area mt-4 space-y-4">
             {paragraphs.map((text, i) => {
               const lowerText = text.toLowerCase();
               
-              // IDENTIFY HEADERS: Starts with "How to wear", "About this", or "Shop this color"
-              const isHeader = lowerText.startsWith('how to wear') || 
-                               lowerText.startsWith('about this') || 
-                               lowerText.startsWith('shop this color');
-
-              if (isHeader) {
+              // CREATE H2: Detect "How to wear" and make it Pink + Bold (No forced caps)
+              if (lowerText.startsWith('how to wear')) {
                 return (
-                  <h2 key={i} className="text-[#db2777] text-xl font-bold mt-8">
+                  <h2 key={i} className="text-[#db2777] text-xl font-bold mt-6 mb-2">
                     {text}
                   </h2>
                 );
               }
 
-              // Filter out raw Amazon URLs from the text to keep it clean (since the image is the link)
-              if (text.includes('amzn.to') || text.includes('https://')) return null;
+              // Filter out the raw URL strings from the text to keep it clean
+              if (text.includes('amzn.to') || text.includes('http')) return null;
 
-              // DEFAULT: Plain Black Text
+              // DEFAULT: Plain Black Text for everything else
               return (
-                <p key={i} className="text-black leading-relaxed text-lg">
+                <p key={i} className="text-black text-base leading-relaxed">
                   {text}
                 </p>
               );
             })}
           </div>
 
-          {/* Visual FAQ Section */}
+          {/* Visual FAQ */}
           {faqData && (
-            <div className="mt-16 border-t border-gray-100 pt-10">
-              <h3 className="text-2xl font-black text-gray-900 uppercase mb-8">Questions & Answers</h3>
-              <div className="space-y-6">
+            <div className="mt-12 border-t border-gray-100 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 uppercase tracking-widest italic">Product FAQs</h3>
+              <div className="space-y-4">
                 {faqData.map((faq: any, idx: number) => (
-                  <div key={idx} className="bg-pink-50/30 p-6 rounded-2xl border border-pink-100">
-                    <p className="font-bold text-gray-900 mb-2">{faq.name}</p>
-                    <p className="text-gray-700">{faq.acceptedAnswer.text}</p>
+                  <div key={idx} className="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+                    <p className="font-bold text-black mb-1">{faq.name}</p>
+                    <p className="text-gray-700 text-sm leading-relaxed">{faq.acceptedAnswer.text}</p>
                   </div>
                 ))}
               </div>

@@ -2,14 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function ProductCard({ product }: { product: any }) {
-  const displayAlt = product.images[0]?.alt || product.name;
+  const mainAlt = product.images[0]?.alt || product.name;
+  const imgSrc = `/images/${product.images[0]?.url.replace(/^\//, '')}`;
 
   return (
     <Link href={`/shop/product/${product.slug}`} className="group block bg-white rounded-2xl border border-pink-50 overflow-hidden hover:shadow-xl transition-all duration-300">
       <div className="relative h-80 w-full bg-gray-50">
         <Image 
-          src={`/images/${product.images[0]?.url}`} 
-          alt={displayAlt}
+          src={imgSrc} 
+          alt={mainAlt}
           fill
           className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
           unoptimized 
