@@ -17,20 +17,21 @@ export default async function ProductPage({ params }: PageProps) {
   const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
   const primaryAmazonLink = product.images[0]?.amazonLink || "#";
 
-  // CLEANUP LOGIC: This removes the broken HTML strings like "<p< a=" >" before displaying
-  const cleanDescription = product.description
-    .replace(/<p< a="">/g, '')
-    .replace(/style="margin-bottom: 1.5rem;">/g, '')
-    .replace(/<\/p<>|&lt;p&gt;|&lt;\/p&gt;/g, '');
+  // RESCUE LOGIC: Strip out ALL tags (broken or not) to get back to your original words
+  const rawText = product.description.replace(/<[^>]*>/g, '').replace(/\[insert alt text.*?linking images\]/gi, '');
+  
+  // Split into paragraphs based on new lines
+  const paragraphs = rawText.split('\n').filter(p => p.trim() !== '');
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* THE ORANGE & BOLD KILLER */}
+      {/* THE BRAND OVERRIDE: Forces Pink and removes Orange */}
       <style dangerouslySetInnerHTML={{ __html: `
-        .product-content h2 { color: #db2777 !important; font-weight: 900 !important; font-size: 1.5rem !important; margin-top: 2rem !important; text-transform: none !important; }
-        .product-content a { color: #db2777 !important; font-weight: bold !important; text-decoration: underline !important; }
-        .product-content p { color: #374151 !important; font-weight: normal !important; margin-bottom: 1.5rem !important; display: block !important; }
-        /* This forces any text that says 'orange' or has orange styling to PINK */
+        .brand-p { color: #374151; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 400; }
+        .brand-h2 { color: #db2777 !important; font-weight: 900; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .brand-footer { color: #db2777 !important; font-weight: 600; margin-top: 2rem; }
+        .brand-link { color: #db2777 !important; font-weight: bold; text-decoration: underline; }
+        /* Kills stubborn orange */
         [style*="orange"], .text-orange-600 { color: #db2777 !important; }
       `}} />
 
@@ -49,20 +50,29 @@ export default async function ProductPage({ params }: PageProps) {
             {product.name}
           </h1>
 
-          {!isGroom && (
-            <a href={primaryAmazonLink} target="_blank" rel="noopener" 
-               className="mt-2 inline-block bg-[#db2777] hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg">
-              Order on Amazon
-            </a>
-          )}
-
-          <hr className="my-8 border-pink-50" />
-
-          <div className="prose prose-pink max-w-none">
-            <div 
-              className="product-content"
-              dangerouslySetInnerHTML={{ __html: cleanDescription }}
-            />
+          <div className="description-area mt-4">
+            {paragraphs.map((text, i) => {
+              // 1. Logic for Headers
+              if (text.toLowerCase().startsWith('how to wear')) {
+                return <h2 key={i} className="brand-h2">{text}</h2>;
+              }
+              // 2. Logic for Footer Links
+              if (text.toLowerCase().includes('shop this color') || text.toLowerCase().includes('view all')) {
+                return <p key={i} className="brand-footer">{text}</p>;
+              }
+              // 3. Logic for Amazon Links (Makes them clickable)
+              if (text.includes('amzn.to')) {
+                const urlMatch = text.match(/https?:\/\/amzn\.to\/\S+/);
+                const url = urlMatch ? urlMatch[0] : '#';
+                return (
+                  <p key={i} className="brand-p font-bold">
+                    Order on Amazon: <a href={url} target="_blank" className="brand-link">{url}</a>
+                  </p>
+                );
+              }
+              // 4. Standard Paragraph
+              return <p key={i} className="brand-p">{text}</p>;
+            })}
           </div>
         </div>
       </div>
