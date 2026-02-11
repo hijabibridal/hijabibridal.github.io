@@ -133,7 +133,7 @@
       "metaDescription": "Explore our curated selection of pink items. Find the perfect style and quality for your special occasion.",
       "description": "Welcome to our pink category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
     },
-   {
+    {
   "slug": "red",
   "name": "Red",
   "titleTag": "Red Collection | Hijabi Bridal",
@@ -155,30 +155,9 @@
       ]
     }
   ],
-  "faq_schema": {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why is red so popular in Muslim weddings?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In the context of Islam, red is culturally associated with new beginnings. While Islam itself does not mandate a specific color, the red Muslim wedding dress has become a staple in many cultures to celebrate the joy of the union."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a Muslim bride wear colors other than red?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. While a red Muslim wedding dress is traditional in many regions, the American Muslim community displays great diversity in Muslim weddings, with brides wearing green, gold, white, or even pastel shades, depending totally on their individual choice."
-        }
-      }
-    ]
-  }
-}
-    {
+  "FAQ_schema": "[\n  {\n   \"@type\": \"Question\",\n   \"name\": \"What is the difference between a scarf and a dupatta?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"A dupatta is typically longer and wider than a scarf, making it suitable for draping over outfits.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"What are the different types of dupattas available for weddings?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"There are several types of dupattas designed for weddings, including heavily embellished and embroidered styles.\"\n   }\n  }\n ]"     
+   },
+   {
       "slug": "sharara",
       "name": "Sharara",
       "titleTag": "Sharara Collection | Hijabi Bridal",
