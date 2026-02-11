@@ -15,18 +15,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return { title: 'Product Not Found' };
-
-  const siteUrl = 'https://hijabibridal.github.io'; 
-  const imageUrl = `${siteUrl}/images/${product.images[0]?.url}`;
-
   return {
     title: product.title_tag || product.name,
     description: product.meta_description,
-    openGraph: {
-      title: product.title_tag || product.name,
-      description: product.meta_description,
-      images: [{ url: imageUrl }],
-    },
   };
 }
 
@@ -35,18 +26,25 @@ export default async function ProductPage({ params }: PageProps) {
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) notFound();
 
-  const isGroom = product.mainCategorySlugs.includes('groom');
+  const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
+  const primaryAmazonLink = product.images[0]?.amazonLink || "#";
 
-  const AmazonButton = ({ className }: { className?: string }) => {
+  // CLEANUP LOGIC: Remove Wix links and orange styling
+  const cleanDescription = product.description
+    .replace(/<a[^>]*href="[^"]*wix\.com[^"]*"[^>]*>(.*?)<\/a>/gi, '$1') // Strip Wix links, keep text
+    .replace(/orange/gi, '#FF1493') // Replace "orange" color names with Hot Pink hex
+    .replace(/text-orange-500|text-orange-600/gi, 'text-pink-600'); // Purge Tailwind orange
+
+  const AmazonButton = () => {
     if (isGroom) return null;
     return (
       <a 
-        href={product.images[0]?.amazonLink || "#"} 
+        href={primaryAmazonLink} 
         target="_blank" 
         rel="noopener noreferrer"
-        className={`inline-block bg-[#FF1493] hover:bg-[#C71585] text-white font-black py-4 px-10 rounded-full shadow-lg transition-all uppercase tracking-widest text-sm text-center ${className}`}
+        className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full shadow-lg transition-all uppercase tracking-widest text-sm text-center"
       >
-        Shop This Item on Amazon
+        Order this product on Amazon
       </a>
     );
   };
@@ -65,47 +63,45 @@ export default async function ProductPage({ params }: PageProps) {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
-        <ProductGallery images={product.images} productName={product.name} />
+        {/* Gallery: If not groom, whole section links to primary amazon link */}
+        <div className="relative">
+          {isGroom ? (
+            <ProductGallery images={product.images} productName={product.name} />
+          ) : (
+            <a href={primaryAmazonLink} target="_blank" rel="noopener" className="cursor-zoom-in">
+              <ProductGallery images={product.images} productName={product.name} />
+            </a>
+          )}
+        </div>
 
         <div className="flex flex-col">
-          {/* BOLDED HEADER */}
-          <h1 className="text-4xl font-black text-gray-900 leading-tight uppercase tracking-tighter mb-4">
+          <h1 className="text-4xl font-black text-pink-600 leading-tight uppercase tracking-tighter mb-4">
             {product.name}
           </h1>
 
-          <AmazonButton className="mt-2" />
+          <div className="mt-2"><AmazonButton /></div>
 
           <hr className="my-8 border-pink-50" />
 
-          {/* FORMATTED DESCRIPTION */}
+          {/* Formatted Description */}
           <div className="prose prose-pink max-w-none">
-            <h3 className="text-2xl font-black text-gray-800 mb-6 uppercase tracking-wide">
-              Product Details
-            </h3>
-            
-            {/* Targeting the first paragraph (Amazon link part) via CSS 
-              and ensuring HTML from your JSON renders correctly.
-            */}
             <div 
               className="text-gray-700 leading-relaxed text-lg 
-                         [&>p:first-of-type]:font-bold [&>p:first-of-type]:text-pink-700 
-                         [&_a]:text-pink-600 [&_a]:underline [&_a]:font-bold"
-              dangerouslySetInnerHTML={{ __html: product.description }}
+                         [&_b]:text-pink-700 [&_strong]:text-pink-700 [&_strong]:font-black
+                         [&_p:first-of-type]:font-bold [&_p:first-of-type]:text-pink-600 [&_p:first-of-type]:text-xl"
+              dangerouslySetInnerHTML={{ __html: cleanDescription }}
             />
           </div>
 
-          <AmazonButton className="mt-10" />
+          <div className="mt-10"><AmazonButton /></div>
 
-          {/* BOLDED FAQ SECTION */}
+          {/* FAQ Section */}
           {product.FAQ_schema && (
             <div className="mt-12 p-8 bg-pink-50 rounded-3xl border border-pink-100">
-              <h3 className="text-2xl font-black text-pink-600 mb-6 uppercase tracking-tighter">
-                Common Questions
-              </h3>
+              <h3 className="text-2xl font-black text-pink-600 mb-6 uppercase tracking-tighter">Common Questions</h3>
               <div className="space-y-6">
                 {JSON.parse(product.FAQ_schema).map((item: any, i: number) => (
                   <div key={i} className="border-b border-pink-100 pb-4 last:border-0">
-                    {/* BOLDED QUESTION */}
                     <p className="font-black text-gray-900 text-lg">Q: {item.name}</p>
                     <p className="text-gray-700 mt-2">A: {item.acceptedAnswer.text}</p>
                   </div>
