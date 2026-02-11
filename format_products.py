@@ -2,52 +2,54 @@ import json
 import re
 import os
 
-def format_bridal_data():
-    input_path = 'src/data/bridal-products.json'
-    output_path = 'src/data/bridal-products-review.json'
+def clean_and_format():
+    # Use the current file as the source
+    file_path = 'src/data/bridal-products.json'
+    output_path = 'src/data/bridal-products-fixed.json'
 
-    if not os.path.exists(input_path): return
+    if not os.path.exists(file_path):
+        print(f"Error: {file_path} not found.")
+        return
 
-    with open(input_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     for product in data.get('products', []):
-        # Start fresh from raw text
-        desc = product.get('description', '')
+        # 1. RECOVERY: Strip all HTML to find the original text
+        raw_text = re.sub(r'<[^>]*>', '', product.get('description', ''))
         
-        # 1. Clean out existing HTML tags to prevent "double wrapping"
-        desc = re.sub(r'</?(p|h2|div|span)[^>]*>', '', desc)
-        
-        # 2. Delete placeholders
-        desc = re.sub(r'\[insert alt text.*?linking images\]', '', desc, flags=re.IGNORECASE | re.DOTALL)
+        # 2. DELETE placeholders
+        raw_text = re.sub(r'\[insert alt text.*?linking images\]', '', raw_text, flags=re.IGNORECASE | re.DOTALL)
 
-        # 3. Amazon Links (Pink & Bold)
-        amazon_pattern = r'(?<!href=")(https?://(?:www\.)?amzn\.to/\S+)'
-        desc = re.sub(amazon_pattern, 
-                      r'<a href="\1" target="_blank" rel="noopener" style="color: #db2777; font-weight: bold; text-decoration: underline;">\1</a>', 
-                      desc)
-
-        lines = [line.strip() for line in desc.split('\n') if line.strip()]
+        # 3. REBUILD Logic
+        lines = [line.strip() for line in raw_text.split('\n') if line.strip()]
         new_lines = []
         
         for i, line in enumerate(lines):
-            # Header logic
+            # Format Headers
             if line.lower().startswith("how to wear"):
-                new_lines.append(f'<h2 style="color: #db2777; font-weight: 900; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; text-transform: none;">{line}</h2>')
-            # Footer logic
-            elif "shop this color collection" in line.lower() or "view all" in line.lower():
-                new_lines.append(f'<p style="color: #db2777; margin-top: 2rem; font-weight: 400;">{line}</p>')
-            # First line only is Bold (Order on Amazon)
-            elif i == 0 and "amazon" in line.lower():
-                new_lines.append(f'<p style="margin-bottom: 1.5rem; font-weight: bold;">{line}</p>')
-            # EVERYTHING ELSE is Regular Text (Fixes the "Whole thing is bold" issue)
+                new_lines.append(f'<h2 class="brand-h2">{line}</h2>')
+            # Format Footer
+            elif "shop this color" in line.lower() or "view all" in line.lower():
+                new_lines.append(f'<p class="brand-footer">{line}</p>')
+            # Regular Text
             else:
-                new_lines.append(f'<p style="margin-bottom: 1.5rem; font-weight: normal; color: #374151;">{line}</p>')
+                new_lines.append(f'<p>{line}</p>')
         
-        product['description'] = "".join(new_lines)
+        final_html = "".join(new_lines)
+
+        # 4. Linkify Amazon URLs (Pink & Bold)
+        amazon_pattern = r'(?<!href=")(https?://(?:www\.)?amzn\.to/\S+)'
+        final_html = re.sub(amazon_pattern, 
+                           r'<a href="\1" target="_blank" rel="noopener" class="amazon-link">\1</a>', 
+                           final_html)
+        
+        product['description'] = final_html
 
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+    
+    print(f"SUCCESS: Created {output_path}. Review it, then rename to bridal-products.json")
 
 if __name__ == "__main__":
-    format_bridal_data()
+    clean_and_format()
