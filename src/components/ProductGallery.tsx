@@ -2,48 +2,55 @@
 import React, { useState } from 'react'
 
 export default function ProductGallery({ images, productName, fallbackLink }: any) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   if (!images || images.length === 0) return <div className="p-10 bg-gray-50 rounded-2xl">No Image</div>;
 
-  const currentImage = images[activeIndex];
-  
-  // Use the image's specific link if it exists, otherwise use the product fallback
-  const amazonLink = (currentImage.amazonLink && currentImage.amazonLink !== "") 
-    ? currentImage.amazonLink 
+  const activeImage = images[index];
+  const activeLink = (activeImage.amazonLink && activeImage.amazonLink !== "") 
+    ? activeImage.amazonLink 
     : fallbackLink;
 
   // Standard path for public/images/
-  const mainSrc = `/images/${currentImage.url.replace(/^\//, '')}`;
+  const mainSrc = `/images/${activeImage.url.replace(/^\//, '')}`;
 
   return (
     <div className="flex flex-col gap-4">
-      {/* MAIN IMAGE: Clickable to Amazon */}
-      <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-white relative group">
-        <a href={amazonLink} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+      {/* MAIN IMAGE CONTAINER - Forced to 320px to match Category Cards */}
+      <div 
+        className="rounded-3xl overflow-hidden shadow-xl border border-pink-50 bg-gray-50 relative w-full"
+        style={{ height: '320px' }} 
+      >
+        <a href={activeLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer group">
           <img 
             src={mainSrc} 
-            alt={currentImage.alt || productName} 
-            className="w-full h-auto transition-opacity hover:opacity-95"
+            alt={activeImage.alt || productName} 
+            className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
           />
         </a>
       </div>
 
       {/* THUMBNAILS */}
-      <div className="grid grid-cols-5 gap-3">
+      <div className="flex gap-3 overflow-x-auto pb-2">
         {images.map((img: any, i: number) => {
           const thumbSrc = `/images/${img.url.replace(/^\//, '')}`;
           return (
             <button
               key={i}
-              onClick={() => setActiveIndex(i)}
-              className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all ${
-                activeIndex === i ? 'border-[#db2777]' : 'border-transparent opacity-60'
+              onClick={() => setIndex(i)}
+              className={`relative w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all ${
+                index === i 
+                  ? 'border-[#db2777] shadow-md' 
+                  : 'border-transparent opacity-60'
               }`}
             >
-              <img src={thumbSrc} alt="thumbnail" className="w-full h-full object-cover" />
+              <img 
+                src={thumbSrc} 
+                alt="thumbnail" 
+                className="w-full h-full object-cover"
+              />
             </button>
-          );
+          )
         })}
       </div>
     </div>
