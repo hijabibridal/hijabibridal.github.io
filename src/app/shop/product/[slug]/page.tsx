@@ -1,27 +1,10 @@
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ProductGallery from '@/components/ProductGallery'
 import Script from 'next/script'
 
-type PageProps = { params: Promise<{ slug: string }> };
-
-export async function generateStaticParams() {
-  return productData.products.map((product) => ({ slug: product.slug }));
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const product = productData.products.find((p) => p.slug === slug);
-  if (!product) return { title: 'Product Not Found' };
-  return {
-    title: product.title_tag || product.name,
-    description: product.meta_description,
-  };
-}
-
-export default async function ProductPage({ params }: PageProps) {
+export default async function ProductPage({ params }: any) {
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) notFound();
@@ -29,30 +12,40 @@ export default async function ProductPage({ params }: PageProps) {
   const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
   const primaryAmazonLink = product.images[0]?.amazonLink || "#";
 
-  // CLEANUP LOGIC: Remove Wix links and orange styling
-  const cleanDescription = product.description
-    .replace(/<a[^>]*href="[^"]*wix\.com[^"]*"[^>]*>(.*?)<\/a>/gi, '$1') // Strip Wix links, keep text
-    .replace(/orange/gi, '#FF1493') // Replace "orange" color names with Hot Pink hex
-    .replace(/text-orange-500|text-orange-600/gi, 'text-pink-600'); // Purge Tailwind orange
+  // --- LOGIC: TEXT CLEANUP & AUTO-FORMATTING ---
+  const formatDescription = (text: string) => {
+    // 1. Remove Wix/Internal links but keep the text
+    let cleaned = text.replace(/<a[^>]*href="[^"]*wix\.com[^"]*"[^>]*>(.*?)<\/a>/gi, '$1');
+    
+    // 2. Remove "Check price on Amazon" phrases entirely
+    cleaned = cleaned.replace(/Check price on Amazon:?\s*/gi, '');
 
-  const AmazonButton = () => {
-    if (isGroom) return null;
-    return (
-      <a 
-        href={primaryAmazonLink} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full shadow-lg transition-all uppercase tracking-widest text-sm text-center"
-      >
-        Order this product on Amazon
-      </a>
-    );
+    // 3. If it's a block of text (not HTML), convert line breaks to paragraphs
+    if (!cleaned.includes('<p>')) {
+      cleaned = cleaned
+        .split('\n\n')
+        .map(para => {
+          // Auto-bold lines that look like Questions or Headers
+          if (para.startsWith('Q:') || para.includes('How to wear') || para.includes('FAQs')) {
+            return `<p><strong>${para}</strong></p>`;
+          }
+          return `<p>${para}</p>`;
+        })
+        .join('');
+    }
+
+    // 4. Final Purge of Orange & Internal Links
+    return cleaned
+      .replace(/orange/gi, 'inherit')
+      .replace(/<a[^>]*href="(?!https?:\/\/(?:www\.)?amzn\.to|https?:\/\/(?:www\.)?amazon\.com)[^"]*"[^>]*>(.*?)<\/a>/gi, '$1');
   };
+
+  const formattedContent = formatDescription(product.description);
 
   return (
     <div className="container mx-auto px-4 py-8">
       {product.FAQ_schema && (
-        <Script id="product-schema" type="application/ld+json" strategy="beforeInteractive">
+        <Script id="product-schema" type="application/ld+json" strategy="afterInteractive">
           {product.FAQ_schema}
         </Script>
       )}
@@ -63,51 +56,49 @@ export default async function ProductPage({ params }: PageProps) {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
-        {/* Gallery: If not groom, whole section links to primary amazon link */}
         <div className="relative">
-          {isGroom ? (
-            <ProductGallery images={product.images} productName={product.name} />
-          ) : (
-            <a href={primaryAmazonLink} target="_blank" rel="noopener" className="cursor-zoom-in">
-              <ProductGallery images={product.images} productName={product.name} />
+          {/* Main Image links to Amazon, thumbnails in ProductGallery will NOT link until active */}
+          {!isGroom ? (
+            <a href={primaryAmazonLink} target="_blank" rel="noopener" className="cursor-pointer">
+               <ProductGallery images={product.images} productName={product.name} />
             </a>
+          ) : (
+            <ProductGallery images={product.images} productName={product.name} />
           )}
         </div>
 
         <div className="flex flex-col">
-          <h1 className="text-4xl font-black text-pink-600 leading-tight uppercase tracking-tighter mb-4">
+          <h1 className="text-4xl font-black text-gray-900 uppercase tracking-tighter mb-4">
             {product.name}
           </h1>
 
-          <div className="mt-2"><AmazonButton /></div>
+          {!isGroom && (
+            <a href={primaryAmazonLink} target="_blank" rel="noopener" 
+               className="mt-2 inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg">
+              Order this product on Amazon
+            </a>
+          )}
 
           <hr className="my-8 border-pink-50" />
 
-          {/* Formatted Description */}
           <div className="prose prose-pink max-w-none">
+            <h3 className="text-2xl font-black text-pink-600 mb-6 uppercase tracking-wide">
+              Product Details
+            </h3>
+            
             <div 
               className="text-gray-700 leading-relaxed text-lg 
-                         [&_b]:text-pink-700 [&_strong]:text-pink-700 [&_strong]:font-black
-                         [&_p:first-of-type]:font-bold [&_p:first-of-type]:text-pink-600 [&_p:first-of-type]:text-xl"
-              dangerouslySetInnerHTML={{ __html: cleanDescription }}
+                         [&_strong]:text-gray-900 [&_strong]:font-black
+                         [&_p:first-of-type]:font-bold [&_p:first-of-type]:text-gray-900 [&_p:first-of-type]:text-xl"
+              dangerouslySetInnerHTML={{ __html: formattedContent }}
             />
           </div>
 
-          <div className="mt-10"><AmazonButton /></div>
-
-          {/* FAQ Section */}
-          {product.FAQ_schema && (
-            <div className="mt-12 p-8 bg-pink-50 rounded-3xl border border-pink-100">
-              <h3 className="text-2xl font-black text-pink-600 mb-6 uppercase tracking-tighter">Common Questions</h3>
-              <div className="space-y-6">
-                {JSON.parse(product.FAQ_schema).map((item: any, i: number) => (
-                  <div key={i} className="border-b border-pink-100 pb-4 last:border-0">
-                    <p className="font-black text-gray-900 text-lg">Q: {item.name}</p>
-                    <p className="text-gray-700 mt-2">A: {item.acceptedAnswer.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {!isGroom && (
+            <a href={primaryAmazonLink} target="_blank" rel="noopener" 
+               className="mt-10 inline-block bg-pink-600 hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg">
+              Order this product on Amazon
+            </a>
           )}
         </div>
       </div>

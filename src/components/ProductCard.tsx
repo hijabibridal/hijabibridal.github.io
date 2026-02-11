@@ -1,46 +1,23 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface ProductCardProps {
-  product: {
-    slug: string;
-    name: string;
-    images: { url: string; alt: string }[];
-  }
-}
-
-export default function ProductCard({ product }: ProductCardProps) {
-  // Defensive check to ensure images exist
-  const firstImage = product.images && product.images.length > 0 ? product.images[0] : null;
-
+export default function ProductCard({ product }: { product: any }) {
   return (
-    <Link 
-      href={`/shop/product/${product.slug}`} 
-      className="group border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all bg-white flex flex-col h-full"
-    >
-      <div className="relative h-64 w-full bg-gray-50">
-        {firstImage ? (
-          <Image 
-            // Updated path: pointing directly to /images/ as per your folder structure
-            src={`/images/${firstImage.url}`} 
-            alt={firstImage.alt || product.name}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            unoptimized 
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-pink-50 text-pink-200">
-            No Image
-          </div>
-        )}
+    <Link href={`/shop/product/${product.slug}`} className="group block bg-white rounded-2xl border border-pink-50 overflow-hidden hover:shadow-xl transition-all duration-300">
+      <div className="relative h-80 w-full bg-gray-50">
+        <Image 
+          src={`/images/${product.images[0]?.url}`} 
+          alt={product.images[0]?.alt || product.name}
+          fill
+          className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+          unoptimized 
+        />
       </div>
-      <div className="p-4 flex-grow flex flex-col justify-between">
-        <h3 className="font-bold text-lg text-gray-900 group-hover:text-pink-600 transition-colors line-clamp-2">
+      <div className="p-6">
+        <h3 className="text-xl font-black text-gray-900 uppercase tracking-tighter line-clamp-2">
           {product.name}
         </h3>
-        <p className="text-pink-600 font-medium mt-2 text-sm uppercase tracking-wider">
+        <p className="mt-4 text-pink-600 font-bold text-sm uppercase tracking-widest">
           View Details →
         </p>
       </div>
