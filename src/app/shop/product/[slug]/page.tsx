@@ -17,17 +17,21 @@ export default async function ProductPage({ params }: PageProps) {
   const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
   const primaryAmazonLink = product.images[0]?.amazonLink || "#";
 
+  // CLEANUP LOGIC: This removes the broken HTML strings like "<p< a=" >" before displaying
+  const cleanDescription = product.description
+    .replace(/<p< a="">/g, '')
+    .replace(/style="margin-bottom: 1.5rem;">/g, '')
+    .replace(/<\/p<>|&lt;p&gt;|&lt;\/p&gt;/g, '');
+
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* NUCLEAR CSS OVERRIDE: This forces Pink (#db2777) and regular font weights */}
+      {/* THE ORANGE & BOLD KILLER */}
       <style dangerouslySetInnerHTML={{ __html: `
         .product-content h2 { color: #db2777 !important; font-weight: 900 !important; font-size: 1.5rem !important; margin-top: 2rem !important; text-transform: none !important; }
         .product-content a { color: #db2777 !important; font-weight: bold !important; text-decoration: underline !important; }
-        .product-content p { color: #374151 !important; font-weight: normal !important; margin-bottom: 1.25rem !important; line-height: 1.6 !important; }
-        .product-content strong, .product-content b { color: #db2777 !important; font-weight: bold !important; }
-        /* Forces any orange from JSON to Pink */
-        [style*="orange"], .text-orange-500 { color: #db2777 !important; }
-        .bg-pink-600 { background-color: #db2777 !important; }
+        .product-content p { color: #374151 !important; font-weight: normal !important; margin-bottom: 1.5rem !important; display: block !important; }
+        /* This forces any text that says 'orange' or has orange styling to PINK */
+        [style*="orange"], .text-orange-600 { color: #db2777 !important; }
       `}} />
 
       <Breadcrumbs 
@@ -47,8 +51,8 @@ export default async function ProductPage({ params }: PageProps) {
 
           {!isGroom && (
             <a href={primaryAmazonLink} target="_blank" rel="noopener" 
-               className="mt-2 inline-block bg-[#db2777] hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg transition-transform hover:scale-105">
-              Order this product on Amazon
+               className="mt-2 inline-block bg-[#db2777] hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg">
+              Order on Amazon
             </a>
           )}
 
@@ -57,16 +61,9 @@ export default async function ProductPage({ params }: PageProps) {
           <div className="prose prose-pink max-w-none">
             <div 
               className="product-content"
-              dangerouslySetInnerHTML={{ __html: product.description }}
+              dangerouslySetInnerHTML={{ __html: cleanDescription }}
             />
           </div>
-
-          {!isGroom && (
-            <a href={primaryAmazonLink} target="_blank" rel="noopener" 
-               className="mt-10 inline-block bg-[#db2777] hover:bg-pink-700 text-white font-black py-4 px-10 rounded-full text-center uppercase tracking-widest text-sm shadow-lg">
-              Order this product on Amazon
-            </a>
-          )}
         </div>
       </div>
     </div>
