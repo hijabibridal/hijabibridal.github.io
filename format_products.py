@@ -1,55 +1,39 @@
 import json
 import re
+import html
 import os
 
-def clean_and_format():
-    # Use the current file as the source
-    file_path = 'src/data/bridal-products.json'
-    output_path = 'src/data/bridal-products-fixed.json'
+# Define paths
+input_path = 'src/data/bridal-products.json'
+output_path = 'src/data/bridal-productsNEW.json'
 
-    if not os.path.exists(file_path):
-        print(f"Error: {file_path} not found.")
-        return
+def clean_description(text):
+    if not text: return ""
+    text = html.unescape(text)
+    # 1. Strip all HTML tags (Removes orange links/inline styles)
+    text = re.sub(r'<[^>]*>', ' ', text)
+    # 2. Strip placeholder text
+    text = re.sub(r'\[insert alt text.*?linking images\]', '', text, flags=re.IGNORECASE | re.DOTALL)
+    # 3. Handle artifacts and broken tags
+    text = re.sub(r'target="_blank".*?>', '', text) 
+    text = re.sub(r'style=".*?"', '', text)
+    # 4. Standardize Line Breaks for Headers (to be detected by TSX)
+    headers = ["How to wear", "About this", "Order on Amazon", "Shop this color", "View all"]
+    for header in headers:
+        text = re.sub(f'(?i)({header})', r'\n\1', text)
+    # 5. Final whitespace cleanup
+    lines = [l.strip() for l in text.split('\n') if l.strip()]
+    processed = []
+    for line in lines:
+        line = re.sub(r'\s+', ' ', line).replace('Add "', '').replace('">', '').strip()
+        if line: processed.append(line)
+    return '\n'.join(processed)
 
-    with open(file_path, 'r', encoding='utf-8') as f:
+if os.path.exists(input_path):
+    with open(input_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-
-    for product in data.get('products', []):
-        # 1. RECOVERY: Strip all HTML to find the original text
-        raw_text = re.sub(r'<[^>]*>', '', product.get('description', ''))
-        
-        # 2. DELETE placeholders
-        raw_text = re.sub(r'\[insert alt text.*?linking images\]', '', raw_text, flags=re.IGNORECASE | re.DOTALL)
-
-        # 3. REBUILD Logic
-        lines = [line.strip() for line in raw_text.split('\n') if line.strip()]
-        new_lines = []
-        
-        for i, line in enumerate(lines):
-            # Format Headers
-            if line.lower().startswith("how to wear"):
-                new_lines.append(f'<h2 class="brand-h2">{line}</h2>')
-            # Format Footer
-            elif "shop this color" in line.lower() or "view all" in line.lower():
-                new_lines.append(f'<p class="brand-footer">{line}</p>')
-            # Regular Text
-            else:
-                new_lines.append(f'<p>{line}</p>')
-        
-        final_html = "".join(new_lines)
-
-        # 4. Linkify Amazon URLs (Pink & Bold)
-        amazon_pattern = r'(?<!href=")(https?://(?:www\.)?amzn\.to/\S+)'
-        final_html = re.sub(amazon_pattern, 
-                           r'<a href="\1" target="_blank" rel="noopener" class="amazon-link">\1</a>', 
-                           final_html)
-        
-        product['description'] = final_html
-
+    for product in data['products']:
+        product['description'] = clean_description(product['description'])
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    
-    print(f"SUCCESS: Created {output_path}. Review it, then rename to bridal-products.json")
-
-if __name__ == "__main__":
-    clean_and_format()
+        json.dump(data, f, indent=2)
+    print(f"Success! Cleaned {len(data['products'])} products in {output_path}")
