@@ -133,13 +133,51 @@
       "metaDescription": "Explore our curated selection of pink items. Find the perfect style and quality for your special occasion.",
       "description": "Welcome to our pink category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
     },
+   {
+  "slug": "red",
+  "name": "Red",
+  "titleTag": "Red Collection | Hijabi Bridal",
+  "metaDescription": "Welcome to our red bridal collection. We offer a range of high-quality products designed to meet your needs and enhance your bridal style.",
+  "description": "The Significance and Style of the Red Muslim Wedding Dress\nIn the diverse tapestry of the Muslim community, few symbols are as striking or as deeply rooted as the red Muslim wedding dress. Across various cultures within Islam, the choice of a wedding dress is not merely a fashion statement but a profound expression of heritage and spirituality. As US Muslim wedding trends continue to evolve, the cultural significance of red remains a constant, bridging the gap between traditional roots and modern American Islamic fashion.",
+  "longContent": [
     {
-      "slug": "red",
-      "name": "Red",
-      "titleTag": "Red Collection | Hijabi Bridal",
-      "metaDescription": "Welcome to our red bridal collection. We offer a range of high-quality products designed to meet your needs and enhance your bridal style.",
-      "description": "The Significance and Style of the Red Muslim Wedding Dress \nIn the diverse tapestry of the Muslim community, few symbols are as striking or as deeply rooted as the red Muslim wedding dress. Across various cultures within Islam, the choice of a wedding dress is not merely a fashion statement but a profound expression of heritage and spirituality. As US Muslim wedding trends continue to evolve, the cultural significance of red remains a constant, bridging the gap between traditional roots and modern American Islamic fashion."
+      "heading": "What does the color red mean in Islam?",
+      "paragraphs": [
+        "To understand the cultural significance of red, one must look at how color symbolism in Islam operates across different geographies. In many traditions, red is synonymous with life force, joy, and vitality. Within the context of Islam, while no specific color is 'mandatory,' red has emerged as a premier choice for Muslim wedding attire because it traditionally symbolizes happiness and new beginnings.",
+        "In many South Asian and Middle Eastern cultures that make up the American Muslim community, red is believed to bring good fortune to the couple. This color symbolism in Islam is particularly prominent during the Nikah or Walima, where the bride's ensemble serves as a visual celebration of her transition into a new chapter of life."
+      ]
     },
+    {
+      "heading": "Islamic Wedding Traditions and the American Muslim Community",
+      "paragraphs": [
+        "The American Muslim community is a beautiful example of diversity in Muslim weddings. From West African traditions to Southeast Asian customs, the way Islam is celebrated at a wedding varies, yet the wedding dress often remains the focal point.",
+        "In the United States, we see a fascinating cultural fusion in wedding attire. Brides often blend the modest requirements of Islam with contemporary silhouettes, colors or fabrics, creating a unique aesthetic that respects Islamic wedding traditions while embracing their American identity."
+      ]
+    }
+  ],
+  "faq_schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is red so popular in Muslim weddings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the context of Islam, red is culturally associated with new beginnings. While Islam itself does not mandate a specific color, the red Muslim wedding dress has become a staple in many cultures to celebrate the joy of the union."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a Muslim bride wear colors other than red?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While a red Muslim wedding dress is traditional in many regions, the American Muslim community displays great diversity in Muslim weddings, with brides wearing green, gold, white, or even pastel shades, depending totally on their individual choice."
+        }
+      }
+    ]
+  }
+}
     {
       "slug": "sharara",
       "name": "Sharara",
