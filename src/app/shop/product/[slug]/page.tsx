@@ -56,9 +56,17 @@ export default async function ProductPage({ params }: PageProps) {
         </div>
 
         <div className="flex flex-col">
-          <h1 className="text-4xl font-black text-black uppercase tracking-tighter mb-4">
-            {product.name}
-          </h1>
+          <h1 style={{ 
+  	    color: '#db2777',         // This forces the Pink color
+ 	    fontWeight: 900, 
+ 	    textTransform: 'uppercase', 
+ 	    fontSize: '3rem', 
+	    lineHeight: '1',
+	    letterSpacing: '-0.05em',
+	    marginBottom: '1.5rem'
+	  }}>
+  	    {product.name}
+	  </h1>
 
           <div className="mt-4 space-y-6">
             {paragraphs.map((text, i) => {
