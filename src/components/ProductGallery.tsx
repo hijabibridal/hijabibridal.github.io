@@ -8,25 +8,42 @@ interface ProductGalleryProps {
 }
 
 export default function ProductGallery({ images, productName, isGroom }: ProductGalleryProps) {
-  // Use your preferred slider library logic here (Swiper, Keen, etc.)
-  // The key is to wrap the slide in the amazonLink if it exists
+  if (!images || images.length === 0) return <div className="bg-gray-100 aspect-square rounded-2xl flex items-center justify-center">No Image Available</div>;
+
   return (
-    <div className="space-y-4">
-      {images.map((img, index) => (
-        <div key={index} className="overflow-hidden rounded-3xl shadow-xl">
-          {/* If it's a groom product, each image links to its specific Amazon URL */}
-          {isGroom && img.amazonLink ? (
-            <a href={img.amazonLink} target="_blank" rel="noopener" className="block hover:opacity-90 transition-opacity">
-               <img src={`/images/products/${img.url}`} alt={img.alt || productName} className="w-full h-auto" />
-               <div className="bg-pink-600 text-white text-center py-2 text-xs font-bold uppercase tracking-widest">
-                 View piece on Amazon
-               </div>
+    <div className="flex flex-col gap-6">
+      {images.map((img, index) => {
+        // IMPORTANT: Ensure the URL starts with /images/products/
+        const imageSrc = img.url.startsWith('http') 
+          ? img.url 
+          : `/images/products/${img.url.replace(/^\//, '')}`;
+
+        const Content = (
+          <div className="relative group overflow-hidden rounded-2xl shadow-md border border-gray-100">
+            <img 
+              src={imageSrc} 
+              alt={img.alt || `${productName} - view ${index + 1}`} 
+              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+            {isGroom && img.amazonLink && (
+              <div className="absolute bottom-0 left-0 right-0 bg-pink-600/90 text-white py-2 text-center text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                View this piece on Amazon
+              </div>
+            )}
+          </div>
+        );
+
+        // For Grooms, each image is its own link. For Bridal, the whole gallery is usually wrapped in a link in page.tsx
+        if (isGroom && img.amazonLink) {
+          return (
+            <a key={index} href={img.amazonLink} target="_blank" rel="noopener" className="cursor-pointer">
+              {Content}
             </a>
-          ) : (
-            <img src={`/images/products/${img.url}`} alt={img.alt || productName} className="w-full h-auto" />
-          )}
-        </div>
-      ))}
+          );
+        }
+
+        return <div key={index}>{Content}</div>;
+      })}
     </div>
-  )
+  );
 }
