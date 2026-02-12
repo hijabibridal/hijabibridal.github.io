@@ -25,18 +25,8 @@ export default async function ProductPage({ params }: PageProps) {
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) notFound();
 
-  // CHECK IF GROOM: Identifies if the product is part of the groom collection
   const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
-
-  // FALLBACK LINK: If an image has no link, find the first available one in the list
   const fallbackLink = product.images.find(img => img.amazonLink && img.amazonLink !== "")?.amazonLink || "#";
-
-  // FULL DESCRIPTION: We split by newline and filter out empty strings
-  const paragraphs = product.description
-    .replace(/<[^>]*>/g, ' ') 
-    .split('\n')
-    .map(p => p.trim())
-    .filter(p => p.length > 0);
 
   return (
     <div className="container mx-auto px-4 py-8 bg-white">
@@ -69,7 +59,6 @@ export default async function ProductPage({ params }: PageProps) {
             {product.name}
           </h1>
 
-          {/* PURCHASE BUTTON: Only shows if NOT a groom page */}
           {!isGroom && (
             <a 
               href={fallbackLink} 
@@ -81,26 +70,15 @@ export default async function ProductPage({ params }: PageProps) {
             </a>
           )}
 
-          <div className="mt-4 space-y-6">
-            {paragraphs.map((text, i) => {
-              const lowerText = text.toLowerCase();
-              
-              if (lowerText.startsWith('how to wear')) {
-                return (
-                  <h2 key={i} className="text-[#db2777] text-2xl font-bold mt-8">
-                    {text}
-                  </h2>
-                );
-              }
-
-              if (text.includes('amzn.to') || text.includes('http')) return null;
-
-              return (
-                <p key={i} className="text-black text-lg leading-relaxed">
-                  {text}
-                </p>
-              );
-            })}
+          <div className="mt-4">
+            {/* This is the critical fix. 
+                dangerouslySetInnerHTML allows the <br />, <a>, and <h2> tags 
+                we added in the Python script to actually work.
+            */}
+            <div 
+              className="text-black text-lg leading-relaxed space-y-4"
+              dangerouslySetInnerHTML={{ __html: product.description }}
+            />
           </div>
         </div>
       </div>
