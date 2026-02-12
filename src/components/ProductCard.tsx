@@ -32,14 +32,26 @@ export default function ProductCard({ product }: { product: any }) {
           {product.name}
         </h3>
         
+        {/* Description: Updated to handle HTML and style H2 tags */}
+        <div 
+          className="mt-3 text-sm text-gray-600 line-clamp-3 whitespace-pre-wrap
+                     [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-base [&_h2]:mt-2"
+          dangerouslySetInnerHTML={{ __html: product.description }}
+        />
+
         {/* Pink "View Details" Link */}
         <div className="mt-6 flex items-center justify-between">
           <p className="text-[#db2777] font-bold text-xs uppercase tracking-[0.2em]">
             View Details
           </p>
-          <span className="text-[#db2777] transform group-hover:translate-x-2 transition-transform duration-300">
-            →
-          </span>
+          <svg 
+            className="w-5 h-5 text-[#db2777] transform group-hover:translate-x-1 transition-transform" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </div>
       </div>
     </Link>
