@@ -71,12 +71,14 @@ export default async function ProductPage({ params }: PageProps) {
           )}
 
           <div className="mt-4">
-            {/* This is the critical fix. 
-                dangerouslySetInnerHTML allows the <br />, <a>, and <h2> tags 
-                we added in the Python script to actually work.
+            {/* THE FIX:
+                1. whitespace-pre-wrap ensures your manual line breaks in JSON are kept.
+                2. [&_h2]:text-[#db2777] targets the "How to wear" headers and makes them pink.
+                3. [&_h2]:font-bold and [&_h2]:text-2xl ensures they are bold and large.
             */}
             <div 
-              className="text-black text-lg leading-relaxed space-y-4"
+              className="text-black text-lg leading-relaxed whitespace-pre-wrap 
+                         [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
               dangerouslySetInnerHTML={{ __html: product.description }}
             />
           </div>
