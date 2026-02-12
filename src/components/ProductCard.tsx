@@ -34,7 +34,7 @@ export default function ProductCard({ product }: { product: any }) {
         
         {/* Description: Updated to handle HTML and style H2 tags */}
         <div 
-          className="mt-3 text-sm text-gray-600 line-clamp-3 whitespace-pre-wrap
+          className="mt-3 text-sm text-gray-600 line-clamp-none whitespace-pre-wrap
                      [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-base [&_h2]:mt-2"
           dangerouslySetInnerHTML={{ __html: product.description }}
         />
