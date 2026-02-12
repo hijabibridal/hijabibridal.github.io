@@ -25,13 +25,15 @@ export default async function ProductPage({ params }: PageProps) {
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) notFound();
 
+  // CHECK IF GROOM: Identifies if the product is part of the groom collection
+  const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
+
   // FALLBACK LINK: If an image has no link, find the first available one in the list
   const fallbackLink = product.images.find(img => img.amazonLink && img.amazonLink !== "")?.amazonLink || "#";
 
   // FULL DESCRIPTION: We split by newline and filter out empty strings
-  // This ensures the FIRST half and SECOND half are both kept.
   const paragraphs = product.description
-    .replace(/<[^>]*>/g, ' ') // Strip any residual HTML tags safely
+    .replace(/<[^>]*>/g, ' ') 
     .split('\n')
     .map(p => p.trim())
     .filter(p => p.length > 0);
@@ -47,7 +49,6 @@ export default async function ProductPage({ params }: PageProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
         <div>
-          {/* Gallery handles the images and the fallback Amazon links */}
           <ProductGallery 
             images={product.images} 
             productName={product.name} 
@@ -57,22 +58,33 @@ export default async function ProductPage({ params }: PageProps) {
 
         <div className="flex flex-col">
           <h1 style={{ 
-  	    color: '#db2777',         // This forces the Pink color
- 	    fontWeight: 900, 
- 	    textTransform: 'uppercase', 
- 	    fontSize: '3rem', 
-	    lineHeight: '1',
-	    letterSpacing: '-0.05em',
-	    marginBottom: '1.5rem'
-	  }}>
-  	    {product.name}
-	  </h1>
+            color: '#db2777',
+            fontWeight: 900, 
+            textTransform: 'uppercase', 
+            fontSize: '3rem', 
+            lineHeight: '1',
+            letterSpacing: '-0.05em',
+            marginBottom: '1rem' 
+          }}>
+            {product.name}
+          </h1>
+
+          {/* PURCHASE BUTTON: Only shows if NOT a groom page */}
+          {!isGroom && (
+            <a 
+              href={fallbackLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6"
+            >
+              Purchase on Amazon.com
+            </a>
+          )}
 
           <div className="mt-4 space-y-6">
             {paragraphs.map((text, i) => {
               const lowerText = text.toLowerCase();
               
-              // 1. HEADER: Pink and Bold (No Caps)
               if (lowerText.startsWith('how to wear')) {
                 return (
                   <h2 key={i} className="text-[#db2777] text-2xl font-bold mt-8">
@@ -81,10 +93,8 @@ export default async function ProductPage({ params }: PageProps) {
                 );
               }
 
-              // 2. Filter out raw URL strings from the display
               if (text.includes('amzn.to') || text.includes('http')) return null;
 
-              // 3. BODY TEXT: Forced Plain Black
               return (
                 <p key={i} className="text-black text-lg leading-relaxed">
                   {text}
