@@ -17,39 +17,36 @@ def update_descriptions(file_path):
         if not slugs:
             continue
 
-        # 1. Clean existing auto-generated links to avoid doubling up if you run this twice
-        # This regex removes everything from the first occurrence of "Shop this color" or "View all"
-        clean_desc = re.split(r'Shop this color|View all', product["description"])[0].strip()
+        # 1. CLEANING: Remove any previous link attempts or auto-text
+        # Splits description at the first sign of our auto-generated links
+        clean_desc = re.split(r'Shop this color|View all|<br', product["description"])[0].strip()
         
-        # Ensure the original description still ends with a period
         if not clean_desc.endswith('.'):
             clean_desc += "."
 
-        # 2. Logic for Slug 1 (Category - "View all")
+        # 2. CATEGORY LINK (Slug 1)
         cat_slug = slugs[0]
-        # Custom check for the groom outfit to match your request
-        if cat_slug == "muslim-groom-outfit":
-            cat_name = "Muslim Groom Outfit"
-        else:
-            cat_name = cat_slug.replace('-', ' ').title()
-            
+        # Custom logic for your Groom request
+        cat_name = "Muslim Groom Outfit" if cat_slug == "muslim-groom-outfit" else cat_slug.replace('-', ' ').title()
         cat_link = f'<br /><a href="{base_url}{cat_slug}">View all {cat_name}</a>'
 
-        # 3. Logic for Slug 2 (Color - "Shop this color")
+        # 3. COLOR LINK (Slug 2)
         color_link = ""
         if len(slugs) > 1:
             color_slug = slugs[1]
-            color_link = f'<br /><a href="{base_url}{color_slug}">Shop this color collection</a>'
+            # Added an extra <br /> to ensure it is on its own line
+            color_link = f'<br /><br /><a href="{base_url}{color_slug}">Shop this color collection</a>'
 
-        # 4. Update the description field
+        # 4. REBUILD DESCRIPTION
+        # Order: [Description] [Line Break] [Color Link] [Line Break] [Category Link]
         product["description"] = f"{clean_desc}{color_link}{cat_link}"
 
-    # Save the updated JSON back to src/data
+    # Save the updated JSON
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"Successfully updated {len(data['products'])} products in {file_path}")
+    print(f"Successfully updated {len(data['products'])} products.")
 
-# Pointing to your specific path
+# Point to your file path
 file_path = os.path.join('src', 'data', 'bridal-products.json')
 update_descriptions(file_path)
