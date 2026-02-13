@@ -103,7 +103,31 @@
       "name": "Muslim Lehenga",
       "titleTag": "Muslim Lehenga Collection | Hijabi Bridal",
       "metaDescription": "Explore our curated selection of hijabi lehenga items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our hijabi lehenga category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+      "description": "What is the Muslim Bridal Lehenga Look?\nFor many within the American Muslim community, choosing the perfect outfit for the wedding day is an exercise in balancing heritage with contemporary style. The Muslim bride lehenga look has become a premier choice, offering a silhouette that is both regal and respectful of Islamic wedding traditions. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "What does a Muslim bride wear on her wedding day?",
+      "paragraphs": [
+        "On her wedding day, a Muslim bride typically selects traditional attire that reflects her family's roots and personal taste. The Muslim bride lehenga look is particularly popular due to the heavy South Asian influence seen in many North American ceremonies. A hijabi lehenga consists of a long, flared skirt, a long blouse, a matching hijab and a large scarf (dupatta) that can be draped to provide modest coverage.",
+        "The cultural significance of the lehenga lies in its ability to showcase craftsmanship. A Muslim bride often spends months selecting a color scheme that resonates with her personality. While red remains a classic choice for a Muslim bride, modern wedding fashion trends have introduced pastels, metallics, and deep emeralds into the mix. This evolution is a direct result of the cultural exchange happening within the American Muslim community, where global styles meet local preferences."
+      ]
+    },
+    {
+      "heading": "The Importance of Fabric and Texture",
+      "paragraphs": [
+        "The foundation of any stunning lehenga is the fabric. For a high-end Muslim bride lehenga look, designers often utilize heavy silks, luxurious velvets, or delicate chiffons. The choice of fabric dictates how the lehenga moves as the Muslim bride walks down the aisle on her wedding day. Silk offers a structured, polished look, while velvet is ideal for winter ceremonies, providing a rich canvas for embroidery and embellishments. Chiffon or georgette creates a lighter, ethereal muslim bride lehenga look suitable for outdoor events.",
+        "The interplay between fabric and light is a key consideration in modern wedding fashion trends. No lehenga is complete without detailed embroidery and embellishments that play with the lighting of the wedding venue. On the wedding day, the way embroidery and embellishments catch the light can transform a simple lehenga into a work of art."
+      ]
+    },
+    {
+      "heading": "Modern Trends and South Asian Influence",
+      "paragraphs": [
+        "The South Asian influence on the American Muslim community has led to a rise in fusion styles. A Muslim bride might pair her lehenga with a hip-length or even knee-length tunic, for added modesty.  When a Muslim Bride selects her lehenga for her wedding day, she is participating in a living history, as lehengas were first used in the Islamic Mughal courts in India.",
+        "The color scheme chosen by a Muslim bride often tells a story. While South Asian influence traditionally dictates shades of maroon or red, the color scheme on her wedding day can be truly different. A Muslim Bride may opt for a monochromatic lehenga to create a sleek, modern silhouette or she might choose champagne, pink or blue. Regardless of the fabric or embroidery and embellishments chosen, the Muslim bride lehenga look remains a testament to the beauty of cultural exchange."
+      ]
+    }
+  ],
+  "FAQ_schema": "[\n  {\n    \"@type\": \"Question\",\n    \"name\": \"Why do Muslim brides choose a lehenga for their wedding day?\",\n    \"acceptedAnswer\": {\n      \"@type\": \"Answer\",\n      \"text\": \"A lehenga is a popular choice for a Muslim bride because it combines modesty with the grandeur of a highly flared skirt, long blouse and dupatta draping. It allows for a variety of styles in embroidery and embellishments, making it a versatile piece of traditional attire from the Mughal period of Muslim rulers in India.\"\n    }\n  },\n  {\n    \"@type\": \"Question\",\n    \"name\": \"What is the best fabric for a bridal lehenga?\",\n    \"acceptedAnswer\": {\n      \"@type\": \"Answer\",\n      \"text\": \"The best fabric depends on the season and the desired Muslim bride lehenga look. Silk and velvet are popular for their structure, while chiffon is preferred for a more fluid movement on the wedding day.\"\n    }\n  },\n  {\n    \"@type\": \"Question\",\n    \"name\": \"How has South Asian influence changed Muslim wedding attire in the US?\",\n    \"acceptedAnswer\": {\n      \"@type\": \"Answer\",\n      \"text\": \"The South Asian influence has popularized the lehenga within the American Muslim community, leading to a vibrant cultural exchange where traditional embroidery and embellishments are applied to diverse color schemes beyond red and maroon.\"\n    }\n  },\n  {\n    \"@type\": \"Question\",\n    \"name\": \"Can a Muslim bride wear a white lehenga?\",\n    \"acceptedAnswer\": {\n      \"@type\": \"Answer\",\n      \"text\": \"Yes. While red is traditional, modern wedding fashion trends see many a Muslim bride opting for white, champagne, or blue  lehenga designs, reflecting the diversity in Muslim weddings.\"\n    }\n  }\n]"
     },
     {
       "slug": "muslim-wedding-dresses",
