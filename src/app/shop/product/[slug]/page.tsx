@@ -10,7 +10,6 @@ export async function generateStaticParams() {
   return productData.products.map((p) => ({ slug: p.slug }));
 }
 
-// 1. UPDATED METADATA: Now uses og_image, og_title, and title_tag from JSON
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
@@ -20,7 +19,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImageUrl = `${siteUrl}/images/${product.og_image}`;
 
   return {
-    // Uses the 2026-specific title tags from your JSON
     title: product.title_tag || product.name,
     description: product.meta_description,
     openGraph: {
@@ -30,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Hijabi Bridal",
       images: [
         {
-          url: ogImageUrl, // Pulls the specific og_image from JSON
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: product.name,
@@ -55,31 +53,49 @@ export default async function ProductPage({ params }: PageProps) {
     notFound();
   }
 
-  // Create breadcrumb items
   const breadcrumbItems = [
     { name: 'Home', href: '/' },
     { name: 'Shop', href: '/shop' },
     { name: product.name, href: `/shop/product/${product.slug}` },
   ];
 
-  // For the FAQ section
+  // Parse FAQs for both display and Schema
   const faqs = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : [];
+
+  // Construct the JSON-LD for Search Engines
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.name,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.acceptedAnswer.text
+      }
+    }))
+  };
 
   return (
     <main className="min-h-screen bg-white pb-20">
-      {/* Product Detail Section */}
+      {/* FAQ Schema for Dev Console/Search Engines */}
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Breadcrumbs items={breadcrumbItems} />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-8">
-          {/* Left Column: Image Gallery */}
           <ProductGallery 
             images={product.images} 
             productName={product.name} 
             fallbackLink={product.images[0]?.amazonLink}
           />
 
-          {/* Right Column: Product Info */}
           <div className="flex flex-col">
             <h1 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tighter mb-4">
               {product.name}
@@ -94,7 +110,6 @@ export default async function ProductPage({ params }: PageProps) {
               <span className="text-sm text-gray-500 font-medium">(Verified Purchase)</span>
             </div>
 
-            {/* Render First Amazon Link found in images */}
             {product.images.find((img: any) => img.amazonLink)?.amazonLink && (
               <a 
                 href={product.images.find((img: any) => img.amazonLink).amazonLink}
@@ -114,6 +129,7 @@ export default async function ProductPage({ params }: PageProps) {
               />
             </div>
 
+            {/* Visual FAQ Display */}
             {faqs.length > 0 && (
               <div className="mt-12 border-t border-pink-100 pt-8">
                 <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">

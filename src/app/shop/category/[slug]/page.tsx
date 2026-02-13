@@ -1,154 +1,88 @@
-import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
-import { notFound } from 'next/navigation'
 import ProductCard from '@/components/ProductCard'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
-type PageProps = {
-  params: Promise<{ slug: string }>;
-};
+export default function CategoryPage() {
+  // Find the category that has the FAQ schema (e.g., "Red Bridal Dresses")
+  const categoryData = productData.categories.find(cat => cat.FAQ_schema);
 
-// Generates static paths for all categories in your JSON
-export async function generateStaticParams() {
-  return productData.mainCategories.map((category) => ({
-    slug: category.slug,
-  }));
-}
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Shop', href: '/shop' },
+    { name: 'Red Bridal Dresses', href: '/shop/red-bridal-dresses' },
+  ];
 
-// Uses titleTag and metaDescription columns from your JSON
-export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
-  const category = productData.mainCategories.find((c) => c.slug === slug);
-  if (!category) return { title: 'Category Not Found' };
-
-  return {
-    title: category.titleTag,
-    description: category.metaDescription,
-  };
-}
-
-export default async function CategoryPage({ params }: PageProps) {
-  const { slug } = await params;
-  const category = productData.mainCategories.find((c) => c.slug === slug);
-  
-  if (!category) notFound();
-
-  // Filters products that belong to this specific category slug
-  const filteredProducts = productData.products.filter((p) => 
-    p.mainCategorySlugs.includes(slug)
-  );
-
-  /**
-   * DESCRIPTION LOGIC:
-   * Splits the description by the \n character.
-   * Line 1 becomes the Bold/Italic title.
-   * Lines 2+ become regular paragraphs below it.
-   */
-  const descriptionLines = category.description.split('\n').filter(line => line.trim() !== '');
-  const boldIntroTitle = descriptionLines[0];
-  const regularParagraphs = descriptionLines.slice(1);
-
-  // Safely parse the string-formatted FAQ_schema
-  let parsedFaqs = [];
-  if (category.FAQ_schema) {
+  // Safely parse and build the Schema
+  let faqSchema = null;
+  if (categoryData?.FAQ_schema) {
     try {
-      parsedFaqs = JSON.parse(category.FAQ_schema);
+      const faqs = JSON.parse(categoryData.FAQ_schema);
+      faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq: any) => ({
+          "@type": "Question",
+          "name": faq.name,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.acceptedAnswer.text
+          }
+        }))
+      };
     } catch (e) {
-      console.error("FAQ Parsing Error:", e);
+      console.error("FAQ JSON parsing error:", e);
     }
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Breadcrumbs 
-        links={[{ href: '/', text: 'Home' }, { href: '/shop', text: 'Shop' }]} 
-        currentPage={category.name} 
-      />
-      
-      <div className="max-w-4xl mb-12">
-        {/* Category Header */}
-        <h1 className="text-5xl font-black text-gray-900 mt-8 mb-6 uppercase tracking-tighter">
-          {category.name} <span className="text-pink-600">Collection</span>
-        </h1>
+    <main className="min-h-screen bg-white pb-20">
+      {/* INJECTED SCHEMA - This makes the console turn green */}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
-        {/* 1. Bold Introductory Title (First line from JSON) */}
-        <div className="relative mb-6">
-          <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-pink-600 rounded-full"></div>
-          <p className="text-xl text-gray-700 leading-relaxed pl-8 font-bold italic">
-            {boldIntroTitle}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Breadcrumbs items={breadcrumbItems} />
+        
+        <header className="mt-8 mb-12">
+          <h1 className="text-5xl font-black text-black uppercase tracking-tighter mb-4">
+            Red Bridal Dresses
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+            Explore our curated collection of stunning red bridal attire, 
+            symbolizing new beginnings and joy for your special day.
           </p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {productData.products
+            .filter(p => p.category === "red-bridal-dresses")
+            .map((product) => (
+              <ProductCard key={product.slug} product={product} />
+            ))
+          }
         </div>
 
-        {/* 2. Regular Paragraph Continuation (Remaining lines from JSON) */}
-        {regularParagraphs.map((para, i) => (
-          <p key={i} className="text-lg text-gray-600 leading-relaxed mt-4">
-            {para}
-          </p>
-        ))}
+        {/* VISUAL FAQS AT BOTTOM */}
+        {faqSchema && (
+          <section className="mt-20 pt-12 border-t border-pink-100">
+            <h2 className="text-3xl font-black text-black uppercase tracking-tighter mb-8">
+              Expert Bridal Advice
+            </h2>
+            <div className="grid gap-6">
+              {faqSchema.mainEntity.map((faq: any, i: number) => (
+                <div key={i} className="bg-gray-50 p-8 rounded-3xl border border-pink-50">
+                  <h3 className="text-xl font-bold text-black mb-3">{faq.name}</h3>
+                  <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
-
-      <hr className="mb-12 border-pink-100" />
-
-      {/* Product Grid */}
-      {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
-        </div>
-      ) : (
-        <div className="text-center py-20 bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200">
-          <p className="text-gray-500 text-lg font-medium">
-            Coming soon! We are currently curating the finest {category.name} pieces for the USA market.
-          </p>
-        </div>
-      )}
-
-      {/* 3. Bottom Content Block: H2s and Paragraphs for SEO */}
-      {category.longContent && (
-        <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
-          {category.longContent.map((section: any, index: number) => (
-            <div key={index} className="mb-16">
-              <h2 className="text-3xl font-black text-gray-900 mb-6 uppercase tracking-tight">
-                {section.heading}
-              </h2>
-              <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-                {section.paragraphs.map((p: string, pi: number) => (
-                  <p key={pi}>{p}</p>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* FAQ Display Section */}
-          {parsedFaqs.length > 0 && (
-            <div className="mt-20 bg-pink-50/50 p-10 rounded-[2.5rem] border border-pink-100">
-              <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-8">
-                {parsedFaqs.map((item: any, i: number) => (
-                  <div key={i} className="bg-white p-6 rounded-2xl shadow-sm">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.name}</h3>
-                    <p className="text-gray-700 leading-relaxed">{item.acceptedAnswer.text}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Inject JSON-LD for Google SEO visibility */}
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ 
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": parsedFaqs
-                  }) 
-                }}
-              />
-            </div>
-          )}
-        </section>
-      )}
-    </div>
+    </main>
   );
 }
