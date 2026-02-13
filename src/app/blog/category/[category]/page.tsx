@@ -4,173 +4,67 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import blogData from "@/data/blog-articles.json";
 import { Metadata } from "next";
 
-interface BlogCategory {
-  slug: string;
-  name: string;
-  titleTag: string;
-  metaDescription: string;
-}
-
-interface BlogSubCategory {
-  slug: string;
-  name: string;
-  description: string;
-  mainCategorySlug: string;
-  titleTag?: string;
-  metaDescription?: string;
-}
-
-interface BlogArticle {
-  slug: string;
-  pageTitle: string;
-  description: string;
-  featuredImageUrl: string;
-  mainCategorySlug: string;
-  subCategorySlug: string;
-}
-
+// Define the Data Structure based on your uploaded file
 interface BlogData {
-  mainCategories: BlogCategory[];
-  subCategories: BlogSubCategory[];
-  articles: BlogArticle[];
-  internalLinks?: {
-    id: string;
-    url: string;
-    text: string;
-  }[];
+  mainCategories: any[];
+  subCategories: any[];
+  articles: any[];
 }
 
-interface PageProps {
-  params: { 
-    category: string;
-  };
-}
+type PageProps = { params: Promise<{ category: string }> };
 
+// CRITICAL: Tells GitHub Pages which categories to build
 export async function generateStaticParams() {
-  const { mainCategories } = blogData as BlogData;
-  return mainCategories.map((category) => ({
+  const data = blogData as BlogData;
+  if (!data.mainCategories) return []; // Safety check to prevent .map error
+  
+  return data.mainCategories.map((category) => ({
     category: category.slug,
   }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { category } = params;
-  const { mainCategories } = blogData as BlogData;
-  
-  const categorySlug = category?.trim().toLowerCase() || '';
-  
-  const mainCategory = mainCategories.find(
-    cat => cat.slug?.trim().toLowerCase() === categorySlug
-  );
+  const { category } = await params;
+  const data = blogData as BlogData;
+  const mainCategory = data.mainCategories?.find(cat => cat.slug === category);
 
-  if (!mainCategory) {
-    return {
-      title: 'Category Not Found',
-      description: 'The requested category does not exist.'
-    };
-  }
+  if (!mainCategory) return { title: 'Category' };
 
   return {
-    metadataBase: new URL('https://petgadgetinsider.org'),
-    title: mainCategory.titleTag,
+    title: `${mainCategory.name} | Hijabi Bridal`,
     description: mainCategory.metaDescription,
-    openGraph: {
-      title: mainCategory.titleTag,
-      description: mainCategory.metaDescription,
-    },
-    twitter: {
-      title: mainCategory.titleTag,
-      description: mainCategory.metaDescription,
-    }
   };
 }
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const { category } = params;
-  const { mainCategories, subCategories, articles } = blogData as BlogData;
+export default async function CategoryPage({ params }: PageProps) {
+  const { category } = await params;
+  const data = blogData as BlogData;
+  const mainCategory = data.mainCategories?.find(cat => cat.slug === category);
 
-  const categorySlug = category?.trim().toLowerCase() || '';
-  
-  const mainCategory = mainCategories.find(
-    cat => cat.slug?.trim().toLowerCase() === categorySlug
-  );
-
-  if (!mainCategory) {
-    notFound();
-  }
-
-  const filteredSubCategories = subCategories.filter((sub) => {
-    const mainCatSlug = sub.mainCategorySlug?.trim().toLowerCase() ?? "";
-    return mainCatSlug === categorySlug;
-  });
-
-  if (filteredSubCategories.length === 0) {
-    notFound();
-  }
-
-  const subCategoriesWithCounts = filteredSubCategories.map((sub) => {
-    const subSlug = sub.slug?.trim().toLowerCase() ?? "";
-
-    const articleCount = articles.filter((article) => {
-      const artMainCat = article.mainCategorySlug?.trim().toLowerCase() ?? "";
-      const artSubCat = article.subCategorySlug?.trim().toLowerCase() ?? "";
-      return artMainCat === categorySlug && artSubCat === subSlug;
-    }).length;
-
-    return { ...sub, articleCount };
-  });
-
-  const totalArticles = subCategoriesWithCounts.reduce(
-    (sum, sub) => sum + sub.articleCount,
-    0
-  );
+  if (!mainCategory) notFound();
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-12">
       <Breadcrumbs
-        links={[
-          { href: '/', text: 'Home' }, // Added Home
-          { href: '/blog', text: 'Pet Supplies Reviews' } // Changed from 'Blog'
-        ]}
+        links={[{ href: '/', text: 'Home' }, { href: '/blog', text: 'Blog' }]}
         currentPage={mainCategory.name}
       />
 
-      <h1 className="text-3xl font-bold mb-6">{mainCategory.name}</h1>
-
-      {totalArticles === 0 ? (
-        <p className="text-gray-600">
-          No articles available in this category.
-        </p>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {subCategoriesWithCounts.map((sub) =>
-            sub.articleCount > 0 ? (
-              <Link
-                key={sub.slug}
-                href={`/blog/category/${encodeURIComponent(
-                  category
-                )}/${encodeURIComponent(sub.slug)}`}
-                className="block border rounded p-4 hover:shadow transition-shadow"
-                prefetch={false}
-              >
-                <h2 className="text-xl font-bold">{sub.name}</h2>
-                <p className="mt-2 text-gray-600">{sub.description}</p>
-                <p className="mt-1 text-sm text-sky-600">
-                  {sub.articleCount} article{sub.articleCount === 1 ? "" : "s"}
-                </p>
-              </Link>
-            ) : (
-              <div key={sub.slug} className="block border rounded p-4">
-                <h2 className="text-xl font-bold">{sub.name}</h2>
-                <p className="mt-2 text-gray-600">{sub.description}</p>
-                <p className="mt-1 text-sm italic text-gray-500">
-                  No articles available
-                </p>
-              </div>
-            )
-          )}
+      <main className="flex flex-col items-center justify-center min-h-[50vh] text-center mt-10">
+        <h1 className="text-4xl font-black uppercase tracking-tighter mb-4">
+          {mainCategory.name}
+        </h1>
+        {/* Branding: Red for happiness and new beginnings */}
+        <div className="h-1 w-24 bg-red-600 mx-auto mb-8"></div>
+        
+        <div className="bg-gray-50 p-10 rounded-3xl border border-dashed border-gray-300 max-w-2xl">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Coming Soon</h2>
+          <p className="text-gray-600 leading-relaxed">
+            We are currently curating the finest content regarding {mainCategory.name.toLowerCase()} 
+            for the American Muslim community.
+          </p>
         </div>
-      )}
+      </main>
     </div>
   );
 }

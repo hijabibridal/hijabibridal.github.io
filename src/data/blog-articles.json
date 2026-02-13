@@ -1,22 +1,7 @@
-[
-  {
-    "id": 1,
-    "title": "The Significance of Red in Islamic Wedding Traditions",
-    "slug": "significance-of-red-muslim-weddings",
-    "excerpt": "Exploring why red is a traditional wedding color in Islam, symbolizing new beginnings and happiness for the couple.",
-    "description": "In many cultures, the red Muslim wedding dress is a staple that celebrates the joy of union and new beginnings. We explore its history and modern appeal.",
-    "image": "/images/blog/red-wedding-dress.webp",
-    "category": "Traditions",
-    "date": "2026-02-13"
-  },
-  {
-    "id": 2,
-    "title": "American Islamic Fashion: Blending East and West",
-    "slug": "american-islamic-fashion-trends",
-    "excerpt": "How the American Muslim community is redefining bridal elegance through a fusion of traditional modesty and modern silhouettes.",
-    "description": "Sophisticated options for Muslim wedding attire that are both trendy and respectful, catering to the diverse American Muslim community.",
-    "image": "/images/blog/modern-hijabi-bride.webp",
-    "category": "Fashion",
-    "date": "2026-02-13"
-  }
-]
+{
+  "mainCategories": [
+    { "slug": "traditions", "name": "Traditions", "titleTag": "Islamic Wedding Traditions", "metaDescription": "Significance of red and new beginnings." }
+  ],
+  "subCategories": [],
+  "articles": []
+}

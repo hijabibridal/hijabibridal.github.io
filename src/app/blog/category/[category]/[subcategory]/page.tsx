@@ -5,45 +5,20 @@ import blogData from "@/data/blog-articles.json";
 import Image from "next/image";
 import { Metadata } from "next";
 
-interface BlogCategory {
-  slug: string;
-  name: string;
-}
-
-interface BlogSubCategory {
-  slug: string;
-  name: string;
-  description: string;
-  mainCategorySlug: string;
-  titleTag?: string;
-  metaDescription?: string;
-}
-
-interface BlogArticle {
-  slug: string;
-  pageTitle: string;
-  description: string;
-  featuredImageUrl: string;
-  featuredImageAlt: string;
-  mainCategorySlug: string;
-  subCategorySlug: string;
-}
-
 interface BlogData {
-  mainCategories: BlogCategory[];
-  subCategories: BlogSubCategory[];
-  articles: BlogArticle[];
+  mainCategories: any[];
+  subCategories: any[];
+  articles: any[];
 }
 
-interface PageProps {
-  params: { 
-    category: string;
-    subcategory: string;
-  };
-}
+// Updated to match the dynamic segment [subcategory]
+type PageProps = { 
+  params: Promise<{ category: string; subcategory: string }> 
+};
 
 export async function generateStaticParams() {
   const { subCategories } = blogData as BlogData;
+  // If subCategories is empty, this returns [], preventing the build error
   return subCategories.map((sub) => ({
     category: sub.mainCategorySlug,
     subcategory: sub.slug,
@@ -51,115 +26,73 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { category, subcategory } = params;
+  const { category, subcategory } = await params;
   const { subCategories } = blogData as BlogData;
   
-  const categorySlug = category?.trim().toLowerCase() || '';
-  const subcategorySlug = subcategory?.trim().toLowerCase() || '';
-  
   const foundSubCategory = subCategories.find(sub => 
-    sub.mainCategorySlug?.trim().toLowerCase() === categorySlug &&
-    sub.slug?.trim().toLowerCase() === subcategorySlug
+    sub.mainCategorySlug?.toLowerCase() === category.toLowerCase() &&
+    sub.slug?.toLowerCase() === subcategory.toLowerCase()
   );
 
-  if (!foundSubCategory) {
-    return {
-      title: 'Subcategory Not Found',
-      description: 'The requested subcategory does not exist.'
-    };
-  }
+  if (!foundSubCategory) return { title: 'Coming Soon' };
 
   return {
-    metadataBase: new URL('https://petgadgetinsider.org'),
-    title: foundSubCategory.titleTag || foundSubCategory.name,
-    description: foundSubCategory.metaDescription || foundSubCategory.description,
-    openGraph: {
-      title: foundSubCategory.titleTag || foundSubCategory.name,
-      description: foundSubCategory.metaDescription || foundSubCategory.description,
-    },
-    twitter: {
-      title: foundSubCategory.titleTag || foundSubCategory.name,
-      description: foundSubCategory.metaDescription || foundSubCategory.description,
-    }
+    title: `${foundSubCategory.name} | Hijabi Bridal`,
+    description: foundSubCategory.description,
   };
 }
 
-export default function SubcategoryPage({ params }: { params: { category: string; subcategory: string } }) {
-  const { category, subcategory } = params;
+export default async function SubcategoryPage({ params }: PageProps) {
+  const { category, subcategory } = await params;
   const { mainCategories, subCategories, articles } = blogData as BlogData;
   
-  const categorySlug = category?.trim().toLowerCase() || '';
-  const subcategorySlug = subcategory?.trim().toLowerCase() || '';
-  
   const currentSubCategory = subCategories.find(sub => 
-    sub.mainCategorySlug?.trim().toLowerCase() === categorySlug &&
-    sub.slug?.trim().toLowerCase() === subcategorySlug
+    sub.mainCategorySlug?.toLowerCase() === category.toLowerCase() &&
+    sub.slug?.toLowerCase() === subcategory.toLowerCase()
   );
   
+  // If no subcategory exists yet (common for "Coming Soon" phase), show a placeholder
   if (!currentSubCategory) {
-    notFound();
+    return (
+      <div className="container mx-auto px-4 py-12 text-center">
+        <h1 className="text-4xl font-black uppercase mb-4">Coming Soon</h1>
+        <div className="h-1 w-24 bg-red-600 mx-auto mb-8"></div>
+        <p className="text-gray-600">We are curating specific subcategories for your wedding inspiration.</p>
+        <Link href="/blog" className="text-red-600 font-bold mt-4 inline-block underline">Back to Blog</Link>
+      </div>
+    );
   }
   
-  const mainCategory = mainCategories.find(
-    cat => cat.slug?.trim().toLowerCase() === categorySlug
-  );
-  
-  if (!mainCategory) {
-    notFound();
-  }
-  
-  const filteredArticles = articles.filter(article => 
-    article.mainCategorySlug?.trim().toLowerCase() === categorySlug &&
-    article.subCategorySlug?.trim().toLowerCase() === subcategorySlug
-  );
+  const mainCategory = mainCategories.find(cat => cat.slug === category);
+  const filteredArticles = articles.filter(article => article.subCategorySlug === subcategory);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <Breadcrumbs
         links={[
-          { href: '/', text: 'Home' }, // Added Home
-          { href: '/blog', text: 'Pet Supplies Reviews' }, // Changed from 'Blog'
-          { 
-            href: `/blog/category/${encodeURIComponent(category)}`, 
-            text: mainCategory.name,
-            prefetch: false
-          }
+          { href: '/', text: 'Home' },
+          { href: '/blog', text: 'Blog' }, // Cleaned from 'Pet Supplies'
+          { href: `/blog/category/${category}`, text: mainCategory?.name || 'Category' }
         ]}
         currentPage={currentSubCategory.name}
       />
 
-      <h1 className="text-3xl font-bold mb-6">{currentSubCategory.name}</h1>
+      <header className="mb-10 mt-6">
+        <h1 className="text-4xl font-black uppercase tracking-tighter mb-2">{currentSubCategory.name}</h1>
+        <div className="h-1 w-20 bg-red-600"></div> {/* Red for happiness and new beginnings */}
+      </header>
       
-      {currentSubCategory.description && (
-        <p className="text-lg mb-6">{currentSubCategory.description}</p>
-      )}
-
       {filteredArticles.length === 0 ? (
-        <p className="text-gray-600">No articles available in this subcategory.</p>
+        <div className="bg-gray-50 p-10 rounded-2xl border border-dashed border-gray-300 text-center">
+          <p className="text-gray-600 text-lg">New articles for {currentSubCategory.name} are arriving soon.</p>
+        </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredArticles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/blog/${encodeURIComponent(article.slug)}`}
-              className="block border rounded-lg overflow-hidden hover:shadow-lg transition-shadow bg-white"
-              prefetch={false}
-            >
-              <div className="h-36 overflow-hidden bg-gray-100 relative">
-                <Image
-                  src={article.featuredImageUrl}
-                  alt={article.featuredImageAlt || article.pageTitle}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              
+            <Link key={article.slug} href={`/blog/${article.slug}`} className="block border rounded-lg hover:shadow-lg transition-shadow bg-white">
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">{article.pageTitle}</h2>
-                {article.description && (
-                  <p className="text-gray-600 line-clamp-2">{article.description}</p>
-                )}
+                <p className="text-gray-600 line-clamp-2">{article.description}</p>
               </div>
             </Link>
           ))}

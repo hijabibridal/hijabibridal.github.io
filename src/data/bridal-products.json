@@ -19,7 +19,29 @@
       "name": "Bridal Dupatta",
       "titleTag": "Bridal Dupatta Collection | Hijabi Bridal",
       "metaDescription": "Explore our curated selection of bridal dupatta items. Find the perfect color and quality for your special occasion.",
-      "description": "Welcome to our bridal dupatta category. We offer a range of high-quality dupattas in different colors to meet your needs and enhance your bridal style."
+      "description": "Why Use a Dupatta on Your Wedding Day?\nThe bridal dupatta has become a premier choice, offering a silhouette that is both regal and respectful of diverse wedding traditions. While deeply rooted in South Asia, it is essential to note that similar shawls are worn in Sudan, Somalia, Iran, and Tanzania. READ MORE BELOW...",
+"longContent": [
+{
+"heading": "What does a bride wear on her wedding day?",
+"paragraphs": [
+"On her wedding day, a bride typically selects traditional attire that reflects her family's roots and personal taste. The use of a traditional scarf (dupatta) is particularly popular due to the heavy South Asian influence seen in many North American ceremonies, though similar shawls are worn in Sudan, Somalia, Iran, and Tanzania. A bridal ensemble often consists of a flared skirt, a tailored blouse, and a large dupatta that can be draped to provide modest coverage. This dupatta serves as a versatile accessory that completes the bridal look. Whether the bride chooses a dupatta for its religious use or its aesthetic appeal, the dupatta remains a focal point."
+]
+},
+{
+"heading": "Can I wear a dupatta if I'm not Indian or Pakistani?",
+"paragraphs": [
+"Absolutely! Because similar shawls are worn by many Muslims around the world, the dupatta is a global garment that transcends a single border. When you wear a bridal dupatta, you are honoring a legacy of textile arty. A well-styled dupatta is a sign of tradition. You might see a bridal dupatta draped over one shoulder or used as a veil. Because the dupatta is so lightweight, it is the ideal accessory for a US bride. The dupatta allows for a seamless blend of modesty and high fashion."
+]
+},
+{
+"heading": "The Importance of Fabric and Texture",
+"paragraphs": [
+"The foundation of any stunning bridal look is the fabric of the dupatta. For a high-end bridal dupatta, designers often utilize heavy, luxurious velvets, or delicate chiffons and organzas. The choice of fabric dictates how the dupatta moves or stays. A silk dupatta offers a polished look, while a velvet dupatta is ideal for winter ceremonies. A chiffon dupatta creates a lighter, ethereal look. Whether it is an embroidered dupatta from India or a similar shawl from Iran, the texture is paramount.",
+"The interplay between fabric and light is a key consideration in modern wedding fashion. No dupatta is complete without detailed embellishments that play with the lighting of the venue. The way a dupatta catches the light can transform the look of your primary dress. On the wedding day, the dupatta adds a layer of sophistication. A bride may even choose a second dupatta to drape over her head for the ceremony. For hijabis, it's worn over the hijab to the back, so the detailed edge shows near the face."
+]
+}
+],
+"FAQ_schema": "[\n  {\n    "@type": "Question",\n    "name": "Can I wear a dupatta if I'm not Indian?",\n    "acceptedAnswer": {\n      "@type": "Answer",\n      "text": "Yes! The dupatta is a versatile accessory. Since similar shawls are worn in Sudan, Somalia, Iran, and Tanzania, it is a global piece of attire."\n    }\n  },\n  {\n    "@type": "Question",\n    "name": "What does a red dupatta symbolize?",\n    "acceptedAnswer": {\n      "@type": "Answer",\n      "text": "A red dupatta is a traditional wedding color that symbolizes new beginnings and happiness for the couple."\n    }\n  },\n  {\n    "@type": "Question",\n    "name": "What fabrics are best for a bridal dupatta?",\n    "acceptedAnswer": {\n      "@type": "Answer",\n      "text": "Popular fabrics include organza and velvet for structure, or chiffon, silk and georgette for a more fluid, lightweight drape during the ceremony."\n    }\n  },\n  {\n    "@type": "Question",\n    "name": "Is the dupatta only worn in India?",\n    "acceptedAnswer": {\n      "@type": "Answer",\n      "text": "While most famous in South Asia, similar shawls are worn as part of traditional bridal attire in other areas of the world."\n    }\n  }\n]"
     },
     {
       "slug": "bridal-hijab",
