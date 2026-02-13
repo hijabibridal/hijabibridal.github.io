@@ -10,13 +10,40 @@ export async function generateStaticParams() {
   return productData.products.map((p) => ({ slug: p.slug }));
 }
 
+// 1. UPDATED METADATA: Now uses og_image, og_title, and title_tag from JSON
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return {};
+
+  const siteUrl = "https://hijabibridal.github.io"; 
+  const ogImageUrl = `${siteUrl}/images/${product.og_image}`;
+
   return {
+    // Uses the 2026-specific title tags from your JSON
     title: product.title_tag || product.name,
     description: product.meta_description,
+    openGraph: {
+      title: product.og_title || product.name,
+      description: product.meta_description,
+      url: `${siteUrl}/shop/product/${product.slug}`,
+      siteName: "Hijabi Bridal",
+      images: [
+        {
+          url: ogImageUrl, // Pulls the specific og_image field
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.og_title || product.name,
+      description: product.meta_description,
+      images: [ogImageUrl],
+    },
   }
 }
 
@@ -28,7 +55,14 @@ export default async function ProductPage({ params }: PageProps) {
   const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
   const fallbackLink = product.images.find(img => img.amazonLink && img.amazonLink !== "")?.amazonLink || "#";
 
-  // 1. Parse the FAQ string into an object for the Schema and the UI
+  // 2. IMAGE MAPPING: Pass the rich descriptive alt text to the gallery
+  const galleryImages = product.images.map((img: any) => ({
+    url: img.url,
+    alt: img.alt || product.name, // Uses the descriptive alt strings from JSON
+    amazonLink: img.amazonLink
+  }));
+
+  // FAQ Parsing Logic
   let faqs = [];
   try {
     if (product.FAQ_schema) {
@@ -38,7 +72,6 @@ export default async function ProductPage({ params }: PageProps) {
     console.error("Error parsing FAQ schema", e);
   }
 
-  // 2. Prepare the JSON-LD object
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -54,7 +87,6 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <div className="container mx-auto px-4 py-8 bg-white">
-      {/* Invisible Schema for Search Engines */}
       {faqs.length > 0 && (
         <script
           type="application/ld+json"
@@ -71,8 +103,9 @@ export default async function ProductPage({ params }: PageProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
         <div>
+          {/* Passed the enhanced images array with SEO Alt Text */}
           <ProductGallery 
-            images={product.images} 
+            images={galleryImages} 
             productName={product.name} 
             fallbackLink={fallbackLink}
           />
@@ -110,7 +143,6 @@ export default async function ProductPage({ params }: PageProps) {
             />
           </div>
 
-          {/* VISUAL FAQ SECTION: Displays the data from bridal-products.json */}
           {faqs.length > 0 && (
             <div className="mt-12 border-t border-pink-100 pt-8">
               <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
