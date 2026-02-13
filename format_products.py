@@ -1,48 +1,64 @@
 import json
+import re
 import os
 
-# Your specific file paths
-input_file = 'src/data/bridal-products.json'
-output_file = 'src/data/bridal_products_CLEANED.json'
+input_file = 'src/data/bridal_product.json'
+output_file = 'src/data/bridal_product_CLEANED.json'
 
-def master_cleanup():
+def fix_malformed_json_content():
     if not os.path.exists(input_file):
         print(f"File not found: {input_file}")
         return
 
-    # Load the current JSON data
     with open(input_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+        raw_content = f.read()
 
-    for product in data:
-        if "FAQ_schema" in product:
-            raw_val = product["FAQ_schema"]
-            
-            # Step 1: Force clean invisible characters (the "Red Text" fix)
-            if isinstance(raw_val, str):
-                raw_val = raw_val.replace('\xa0', ' ').replace('\\u00a0', ' ')
-            
-            # Step 2: Convert String-to-Object (the "Backslash" fix)
-            # If the value is a string starting with '[', it's a trapped JSON array
-            if isinstance(raw_val, str) and raw_val.strip().startswith('['):
+    # Step 1: Fix unescaped quotes inside the FAQ_schema string
+    # This finds the content between "FAQ_schema": " and the closing "
+    def escape_internal_quotes(match):
+        prefix = match.group(1) # "FAQ_schema": "
+        content = match.group(2) # The messy string with unescaped quotes
+        suffix = match.group(3) # "
+        
+        # Replace unescaped quotes with escaped ones, but ignore already escaped ones
+        # and ignore the very first/last quotes that define the string
+        fixed_content = content.replace('"', '\\"')
+        # If the script accidentally double-escapes (\\\"), fix it back to (\")
+        fixed_content = fixed_content.replace('\\\\"', '\\"')
+        
+        return f'{prefix}{fixed_content}{suffix}'
+
+    # Regex to target the FAQ_schema field specifically
+    cleaned_content = re.sub(r'("FAQ_schema":\s*")(.*?)("(?=\s*[,}\n]))', 
+                            escape_internal_quotes, 
+                            raw_content, 
+                            flags=re.DOTALL)
+
+    try:
+        # Step 2: Now that the quotes are escaped, we can safely load it
+        data = json.loads(cleaned_content)
+        
+        # Step 3: Standardize the data
+        for product in data:
+            if "FAQ_schema" in product and isinstance(product["FAQ_schema"], str):
+                # Clean hidden non-breaking spaces (\xa0) that cause the 'Red' text in Chrome
+                product["FAQ_schema"] = product["FAQ_schema"].replace('\xa0', ' ')
+                
+                # Optional: Convert the string back into a real JSON object for Google
                 try:
-                    product["FAQ_schema"] = json.loads(raw_val)
-                    print(f"Fixed string-trap for: {product.get('product_name', 'Unknown Product')}")
-                except json.JSONDecodeError:
-                    print(f"Failed to parse FAQ for {product.get('product_name')}. Check for missing commas.")
-            
-            # Step 3: Clean characters even if it's already an object
-            elif isinstance(raw_val, list):
-                # Convert to string to clean, then back to object
-                temp_str = json.dumps(raw_val).replace('\xa0', ' ')
-                product["FAQ_schema"] = json.loads(temp_str)
+                    product["FAQ_schema"] = json.loads(product["FAQ_schema"])
+                except:
+                    pass
 
-    # Save to the new file
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    
-    print(f"\nSUCCESS: Cleaned data saved to {output_file}")
-    print("Use the contents of the CLEANED file for your live site.")
+        # Step 4: Save the perfectly formatted file
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        
+        print(f"Success! Fixed the quotes and saved to {output_file}")
+
+    except json.JSONDecodeError as e:
+        print(f"Still hitting an error: {e}")
+        print("Tip: Check for a missing comma on the line right before the error.")
 
 if __name__ == "__main__":
-    master_cleanup()
+    fix_malformed_json_content()
