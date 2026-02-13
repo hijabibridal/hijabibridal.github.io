@@ -6,7 +6,6 @@ import Footer from '@/components/Layout/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { Analytics } from '@vercel/analytics/react'; // Added Vercel Analytics
 
 const font = Poppins({
   subsets: ['latin'],
@@ -72,8 +71,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <ScrollToTop />
-        <Analytics /> {/* Added Vercel Analytics component */}
-      </body>
+       </body>
     </html>
   )
 }
