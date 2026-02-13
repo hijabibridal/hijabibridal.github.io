@@ -3,72 +3,78 @@ import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Metadata } from 'next'
 
-// Match the type structure from your product page
-type PageProps = { params: Promise<{ slug: string }> };
+// Defining the props structure similar to your product page
+type PageProps = { 
+  params: Promise<{ category: string; subcategory: string }> 
+};
 
-// Fixes the "output: export" build error by defining all blog paths
+// This function tells Next.js which paths to pre-render for the USA market
 export async function generateStaticParams() {
+  // Ensure we map over the blogData array to create the required params
   return blogData.map((article) => ({
-    slug: article.slug,
+    category: article.category.toLowerCase().replace(/ /g, '-'),
+    subcategory: 'general', // Defaulting to 'general' if subcategory isn't in your JSON
   }));
 }
 
-// Adapted from your product page metadata logic
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const article = blogData.find((a) => a.slug === slug);
-  if (!article) return {};
-
-  const siteUrl = "https://hijabibridal.github.io"; 
+  const { category } = await params;
+  const displayCategory = category.replace(/-/g, ' ');
 
   return {
-    title: `${article.title} | Hijabi Bridal`,
-    description: article.description || article.excerpt,
-    openGraph: {
-      title: article.title,
-      description: article.description || article.excerpt,
-      url: `${siteUrl}/blog/${article.slug}`,
-      siteName: "Hijabi Bridal",
-      type: 'article',
-    },
+    title: `${displayCategory.toUpperCase()} | Hijabi Bridal Blog`,
+    description: `Explore the latest in ${displayCategory} and American Islamic wedding traditions.`,
   };
 }
 
-export default async function BlogArticlePage({ params }: PageProps) {
-  const { slug } = await params;
-  const article = blogData.find((a) => a.slug === slug);
+export default async function BlogCategoryPage({ params }: PageProps) {
+  const { category, subcategory } = await params;
+  const displayCategory = category.replace(/-/g, ' ');
 
-  if (!article) {
-    notFound();
+  // Filter articles to show only relevant content for this category
+  const filteredArticles = blogData.filter(
+    (a) => a.category.toLowerCase().replace(/ /g, '-') === category
+  );
+
+  if (filteredArticles.length === 0) {
+    // If no articles exist for a category, show the Coming Soon vibe
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs 
+          links={[{ href: '/', text: 'Home' }, { href: '/blog', text: 'Blog' }]} 
+          currentPage={displayCategory} 
+        />
+        <main className="flex flex-col items-center justify-center min-h-[60vh] text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tighter">
+            {displayCategory}
+          </h1>
+          {/* Red symbolizes new beginnings and happiness in your brand */}
+          <div className="h-1 w-24 bg-red-600 mx-auto mb-6"></div>
+          <h2 className="text-2xl font-medium text-gray-600">Coming Soon</h2>
+        </main>
+      </div>
+    );
   }
-
-  const breadcrumbItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Blog', href: '/blog' },
-    { name: article.title, href: `/blog/${article.slug}` },
-  ];
 
   return (
     <main className="min-h-screen bg-white pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Breadcrumbs items={breadcrumbItems} />
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <Breadcrumbs 
+          links={[{ href: '/', text: 'Home' }, { href: '/blog', text: 'Blog' }]} 
+          currentPage={displayCategory} 
+        />
+        <h1 className="text-4xl font-black uppercase mt-8 mb-4">{displayCategory}</h1>
+        <p className="text-gray-600 mb-12">Insights and traditions for the American Muslim community.</p>
         
-        <article className="mt-8">
-          <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tighter mb-4">
-              {article.title}
-            </h1>
-            <div className="h-1 w-24 bg-red-600 mb-6"></div> {/* Branding: Red for new beginnings */}
-            <p className="text-gray-500 italic">Coming Soon</p>
-          </header>
-
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-700 leading-relaxed">
-              We are currently preparing this article about {article.title.toLowerCase()}. 
-              Stay tuned for insights into American Islamic fashion and wedding traditions.
-            </p>
-          </div>
-        </article>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Mapping over the data as requested, similar to product page logic */}
+          {filteredArticles.map((article) => (
+            <div key={article.id} className="border p-6 rounded-xl">
+               <h3 className="font-bold text-xl mb-2">{article.title}</h3>
+               <p className="text-gray-600">{article.excerpt}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
