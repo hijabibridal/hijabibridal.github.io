@@ -1,56 +1,75 @@
-import Link from 'next/link'
-import Breadcrumbs from '@/components/Breadcrumbs'
 import blogData from '@/data/blog-articles.json'
+import { notFound } from 'next/navigation'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import { Metadata } from 'next'
 
-type Props = {
-  params: Promise<{ category: string; subcategory: string }>
-}
+// Match the type structure from your product page
+type PageProps = { params: Promise<{ slug: string }> };
 
-// This function fixes the build error by telling Next.js exactly which paths to create
+// Fixes the "output: export" build error by defining all blog paths
 export async function generateStaticParams() {
-  // If your JSON has categories and subcategories, map them here.
-  // For a "Coming Soon" page, we return at least one valid path from your data.
   return blogData.map((article) => ({
-    category: article.category.toLowerCase().replace(/ /g, '-'),
-    subcategory: 'general', // Or article.subcategory if you have that field
-  }))
+    slug: article.slug,
+  }));
 }
 
-export default async function BlogCategoryPage({ params }: Props) {
-  const { category, subcategory } = await params;
+// Adapted from your product page metadata logic
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const article = blogData.find((a) => a.slug === slug);
+  if (!article) return {};
+
+  const siteUrl = "https://hijabibridal.github.io"; 
+
+  return {
+    title: `${article.title} | Hijabi Bridal`,
+    description: article.description || article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.description || article.excerpt,
+      url: `${siteUrl}/blog/${article.slug}`,
+      siteName: "Hijabi Bridal",
+      type: 'article',
+    },
+  };
+}
+
+export default async function BlogArticlePage({ params }: PageProps) {
+  const { slug } = await params;
+  const article = blogData.find((a) => a.slug === slug);
+
+  if (!article) {
+    notFound();
+  }
+
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Blog', href: '/blog' },
+    { name: article.title, href: `/blog/${article.slug}` },
+  ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Breadcrumbs 
-        links={[
-          { href: '/', text: 'Home' },
-          { href: '/blog', text: 'Blog' }
-        ]} 
-        currentPage={category.charAt(0).toUpperCase() + category.slice(1)} 
-      />
-      
-      <main className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <header className="mb-8">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tighter">
-            {category.replace(/-/g, ' ')}
-          </h1>
-          {/* Branding accent: Red for happiness and new beginnings */}
-          <div className="h-1 w-24 bg-red-600 mx-auto mb-6"></div>
-          <h2 className="text-2xl font-medium text-gray-600">Something Beautiful is Coming.</h2>
-        </header>
+    <main className="min-h-screen bg-white pb-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Breadcrumbs items={breadcrumbItems} />
+        
+        <article className="mt-8">
+          <header className="mb-8">
+            <h1 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tighter mb-4">
+              {article.title}
+            </h1>
+            <div className="h-1 w-24 bg-red-600 mb-6"></div> {/* Branding: Red for new beginnings */}
+            <p className="text-gray-500 italic">Coming Soon</p>
+          </header>
 
-        <p className="max-w-md text-gray-500 mb-10 text-lg">
-          We are currently curating the latest in American Islamic fashion 
-          and wedding traditions for this category.
-        </p>
-
-        <Link 
-          href="/" 
-          className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
-        >
-          Return to Shop
-        </Link>
-      </main>
-    </div>
-  )
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-700 leading-relaxed">
+              We are currently preparing this article about {article.title.toLowerCase()}. 
+              Stay tuned for insights into American Islamic fashion and wedding traditions.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+  );
 }
