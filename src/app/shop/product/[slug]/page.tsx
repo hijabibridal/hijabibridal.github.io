@@ -101,15 +101,6 @@ export default async function ProductPage({ params }: PageProps) {
               {product.name}
             </h1>
             
-            <div className="flex items-center gap-2 mb-8">
-              <div className="flex text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i}>★</span>
-                ))}
-              </div>
-              <span className="text-sm text-gray-500 font-medium">(Verified Purchase)</span>
-            </div>
-
             {product.images.find((img: any) => img.amazonLink)?.amazonLink && (
               <a 
                 href={product.images.find((img: any) => img.amazonLink).amazonLink}

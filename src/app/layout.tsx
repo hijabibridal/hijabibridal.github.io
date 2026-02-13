@@ -15,10 +15,10 @@ const font = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pet Gadget Insider',
+    default: 'Hijabi Bridal',
     template: '%s',
   },
-  description: 'Expert reviews of smart pet supplies and gadgets',
+  description: 'Hijabi lehengas and nails and Muslim groom outfits for your Muslim wedding',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
 }
 

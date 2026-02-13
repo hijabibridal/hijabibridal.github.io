@@ -1,40 +1,48 @@
 import json
 import os
 
-# Define the file paths
-input_path = 'src/data/bridal-products.json'
-output_path = 'src/data/bridal_products_CLEANED.json'
+# Your specific file paths
+input_file = 'src/data/bridal-products.json'
+output_file = 'src/data/bridal_products_CLEANED.json'
 
-def clean_structured_data():
-    if not os.path.exists(input_path):
-        print(f"Error: Could not find {input_path}")
+def master_cleanup():
+    if not os.path.exists(input_file):
+        print(f"File not found: {input_file}")
         return
 
-    try:
-        # Step 1: Read the file as raw text to catch invisible characters
-        with open(input_path, 'r', encoding='utf-8') as f:
-            raw_content = f.read()
+    # Load the current JSON data
+    with open(input_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-        # Step 2: Replace non-breaking spaces and other "red" culprits
-        # \xa0 is the most common invisible character that breaks JSON
-        cleaned_content = raw_content.replace('\xa0', ' ')
-        cleaned_content = cleaned_content.replace('\\u00a0', ' ')
-        
-        # Step 3: Validate that it is now proper JSON
-        json_data = json.loads(cleaned_content)
+    for product in data:
+        if "FAQ_schema" in product:
+            raw_val = product["FAQ_schema"]
+            
+            # Step 1: Force clean invisible characters (the "Red Text" fix)
+            if isinstance(raw_val, str):
+                raw_val = raw_val.replace('\xa0', ' ').replace('\\u00a0', ' ')
+            
+            # Step 2: Convert String-to-Object (the "Backslash" fix)
+            # If the value is a string starting with '[', it's a trapped JSON array
+            if isinstance(raw_val, str) and raw_val.strip().startswith('['):
+                try:
+                    product["FAQ_schema"] = json.loads(raw_val)
+                    print(f"Fixed string-trap for: {product.get('product_name', 'Unknown Product')}")
+                except json.JSONDecodeError:
+                    print(f"Failed to parse FAQ for {product.get('product_name')}. Check for missing commas.")
+            
+            # Step 3: Clean characters even if it's already an object
+            elif isinstance(raw_val, list):
+                # Convert to string to clean, then back to object
+                temp_str = json.dumps(raw_val).replace('\xa0', ' ')
+                product["FAQ_schema"] = json.loads(temp_str)
 
-        # Step 4: Save to the new output name with pretty formatting
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(json_data, f, indent=2, ensure_ascii=False)
-
-        print(f"Success! Cleaned file saved to: {output_path}")
-        print("You can now copy the data from this new file into your site.")
-
-    except json.JSONDecodeError as e:
-        print(f"JSON Error: {e}")
-        print("This usually means there is a missing comma or quote near the line above.")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+    # Save to the new file
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    
+    print(f"\nSUCCESS: Cleaned data saved to {output_file}")
+    print("Use the contents of the CLEANED file for your live site.")
 
 if __name__ == "__main__":
-    clean_structured_data()
+    master_cleanup()
