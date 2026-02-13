@@ -12,7 +12,7 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
     : fallbackLink;
 
   // Standard path for public/images/
-  const mainSrc = `/images/${activeImage.url.replace(/^\//, '')}`;
+  const mainSrc = `/images/${activeImage.url.replace(/^\\//, '')}`;
 
   return (
     <div className="flex flex-col gap-6">
@@ -40,7 +40,7 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
       {/* THUMBNAILS - Slightly larger (w-24) to balance the bigger main image */}
       <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
         {images.map((img: any, i: number) => {
-          const thumbSrc = `/images/${img.url.replace(/^\//, '')}`;
+          const thumbSrc = `/images/${img.url.replace(/^\\//, '')}`;
           return (
             <button
               key={i}
@@ -53,11 +53,11 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
             >
               <img 
                 src={thumbSrc} 
-                alt="thumbnail" 
+                alt={img.alt || productName} 
                 className="w-full h-full object-cover"
               />
             </button>
-          )
+          );
         })}
       </div>
     </div>

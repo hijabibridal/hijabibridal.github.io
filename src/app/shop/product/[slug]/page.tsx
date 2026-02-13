@@ -30,140 +30,112 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Hijabi Bridal",
       images: [
         {
-          url: ogImageUrl, // Pulls the specific og_image field
+          url: ogImageUrl, // Pulls the specific og_image from JSON
           width: 1200,
           height: 630,
           alt: product.name,
         },
       ],
-      type: "website",
+      type: 'website',
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: product.og_title || product.name,
       description: product.meta_description,
       images: [ogImageUrl],
     },
-  }
+  };
 }
 
 export default async function ProductPage({ params }: PageProps) {
   const { slug } = await params;
   const product = productData.products.find((p) => p.slug === slug);
-  if (!product) notFound();
 
-  const isGroom = product.mainCategorySlugs.includes('muslim-groom-outfit');
-  const fallbackLink = product.images.find(img => img.amazonLink && img.amazonLink !== "")?.amazonLink || "#";
-
-  // 2. IMAGE MAPPING: Pass the rich descriptive alt text to the gallery
-  const galleryImages = product.images.map((img: any) => ({
-    url: img.url,
-    alt: img.alt || product.name, // Uses the descriptive alt strings from JSON
-    amazonLink: img.amazonLink
-  }));
-
-  // FAQ Parsing Logic
-  let faqs = [];
-  try {
-    if (product.FAQ_schema) {
-      faqs = JSON.parse(product.FAQ_schema);
-    }
-  } catch (e) {
-    console.error("Error parsing FAQ schema", e);
+  if (!product) {
+    notFound();
   }
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq: any) => ({
-      "@type": "Question",
-      "name": faq.name,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.acceptedAnswer.text
-      }
-    }))
-  };
+  // Create breadcrumb items
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Shop', href: '/shop' },
+    { name: product.name, href: `/shop/product/${product.slug}` },
+  ];
+
+  // For the FAQ section
+  const faqs = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : [];
 
   return (
-    <div className="container mx-auto px-4 py-8 bg-white">
-      {faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
-
-      <Breadcrumbs 
-        items={[
-          { label: 'Shop', href: '/shop' },
-          { label: product.name, href: `/shop/product/${product.slug}` },
-        ]} 
-      />
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
-        <div>
-          {/* Passed the enhanced images array with SEO Alt Text */}
+    <main className=\"min-h-screen bg-white pb-20\">
+      {/* Product Detail Section */}
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12\">
+        <Breadcrumbs items={breadcrumbItems} />
+        
+        <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-16 mt-8\">
+          {/* Left Column: Image Gallery */}
           <ProductGallery 
-            images={galleryImages} 
+            images={product.images} 
             productName={product.name} 
-            fallbackLink={fallbackLink}
+            fallbackLink={product.images[0]?.amazonLink}
           />
-        </div>
 
-        <div className="flex flex-col">
-          <h1 style={{ 
-            color: '#db2777',
-            fontWeight: 900, 
-            textTransform: 'uppercase', 
-            fontSize: '3rem', 
-            lineHeight: '1',
-            letterSpacing: '-0.05em',
-            marginBottom: '1rem' 
-          }}>
-            {product.name}
-          </h1>
-
-          {!isGroom && (
-            <a 
-              href={fallbackLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6"
-            >
-              Purchase on Amazon.com
-            </a>
-          )}
-
-          <div className="mt-4">
-            <div 
-              className="text-black text-lg leading-relaxed whitespace-pre-wrap 
-                         [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
-              dangerouslySetInnerHTML={{ __html: product.description }}
-            />
-          </div>
-
-          {faqs.length > 0 && (
-            <div className="mt-12 border-t border-pink-100 pt-8">
-              <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-6">
-                {faqs.map((faq: any, index: number) => (
-                  <div key={index} className="bg-pink-50/30 p-6 rounded-2xl">
-                    <h3 className="text-black font-bold text-xl mb-2">
-                      {faq.name}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.acceptedAnswer.text}
-                    </p>
-                  </div>
+          {/* Right Column: Product Info */}
+          <div className=\"flex flex-col\">
+            <h1 className=\"text-4xl md:text-5xl font-black text-black uppercase tracking-tighter mb-4\">
+              {product.name}
+            </h1>
+            
+            <div className=\"flex items-center gap-2 mb-8\">
+              <div className=\"flex text-yellow-400\">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>★</span>
                 ))}
               </div>
+              <span className=\"text-sm text-gray-500 font-medium\">(Verified Purchase)</span>
             </div>
-          )}
+
+            {/* Render First Amazon Link found in images */}
+            {product.images.find((img: any) => img.amazonLink)?.amazonLink && (
+              <a 
+                href={product.images.find((img: any) => img.amazonLink).amazonLink}
+                target=\"_blank\"
+                rel=\"noopener noreferrer\"
+                className=\"inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6\"
+              >
+                Purchase on Amazon.com
+              </a>
+            )}
+
+            <div className=\"mt-4\">
+              <div 
+                className=\"text-black text-lg leading-relaxed whitespace-pre-wrap 
+                           [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4\"
+                dangerouslySetInnerHTML={{ __html: product.description }}
+              />
+            </div>
+
+            {faqs.length > 0 && (
+              <div className=\"mt-12 border-t border-pink-100 pt-8\">
+                <h2 className=\"text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6\">
+                  Frequently Asked Questions
+                </h2>
+                <div className=\"space-y-6\">
+                  {faqs.map((faq: any, index: number) => (
+                    <div key={index} className=\"bg-pink-50/30 p-6 rounded-2xl\">
+                      <h3 className=\"text-black font-bold text-xl mb-2\">
+                        {faq.name}
+                      </h3>
+                      <p className=\"text-gray-700 leading-relaxed\">
+                        {faq.acceptedAnswer.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
