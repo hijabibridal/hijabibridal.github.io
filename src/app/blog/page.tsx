@@ -16,12 +16,7 @@ export default function BlogPage() {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogData.articles.map((article) => (
-          <div key={article.id} className="border rounded-2xl overflow-hidden shadow-sm">
-            <div className="p-6">
-              <span className="text-pink-600 text-sm font-semibold uppercase">{article.category}</span>
-              <h2 className="text-2xl font-bold mt-2 mb-4">{article.title}</h2>
-              <p className="text-gray-600 mb-4">{article.excerpt}</p>
+        
               <Link href={`/blog/${article.slug}`} className="text-pink-600 font-bold hover:underline">
                 Read More →
               </Link>
