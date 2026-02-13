@@ -32,14 +32,7 @@ export default function ProductCard({ product }: { product: any }) {
           {product.name}
         </h3>
         
-        {/* Description: Updated to handle HTML and style H2 tags */}
-        <div 
-          className="mt-3 text-sm text-gray-600 line-clamp-none whitespace-pre-wrap
-                     [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-base [&_h2]:mt-2"
-          dangerouslySetInnerHTML={{ __html: product.description }}
-        />
-
-        {/* Pink "View Details" Link */}
+        {/* Pink "View Details" Link - Now moved up for a cleaner look */}
         <div className="mt-6 flex items-center justify-between">
           <p className="text-[#db2777] font-bold text-xs uppercase tracking-[0.2em]">
             View Details
