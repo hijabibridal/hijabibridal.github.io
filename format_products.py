@@ -1,64 +1,40 @@
-import pandas as pd
 import json
-import re
 import os
 
-# Configuration
-csv_path = 'tweak.csv'
-json_input_path = 'src/data/bridal-products.json'
-json_output_path = 'src/data/updated-bridal-products-colors.json'
+# Define the file paths
+input_path = 'src/data/bridal-products.json'
+output_path = 'src/data/bridal_products_CLEANED.json'
 
-# Ensure the output directory exists
-os.makedirs(os.path.dirname(json_output_path), exist_ok=True)
+def clean_structured_data():
+    if not os.path.exists(input_path):
+        print(f"Error: Could not find {input_path}")
+        return
 
-# Load the CSV
-df = pd.read_csv(csv_path)
+    try:
+        # Step 1: Read the file as raw text to catch invisible characters
+        with open(input_path, 'r', encoding='utf-8') as f:
+            raw_content = f.read()
 
-# Load the JSON
-with open(json_input_path, 'r') as f:
-    bridal_data = json.load(f)
+        # Step 2: Replace non-breaking spaces and other "red" culprits
+        # \xa0 is the most common invisible character that breaks JSON
+        cleaned_content = raw_content.replace('\xa0', ' ')
+        cleaned_content = cleaned_content.replace('\\u00a0', ' ')
+        
+        # Step 3: Validate that it is now proper JSON
+        json_data = json.loads(cleaned_content)
 
-# Regex to find "on Amazon in [Color]:" in Column P (Index 15)
-# This handles variations like "on amazon in" or "on Amazon in"
-color_pattern = r"on [Aa]mazon in (.*?):"
+        # Step 4: Save to the new output name with pretty formatting
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, indent=2, ensure_ascii=False)
 
-# Create a mapping of slug to extracted color
-slug_to_amazon_color = {}
+        print(f"Success! Cleaned file saved to: {output_path}")
+        print("You can now copy the data from this new file into your site.")
 
-for _, row in df.iterrows():
-    # Use column index 15 for Column P
-    description_text = str(row.iloc[15])
-    slug = str(row['url_slug'])
-    
-    match = re.search(color_pattern, description_text)
-    if match:
-        # Extract color and convert to UPPER CASE (e.g., JADE)
-        extracted_color = match.group(1).strip().upper()
-        slug_to_amazon_color[slug] = extracted_color
+    except json.JSONDecodeError as e:
+        print(f"JSON Error: {e}")
+        print("This usually means there is a missing comma or quote near the line above.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
-# Function to update descriptions with "Amazon Color: COLOR"
-def process_items(items):
-    updated_count = 0
-    for item in items:
-        slug = item.get('slug')
-        if slug in slug_to_amazon_color:
-            color_text = f"Amazon Color: {slug_to_amazon_color[slug]}\n"
-            # Prepend to existing description
-            item['description'] = color_text + item.get('description', '')
-            updated_count += 1
-    return updated_count
-
-# Update both products and mainCategories
-total_updated = 0
-if 'products' in bridal_data:
-    total_updated += process_items(bridal_data['products'])
-
-if 'mainCategories' in bridal_data:
-    total_updated += process_items(bridal_data['mainCategories'])
-
-# Save the updated JSON to a different name
-with open(json_output_path, 'w') as f:
-    json.dump(bridal_data, f, indent=2)
-
-print(f"Update complete. Total items updated: {total_updated}")
-print(f"File saved to: {json_output_path}")
+if __name__ == "__main__":
+    clean_structured_data()
