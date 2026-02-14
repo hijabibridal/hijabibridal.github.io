@@ -1,7 +1,7 @@
 import re
 import os
 
-def final_surgical_fixer():
+def final_double_cleanse_fixer():
     input_file = 'src/data/bridal-products.json'
     output_file = 'src/data/bridal-products-CLEANED.json'
 
@@ -14,21 +14,19 @@ def final_surgical_fixer():
 
     def clean_faq_block(match):
         prefix = match.group(1) # "FAQ_schema": "
-        body = match.group(2)   # The content (partially broken)
+        body = match.group(2)   # The content
         suffix = match.group(3) # "
         
-        # STEP 1: Flatten. Remove all existing backslashes.
-        # This fixes "Question\" or \"Question" by making them both "Question"
-        flattened = body.replace('\\"', '"')
+        # Pass 1: Remove ALL existing backslashes to get clean raw text
+        # This handles cases like \"Question or Question"
+        raw_text = body.replace('\\"', '"')
         
-        # STEP 2: Rebuild. Escape EVERY quote inside the block.
-        # This ensures @type, Question, name, and the text values are all escaped.
-        fixed_body = flattened.replace('"', '\\"')
+        # Pass 2: Apply a uniform backslash to EVERY double quote
+        fixed_body = raw_text.replace('"', '\\"')
         
         return f'{prefix}{fixed_body}{suffix}'
 
-    # This Regex isolates only the FAQ_schema values.
-    # It strictly avoids your slugs, names, and longContent paragraphs.
+    # Regex targets only the value of the FAQ_schema field
     new_content = re.sub(r'("FAQ_schema":\s*")(.*?)("(?=\s*[,}\n]))', 
                          clean_faq_block, 
                          content, 
@@ -37,8 +35,8 @@ def final_surgical_fixer():
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
-    print("✅ FAQ Surgery Complete.")
-    print(f"Fixed partial escapes on Line 237 and saved to {output_file}")
+    print("✅ Double-Cleanse Surgery Complete.")
+    print(f"Sharara FAQs and all other blocks normalized in {output_file}")
 
 if __name__ == "__main__":
-    final_surgical_fixer()
+    final_double_cleanse_fixer()
