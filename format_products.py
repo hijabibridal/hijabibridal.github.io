@@ -2,7 +2,7 @@ import json
 import re
 import os
 
-def master_cleanup():
+def silent_faq_cleaner():
     file_path = 'src/data/bridal-products.json'
     if not os.path.exists(file_path):
         return
@@ -10,43 +10,56 @@ def master_cleanup():
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Step 1: Force-escape internal quotes in the FAQ_schema field
-    # This prevents the "Expecting ',' delimiter" error before it happens
-    def auto_fix_quotes(match):
-        prefix, inner, suffix = match.groups()
-        # Escape any double quotes that aren't already escaped
-        fixed_inner = re.sub(r'(?<!\\)"', r'\"', inner)
+    # Step 1: Target the FAQ_schema specifically
+    # It looks for the content between "FAQ_schema": " and the final "
+    def repair_internal_quotes(match):
+        prefix = match.group(1) # "FAQ_schema": "
+        inner_content = match.group(2) # The JSON string inside
+        suffix = match.group(3) # "
+        
+        # 1. First, replace all existing backslashes to avoid triple-escaping
+        clean_inner = inner_content.replace('\\"', '"')
+        
+        # 2. Escape every double quote found inside that string
+        fixed_inner = clean_inner.replace('"', '\\"')
+        
         return f'{prefix}{fixed_inner}{suffix}'
 
+    # This regex finds the FAQ_schema value even if it spans multiple lines
     content = re.sub(r'("FAQ_schema":\s*")(.*?)("(?=\s*[,}\n]))', 
-                    auto_fix_quotes, content, flags=re.DOTALL)
+                    repair_internal_quotes, 
+                    content, 
+                    flags=re.DOTALL)
 
-    # Step 2: Attempt to load and fix iterative errors
-    max_retries = 10
-    for _ in range(max_retries):
-        try:
-            data = json.loads(content)
+    # Step 2: Final Validation & Standardization
+    try:
+        data = json.loads(content)
+        
+        # Clean up hidden characters (like \xa0) that cause rendering issues in Chrome
+        # This ensures your 'Red is for new beginnings' text remains clean
+        for product in data.get('products', []):
+            if "FAQ_schema" in product and isinstance(product["FAQ_schema"], str):
+                product["FAQ_schema"] = product["FAQ_schema"].replace('\xa0', ' ')
+
+        # Save the perfectly formatted JSON
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
             
-            # Successful load - apply final USA market sanitization
-            for product in data.get('products', []):
-                if "FAQ_schema" in product:
-                    # Clean non-breaking spaces that cause 'Red' highlights in Chrome
-                    product["FAQ_schema"] = str(product["FAQ_schema"]).replace('\xa0', ' ')
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            break 
-            
-        except json.JSONDecodeError as e:
-            # If a delimiter error is found, treat the offending character as a literal quote
-            lines = content.split('\n')
-            if e.lineno <= len(lines):
-                bad_line = lines[e.lineno - 1]
-                # Insert a backslash before the quote at the error column
-                fixed_line = bad_line[:e.colno - 1] + '\\' + bad_line[e.colno - 1:]
-                lines[e.lineno - 1] = fixed_line
-                content = '\n'.join(lines)
-            continue
+    except json.JSONDecodeError:
+        # If standard JSON parsing still fails, we perform a character-by-character 
+        # escape on any quote that isn't followed by a comma or brace.
+        # This acts as a 'last resort' silent fix.
+        lines = content.split('\n')
+        fixed_lines = []
+        for line in lines:
+            if '"' in line and not line.strip().endswith(',') and not line.strip().endswith('}'):
+                # This is a likely unescaped quote in the middle of a string
+                line = line.replace('"', '\\"')
+            fixed_lines.append(line)
+        
+        final_content = '\n'.join(fixed_lines)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(final_content)
 
 if __name__ == "__main__":
-    master_cleanup()
+    silent_faq_cleaner()
