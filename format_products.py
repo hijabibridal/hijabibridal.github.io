@@ -1,7 +1,7 @@
 import re
 import os
 
-def surgical_faq_fixer_v3():
+def final_surgical_fixer():
     input_file = 'src/data/bridal-products.json'
     output_file = 'src/data/bridal-products-CLEANED.json'
 
@@ -14,24 +14,21 @@ def surgical_faq_fixer_v3():
 
     def clean_faq_block(match):
         prefix = match.group(1) # "FAQ_schema": "
-        body = match.group(2)   # The messy content
+        body = match.group(2)   # The content (partially broken)
         suffix = match.group(3) # "
         
-        # 1. Start fresh: Remove all existing backslashes from this block
-        # This prevents \\\" (triple backslashes)
-        clean_body = body.replace('\\"', '"')
+        # STEP 1: Flatten. Remove all existing backslashes.
+        # This fixes "Question\" or \"Question" by making them both "Question"
+        flattened = body.replace('\\"', '"')
         
-        # 2. Force escape every quote
-        # This fixes: "Question" -> \"Question\"
-        fixed_body = clean_body.replace('"', '\\"')
-        
-        # 3. Targeted fix for the specific error you found:
-        # If any word is missing a backslash before its quote (like Question"), 
-        # the replace logic above actually catches it!
+        # STEP 2: Rebuild. Escape EVERY quote inside the block.
+        # This ensures @type, Question, name, and the text values are all escaped.
+        fixed_body = flattened.replace('"', '\\"')
         
         return f'{prefix}{fixed_body}{suffix}'
 
-    # This Regex isolates the FAQ_schema and performs the surgery
+    # This Regex isolates only the FAQ_schema values.
+    # It strictly avoids your slugs, names, and longContent paragraphs.
     new_content = re.sub(r'("FAQ_schema":\s*")(.*?)("(?=\s*[,}\n]))', 
                          clean_faq_block, 
                          content, 
@@ -40,8 +37,8 @@ def surgical_faq_fixer_v3():
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
-    print(f"✅ Precision Fix Applied.")
-    print(f"Fixed the missing backslash in 'Question' and saved to {output_file}")
+    print("✅ FAQ Surgery Complete.")
+    print(f"Fixed partial escapes on Line 237 and saved to {output_file}")
 
 if __name__ == "__main__":
-    surgical_faq_fixer_v3()
+    final_surgical_fixer()

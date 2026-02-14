@@ -69,8 +69,7 @@ export default function Header() {
             </div>
           </div>
           <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Bride & Groom Guide</Link>
-          <Link href="/faq" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">FAQ</Link>
-        </nav>
+       /nav>
 
         <div className="hidden md:block w-64">
           <SearchBar />
