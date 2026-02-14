@@ -49,10 +49,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       )}
 
       <article 
-        className="prose prose-pink max-w-none text-lg leading-relaxed
-                   [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-pink-600 [&_h2]:mt-10 [&_h2]:mb-4"
-        dangerouslySetInnerHTML={{ __html: article.htmlBody }} 
-      />
+  className="prose prose-pink max-w-none text-lg leading-relaxed
+             [&_h2]:text-2xl [&_h2]:font-black [&_h2]:text-pink-600 [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:uppercase [&_h2]:tracking-tighter
+             [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-pink-500 [&_h3]:mt-8 [&_h3]:mb-3"
+  dangerouslySetInnerHTML={{ __html: article.htmlBody }} 
+/>
     </div>
   );
 }
