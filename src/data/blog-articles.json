@@ -1,7 +1,36 @@
 {
   "mainCategories": [
-    { "slug": "traditions", "name": "Traditions", "titleTag": "Islamic Wedding Traditions", "metaDescription": "Significance of red and new beginnings." }
+    { "slug": "groom-style", "name": "Groom Style" },
+    { "slug": "bridal-traditions", "name": "Traditions" }
   ],
   "subCategories": [],
-  "articles": []
+  "articles": [
+    {
+      "slug": "muslim-groom-outfit-style-guide",
+      "pageTitle": "Muslim Groom Outfit: Get the Utmost Style",
+      "mainCategorySlug": "groom-style",
+      "description": "What does a Muslim groom wear? From thobes to embroidered sherwanis, discover how to coordinate with the bride.",
+      "featuredImageUrl": "/images/blog/groom-hero.jpg",
+      "featuredImageAlt": "Muslim groom in traditional sherwani",
+      "htmlBody": "<h2>The Right Muslim Groom Outfit: The Thobe</h2><p>The thobe, also known as a dishdasha, is a traditional garment elevated with accessories for a distinguished look...</p><h2>Shalwar Kameez for the Muslim Groom Outfit</h2><p>A semi-dressy look from South Asia, elevated with a long sherwani for a sophisticated ensemble.</p>"
+    },
+    {
+      "slug": "why-bridal-lehengas-are-islamic",
+      "pageTitle": "Why Bridal Lehengas are Islamic",
+      "mainCategorySlug": "bridal-traditions",
+      "description": "Lehengas originated under Mughal Muslim rulers. Learn how to cover your belly in one for a modest bridal look.",
+      "featuredImageUrl": "/images/blog/lehenga-history.jpg",
+      "featuredImageAlt": "Traditional Islamic bridal lehenga",
+      "htmlBody": "<h2>Islamic Influences in Indian Dress Style</h2><p>The lehenga originated under Mughal rulers in the 16th century, blending Persian and indigenous Indian elements.</p>"
+    },
+    {
+      "slug": "red-or-white-muslim-wedding-dress",
+      "pageTitle": "Your Muslim Wedding Dress: White or Red?",
+      "mainCategorySlug": "bridal-traditions",
+      "description": "Red symbolizes new beginnings and happiness. Should you choose it or go with a modern white look?",
+      "featuredImageUrl": "/images/blog/red-vs-white.jpg",
+      "featuredImageAlt": "Comparison of red and white bridal attire",
+      "htmlBody": "<h2>Meaning of the Red Muslim Wedding Dress</h2><p>Red is the traditional color in Asian cultures, symbolizing joy, celebration, and new beginnings.</p>"
+    }
+  ]
 }
