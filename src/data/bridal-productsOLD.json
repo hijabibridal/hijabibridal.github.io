@@ -15,147 +15,298 @@
       "description": "Welcome to our bridal belt category. We offer bridal belts in different colors to meet your needs and enhance your bridal style."
     },
     {
-      "slug": "bridal-dupatta",
-      "name": "Bridal Dupatta",
-      "titleTag": "Bridal Dupatta Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of bridal dupatta items. Find the perfect color and quality for your special occasion.",
-      "description": "Welcome to our bridal dupatta category. We offer a range of high-quality dupattas in different colors to meet your needs and enhance your bridal style."
+  "slug": "bridal-dupatta",
+  "name": "Bridal Dupatta",
+  "titleTag": "Bridal Dupatta Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of bridal dupatta items. Find the perfect color and quality for your special occasion.",
+  "description": "Why Use a Dupatta on Your Wedding Day?\nThe bridal dupatta has become a premier choice, offering a silhouette that is both regal and respectful of diverse wedding traditions. While deeply rooted in South Asia, it is essential to note that similar shawls are worn in Sudan, Somalia, Iran, and Tanzania. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "What does a bride wear on her wedding day?",
+      "paragraphs": [
+        "On her wedding day, a bride typically selects traditional attire that reflects her family's roots and personal taste. The use of a traditional scarf (dupatta) is particularly popular due to the heavy South Asian influence seen in many North American ceremonies, though similar shawls are worn in Sudan, Somalia, Iran, and Tanzania. A bridal ensemble often consists of a flared skirt, a tailored blouse, and a large dupatta that can be draped to provide modest coverage. This dupatta serves as a versatile accessory that completes the bridal look. Whether the bride chooses a dupatta for its religious use or its aesthetic appeal, the dupatta remains a focal point."
+      ]
     },
     {
-      "slug": "bridal-hijab",
-      "name": "Bridal Hijab",
-      "titleTag": "Bridal Hijab Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of bridal hijab items. Find the perfect color and quality for your special occasion.",
-      "description": "Welcome to our bridal hijab category. We offer a range of high-quality hijabs in colors designed to meet your needs and enhance your bridal style."
+      "heading": "Can I wear a dupatta if I'm not Indian or Pakistani?",
+      "paragraphs": [
+        "Absolutely! Because similar shawls are worn by many Muslims around the world, the dupatta is a global garment that transcends a single border. When you wear a bridal dupatta, you are honoring a legacy of textile arty. A well-styled dupatta is a sign of tradition. You might see a bridal dupatta draped over one shoulder or used as a veil. Because the dupatta is so lightweight, it is the ideal accessory for a US bride. The dupatta allows for a seamless blend of modesty and high fashion."
+      ]
     },
     {
-      "slug": "cape",
-      "name": "Cape",
-      "titleTag": "Cape Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of cape items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our cape category. We offer high-quality products designed to meet your needs and enhance your bridal style."
+      "heading": "The Importance of Fabric and Texture",
+      "paragraphs": [
+        "The foundation of any stunning bridal look is the fabric of the dupatta. For a high-end bridal dupatta, designers often utilize heavy, luxurious velvets, or delicate chiffons and organzas. The choice of fabric dictates how the dupatta moves or stays. A silk dupatta offers a polished look, while a velvet dupatta is ideal for winter ceremonies. A chiffon dupatta creates a lighter, ethereal look. Whether it is an embroidered dupatta from India or a similar shawl from Iran, the texture is paramount.",
+        "The interplay between fabric and light is a key consideration in modern wedding fashion. No dupatta is complete without detailed embellishments that play with the lighting of the venue. The way a dupatta catches the light can transform the look of your primary dress. On the wedding day, the dupatta adds a layer of sophistication. A bride may even choose a second dupatta to drape over her head for the ceremony. For hijabis, it's worn over the hijab to the back, so the detailed edge shows near the face."
+      ]
+    }
+  ],
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Can I wear a dupatta if I'm not Indian?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes! The dupatta is a versatile accessory. Since similar shawls are worn in Sudan, Somalia, Iran, and Tanzania, it is a global piece of attire.\"}}, {\"@type\": \"Question\", \"name\": \"What does a red dupatta symbolize?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A red dupatta is a traditional wedding color that symbolizes new beginnings and happiness for the couple.\"}}, {\"@type\": \"Question\", \"name\": \"What fabrics are best for a bridal dupatta?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Popular fabrics include organza and velvet for structure, or chiffon, silk and georgette for a more fluid, lightweight drape during the ceremony.\"}}, {\"@type\": \"Question\", \"name\": \"Is the dupatta only worn in India?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"While most famous in South Asia, similar shawls are worn as part of traditional bridal attire in other areas of the world.\"}}]"
+},
+{
+  "slug": "bridal-hijab",
+  "name": "Bridal Hijab",
+  "titleTag": "Bridal Hijab Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of bridal hijab items. Find the perfect color and quality for your special occasion.",
+  "description": "What are the Essential Hijab Trends for 2026?\nFor many Muslim women across the United States, selecting the perfect headscarf (hijab) is about personal expression. The evolution of modest fashion has turned the hijab into a centerpiece of the global fashion industry. Whether you are looking for a breathable cotton option for everyday wear or a luxurious silk piece for formal events, understanding the different types of hijabs is key to mastering contemporary styles. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "Understanding Modest Fashion and the Hijab",
+      "paragraphs": [
+        "In the realm of modest fashion, the hijab serves as a powerful symbol of identity for Muslim women. As fashion trends evolve, the hijab has transitioned from a simple garment to a high-fashion accessory. To accommodate the diverse lifestyles of Muslim women, various types of hijabs have emerged, each offering unique styles. For instance, the shayla is a popular choice for those who prefer a rectangular wrap, while the amira provides a convenient two-piece set. Those seeking more coverage often turn to the khimar -long and flowing to drape gracefully over the shoulders.",
+        "When selecting a hijab, the materials used are just as important as the aesthetic. Cotton is a staple for everyday wear because it is breathable and stays in place. For more elevated occasions, silk offers a lustrous finish that complements formal events. Meanwhile, chiffon remains a favorite for its lightweight drape. Leading brands like Haute Hijab and retailers such as ASOS have revolutionized the market by offering hijab collections that cater to both classic and sporty preferences. Whether on the US East Coast or the US West Coast, Muslim women are redefining modest fashion through creative styles."
+      ]
     },
     {
-      "slug": "champagne",
-      "name": "Champagne",
-      "titleTag": "Champagne Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of champagne color items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our champagne color category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+      "heading": "Best hijab for 2026?",
+      "paragraphs": [
+        "The best hijab for 2026 is one that balances functionality with the latest fashion sensibilities. Many hijabi fashionistas are currently leaning toward sustainable materials like organic cotton and recycled chiffon. For the summer, a chiffon shayla or a lightweight amira is essential to stay cool. Conversely, winter requires thicker materials like jersey or wool-blend silk to maintain warmth. Many brands are at the forefront of these seasonal shifts, ensuring that Muslim women have access to the best hijab options regardless of the weather.",
+        "Regional trends also play a role in what is considered the best hijab. On the US East Coast, classic styles in neutral tones are often preferred, while the US West Coast sees more experimental fashion and sporty looks. Influencers on social media continue to drive the popularity of the khimar for its elegant silhouette. For those planning their wedding, a chiffon hijab that stays put is the usual option, whether with sparkles or a decorative border."
+      ]
     },
     {
-      "slug": "faux-fur",
-      "name": "Faux Fur",
-      "titleTag": "Faux Fur Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of faux fur items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our faux fur category. We offer a range of high-quality products in different colors to meet your needs and enhance your bridal style."
+      "heading": "Mastering Styles for Every Occasion",
+      "paragraphs": [
+        "Mastering different styles of the hijab allows Muslim women to navigate various occasions with ease. A classic silk shayla is perfect for a wedding, while a sporty cotton amira is ideal for the gym. Modest fashion is all about versatility. You can find high-quality materials on Amazon that transition perfectly from summer to winter. Influencers often showcase how to layer a chiffon khimar over a turtleneck for a chic winter look. By following hijabi fashionistas, you can learn how to pin a shayla for maximum security or drape a silk dupatta for a soft, feminine touch as a bride.",
+        "The growth of modest fashion has led to more inclusive brands entering the space. Amazon now carries a wide range of types of hijabs, making fashion accessible to all. Whether it is a classic look for everyday wear or a bold fashion statement for formal events, the hijab remains an essential part of the wardrobe. Support from Muslim women and the creativity of hijabi fashionistas ensure that hijab culture continues to thrive in the USA."
+      ]
+    }
+  ],
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What are the most common types of hijabs?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The most common types of hijabs include the Shayla, a rectangular scarf; the Amira, a two-piece pull-on style; and the Khimar, which provides longer coverage over the chest and back.\"}}, {\"@type\": \"Question\", \"name\": \"Which materials are best for summer hijabs?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"For the summer, breathable materials like cotton and lightweight chiffon are ideal for keeping cool while maintaining modest fashion standards.\"}}, {\"@type\": \"Question\", \"name\": \"Where can I find sporty hijabs in the US?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Sporty styles made from athletic cotton or moisture-wicking materials can be found easily on Amazon.com.\"}}, {\"@type\": \"Question\", \"name\": \"Is it appropriate to wear a silk hijab for formal events?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes, silk is a premier material for formal events as it offers a luxurious sheen and sophisticated drape that complements festive Muslim women's attire.\"}}]"
+},
+{
+  "slug": "cape",
+  "name": "Cape",
+  "titleTag": "Cape Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of cape items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our cape category. We offer high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "champagne",
+  "name": "Champagne",
+  "titleTag": "Champagne Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of champagne color items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our champagne color category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "faux-fur",
+  "name": "Faux Fur",
+  "titleTag": "Faux Fur Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of faux fur items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our faux fur category. We offer a range of high-quality products in different colors to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "fuschia",
+  "name": "Fuschia",
+  "titleTag": "Fuschia Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of fuschia items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our fuschia category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "gold",
+  "name": "Gold",
+  "titleTag": "Gold Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of gold color items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our gold color category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "green",
+  "name": "Green",
+  "titleTag": "Green Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of green items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our green category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "halal-nails",
+  "name": "Halal Nails",
+  "titleTag": "Halal Nails Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of halal nails items. Find the perfect style and quality for your special occasion.",
+  "description": "What are the latest trends in Hijabi Nails for 2026?\nFor the Muslim-American community, beauty and faith go hand in hand. Finding the perfect balance between self-expression and religious observance has led to the rise of salah-friendly nails. The evolution of hijabi nails for women who adhere to Islamic practices has transformed our beauty landscape. This guide explores how prayer-friendly press-on nails are redefining modest nail designs. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "The Rise of Hijabi Nails in the US Beauty Scene",
+      "paragraphs": [
+        "Hijabi nails are just right for women who cover themselves, are fashionable and want a salah-friendly solution for their nails. In the vibrant world of the Muslim-American community, beauty routines are often viewed through the lens of both style and spiritual devotion. The concept of hijabi nails has gained significant traction, moving beyond simple aesthetics to address the practical needs of daily worship. Modern hijabi nails are no longer just about the so-called breathable polishes; they represent a lifestyle that values both Islamic beauty standards and contemporary flair. As more women seek ways to maintain their manicure without hindering wudhu (ablution), the demand for specialized hijabi nails has skyrocketed.",
+        "Integrating hijabi nails into a daily routine requires an understanding of how press-on nails prioritize easy removal. After making a wudhu, simply adhere them to your nails with glue tabs. The process takes five minutes. When you're ready to perform a new wudhu, you can pry off the nails in less then a minute. Then re-adhere them with fresh glue tabs when you're done. Ease-of-use make hijabi nails perfect for respecting religious boundaries while staying on-trend with seasonal palettes.",
+        "For the woman wearing hijabi nails, the goal is a look that is as clean and hygienic as it is beautiful. Whether choosing hijabi nails for a wedding or daily wear, the focus remains on purity. Ultimately, hijabi nails serve as a bridge between personal identity and the global fashion movement, proving that hijabi nails are a permanent fixture in the industry."
+      ]
     },
     {
-      "slug": "fuschia",
-      "name": "Fuschia",
-      "titleTag": "Fuschia Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of fuschia items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our fuschia category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+      "heading": "What are salah friendly nails?",
+      "paragraphs": [
+        "When discussing the intersection of faith and fashion, the question often arises: what are salah friendly nails? Essentially, salah friendly nails refer to manicures that do not prevent water from reaching the natural nail during ritual washing. This is achieved through prayer-friendly materials that allow for easy removal before prayer times. For the active Muslim-American community, salah friendly nails provide the freedom to enjoy a professional-looking manicure, at home, without conflict.",
+        "Salah friendly nails are high-quality press-ons that feature easy-removal tabs. This flexibility ensures that salah friendly nails remain practical for those who perform prayers five times a day. By choosing salah friendly nails, women can participate in the latest US beauty trends while staying true to their values.",
+        "Furthermore, salah friendly nails are often synonymous with modest nail designs. These modest nail designs tend to favor elegance and subtler tones for everyday use or bolder tones for bridal use."
+      ]
     },
     {
-      "slug": "gold",
-      "name": "Gold",
-      "titleTag": "Gold Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of gold color items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our gold color category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+      "heading": "Innovation in Prayer-Friendly Materials and Design",
+      "paragraphs": [
+        "The secret to a permissible manicure lies in the use of prayer-friendly materials. These prayer-friendly materials are acrylic and use silicone glue tabs. When combined with modest nail designs, these prayer-friendly materials create a look that is both sophisticated and respectful. They lack the heavy chemicals found in acrylics used in nail salons for a more permanent look.",
+        "Easy removal is a critical factor for those who prefer temporary styles. Utilizing easy removal techniques allows the bride to prepare for ceremonies quickly. Easy removal is particularly important for hygiene-focused individuals who want to ensure their natural nails are cleaned thoroughly between applications. Products featuring easy removal properties often include peel-off bases that adhere the nail firmly but are easy to pry away. This focus on easy removal ensures that modest nail designs can be changed frequently to match different bridal attire.",
+        "Highlighting Islamic beauty standards through hygiene-focused care and prayer-friendly materials ensures that every bride feels empowered in her beauty routine. The commitment to hygiene-focused results and easy removal convenience continues to drive the popularity of modest nail designs across the country."
+      ]
+    }
+  ],
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What are salah friendly nails?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Salah friendly nails are easy-to-remove press-ons, that allow Muslim women to perform ritual ablution (wudhu) and daily prayers (salah) while wearing a manicure. They apply in five minutes and remove in seconds, perfect for refreshing your wudu.\"}}, {\"@type\": \"Question\", \"name\": \"How does halal certification apply to nail polish?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Halal certification ensures that the nail polish does not contain prohibited ingredients (such as alcohol or animal-derived products) and is often tested for water permeability to ensure it is suitable for wudhu. However the testing is done by high-pressure machines and not simulated for wudu.\"}}, {\"@type\": \"Question\", \"name\": \"Are modest nail designs limited in color?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Not at all. While modest nail designs often favor subtle and classic looks, they can incorporate any color or artistic pattern that aligns with the wearer's personal interpretation of modesty and US beauty trends.\"}}, {\"@type\": \"Question\", \"name\": \"Why is hygiene-focused nail care important for prayer?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Hygiene-focused care ensures that the nails and hands are clean, which is a fundamental aspect of the purification process required before Islamic prayer. Water must touch each area of the ablution, including the nails.\"}}]"
+},
+{
+  "slug": "jutti",
+  "name": "Jutti",
+  "titleTag": "Jutti Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of jutti items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our jutti category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "lilac",
+  "name": "Lilac",
+  "titleTag": "Lilac Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of lilac items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our lilac category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "muslim-groom-outfit",
+  "name": "Muslim Groom Outfit",
+  "titleTag": "Muslim Groom Outfit Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of Muslim groom outfit items. Find the perfect style and color for your special occasion.",
+  "description": "What is the best Muslim groom outfit for 2026?\nAs the Muslim-American community continues to grow, wedding attire for men is seeing a remarkable return to traditional looks with a contemporary edge. From the intricate embroidery of a sherwani to the classic lines of a thobe, the modern groom is balancing religious identity with excellent taste. Whether you are planning a nikah or a walima, understanding the cultural significance of your clothing is key to a meaningful celebration. READ MORE BELOW...",
+"longContent": [
+{
+"heading": "The Evolution of the Muslim Groom Outfit in America",
+"paragraphs": [
+"In the diverse landscape of a Muslim wedding, the groom often stands as a symbol of both heritage and faith. Selecting the right Muslim groom outfit involves navigating various types of ceremonies, from the solemn nikah to the festive walima. In the United States, the nationality of the groom often influences the style, but the core remains rooted in religion and family values. Today, a groom might choose a plain sherwani as his primary traditional attire, reflecting a return to regal, historical aesthetics that honor his roots while fitting a modern US location.",
+"A groom of a younger age may prefer a Muslim groom outfit that incorporates modern twists, such as slim-cut trousers instead of traditional styles. However, the diversity of the community ensures that traditional attire like the kurta or thobe remains a staple. Whether the location is a grand ballroom or a local mosque, guests expect to see the groom in colors that somberly reflect his bride. Interestingly, social media has played a massive role in highlighting how a groom can blend bridal colors with his own personality by using accessories and trims that match.",
+"When a groom prepares for his Muslim wedding, you might see him wearing a sherwani with an understated turban instead of the flashy, traditional headgear. The cultural significance of the turban remains high, as it represents dignity and respect across many types of Islamic customs. By exploring social media, a groom can find inspiration for a Muslim groom outfit that celebrates his unique identity and diversity."
+]
+},
+{
+"heading": "What does the groom wear at a Muslim wedding?",
+"paragraphs": [
+"The question of what a groom wears at a Muslim wedding is answered by a rich tapestry of traditional attire. The most iconic Muslim groom outfit is the sherwani, a knee-length, structured coat that provides an air of authority and grace. For a groom, the sherwani is often paired with a kurta underneath for comfort. Depending on the groom's nationality and preferences, a thobe can also be worn with a sherwani or waistcoat. In the US, types of headgear vary, but the turban remains a popular choice for a groom seeking a classic look.",
+"Modern US-based Muslim wedding trends show a groom moving toward a Muslim groom outfit with dark colors, such as charcoal gray or midnight blue with highlights to match the bride. For others, a simple white kurta serves as the perfect base for the ceremony.",
+"Diversity in types of embroidery also defines the 2026 groom look. A groom might choose a heavily embroidered sherwani for the main ceremony but switch to a lightly embroidered kurta for greeting guests at the walimah. This flexibility is essential for a groom of any age or nationality. Because the religion emphasizes modesty, the Muslim groom outfit always maintains a dignified silhouette."
+]
+},
+{
+"heading": "Traditional Attire and Modern Fusion Trends",
+"paragraphs": [
+"The cultural significance of a groom's wardrobe in a Muslim Wedding cannot be overstated. A Muslim groom outfit is a bridge between generations, upholding family values while embracing the diversity of life in the USA. For a groom involved in fusion weddings, the sherwani might feature modern twists like metallic buttons or western lapels. Others might adopt a dark, monocolor look.",
+"Choosing the right location often dictates the weight of the sherwani and the style of the turban. If the location is outdoors during a warm season, a groom might opt for a linen thobe and waistcoat. Regardless of nationality or age, the groom remains the focal point for guests. Indoor locations tend to require fancier attire and the embroidered sherwani and turban handle these well.",
+"Ultimately, a groom at a Muslim wedding is a testament to the strength of his religion and his community. From the first fitting of the sherwani to the final pinning of the turban, the process is a highlight of wedding planning. The Muslim groom outfit for 2026 is all about a return to those roots—where the kurta, the sherwani, and traditional colors tell a story of heritage. By embracing diversity and modern twists, the 2026 groom ensures his wedding attire is as memorable as the ceremony itself."
+]
+}
+],
+"FAQ_schema": "[{"@type": "Question", "name": "What are the most common types of muslim groom outfits?", "acceptedAnswer": {"@type": "Answer", "text": "The most common types include the Sherwani, a long formal coat; the Kurta, a comfortable long shirt; and various forms of the Turban or Karakul hat as headgear."}}, {"@type": "Question", "name": "Can a groom wear Western colors like gray or navy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, modern US-based Muslim wedding trends frequently see grooms opting for charcoal gray, navy blue, and even deep forest green, alongside traditional white and beige."}}, {"@type": "Question", "name": "How do interfaith marriages affect the groom's attire?", "acceptedAnswer": {"@type": "Answer", "text": "In interfaith marriages or fusion weddings, a groom may blend a traditional Sherwani with Western trousers or wear a classic suit with a traditional Turban to honor both backgrounds."}}, {"@type": "Question", "name": "Where can I find inspiration for a modern Muslim groom outfit?", "acceptedAnswer": {"@type": "Answer", "text": "Social media platforms like Instagram and Pinterest, along with Islamic wedding blogs and major wedding planning websites, are excellent resources for the latest groom trends."}}]"
+},
+{
+  "slug": "muslim-lehenga",
+  "name": "Muslim Lehenga",
+  "titleTag": "Muslim Lehenga Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of hijabi lehenga items. Find the perfect style and quality for your special occasion.",
+  "description": "What is the Muslim Bridal Lehenga Look?\nFor many within the American Muslim community, choosing the perfect outfit for the wedding day is an exercise in balancing heritage with contemporary style. The Muslim bride lehenga look has become a premier choice, offering a silhouette that is both regal and respectful of Islamic wedding traditions. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "What does a Muslim bride wear on her wedding day?",
+      "paragraphs": [
+        "On her wedding day, a Muslim bride typically selects traditional attire that reflects her family's roots and personal taste. The Muslim bride lehenga look is particularly popular due to the heavy South Asian influence seen in many North American ceremonies. A hijabi lehenga consists of a long, flared skirt, a long blouse, a matching hijab and a large scarf (dupatta) that can be draped to provide modest coverage.",
+        "The cultural significance of the lehenga lies in its ability to showcase craftsmanship. A Muslim bride often spends months selecting a color scheme that resonates with her personality. While red remains a classic choice for a Muslim bride, modern wedding fashion trends have introduced pastels, metallics, and deep emeralds into the mix. This evolution is a direct result of the cultural exchange happening within the American Muslim community, where global styles meet local preferences."
+      ]
     },
     {
-      "slug": "green",
-      "name": "Green",
-      "titleTag": "Green Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of green items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our green category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+      "heading": "The Importance of Fabric and Texture",
+      "paragraphs": [
+        "The foundation of any stunning lehenga is the fabric. For a high-end Muslim bride lehenga look, designers often utilize heavy silks, luxurious velvets, or delicate chiffons. The choice of fabric dictates how the lehenga moves as the Muslim bride walks down the aisle on her wedding day. Silk offers a structured, polished look, while velvet is ideal for winter ceremonies, providing a canvas for embroidery and embellishments. Chiffon or georgette creates a lighter, ethereal muslim bride lehenga look suitable for outdoor events.",
+        "The interplay between fabric and light is a key consideration in modern wedding fashion trends. No lehenga is complete without detailed embroidery and embellishments that play with the lighting of the wedding venue. On the wedding day, the way embroidery and embellishments catch the light can transform a simple lehenga into a work of art."
+      ]
     },
     {
-      "slug": "halal-nails",
-      "name": "Halal Nails",
-      "titleTag": "Halal Nails Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of halal nails items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our halal nails category. We offer a range of high-quality hijabi nails designed to meet your needs and enhance your bridal style."
+      "heading": "Modern Trends and South Asian Influence",
+      "paragraphs": [
+        "The South Asian influence on the American Muslim community has led to a rise in fusion styles. A Muslim bride might pair her lehenga with a hip-length or even knee-length tunic, for added modesty. When a Muslim Bride selects her lehenga for her wedding day, she is participating in a living history, as lehengas were first used in the Islamic Mughal courts in India.",
+        "The color scheme chosen by a Muslim bride often tells a story. While South Asian influence traditionally dictates shades of maroon or red, the color scheme on her wedding day can be truly different. A Muslim Bride may opt for a monochromatic lehenga to create a sleek, modern silhouette or she might choose champagne, pink or blue. Regardless of the fabric or embroidery and embellishments chosen, the Muslim bride lehenga look remains a testament to the beauty of cultural exchange."
+      ]
+    }
+  ],
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Why do Muslim brides choose a lehenga for their wedding day?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A lehenga is a popular choice for a Muslim bride because it combines modesty with the grandeur of a highly flared skirt, long blouse and dupatta draping. It allows for a variety of styles in embroidery and embellishments, making it a versatile piece of traditional attire from the Mughal period of Muslim rulers in India.\"}}, {\"@type\": \"Question\", \"name\": \"What is the best fabric for a bridal lehenga?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The best fabric depends on the season and the desired Muslim bride lehenga look. Silk and velvet are popular for their structure, while chiffon is preferred for a more fluid movement on the wedding day.\"}}, {\"@type\": \"Question\", \"name\": \"How has South Asian influence changed Muslim wedding attire in the US?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The South Asian influence has popularized the lehenga within the American Muslim community, leading to a vibrant cultural exchange where traditional embroidery and embellishments are applied to diverse color schemes beyond red and maroon.\"}}, {\"@type\": \"Question\", \"name\": \"Can a Muslim bride wear a white lehenga?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. While red is traditional, modern wedding fashion trends see many a Muslim bride opting for white, champagne, or blue lehenga designs, reflecting the diversity in Muslim weddings.\"}}]"
+},
+{
+  "slug": "muslim-wedding-dresses",
+  "name": "Muslim Wedding Dresses",
+  "titleTag": "Muslim Wedding Dresses Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of Muslim wedding dresses. Find the perfect style and quality for your special occasion.",
+  "description": "2026 Trends: The Return to Traditional Muslim Bridal Wear - With a Color Twist\nFor the Muslim-American community, 2026 marks a heartfelt return to heritage. After years of western silhouettes, we are seeing a revival of vintage-inspired wedding attire that honors deep-rooted wedding customs. This shift toward the classic is transforming bridal beauty across the US, blending it with modern colors luxury. From the choice of location to the seasonal palette, the trend is clear: brides are looking backward to move forward. READ MORE BELOW...",
+"longContent": [
+{
+"heading": "The Heritage Revival in the US Muslim-American Community",
+"paragraphs": [
+"A significant trend within the Muslim-American Community for 2026 is the heritage revival. This movement prioritizes a return to traditional Muslim bridal aesthetics, where the focus is on heirloom-quality fabrics and time-honored layers. Rather than following fleeting fads, brides are choosing Muslim bridal gowns that evoke pure elegance. This cultural influence is not just about the dress; it is an immersive experience that begins with the very first steps of wedding planning. Whether in a historic Chicago manor or a modern Los Angeles garden, the goal is to create a sense of continuity.",
+"The return to tradition is particularly evident in the choice of Muslim bridal fabrics. Heavy silks, ornate brocades, and intricate hand-embroidery are replacing the simpler tulles of the early 2020s. For a Muslim bridal look that feels truly authentic, many women are incorporating faux furs and halal nails with their flat embroidered slippers (jutti). As a guest or groom, you will notice that even the traditional long coat (sherwani) is seeing a return to classic, longer proportions and rich, royal fabrics.",
+"This year, the cultural influence of South Asian and Middle Eastern lineages is being celebrated with renewed vigor. From the weight of the zardozi (gold embroidery) to the specific drape of a bridal dupatta, every detail of the Muslim bridal ensemble is a beautiful blend with modern accessories. This shift proves that for the modern bride, the most fashion-forward move is a step back into her own history."
+]
+},
+{
+"heading": "Best Muslim bridal for 2026?",
+"paragraphs": [
+"When asking what the best Muslim bridal for 2026 looks like, the answer says this season is defined by high necklines, long, tapered sleeves, and dramatic shawls. These elements of wedding attire are often paired with modern bags, nails and heels that contrasts with the heavy embroidery of the look. During the wedding planning phase, many couples are selecting a location that complements this aesthetic, as a venue with architectural character that mirrors the structure of the Muslim bridal gown.",
+"The best Muslim bridal experience also considers the season. A winter Muslim bridal look might feature plush velvets and deep jewel tones, while a spring version utilizes lightweight organza with traditional floral motifs. Regardless of the season, the best Muslim bridal choice remains one that respects the couple's budget while delivering a sense of opulence. Many find that investing in a few high-quality, traditional Muslim bridal dresses is more impactful than recent trends. This approach allows the budget to be focused on premier craftsmanship.",
+"In 2026, the best Muslim bridal trends also see a resurgence of color. While white remains popular, we are seeing a surge in champagne, pinks and blues that carry modernity into cultural influence. The best Muslim bridal looks are those that don't just look good in the moment but will look iconic in 30 years."
+]
+},
+{
+"heading": "Traditional Wedding Customs and Bridal Logistics",
+"paragraphs": [
+"A return to a traditional vibe means that wedding customs are taking center stage. From the solemnity of the Nikah (marriage contract ceremony) to the joy of the Walima (reception), these wedding customs dictate the flow of the entire day. Proper wedding planning ensures that the transition between these events is seamless, especially when different wedding attire is required. For example, a bride might wear a heavily embroidered Muslim bridal dress for her main ceremony and a more fluid, but still traditional, sharara for her post-wedding festivities.",
+"Despite the complexity, the revival of these wedding customs adds a layer of depth that modern ceremonies often lack. It is this cultural influence that makes a 2026 Muslim bridal celebration feel so uniquely powerful and connected to the global Muslim community.",
+"Finally, bridal beauty for a traditional 2026 wedding is about refined nostalgia. This means a focus on clean, glowing skin and a classic statement lip to match the Muslim bridal accents.  Ultimately, the success of the wedding hinges on how well the season, the location, and the wedding attire work together to honor the past. By embracing these traditional wedding customs with a modern flair, the 2026 bride creates a legacy of her own."
+]
+}
+],
+"FAQ_schema": "[{"@type": "Question", "name": "What defines the traditional Muslim bridal look for 2026?", "acceptedAnswer": {"@type": "Answer", "text": "The 2026 traditional look is defined by vintage-inspired silhouettes, high necklines, long sleeves, and the use of heavily embroidered fabrics like silk and velvet."}}, {"@type": "Question", "name": "How can I incorporate cultural influence into my wedding attire?", "acceptedAnswer": {"@type": "Answer", "text": "You can honor your heritage by choosing traditional designs like Muslim wedding dresses (fancy anarkali), shararas and hijabi lehengas all of which cover a Muslimah in extreme luxury."}}, {"@type": "Question", "name": "What location is best for a traditional 2026 wedding?", "acceptedAnswer": {"@type": "Answer", "text": "Historic venues, ballrooms with architectural molding, or even traditional garden settings work best to complement traditional modern blend of 2026 Muslim bridal trends."}}, {"@type": "Question", "name": "How does the season impact traditional wedding planning?", "acceptedAnswer": {"@type": "Answer", "text": "Seasonality affects fabric choice and palette; winter favors heavy velvets and dark tones, while spring and summer weddings lean toward traditional floral embroideries and lighter-weight silks."}}]"
+},
+{
+  "slug": "nikkah-jewelry",
+  "name": "Nikkah Jewelry",
+  "titleTag": "Nikkah Jewelry Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of nikkah jewelry items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our nikkah jewelry category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "peach",
+  "name": "Peach",
+  "titleTag": "Peach Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of peach items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our peach category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "pink",
+  "name": "Pink",
+  "titleTag": "Pink Collection | Hijabi Bridal",
+  "metaDescription": "Explore our curated selection of pink items. Find the perfect style and quality for your special occasion.",
+  "description": "Welcome to our pink category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
+},
+{
+  "slug": "red",
+  "name": "Red",
+  "titleTag": "Red Collection | Hijabi Bridal",
+  "metaDescription": "Welcome to our red bridal collection. We offer a range of high-quality products designed to meet your needs and enhance your bridal style.",
+  "description": "The Red Muslim Wedding Dress: What's It All About?\nIn the diverse tapestry of the Muslim community, few symbols are as striking or as deeply rooted as the red Muslim wedding dress. Across various cultures within Islam, the choice of a wedding dress is not merely a fashion statement but a profound expression of heritage and spirituality. As US Muslim wedding trends continue to evolve, the cultural significance of red remains a constant, bridging the gap between traditional roots and modern American Islamic fashion. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "What does the color red mean in Islam?",
+      "paragraphs": [
+        "To understand the cultural significance of red, one must look at how color symbolism in Islam operates across different geographies. In many traditions, red is synonymous with life force, joy, and vitality. Within the context of Islam, while no specific color is 'mandatory,' red has emerged as a premier choice for Muslim wedding attire because it traditionally symbolizes happiness and new beginnings.",
+        "In many South Asian and Middle Eastern cultures that make up the American Muslim community, red is believed to bring good fortune to the couple. This color symbolism in Islam is particularly prominent during the Nikah or Walima, where the bride's ensemble serves as a visual celebration of her transition into a new chapter of life."
+      ]
     },
     {
-      "slug": "jutti",
-      "name": "Jutti",
-      "titleTag": "Jutti Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of jutti items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our jutti category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "lilac",
-      "name": "Lilac",
-      "titleTag": "Lilac Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of lilac items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our lilac category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "muslim-groom-outfit",
-      "name": "Muslim Groom Outfit",
-      "titleTag": "Muslim Groom Outfit Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of Muslim groom outfit items. Find the perfect style and color for your special occasion.",
-      "description": "Welcome to our Muslim groom outfit category. We offer a range of high-quality products and colors designed to meet your needs and enhance your groom style."
-    },
-    {
-      "slug": "muslim-lehenga",
-      "name": "Muslim Lehenga",
-      "titleTag": "Muslim Lehenga Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of hijabi lehenga items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our hijabi lehenga category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "muslim-wedding-dresses",
-      "name": "Muslim Wedding Dresses",
-      "titleTag": "Muslim Wedding Dresses Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of Muslim wedding dresses items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our Muslim wedding dresses category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "nikkah-jewelry",
-      "name": "Nikkah Jewelry",
-      "titleTag": "Nikkah Jewelry Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of nikkah jewelry items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our nikkah jewelry category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "peach",
-      "name": "Peach",
-      "titleTag": "Peach Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of peach items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our peach category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "pink",
-      "name": "Pink",
-      "titleTag": "Pink Collection | Hijabi Bridal",
-      "metaDescription": "Explore our curated selection of pink items. Find the perfect style and quality for your special occasion.",
-      "description": "Welcome to our pink category. We offer a range of high-quality products designed to meet your needs and enhance your bridal style."
-    },
-    {
-      "slug": "red",
-      "name": "Red",
-      "titleTag": "Red Collection | Hijabi Bridal",
-      "metaDescription": "Welcome to our red bridal collection. We offer a range of high-quality products designed to meet your needs and enhance your bridal style.",
-      "description": "The Red Muslim Wedding Dress: What's It All About?\nIn the diverse tapestry of the Muslim community, few symbols are as striking or as deeply rooted as the red Muslim wedding dress. Across various cultures within Islam, the choice of a wedding dress is not merely a fashion statement but a profound expression of heritage and spirituality. As US Muslim wedding trends continue to evolve, the cultural significance of red remains a constant, bridging the gap between traditional roots and modern American Islamic fashion. READ MORE BELOW...",
-      "longContent": [
-        {
-          "heading": "What does the color red mean in Islam?",
-          "paragraphs": [
-            "To understand the cultural significance of red, one must look at how color symbolism in Islam operates across different geographies. In many traditions, red is synonymous with life force, joy, and vitality. Within the context of Islam, while no specific color is 'mandatory,' red has emerged as a premier choice for Muslim wedding attire because it traditionally symbolizes happiness and new beginnings.",
-            "In many South Asian and Middle Eastern cultures that make up the American Muslim community, red is believed to bring good fortune to the couple. This color symbolism in Islam is particularly prominent during the Nikah or Walima, where the bride's ensemble serves as a visual celebration of her transition into a new chapter of life."
-          ]
-        },
-        {
-          "heading": "Islamic Wedding Traditions and the American Muslim Community",
-          "paragraphs": [
-            "The American Muslim community is a beautiful example of diversity in Muslim weddings. From West African traditions to Southeast Asian customs, the way Islam is celebrated at a wedding varies, yet the wedding dress often remains the focal point.",
-            "In the United States, we see a fascinating cultural fusion in wedding attire. Brides often blend the modest requirements of Islam with contemporary silhouettes, colors or fabrics, creating a unique aesthetic that respects Islamic wedding traditions while embracing their American identity."
-          ]
-        }
-      ],
-      "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Why is red so popular in Muslim weddings?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"In the context of Islam, red is culturally associated with new beginnings. While Islam itself does not mandate a specific color, the red Muslim wedding dress has become a staple in many cultures to celebrate the joy of the union.\"}}, {\"@type\": \"Question\", \"name\": \"Can a Muslim bride wear colors other than red?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. While a red Muslim wedding dress is traditional in many regions, the American Muslim community displays great diversity in Muslim weddings, with brides wearing green, gold, white, or even pastel shades, depending totally on their individual choice.\"}}, {\"@type\": \"Question\", \"name\": \"How do interfaith relationships influence wedding attire?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Interfaith relationships often lead to a blend of styles. A bride might wear a red gown to honor Islamic wedding traditions while incorporating western lace or silhouettes, showcasing a beautiful cultural fusion in wedding attire.\"}}, {\"@type\": \"Question\", \"name\": \"What defines American Islamic fashion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"American Islamic fashion is defined by its focus on modesty, high-quality textiles, and a blend of Eastern and Western design elements. It caters to the American Muslim community by providing sophisticated options for Muslim wedding attire that are both trendy and respectful of Islam.\"}}]"
+      "heading": "Islamic Wedding Traditions and the American Muslim Community",
+      "paragraphs": [
+        "The American Muslim community is a beautiful example of diversity in Muslim weddings. From West African traditions to Southeast Asian customs, the way Islam is celebrated at a wedding varies, yet the wedding dress often remains the focal point.",
+        "In the United States, we see a fascinating cultural fusion in wedding attire. Brides often blend the modest requirements of Islam with contemporary silhouettes, colors or fabrics, creating a unique aesthetic that respects Islamic wedding traditions while embracing their American identity."
+      ]
+    }
+  ],
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Why is red so popular in Muslim weddings?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"In the context of Islam, red is culturally associated with new beginnings. While Islam itself does not mandate a specific color, the red Muslim wedding dress has become a staple in many cultures to celebrate the joy of the union.\"}}, {\"@type\": \"Question\", \"name\": \"Can a Muslim bride wear colors other than red?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. While a red Muslim wedding dress is traditional in many regions, the American Muslim community displays great diversity in Muslim weddings, with brides wearing green, gold, white, or even pastel shades, depending totally on their individual choice.\"}}, {\"@type\": \"Question\", \"name\": \"How do interfaith relationships influence wedding attire?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Interfaith relationships often lead to a blend of styles. A bride might wear a red gown to honor Islamic wedding traditions while incorporating western lace or silhouettes, showcasing a beautiful cultural fusion in wedding attire.\"}}, {\"@type\": \"Question\", \"name\": \"What defines American Islamic fashion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"American Islamic fashion is defined by its focus on modesty, high-quality textiles, and a blend of Eastern and Western design elements. It caters to the American Muslim community by providing sophisticated options for Muslim wedding attire that are both trendy and respectful of Islam.\"}}]"
     },
     {
       "slug": "sharara",
@@ -256,7 +407,7 @@
         {
           "url": "gold Muslim wedding dupatta actual.webp",
           "alt": "Elegant gold dupatta crafted from luxurious organza, perfect for Muslim wedding occasions",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4grmbtD"
         }
       ],
       "og_image": "gold Muslim wedding dupatta.webp",
@@ -283,7 +434,7 @@
         {
           "url": "green bridal dupatta2.webp",
           "alt": "Elegant Green Dupatta in lightweight silk, perfect for bridal occasions and cultural significance",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3B8HGjX"
         }
       ],
       "og_image": "green bridal dupatta.webp",
@@ -310,12 +461,12 @@
         {
           "url": "peach bridal dupatta3.webp",
           "alt": "Elegant Peach Dupatta crafted from luxurious net fabric, perfect for bridal occasions and styling inspiration",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3ODSUA4"
         },
         {
           "url": "peach bridal dupatta 2.webp",
           "alt": "Elegant Peach Dupatta in luxurious net fabric, adorned with intricate embroidery for bridal occasions",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3ODSUA4"
         }
       ],
       "og_image": "peach bridal dupatta.webp",
@@ -406,9 +557,9 @@
           "amazonLink": "https://amzn.to/4k2xRVj"
         },
         {
-          "url": "_AC_SX679_.webp",
-          "alt": "Elegant Hijab in Champagne, crafted from silky chiffon, perfect for formal events and modest fashion. 61DCKwDs10L",
-          "amazonLink": ""
+          "url": "61DCKwDs10L._AC_SX679_.webp",
+          "alt": "Elegant Hijab in Champagne, crafted from silky chiffon, perfect for formal events and modest fashion.",
+          "amazonLink": "https://amzn.to/4k2xRVj"
         }
       ],
       "og_image": "61hN70Hi1pL._AC_SY741_.webp",
@@ -433,9 +584,9 @@
           "amazonLink": "https://amzn.to/3Z1Gs2A"
         },
         {
-          "url": "_AC_SX569_.webp",
-          "alt": "Elegant Off-White Hijab in luxurious chiffon, perfect for formal events and modest fashion enthusiasts. 71XL4I1kVlL",
-          "amazonLink": ""
+          "url": "71IqDyaCcoL._AC_SX569_.webp",
+          "alt": "Elegant Off-White Hijab in luxurious chiffon, perfect for formal events and modest fashion enthusiasts.",
+          "amazonLink": "https://amzn.to/3Z1Gs2A"
         }
       ],
       "og_image": "71IqDyaCcoL_edited.webp",
@@ -455,14 +606,9 @@
       ],
       "images": [
         {
-          "url": "71JpnUCv55L._AC_SX679_.webp",
+          "url": "71eHhriJgxL._AC_SX679_.webp",
           "alt": "Champagne Hijab in a luxurious material, featuring a soft sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.",
           "amazonLink": "https://amzn.to/4jmjx9B"
-        },
-        {
-          "url": "_AC_SX679_.webp",
-          "alt": "Elegant Champagne Hijab in luxurious fabric, perfect for Muslim women seeking modest fashion. 81EPGJ3EzZL",
-          "amazonLink": ""
         }
       ],
       "og_image": "71JpnUCv55L._AC_SX679_.webp",
@@ -487,9 +633,9 @@
           "amazonLink": "https://amzn.to/3Z1Gs2A"
         },
         {
-          "url": "_AC_SX679_.webp",
-          "alt": "Elegant Forest Green Hijab in luxurious fabric, perfect for Muslim women embracing modest fashion. 81yD2ymSeaL",
-          "amazonLink": ""
+          "url": "81yD2ymSeaL._AC_SX679_.webp",
+          "alt": "Elegant Forest Green Hijab in luxurious fabric, perfect for Muslim women embracing modest fashion.",
+          "amazonLink": "https://amzn.to/3Z1Gs2A"
         }
       ],
       "og_image": "813cOAKbdOL._AC_SX569_.webp",
@@ -536,9 +682,9 @@
           "amazonLink": "https://amzn.to/3Z1Gs2A"
         },
         {
-          "url": "_AC_SX679_.webp",
-          "alt": "Lavender Sparkle Hijab made from luxurious fabric, perfect for elegant formal events. 91iDkq2jxTL",
-          "amazonLink": ""
+          "url": "91iDkq2jxTL._AC_SX679_.webp",
+          "alt": "Lavender Sparkle Hijab made from luxurious fabric, perfect for elegant formal events.",
+          "amazonLink": "https://amzn.to/3Z1Gs2A"
         }
       ],
       "og_image": "81HoS4X9FyL._AC_SX569_.webp",
@@ -678,9 +824,9 @@
           "amazonLink": "https://amzn.to/4ip5osN"
         },
         {
-          "url": "",
+          "url": "white velvet cape front.webp",
           "alt": "Elegant white velvet cape, enhancing bridal sophistication and luxury.",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4ip5osN"
         }
       ],
       "og_image": "white velvet cape.webp",
@@ -795,7 +941,7 @@
         {
           "url": "dark red square cat eye halal nail color2.webp",
           "alt": "Elegant Dark Red Cat Eye Artificial Nails showcasing luxurious nail art for a stunning look",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/49CJVJ8"
         }
       ],
       "og_image": "dark red square cat eye halal nail color.webp",
@@ -822,7 +968,7 @@
         {
           "url": "halal nails champagne actual.webp",
           "alt": "Elegant Champagne Hijabi Nails showcasing wudu-friendly designs for the modern bride",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3Djphl4"
         }
       ],
       "og_image": "halal nails champagne.webp",
@@ -849,7 +995,7 @@
         {
           "url": "halal nails fuschia actual.webp",
           "alt": "Fuschia Hijabi Nails showcasing exquisite modest nail art in a luxurious finish",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4iygDzv"
         }
       ],
       "og_image": "halal nails fuschia.webp",
@@ -925,7 +1071,7 @@
         {
           "url": "halal nails white cat eye actual.webp",
           "alt": "Elegant White Cat Eye Hijabi Nails featuring easy removal for a stunning, modest look",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3VEK359"
         }
       ],
       "og_image": "halal nails white cat eye.webp",
@@ -1417,12 +1563,12 @@
       "images": [
         {
           "url": "red gold waistcoat.webp",
-          "alt": "Gold and Red Islamic Groom Dress featuring opulent waistcoats with intricate gold embroidery and luxurious kurta sets, ideal for a regal Nikkah celebration. red gold waistcoat.webp,  https://amzn.to/4ab2kgx",
+          "alt": "Gold and Red Islamic Groom Dress featuring opulent waistcoats with intricate gold embroidery and luxurious kurta sets, ideal for a regal Nikkah celebration.",
           "amazonLink": "https://amzn.to/4ab2kgx"
         },
         {
           "url": "muslim groom outfit gold waiscoat and kurta.webp",
-          "alt": "Exquisite gold and red Islamic groom dress: gold waistcoat and kurta set for a luxurious Nikkah. ,",
+          "alt": "Exquisite gold and red Islamic groom dress: gold waistcoat and kurta set for a luxurious Nikkah.",
           "amazonLink": "https://amzn.to/4rhMfNo"
         },
         {
@@ -1442,7 +1588,7 @@
         },
         {
           "url": "gold and red mens jutti.webp",
-          "alt": "Elegant Gold and Red Islamic Groom Dress featuring gold jutti with intricate embroidery for Nikkah celebrations.  ,   in Gold",
+          "alt": "Elegant Gold and Red Islamic Groom Dress featuring gold jutti with intricate embroidery for Nikkah celebrations.",
           "amazonLink": ""
         }
       ],
@@ -1469,8 +1615,8 @@
         },
         {
           "url": "_AC_SY741_.webp",
-          "alt": "Elegant Muslim Bridal Lehenga in Maroon showcasing intricate embroidery, embodying tradition and modesty. 81GB81TqgCL",
-          "amazonLink": ""
+          "alt": "Elegant Muslim Bridal Lehenga in Maroon showcasing intricate embroidery, embodying tradition and modesty.",
+          "amazonLink": "https://amzn.to/3M8zJ3B"
         }
       ],
       "og_image": "81nmYLza-OL._AC_SX679_.webp",
@@ -1495,9 +1641,9 @@
           "amazonLink": "https://amzn.to/46fQDUK"
         },
         {
-          "url": "_AC_SX569_.webp",
-          "alt": "Customize your wedding day with our Muslim Bridal Lehenga in Pink 91+DchrsHVL",
-          "amazonLink": ""
+          "url": "91+DchrsHVL._AC_SX569_.webp",
+          "alt": "Customize your wedding day with our Muslim Bridal Lehenga in Pink",
+          "amazonLink": "https://amzn.to/46fQDUK"
         }
       ],
       "og_image": "91+DchrsHVL._AC_SX569_.webp",
@@ -1522,14 +1668,14 @@
           "amazonLink": "https://amzn.to/3Nxvj6Z"
         },
         {
-          "url": "_AC_SY550_.webp",
-          "alt": "Elegant Baby Pink Muslim Bridal Lehenga showcasing intricate embroidery, embodying tradition and modesty. 71owARfYK6L",
-          "amazonLink": ""
+          "url": "81kWX6L6OOL._AC_SY550_.webp",
+          "alt": "Elegant Baby Pink Muslim Bridal Lehenga showcasing intricate embroidery, embodying tradition and modesty.",
+          "amazonLink": "https://amzn.to/3Nxvj6Z"
         },
         {
-          "url": "_AC_SY550_.webp",
-          "alt": "Elegant Baby Pink Muslim Bridal Lehenga showcasing intricate embroidery, embodying modesty and tradition. 81kWX6L6OOL",
-          "amazonLink": ""
+          "url": "71owARfYK6L._AC_SY550_.webp",
+          "alt": "Elegant Baby Pink Muslim Bridal Lehenga showcasing intricate embroidery, embodying modesty and tradition.",
+          "amazonLink": "https://amzn.to/3Nxvj6Z"
         }
       ],
       "og_image": "baby-pink-muslim-bridal-lehenga.webp",
@@ -1554,14 +1700,14 @@
           "amazonLink": "https://amzn.to/4sY85al"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Blue Hijabi Lehenga showcasing intricate embroidery, perfect for modern modest fashion.81EpJvaS-eL",
-          "amazonLink": ""
+          "url": "91Fi9l9f+sL._AC_SY741_.webp",
+          "alt": "Elegant Blue Hijabi Lehenga showcasing intricate embroidery, perfect for modern modest fashion.",
+          "amazonLink": "https://amzn.to/4sY85al"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Blue Hijabi Lehenga showcasing intricate embroidery, perfect for modern modest fashion. 91Fi9l9f+sL",
-          "amazonLink": ""
+          "url": "81EpJvaS-eL._AC_SY741_.webp",
+          "alt": "Elegant Blue Hijabi Lehenga showcasing intricate embroidery, perfect for modern modest fashion.",
+          "amazonLink": "https://amzn.to/4sY85al"
         }
       ],
       "og_image": "bluehijabilehenga.webp",
@@ -1588,12 +1734,12 @@
         {
           "url": "gold bridal lehenga.webp",
           "alt": "Elegant Gold Hijabi Lehenga featuring intricate embroidery, perfect for luxurious bridal occasions",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4dCc8le"
         },
         {
           "url": "gold bridal lehenga actual.webp",
           "alt": "Elegant Gold Hijabi Lehenga with intricate embroidery and flowing silhouette, perfect for bridal elegance",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4dCc8le"
         }
       ],
       "og_image": "goldhijabilehenga.webp",
@@ -1620,12 +1766,12 @@
         {
           "url": "green flower bridal lehenga actual.webp",
           "alt": "Elegant Green Hijabi Lehenga adorned with intricate floral embroidery, perfect for bridal elegance",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4h26wSp"
         },
         {
           "url": "green flower bridal lehenga closeup.webp",
           "alt": "Close-up of the luxurious Green Hijabi Lehenga adorned with intricate floral embroidery",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4h26wSp"
         }
       ],
       "og_image": "greenhijabilehenga.webp",
@@ -1650,9 +1796,9 @@
           "amazonLink": "https://amzn.to/4k2fdhM"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Hijabi Lehenga in Blue, showcasing intricate embroidery, perfect for modest fashion. 91gUVfZTRML",
-          "amazonLink": ""
+          "url": "91gUVfZTRML._AC_SY741_.webp",
+          "alt": "Elegant Hijabi Lehenga in Blue, showcasing intricate embroidery, perfect for modest fashion.",
+          "amazonLink": "https://amzn.to/4k2fdhM"
         }
       ],
       "og_image": "hijabilehengainblue.webp",
@@ -1704,14 +1850,14 @@
           "amazonLink": "https://amzn.to/4qEXkYD"
         },
         {
-          "url": "_AC_SY550_.webp",
-          "alt": "Elegant Hijabi Lehenga in Navy Blue showcasing intricate embroidery, perfect for modest fashion lovers. 81MJt4kz3rL",
-          "amazonLink": ""
+          "url": "81l192+Ej+L._AC_SY550_.webp",
+          "alt": "Elegant Hijabi Lehenga in Navy Blue showcasing intricate embroidery, perfect for modest fashion lovers.",
+          "amazonLink": "https://amzn.to/4qEXkYD"
         },
         {
-          "url": "_AC_SY550_.webp",
-          "alt": "Elegant Hijabi Lehenga in Navy Blue, showcasing intricate embroidery, perfect for modest fashion. 81l192+Ej+L",
-          "amazonLink": ""
+          "url": "81MJt4kz3rL._AC_SY550_.webp",
+          "alt": "Elegant Hijabi Lehenga in Navy Blue, showcasing intricate embroidery, perfect for modest fashion.",
+          "amazonLink": "https://amzn.to/4qEXkYD"
         }
       ],
       "og_image": "hijabilehengainnavyblue.webp",
@@ -1738,12 +1884,12 @@
         {
           "url": "silver and maroon bridal lehenga actual.webp",
           "alt": "Exquisite Maroon and Silver Lehenga adorned with intricate embellishments for bridal elegance",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/40kqTTJ"
         },
         {
           "url": "silver and maroon bridal lehenga.webp",
           "alt": "Elegant Maroon and Silver Lehenga featuring intricate embellishments, perfect for weddings",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/40kqTTJ"
         }
       ],
       "og_image": "maroon-and-silver-lehenga.webp",
@@ -1768,9 +1914,9 @@
           "amazonLink": "https://amzn.to/49TCY6R"
         },
         {
-          "url": "_AC_SX569_.webp",
-          "alt": "Muslim Bride in Pink Lehenga showcasing intricate embroidery, embodying elegance and tradition. 71YxR4YOddL",
-          "amazonLink": ""
+          "url": "71YxR4YOddL._AC_SX569_.webp",
+          "alt": "Muslim Bride in Pink Lehenga showcasing intricate embroidery, embodying elegance and tradition.",
+          "amazonLink": "https://amzn.to/49TCY6R"
         }
       ],
       "og_image": "muslim-bride-in-pink-lehenga.webp",
@@ -1797,12 +1943,12 @@
         {
           "url": "Flower Embroidered Muslim Wedding Dress Pink.webp",
           "alt": "Elegant Pink Flower Muslim Bridal Lehenga showcasing intricate floral embroidery for a modest wedding look",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3ZgCy5p"
         },
         {
           "url": "Flower Embroidered Muslim Wedding Dress Pink closeup.webp",
           "alt": "Close-up of a Pink Flower Muslim Bridal Lehenga showcasing intricate embroidery and cultural significance",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3ZgCy5p"
         }
       ],
       "og_image": "pink-flower-muslim-bridal-lehenga.webp",
@@ -1827,9 +1973,9 @@
           "amazonLink": "https://amzn.to/43hBgcg"
         },
         {
-          "url": "_AC_SX425_.webp",
-          "alt": "Elegant Pink Muslim Bridal Lehenga showcasing exquisite embroidery, embodying tradition and modesty. 61pT2WwatFL",
-          "amazonLink": ""
+          "url": "61pT2WwatFL._AC_SX425_.webp",
+          "alt": "Elegant Pink Muslim Bridal Lehenga showcasing exquisite embroidery, embodying tradition and modesty.",
+          "amazonLink": "https://amzn.to/43hBgcg"
         }
       ],
       "og_image": "pink-muslim-bridal-lehenga",
@@ -1856,12 +2002,12 @@
         {
           "url": "red islamic lehenga.webp",
           "alt": "Elegant Red Muslim Bridal Lehenga featuring intricate embroidery, embodying tradition and modesty",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3ZgCy5p"
         },
         {
           "url": "red islamic lehenga closeup.webp",
           "alt": "Elegant close-up of a Red Muslim Bridal Lehenga showcasing intricate embroidery",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3ZgCy5p"
         }
       ],
       "og_image": "red-muslim-bridal-lehenga.webp",
@@ -1882,13 +2028,13 @@
       "images": [
         {
           "url": "readymade-maroon-muslim-bridal-lehenga.webp",
-          "alt": "Readymade Maroon Muslim Bridal Lehenga featuring intricate embroidery, luxurious net fabric, and elegant maroon and antique gold tonesâ€”perfect for bridal style inspiration.",
+          "alt": "Readymade Maroon Muslim Bridal Lehenga featuring intricate embroidery, luxurious net fabric, and elegant maroon and antique gold tones, perfect for bridal style inspiration.",
           "amazonLink": "https://amzn.to/45B7Vvj"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Readymade Maroon Muslim Bridal Lehenga showcasing intricate embroidery for a stunning wedding look. 81+xBfjxT+L",
-          "amazonLink": ""
+          "url": "81+xBfjxT+L._AC_SY741_.webp",
+          "alt": "Elegant Readymade Maroon Muslim Bridal Lehenga showcasing intricate embroidery for a stunning wedding look.",
+          "amazonLink": "https://amzn.to/45B7Vvj"
         }
       ],
       "og_image": "readymade-maroon-muslim-bridal-lehenga.webp",
@@ -1915,12 +2061,12 @@
         {
           "url": "islamic bridal lehenga aqua.webp",
           "alt": "Elegant Readymade Blue Hijabi Lehenga showcasing intricate embroidery, embodying modest fashion",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3WvTVhT"
         },
         {
           "url": "islamic bridal lehenga aqua sitting.webp",
           "alt": "Elegant Readymade Blue Hijabi Lehenga in luxurious fabric, perfect for modern modest fashion",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3WvTVhT"
         }
       ],
       "og_image": "readymadebluehijabilehenga.webp",
@@ -1947,7 +2093,7 @@
         {
           "url": "white bridal lehenga.webp",
           "alt": "Elegant White Lehenga featuring intricate embellishments, perfect for luxury weddings",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4a7Kye0"
         }
       ],
       "og_image": "white-lehenga.webp",
@@ -1994,9 +2140,9 @@
           "amazonLink": "https://amzn.to/4dNDhlr"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant red Muslim wedding dress showcasing intricate embroidery, embodying cultural significance and modesty. 91pdilKIUqL",
-          "amazonLink": ""
+          "url": "91pdilKIUqL._AC_SY741_.webp",
+          "alt": "Elegant red Muslim wedding dress showcasing intricate embroidery, embodying cultural significance and modesty.",
+          "amazonLink": "https://amzn.to/4dNDhlr"
         }
       ],
       "og_image": "61PrXlCT04L._AC_SY741_.webp",
@@ -2021,9 +2167,9 @@
           "amazonLink": "https://amzn.to/4ktsWNW"
         },
         {
-          "url": "_AC_.webp",
-          "alt": "Elegant Blue Dress for Muslim Wedding showcasing Modesty and exquisite Hijab styling. 61g-xW9cf5L",
-          "amazonLink": ""
+          "url": "61g-xW9cf5L._AC_.webp",
+          "alt": "Elegant Blue Dress for Muslim Wedding showcasing Modesty and exquisite Hijab styling.",
+          "amazonLink": "https://amzn.to/4ktsWNW"
         }
       ],
       "og_image": "71-Iuep2r6L._AC_SY741_.webp",
@@ -2092,9 +2238,9 @@
           "amazonLink": "https://amzn.to/4dNDhlr"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Green Dress for Muslim Wedding, showcasing modesty and intricate hijab details. 81Gw3jbjjPL",
-          "amazonLink": ""
+          "url": "81Gw3jbjjPL._AC_SY741_.webp",
+          "alt": "Elegant Green Dress for Muslim Wedding, showcasing modesty and intricate hijab details.",
+          "amazonLink": "https://amzn.to/4dNDhlr"
         }
       ],
       "og_image": "81Tmwsjj3lL._AC_SY741_.webp",
@@ -2119,9 +2265,9 @@
           "amazonLink": "https://amzn.to/42Mf4YI"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Red Wine Muslim Wedding Dress showcasing intricate details, embodying cultural significance and modesty. 91L9GHyKyyL",
-          "amazonLink": ""
+          "url": "91L9GHyKyyL._AC_SY741_.webp",
+          "alt": "Elegant Red Wine Muslim Wedding Dress showcasing intricate details, embodying cultural significance and modesty.",
+          "amazonLink": "https://amzn.to/42Mf4YI"
         }
       ],
       "og_image": "91LZsz40o7L._AC_SY741_.webp",
@@ -2148,7 +2294,7 @@
         {
           "url": "aqua blue muslim wedding dress actual.webp",
           "alt": "Elegant Dress for Blue Muslim Wedding showcasing exquisite modesty in formal wear",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3GDpLnM"
         }
       ],
       "og_image": "aqua blue muslim wedding dress.webp",
@@ -2246,17 +2392,17 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-3.webp",
           "alt": "Elegant Dress for Muslim Wedding in Blue, showcasing modesty and sophistication perfect for formal wear",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4ir1"
         },
         {
           "url": "blue moroccan muslim caftan back.webp",
           "alt": "Elegant Dress for Muslim Wedding in Blue, featuring luxurious modesty for refined celebrations",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4ir1"
         },
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-2.webp",
           "alt": "Elegant Dress for Muslim Wedding in Blue, showcasing modesty with intricate details",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4ir1"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-1.webp",
@@ -2310,7 +2456,7 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan-2.webp",
           "alt": "Lavender Muslim Wedding Kaftan showcasing exquisite modesty for elegant bridal moments",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3OrMabs"
         },
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan.webp",
@@ -2386,12 +2532,12 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-white-moroccan-wedding-kaftan-2.webp",
           "alt": "Elegant Dress for White Muslim Wedding featuring intricate details for Modesty and Hijab styling",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/41l53S5"
         },
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-white-moroccan-wedding-kaftan.webp",
           "alt": "Elegant Dress for White Muslim Wedding, featuring exquisite modesty in a luxurious formal gown",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/41l53S5"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-white-moroccan-wedding-kaftan-4.webp",
@@ -2413,12 +2559,12 @@
         {
           "url": "light green muslim wedding dress.webp",
           "alt": "Light Green Muslim Wedding Dress showcasing delicate butterfly net texture, designed for modesty with elegant hijab, ideal for a Muslim wedding celebration.",
-          "amazonLink": "https://amzn.to/3Csoj5R"
+          "amazonLink": "https://amzn.to/41l53S5"
         },
         {
           "url": "light green muslim wedding dress closeup.webp",
           "alt": "Elegant close-up of a Light Green Muslim Wedding Dress, showcasing its exquisite modesty details",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/41l53S5"
         }
       ],
       "og_image": "light green muslim wedding dress.webp",
@@ -2445,7 +2591,7 @@
         {
           "url": "Lilac bridal muslim wedding dress closeup.webp",
           "alt": "Close-up of a Lilac Muslim Wedding Dress showcasing exquisite modesty and elegant hijab details",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3Csoj5R"
         }
       ],
       "og_image": "Lilac bridal muslim wedding dress.webp",
@@ -2472,7 +2618,7 @@
         {
           "url": "muslim wedding dress in aqua blue actual.webp",
           "alt": "Luxurious Muslim Wedding Dress Blue showcasing exquisite modesty in an elegant design",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/40gF3Gm"
         }
       ],
       "og_image": "muslim wedding dress in aqua blue.webp",
@@ -2543,7 +2689,7 @@
         {
           "url": "muslim wedding dress in silver closeup.webp",
           "alt": "Champagne Dress for Muslim Wedding showcasing exquisite modesty in intricate detailing",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4fGiyz7"
         }
       ],
       "og_image": "muslim wedding dress in silver.webp",
@@ -2614,7 +2760,7 @@
         {
           "url": "sky blue muslim wedding dress side.webp",
           "alt": "Elegant Blue Muslim Wedding Dress on Amazon, perfect for modesty at mosques and outdoor locations",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4g4tnw6"
         }
       ],
       "og_image": "sky blue muslim wedding dress.webp",
@@ -2729,7 +2875,7 @@
         {
           "url": "blue bridal jewelry set.webp",
           "alt": "Elegant blue bridal jewelry set featuring intricate gemstone detailing",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4gp6e72"
         }
       ],
       "og_image": "blue bridal jewelry set actual.webp",
@@ -2822,7 +2968,7 @@
         {
           "url": "bridal jewellery set in green.webp",
           "alt": "Elegant bridal jewellery set in green, showcasing exquisite craftsmanship and luxurious design",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3VD7H1H"
         }
       ],
       "og_image": "bridal jewelry set in green.webp",
@@ -3157,7 +3303,7 @@
         {
           "url": "muslim wedding earrings.webp",
           "alt": "Elegant Muslim wedding earrings adorned with intricate gold detailing",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4jTOtQ2"
         }
       ],
       "og_image": "muslim wedding earrings actual.webp",
@@ -3248,9 +3394,9 @@
           "amazonLink": "https://amzn.to/44CVWhj"
         },
         {
-          "url": "_AC_SY741_.webp",
-          "alt": "Elegant Champagne Sharara Suits designed for Hourglass body types, showcasing intricate detailing. 71DmuKvhVcL",
-          "amazonLink": ""
+          "url": "71DmuKvhVcL._AC_SY741_.webp",
+          "alt": "Elegant Champagne Sharara Suits designed for Hourglass body types, showcasing intricate detailing.",
+          "amazonLink": "https://amzn.to/44CVWhj"
         }
       ],
       "og_image": "71G4RE2c6QL._AC_SX679_.webp",
@@ -3299,7 +3445,7 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-green-muslim-bridal-sharara-1.webp",
           "alt": "Elegant Sharara Suit in Green, perfect for Hourglass body types, showcasing intricate embroidery",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/436wob0"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-green-muslim-bridal-sharara-2.webp",
@@ -3326,7 +3472,7 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-lavender-muslim-bridal-sharara-close.webp",
           "alt": "Close-up of a Lavender Sharara Suit, perfect for hourglass body types, showcasing luxurious fabric details",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/436wob0"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-lavender-muslim-bridal-sharara.webp",
@@ -3353,7 +3499,7 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-Maroon-muslim-bridal-sharara-closeup.webp",
           "alt": "Elegant close-up of a luxurious Sharara Suit in Maroon, perfect for Pear-Shaped body types",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/436wob0"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-Maroon-muslim-bridal-sharara.webp",
@@ -3380,12 +3526,12 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-peach-wedding-sharara-for-muslim-brides-1.webp",
           "alt": "Elegant Peach Sharara Suit showcasing intricate details, perfect for Hourglass body types",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4ipCrwE"
         },
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-peach-wedding-sharara-for-muslim-brides-2.webp",
           "alt": "Elegant Peach Sharara Suit, perfect for Pear-Shaped brides, showcasing luxurious fabric details",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/4ipCrwE"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-peach-wedding-sharara-for-muslim-brides-3.webp",
@@ -3412,7 +3558,7 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-teal-blue-muslim-bridal-sharara.webp",
           "alt": "Elegant Teal Blue Sharara crafted from luxurious silk, perfect for a sophisticated bridal occasion",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/436wob0"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-teal-blue-muslim-bridal-sharara-full-view.webp",
@@ -3439,7 +3585,7 @@
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-green-muslim-wedding-sharara-closeup.webp",
           "alt": "Close-up of an exquisite Green Sharara featuring intricate design details and luxurious fabric",
-          "amazonLink": ""
+          "amazonLink": "https://amzn.to/3GGRjsi"
         }
       ],
       "og_image": "hijabi-bridal-modest-islamic-wedding-dress-green-muslim-wedding-sharara.webp",
