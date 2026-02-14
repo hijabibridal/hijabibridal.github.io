@@ -1,7 +1,7 @@
 import re
 import os
 
-def faq_only_surgical_cleaner():
+def surgical_faq_fixer_v3():
     input_file = 'src/data/bridal-products.json'
     output_file = 'src/data/bridal-products-CLEANED.json'
 
@@ -12,34 +12,36 @@ def faq_only_surgical_cleaner():
     with open(input_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # THE RULE: Only touch text that lives between "FAQ_schema": " and the closing "
-    def clean_faq_content(match):
-        prefix = match.group(1) # This is -> "FAQ_schema": "
-        faq_body = match.group(2) # This is the actual JSON string
-        suffix = match.group(3) # This is the closing -> "
+    def clean_faq_block(match):
+        prefix = match.group(1) # "FAQ_schema": "
+        body = match.group(2)   # The messy content
+        suffix = match.group(3) # "
         
-        # 1. Remove any existing backslashes to avoid \\\" messes
-        temp_body = faq_body.replace('\\"', '"')
+        # 1. Start fresh: Remove all existing backslashes from this block
+        # This prevents \\\" (triple backslashes)
+        clean_body = body.replace('\\"', '"')
         
-        # 2. Escape every double quote found inside this specific block
-        # This handles the (fancy anarkali) quotes and the @type quotes
-        fixed_body = temp_body.replace('"', '\\"')
+        # 2. Force escape every quote
+        # This fixes: "Question" -> \"Question\"
+        fixed_body = clean_body.replace('"', '\\"')
+        
+        # 3. Targeted fix for the specific error you found:
+        # If any word is missing a backslash before its quote (like Question"), 
+        # the replace logic above actually catches it!
         
         return f'{prefix}{fixed_body}{suffix}'
 
-    # This Regex isolates the FAQ_schema specifically
-    # It looks for "FAQ_schema": " followed by the content and ends before a comma or brace
-    cleaned_content = re.sub(r'("FAQ_schema":\s*")(.*?)("(?=\s*[,}\n]))', 
-                             clean_faq_content, 
-                             content, 
-                             flags=re.DOTALL)
+    # This Regex isolates the FAQ_schema and performs the surgery
+    new_content = re.sub(r'("FAQ_schema":\s*")(.*?)("(?=\s*[,}\n]))', 
+                         clean_faq_block, 
+                         content, 
+                         flags=re.DOTALL)
 
-    # NO VALIDATION LOOP: We save exactly what we cleaned without checking the rest of the file.
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(cleaned_content)
+        f.write(new_content)
     
-    print(f"✅ FAQ Schema Cleaned. Fixed Line 237 and all other FAQ blocks.")
-    print(f"Result saved to: {output_file}")
+    print(f"✅ Precision Fix Applied.")
+    print(f"Fixed the missing backslash in 'Question' and saved to {output_file}")
 
 if __name__ == "__main__":
-    faq_only_surgical_cleaner()
+    surgical_faq_fixer_v3()
