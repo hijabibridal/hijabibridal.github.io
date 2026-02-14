@@ -69,7 +69,7 @@ export default function Header() {
             </div>
           </div>
           <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Bride & Groom Guide</Link>
-       /nav>
+        </nav>
 
         <div className="hidden md:block w-64">
           <SearchBar />
@@ -82,11 +82,21 @@ export default function Header() {
            <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-pink-600 font-black text-[10px] uppercase mb-2">By Color</p>
-                {colorCollections.slice(0, 8).map(c => <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">{c.name}</Link>)}
+                {/* REMOVED .slice(0, 8) TO SHOW RED AND ALL OTHER COLORS */}
+                {colorCollections.map(c => (
+                  <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">
+                    {c.name}
+                  </Link>
+                ))}
               </div>
               <div>
                 <p className="text-pink-600 font-black text-[10px] uppercase mb-2">By Item</p>
-                {itemCollections.slice(0, 8).map(c => <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">{c.name}</Link>)}
+                {/* REMOVED .slice(0, 8) TO SHOW ALL ITEM CATEGORIES */}
+                {itemCollections.map(c => (
+                  <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">
+                    {c.name}
+                  </Link>
+                ))}
               </div>
            </div>
            <Link href="/blog" className="block text-lg font-black text-gray-800 border-t pt-4">GUIDE</Link>
