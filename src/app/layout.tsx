@@ -1,25 +1,30 @@
-// ... (Previous imports remain the same)
+import './globals.css'
+import { Poppins } from 'next/font/google'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-poppins',
+})
+
+export const metadata = {
+  title: 'Hijabi Bridal',
+  description: 'Modest Wedding Inspiration & Shop',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <head>
-        {/* ... (Previous scripts remain the same) ... */}
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        {/* CHANGED: Theme color is now Pink for the USA market */}
-        <meta name="theme-color" content="#db2777" />
-
-        {/* ... (Remaining Head content) ... */}
-      </head>
-      <body className={font.className}>
-        <Header />
+    <html lang="en" className={`${poppins.variable}`}>
+      <body className="font-sans antialiased">
+        <Navbar />
         {children}
-        <ScrollToTop />
         <Footer />
       </body>
     </html>

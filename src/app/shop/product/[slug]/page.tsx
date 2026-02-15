@@ -6,7 +6,6 @@ import { Metadata } from 'next'
 
 type PageProps = { params: Promise<{ slug: string }> };
 
-// This maps all 127+ products for the static build
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
     slug: p.slug 
@@ -49,6 +48,7 @@ export default async function ProductPage({ params }: PageProps) {
     { name: product.name, href: `/shop/product/${product.slug}` },
   ];
 
+  // Safely parse FAQs or default to empty array
   const faqs = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : [];
 
   return (
