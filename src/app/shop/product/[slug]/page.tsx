@@ -48,10 +48,10 @@ export default async function ProductPage({ params }: PageProps) {
     { name: product.name, href: `/shop/product/${product.slug}` },
   ];
 
-  // Safely parse FAQs or default to empty array
   const faqs = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : [];
 
   return (
+    // We use standard bg-white to avoid the font error
     <main className="min-h-screen bg-white pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Breadcrumbs items={breadcrumbItems} />
@@ -68,6 +68,7 @@ export default async function ProductPage({ params }: PageProps) {
               {product.name}
             </h1>
             
+            {/* Standard Amazon Button Logic - Will not show if link is missing (Groom pages) */}
             {product.images.find((img: any) => img.amazonLink)?.amazonLink && (
               <a 
                 href={product.images.find((img: any) => img.amazonLink).amazonLink}

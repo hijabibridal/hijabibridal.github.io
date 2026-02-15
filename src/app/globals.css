@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
 
-/* FONT CONFIGURATION */
 :root {
   --font-poppins: 'Poppins', sans-serif;
 }
@@ -11,58 +10,21 @@ body {
 }
 
 @theme {
-  /* Updated Primary colors from Orange to Pink */
   --color-primary: #db2777;
   --color-primary-light: #f472b6;
   --color-primary-dark: #be185d;
   --color-grey: #363636;
-  --spacing-60%: 60%;
-  --spacing-70%: 70%;
-  --tracking-widest: 0.515em;
-  --radius-Newsletter: 30px 400px 30px 30px;
 }
 
 @layer base {
-  /* FIXED H2 STYLING: Changed from Orange to Pink */
   .prose h2 {
     margin-top: 2rem !important;
     margin-bottom: 1rem !important;
     font-weight: 700 !important;
-    line-height: 1.3 !important;
-    color: #db2777 !important; /* Pink */
+    color: #db2777 !important;
   }
-
-  .dark .prose h2 {
-    color: #be185d !important; /* Dark Pink */
-  }
-
-  /* FIXED LINK STYLING: Changed from Orange to Pink */
-  .prose a:not(.internal-link), .internal-link {
+  .prose a {
     color: #db2777 !important;
     text-decoration: underline;
   }
-
-  .prose a:not(.internal-link):hover, .internal-link:hover {
-    color: #be185d !important;
-    text-decoration-thickness: 2px;
-  }
-}
-
-/* ==================== */
-/* GUARANTEED H2 SOLUTION */
-/* ==================== */
-.blog-heading {
-  font-size: 2rem !important;
-  margin-top: 2.5rem !important;
-  margin-bottom: 1.5rem !important;
-  font-weight: 900 !important;
-  color: #db2777 !important;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
-}
-
-.blog-content p {
-  margin-bottom: 1.5rem !important;
-  line-height: 1.8 !important;
-  color: #374151;
 }
