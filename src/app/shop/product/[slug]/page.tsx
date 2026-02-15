@@ -6,8 +6,12 @@ import { Metadata } from 'next'
 
 type PageProps = { params: Promise<{ slug: string }> };
 
+// FIXED: Maps your product data so GitHub Pages can create the static folders
 export async function generateStaticParams() {
-  return productData.products.map((p) => ({ slug: p.slug }));
+  // Accesses the products array from your JSON and returns the slug for each
+  return productData.products.map((p) => ({ 
+    slug: p.slug 
+  }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -59,10 +63,8 @@ export default async function ProductPage({ params }: PageProps) {
     { name: product.name, href: `/shop/product/${product.slug}` },
   ];
 
-  // Parse FAQs for both display and Schema
   const faqs = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : [];
 
-  // Construct the JSON-LD for Search Engines
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -78,7 +80,6 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-white pb-20">
-      {/* FAQ Schema for Dev Console/Search Engines */}
       {faqs.length > 0 && (
         <script
           type="application/ld+json"
@@ -120,7 +121,6 @@ export default async function ProductPage({ params }: PageProps) {
               />
             </div>
 
-            {/* Visual FAQ Display */}
             {faqs.length > 0 && (
               <div className="mt-12 border-t border-pink-100 pt-8">
                 <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
