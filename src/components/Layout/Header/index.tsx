@@ -57,4 +57,53 @@ export default function Header() {
                 </div>
               </div>
               <div>
-                <p className="text-pink-600 font-black text-[11px] uppercase tracking-[0.2em] mb-4 border-b border
+                <p className="text-pink-600 font-black text-[11px] uppercase tracking-[0.2em] mb-4 border-b border-pink-50 pb-2">Item Collections</p>
+                <div className="grid grid-cols-1">
+                  {itemCollections.map(c => (
+                    <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1.5 text-sm text-gray-600 hover:text-pink-500 transition-colors font-medium">
+                      {c.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Bride & Groom Guide</Link>
+          <Link href="/about" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">About</Link>
+        </nav>
+
+        <div className="hidden md:block w-64">
+          <SearchBar />
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-pink-50 p-6 space-y-6">
+           <div className="grid grid-cols-2 gap-4">
+              <div>
+                <p className="text-pink-600 font-black text-[10px] uppercase mb-2">By Color</p>
+                {colorCollections.map(c => (
+                  <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">
+                    {c.name}
+                  </Link>
+                ))}
+              </div>
+              <div>
+                <p className="text-pink-600 font-black text-[10px] uppercase mb-2">By Item</p>
+                {itemCollections.map(c => (
+                  <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">
+                    {c.name}
+                  </Link>
+                ))}
+              </div>
+           </div>
+           <div className="space-y-4 border-t pt-4">
+            <Link href="/blog" className="block text-lg font-black text-gray-800">GUIDE</Link>
+            <Link href="/about" className="block text-lg font-black text-gray-800">ABOUT</Link>
+           </div>
+        </div>
+      )}
+    </header>
+  );
+}
