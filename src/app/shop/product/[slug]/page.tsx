@@ -8,7 +8,6 @@ type PageProps = { params: Promise<{ slug: string }> };
 
 // FIXED: Maps your product data so GitHub Pages can create the static folders
 export async function generateStaticParams() {
-  // Accesses the products array from your JSON and returns the slug for each
   return productData.products.map((p) => ({ 
     slug: p.slug 
   }));
