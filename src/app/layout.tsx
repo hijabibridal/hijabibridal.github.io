@@ -1,7 +1,9 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
-import Navbar from '@/components/layout/header' 
-import Footer from '@/components/layout/footer'
+
+// We are moving UP two folders from src/app/ to reach src/components/
+import Navbar from '../components/layout/header' 
+import Footer from '../components/layout/footer'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -11,8 +13,8 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Hijabi Bridal | Modest Muslim Wedding Inspiration',
-  description: 'Discover modest wedding dresses, hijabs, and accessories for the modern bride.',
+  title: 'Hijabi Bridal',
+  description: 'Modest Wedding Inspiration & Shop',
 }
 
 export default function RootLayout({
@@ -21,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={`${poppins.variable}`}>
       <body className="font-sans antialiased">
         <Navbar />
         {children}
