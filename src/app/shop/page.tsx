@@ -2,9 +2,20 @@ import productData from '@/data/bridal-products.json';
 import ProductCard from '@/components/ProductCard';
 import Link from 'next/link';
 
+// Simple shuffle function to mix the products
+function shuffle(array: any[]) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export default function ShopPage() {
-  // We manually define which slugs are colors vs items
-  const colorSlugs = ['blue', 'pink', 'ivory', 'red', 'gold', 'silver', 'green', 'black', 'maroon', 'peach', 'white'];
+  const shuffledProducts = shuffle(productData.products);
+
+  const colorSlugs = ['blue', 'pink', 'ivory', 'red', 'gold', 'silver', 'green', 'black', 'maroon', 'peach', 'white', 'champagne', 'nude'];
   
   const colorCategories = productData.mainCategories.filter(cat => 
     colorSlugs.includes(cat.slug)
@@ -17,7 +28,7 @@ export default function ShopPage() {
   return (
     <div className="bg-white min-h-screen">
       <header className="py-16 bg-gray-50 border-b border-gray-100">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter">
             The <span className="text-pink-600">Boutique</span>
           </h1>
@@ -28,7 +39,6 @@ export default function ShopPage() {
       </header>
 
       <div className="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-16">
-        {/* SIDEBAR WITH DROPDOWN MENUS */}
         <aside className="lg:w-64 shrink-0">
           <div className="sticky top-28 space-y-4">
             
@@ -39,7 +49,7 @@ export default function ShopPage() {
                   Shop by Item
                 </h3>
                 <span className="transition group-open:rotate-180">
-                  <svg fill="none" height="20" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                  <svg fill="none" height="20" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" width="20"><path d="M19 9l-7 7-7-7"></path></svg>
                 </span>
               </summary>
               <ul className="mt-4 space-y-3 pl-2">
@@ -49,7 +59,6 @@ export default function ShopPage() {
                       {cat.name}
                     </Link>
                   </li>
-                </li>
                 ))}
               </ul>
             </details>
@@ -61,7 +70,7 @@ export default function ShopPage() {
                   Shop by Color
                 </h3>
                 <span className="transition group-open:rotate-180">
-                  <svg fill="none" height="20" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                  <svg fill="none" height="20" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" width="20"><path d="M19 9l-7 7-7-7"></path></svg>
                 </span>
               </summary>
               <ul className="mt-4 space-y-3 pl-2">
@@ -78,10 +87,9 @@ export default function ShopPage() {
           </div>
         </aside>
 
-        {/* PRODUCT GRID */}
         <main className="flex-1">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12">
-            {productData.products.map((product) => (
+            {shuffledProducts.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
           </div>
