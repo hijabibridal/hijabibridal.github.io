@@ -1,11 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /automatic-cat-feeders-litter
-Disallow: /dog-feeders-treats
-Disallow: /smart-pet-care
-Sitemap: https://petgadgetinsider.org/sitemap.xml
 
-# Block Vercel preview URLs
-User-agent: *
-Disallow: /*-git-*
-Disallow: /preview/*
+# Update this to your actual GitHub Pages URL
+Sitemap: https://hijabibridal.github.io/sitemap.xml
+
+# Block search results from being indexed (standard practice)
+Disallow: /search
