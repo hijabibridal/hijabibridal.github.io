@@ -32,7 +32,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-gray-900">
           {article.pageTitle}
         </h1>
-        {/* Pink branding line */}
+        {/* Pink branding bar */}
         <div className="h-1.5 w-24 bg-pink-500 mt-4"></div>
       </header>
 
@@ -48,6 +48,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
+      {/* Force h2 and h3 to Pink, Normal weight, and Not Italic */}
       <article 
         className="prose prose-pink max-w-none text-lg leading-relaxed
                    [&_h2]:!text-pink-600 [&_h2]:!font-normal [&_h2]:!not-italic [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4
