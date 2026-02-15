@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 
 type PageProps = { params: Promise<{ slug: string }> };
 
-// REQUIRED: Maps your product data so the static build knows which pages to create
+// This function is what prevents the "prerender" error by mapping your products
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
     slug: p.slug 
@@ -29,21 +29,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: product.meta_description,
       url: `${siteUrl}/shop/product/${product.slug}`,
       siteName: "Hijabi Bridal",
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: product.name,
-        },
-      ],
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: product.name }],
       type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: product.og_title || product.name,
-      description: product.meta_description,
-      images: [ogImageUrl],
     },
   };
 }
@@ -64,29 +51,8 @@ export default async function ProductPage({ params }: PageProps) {
 
   const faqs = product.FAQ_schema ? JSON.parse(product.FAQ_schema) : [];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq: any) => ({
-      "@type": "Question",
-      "name": faq.name,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.acceptedAnswer.text
-      }
-    }))
-  };
-
   return (
-    // FIXED: Removed font.className reference to stop the ReferenceError build crash
     <main className="min-h-screen bg-white pb-20">
-      {faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      )}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Breadcrumbs items={breadcrumbItems} />
         
