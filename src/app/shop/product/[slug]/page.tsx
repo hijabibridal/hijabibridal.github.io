@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 
 type PageProps = { params: Promise<{ slug: string }> };
 
-// This function is what prevents the "prerender" error by mapping your products
+// This maps all 127+ products for the static build
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
     slug: p.slug 
