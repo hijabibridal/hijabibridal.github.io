@@ -1,5 +1,6 @@
 import blogData from '@/data/blog-articles.json'
 import Link from 'next/link'
+import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Metadata } from 'next'
 
@@ -9,7 +10,6 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  // Safe access to the articles array
   const articles = (blogData as any).articles || [];
 
   return (
@@ -19,7 +19,7 @@ export default function BlogPage() {
         
         <header className="my-10">
           <h1 className="text-5xl font-black uppercase tracking-tighter">The Bridal Blog</h1>
-          {/* UPDATED: Changed bg-red-600 to bg-pink-600 for the decorative line */}
+          {/* Decorative Pink Line */}
           <div className="h-1.5 w-24 bg-pink-600 mt-4"></div>
         </header>
 
@@ -30,25 +30,37 @@ export default function BlogPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article: any) => {
-              // Safety: Ensure category exists before calling .replace()
               const categorySlug = article.mainCategorySlug?.replace(/\s+/g, '-').toLowerCase() || 'traditions';
               
               return (
                 <Link 
                   key={article.slug} 
                   href={`/blog/${article.slug}`}
-                  className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
+                  className="group flex flex-col border border-gray-100 p-0 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden"
                 >
-                  {/* UPDATED: Changed text-red-600 to text-pink-600 for the category slug */}
-                  <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
-                    {article.mainCategorySlug || 'Wedding Tradition'}
-                  </span>
-                  <h3 className="font-bold text-2xl mb-3 group-hover:text-pink-600 transition-colors">
-                    {article.pageTitle}
-                  </h3>
-                  <p className="text-gray-600 line-clamp-3">
-                    {article.description || "Read more about this traditional look..."}
-                  </p>
+                  {/* Image Container: Changed to object-contain to prevent cutting */}
+                  <div className="relative w-full h-64 bg-gray-50">
+                    <Image 
+                      src={article.featuredImageUrl} 
+                      alt={article.featuredImageAlt}
+                      fill
+                      className="object-contain p-2" 
+                      unoptimized
+                    />
+                  </div>
+
+                  <div className="p-6">
+                    <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
+                      {article.mainCategorySlug || 'Wedding Tradition'}
+                    </span>
+                    {/* Fixed Headers: Explicitly pink and styled */}
+                    <h3 className="text-2xl font-serif italic font-normal text-pink-600 mb-3 group-hover:text-pink-500 transition-colors">
+                      {article.pageTitle}
+                    </h3>
+                    <p className="text-gray-600 line-clamp-3">
+                      {article.description || "Read more about this traditional look..."}
+                    </p>
+                  </div>
                 </Link>
               );
             })}
