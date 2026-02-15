@@ -1,7 +1,7 @@
 {
   "mainCategories": [
     { "slug": "groom-style", "name": "Groom Style" },
-    { "slug": "bridal-traditions", "name": "Bridal Style" }
+    { "slug": "bridal-traditions", "name": "Bridal Style" },
     { "slug": "nikkah-guests", "name": "Nikkah and Guests" }
   ],
   "subCategories": [],
