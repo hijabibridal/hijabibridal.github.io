@@ -1,77 +1,49 @@
-// app/sitemap.xml/route.js
-export const dynamic = "force-static";
-export const revalidate = false;
-import blogData from '@/data/blog-articles.json';
-import productData from '@/data/bridal-products.json'; // Added product data
-import { promises as fs } from 'fs';
-import path from 'path';
-
-const BASE_URL = 'https://hijabibridal.github.io'; // Updated for your site
-
-async function getLastmod(filePath) {
-  try {
-    const stats = await fs.stat(path.join(process.cwd(), filePath));
-    return stats.mtime.toISOString().split('T')[0];
-  } catch {
-    return new Date().toISOString().split('T')[0];
-  }
-}
+import { NextResponse } from 'next/server';
+import productData from '@/data/bridal-products.json';
 
 export async function GET() {
-  try {
-    // 1. Static pages
-    const staticPages = [
-      { url: '/', lastmod: await getLastmod('app/page.tsx'), priority: 1.0, changefreq: 'daily' },
-      { url: '/blog', lastmod: await getLastmod('app/blog/page.tsx'), priority: 0.8, changefreq: 'daily' },
-      { url: '/shop', lastmod: new Date().toISOString().split('T')[0], priority: 0.9, changefreq: 'daily' },
-    ];
+  const baseUrl = 'https://hijabibridal.github.io';
 
-    // 2. Blog Articles
-    const articlePages = blogData.articles.map(article => ({
-      url: `/blog/${article.slug}`,
-      lastmod: article.dateModified || new Date().toISOString().split('T')[0],
-      priority: 0.7,
-      changefreq: 'weekly'
-    }));
+  // 1. Static Pages
+  const staticPages = ['', '/shop', '/blog'].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date().toISOString(),
+  }));
 
-    // 3. Shop Categories (From bridal-products.json)
-    const categoryPages = productData.mainCategories.map(cat => ({
-      url: `/shop/category/${cat.slug}`,
-      lastmod: new Date().toISOString().split('T')[0],
-      priority: 0.8,
-      changefreq: 'weekly'
-    }));
+  // 2. Product Pages
+  const productPages = productData.products.map((product) => ({
+    url: `${baseUrl}/shop/product/${product.slug}`,
+    lastModified: new Date().toISOString(),
+  }));
 
-    // 4. Individual Products (From bridal-products.json)
-    const productPages = productData.products.map(product => ({
-      url: `/shop/product/${product.slug}`,
-      lastmod: new Date().toISOString().split('T')[0],
-      priority: 0.6,
-      changefreq: 'monthly'
-    }));
+  // 3. Category Pages (Colors & Items)
+  const categoryPages = productData.mainCategories.map((category) => ({
+    url: `${baseUrl}/shop/category/${category.slug}`,
+    lastModified: new Date().toISOString(),
+  }));
 
-    const allPages = [...staticPages, ...articlePages, ...categoryPages, ...productPages];
+  const allPages = [...staticPages, ...productPages, ...categoryPages];
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        ${allPages.map(page => `
-          <url>
-            <loc>${BASE_URL}${page.url}</loc>
-            <lastmod>${page.lastmod}</lastmod>
-            <changefreq>${page.changefreq}</changefreq>
-            <priority>${page.priority}</priority>
-          </url>
-        `).join('')}
-      </urlset>
-    `;
+  // The XML must be formatted exactly like this with no extra spaces at the top
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${allPages
+        .map((page) => {
+          return `
+            <url>
+              <loc>${page.url}</loc>
+              <lastmod>${page.lastModified}</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>${page.url.endsWith('/shop') ? '0.8' : '0.6'}</priority>
+            </url>
+          `;
+        })
+        .join('')}
+    </urlset>`;
 
-    return new Response(sitemap, {
-      headers: {
-        'Content-Type': 'text/xml',
-        'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate'
-      },
-    });
-  } catch (error) {
-    return new Response(`Error generating sitemap: ${error.message}`, { status: 500 });
-  }
+  return new NextResponse(sitemap, {
+    headers: {
+      'Content-Type': 'application/xml',
+    },
+  });
 }
