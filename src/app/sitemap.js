@@ -1,13 +1,13 @@
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
-module.exports = function sitemap() {
+export default function sitemap() {
   const baseUrl = 'https://hijabibridal.github.io';
   
-  // We define the data path starting from the ROOT of your project
-  const dataPath = path.resolve(process.cwd(), 'src/data/bridal-products.json');
-
   try {
+    // Uses process.cwd() to find the root of your project
+    const dataPath = path.resolve(process.cwd(), 'src/data/bridal-products.json');
+
     if (!fs.existsSync(dataPath)) {
       console.error("DATA FILE MISSING AT:", dataPath);
       return [];
@@ -42,4 +42,4 @@ module.exports = function sitemap() {
     console.error("Sitemap Error:", e);
     return [];
   }
-};
+}
