@@ -1,9 +1,9 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 
-// We are moving UP two folders from src/app/ to reach src/components/
-import Navbar from '../components/layout/header' 
-import Footer from '../components/layout/footer'
+// Updated to match your "Layout" (capital L) folder structure
+import Navbar from '../components/Layout/Header' 
+import Footer from '../components/Layout/Footer'
 
 const poppins = Poppins({
   subsets: ['latin'],
