@@ -29,7 +29,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
       
       <header className="my-10">
-        <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-gray-900">
+        <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black">
           {article.pageTitle}
         </h1>
         {/* Pink branding bar */}
@@ -48,11 +48,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
-      {/* Force h2 and h3 to Pink, Normal weight, and Not Italic */}
+      {/* Aggressive Override: 
+          1. Targets all header levels (h2-h6) inside the article.
+          2. Uses ! (important) to override any external orange theme settings.
+          3. Sets color to pink-600, removes bolding, and removes italics.
+      */}
       <article 
         className="prose prose-pink max-w-none text-lg leading-relaxed
                    [&_h2]:!text-pink-600 [&_h2]:!font-normal [&_h2]:!not-italic [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4
-                   [&_h3]:!text-pink-500 [&_h3]:!font-normal [&_h3]:!not-italic [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3"
+                   [&_h3]:!text-pink-500 [&_h3]:!font-normal [&_h3]:!not-italic [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3
+                   [&_h4]:!text-pink-500 [&_h4]:!font-normal [&_h4]:!not-italic
+                   [&_h5]:!text-pink-500 [&_h5]:!font-normal [&_h5]:!not-italic
+                   [&_h6]:!text-pink-500 [&_h6]:!font-normal [&_h6]:!not-italic"
         dangerouslySetInnerHTML={{ __html: article.htmlBody }} 
       />
     </div>

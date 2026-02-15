@@ -1,70 +1,56 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import blogData from "@/data/blog-articles.json";
-import { Metadata } from "next";
+import blogData from '@/data/blog-articles.json'
+import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import { Metadata } from 'next'
 
-// Define the Data Structure based on your uploaded file
-interface BlogData {
-  mainCategories: any[];
-  subCategories: any[];
-  articles: any[];
+export const metadata: Metadata = {
+  title: 'Hijabi Bridal Blog | Islamic Wedding Traditions',
+  description: 'Insights on Muslim groom outfits, bridal lehengas, and the significance of red for new beginnings.',
 }
 
-type PageProps = { params: Promise<{ category: string }> };
-
-// CRITICAL: Tells GitHub Pages which categories to build
-export async function generateStaticParams() {
-  const data = blogData as BlogData;
-  if (!data.mainCategories) return []; // Safety check to prevent .map error
-  
-  return data.mainCategories.map((category) => ({
-    category: category.slug,
-  }));
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { category } = await params;
-  const data = blogData as BlogData;
-  const mainCategory = data.mainCategories?.find(cat => cat.slug === category);
-
-  if (!mainCategory) return { title: 'Category' };
-
-  return {
-    title: `${mainCategory.name} | Hijabi Bridal`,
-    description: mainCategory.metaDescription,
-  };
-}
-
-export default async function CategoryPage({ params }: PageProps) {
-  const { category } = await params;
-  const data = blogData as BlogData;
-  const mainCategory = data.mainCategories?.find(cat => cat.slug === category);
-
-  if (!mainCategory) notFound();
+export default function BlogPage() {
+  const articles = (blogData as any).articles || [];
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <Breadcrumbs
-        links={[{ href: '/', text: 'Home' }, { href: '/blog', text: 'Blog' }]}
-        currentPage={mainCategory.name}
-      />
-
-      <main className="flex flex-col items-center justify-center min-h-[50vh] text-center mt-10">
-        <h1 className="text-4xl font-black uppercase tracking-tighter mb-4">
-          {mainCategory.name}
-        </h1>
-        {/* Branding: Red for happiness and new beginnings */}
-        <div className="h-1 w-24 bg-red-600 mx-auto mb-8"></div>
+    <main className="min-h-screen bg-white pb-20">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <Breadcrumbs links={[{ href: '/', text: 'Home' }]} currentPage="Blog" />
         
-        <div className="bg-gray-50 p-10 rounded-3xl border border-dashed border-gray-300 max-w-2xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Coming Soon</h2>
-          <p className="text-gray-600 leading-relaxed">
-            We are currently curating the finest content regarding {mainCategory.name.toLowerCase()} 
-            for the American Muslim community.
-          </p>
-        </div>
-      </main>
-    </div>
+        <header className="my-10">
+          <h1 className="text-5xl font-black uppercase tracking-tighter text-black">The Bridal Blog</h1>
+          <div className="h-1.5 w-24 bg-pink-600 mt-4"></div>
+        </header>
+
+        {articles.length === 0 ? (
+          <div className="text-center py-20 bg-gray-50 rounded-3xl border border-dashed">
+            <p className="text-xl text-gray-500 italic">Our bridal collections and traditions are arriving soon.</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {articles.map((article: any) => {
+              return (
+                <Link 
+                  key={article.slug} 
+                  href={`/blog/${article.slug}`}
+                  className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
+                >
+                  {/* Category slug name is pink */}
+                  <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
+                    {article.mainCategorySlug || 'Wedding Tradition'}
+                  </span>
+                  {/* Article title remains black, changes to pink only on hover */}
+                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
+                    {article.pageTitle}
+                  </h3>
+                  <p className="text-gray-600 line-clamp-3">
+                    {article.description || "Read more about this traditional look..."}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </main>
   );
 }
