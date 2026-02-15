@@ -19,8 +19,8 @@ export default function BlogPage() {
         
         <header className="my-10">
           <h1 className="text-5xl font-black uppercase tracking-tighter">The Bridal Blog</h1>
-          {/* Red symbolizes new beginnings and happiness in Islam */}
-          <div className="h-1.5 w-24 bg-red-600 mt-4"></div>
+          {/* UPDATED: Changed bg-red-600 to bg-pink-600 for the decorative line */}
+          <div className="h-1.5 w-24 bg-pink-600 mt-4"></div>
         </header>
 
         {articles.length === 0 ? (
@@ -39,7 +39,8 @@ export default function BlogPage() {
                   href={`/blog/${article.slug}`}
                   className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
                 >
-                  <span className="text-xs font-bold uppercase tracking-widest text-red-600 mb-2 block">
+                  {/* UPDATED: Changed text-red-600 to text-pink-600 for the category slug */}
+                  <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
                     {article.mainCategorySlug || 'Wedding Tradition'}
                   </span>
                   <h3 className="font-bold text-2xl mb-3 group-hover:text-pink-600 transition-colors">

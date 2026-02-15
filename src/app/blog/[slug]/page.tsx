@@ -32,8 +32,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-gray-900">
           {article.pageTitle}
         </h1>
-        {/* Branding: Red for happiness and new beginnings */}
-        <div className="h-1.5 w-24 bg-red-600 mt-4"></div>
+        {/* Fixed: Line under title changed from bg-red-600 to bg-pink-500 */}
+        <div className="h-1.5 w-24 bg-pink-500 mt-4"></div>
       </header>
 
       {article.featuredImageUrl && (
@@ -49,11 +49,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       )}
 
       <article 
-  className="prose prose-pink max-w-none text-lg leading-relaxed
-             [&_h2]:text-2xl [&_h2]:font-black [&_h2]:text-pink-600 [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:uppercase [&_h2]:tracking-tighter
-             [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-pink-500 [&_h3]:mt-8 [&_h3]:mb-3"
-  dangerouslySetInnerHTML={{ __html: article.htmlBody }} 
-/>
+        className="prose prose-pink max-w-none text-lg leading-relaxed
+                   [&_h2]:text-3xl [&_h2]:font-normal [&_h2]:text-pink-500 [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:italic font-serif
+                   [&_h3]:text-2xl [&_h3]:font-normal [&_h3]:text-pink-400 [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:italic font-serif"
+        dangerouslySetInnerHTML={{ __html: article.htmlBody }} 
+      />
     </div>
   );
 }
