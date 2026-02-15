@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { NextResponse } from 'next/server';
 import productData from '@/data/bridal-products.json';
 
@@ -5,7 +7,7 @@ export async function GET() {
   const baseUrl = 'https://hijabibridal.github.io';
 
   // 1. Static Pages
-  const staticPages = ['', '/shop', '/blog'].map((route) => ({
+  const staticPages = ['', '/shop', '/blog', '/about'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
   }));
@@ -24,22 +26,21 @@ export async function GET() {
 
   const allPages = [...staticPages, ...productPages, ...categoryPages];
 
-  // The XML must be formatted exactly like this with no extra spaces at the top
+  // The XML generation
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${allPages
-        .map((page) => {
-          return `
-            <url>
-              <loc>${page.url}</loc>
-              <lastmod>${page.lastModified}</lastmod>
-              <changefreq>weekly</changefreq>
-              <priority>${page.url.endsWith('/shop') ? '0.8' : '0.6'}</priority>
-            </url>
-          `;
-        })
-        .join('')}
-    </urlset>`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${allPages
+    .map((page) => {
+      return `
+    <url>
+      <loc>${page.url}</loc>
+      <lastmod>${page.lastModified}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>${page.url.endsWith('/shop') ? '0.8' : '0.6'}</priority>
+    </url>`;
+    })
+    .join('')}
+</urlset>`;
 
   return new NextResponse(sitemap, {
     headers: {
