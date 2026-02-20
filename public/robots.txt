@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update this to your actual GitHub Pages URL
 Sitemap: https://hijabibridal.github.io/sitemap_index.xml
-
-# Block search results from being indexed (standard practice)
-Disallow: /search
