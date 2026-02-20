@@ -1,6 +1,7 @@
 import fs from 'fs';
-import productData from '../src/data/bridal-products.json' assert { type: 'json' };
-import blogData from '../src/data/blog-articles.json' assert { type: 'json' };
+// Change 'assert' to 'with' here:
+import productData from '../src/data/bridal-products.json' with { type: 'json' };
+import blogData from '../src/data/blog-articles.json' with { type: 'json' };
 
 const BASE_URL = 'https://hijabibridal.github.io';
 
@@ -14,6 +15,5 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   ${blogData.articles.map(a => `  <url><loc>${BASE_URL}/blog/${a.slug}</loc></url>`).join('\n')}
 </urlset>`;
 
-// Force it into the PUBLIC folder so it's always at the root of the site
 fs.writeFileSync('./public/sitemap.xml', sitemap);
 console.log('✅ Sitemap updated in /public');
