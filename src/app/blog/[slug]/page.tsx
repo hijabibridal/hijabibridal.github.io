@@ -3,6 +3,7 @@ import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import blogData from "@/data/blog-articles.json";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 const typedBlogData = blogData as any;
 
@@ -21,8 +22,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
+  // Prepare the FAQ Schema object
+  const faqSchema = article.FAQ_schema ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": JSON.parse(article.FAQ_schema)
+  } : null;
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-3xl">
+      {faqSchema && (
+        <Script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       <Breadcrumbs 
         links={[{ href: '/', text: 'Home' }, { href: '/blog', text: 'Blog' }]} 
         currentPage={article.pageTitle} 
@@ -47,11 +63,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
-      {/* FINAL OVERRIDE: 
-          1. h2: Specific pink-600 with !important.
-          2. a: Specific pink-600 with !important to fix orange links.
-          3. prose-a:no-underline: Removes default link lines if desired.
-      */}
       <article 
         className="prose prose-pink max-w-none text-lg leading-relaxed
                    [&_h2]:!text-pink-600 [&_h2]:!font-normal [&_h2]:!not-italic [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4
