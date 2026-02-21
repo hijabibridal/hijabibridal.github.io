@@ -12,6 +12,12 @@ export default function BlogPage() {
   // Safe access to the articles array from your JSON
   const articles = (blogData as any).articles || [];
 
+  const categories = [
+    { "slug": "groom-style", "name": "Groom Style" },
+    { "slug": "bridal-traditions", "name": "Bridal Style" },
+    { "slug": "nikkah-guests", "name": "Nikkah and Guests" }
+  ];
+
   return (
     <main className="min-h-screen bg-white pb-20">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -21,6 +27,19 @@ export default function BlogPage() {
           <h1 className="text-5xl font-black uppercase tracking-tighter text-black">The Bridal Blog</h1>
           {/* Branding: Pink decorative line for the USA market */}
           <div className="h-1.5 w-24 bg-pink-600 mt-4"></div>
+
+          {/* New Category Navigation Links */}
+          <div className="flex flex-wrap gap-6 mt-8">
+            {categories.map((cat) => (
+              <Link 
+                key={cat.slug} 
+                href={`/blog/category/${cat.slug}`}
+                className="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-pink-600 transition-colors"
+              >
+                {cat.name}
+              </Link>
+            ))}
+          </div>
         </header>
 
         {articles.length === 0 ? (
