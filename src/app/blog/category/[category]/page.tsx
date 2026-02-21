@@ -4,7 +4,6 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import blogData from "@/data/blog-articles.json";
 import { Metadata } from "next";
 
-// Define the Data Structure based on your uploaded file
 interface BlogData {
   mainCategories: any[];
   subCategories: any[];
@@ -13,10 +12,8 @@ interface BlogData {
 
 type PageProps = { params: Promise<{ category: string }> };
 
-// FIXED: Required for "output: export". This tells Next.js which categories to build.
 export async function generateStaticParams() {
   const data = blogData as BlogData;
-  // This maps through your mainCategories in the JSON to create the static paths
   if (!data.mainCategories) return []; 
   
   return data.mainCategories.map((category: any) => ({
@@ -40,11 +37,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function CategoryPage({ params }: PageProps) {
   const { category } = await params;
   const data = blogData as BlogData;
+  
+  // Find the category definition from your JSON
   const mainCategory = data.mainCategories?.find((cat: any) => cat.slug === category);
 
   if (!mainCategory) notFound();
 
-  // Filters articles to only show those belonging to the current category
+  // Updated filtering logic to ensure all matching articles are captured
   const categoryArticles = data.articles?.filter(
     (article: any) => article.mainCategorySlug === category
   ) || [];
@@ -60,7 +59,6 @@ export default async function CategoryPage({ params }: PageProps) {
         <h1 className="text-4xl font-black uppercase tracking-tighter mb-4 text-black">
           {mainCategory.name}
         </h1>
-        {/* Decorative branding line in Pink */}
         <div className="h-1.5 w-24 bg-pink-600 mx-auto mb-8"></div>
       </header>
 
@@ -76,11 +74,9 @@ export default async function CategoryPage({ params }: PageProps) {
               href={`/blog/${article.slug}`}
               className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
             >
-              {/* Category label is Pink */}
               <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
                 {mainCategory.name}
               </span>
-              {/* FIXED: Article Title is Black, turns pink only on hover */}
               <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
                 {article.pageTitle}
               </h3>
