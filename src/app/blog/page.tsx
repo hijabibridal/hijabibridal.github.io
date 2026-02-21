@@ -14,7 +14,7 @@ export default function BlogPage() {
 
   const categories = [
     { "slug": "groom-style", "name": "Groom Style" },
-    { "slug": "bridal-traditions", "name": "Bridal Style" },
+    { "slug": "bridal-style", "name": "Bridal Style" },
     { "slug": "nikkah-guests", "name": "Nikkah and Guests" }
   ];
 
