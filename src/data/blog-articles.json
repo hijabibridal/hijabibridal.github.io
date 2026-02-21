@@ -1,7 +1,7 @@
 {
   "mainCategories": [
     { "slug": "groom-style", "name": "Groom Style" },
-    { "slug": "bridal-traditions", "name": "Bridal Style" },
+    { "slug": "bridal-style", "name": "Bridal Style" },
     { "slug": "nikkah-guests", "name": "Nikkah and Guests" }
   ],
   "subCategories": [],
@@ -59,7 +59,7 @@
     "url": "https://hijabibridal.github.io/about"
   },
   "pageTitle": "Regal Looks: 4 Ways to Double Wrap a Bridal Dupatta as a Hijabi",
-  "mainCategorySlug": "bridal-traditions",
+  "mainCategorySlug": "bridal-style",
   "description": "One of the best ways to look absolutely regal on your wedding day is to use a second bridal dupatta. Discover four easy draping styles for the hijabi bride.",
   "featuredImageUrl": "/images/blogdupatta3.webp",
   "featuredImageAlt": "Muslim bride with double dupattas in fuschia and pink",
