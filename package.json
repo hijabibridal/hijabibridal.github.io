@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node --max-old-space-size=4096 ./node_modules/next/dist/bin/next dev",
     "lint": "eslint . --ext .ts,.tsx",
-    "build": "node scripts/sitemap-gen.mjs && node --max-old-space-size=4096 ./node_modules/next/dist/bin/next build",
+    "sitemap": "node scripts/sitemap-gen.mjs",
+    "prebuild": "npm run sitemap",
+    "build": "node --max-old-space-size=4096 ./node_modules/next/dist/bin/next build",
     "start": "node ./node_modules/next/dist/bin/next start",
     "postinstall": "npm run build"
   },
