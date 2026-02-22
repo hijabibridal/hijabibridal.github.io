@@ -83,9 +83,6 @@
   "author_schema": "{\"@type\": \"Organization\", \"name\": \"Hijabi Bridal\", \"url\": \"https://hijabibridal.github.io/about\", \"description\": \"Expert guidance for the modern Muslim bride and groom, specializing in modest Islamic wedding attire and cultural styling.\"}"
     },
     {
-{
-  "articles": [
-    {
       "slug": "bridal-hijab-vs-veil-guide",
       "author": {
         "@type": "Organization",
