@@ -15,6 +15,13 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Hijabi Bridal',
   description: 'Modest Wedding Inspiration & Shop',
+  // STEP 1: Fix the Site Name for Google Search Results
+  openGraph: {
+    siteName: 'Hijabi Bridal',
+    title: 'Hijabi Bridal',
+    description: 'Modest Wedding Inspiration & Shop',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
@@ -25,6 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <head>
+        {/* STEP 2: Force Google to see the new favicon and override old cache */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
