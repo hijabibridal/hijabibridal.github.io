@@ -11,18 +11,14 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>${BASE_URL}/shop</loc><lastmod>${today}</lastmod></url>
   <url><loc>${BASE_URL}/blog</loc><lastmod>${today}</lastmod></url>
   
-  {/* 1. Shop Products */}
   ${productData.products.map(p => `  <url><loc>${BASE_URL}/shop/product/${p.slug}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
   
-  {/* 2. Shop Categories */}
   ${productData.mainCategories.map(c => `  <url><loc>${BASE_URL}/shop/category/${c.slug}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
   
-  {/* 3. Blog Categories */}
   ${blogData.mainCategories.map(bc => `  <url><loc>${BASE_URL}/blog/category/${bc.slug}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
   
-  {/* 4. Blog Articles */}
   ${blogData.articles.map(a => `  <url><loc>${BASE_URL}/blog/${a.slug}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
 </urlset>`;
 
 fs.writeFileSync('./public/sitemap_index.xml', sitemap);
-console.log('✅ Sitemap fully synchronized with Categories and Articles.');
+console.log('✅ Sitemap fully synchronized and XML-compliant.');
