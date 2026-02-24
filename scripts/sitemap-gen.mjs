@@ -20,5 +20,6 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   ${blogData.articles.map(a => `  <url><loc>${BASE_URL}/blog/${a.slug}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
 </urlset>`;
 
-fs.writeFileSync('./public/sitemap_index.xml', sitemap);
-console.log('✅ Sitemap fully synchronized and XML-compliant.');
+// Changed filename to sitemap.xml to match standard expectations
+fs.writeFileSync('./public/sitemap.xml', sitemap);
+console.log('✅ Sitemap generated as sitemap.xml');
