@@ -10,9 +10,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
 # --- CONFIGURATION ---
-INPUT_FILE = 'catalog_products.csv'
+INPUT_FILE = 'add to this - tweak.csv'
 OUTPUT_FILE = 'catalog_products_verified.csv'
-COLUMN_INDEX = 20  # Double check this with find_index.py!
+COLUMN_INDEX = 13  # Double check this with find_index.py!
 
 def extract_url(html_content):
     if pd.isna(html_content) or "<a" not in str(html_content):
