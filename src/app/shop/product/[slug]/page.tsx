@@ -55,19 +55,13 @@ export default async function ProductPage({ params }: PageProps) {
     }
   }
 
-  // Logic to split the figcaption for the "See More" effect
-  const fullCaption = product.images[0]?.figcaption || "";
-  const firstPeriodIndex = fullCaption.indexOf('.');
-  const firstSentence = firstPeriodIndex !== -1 ? fullCaption.substring(0, firstPeriodIndex + 1) : fullCaption;
-  const remainingText = firstPeriodIndex !== -1 ? fullCaption.substring(firstPeriodIndex + 1).trim() : "";
-
   const imageSchema = {
     "@context": "https://schema.org/",
     "@type": "ImageObject",
     "contentUrl": `${siteUrl}/images/${product.images[0]?.url}`,
     "creator": { "@type": "Organization", "name": "Hijabi Bridal" },
     "iptcDigitalSourceType": product.images[0]?.iptc_type || "http://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia",
-    "caption": fullCaption || product.meta_description
+    "caption": product.images[0]?.figcaption || product.meta_description
   };
 
   const faqSchema = {
@@ -100,24 +94,36 @@ export default async function ProductPage({ params }: PageProps) {
             <div>
               <ProductGallery images={product.images} />
               
-              {/* --- DYNAMIC COLLAPSIBLE FIGCAPTION --- */}
-              {fullCaption && (
-                <figure className="mt-6 border-t border-pink-100 pt-4">
-                  <details className="cursor-pointer group">
-                    <summary className="list-none text-[13px] text-gray-600 leading-relaxed italic border-l-2 border-pink-200 pl-4">
-                      {firstSentence} 
-                      <span className="inline-block ml-2 text-xs font-bold text-[#db2777] uppercase tracking-widest group-open:hidden">
-                        ... See More
-                      </span>
-                    </summary>
-                    {remainingText && (
-                      <figcaption className="mt-2 text-[13px] text-gray-600 leading-relaxed italic border-l-2 border-pink-200 pl-4">
-                        {remainingText}
-                      </figcaption>
-                    )}
-                  </details>
-                </figure>
-              )}
+              {/* --- MAPPED FIGCAPTIONS WITHOUT EXTRA SPACING --- */}
+              {product.images.map((img, index) => {
+                if (!img.figcaption) return null;
+
+                const firstPeriodIndex = img.figcaption.indexOf('.');
+                const firstSentence = firstPeriodIndex !== -1 
+                  ? img.figcaption.substring(0, firstPeriodIndex + 1) 
+                  : img.figcaption;
+                const remainingText = firstPeriodIndex !== -1 
+                  ? img.figcaption.substring(firstPeriodIndex + 1).trim() 
+                  : "";
+
+                return (
+                  <figure key={index} className="mt-4 border-t border-pink-100 pt-4">
+                    <details className="cursor-pointer group">
+                      <summary className="list-none text-[13px] text-gray-600 leading-relaxed italic border-l-2 border-pink-200 pl-4">
+                        {firstSentence} 
+                        <span className="inline-block ml-2 text-xs font-bold text-[#db2777] uppercase tracking-widest group-open:hidden">
+                          ... See More
+                        </span>
+                      </summary>
+                      {remainingText && (
+                        <figcaption className="mt-2 text-[13px] text-gray-600 leading-relaxed italic border-l-2 border-pink-200 pl-4">
+                          {remainingText}
+                        </figcaption>
+                      )}
+                    </details>
+                  </figure>
+                );
+              })}
             </div>
 
             <div className="flex flex-col">
