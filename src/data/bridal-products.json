@@ -368,33 +368,36 @@
       ],
       "images": [
         {
-          "url": "/bridal-belt/gold rhinestone bridal belt.webp",
+          "url": "/bridal-belt/gold-rhinestone-bridal-belt.webp",
           "alt": "Rhinestone Bridal Belt featuring shimmering rhinestones on a luxurious ribbon, available in multiple colors, ideal for enhancing your Muslim wedding dress with elegant style.",
           "amazonLink": "https://amzn.to/3VFHPSN",
           "figcaption": "This exquisite Gold Rhinestone Bridal Belt features shimmering crystals on a premium ribbon. It is designed to add a touch of luxury to your bridal abaya, ensuring a regal look for your Nikkah ceremony or wedding reception in 2026. This adjustable accessory brings shimmering elegance to Muslim festive celebrations."
         },
         {
-          "url": "red rhinestone bridal belt.webp",
+          "url": "/bridal-belt/red-rhinestone-bridal-belt.webp",
           "alt": "Rhinestone Bridal Belt featuring shimmering rhinestones on a luxurious ribbon, available in red, ideal for enhancing your Muslim wedding dress",
-          "amazonLink": "https://amzn.to/3VFHPSN"
+          "amazonLink": "https://amzn.to/3VFHPSN",
+	  "figcaption": "A bold Ruby Red Rhinestone Bridal Belt is the perfect statement piece for traditional Nikkah ceremonies. The deep crimson ribbon and sparkling crystals create a majestic look that pairs beautifully with gold-embroidered lehengas or abayas. Elevate your bridal styling with this luxurious accessory designed for a timeless South Asian wedding."
         },
         {
-          "url": "pink rhinestone bridal belt.webp",
+          "url": "/bridal-belt/pink-rhinestone-bridal-belt.webp",
           "alt": "Rhinestone Bridal Belt featuring shimmering rhinestones on a luxurious ribbon, available in pink, ideal for enhancing your Muslim wedding dress with elegant style",
-          "amazonLink": "https://amzn.to/3VFHPSN"
+          "amazonLink": "https://amzn.to/3VFHPSN",
+ 	  "figcaption": "This delicate Rose Pink Bridal Belt is adorned with high-quality rhinestones for a soft, romantic glow. Perfect for a walimah or engagement party, the shimmering crystals are mounted on a luxurious satin ribbon that complements pastel-toned bridal dresses. It provides an elegant, feminine finish to any modern modest wedding outfit."
         },
         {
-          "url": "green rhinestone bridal belt.webp",
+          "url": "/bridal-belt/green-rhinestone-bridal-belt.webp",
           "alt": "Rhinestone Bridal Belt featuring shimmering rhinestones on a luxurious ribbon, available in green, ideal for enhancing your Muslim wedding dress with elegant style",
-          "amazonLink": "https://amzn.to/3VFHPSN"
+          "amazonLink": "https://amzn.to/3VFHPSN",
+	  "figcaption": "Our Emerald Green Rhinestone Bridal Belt offers a stunning contrast for green or gold wedding ensembles. Hand-set crystals capture the light beautifully, making it an ideal accessory for Muslim brides seeking a sophisticated Mughal-inspired aesthetic. This vibrant piece defines your silhouette while adding a traditional pop of royal color."
         }
       ],
-      "og_image": "gold rhinestone bridal belt.webp",
-      "title_tag": "Best Rhinestone Bridal Belt for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Rhinestone Bridal Belt for 2026 Brides | Amazon Product Styling",
+      "og_image": "/bridal-belt/gold-rhinestone-bridal-belt.webp",
+      "title_tag": "Gold, Red & Emerald Bridal Belts for Muslim Brides | Amazon",
+      "og_title": "Gold, Red & Emerald Bridal Belts for Muslim Brides | Amazon",
       "og_type": "website",
       "FAQ_schema": "",
-      "meta_description": "Elevate your bridal look with our stunning Rhinestone Bridal Belt. Available in various colors, it's perfect for a chic, personalized touch on your special day."
+      "meta_description": "Elevate your layered Muslim bridal look with our stunning Rhinestone Bridal Belt. Available in red, gold, green and pink, it's perfect for a chic, personalized touch on your special day."
     },
     {
       "name": "Fuschia Dupatta",
