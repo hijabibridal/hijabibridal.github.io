@@ -361,7 +361,7 @@
     {
       "name": "Rhinestone Bridal Belt",
       "slug": "bridal-belt",
-      "description": "Distinguish yourself as the blushing bride with a little extra. This rhinestone bridal belt comes in different colors and background ribbons. The ribbon is three yards long, so don't worry, it will fit. Add a touch of sparkle to your big day with our Rhinestone Bridal Belt, perfect for bridal hijabi lehengas, Muslim wedding dresses and Moroccan caftans.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-belt\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Belts</a>",
+      "description": "This rhinestone bridal belt comes in pink, green, red and gold. The ribbon is three yards long, so don't worry, it will fit. Add a touch of sparkle to your big day with our Rhinestone Bridal Belt, perfect for bridal hijabi lehengas, Muslim wedding dresses and Moroccan caftans. Distinguish yourself as the blushing bride with a little extra. <br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-belt\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Belts</a>",
       "mainCategorySlugs": [
         "bridal-belt",
         "red"
@@ -400,26 +400,27 @@
       "meta_description": "Elevate your layered Muslim bridal look with our stunning Rhinestone Bridal Belt. Available in red, gold, green and pink, it's perfect for a chic, personalized touch on your special day."
     },
     {
-      "name": "Fuschia Dupatta",
-      "slug": "fuschia-dupatta",
-      "description": "This dupatta features a stunning fuschia color that is perfect for draping over a fancy sheer dupatta. This wedding dupatta is designed to elegantly cover your makeup without smudging, thanks to its beautiful lace ruffles. Use it as one of your double dupattas for a hijabi lehenga or Muslim wedding dress, ensuring a sophisticated and stylish look on your special day. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Fuschia Dupatta  </h2>This dupatta coordinates with styling for bridal looks. It can be draped over the shoulders or worn to the back, adding a touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with another dupatta to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupatta</a>",
-      "mainCategorySlugs": [
-        "bridal-dupatta",
-        "fuschia"
-      ],
-      "images": [
-        {
-          "url": "fuschia bridal dupatta.webp",
-          "alt": "Fuschia Dupatta featuring elegant lace ruffles, ideal for bridal style inspiration and layering with a hijabi lehenga.",
-          "amazonLink": "https://amzn.to/4fEajnd"
-        }
-      ],
-      "og_image": "fuschia bridal dupatta.webp",
-      "title_tag": "Best Fuschia Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Fuschia Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our Fuschia Dupatta, perfect for occasions and designed with exquisite fabrics. Discover elegance in every drape."
-    },
+  "name": "Fuschia Ruffled Lace Dupatta for Double Dupatta Styling",
+  "slug": "fuschia-ruffled-bridal-dupatta",
+  "description": "Elevate your Nikah or Walima ensemble with this vibrant fuschia dupatta, specifically designed for modern modest bridal styling. As a opaque dupatta, this dupatta can easily replace your hijab, and because of the ruffles, it can be used to hide your bridal makeup. The lightweight fabric ensures a graceful drape that elegantly covers the head and shoulders. Whether paired with a matching fuschia gown or used as a bold contrast to silver embroidery, this ruffled dupatta brings a beautiful aesthetic to 2026 Muslim wedding dresses.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Style a Double Dupatta Look</h2>For a sophisticated bridal silhouette, use this ruffled piece as your head-covering dupatta while a sheer dupatta is draped across the shoulder. This coordination adds a regal look to your ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+  "mainCategorySlugs": [
+    "bridal-dupatta",
+    "fuschia"
+  ],
+  "images": [
+    {
+      "url": "/bridal-dupatta/fuschia-bridal-dupatta.webp",
+      "alt": "Fuschia Bridal Dupatta with ruffles for Muslim lehenga styling.",
+      "amazonLink": "https://amzn.to/4fEajnd",
+      "figcaption": "This vibrant Fuschia Ruffled Dupatta is a must-have for 2026 brides looking to achieve the perfect opaque look. When worn as a loose hijab, this dupatta provides a soft, romantic frame for the face, making it ideal for Nikah ceremonies and festive Muslim wedding celebrations. Its lightweight texture gives a windswept effect."
+    }
+  ],
+  "og_image": "fuschia-bridal-dupatta.webp",
+  "title_tag": "Fuschia Ruffled Bridal Dupatta | Amazon Styling 2026",
+  "og_title": "Vibrant Fuschia Ruffled Dupatta for Hijab Styling",
+  "og_type": "website",
+  "meta_description": "Shop our Fuschia Ruffled Bridal Dupatta. The perfect opaque head covering, suitable bridal lehengas and modest 2026 Muslim wedding dresses."
+}
     {
       "name": "Gold Dupatta",
       "slug": "gold-dupatta",
