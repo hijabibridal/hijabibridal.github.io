@@ -42,6 +42,8 @@ export default async function ProductPage({ params }: PageProps) {
     notFound();
   }
 
+  const siteUrl = "https://hijabibridal.github.io";
+
   let faqs = [];
   if (product.FAQ_schema) {
     try {
@@ -53,7 +55,21 @@ export default async function ProductPage({ params }: PageProps) {
     }
   }
 
-  // Define the structured data object for Google
+  // Logic to split the figcaption for the "See More" effect
+  const fullCaption = product.images[0]?.figcaption || "";
+  const firstPeriodIndex = fullCaption.indexOf('.');
+  const firstSentence = firstPeriodIndex !== -1 ? fullCaption.substring(0, firstPeriodIndex + 1) : fullCaption;
+  const remainingText = firstPeriodIndex !== -1 ? fullCaption.substring(firstPeriodIndex + 1).trim() : "";
+
+  const imageSchema = {
+    "@context": "https://schema.org/",
+    "@type": "ImageObject",
+    "contentUrl": `${siteUrl}/images/${product.images[0]?.url}`,
+    "creator": { "@type": "Organization", "name": "Hijabi Bridal" },
+    "iptcDigitalSourceType": product.images[0]?.iptc_type || "http://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia",
+    "caption": fullCaption || product.meta_description
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -62,10 +78,13 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* This script tag makes the FAQs visible to Google Search Console */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
 
       <div className="bg-white min-h-screen">
@@ -80,6 +99,25 @@ export default async function ProductPage({ params }: PageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
             <div>
               <ProductGallery images={product.images} />
+              
+              {/* --- DYNAMIC COLLAPSIBLE FIGCAPTION --- */}
+              {fullCaption && (
+                <figure className="mt-6 border-t border-pink-100 pt-4">
+                  <details className="cursor-pointer group">
+                    <summary className="list-none text-[13px] text-gray-600 leading-relaxed italic border-l-2 border-pink-200 pl-4">
+                      {firstSentence} 
+                      <span className="inline-block ml-2 text-xs font-bold text-[#db2777] uppercase tracking-widest group-open:hidden">
+                        ... See More
+                      </span>
+                    </summary>
+                    {remainingText && (
+                      <figcaption className="mt-2 text-[13px] text-gray-600 leading-relaxed italic border-l-2 border-pink-200 pl-4">
+                        {remainingText}
+                      </figcaption>
+                    )}
+                  </details>
+                </figure>
+              )}
             </div>
 
             <div className="flex flex-col">
