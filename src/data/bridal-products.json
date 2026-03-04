@@ -879,72 +879,165 @@
     "meta_description": "Shop our Red Velvet Dupatta on Amazon. Features rich velvet fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026."
     },
     {
-      "name": "Navy Blue Hijab",
-      "slug": "navy-blue-hijab",
-      "description": "Amazon Color: NAVY BLUE\nThis Hijab features a stunning navy blue color that perfectly complements your Muslim wedding dress. Designed for Muslim women who appreciate modest fashion, this hijab is an essential accessory for your special day. With its elegant style, it enhances the overall bridal look, making it a memorable choice for formal events.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Navy Blue Hijab  </h2>This Hijab coordinates with styling for bridal looks. You can elegantly drape nikkah jewelry on it, adding a unique touch to your ensemble. Whether you choose to wear it in a classic style or opt for a more modern approach, this hijab will elevate your bridal attire and make you feel truly special.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "blue"
-      ],
-      "images": [
-        {
-          "url": "51H2wJny2UL._AC_SX679_.webp",
-          "alt": "Navy Blue Hijab featuring a luxurious silk texture, perfect for Muslim women. An elegant accessory for bridal style inspiration, complementing any wedding dress.",
-          "amazonLink": "https://amzn.to/4k2xRVj"
-        }
-      ],
-      "og_image": "51H2wJny2UL._AC_SX679_.webp",
-      "title_tag": "Best Navy Blue Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Navy Blue Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our Navy Blue Hijab, perfect for Muslim women seeking elegant modest fashion for their special day. Ideal for formal events."
+  "name": "Navy Blue Hijab",
+  "slug": "navy-blue-crepe-bridal-hijab",
+  "description": "Amazon Color: NAVY BLUE\nThis Navy Blue Bridal Hijab features a stunning deep tone that perfectly complements your Muslim wedding dress. Crafted from premium material, a high-quality lightweight crepe, this piece is an essential accessory for Muslim women who prioritize both modest fashion and current fashion trends. The rich color of this hijab will enhance your wedding look, whether a traditional nikkah ceremony or modern receptions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Navy Blue Bridal Hijab</h2>When selecting your bridal hijab, exploring different styles is key to achieving the perfect look. This shine of this crepe hijab coordinates beautifully with matching bridal dupattas. You can elegantly drape nikkah jewelry over it. Whether you are following a specific wedding theme or looking for inspiration from the latest fashion trends, the deep navy bridal hijab offers a sophisticated alternative to everyday chiffon hijabs, making it a memorable choice for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": [
+    "bridal-hijab",
+    "blue"
+  ],
+  "images": [
+    {
+      "url": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
+      "alt": "Navy Blue Bridal Hijab made of premium crepe materials, showcasing elegant styles and deep colors for modern wedding themes.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Navy Blue Hijab is a staple in bridal modest fashion, offering high-quality lightweight crepe material that support various elegant styles."
+    }
+  ],
+  "og_image": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
+  "title_tag": "Navy Blue Bridal Hijab | Premium Material & Trending Color for 2026",
+  "og_title": "Navy Blue Bridal Hijab | Premium Lightweight Crepe",
+  "og_type": "website",
+  "meta_description": "Discover the Navy Blue Bridal Hijab. Featuring high-quality lightweight crepe material for versatile styles, it's designed to match 2026 fashion trends."
     },
     {
-      "name": "Jade Green Hijab",
-      "slug": "jade-green-hijab",
-      "description": "Amazon Color: JADE GREEN\nThis Hijab features a stunning jade green color that is perfect for Muslim women seeking elegance on their special day. The Jade Green Hijab is crafted from silky chiffon, making it an ideal choice for modest fashion that stands out during formal events. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Jade Green Hijab  </h2>This Hijab coordinates with styling for bridal looks, allowing you to drape nikkah jewelry beautifully on it. If your Muslim wedding dresses are green, this hijab will complement your ensemble perfectly, enhancing your overall bridal appearance.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "green"
-      ],
-      "images": [
-        {
-          "url": "61H6nsgp9NL._AC_SX679_.webp",
-          "alt": "Jade Green Hijab in luxurious chiffon, featuring a stunning jade green color and elegant style, ideal for Muslim women and formal occasions.",
-          "amazonLink": "https://amzn.to/4k2xRVj"
-        }
-      ],
-      "og_image": "61hN70Hi1pL._AC_SY741_.webp",
-      "title_tag": "Best Jade Green Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Jade Green Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Discover the exquisite Jade Green Hijab, perfect for Muslim women. Elevate your modest fashion for formal events with luxurious chiffon styles."
+  "name": "Sage Green Bridal Hijab",
+  "slug": "sage-green-crepe-bridal-hijab",
+  "description": "Amazon Color: Dusty Green\nThis Sage Green Bridal Hijab offers a soft, earthy tone perfect for a coordinating Muslim wedding look. Using premium crepe materials, this piece is curated for Muslim women following the latest modest fashion trends. The muted colors of this hijab are ideal for outdoor wedding themes or garden nikkah ceremonies.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Sage Green Bridal Hijab</h2>When selecting your bridal hijab, the textures of your materials make a difference. This lightweight crepe hijab offers a shiny finish that brings out your nikkah jewelry. Whether you are leaning into rustic wedding themes or modern fashion trends, this sage green bridal hijab provides a refreshing alternative to standard chiffon options for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "green"],
+  "images": [
+    {
+      "url": "bridal-hijab/sage-green-crepe-bridal-hijab.webp",
+      "alt": "Sage Green Bridal Hijab in premium crepe, perfect for modest wedding themes and 2026 fashion trends.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "Our Sage Green Bridal Hijab features high-quality crepe material designed for sophisticated bridal styles."
+    }
+  ],
+  "og_image": "bridal-hijab/sage-green-crepe-bridal-hijab.webp",
+  "title_tag": "Sage Green Bridal Hijab | Amazon Styling 2026",
+  "og_title": "Sage Green Bridal Hijab | Lightweight Crepe Styles",
+  "og_type": "website",
+  "meta_description": "Enhance your wedding look with our Sage Green Bridal Hijab. High-quality crepe materials and trendy colors for a modern, modest bridal style."
     },
     {
-      "name": "Hijab in Champagne",
-      "slug": "hijab-in-champagne",
-      "description": "Amazon Color: BRONZE\nThis Hijab features a luxurious champagne hue that elevates any bridal ensemble. Muslim women seeking a distinguished look for their wedding will find this hijab to be the perfect choice. With its elegant design, this hijab complements various types of Muslim wedding dresses. Made from high-quality chiffon, it offers both comfort and sophistication, making it ideal for formal events and special occasions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Hijab in Champagne  </h2>This Hijab coordinates with styling for bridal looks. If your Muslim wedding dresses are champagne, this hijab is an exquisite match. It serves as a stunning backdrop for other colors such as green, maroon, red, and peach. For a seamless look, consider pairing it with your dupatta and nikkah jewelry to enhance your overall bridal aesthetic.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "champagne"
-      ],
-      "images": [
-        {
-          "url": "61hN70Hi1pL._AC_SY741_.webp",
-          "alt": "Hijab in Champagne featuring a silky texture, elegantly draped in a Shayla style, perfect for bridal ensembles and special occasions.",
-          "amazonLink": "https://amzn.to/4k2xRVj"
-        },
-        {
-          "url": "61DCKwDs10L._AC_SX679_.webp",
-          "alt": "Elegant Hijab in Champagne, crafted from silky chiffon, perfect for formal events and modest fashion.",
-          "amazonLink": "https://amzn.to/4k2xRVj"
-        }
-      ],
-      "og_image": "61hN70Hi1pL._AC_SY741_.webp",
-      "title_tag": "Best Hijab in Champagne for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Hijab in Champagne for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Discover the luxurious Hijab in Champagne, perfect for Muslim women seeking elegance in modest fashion for formal events and everyday wear."
+  "name": "Lavender Bridal Hijab",
+  "slug": "lavender-crepe-bridal-hijab",
+  "description": "Amazon Color: LAVENDER\nCapture a sense of romance with this Lavender Bridal Hijab, designed to pair beautifully with a coordinating Muslim wedding dress. Made from high-quality crepe materials, this hijab is a must-have for Muslim women looking to incorporate feminine fashion trends into their special day. The soft lavender colors provide a whimsical touch for winter wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Lavender Bridal Hijab</h2>The right materials can elevate your bridal styles from simple to extraordinary. This crepe hijab features a delicate drape that stays secure under nikkah jewelry and heavy veils. If your wedding themes focus on soft pastels and elegant fashion trends, this lavender bridal hijab is a superior choice compared to traditional chiffon for your formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "lilac"],
+  "images": [
+    {
+      "url": "bridal-hijab/lavender-crepe-bridal-hijab.webp",
+      "alt": "Lavender Bridal Hijab made of elegant crepe material, ideal for spring wedding themes.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Lavender Bridal Hijab offers a unique aesthetic for brides seeking trendy colors and crepe materials."
+    }
+  ],
+  "og_image": "bridal-hijab/lavender-crepe-bridal-hijab.webp",
+  "title_tag": "Lavender Bridal Hijab | Romantic Amazon Styling 2026",
+  "og_title": "Lavender Bridal Hijab | Soft Crepe Fashion Trends",
+  "og_type": "website",
+  "meta_description": "Shop the Lavender Bridal Hijab. Crafted from premium crepe materials, this soft color is perfect for romantic wedding themes and modest styles."
+    },
+    {
+  "name": "Jade Green Bridal Hijab",
+  "slug": "jade-green-crepe-bridal-hijab",
+  "description": "Amazon Color: JADE GREEN\nThis Jade Green Bridal Hijab brings a regal, jewel-toned energy to your Muslim wedding dress. Crafted from premium-grade crepe materials, it meets the high standards of Muslim women who value luxury in modest fashion trends. The deep, vibrant colors of this bridal hijab make it a centerpiece for opulent wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Jade Green Bridal Hijab</h2>Achieving perfect bridal styles requires materials that hold their shape. This crepe hijab provides the structure needed to showcase intricate nikkah jewelry and layered drapes. Whether you are following traditional heritage wedding themes or the latest runway fashion trends, the jade green bridal hijab offers more richness and depth than standard chiffon for your formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "green"],
+  "images": [
+    {
+      "url": "bridal-hijab/jade-green-crepe-bridal-hijab.webp",
+      "alt": "Jewel-toned Jade Green Bridal Hijab in high-quality crepe, showcasing luxury modest styles.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Jade Green Bridal Hijab is perfect for brides wanting bold colors and high-performance crepe materials."
+    }
+  ],
+  "og_image": "bridal-hijab/jade-green-crepe-bridal-hijab.webp",
+  "title_tag": "Jade Green Bridal Hijab | Jewel Toned Amazon Styling 2026",
+  "og_title": "Jade Green Bridal Hijab | Bold Crepe Styles",
+  "og_type": "website",
+  "meta_description": "The Jade Green Bridal Hijab is a jewel-toned masterpiece. Featuring premium crepe materials, it's the perfect choice for elegant wedding themes."
+    },
+    {
+  "name": "Light Blue Bridal Hijab",
+  "slug": "light-blue-crepe-bridal-hijab",
+  "description": "Amazon Color: LIGHT BLUE\nThis Light Blue Bridal Hijab is designed to complement your Muslim wedding dress with a touch of serenity. Featuring high-quality crepe materials, this accessory is ideal for Muslim women who love timeless modest fashion trends. Its airy colors are perfectly suited for coastal or daytime wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Light Blue Bridal Hijab</h2>Exploring various bridal styles is simple when you have versatile materials. This crepe hijab drapes effortlessly, providing a stable base for silver nikkah jewelry and heavily embroidered dupattas. If you are seeking inspiration from modern wedding themes or minimalist fashion trends, this light blue bridal hijab is a durable and stylish upgrade over basic chiffon for all formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "blue"],
+  "images": [
+    {
+      "url": "bridal-hijab/light-blue-crepe-bridal-hijab.webp",
+      "alt": "Serene Light Blue Bridal Hijab in premium crepe, ideal for daytime wedding themes.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Light Blue Bridal Hijab combines soft colors with the high-quality texture of crepe material."
+    }
+  ],
+  "og_image": "bridal-hijab/light-blue-crepe-bridal-hijab.webp",
+  "title_tag": "Light Blue Bridal Hijab | Serene Amazon Styling 2026",
+  "og_title": "Light Blue Bridal Hijab | Timeless Crepe Fashion",
+  "og_type": "website",
+  "meta_description": "Our Light Blue Bridal Hijab offers a serene touch for your special day. Made with premium crepe material for a flawless modest bridal look."
+    },
+    {
+  "name": "Champagne Bridal Hijab",
+  "slug": "champagne-crepe-bridal-hijab",
+  "description": "Amazon Color: Bronze\nThis Champagne Bridal Hijab offers a luxurious glow that enhances the  your Muslim wedding dress. Using premium crepe material, this hijab is a top choice for Muslim women who follow high-end modest fashion trends. The warm, shimmering colors are perfect for grand ballroom wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Champagne Bridal Hijab</h2>To achieve sophisticated bridal styles, your materials must have a natural luster. This crepe hijab provides a rich texture that beautifully anchors gold or silver nikkah jewelry. Whether you are aiming for classic royal wedding themes or contemporary fashion trends, the champagne bridal hijab offers a more shiny and professional finish than chiffon for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "champagne"],
+  "images": [
+    {
+      "url": "bridal-hijab/champagne-crepe-bridal-hijab.webp",
+      "alt": "Luxury Champagne Bridal Hijab in crepe material, featuring warm bronze colors for gold-themed weddings.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Champagne Bridal Hijab provides a regal finish with its high-quality crepe materials and warm tones."
+    },
+    {
+      "url": "bridal-hijab/champagne-crepe-bridal-hijab2.webp",
+      "alt": "Versatile Champagne Bridal Hijab in premium crepe for evening wedding themes.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "This Champagne Hijab highlights the diverse styles achievable with high-quality crepe materials."
+    }
+  ],
+  "og_image": "bridal-hijab/champagne-crepe-bridal-hijab.webp",
+  "title_tag": "Champagne Bridal Hijab | Luxury Amazon Styling 2026",
+  "og_title": "Champagne Bridal Hijab | Elegant Bronze Crepe",
+  "og_type": "website",
+  "meta_description": "The Champagne Bridal Hijab adds a golden glow to your bridal attire. Crafted from premium crepe materials for a high-end modest look."
+    },
+    {
+  "name": "Red Bridal Hijab",
+  "slug": "red-crepe-bridal-hijab",
+  "description": "Amazon Color: RED\nMake a bold statement with this Red Bridal Hijab, the ultimate classic for a traditional red Muslim wedding dress. Featuring lightweight crepe materials, this hijab is a staple for Muslim women who value heritage within modern fashion trends. The vibrant colors of this piece are specifically chosen for festive and cultural wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Red Bridal Hijab</h2>Traditional bridal styles often require materials that can support heavy embroidery and nikkah jewelry. This crepe hijab provides the necessary durability while maintaining an elegant drape. Whether you are honoring timeless wedding themes or exploring contemporary fashion trends, this red bridal hijab offers a rich sheen that outperforms chiffon for your formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "red"],
+  "images": [
+    {
+      "url": "bridal-hijab/red-crepe-bridal-hijab.webp",
+      "alt": "Bold Red Bridal Hijab in premium crepe, perfect for traditional and cultural wedding themes.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Red Bridal Hijab is the gold standard for traditional styles, utilizing high-quality crepe materials."
+    }
+  ],
+  "og_image": "bridal-hijab/red-crepe-bridal-hijab.webp",
+  "title_tag": "Red Bridal Hijab | Traditional Styling from Amazon 2026",
+  "og_title": "Red Bridal Hijab | Vibrant Crepe Fashion Trends",
+  "og_type": "website",
+  "meta_description": "Our Red Bridal Hijab is the perfect match for traditional bridal attire. Crafted with durable crepe materials for an elegant and modest wedding look."
+    },
+    {
+  "name": "Off-White Bridal Hijab",
+  "slug": "off-white-crepe-bridal-hijab",
+  "description": "Amazon Color: OATMEAL\nThis Off-White Bridal Hijab offers a classic, sophisticated finish that matches your Muslim wedding dress. Made from high-quality crepe materials, this piece is an essential for Muslim women who desire a clean, polished look in line with modest fashion trends. The neutral colors of this hijab adapt seamlessly to trending off-white wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Off-White Bridal Hijab</h2>For the most versatile bridal styles, the quality of your materials is paramount. This crepe hijab provides a lovely sheen that highlights the brilliance of your nikkah jewelry. If you're following the latest bridal fashion trends, this off-white bridal hijab offers better coverage and style longevity than standard chiffon for your formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "white"],
+  "images": [
+    {
+      "url": "bridal-hijab/off-white-crepe-bridal-hijab.webp",
+      "alt": "Classic Off-White Bridal Hijab in premium crepe, suitable for trending wedding themes.",
+      "amazonLink": "https://amzn.to/4k2xRVj",
+      "figcaption": "The Off-White Bridal Hijab is a timeless piece, combining neutral colors with premium crepe materials."
+    }
+  ],
+  "og_image": "bridal-hijab/off-white-crepe-bridal-hijab.webp",
+  "title_tag": "Off-White Bridal Hijab | Classic Styling on Amazon 2026",
+  "og_title": "Off-White Bridal Hijab | Versatile Crepe Fashion",
+  "og_type": "website",
+  "meta_description": "The Off-White Bridal Hijab is a bridal essential. Featuring high-quality crepe materials, it provides a trendy modest look for your wedding theme."
     },
     {
       "name": "Off-White Hijab",
@@ -956,180 +1049,247 @@
       ],
       "images": [
         {
-          "url": "71IqDyaCcoL_edited.webp",
+          "url": "bridal-hijab/off-white-hijab.webp",
           "alt": "Off-White Hijab made from soft chiffon, featuring a classic design ideal for Muslim women. Perfectly complements hijabi lehengas for elegant occasions.",
           "amazonLink": "https://amzn.to/3Z1Gs2A"
+	  "figcaption": "The Off-White Hijab is perfectly trending, combining neutral colors with premium chiffon materials."
         },
         {
-          "url": "71IqDyaCcoL._AC_SX569_.webp",
+          "url": "bridal-hijab/off-white-hijab2.webp",
           "alt": "Elegant Off-White Hijab in luxurious chiffon, perfect for formal events and modest fashion enthusiasts.",
           "amazonLink": "https://amzn.to/3Z1Gs2A"
+	  "figcaption": "The Off-White Hijab goes with your trending 2026 look, combining neutral colors with premium chiffon materials."
         }
       ],
-      "og_image": "71IqDyaCcoL_edited.webp",
+      "og_image": "bridal-hijab/off-white-hijab.webp",
       "title_tag": "Best Off-White Hijab for 2026 Brides | Amazon Product Styling",
       "og_title": "Best Off-White Hijab for 2026 Brides | Amazon Product Styling",
       "og_type": "website",
       "meta_description": "Elevate your bridal look with our Off-White Hijab, perfect for Muslim women embracing modest fashion on special occasions. Shop now for elegance!"
     },
     {
-      "name": "Champagne Hijab",
-      "slug": "champagne-hijab",
-      "description": "Amazon Color: BEIGE\nThis Hijab features a stunning champagne color that perfectly complements your Muslim wedding dress or hijabi lehenga. Designed for Muslim women who appreciate modest fashion, this hijab adds a touch of sparkle to your bridal ensemble, making it an ideal choice for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Champagne Hijab  </h2>This Hijab coordinates with styling for bridal looks, ensuring you achieve an elegant and sophisticated appearance. This versatile piece can be styled to suit various occasions, including as a turban or as a Turkish hijab with dangling jewelry, enhancing your overall bridal aesthetic.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "champagne"
-      ],
-      "images": [
-        {
-          "url": "71eHhriJgxL._AC_SX679_.webp",
-          "alt": "Champagne Hijab in a luxurious material, featuring a soft sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.",
-          "amazonLink": "https://amzn.to/4jmjx9B"
-        }
-      ],
-      "og_image": "71JpnUCv55L._AC_SX679_.webp",
-      "title_tag": "Best Champagne Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Champagne Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our Champagne Hijab, a perfect blend of elegance and modest fashion for Muslim women. Ideal for special occasions."
+    "name": "Champagne Hijab",
+    "slug": "champagne-hijab",
+    "description": "Amazon Color: BEIGE\nThis Hijab features a stunning champagne color that perfectly complements your Muslim wedding dress or hijabi lehenga. Designed for Muslim women who appreciate modest fashion, this hijab adds a touch of sparkle to your bridal ensemble, making it an ideal choice for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Champagne Hijab  </h2>This Hijab coordinates with styling for bridal looks, ensuring you achieve an elegant and sophisticated appearance. This versatile piece can be styled to suit various occasions, including as a turban or as a Turkish hijab with dangling jewelry, enhancing your overall bridal aesthetic.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "champagne"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/champagne-bridal-hijab-shine.webp",
+        "alt": "Champagne Hijab in a luxurious material, featuring a soft sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/4jmjx9B",
+        "figcaption": "This Champagne Bridal Hijab highlights how high-quality materials and versatile styles align with 2026 fashion trends for elegant wedding themes."
+      }
+    ],
+    "og_image": "bridal-hijab/champagne-bridal-hijab-shine.webp",
+    "title_tag": "Champagne Bridal Hijab | Amazon Modest Collection 2026",
+    "og_title": "Elegant Champagne Hijab - Perfect for 2026 Brides",
+    "og_type": "website",
+    "meta_description": "Elevate your bridal look with our Champagne Hijab, a perfect blend of elegance and modest fashion for Muslim women. Ideal for special occasions."
+  },
+  {
+    "name": "Forest Green Hijab",
+    "slug": "forest-green-hijab",
+    "description": "Amazon Color: DARK GREEN\nThis Hijab features a stunning forest green color that perfectly complements Muslim wedding dresses. This elegant accessory is designed for Muslim women who appreciate modest fashion and want to enhance their bridal look with a touch of sparkle.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Forest Green Hijab  </h2>This Hijab coordinates with styling for bridal looks, making it an ideal choice for nikkah jewelry draping and green Muslim wedding outfits. Embrace the beauty of this hijab as you create a memorable ensemble for your special day.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "green"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/forest-green-chiffon-hijab.webp",
+        "alt": "Forest Green Hijab in luxurious chiffon, featuring a classic style that complements bridal outfits, perfect for Muslim women and special occasions.",
+        "amazonLink": "https://amzn.to/3Z1Gs2A",
+        "figcaption": "The Forest Green Bridal Hijab features premium chiffon materials, offering sophisticated styles and rich colors for traditional wedding themes."
+      },
+      {
+        "url": "bridal-hijab/forest-green-bridal-hijab-detail.webp",
+        "alt": "Elegant Forest Green Hijab in luxurious fabric, perfect for Muslim women embracing modest fashion.",
+        "amazonLink": "https://amzn.to/3Z1Gs2A",
+        "figcaption": "Incorporate the latest fashion trends into your special day with this Forest Green Bridal Hijab, designed for refined bridal styles."
+      }
+    ],
+    "og_image": "bridal-hijab/forest-green-chiffon-hijab.webp",
+    "title_tag": "Forest Green Bridal Hijab | Amazon Modest Wedding Styles",
+    "og_title": "Deep Forest Green Hijab - Timeless Style for Nikkah",
+    "og_type": "website",
+    "meta_description": "Elevate your bridal look with our Forest Green Hijab, perfect for Muslim women seeking elegant modest fashion for special occasions."
+  },
+  {
+    "name": "Pink Hijab",
+    "slug": "pink-hijab",
+    "description": "Amazon Color: PINK\nThis hijab features a stunning metallic pink hue that perfectly complements your Muslim wedding dress or hijabi lehenga. Designed for Muslim women who appreciate modest fashion, this elegant piece is ideal for formal events and special occasions. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Pink Hijab  </h2>This hijab coordinates well with pink and green for bridal looks, ensuring you radiate beauty on your special day. Its versatility allows for a seamless blend with various types of Muslim wedding clothing and nikkah jewelry, making it a must-have accessory for every bride.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "pink"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/pink-bridal-hijab.webp",
+        "alt": "Light Pink Hijab made from soft, luxurious fabric, featuring a delicate sheen and flowing design, ideal for bridal style inspiration.",
+        "amazonLink": "https://amzn.to/4jmjx9B",
+        "figcaption": "This Pink Bridal Hijab uses crisp materials to create graceful styles that suit modern wedding themes and 2026 fashion trends."
+      }
+    ],
+    "og_image": "bridal-hijab/pink-bridal-hijab.webp",
+    "title_tag": "Pink Bridal Hijab | Amazon 2026 Trending Wedding",
+    "og_title": "Romantic Pink Hijab - Soft Tones for Your Wedding",
+    "og_type": "website",
+    "meta_description": "Elevate your modest fashion with our Pink Hijab, perfect for Muslim women seeking elegance for formal events and special occasions."
+  },
+  {
+    "name": "Lavender Sparkle Hijab",
+    "slug": "lavender-sparkle-hijab",
+    "description": "Amazon Color: LILAC\nThis hijab features a stunning sparkle that is perfect for Muslim women seeking elegance on their special day. The Lavender Sparkle Hijab is designed to complement various types of Muslim wedding attire, as a classic Shayla style, making it a versatile choice for modest fashion enthusiasts. Crafted from luxurious material, this hijab is ideal for formal events, ensuring you look radiant and sophisticated.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Lavender Sparkle Hijab  </h2>This hijab coordinates with styling for bridal looks, enhancing your overall appearance with its shimmering design. Pair it with your lavender Muslim wedding dress for a cohesive and enchanting bridal ensemble, draping nikkah jewelry on top. Whether you're attending a summer or winter wedding, this hijab will elevate your modest fashion game, making you feel like a true fashionista on your big day.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "lilac"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/lavender-sparkle-shayla-hijab.webp",
+        "alt": "Lavender Sparkle Hijab in lilac with a shimmering texture, showcasing a classic Shayla style, perfect for Muslim women and bridal style inspiration.",
+        "amazonLink": "https://amzn.to/3Z1Gs2A",
+        "figcaption": "A Lavender Sparkle Bridal Hijab featuring shimmering materials and unique Shayla styles, perfect for whimsical wedding themes and fashion trends."
+      },
+      {
+        "url": "bridal-hijab/lavender-sparkle-bridal-hijab-texture.webp",
+        "alt": "Lavender Sparkle Hijab made from luxurious fabric, perfect for elegant formal events.",
+        "amazonLink": "https://amzn.to/3Z1Gs2A",
+        "figcaption": "Embrace luxurious materials and bold colors with this Lavender Sparkle Bridal Hijab, a standout choice for high-end wedding themes."
+      }
+    ],
+    "og_image": "bridal-hijab/lavender-sparkle-shayla-hijab.webp",
+    "title_tag": "Lavender Sparkle Hijab | Amazon Shimmering Style",
+    "og_title": "Lavender Sparkle Hijab - Add Magic to Your Special Day",
+    "og_type": "website",
+    "meta_description": "Elevate your modest fashion with the stunning Lavender Sparkle Hijab, perfect for Muslim women on special occasions. Discover elegance in every style."
+  },
+  {
+    "name": "Hijabi in Pink",
+    "slug": "hijabi-in-pink",
+    "description": "This Hijab complements our pink Muslim wedding dresses and hijabi lehengas from the pink bridal collection. At 2.2 meters, this versatile dupatta can also be worn as a hijab, making it an essential accessory for Muslim women seeking elegance on their special day. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Hijabi in Pink  </h2>This Hijab coordinates with styling for bridal looks, ensuring a breathtaking appearance for formal events. Crafted with delicate net fabric, it exudes grace and sophistication, making it an ideal choice for various occasions. Experience the harmonious blend of modesty and style with this meticulously designed bridal accessory.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "pink"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/pink-bridal-veil-hijab.webp",
+        "alt": "Hijabi in Pink featuring a delicate net bridal veil, showcasing a soft pink color, ideal for pairing with hijabi lehengas or dresses, made from luxurious materials.",
+        "amazonLink": "https://amzn.to/3Zcz4Ri",
+        "figcaption": "The Hijabi in Pink Bridal Hijab uses delicate net materials to support graceful styles for romantic wedding themes."
+      }
+    ],
+    "og_image": "bridal-hijab/pink-bridal-veil-hijab.webp",
+    "title_tag": "Pink Bridal Hijab | Amazon Modest Styling 2026",
+    "og_title": "Hijabi in Pink - Stunning Net Bridal Veil for Brides",
+    "og_type": "website",
+    "meta_description": "Elevate your bridal look with the Hijabi in Pink, designed for Muslim women seeking elegance in modest fashion. Perfect for special occasions."
+  },
+  {
+    "name": "Silver Hijab",
+    "slug": "silver-hijab",
+    "description": "This hijab features a sleek design that perfectly complements your silver bridal dress. The Silver Fluff Bridal Hijab enhances any hijab bridal look with its shimmering beauty, making it an essential accessory for Muslim women seeking elegance on their special day. Crafted to offer both traditional and modern bridal hijab styles, this piece is a versatile addition to any collection of fancy or Eid hijabs.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Silver Hijab  </h2>This hijab coordinates with styling for bridal looks, allowing you to easily layer your nikkah jewelry and bridal dupatta on top. Its classic design ensures that you can emphasize your unique bridal hijab look, celebrating your day in pure elegance. This timeless accessory is perfect for formal events, enhancing your overall bridal appearance with sophistication and grace.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/silver\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "silver"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/silver-fluff-bridal-hijab.webp",
+        "alt": "A shimmering Silver Hijab featuring a sleek design and crisp texture, perfect for bridal style inspiration, enhancing any bridal lehenga look.",
+        "amazonLink": "https://amzn.to/3DC0oRY",
+        "figcaption": "Our Silver Bridal Hijab features shimmering materials and sleek styles, making it a top choice for winter wedding themes and fashion trends."
+      }
+    ],
+    "og_image": "bridal-hijab/silver-fluff-bridal-hijab.webp",
+    "title_tag": "Silver Bridal Hijab | Amazon Shimmering Styles 2026",
+    "og_title": "Sleek Silver Bridal Hijab - Elegance for Your Wedding",
+    "og_type": "website",
+    "meta_description": "Elevate your bridal look with our Silver Hijab, a perfect blend of elegance and style for Muslim women. Ideal for formal events and everyday wear."
+  },
+  {
+    "name": "White Hijab",
+    "slug": "white-hijab",
+    "description": "This hijab features an exquisite design that perfectly complements your white Muslim wedding attire. At Hijabi Bridal, we believe in making your special day unforgettable with our stunning and carefully crafted bridal accessories. This white hijab seamlessly enhances our diverse collection of bridal jewelry sets and wedding dresses, allowing you to embrace the start of your new journey with grace and style.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this White Hijab  </h2>This hijab coordinates with styling for bridal looks. Let your beauty shine through as you discover the perfect finishing touch for your wedding ensemble with Hijabi Bridal.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "white"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/white-bridal-veil.webp",
+        "alt": "Elegant White Hijab made from premium chiffon, featuring a classic design ideal for Muslim brides, enhancing the hijabi lehenga style.",
+        "amazonLink": "https://amzn.to/4eVbVc1",
+        "figcaption": "The classic White Bridal Hijab is crafted from premium chiffon materials, supporting timeless bridal styles for traditional wedding themes."
+      }
+    ],
+    "og_image": "bridal-hijab/white-bridal-veil.webp",
+    "title_tag": "Classic White Bridal Hijab | Best Amazon Choice for Brides",
+    "og_title": "Timeless White Hijab - The Ultimate Modern Choice",
+    "og_type": "website",
+    "meta_description": "Elevate your bridal look with our exquisite White Hijab, perfect for Muslim women seeking classic modest fashion for their special day."
     },
     {
-      "name": "Forest Green Hijab",
-      "slug": "forest-green-hijab",
-      "description": "Amazon Color: DARK GREEN\nThis Hijab features a stunning forest green color that perfectly complements Muslim wedding dresses. This elegant accessory is designed for Muslim women who appreciate modest fashion and want to enhance their bridal look with a touch of sparkle.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Forest Green Hijab  </h2>This Hijab coordinates with styling for bridal looks, making it an ideal choice for nikkah jewelry draping and green Muslim wedding outfits. Embrace the beauty of this hijab as you create a memorable ensemble for your special day.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "green"
-      ],
-      "images": [
-        {
-          "url": "813cOAKbdOL._AC_SX569_.webp",
-          "alt": "Forest Green Hijab in luxurious chiffon, featuring a classic style that complements bridal outfits, perfect for Muslim women and special occasions.",
-          "amazonLink": "https://amzn.to/3Z1Gs2A"
-        },
-        {
-          "url": "81yD2ymSeaL._AC_SX679_.webp",
-          "alt": "Elegant Forest Green Hijab in luxurious fabric, perfect for Muslim women embracing modest fashion.",
-          "amazonLink": "https://amzn.to/3Z1Gs2A"
-        }
-      ],
-      "og_image": "813cOAKbdOL._AC_SX569_.webp",
-      "title_tag": "Best Forest Green Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Forest Green Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our Forest Green Hijab, perfect for Muslim women seeking elegant modest fashion for special occasions."
-    },
-    {
-      "name": "Light Pink Hijab",
-      "slug": "light-pink-hijab",
-      "description": "Amazon Color: PINK\nThis hijab features a stunning light pink hue that perfectly complements your Muslim wedding dress or hijabi lehenga. Designed for Muslim women who appreciate modest fashion, this elegant piece is ideal for formal events and special occasions. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Light Pink Hijab  </h2>This hijab coordinates well with pink and green for bridal looks, ensuring you radiate beauty on your special day. Its versatility allows for a seamless blend with various types of Muslim wedding clothing and nikkah jewelry, making it a must-have accessory for every bride.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "pink"
-      ],
-      "images": [
-        {
-          "url": "818g1epmTbL._AC_SX679_.webp",
-          "alt": "Light Pink Hijab made from soft, luxurious fabric, featuring a delicate sheen and flowing design, ideal for bridal style inspiration.",
-          "amazonLink": "https://amzn.to/4jmjx9B"
-        }
-      ],
-      "og_image": "818g1epmTbL._AC_SX679_.webp",
-      "title_tag": "Best Light Pink Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Light Pink Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your modest fashion with our Light Pink Hijab, perfect for Muslim women seeking elegance for formal events and special occasions."
-    },
-    {
-      "name": "Lavender Sparkle Hijab",
-      "slug": "lavender-sparkle-hijab",
-      "description": "Amazon Color: LILAC\nThis hijab features a stunning sparkle that is perfect for Muslim women seeking elegance on their special day. The Lavender Sparkle Hijab is designed to complement various types of Muslim wedding attire, as a classic Shayla styles, making it a versatile choice for modest fashion enthusiasts. Crafted from luxurious material, this hijab is ideal for formal events, ensuring you look radiant and sophisticated.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Lavender Sparkle Hijab  </h2>This hijab coordinates with styling for bridal looks, enhancing your overall appearance with its shimmering design. Pair it with your lavender Muslim wedding dress for a cohesive and enchanting bridal ensemble, draping nikkah jewelry on top. Whether you're attending a summer or winter wedding, this hijab will elevate your modest fashion game, making you feel like a true fashionista on your big day.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "lilac"
-      ],
-      "images": [
-        {
-          "url": "81HoS4X9FyL._AC_SX569_.webp",
-          "alt": "Lavender Sparkle Hijab in lilac with a shimmering texture, showcasing a classic Shayla style, perfect for Muslim women and bridal style inspiration.",
-          "amazonLink": "https://amzn.to/3Z1Gs2A"
-        },
-        {
-          "url": "91iDkq2jxTL._AC_SX679_.webp",
-          "alt": "Lavender Sparkle Hijab made from luxurious fabric, perfect for elegant formal events.",
-          "amazonLink": "https://amzn.to/3Z1Gs2A"
-        }
-      ],
-      "og_image": "81HoS4X9FyL._AC_SX569_.webp",
-      "title_tag": "Best Lavender Sparkle Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Lavender Sparkle Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your modest fashion with the stunning Lavender Sparkle Hijab, perfect for Muslim women on special occasions. Discover elegance in every style."
-    },
-    {
-      "name": "Hijabi in Pink",
-      "slug": "hijabi-in-pink",
-      "description": "This Hijab complements our pink Muslim wedding dresses and hijabi lehengas from the pink bridal collection. At 2.2 meters, this versatile dupatta can also be worn as a hijab, making it an essential accessory for Muslim women seeking elegance on their special day. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Hijabi in Pink  </h2>This Hijab coordinates with styling for bridal looks, ensuring a breathtaking appearance for formal events. Crafted with delicate net fabric, it exudes grace and sophistication, making it an ideal choice for various occasions. Experience the harmonious blend of modesty and style with this meticulously designed bridal accessory.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "pink"
-      ],
-      "images": [
-        {
-          "url": "pink bridal veil hijab.webp",
-          "alt": "Hijabi in Pink featuring a delicate net bridal veil, showcasing a soft pink color, ideal for pairing with hijabi lehengas or dresses, made from luxurious materials.",
-          "amazonLink": "https://amzn.to/3Zcz4Ri"
-        }
-      ],
-      "og_image": "pink bridal veil hijab.webp",
-      "title_tag": "Best Hijabi in Pink for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Hijabi in Pink for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with the Hijabi in Pink, designed for Muslim women seeking elegance in modest fashion. Perfect for special occasions."
-    },
-    {
-      "name": "Silver Hijab",
-      "slug": "silver-hijab",
-      "description": "This hijab features a sleek design that perfectly complements your silver bridal dress. The Silver Fluff Bridal Hijab enhances any hijab bridal look with its shimmering beauty, making it an essential accessory for Muslim women seeking elegance on their special day. Crafted to offer both traditional and modern bridal hijab styles, this piece is a versatile addition to any collection of fancy or Eid hijabs.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Silver Hijab  </h2>This hijab coordinates with styling for bridal looks, allowing you to easily layer your nikkah jewelry and bridal dupatta on top. Its classic design ensures that you can emphasize your unique bridal hijab look, celebrating your day in pure elegance. This timeless accessory is perfect for formal events, enhancing your overall bridal appearance with sophistication and grace.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/silver\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "silver"
-      ],
-      "images": [
-        {
-          "url": "silver fluff bridal hijab.webp",
-          "alt": "A shimmering Silver Hijab featuring a sleek design and crisp texture, perfect for bridal style inspiration, enhancing any bridal lehenga look.",
-          "amazonLink": "https://amzn.to/3DC0oRY"
-        }
-      ],
-      "og_image": "silver fluff bridal hijab.webp",
-      "title_tag": "Best Silver Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Silver Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our Silver Hijab, a perfect blend of elegance and style for Muslim women. Ideal for formal events and everyday wear."
-    },
-    {
-      "name": "White Hijab",
-      "slug": "white-hijab",
-      "description": "This hijab features an exquisite design that perfectly complements your white Muslim wedding attire. At Hijabi Bridal, we believe in making your special day unforgettable with our stunning and carefully crafted bridal accessories. This white hijab seamlessly enhances our diverse collection of bridal jewelry sets and wedding dresses, allowing you to embrace the start of your new journey with grace and style.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this White Hijab  </h2>This hijab coordinates with styling for bridal looks. Let your beauty shine through as you discover the perfect finishing touch for your wedding ensemble with Hijabi Bridal.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "white"
-      ],
-      "images": [
-        {
-          "url": "white bridal veil.webp",
-          "alt": "Elegant White Hijab made from premium chiffon, featuring a classic design ideal for Muslim brides, enhancing the hijabi lehenga style.",
-          "amazonLink": "https://amzn.to/4eVbVc1"
-        }
-      ],
-      "og_image": "white bridal veil.webp",
-      "title_tag": "Best White Hijab for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best White Hijab for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our exquisite White Hijab, perfect for Muslim women seeking classic modest fashion for their special day."
-    },
-    {
+    "name": "Gold Fluff Bridal Hijab",
+    "slug": "gold-fluff-bridal-hijab",
+    "description": "Amazon Color: 4\nThis Gold Fluff Bridal Hijab features a radiant metallic tone designed to perfectly complement your gold-embossed Muslim wedding dress. Using premium materials with a soft, voluminous texture, this piece is curated for Muslim women who follow high-end modest fashion trends. The brilliant colors of this collection are ideal for royal wedding themes or grand evening receptions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Gold Fluff Bridal Hijab</h2>When selecting your bridal hijab, the weight and drape of the materials determine the final look. This gold hijab coordinates beautifully with majestic bridal styles, providing a sturdy yet elegant base for heavy nikkah jewelry or gold bridal crowns. Whether you are aiming for traditional heritage wedding themes or the latest global fashion trends, this gold bridal hijab offers a more textured and luxurious finish than standard chiffon for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/gold\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "gold"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/gold-fluff-bridal-hijab.webp",
+        "alt": "Gold Fluff Bridal Hijab featuring a shimmering texture and rich color, ideal for luxury wedding themes.",
+        "amazonLink": "https://amzn.to/47n2JMk",
+        "figcaption": "The Gold Fluff Bridal Hijab utilizes unique textured materials to support voluminous styles that match 2026 fashion trends."
+      },
+      {
+        "url": "bridal-hijab/gold-fluff-bridal-hijab-actual.webp",
+        "alt": "Actual view of the Gold Fluff Bridal Hijab texture, perfect for Muslim women's bridal style inspiration.",
+        "amazonLink": "https://amzn.to/47n2JMk",
+        "figcaption": "Showcase your bridal styles with the rich colors and premium materials of this gold bridal hijab, perfect for formal events."
+      }
+    ],
+    "og_image": "bridal-hijab/gold-fluff-bridal-hijab.webp",
+    "title_tag": "Gold Fluff Bridal Hijab | Amazon Luxury Modest Styles 2026",
+    "og_title": "Gold Fluff Bridal Hijab - Elegant Metallic Shimmer",
+    "og_type": "website",
+    "meta_description": "Enhance your look with the Gold Fluff Bridal Hijab. Featuring luxury materials and trending colors, it's a perfect match. Amazon bridal shopping."
+  },
+  {
+    "name": "Lilac Pearl Sparkle Hijab",
+    "slug": "lilac-pearl-sparkle-hijab",
+    "description": "Amazon Color: Lilac\nThis Lilac Pearl Sparkle Hijab brings a whimsical and romantic energy to your Muslim wedding dress. Crafted from premium materials featuring delicate shimmering accents, this piece is an essential for Muslim women who love soft, feminine fashion trends. The pastel color and pearls are perfectly suited for garden wedding themes and springtime nikkah ceremonies.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for the Lilac Pearl Sparkle Hijab</h2>Achieving a dream-like appearance requires choosing bridal styles that prioritize texture. This sparkle hijab offers a lightweight feel that drapes effortlessly over nikkah jewelry and matching bridal veils. Whether you are following classic wedding themes or bold new fashion trends, this lilac bridal hijab provides a sophisticated alternative to basic chiffon, ensuring you stand out at all formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+    "mainCategorySlugs": [
+      "bridal-hijab",
+      "lilac"
+    ],
+    "images": [
+      {
+        "url": "bridal-hijab/lilac-pearl-sparkle-hijab.webp",
+        "alt": "Lilac Pearl Sparkle Hijab with shimmering texture, ideal for romantic wedding themes.",
+        "amazonLink": "https://amzn.to/4rfnu3U",
+        "figcaption": "This Lilac Pearl Sparkle Bridal Hijab combines soft colors with shimmering materials for a trending 2026 bridal look."
+      },
+      {
+        "url": "bridal-hijab/lilac-pearl-sparkle-hijab-closeup.webp",
+        "alt": "Close-up of the Lilac Pearl Sparkle Hijab showing the delicate shimmer and fabric quality.",
+        "amazonLink": "https://amzn.to/4rfnu3U",
+        "figcaption": "Detailed view of the sparkling materials and elegant style available with this lilac bridal hijab."
+      }
+    ],
+    "og_image": "bridal-hijab/lilac-pearl-sparkle-hijab.webp",
+    "title_tag": "Lilac Pearl Sparkle Hijab | Amazon 2026 Trending Styles",
+    "og_title": "Lilac Pearl Sparkle Hijab - Whimsical Bridal Elegance",
+    "og_type": "website",
+    "meta_description": "Shop the Lilac Pearl Sparkle Hijab on Amazon. Premium materials and sparkling style for a modern, modest wedding look."
+  },
+  {
       "name": "Peach Faux Fur Wrap",
       "slug": "peach-wedding-faux-fur-wrap",
       "description": "The perfect accessory for added coverage and style - for instance, if you've chosen a sleeveless dress! Tuck in a non-sheer hijab and you're too lovely! Elevate your bridal ensemble with our exquisite Peach Faux Fur Wrap</a>, for the discerning Muslim bride. Providing both warmth and elegance, this beautifully crafted coverup complements our selection of  At Hijabi Bridal, we celebrate tradition and modernity in bridal fashion, offering pieces that reflect your personal style and values. Discover the perfect finishing touch for your special day with our luxurious faux fur capelet, a symbol of grace and sophistication.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/cape\" class=\"text-[#db2777] font-bold hover:underline\">View all Cape</a>",
