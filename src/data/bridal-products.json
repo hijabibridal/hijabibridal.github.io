@@ -400,7 +400,7 @@
       "meta_description": "Elevate your layered Muslim bridal look with our stunning Rhinestone Bridal Belt. Available in red, gold, green and pink, it's perfect for a chic, personalized touch on your special day."
     },
     {
-  "name": "Fuschia Ruffled Lace Dupatta for Double Dupatta Styling",
+  "name": "Fuschia Ruffled Lace Dupatta",
   "slug": "fuschia-ruffled-bridal-dupatta",
   "description": "Elevate your Nikah or Walima ensemble with this vibrant fuschia dupatta, specifically designed for modern modest bridal styling. As a opaque dupatta, this dupatta can easily replace your hijab, and because of the ruffles, it can be used to hide your bridal makeup. The lightweight fabric ensures a graceful drape that elegantly covers the head and shoulders. Whether paired with a matching fuschia gown or used as a bold contrast to silver embroidery, this ruffled dupatta brings a beautiful aesthetic to 2026 Muslim wedding dresses.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Style a Double Dupatta Look</h2>For a sophisticated bridal silhouette, use this ruffled piece as your head-covering dupatta while a sheer dupatta is draped across the shoulder. This coordination adds a regal look to your ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
   "mainCategorySlugs": [
@@ -420,110 +420,464 @@
   "og_title": "Vibrant Fuschia Ruffled Dupatta for Hijab Styling",
   "og_type": "website",
   "meta_description": "Shop our Fuschia Ruffled Bridal Dupatta. The perfect opaque head covering, suitable bridal lehengas and modest 2026 Muslim wedding dresses."
-}
-    {
-      "name": "Gold Dupatta",
-      "slug": "gold-dupatta",
-      "description": "This dupatta features a delicate bridal design that embodies pure refinement, making it a lovely choice for your Muslim wedding. The Gold Bridal Dupatta is meticulously crafted to complement a white hijabi lehenga or a gold Muslim wedding dress, adding a touch of opulence and grace to your bridal look. With intricate gold embellishments, this wedding dupatta enhances the elegance of your ensemble, ensuring you shine on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Gold Dupatta  </h2>This dupatta coordinates with styling for bridal looks. You can style it in various ways, such as draping it over your shoulders or wearing it to the back. This versatile dupatta adds elegance and can be paired with matching fabrics and colors. For an enhanced bridal appearance, consider using two dupattas to create a stunning effect.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/gold\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupatta</a>",
-      "mainCategorySlugs": [
-        "bridal-dupatta",
-        "gold"
-      ],
-      "images": [
-        {
-          "url": "gold Muslim wedding dupatta.webp",
-          "alt": "A luxurious Gold Dupatta featuring delicate bridal patterns and designs, crafted from fine fabrics, ideal for enhancing a hijabi lehenga.",
-          "amazonLink": "https://amzn.to/4grmbtD"
-        },
-        {
-          "url": "gold Muslim wedding dupatta actual.webp",
-          "alt": "Elegant gold dupatta crafted from luxurious organza, perfect for Muslim wedding occasions",
-          "amazonLink": "https://amzn.to/4grmbtD"
-        }
-      ],
-      "og_image": "gold Muslim wedding dupatta.webp",
-      "title_tag": "Best Gold Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Gold Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our exquisite Gold Dupatta, adorned with intricate patterns and designs, perfect for Muslim wedding occasions."
     },
     {
-      "name": "Green Dupatta",
-      "slug": "green-dupatta",
-      "description": "This dupatta features a stunning jade color silk fabric that beautifully complements a light pink hijabi lehenga or a blush pink Muslim wedding dress. The length and width of this dupatta provide ample coverage, allowing it to elegantly drape over your outfit while enhancing your overall bridal look. With its intricate patterns and designs, this dupatta is perfect for various occasions, adding a touch of sophistication to your ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Green Dupatta  </h2>This dupatta coordinates with styling for bridal looks. When worn, it gracefully covers your hair and can be adorned with flowers that peek out from the side. To ensure it stays in place, consider pinning the border to your hair, allowing you to showcase the dupatta's beauty without worry.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupatta</a>",
+  "name": "Gold Embroidered Bridal Dupatta",
+  "slug": "gold-embroidered-bridal-dupatta",
+  "description": "This gold dupatta features a delicate bridal design that embodies pure refinement, making it a lovely choice for your Muslim wedding. The Gold Bridal Dupatta is meticulously crafted to complement a white hijabi lehenga or a gold Muslim wedding dress, adding a touch of opulence and grace to your bridal look. With intricate gold embellishments, this wedding dupatta enhances the elegance of your ensemble, ensuring you shine on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this as a double dupatta</h2>For an enhanced bridal appearance, consider using two dupattas to create a stunning effect. One dupatta covers the hijab and the other is draped across the arm or shoulder for a regal effect. This dupatta is ideally worn over the shoulder or arm, while an off-white or red dupatta with a wider border can be placed over the hijab to the back.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/gold\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+  "mainCategorySlugs": [
+    "bridal-dupatta",
+    "gold"
+  ],
+  "images": [
+    {
+      "url": "bridal-dupatta/gold-muslim-wedding-dupatta.webp",
+      "alt": "Luxurious Gold Bridal Dupatta with intricate embroidery, styled for a Muslim wedding lehenga.",
+      "amazonLink": "https://amzn.to/4grmbtD",
+      "figcaption": "This Gold Embroidered Dupatta is a versatile masterpiece found on Amazon, perfect for adding a royal finish to your Nikkah outfit. The intricate patterns capture the light beautifully, making it an ideal choice for the secondary 'shoulder drape' in a double-dupatta bridal style."
+    },
+    {
+      "url": "bridal-dupatta/gold-muslim-wedding-dupatta-actual.webp",
+      "alt": "Close-up of gold organza dupatta fabric and detailed border work.",
+      "amazonLink": "https://amzn.to/4grmbtD",
+      "figcaption": "The sheer organza texture of this Gold Dupatta allows for a lightweight, breathable feel throughout a long wedding day. Its detailed border work is designed to complement both traditional gold jewelry and Muslim lehengas."
+    }
+  ],
+  "og_image": "bridal-dupatta/gold-muslim-wedding-dupatta.webp",
+  "title_tag": "Gold Embroidered Bridal Dupatta | Amazon Styling 2026",
+  "og_title": "Gold Embroidered Bridal Dupatta | Amazon Wedding Styling",
+  "og_type": "website",
+  "meta_description": "Shop the best Gold Embroidered Dupatta on Amazon. Perfect for adding opulence to your white hijabi lehenga or double dupatta styling for 2026 weddings."
+    },
+    {
+      "name": "Jade Green Silk Bridal Dupatta",
+      "slug": "jade-green-silk-bridal-dupatta",
+      "description": "This dupatta features a stunning jade color silk fabric that beautifully complements a light pink hijabi lehenga or a blush pink Muslim wedding dress. The length and width of this opaque dupatta provide ample coverage, allowing it to elegantly drape over your outfit while enhancing your overall bridal look. With its intricate patterns and designs, this dupatta is perfect for various occasions, adding a touch of sophistication to your ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Green Dupatta  </h2>This opaque silk dupatta gracefully covers your hair and can be adorned with flowers that peek out from the side. To ensure it stays in place, consider pinning the border to your hair, allowing you to showcase the dupatta's beauty without worry.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
       "mainCategorySlugs": [
         "bridal-dupatta",
         "green"
       ],
       "images": [
         {
-          "url": "green bridal dupatta.webp",
-          "alt": "A stunning Green Dupatta made of silk, featuring intricate patterns and designs, perfect for draping over a pink hijabi lehenga for bridal style inspiration.",
-          "amazonLink": "https://amzn.to/3B8HGjX"
+          "url": "bridal-dupatta/green-silk-bridal-dupatta.webp",
+          "alt": "Jade Green Silk Bridal Dupatta from Amazon with intricate patterns and designs, perfect for diverse wearing styles.",
+          "amazonLink": "https://amzn.to/3B8HGjX",
+          "figcaption": "This Jade Green Silk Dupatta is a premier choice for bridal styling inspiration. The high-quality fabric and generous length and width allow for multiple wearing styles, from a traditional head covering to a modern shoulder drape. The intricate embroidery patterns and designs stand out vividly against silk, making it an essential piece for 2026 wedding wardrobes."
         },
         {
-          "url": "green bridal dupatta2.webp",
-          "alt": "Elegant Green Dupatta in lightweight silk, perfect for bridal occasions and cultural significance",
-          "amazonLink": "https://amzn.to/3B8HGjX"
+          "url": "bridal-dupatta/green-silk-bridal-dupatta2.webp",
+          "alt": "Jade Green Silk Bridal Dupatta from Amazon with intricate patterns.",
+          "amazonLink": "https://amzn.to/3B8HGjX",
+          "figcaption": "This lightweight green silk dupatta makes it perfect for contrasting with heavy jewelry. Its rich pigment is designed to stand out beautifully against pastel-toned Muslim wedding dresses."
         }
       ],
-      "og_image": "green bridal dupatta.webp",
-      "title_tag": "Best Green Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Green Dupatta for 2026 Brides | Amazon Product Styling",
+      "og_image": "bridal-dupatta/green-silk-bridal-dupatta.webp",
+      "title_tag": "Jade Green Silk Bridal Dupatta | Amazon Styling 2026",
+      "og_title": "Jade Green Silk Bridal Dupatta | Amazon Wedding Styling",
       "og_type": "website",
-      "meta_description": "Elevate your bridal look with our exquisite Green Dupatta, crafted from luxurious silk and perfect for various occasions. Explore the beauty of dupattas today!"
+      "meta_description": "Shop the best Jade Green Silk Dupatta on Amazon. Opaque, luxurious fabric perfect for contrasting pink Muslim lehengas and modest bridal hair covering."
     },
     {
-      "name": "Peach Dupatta",
-      "slug": "peach-dupatta",
-      "description": "This dupatta features exquisite embroidery and a stunning peach color, curated by Hijabi Bridal. Elevate your bridal elegance with this beautifully crafted piece, designed to perfectly pair with any peach wedding dress or hijabi lehenga. This bridal peach dupatta adds a touch of grace to your wedding ensemble, reflecting traditional artistry and catering to the radiant beauty of the bride. Embrace your special day adorned in this stunning bridal peach dupatta and let your beauty shine.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Peach Dupatta  </h2>This dupatta coordinates with styling for bridal looks. You can style it in various ways, such as draping it over your shoulders or wearing it to the back. This dupatta adds a touch of elegance and can be complemented with matching or contrasting colors. For a bridal look, consider using two dupattas to enhance your overall appearance and create a timeless statement.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupatta</a>",
+      "name": "Peach Embroidered Dupatta",
+      "slug": "peach-embroidered-dupatta",
+      "description": "This dupatta features exquisite embroidery and a stunning peach color, curated by Hijabi Bridal to embody pure bridal elegance. Meticulously crafted from premium net fabric, this piece is designed to perfectly pair with any peach wedding dress or Muslim lehenga. The intricate patterns and designs reflect traditional artistry. This dupatta offers a generous length and width that caters to the radiant beauty of the bride while ensuring modest coverage. Embrace your special day adorned in this stunning bridal peach dupatta and let your beauty shine.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Versatile Wearing Styles for the Peach Dupatta</h2>This piece offers endless styling inspiration for diverse bridal looks. You can explore various wearing styles, such as draping the delicate fabric over your shoulders for a regal effect or wearing it to the back over your hijab to showcase the detailed patterns and designs. For a modern statement, consider using two dupattas—pairing this peach piece with a contrasting color—to enhance your overall appearance and create a timeless bridal silhouette.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",,
       "mainCategorySlugs": [
         "bridal-dupatta",
         "peach"
       ],
       "images": [
         {
-          "url": "peach bridal dupatta.webp",
-          "alt": "A beautifully embroidered Peach Dupatta, showcasing intricate patterns and a soft texture, ideal for bridal style inspiration with a hijabi lehenga.",
-          "amazonLink": "https://amzn.to/3ODSUA4"
+          "url": "bridal-dupatta/peach-bridal-dupatta.webp",
+          "alt": "Peach Embroidered Dupatta from Amazon featuring delicate patterns and designs for bridal styling.",
+          "amazonLink": "https://amzn.to/3ODSUA4",
+          "figcaption": "This Peach Embroidered Dupatta offers the perfect styling inspiration for 2026 brides. The premium fabric features intricate embroidery patterns and designs that add subtle texture to a hijabi lehenga. Its generous length and width make it easy to manipulate into various wearing styles."
         },
         {
-          "url": "peach bridal dupatta3.webp",
-          "alt": "Elegant Peach Dupatta crafted from luxurious net fabric, perfect for bridal occasions and styling inspiration",
-          "amazonLink": "https://amzn.to/3ODSUA4"
-        },
-        {
-          "url": "peach bridal dupatta 2.webp",
-          "alt": "Elegant Peach Dupatta in luxurious net fabric, adorned with intricate embroidery for bridal occasions",
-          "amazonLink": "https://amzn.to/3ODSUA4"
+          "url": "bridal-dupatta/peach-bridal-dupatta3.webp",
+          "alt": "Close up of peach net fabric dupatta with detailed embroidery.",
+          "amazonLink": "https://amzn.to/3ODSUA4",
+          "figcaption": "The lightweight net fabric used in this dupatta is ideal for double-draping. Whether you are looking for specific wearing styles or general bridal inspiration, the soft peach tone and detailed patterns and designs ensure a regal finish for any Muslim wedding dress."
         }
       ],
-      "og_image": "peach bridal dupatta.webp",
-      "title_tag": "Best Peach Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Peach Dupatta for 2026 Brides | Amazon Product Styling",
+      "og_image": "bridal-dupatta/peach-bridal-dupatta.webp",
+      "title_tag": "Peach Embroidered Bridal Dupatta | Amazon Styling",
+      "og_title": "Peach Embroidered Bridal Dupatta | Amazon Product Styling",
       "og_type": "website",
-      "meta_description": "Elevate your bridal look with our exquisite Peach Dupatta, featuring stunning embroidery and perfect for any wedding occasion. Shop now!"
+      "meta_description": "Shop this Peach Embroidered Dupatta on Amazon. Features elegant patterns and designs with ample length and width for diverse bridal wearing styles."
     },
     {
-      "name": "Red Velvet Dupatta",
-      "slug": "red-velvet-dupatta",
-      "description": "This dupatta features a luxurious red velvet fabric that enhances the beauty of your bridal attire. Drape this stunning piece over your bridal regalia to cover your hair in a stylish way, ensuring you shine on your special day. The rich texture of the velvet adds elegance to your red bridal lehenga and jewelry, making it a perfect choice for your unforgettable wedding.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Red Velvet Dupatta  </h2>This dupatta coordinates with styling for bridal looks. It can be beautifully complemented with flowers tucked at the side of your ear, allowing the dupatta to hang gracefully behind you. This versatile accessory is designed to harmonize with your bridal ensemble, adding a regal touch that elevates your overall appearance.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupatta</a>",
-      "mainCategorySlugs": [
-        "bridal-dupatta",
-        "red"
-      ],
-      "images": [
-        {
-          "url": "red bridal dupatta.webp",
-          "alt": "A stunning Red Velvet Dupatta draped elegantly over a bridal lehenga, showcasing its rich texture and luxurious style, ideal for special occasions.",
-          "amazonLink": "https://amzn.to/49o1BI5"
-        }
-      ],
-      "og_image": "red bridal dupatta.webp",
-      "title_tag": "Best Red Velvet Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Red Velvet Dupatta for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our luxurious Red Velvet Dupatta, featuring exquisite fabrics and elegant designs perfect for any wedding occasion."
+    "name": "Red Net Dupatta",
+    "slug": "red-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "red"],
+    "images": [
+      {
+        "url": "bridal-dupatta/red-net-dupatta.webp",
+        "alt": "Red Net Dupatta with gold patterns and designs, ideal for hijabi bridal wearing styles.",
+        "amazonLink": "https://amzn.to/4b4GqgK",
+        "figcaption": "This Red Net Dupatta features intricate patterns and designs on a sheer net fabric. The generous length and width offer endless styling inspiration for the modern bride."
+      },
+      {
+        "url": "bridal-dupatta/red-net-dupatta-2.webp",
+        "alt": "Red Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/4b4GqgK",
+        "figcaption": "The high-quality fabric of this red dupatta ensures it stays secure during various bridal wearing styles, making it a perfect addition to your wedding ensemble."
+      }
+    ],
+    "og_image": "bridal-dupatta/red-net-dupatta.webp",
+    "title_tag": "Red Net Bridal Dupatta | Amazon Styling",
+    "og_title": "Red Net Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Red Net Dupatta on Amazon. Features premium net fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026."
+  },
+  {
+    "name": "Champagne Bridal Dupatta",
+    "slug": "champagne-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning champagne overlay embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Fabric and Patterns and Designs for Champagne Dupattas</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "champagne"],
+    "images": [
+      {
+        "url": "bridal-dupatta/champagne-dupatta.webp",
+        "alt": "Champagne Bridal Dupatta with elegant patterns and designs for wedding styling inspiration.",
+        "amazonLink": "https://amzn.to/4kVNr79",
+        "figcaption": "This Champagne Bridal Dupatta is made from luxurious net fabric. Its ideal length and width provide high-quality styling inspiration and support multiple wearing styles."
+      },
+      {
+        "url": "bridal-dupatta/champagne-dupatta-2.webp",
+        "alt": "Champagne Dupatta featuring a thick border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/4kVNr79",
+        "figcaption": "The neutral champagne tone and intricate patterns and designs make this dupatta a versatile choice for modern and traditional bridal looks."
+      }
+    ],
+    "og_image": "bridal-dupatta/champagne-dupatta.webp",
+    "title_tag": "Champagne Bridal Dupatta | Amazon Styling",
+    "og_title": "Champagne Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Order this Champagne Bridal Dupatta on Amazon. Features intricate patterns and designs on soft fabric, perfect for various bridal wearing styles."
+  },
+  {
+    "name": "White Net Dupatta",
+    "slug": "white-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Length and Width Styling Inspiration for White Dupattas</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "white"],
+    "images": [
+      {
+        "url": "bridal-dupatta/white-net-dupatta.webp",
+        "alt": "White Net Dupatta with gold patterns and designs for bridal wearing styles.",
+        "amazonLink": "https://amzn.to/4kVNr79",
+        "figcaption": "The White Net Dupatta features a premium net fabric and standard bridal length and width. It offers excellent styling inspiration for traditional and modern bridal looks."
+      },
+      {
+        "url": "bridal-dupatta/white-net-dupatta-2.webp",
+        "alt": "White Net Dupatta featuring a thick border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/4kVNr79",
+        "figcaption": "Crafted with detailed patterns and designs, this white dupatta offers the weight and drape required for elegant modest wearing styles."
+      }
+    ],
+    "og_image": "bridal-dupatta/white-net-dupatta.webp",
+    "title_tag": "White Net Bridal Dupatta | Amazon Styling",
+    "og_title": "White Net Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our White Net Dupatta on Amazon. Elegant patterns and designs on net fabric with perfect length and width for bridal wearing styles."
+  },
+  {
+    "name": "Green Net Dupatta",
+    "slug": "green-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a green or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Fabric Details for the Green Net Dupatta</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "green"],
+    "images": [
+      {
+        "url": "bridal-dupatta/green-net-dupatta.webp",
+        "alt": "Green Net Dupatta with intricate patterns and designs for bridal styling inspiration.",
+        "amazonLink": "https://amzn.to/46nMb6y",
+        "figcaption": "This Green Net Dupatta showcases vibrant patterns and designs on soft net fabric. The generous length and width are designed for diverse bridal wearing styles."
+      },
+      {
+        "url": "bridal-dupatta/green-net-dupatta-2.webp",
+        "alt": "Green Net Dupatta featuring a thick border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/46nMb6y",
+        "figcaption": "The emerald net fabric and gold embroidery provide the perfect styling inspiration for henna or wedding reception looks."
+      }
+    ],
+    "og_image": "bridal-dupatta/green-net-dupatta.webp",
+    "title_tag": "Green Net Bridal Dupatta | Amazon Styling",
+    "og_title": "Green Net Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Buy this Green Net Dupatta on Amazon. Features gold patterns and designs on net fabric with perfect length and width for versatile wearing styles."
+  },
+  {
+    "name": "Pink Net Dupatta",
+    "slug": "pink-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a pink or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Patterns and Designs Styling Inspiration for Pink Dupattas</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "pink"],
+    "images": [
+      {
+        "url": "bridal-dupatta/pink-net-dupatta.webp",
+        "alt": "Pink Net Dupatta with elegant patterns and designs for hijabi bridal outfits.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "The Pink Net Dupatta offers a soft fabric feel and traditional patterns and designs. Its ample length and width allow for creative and elegant wearing styles."
+      }
+    ],
+    "og_image": "bridal-dupatta/pink-net-dupatta.webp",
+    "title_tag": "Pink Net Bridal Dupatta | Amazon Styling",
+    "og_title": "Pink Net Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Pink Net Dupatta on Amazon. Features beautiful patterns and designs on net fabric, ideal for various bridal wearing styles."
+  },
+  {
+    "name": "Champagne Net Dupatta",
+    "slug": "champagne-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a champagne or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Fabric Specifications for Champagne Net</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "champagne"],
+    "images": [
+      {
+        "url": "bridal-dupatta/champagne-net-dupatta.webp",
+        "alt": "Champagne Net Dupatta with intricate patterns and designs for bridal wearing styles.",
+        "amazonLink": "https://amzn.to/4kVNr79",
+        "figcaption": "This Champagne Net Dupatta features high-quality patterns and designs on premium fabric. Standard length and width ensure it works perfectly for diverse styling inspiration."
+      }
+    ],
+    "og_image": "bridal-dupatta/champagne-net-dupatta.webp",
+    "title_tag": "Champagne Net Dupatta | Amazon Styling",
+    "og_title": "Champagne Net Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Get this Champagne Net Dupatta on Amazon. Features gold patterns and designs with perfect length and width for elegant bridal wearing styles."
+  },
+  {
+    "name": "Silver Net Dupatta",
+    "slug": "silver-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a silver or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Patterns and Designs and Wearing Styles for Silver Net</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/silver\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "silver"],
+    "images": [
+      {
+        "url": "bridal-dupatta-silver-net.webp",
+        "alt": "Silver Net Dupatta with gold patterns and designs for wedding styling inspiration.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "The Silver Net Dupatta combines metallic patterns and designs with a breathable net fabric. Ideal length and width allow for a variety of elegant wearing styles."
+      }
+    ],
+    "og_image": "bridal-dupatta-silver-net.webp",
+    "title_tag": "Silver Net Bridal Dupatta | Amazon Styling",
+    "og_title": "Silver Net Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop this Silver Net Dupatta on Amazon. Features intricate gold patterns and designs on net fabric, perfect for bridal wearing styles."
+  },
+  {
+    "name": "Off White Dupatta",
+    "slug": "off-white-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a white or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Fabric and Styling Inspiration for the Off White Dupatta</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "white"],
+    "images": [
+      {
+        "url": "bridal-dupatta-off-white.webp",
+        "alt": "Off White Dupatta with traditional patterns and designs for bridal wearing styles.",
+        "amazonLink": "https://amzn.to/4kVNr79",
+        "figcaption": "This Off White Dupatta features subtle patterns and designs on a classic fabric. Its generous length and width provide the perfect styling inspiration for Nikah ceremonies."
+      }
+    ],
+    "og_image": "bridal-dupatta-off-white.webp",
+    "title_tag": "Off White Bridal Dupatta | Amazon Styling",
+    "og_title": "Off White Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Discover this Off White Dupatta on Amazon. Elegant patterns and designs on sheer fabric with ideal length and width for bridal wearing styles."
+  },
+  {
+    "name": "Peach Net Dupatta",
+    "slug": "peach-net-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a peach or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Length and Width Styling Inspiration for Peach Net Dupattas</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": ["bridal-dupatta", "peach"],
+    "images": [
+      {
+        "url": "bridal-dupatta-peach.webp",
+        "alt": "Peach Net Dupatta with intricate patterns and designs for wedding styling inspiration.",
+        "amazonLink": "https://amzn.to/3ODSUA4",
+        "figcaption": "The Peach Net Dupatta features soft fabric and elegant patterns and designs. Standard length and width make it highly versatile for various modest wearing styles."
+      }
+    ],
+    "og_image": "bridal-dupatta-peach.webp",
+    "title_tag": "Peach Net Bridal Dupatta | Amazon Styling",
+    "og_title": "Peach Net Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop this Peach Net Dupatta on Amazon. Features beautiful patterns and designs on net fabric, perfect for diverse bridal wearing styles in 2026."
+    },
+[
+  {
+    "name": "Sky Blue Dupatta",
+    "slug": "sky-blue-bridal-net-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a blue or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Sky Blue Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "blue"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/sky-blue-dupatta.webp",
+        "alt": "Sky Blue Dupatta with gold patterns and designs, ideal for hijabi bridal wearing styles.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "This Sky Blue Dupatta features intricate patterns and designs on a sheer net fabric. The generous length and width offer endless styling inspiration for the modern bride."
+      }
+    ],
+    "og_image": "bridal-dupatta/sky-blue-dupatta.webp",
+    "title_tag": "Sky Blue Bridal Dupatta | Amazon Styling",
+    "og_title": "Sky Blue Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Sky Blue Dupatta on Amazon. Features premium net fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026."
+  },
+  {
+    "name": "Maroon Bridal Dupatta",
+    "slug": "maroon-embroidered-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Patterns and Designs Styling Inspiration for Maroon Dupattas</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "red"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/maroon-dupatta.webp",
+        "alt": "Maroon Bridal Dupatta with gold patterns and designs for wedding styling inspiration.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "The Maroon Bridal Dupatta is made from luxurious net fabric. Its ideal length and width provide high-quality styling inspiration and support multiple wearing styles."
+      }
+    ],
+    "og_image": "bridal-dupatta/maroon-dupatta.webp",
+    "title_tag": "Maroon Bridal Dupatta | Amazon Styling",
+    "og_title": "Maroon Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Order this Maroon Bridal Dupatta on Amazon. Features intricate patterns and designs on soft fabric, perfect for various bridal wearing styles."
+  },
+  {
+    "name": "Champagne Red Dupatta",
+    "slug": "champagne-red-bridal-dupatta",
+    "description": "This sheer net dupatta features stunning champagne overlay embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Fabric and Patterns and Designs for Champagne and Red Dupattas</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "champagne"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/champagne-red-dupatta.webp",
+        "alt": "Champagne Dupatta with red patterns and designs for bridal wearing styles.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "This Champagne Red Dupatta features high-quality patterns and designs on premium fabric. Standard length and width ensure it works perfectly for diverse styling inspiration."
+      }
+    ],
+    "og_image": "bridal-dupatta/champagne-red-dupatta.webp",
+    "title_tag": "Champagne Red Dupatta | Amazon Styling",
+    "og_title": "Champagne Red Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Get this Champagne Red Dupatta on Amazon. Features gold patterns and designs with perfect length and width for elegant bridal wearing styles."
+  },
+  {
+    "name": "Maroon Velvet Dupatta",
+    "slug": "maroon-velvet-bridal-dupatta",
+    "description": "This maroon velvet dupatta features a thick gold border. The thickness of the border makes it an ideal addition to a maroon or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Length and Width Styling Inspiration for Maroon Velvet</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "red"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/maroon-velvet-dupatta.webp",
+        "alt": "Maroon Velvet Dupatta with gold patterns and designs for bridal wearing styles.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "The Maroon Velvet Dupatta features a premium velvet fabric and standard bridal length and width. It offers excellent styling inspiration for traditional and modern bridal looks."
+      },
+      {
+        "url": "bridal-dupatta/maroon-velvet-dupatta-2.webp",
+        "alt": "Maroon Velvet Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "Crafted with detailed patterns and designs, this maroon velvet dupatta offers the weight and drape required for elegant modest wearing styles."
+      }
+    ],
+    "og_image": "bridal-dupatta/maroon-velvet-dupatta.webp",
+    "title_tag": "Maroon Velvet Dupatta | Amazon Styling",
+    "og_title": "Maroon Velvet Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Maroon Velvet Dupatta on Amazon. Features rich velvet fabric with elegant patterns and designs, perfect for diverse bridal wearing styles."
+  },
+  {
+    "name": "Green Velvet Dupatta",
+    "slug": "green-velvet-bridal-dupatta",
+    "description": "This green velvet dupatta features a thick gold border. The thickness of the border makes it an ideal addition to a green or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Fabric Details for the Green Velvet Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "green"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/green-velvet-dupatta.webp",
+        "alt": "Green Velvet Dupatta with intricate patterns and designs for bridal styling inspiration.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "This Green Velvet Dupatta showcases vibrant patterns and designs on soft velvet fabric. The generous length and width are designed for diverse bridal wearing styles."
+      },
+      {
+        "url": "bridal-dupatta/green-velvet-dupatta-2.webp",
+        "alt": "Green Velvet Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "The emerald velvet fabric and gold embroidery provide the perfect styling inspiration for henna or wedding reception looks."
+      }
+    ],
+    "og_image": "bridal-dupatta/green-velvet-dupatta.webp",
+    "title_tag": "Green Velvet Dupatta | Amazon Styling",
+    "og_title": "Green Velvet Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Buy this Green Velvet Dupatta on Amazon. Features gold patterns and designs on velvet fabric with perfect length and width for versatile wearing styles."
+  },
+  {
+    "name": "Blue Velvet Dupatta",
+    "slug": "blue-velvet-bridal-dupatta",
+    "description": "This blue velvet dupatta features a thick gold border. The thickness of the border makes it an ideal addition to a blue or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Patterns and Designs Styling Inspiration for Blue Velvet Dupattas</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "blue"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/blue-velvet-dupatta.webp",
+        "alt": "Blue Velvet Dupatta with elegant patterns and designs for hijabi bridal outfits.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "The Blue Velvet Dupatta offers a soft fabric feel and traditional patterns and designs. Its ample length and width allow for creative and elegant wearing styles."
+      },
+      {
+        "url": "bridal-dupatta/blue-velvet-dupatta-2.webp",
+        "alt": "Blue Velvet Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/49o1BI5",
+        "figcaption": "Crafted from premium velvet, this dupatta provides the weight and drape required for elegant modest wedding ceremonies."
+      }
+    ],
+    "og_image": "bridal-dupatta/blue-velvet-dupatta.webp",
+    "title_tag": "Blue Velvet Dupatta | Amazon Styling",
+    "og_title": "Blue Velvet Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Blue Velvet Dupatta on Amazon. Features beautiful patterns and designs on velvet fabric, ideal for various bridal wearing styles."
+  },
+  {
+    "name": "Red Velvet Dupatta",
+    "slug": "red-velvet-bridal-dupatta",
+    "description": "This dupatta features a luxurious red velvet fabric that enhances the beauty of your bridal attire. Drape this stunning piece over your bridal regalia to cover your hair in a stylish way, ensuring you shine on your special day. The rich texture of the fabric adds elegance to your red bridal lehenga and jewelry, showcasing timeless patterns and designs.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Velvet Dupatta</h2>This dupatta coordinates with diverse wearing styles for bridal looks. The velvet fabric can be beautifully complemented with flowers tucked at the side of your ear, allowing the piece to hang gracefully behind you with its perfect length and width. This versatile accessory provides the styling inspiration needed to create a regal touch that elevates your overall appearance.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "red"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/red-velvet-dupatta.webp",
+        "alt": "Red Velvet Dupatta from Amazon with intricate patterns and designs, draped elegantly over a bridal lehenga.",
+        "amazonLink": "https://amzn.to/3MNzzPB",
+        "figcaption": "This Red Velvet Dupatta is a classic piece of styling inspiration for the traditional bride. The high-quality velvet fabric features detailed patterns and designs along the border."
+      },
+      {
+        "url": "bridal-dupatta/red-velvet-dupatta-2.webp",
+        "alt": "Red Velvet Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/3MNzzPB",
+        "figcaption": "The standard bridal length and width of this red velvet fabric ensure it stays secure during long wedding ceremonies while providing a regal look."
+      }
+    ],
+    "og_image": "bridal-dupatta/red-velvet-dupatta.webp",
+    "title_tag": "Red Velvet Bridal Dupatta | Amazon Styling",
+    "og_title": "Red Velvet Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Red Velvet Dupatta on Amazon. Features rich velvet fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026."
     },
     {
       "name": "Navy Blue Hijab",
