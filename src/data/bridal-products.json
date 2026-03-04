@@ -852,6 +852,34 @@
     "meta_description": "Shop our Blue Velvet Dupatta on Amazon. Features beautiful patterns and designs on velvet fabric, ideal for various bridal wearing styles."
   },
   {
+    "name": "Red Velvet Dupatta",
+    "slug": "red-velvet-bridal-dupatta",
+    "description": "This dupatta features a luxurious red velvet fabric that enhances the beauty of your bridal attire. Drape this stunning piece over your bridal regalia to cover your hair in a stylish way, ensuring you shine on your special day. The rich texture of the fabric adds elegance to your red bridal lehenga and jewelry, showcasing timeless patterns and designs.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Velvet Dupatta</h2>This dupatta coordinates with diverse wearing styles for bridal looks. The velvet fabric can be beautifully complemented with flowers tucked at the side of your ear, allowing the piece to hang gracefully behind you with its perfect length and width. This versatile accessory provides the styling inspiration needed to create a regal touch that elevates your overall appearance.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+    "mainCategorySlugs": [
+      "bridal-dupatta",
+      "red"
+    ],
+    "images": [
+      {
+        "url": "bridal-dupatta/red-velvet-dupatta.webp",
+        "alt": "Red Velvet Dupatta from Amazon with intricate patterns and designs, draped elegantly over a bridal lehenga.",
+        "amazonLink": "https://amzn.to/3MNzzPB",
+        "figcaption": "This Red Velvet Dupatta is a classic piece of styling inspiration for the traditional bride. The high-quality velvet fabric features detailed patterns and designs along the border."
+      },
+      {
+        "url": "bridal-dupatta/red-velvet-dupatta-2.webp",
+        "alt": "Red Velvet Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+        "amazonLink": "https://amzn.to/3MNzzPB",
+        "figcaption": "The standard bridal length and width of this red velvet fabric ensure it stays secure during long wedding ceremonies while providing a regal look."
+      }
+    ],
+    "og_image": "bridal-dupatta/red-velvet-dupatta.webp",
+    "title_tag": "Red Velvet Bridal Dupatta | Amazon Styling",
+    "og_title": "Red Velvet Bridal Dupatta | Amazon Product Styling",
+    "og_type": "website",
+    "meta_description": "Shop our Red Velvet Dupatta on Amazon. Features rich velvet fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026."
+    },
+    {
       "name": "Navy Blue Hijab",
       "slug": "navy-blue-hijab",
       "description": "Amazon Color: NAVY BLUE\nThis Hijab features a stunning navy blue color that perfectly complements your Muslim wedding dress. Designed for Muslim women who appreciate modest fashion, this hijab is an essential accessory for your special day. With its elegant style, it enhances the overall bridal look, making it a memorable choice for formal events.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to wear this Navy Blue Hijab  </h2>This Hijab coordinates with styling for bridal looks. You can elegantly drape nikkah jewelry on it, adding a unique touch to your ensemble. Whether you choose to wear it in a classic style or opt for a more modern approach, this hijab will elevate your bridal attire and make you feel truly special.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
@@ -1825,7 +1853,7 @@
         },
         {
           "url": "71hngN2w7dL._AC_SX679_.webp",
-          "alt": "Elegant royal Blue Kurta Set,, Islamic Nikah Dress for Groom featuring lovely fabric for a luxurious look.",
+          "alt": "Elegant royal Blue Kurta Set, Islamic Nikah Dress for Groom featuring lovely fabric for a luxurious look.",
           "amazonLink": "https://amzn.to/3HcYIjs"
         },
         {
