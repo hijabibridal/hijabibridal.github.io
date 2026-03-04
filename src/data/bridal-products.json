@@ -400,7 +400,7 @@
       "meta_description": "Elevate your layered Muslim bridal look with our stunning Rhinestone Bridal Belt. Available in red, gold, green and pink, it's perfect for a chic, personalized touch on your special day."
     },
     {
-  "name": "Fuschia Ruffled Lace Dupatta",
+  "name": "Fuschia Ruffled Dupatta",
   "slug": "fuschia-ruffled-bridal-dupatta",
   "description": "Elevate your Nikah or Walima ensemble with this vibrant fuschia dupatta, specifically designed for modern modest bridal styling. As a opaque dupatta, this dupatta can easily replace your hijab, and because of the ruffles, it can be used to hide your bridal makeup. The lightweight fabric ensures a graceful drape that elegantly covers the head and shoulders. Whether paired with a matching fuschia gown or used as a bold contrast to silver embroidery, this ruffled dupatta brings a beautiful aesthetic to 2026 Muslim wedding dresses.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Style a Double Dupatta Look</h2>For a sophisticated bridal silhouette, use this ruffled piece as your head-covering dupatta while a sheer dupatta is draped across the shoulder. This coordination adds a regal look to your ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
   "mainCategorySlugs": [
@@ -409,13 +409,13 @@
   ],
   "images": [
     {
-      "url": "/bridal-dupatta/fuschia-bridal-dupatta.webp",
+      "url": "/bridal-dupatta/fuschia-ruffled-bridal-dupatta.webp",
       "alt": "Fuschia Bridal Dupatta with ruffles for Muslim lehenga styling.",
       "amazonLink": "https://amzn.to/4fEajnd",
       "figcaption": "This vibrant Fuschia Ruffled Dupatta is a must-have for 2026 brides looking to achieve the perfect opaque look. When worn as a loose hijab, this dupatta provides a soft, romantic frame for the face, making it ideal for Nikah ceremonies and festive Muslim wedding celebrations. Its lightweight texture gives a windswept effect."
     }
   ],
-  "og_image": "fuschia-bridal-dupatta.webp",
+  "og_image": "fuschia-ruffled-bridal-dupatta.webp",
   "title_tag": "Fuschia Ruffled Bridal Dupatta | Amazon Styling 2026",
   "og_title": "Vibrant Fuschia Ruffled Dupatta for Hijab Styling",
   "og_type": "website",
@@ -431,13 +431,13 @@
   ],
   "images": [
     {
-      "url": "bridal-dupatta/gold-muslim-wedding-dupatta.webp",
+      "url": "bridal-dupatta/gold-Muslim-wedding-dupatta.webp",
       "alt": "Luxurious Gold Bridal Dupatta with intricate embroidery, styled for a Muslim wedding lehenga.",
       "amazonLink": "https://amzn.to/4grmbtD",
       "figcaption": "This Gold Embroidered Dupatta is a versatile masterpiece found on Amazon, perfect for adding a royal finish to your Nikkah outfit. The intricate patterns capture the light beautifully, making it an ideal choice for the secondary 'shoulder drape' in a double-dupatta bridal style."
     },
     {
-      "url": "bridal-dupatta/gold-muslim-wedding-dupatta-actual.webp",
+      "url": "bridal-dupatta/gold-Muslim-wedding-dupatta-actual.webp",
       "alt": "Close-up of gold organza dupatta fabric and detailed border work.",
       "amazonLink": "https://amzn.to/4grmbtD",
       "figcaption": "The sheer organza texture of this Gold Dupatta allows for a lightweight, breathable feel throughout a long wedding day. Its detailed border work is designed to complement both traditional gold jewelry and Muslim lehengas."
@@ -650,13 +650,13 @@
     "mainCategorySlugs": ["bridal-dupatta", "silver"],
     "images": [
       {
-        "url": "bridal-dupatta-silver-net.webp",
+        "url": "bridal-dupatta/bridal-dupatta-silver-net.webp",
         "alt": "Silver Net Dupatta with gold patterns and designs for wedding styling inspiration.",
         "amazonLink": "https://amzn.to/49o1BI5",
         "figcaption": "The Silver Net Dupatta combines metallic patterns and designs with a breathable net fabric. Ideal length and width allow for a variety of elegant wearing styles."
       }
     ],
-    "og_image": "bridal-dupatta-silver-net.webp",
+    "og_image": "bridal-dupatta/bridal-dupatta-silver-net.webp",
     "title_tag": "Silver Net Bridal Dupatta | Amazon Styling",
     "og_title": "Silver Net Bridal Dupatta | Amazon Product Styling",
     "og_type": "website",
@@ -669,13 +669,13 @@
     "mainCategorySlugs": ["bridal-dupatta", "white"],
     "images": [
       {
-        "url": "bridal-dupatta-off-white.webp",
+        "url": "bridal-dupatta/bridal-dupatta-off-white.webp",
         "alt": "Off White Dupatta with traditional patterns and designs for bridal wearing styles.",
         "amazonLink": "https://amzn.to/4kVNr79",
         "figcaption": "This Off White Dupatta features subtle patterns and designs on a classic fabric. Its generous length and width provide the perfect styling inspiration for Nikah ceremonies."
       }
     ],
-    "og_image": "bridal-dupatta-off-white.webp",
+    "og_image": "bridal-dupatta/bridal-dupatta-off-white.webp",
     "title_tag": "Off White Bridal Dupatta | Amazon Styling",
     "og_title": "Off White Bridal Dupatta | Amazon Product Styling",
     "og_type": "website",
@@ -688,13 +688,13 @@
     "mainCategorySlugs": ["bridal-dupatta", "peach"],
     "images": [
       {
-        "url": "bridal-dupatta-peach.webp",
+        "url": "bridal-dupatta/bridal-dupatta-peach.webp",
         "alt": "Peach Net Dupatta with intricate patterns and designs for wedding styling inspiration.",
         "amazonLink": "https://amzn.to/3ODSUA4",
         "figcaption": "The Peach Net Dupatta features soft fabric and elegant patterns and designs. Standard length and width make it highly versatile for various modest wearing styles."
       }
     ],
-    "og_image": "bridal-dupatta-peach.webp",
+    "og_image": "bridal-dupatta/bridal-dupatta-peach.webp",
     "title_tag": "Peach Net Bridal Dupatta | Amazon Styling",
     "og_title": "Peach Net Bridal Dupatta | Amazon Product Styling",
     "og_type": "website",
