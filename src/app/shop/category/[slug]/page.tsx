@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: PageProps) {
   
   if (!category) notFound();
 
-  // Define sorting priorities
+  // Define sorting priorities based on category slugs
   const COLOR_PRIORITY = ['white', 'red', 'champagne'];
   const TYPE_PRIORITY = ['sharara', 'muslim-lehenga', 'muslim-wedding-dresses'];
 
@@ -40,16 +40,15 @@ export default async function CategoryPage({ params }: PageProps) {
   const filteredProducts = productData.products
     .filter((p) => p.mainCategorySlugs.includes(slug))
     .sort((a, b) => {
-      // 1. Check for color priority
-      const aColorMatch = COLOR_PRIORITY.indexOf(a.color?.toLowerCase());
-      const bColorMatch = COLOR_PRIORITY.indexOf(b.color?.toLowerCase());
+      // 1. Check for color category slug priority
+      const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
+      const bColorMatch = COLOR_PRIORITY.findIndex(color => b.mainCategorySlugs.includes(color));
 
       if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
       if (aColorMatch !== -1) return -1;
       if (bColorMatch !== -1) return 1;
 
-      // 2. Check for category slug priority (Sharara, then Lehengas, then Dresses)
-      // We check if any of the product's category slugs match our priority list
+      // 2. Check for garment type category slug priority
       const aTypeMatch = TYPE_PRIORITY.findIndex(type => a.mainCategorySlugs.includes(type));
       const bTypeMatch = TYPE_PRIORITY.findIndex(type => b.mainCategorySlugs.includes(type));
 
