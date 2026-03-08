@@ -32,10 +32,33 @@ export default async function CategoryPage({ params }: PageProps) {
   
   if (!category) notFound();
 
-  // Filters products that belong to this specific category slug
-  const filteredProducts = productData.products.filter((p) => 
-    p.mainCategorySlugs.includes(slug)
-  );
+  // Define sorting priorities
+  const COLOR_PRIORITY = ['white', 'red', 'champagne'];
+  const TYPE_PRIORITY = ['sharara', 'muslim-lehenga', 'muslim-wedding-dresses'];
+
+  // Filters and sorts products that belong to this specific category slug
+  const filteredProducts = productData.products
+    .filter((p) => p.mainCategorySlugs.includes(slug))
+    .sort((a, b) => {
+      // 1. Check for color priority
+      const aColorMatch = COLOR_PRIORITY.indexOf(a.color?.toLowerCase());
+      const bColorMatch = COLOR_PRIORITY.indexOf(b.color?.toLowerCase());
+
+      if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
+      if (aColorMatch !== -1) return -1;
+      if (bColorMatch !== -1) return 1;
+
+      // 2. Check for category slug priority (Sharara, then Lehengas, then Dresses)
+      // We check if any of the product's category slugs match our priority list
+      const aTypeMatch = TYPE_PRIORITY.findIndex(type => a.mainCategorySlugs.includes(type));
+      const bTypeMatch = TYPE_PRIORITY.findIndex(type => b.mainCategorySlugs.includes(type));
+
+      if (aTypeMatch !== -1 && bTypeMatch !== -1) return aTypeMatch - bTypeMatch;
+      if (aTypeMatch !== -1) return -1;
+      if (bTypeMatch !== -1) return 1;
+
+      return 0;
+    });
 
   /**
    * DESCRIPTION LOGIC:
