@@ -40,21 +40,26 @@ export default async function CategoryPage({ params }: PageProps) {
   const filteredProducts = productData.products
     .filter((p) => p.mainCategorySlugs.includes(slug))
     .sort((a, b) => {
-      // 1. Check for color category slug priority
+      // 1. Primary Sort: Color category slug priority
       const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
       const bColorMatch = COLOR_PRIORITY.findIndex(color => b.mainCategorySlugs.includes(color));
 
-      if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
-      if (aColorMatch !== -1) return -1;
-      if (bColorMatch !== -1) return 1;
+      if (aColorMatch !== bColorMatch) {
+        if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
+        if (aColorMatch !== -1) return -1;
+        if (bColorMatch !== -1) return 1;
+      }
 
-      // 2. Check for garment type category slug priority
+      // 2. Secondary Sort (Sub-sort): Garment type category slug priority
+      // This ensures that on a Color page, types are still prioritized
       const aTypeMatch = TYPE_PRIORITY.findIndex(type => a.mainCategorySlugs.includes(type));
       const bTypeMatch = TYPE_PRIORITY.findIndex(type => b.mainCategorySlugs.includes(type));
 
-      if (aTypeMatch !== -1 && bTypeMatch !== -1) return aTypeMatch - bTypeMatch;
-      if (aTypeMatch !== -1) return -1;
-      if (bTypeMatch !== -1) return 1;
+      if (aTypeMatch !== bTypeMatch) {
+        if (aTypeMatch !== -1 && bTypeMatch !== -1) return aTypeMatch - bTypeMatch;
+        if (aTypeMatch !== -1) return -1;
+        if (bTypeMatch !== -1) return 1;
+      }
 
       return 0;
     });
