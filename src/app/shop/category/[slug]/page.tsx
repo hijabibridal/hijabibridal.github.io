@@ -172,15 +172,24 @@ export default async function CategoryPage({ params }: PageProps) {
                 ))}
               </div>
 
-              {/* Inject JSON-LD for Google SEO visibility */}
+              {/* Inject JSON-LD for Google SEO visibility and IPTC declaration */}
               <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ 
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": parsedFaqs
-                  }) 
+                  __html: JSON.stringify([
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      "mainEntity": parsedFaqs
+                    },
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "ImageObject",
+                      "contentUrl": category.imageUrl,
+                      "description": category.imageAlt,
+                      "digitalSourceType": category.iptc
+                    }
+                  ]) 
                 }}
               />
             </div>
