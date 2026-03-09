@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// Uses titleTag and metaDescription columns from your JSON
+// Implements og:image and og:image:alt in the background for Google Search
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const category = productData.mainCategories.find((c) => c.slug === slug);
@@ -23,6 +23,18 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: category.titleTag,
     description: category.metaDescription,
+    openGraph: {
+      title: category.titleTag,
+      description: category.metaDescription,
+      images: [
+        {
+          url: category.imageUrl || '/images/default-share.jpg',
+          width: 1200,
+          height: 630,
+          alt: category.imageAlt || category.name,
+        },
+      ],
+    },
   };
 }
 
@@ -51,7 +63,6 @@ export default async function CategoryPage({ params }: PageProps) {
       }
 
       // 2. Secondary Sort (Sub-sort): Garment type category slug priority
-      // This ensures that on a Color page, types are still prioritized
       const aTypeMatch = TYPE_PRIORITY.findIndex(type => a.mainCategorySlugs.includes(type));
       const bTypeMatch = TYPE_PRIORITY.findIndex(type => b.mainCategorySlugs.includes(type));
 

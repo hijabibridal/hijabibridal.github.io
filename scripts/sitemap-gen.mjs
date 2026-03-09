@@ -21,5 +21,5 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 </urlset>`;
 
 // Changed filename to sitemap.xml to match standard expectations
-fs.writeFileSync('./public/sitemap.xml', sitemap);
+fs.writeFileSync('./public/public/sitemap.xml', sitemap);
 console.log('✅ Sitemap generated as sitemap.xml');
