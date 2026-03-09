@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hijabibridal.github.io/sitemap_index.xml
+Sitemap: https://hijabibridal.github.io/sitemap/sitemap.xml

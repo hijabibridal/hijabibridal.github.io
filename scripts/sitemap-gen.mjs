@@ -20,6 +20,14 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   ${blogData.articles.map(a => `  <url><loc>${BASE_URL}/blog/${a.slug}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
 </urlset>`;
 
-// Changed filename to sitemap.xml to match standard expectations
-fs.writeFileSync('./public/sitemap.xml', sitemap);
-console.log('✅ Sitemap generated as sitemap.xml');
+// 1. Define the directory path
+const dir = './public/sitemap';
+
+// 2. Create the directory if it doesn't exist
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir, { recursive: true });
+}
+
+// 3. Write the file to the new location
+fs.writeFileSync(`${dir}/sitemap.xml`, sitemap);
+console.log('✅ Sitemap generated at ./public/sitemap/sitemap.xml');
