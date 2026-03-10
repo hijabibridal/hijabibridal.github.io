@@ -21,20 +21,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // 1. DYNAMIC FILTERING LOGIC
-  // Uses the category slugs defined in the blog JSON to match products
-  const articleCategories = article.mainCategorySlugs || [];
+  // 1. DYNAMIC MATCHING LOGIC (Using Blog Slug/Title to Product Slugs)
+  // We extract a keyword from the blog slug (e.g., 'bridal-hijab-trends' -> 'hijab')
+  const blogIdentifier = (article.slug + " " + article.pageTitle).toLowerCase();
   
-  const relatedItems = productData.products.filter(p => 
-    p.category_slugs?.some((s: string) => articleCategories.includes(s))
+  // Define keywords to look for in the blog's info
+  const keywords = ["hijab", "dupatta", "lehenga", "abaya", "bridal"];
+  const matchedKeyword = keywords.find(k => blogIdentifier.includes(k)) || "";
+
+  // Filter products where the product's mainCategorySlugs contains the matched keyword
+  let relatedItems = productData.products.filter(p => 
+    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
   );
 
-  // Helper to find specific colors within the matched category
-  const getProductByColor = (colorName: string) => 
-    relatedItems.find(p => p.color?.toLowerCase() === colorName.toLowerCase());
+  // Fallback: if no keyword match, use all products
+  if (relatedItems.length === 0) {
+    relatedItems = productData.products;
+  }
 
-  // 2. BUILD THE TRIO (Red, White, Champagne)
-  // If a color is missing in that category, it falls back to the next available item in that category
+  // 2. COLOR FILTERING (Searching within product's mainCategorySlugs)
+  const getProductByColor = (colorName: string) => 
+    relatedItems.find(p => 
+      p.mainCategorySlugs?.some((s: string) => s.toLowerCase() === colorName.toLowerCase())
+    );
+
+  // Build the trio: Red, White, Champagne
   const sidebarProducts = [
     getProductByColor('red') || relatedItems[0],
     getProductByColor('white') || relatedItems[1],
@@ -110,7 +121,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     href={`/shop/product/${prod.slug}`}
                     className="group block"
                   >
-                    {/* SIZED DOWN: Height reduced from h-64 to h-[230px] (approx 90%) */}
                     <div className="relative h-[230px] w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
                       <Image 
                         src={`/images/${firstImage.url.replace(/^\//, '')}`} 
