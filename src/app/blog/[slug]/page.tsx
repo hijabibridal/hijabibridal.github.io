@@ -21,26 +21,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // 1. Sidebar Selection Logic
-  const categories = article.mainCategorySlugs || [];
+  // 1. DYNAMIC FILTERING LOGIC
+  // Uses the category slugs defined in the blog JSON to match products
+  const articleCategories = article.mainCategorySlugs || [];
   
-  // Filter products by the article's categories
-  let relatedItems = productData.products.filter(p => 
-    p.category_slugs?.some((s: string) => categories.includes(s))
+  const relatedItems = productData.products.filter(p => 
+    p.category_slugs?.some((s: string) => articleCategories.includes(s))
   );
 
-  // Fallback: Use all products if no category match is found
-  if (relatedItems.length === 0) {
-    relatedItems = productData.products;
-  }
+  // Helper to find specific colors within the matched category
+  const getProductByColor = (colorName: string) => 
+    relatedItems.find(p => p.color?.toLowerCase() === colorName.toLowerCase());
 
-  // Helper to find specific colors: White, Red, Champagne
-  const getProductByColor = (color: string) => 
-    relatedItems.find(p => p.color?.toLowerCase() === color.toLowerCase());
-
+  // 2. BUILD THE TRIO (Red, White, Champagne)
+  // If a color is missing in that category, it falls back to the next available item in that category
   const sidebarProducts = [
-    getProductByColor('white') || relatedItems[0],
-    getProductByColor('red') || relatedItems[1],
+    getProductByColor('red') || relatedItems[0],
+    getProductByColor('white') || relatedItems[1],
     getProductByColor('champagne') || relatedItems[2]
   ].filter(Boolean).slice(0, 3);
 
@@ -96,15 +93,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           />
         </div>
 
-        {/* SIDEBAR COLUMN: Trending Products */}
+        {/* SIDEBAR COLUMN */}
         <aside className="lg:col-span-4">
           <div className="lg:sticky lg:top-8">
             <h2 className="text-2xl font-black uppercase tracking-tighter text-black mb-6 border-b-4 border-pink-100 pb-2">
               Trending Designs
             </h2>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
               {sidebarProducts.map((prod: any) => {
-                // Accessing the first image in the nested array
                 const firstImage = prod.images && prod.images[0];
                 if (!firstImage) return null;
 
@@ -114,21 +110,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     href={`/shop/product/${prod.slug}`}
                     className="group block"
                   >
-                    <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
+                    {/* SIZED DOWN: Height reduced from h-64 to h-[230px] (approx 90%) */}
+                    <div className="relative h-[230px] w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
                       <Image 
                         src={`/images/${firstImage.url.replace(/^\//, '')}`} 
                         alt={firstImage.alt || prod.name}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         unoptimized
                       />
                     </div>
-                    <h3 className="text-black font-bold uppercase text-sm tracking-widest group-hover:text-pink-600 transition-colors">
+                    <h3 className="text-black font-bold uppercase text-xs tracking-widest group-hover:text-pink-600 transition-colors">
                       {prod.name}
                     </h3>
-                    <p className="text-pink-500 text-xs font-bold uppercase mt-1">
-                      View Details →
-                    </p>
                   </Link>
                 );
               })}
