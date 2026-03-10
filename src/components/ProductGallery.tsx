@@ -11,7 +11,8 @@ export default function ProductGallery({ images, productName, fallbackLink, comb
     ? activeImage.amazonLink 
     : fallbackLink;
 
-  const mainSrc = `/images/${activeImage.url.replace(/^\\//, '')}`;
+  // FIXED: Changed double backslash to single backslash in the regex
+  const mainSrc = `/images/${activeImage.url.replace(/^\//, '')}`;
 
   return (
     <div className="flex flex-col gap-6">
@@ -41,7 +42,8 @@ export default function ProductGallery({ images, productName, fallbackLink, comb
 
       <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
         {images.map((img: any, i: number) => {
-          const thumbSrc = `/images/${img.url.replace(/^\\//, '')}`;
+          // FIXED: Changed double backslash to single backslash here as well
+          const thumbSrc = `/images/${img.url.replace(/^\//, '')}`;
           return (
             <button
               key={i}
@@ -59,7 +61,8 @@ export default function ProductGallery({ images, productName, fallbackLink, comb
       {combinedCaption && (
         <figure className="mt-4">
           <figcaption className="text-gray-700 text-lg leading-relaxed border-l-4 border-pink-100 pl-6 italic whitespace-pre-wrap">
-            <div dangerouslySetInnerHTML={{ __html: combinedCaption.replace(/\\n/g, '<br/>') }} />
+            {/* FIXED: Changed double backslash to single backslash in the replace function */}
+            <div dangerouslySetInnerHTML={{ __html: combinedCaption.replace(/\n/g, '<br/>') }} />
           </figcaption>
         </figure>
       )}
