@@ -21,24 +21,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // 1. ROBUST MATCHING LOGIC
-  const searchContext = `${article.slug} ${article.pageTitle}`.toLowerCase();
-  const productTypes = ["hijab", "dupatta", "lehenga", "abaya", "gown", "dress", "jewelry"];
-  const matchedType = productTypes.find(type => searchContext.includes(type)) || "";
+  // 1. SIMPLE KEYWORD MATCH
+  const searchContext = (article.slug + " " + article.pageTitle).toLowerCase();
+  const keywords = ["hijab", "dupatta", "lehenga", "abaya", "bridal"];
+  const matchedKeyword = keywords.find(k => searchContext.includes(k)) || "";
 
-  // Filter products by type
-  const relatedItems = productData.products.filter(p => 
-    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedType))
+  // Filter products by the keyword found in their mainCategorySlugs
+  const relatedPool = productData.products.filter(p => 
+    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
   );
 
-  const finalPool = relatedItems.length > 0 ? relatedItems : productData.products;
+  const finalPool = relatedPool.length > 0 ? relatedPool : productData.products;
 
-  // 2. GALLERY COMPONENT (Helper)
+  // 2. GALLERY BUILDER
   const ProductGallery = ({ items }: { items: any[] }) => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10 not-prose">
       {items.map((prod) => (
         <Link key={prod.slug} href={`/shop/product/${prod.slug}`} className="group block">
-          <div className="relative h-[230px] w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
+          <div className="relative h-[192px] w-full rounded-2xl overflow-hidden shadow-sm bg-gray-50 mb-2 border border-pink-50">
             <Image 
               src={`/images/${prod.images[0].url.replace(/^\//, '')}`} 
               alt={prod.name} 
@@ -47,40 +47,33 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               unoptimized 
             />
           </div>
-          <h3 className="text-black font-bold uppercase text-xs tracking-widest group-hover:text-pink-600 transition-colors text-center">
+          <p className="text-black font-bold uppercase text-[10px] tracking-widest text-center group-hover:text-pink-600">
             {prod.name}
-          </h3>
+          </p>
         </Link>
       ))}
     </div>
   );
 
-  // 3. SEPARATE PRODUCTS FOR GALLERIES
+  // 3. PRODUCT SELECTION
+  const getByColor = (color: string) => finalPool.find(p => 
+    p.mainCategorySlugs?.some(s => s.toLowerCase() === color)
+  );
+
   const primaryColors = ['red', 'white', 'champagne'];
   
   const galleryOneItems = [
-    finalPool.find(p => p.mainCategorySlugs?.some(s => s.toLowerCase() === 'red')) || finalPool[0],
-    finalPool.find(p => p.mainCategorySlugs?.some(s => s.toLowerCase() === 'white')) || finalPool[1],
-    finalPool.find(p => p.mainCategorySlugs?.some(s => s.toLowerCase() === 'champagne')) || finalPool[2]
+    getByColor('red') || finalPool[0],
+    getByColor('white') || finalPool[1],
+    getByColor('champagne') || finalPool[2]
   ].filter(Boolean).slice(0, 3);
 
   const galleryTwoItems = finalPool
     .filter(p => !p.mainCategorySlugs?.some(s => primaryColors.includes(s.toLowerCase())))
     .slice(0, 3);
 
-  // 4. INJECT GALLERIES INTO HTML BODY
-  const bodyParts = article.htmlBody.split('<h2>');
-  
-  // If there are at least two H2s, we can place them precisely
-  let finalContent = article.htmlBody;
-  if (bodyParts.length >= 3) {
-    const firstH2 = '<h2>' + bodyParts[1];
-    const lastH2Index = bodyParts.length - 1;
-    const lastH2 = '<h2>' + bodyParts[lastH2Index];
-
-    // Note: React elements cannot be injected directly into dangerouslySetInnerHTML strings, 
-    // so we render the content in parts in the return statement below.
-  }
+  // 4. CONTENT SPLITTING
+  const parts = article.htmlBody.split('<h2>');
 
   const faqSchema = article.FAQ_schema ? {
     "@context": "https://schema.org",
@@ -89,13 +82,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   } : null;
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
       {faqSchema && (
-        <Script
-          id="faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
 
       <Breadcrumbs 
@@ -111,39 +100,37 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </header>
 
       {article.featuredImageUrl && (
-        <div className="mb-10 rounded-3xl overflow-hidden shadow-2xl relative bg-gray-50 h-[450px]">
-          <Image 
-            src={article.featuredImageUrl} 
-            alt={article.featuredImageAlt} 
-            fill 
-            className="object-contain p-4" 
-            unoptimized 
-          />
+        <div className="mb-10 rounded-3xl overflow-hidden shadow-2xl relative bg-gray-50 h-[400px]">
+          <Image src={article.featuredImageUrl} alt={article.featuredImageAlt} fill className="object-contain p-4" unoptimized />
         </div>
       )}
 
-      <div className="prose prose-pink max-w-none text-lg leading-relaxed text-black
-                   [&_h2]:!text-pink-600 [&_h2]:!font-bold [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4
-                   [&_h3]:!text-pink-500 [&_h3]:!font-bold [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3">
+      <div className="prose prose-pink max-w-none text-lg text-black
+                   [&_h2]:!text-pink-600 [&_h2]:!font-bold [&_h2]:text-3xl [&_h2]:mt-12 [&_h2]:mb-6">
         
-        {/* Render content before first H2 */}
-        <div dangerouslySetInnerHTML={{ __html: bodyParts[0] }} />
+        {/* Intro */}
+        <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
 
-        {/* Gallery 1: Red, White, Champagne */}
-        <h2 className="text-[#db2777] font-black text-2xl uppercase tracking-tight mb-4">Trending Collections</h2>
-        <ProductGallery items={galleryOneItems} />
+        {/* Gallery 1 (Red/White/Champagne) before first H2 */}
+        {parts.length > 1 && (
+          <>
+            <ProductGallery items={galleryOneItems} />
+            <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[1] }} />
+          </>
+        )}
 
-        {/* Render middle content */}
-        {bodyParts.slice(1, -1).map((part: string, i: number) => (
+        {/* Middle parts */}
+        {parts.slice(2, -1).map((part: string, i: number) => (
           <div key={i} dangerouslySetInnerHTML={{ __html: '<h2>' + part }} />
         ))}
 
-        {/* Gallery 2: Alternate Colors */}
-        <h2 className="text-[#db2777] font-black text-2xl uppercase tracking-tight mb-4">More Styles to Explore</h2>
-        <ProductGallery items={galleryTwoItems} />
-
-        {/* Render content after last H2 */}
-        <div dangerouslySetInnerHTML={{ __html: '<h2>' + bodyParts[bodyParts.length - 1] }} />
+        {/* Gallery 2 (Alternates) before last H2 */}
+        {parts.length > 2 && (
+          <>
+            <ProductGallery items={galleryTwoItems} />
+            <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[parts.length - 1] }} />
+          </>
+        )}
       </div>
     </div>
   );
