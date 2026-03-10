@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import blogData from "@/data/blog-articles.json";
-import productData from "@/data/bridal-products.json"; // Accessing your product list
+import productData from "@/data/bridal-products.json"; 
 import type { Metadata } from "next";
 import Script from "next/script";
 
@@ -21,12 +21,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // Logic to find 3 related products (White, Red, Champagne)
+  // 1. Sidebar Selection Logic
   const categories = article.mainCategorySlugs || [];
-  const relatedItems = productData.products.filter(p => 
+  
+  // Filter products by the article's categories
+  let relatedItems = productData.products.filter(p => 
     p.category_slugs?.some((s: string) => categories.includes(s))
   );
 
+  // Fallback: Use all products if no category match is found
+  if (relatedItems.length === 0) {
+    relatedItems = productData.products;
+  }
+
+  // Helper to find specific colors: White, Red, Champagne
   const getProductByColor = (color: string) => 
     relatedItems.find(p => p.color?.toLowerCase() === color.toLowerCase());
 
@@ -81,43 +89,49 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <article 
             className="prose prose-pink max-w-none text-lg leading-relaxed text-black
-                       [&_h2]:!text-pink-600 [&_h2]:!font-normal [&_h2]:!not-italic [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4
-                       [&_h3]:!text-pink-500 [&_h3]:!font-normal [&_h3]:!not-italic [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3
+                       [&_h2]:!text-pink-600 [&_h2]:!font-bold [&_h2]:!not-italic [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4
+                       [&_h3]:!text-pink-500 [&_h3]:!font-bold [&_h3]:!not-italic [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3
                        [&_a]:!text-pink-600 [&_a]:!font-bold [&_a]:underline decoration-pink-200 hover:decoration-pink-500"
             dangerouslySetInnerHTML={{ __html: article.htmlBody }} 
           />
         </div>
 
-        {/* SIDEBAR COLUMN: Related Trending Products */}
-        <aside className="lg:col-span-4 space-y-8">
-          <div className="sticky top-8">
+        {/* SIDEBAR COLUMN: Trending Products */}
+        <aside className="lg:col-span-4">
+          <div className="lg:sticky lg:top-8">
             <h2 className="text-2xl font-black uppercase tracking-tighter text-black mb-6 border-b-4 border-pink-100 pb-2">
               Trending Designs
             </h2>
             <div className="flex flex-col gap-8">
-              {sidebarProducts.map((prod: any) => (
-                <Link 
-                  key={prod.slug} 
-                  href={`/shop/product/${prod.slug}`}
-                  className="group block"
-                >
-                  <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
-                    <Image 
-                      src={`/images/${prod.images[0].url}`} 
-                      alt={prod.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      unoptimized
-                    />
-                  </div>
-                  <h3 className="text-black font-bold uppercase text-sm tracking-widest group-hover:text-pink-600 transition-colors">
-                    {prod.name}
-                  </h3>
-                  <p className="text-pink-500 text-xs font-bold uppercase mt-1">
-                    View Details →
-                  </p>
-                </Link>
-              ))}
+              {sidebarProducts.map((prod: any) => {
+                // Accessing the first image in the nested array
+                const firstImage = prod.images && prod.images[0];
+                if (!firstImage) return null;
+
+                return (
+                  <Link 
+                    key={prod.slug} 
+                    href={`/shop/product/${prod.slug}`}
+                    className="group block"
+                  >
+                    <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
+                      <Image 
+                        src={`/images/${firstImage.url.replace(/^\//, '')}`} 
+                        alt={firstImage.alt || prod.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        unoptimized
+                      />
+                    </div>
+                    <h3 className="text-black font-bold uppercase text-sm tracking-widest group-hover:text-pink-600 transition-colors">
+                      {prod.name}
+                    </h3>
+                    <p className="text-pink-500 text-xs font-bold uppercase mt-1">
+                      View Details →
+                    </p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </aside>
