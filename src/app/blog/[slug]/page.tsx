@@ -21,31 +21,33 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // 1. DYNAMIC MATCHING LOGIC (Using Blog Slug/Title to Product Slugs)
-  // We extract a keyword from the blog slug (e.g., 'bridal-hijab-trends' -> 'hijab')
-  const blogIdentifier = (article.slug + " " + article.pageTitle).toLowerCase();
+  // 1. IMPROVED FUZZY MATCHING LOGIC
+  // We clean the title and slug to find the core product subject
+  const searchContext = `${article.slug} ${article.pageTitle}`.toLowerCase();
   
-  // Define keywords to look for in the blog's info
-  const keywords = ["hijab", "dupatta", "lehenga", "abaya", "bridal"];
-  const matchedKeyword = keywords.find(k => blogIdentifier.includes(k)) || "";
+  // Define the core product types found in your bridal-products.json slugs
+  const productTypes = ["hijab", "dupatta", "lehenga", "abaya", "gown", "dress", "jewelry"];
+  
+  // Find which product type is mentioned in the blog info
+  const matchedType = productTypes.find(type => searchContext.includes(type)) || "";
 
-  // Filter products where the product's mainCategorySlugs contains the matched keyword
+  // Filter products that have the matched type in their mainCategorySlugs
   let relatedItems = productData.products.filter(p => 
-    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
+    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedType))
   );
 
-  // Fallback: if no keyword match, use all products
+  // Fallback: If no specific type matches, use all products
   if (relatedItems.length === 0) {
     relatedItems = productData.products;
   }
 
-  // 2. COLOR FILTERING (Searching within product's mainCategorySlugs)
-  const getProductByColor = (colorName: string) => 
+  // 2. COLOR TRIO LOGIC (Red, White, Champagne)
+  // We look specifically for these colors within the filtered product type
+  const getProductByColor = (color: string) => 
     relatedItems.find(p => 
-      p.mainCategorySlugs?.some((s: string) => s.toLowerCase() === colorName.toLowerCase())
+      p.mainCategorySlugs?.some((s: string) => s.toLowerCase() === color.toLowerCase())
     );
 
-  // Build the trio: Red, White, Champagne
   const sidebarProducts = [
     getProductByColor('red') || relatedItems[0],
     getProductByColor('white') || relatedItems[1],
@@ -76,8 +78,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-10">
         {/* MAIN ARTICLE COLUMN */}
         <div className="lg:col-span-8">
-          <header className="mb-10">
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black">
+          <header className="mb-10 text-black">
+            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
               {article.pageTitle}
             </h1>
             <div className="h-1.5 w-24 bg-pink-500 mt-4"></div>
@@ -121,6 +123,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     href={`/shop/product/${prod.slug}`}
                     className="group block"
                   >
+                    {/* 90% SIZE: h-[230px] */}
                     <div className="relative h-[230px] w-full rounded-2xl overflow-hidden shadow-md bg-gray-50 mb-3 border border-pink-50">
                       <Image 
                         src={`/images/${firstImage.url.replace(/^\//, '')}`} 
