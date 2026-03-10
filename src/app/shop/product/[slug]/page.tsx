@@ -42,6 +42,13 @@ export default async function ProductPage({ params }: PageProps) {
     notFound();
   }
 
+  // Split description at the first <h2>
+  const descriptionParts = product.description.split('<h2>');
+  const introText = descriptionParts[0]; 
+  const remainingDescription = descriptionParts.length > 1 
+    ? '<h2>' + descriptionParts.slice(1).join('<h2>') 
+    : '';
+
   let faqs = [];
   if (product.FAQ_schema) {
     try {
@@ -79,6 +86,7 @@ export default async function ProductPage({ params }: PageProps) {
             <div>
               <ProductGallery 
                 productName={product.name}
+                combinedCaption={`${product.images[0]?.figcaption || ''}\n\n${introText}`}
                 images={product.images.map(img => ({
                   ...img,
                   amazonLink: product.type === 'collection' ? img.amazonLink : null
@@ -106,7 +114,7 @@ export default async function ProductPage({ params }: PageProps) {
                 <div 
                   className="text-black text-lg leading-relaxed whitespace-pre-wrap 
                              [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
-                  dangerouslySetInnerHTML={{ __html: product.description }}
+                  dangerouslySetInnerHTML={{ __html: remainingDescription }}
                 />
               </div>
 
