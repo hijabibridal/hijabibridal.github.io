@@ -81,11 +81,10 @@ export default async function ProductPage({ params }: PageProps) {
                 productName={product.name}
                 images={product.images.map(img => ({
                   ...img,
-                  // If it's NOT a collection, we set the link to null to stop the "Crawl Dead-End"
                   amazonLink: product.type === 'collection' ? img.amazonLink : null
                 }))} 
-             />
-          </div>
+              />
+            </div>
 
             <div className="flex flex-col">
               <h1 className="text-black font-black text-4xl lg:text-6xl uppercase tracking-tighter leading-none mb-6">
@@ -96,7 +95,6 @@ export default async function ProductPage({ params }: PageProps) {
                 <a 
                   href={product.images[0].amazonLink}
                   target="_blank"
-                  {/* Added rel="sponsored nofollow" for SEO compliance */}
                   rel="noopener noreferrer sponsored nofollow"
                   className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6"
                 >
