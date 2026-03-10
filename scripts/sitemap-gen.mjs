@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import productData from '../src/data/bridal-products.json' with { type: 'json' };
 import blogData from '../src/data/blog-articles.json' with { type: 'json' };
 
@@ -7,7 +8,6 @@ const today = new Date().toISOString().split('T')[0];
 
 /**
  * Escapes special characters for XML compliance
- * Fixes: error on line XXX: xmlParseEntityRef: no name
  */
 const escapeXml = (unsafe) => {
     if (!unsafe) return "";
@@ -58,14 +58,14 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   </url>`).join('')}
 </urlset>`.trim();
 
-// 1. Define the directory path relative to project root
-const dir = './public/sitemap';
+// Use process.cwd() to ensure we are targeting the root of the project
+const publicDir = path.join(process.cwd(), 'public');
 
-// 2. Create the directory if it doesn't exist
-if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(publicDir)){
+    fs.mkdirSync(publicDir, { recursive: true });
 }
 
-// 3. Write the file
-fs.writeFileSync(`${dir}/sitemap.xml`, sitemap);
-console.log('✅ Sitemap with images generated at ./public/sitemap/sitemap.xml');
+// Write directly to public/sitemap.xml for simplicity and standard SEO practice
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+
+console.log(`✅ Sitemap successfully generated at: ${path.join(publicDir, 'sitemap.xml')}`);
