@@ -42,7 +42,6 @@ export default async function ProductPage({ params }: PageProps) {
     notFound();
   }
 
-  // Split description at the first <h2>
   const descriptionParts = product.description.split('<h2>');
   const introText = descriptionParts[0]; 
   const remainingDescription = descriptionParts.length > 1 
@@ -82,11 +81,11 @@ export default async function ProductPage({ params }: PageProps) {
             ]} 
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
+            {/* LEFT COLUMN: Images Only */}
             <div>
               <ProductGallery 
                 productName={product.name}
-                combinedCaption={`${product.images[0]?.figcaption || ''}\n\n${introText}`}
                 images={product.images.map(img => ({
                   ...img,
                   amazonLink: product.type === 'collection' ? img.amazonLink : null
@@ -94,6 +93,7 @@ export default async function ProductPage({ params }: PageProps) {
               />
             </div>
 
+            {/* RIGHT COLUMN: Title, Button, Caption/Intro, and Rest of Description */}
             <div className="flex flex-col">
               <h1 className="text-black font-black text-4xl lg:text-6xl uppercase tracking-tighter leading-none mb-6">
                 {product.name}
@@ -109,6 +109,15 @@ export default async function ProductPage({ params }: PageProps) {
                   Purchase on Amazon.com
                 </a>
               )}
+
+              {/* Mapped Figcaption + Intro Paragraph as a single block next to image */}
+              <figure className="mb-8">
+                <figcaption className="text-gray-800 text-lg leading-relaxed border-l-4 border-pink-200 pl-6">
+                  <div dangerouslySetInnerHTML={{ 
+                    __html: `${product.images[0]?.figcaption || ''}<br/><br/>${introText}`.replace(/\n/g, '<br/>') 
+                  }} />
+                </figcaption>
+              </figure>
 
               <div className="mt-4">
                 <div 

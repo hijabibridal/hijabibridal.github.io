@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 
-export default function ProductGallery({ images, productName, fallbackLink, combinedCaption }: any) {
+export default function ProductGallery({ images, productName, fallbackLink }: any) {
   const [index, setIndex] = useState(0);
 
   if (!images || images.length === 0) return <div className="p-10 bg-gray-50 rounded-2xl">No Image</div>;
@@ -11,7 +11,6 @@ export default function ProductGallery({ images, productName, fallbackLink, comb
     ? activeImage.amazonLink 
     : fallbackLink;
 
-  // FIXED: Changed double backslash to single backslash in the regex
   const mainSrc = `/images/${activeImage.url.replace(/^\//, '')}`;
 
   return (
@@ -42,7 +41,6 @@ export default function ProductGallery({ images, productName, fallbackLink, comb
 
       <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
         {images.map((img: any, i: number) => {
-          // FIXED: Changed double backslash to single backslash here as well
           const thumbSrc = `/images/${img.url.replace(/^\//, '')}`;
           return (
             <button
@@ -57,15 +55,6 @@ export default function ProductGallery({ images, productName, fallbackLink, comb
           );
         })}
       </div>
-
-      {combinedCaption && (
-        <figure className="mt-4">
-          <figcaption className="text-gray-700 text-lg leading-relaxed border-l-4 border-pink-100 pl-6 italic whitespace-pre-wrap">
-            {/* FIXED: Changed double backslash to single backslash in the replace function */}
-            <div dangerouslySetInnerHTML={{ __html: combinedCaption.replace(/\n/g, '<br/>') }} />
-          </figcaption>
-        </figure>
-      )}
     </div>
   );
 }
