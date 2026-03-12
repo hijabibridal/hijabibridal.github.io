@@ -1,20 +1,19 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
-import ProductCard from '@/components/ProductCard'
+import Link from 'next/link'
+import Image from 'next/image'
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-// Generates static paths for all categories in your JSON
 export async function generateStaticParams() {
   return productData.mainCategories.map((category) => ({
     slug: category.slug,
   }));
 }
 
-// Implements og:image and og:image:alt in the background for Google Search
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const category = productData.mainCategories.find((c) => c.slug === slug);
@@ -44,48 +43,33 @@ export default async function CategoryPage({ params }: PageProps) {
   
   if (!category) notFound();
 
-  // Define sorting priorities based on category slugs
   const COLOR_PRIORITY = ['white', 'red', 'champagne'];
   const TYPE_PRIORITY = ['sharara', 'muslim-lehenga', 'muslim-wedding-dresses'];
 
-  // Filters and sorts products that belong to this specific category slug
   const filteredProducts = productData.products
     .filter((p) => p.mainCategorySlugs.includes(slug))
     .sort((a, b) => {
-      // 1. Primary Sort: Color category slug priority
       const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
       const bColorMatch = COLOR_PRIORITY.findIndex(color => b.mainCategorySlugs.includes(color));
-
       if (aColorMatch !== bColorMatch) {
         if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
         if (aColorMatch !== -1) return -1;
         if (bColorMatch !== -1) return 1;
       }
-
-      // 2. Secondary Sort (Sub-sort): Garment type category slug priority
       const aTypeMatch = TYPE_PRIORITY.findIndex(type => a.mainCategorySlugs.includes(type));
       const bTypeMatch = TYPE_PRIORITY.findIndex(type => b.mainCategorySlugs.includes(type));
-
       if (aTypeMatch !== bTypeMatch) {
         if (aTypeMatch !== -1 && bTypeMatch !== -1) return aTypeMatch - bTypeMatch;
         if (aTypeMatch !== -1) return -1;
         if (bTypeMatch !== -1) return 1;
       }
-
       return 0;
     });
 
-  /**
-   * DESCRIPTION LOGIC:
-   * Splits the description by the \n character.
-   * Line 1 becomes the Bold/Italic title.
-   * Lines 2+ become regular paragraphs below it.
-   */
   const descriptionLines = category.description.split('\n').filter(line => line.trim() !== '');
   const boldIntroTitle = descriptionLines[0];
   const regularParagraphs = descriptionLines.slice(1);
 
-  // Safely parse the string-formatted FAQ_schema
   let parsedFaqs = [];
   if (category.FAQ_schema) {
     try {
@@ -103,12 +87,10 @@ export default async function CategoryPage({ params }: PageProps) {
       />
       
       <div className="max-w-4xl mb-12">
-        {/* Category Header */}
         <h1 className="text-5xl font-black text-gray-900 mt-8 mb-6 uppercase tracking-tighter">
           {category.name} <span className="text-pink-600">Collection</span>
         </h1>
 
-        {/* 1. Bold Introductory Title (First line from JSON) */}
         <div className="relative mb-6">
           <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-pink-600 rounded-full"></div>
           <p className="text-xl text-gray-700 leading-relaxed pl-8 font-bold italic">
@@ -116,7 +98,6 @@ export default async function CategoryPage({ params }: PageProps) {
           </p>
         </div>
 
-        {/* 2. Regular Paragraph Continuation (Remaining lines from JSON) */}
         {regularParagraphs.map((para, i) => (
           <p key={i} className="text-lg text-gray-600 leading-relaxed mt-4">
             {para}
@@ -126,22 +107,57 @@ export default async function CategoryPage({ params }: PageProps) {
 
       <hr className="mb-12 border-pink-100" />
 
-      {/* Product Grid */}
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
+          {filteredProducts.map((product) => {
+            // Replicated Description Split Logic for Figcaption
+            const hasH2 = product.description.includes('<h2');
+            let introText = "";
+            if (hasH2) {
+              const splitIndex = product.description.indexOf('<h2');
+              introText = product.description.substring(0, splitIndex);
+            } else {
+              const paragraphs = product.description.split(/<br\s*\/?>\s*<br\s*\/?>|\n\n/);
+              introText = paragraphs[0];
+            }
+            const cleanCaption = introText.replace(/<[^>]*>?/gm, '').substring(0, 160) + "...";
+
+            return (
+              <div key={product.slug} className="group flex flex-col">
+                {/* Processed Product Page Link */}
+                <Link href={`/shop/product/${product.slug}`} className="block">
+                  <figure className="relative overflow-hidden rounded-2xl shadow-sm border border-pink-50 bg-gray-50">
+                    <div className="relative h-[300px] w-full">
+                      <Image 
+                        src={`/images/${product.images[0].url.replace(/^\//, '')}`} 
+                        // Processed Image Alt
+                        alt={product.images[0].alt || product.name}
+                        fill 
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        unoptimized
+                      />
+                    </div>
+                    {/* Dynamic Figcaption */}
+                    <figcaption className="p-4 text-xs leading-relaxed text-gray-600 bg-white border-t border-pink-50 italic">
+                      <strong className="block text-black not-italic mb-1 uppercase tracking-tighter">
+                        {product.name}
+                      </strong>
+                      {cleanCaption}
+                    </figcaption>
+                  </figure>
+                </Link>
+              </div>
+            );
+          })}
         </div>
       ) : (
         <div className="text-center py-20 bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200">
           <p className="text-gray-500 text-lg font-medium">
-            Coming soon! We are currently curating the finest {category.name} pieces for the USA market.
+            Coming soon! We are currently curating the finest {category.name} pieces.
           </p>
         </div>
       )}
 
-      {/* 3. Bottom Content Block: H2s and Paragraphs for SEO */}
       {category.longContent && (
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
           {category.longContent.map((section: any, index: number) => (
@@ -157,7 +173,6 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           ))}
 
-          {/* FAQ Display Section */}
           {parsedFaqs.length > 0 && (
             <div className="mt-20 bg-pink-50/50 p-10 rounded-[2.5rem] border border-pink-100">
               <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
@@ -171,8 +186,6 @@ export default async function CategoryPage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
-
-              {/* Inject JSON-LD for Google SEO visibility and IPTC declaration */}
               <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ 

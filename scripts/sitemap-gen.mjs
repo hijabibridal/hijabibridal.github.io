@@ -7,7 +7,7 @@ const BASE_URL = 'https://hijabibridal.github.io';
 const today = new Date().toISOString().split('T')[0];
 
 /**
- * Escapes special characters for XML compliance
+ * Escapes special characters for XML compliance to prevent "xmlParseEntityRef" errors.
  */
 const escapeXml = (unsafe) => {
     if (!unsafe) return "";
@@ -33,10 +33,11 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <url>
     <loc>${BASE_URL}/shop/product/${p.slug}</loc>
     <lastmod>${today}</lastmod>
-    ${p.images.slice(0, 1).map(img => `
+    ${p.images.map(img => `
     <image:image>
       <image:loc>${BASE_URL}/images/${img.url.replace(/^\//, '')}</image:loc>
       <image:title>${escapeXml(p.name)}</image:title>
+      <image:caption>${escapeXml(img.alt || p.name)}</image:caption>
     </image:image>`).join('')}
   </url>`).join('')}
   
@@ -58,14 +59,13 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   </url>`).join('')}
 </urlset>`.trim();
 
-// Use process.cwd() to ensure we are targeting the root of the project
+// Ensure we target the root public folder
 const publicDir = path.join(process.cwd(), 'public');
 
 if (!fs.existsSync(publicDir)){
     fs.mkdirSync(publicDir, { recursive: true });
 }
 
-// Write directly to public/sitemap.xml for simplicity and standard SEO practice
 fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
 
-console.log(`✅ Sitemap successfully generated at: ${path.join(publicDir, 'sitemap.xml')}`);
+console.log(`✅ Success! Sitemap with ALL images generated at: ${path.join(publicDir, 'sitemap.xml')}`);
