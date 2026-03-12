@@ -111,7 +111,7 @@ export default async function CategoryPage({ params }: PageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.map((product) => {
             
-            // EXACT MATCH TO PRODUCT PAGE LOGIC
+            // Logic to grab text before the first H2 for the main figcaption
             const hasH2 = product.description.includes('<h2');
             let introText = "";
             if (hasH2) {
@@ -121,11 +121,11 @@ export default async function CategoryPage({ params }: PageProps) {
               const paragraphs = product.description.split(/<br\s*\/?>\s*<br\s*\/?>|\n\n/);
               introText = paragraphs[0];
             }
-            // Strip HTML and trim whitespace
-            const cleanCaption = introText.replace(/<[^>]*>?/gm, '').trim();
+            const cleanDescriptionIntro = introText.replace(/<[^>]*>?/gm, '').trim();
 
             return (
               <div key={product.slug} className="group flex flex-col">
+                {/* VISIBLE HERO SECTION */}
                 <Link href={`/shop/product/${product.slug}`} className="block">
                   <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50">
                     <div className="relative h-[450px] w-full p-4"> 
@@ -137,9 +137,9 @@ export default async function CategoryPage({ params }: PageProps) {
                         unoptimized
                       />
                     </div>
-                    {/* INVISIBLE CAPTION: Product name removed as requested */}
+                    {/* Main Image Figcaption: Description before H2 */}
                     <figcaption className="sr-only">
-                      {cleanCaption}
+                      {cleanDescriptionIntro}
                     </figcaption>
                   </figure>
                   <h3 className="mt-4 text-center text-sm font-bold uppercase tracking-tighter text-gray-900 group-hover:text-pink-600 transition-colors">
@@ -147,17 +147,23 @@ export default async function CategoryPage({ params }: PageProps) {
                   </h3>
                 </Link>
 
-                {/* INVISIBLE SECONDARY GALLERY */}
+                {/* INVISIBLE GALLERY SECTION */}
                 <div className="sr-only" aria-hidden="true">
-                  {product.images.slice(1).map((img, idx) => (
+                  {product.images.slice(1).map((img: any, idx: number) => (
                     <Link key={idx} href={`/shop/product/${product.slug}`}>
                       <figure>
                         <img 
                           src={`/images/${img.url.replace(/^\//, '')}`} 
-                          alt={img.alt || `${product.name} - view ${idx + 2}`} 
+                          alt={img.alt || product.name} 
                         />
-                        {/* Secondary Invisible Caption: Prefix removed here too */}
-                        <figcaption>{img.alt || cleanCaption}</figcaption>
+                        {/* Hierarchy: 
+                          1. JSON figcaption 
+                          2. JSON alt (Fallback) 
+                          3. Description Intro (Final Fallback) 
+                        */}
+                        <figcaption>
+                          {img.figcaption || img.alt || cleanDescriptionIntro}
+                        </figcaption>
                       </figure>
                     </Link>
                   ))}
@@ -174,6 +180,7 @@ export default async function CategoryPage({ params }: PageProps) {
         </div>
       )}
 
+      {/* Long Content & FAQ Sections */}
       {category.longContent && (
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
           {category.longContent.map((section: any, index: number) => (
