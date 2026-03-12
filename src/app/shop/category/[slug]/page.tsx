@@ -79,6 +79,8 @@ export default async function CategoryPage({ params }: PageProps) {
     }
   }
 
+  const stylingTable = (category as any).stylingTable;
+
   return (
     <div className="container mx-auto px-4 py-8">
       <Breadcrumbs 
@@ -175,51 +177,76 @@ export default async function CategoryPage({ params }: PageProps) {
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
           
           {/* DECOUPLED DYNAMIC STYLING TABLE */}
-          {(category as any).stylingTable && (
-            <div className="overflow-x-auto my-12 rounded-[2rem] border border-pink-100 shadow-sm bg-white">
-              <table className="w-full text-left border-collapse min-w-[800px]">
-                <thead>
-                  <tr className="bg-pink-50/50">
-                    <th className="p-6 border-b border-pink-100 w-1/4">
-                      <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block mb-2">
-                        "{(category as any).stylingTable.leftEntity.label}"
-                      </span>
-                      <p className="text-xs text-gray-500 font-normal leading-tight normal-case">
-                        {(category as any).stylingTable.leftEntity.description}
-                      </p>
-                    </th>
-                    {(category as any).stylingTable.columns.map((colName: string) => (
-                      <th key={colName} className="p-6 border-b border-pink-100 text-center">
-                        <span className="text-[#db2777] font-bold text-xs uppercase block mb-1">
-                          "{colName}"
+          {stylingTable && (
+            <div className="mb-16">
+              <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
+                {stylingTable.chartName}
+              </h2>
+              
+              <div className="overflow-x-auto rounded-[2rem] border border-pink-100 shadow-sm bg-white">
+                <table className="w-full text-left border-collapse min-w-[900px]">
+                  <thead>
+                    {/* TOP ENTITY SPANNING ONLY STYLE COLUMNS */}
+                    <tr className="bg-pink-50/30">
+                      {/* Empty cell for the left vertical label column and the fabric name column */}
+                      <th colSpan={2} className="p-6 border-b border-pink-100"></th>
+                      {/* Span only across the 'Wearing Style' columns */}
+                      <th colSpan={stylingTable.columns.length} className="p-4 border-b border-pink-100 text-center">
+                        <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block">
+                          "{stylingTable.topEntity.label}"
+                        </span>
+                        <p className="text-[10px] text-gray-500 font-normal normal-case italic mt-1">
+                          {stylingTable.topEntity.description}
+                        </p>
+                      </th>
+                    </tr>
+                    
+                    {/* HEADER COLUMN NAMES */}
+                    <tr className="bg-white">
+                      <th className="p-6 border-b border-pink-100 bg-pink-50/10 w-[180px]">
+                        <span className="text-gray-900 font-black uppercase text-xs tracking-tighter">
+                          "{stylingTable.leftEntity.label}"
                         </span>
                       </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="text-gray-700">
-                  {Object.entries((category as any).stylingTable.rows).map(([rowName, allowedStyles]: [string, any]) => (
-                    <tr key={rowName} className="border-b border-pink-50">
-                      <td className="p-6 bg-pink-50/20 font-bold text-black border-r border-pink-50">
-                        {rowName}
-                      </td>
-                      {(category as any).stylingTable.columns.map((colName: string) => (
-                        <td key={colName} className="p-6 text-center">
-                          {allowedStyles.includes(colName) ? (
-                            <span className="text-pink-500 font-bold text-xl">✓</span>
-                          ) : (
-                            <span className="text-gray-200">—</span>
-                          )}
-                        </td>
+                      <th className="p-6 border-b border-pink-100 w-[150px] font-bold text-gray-400 text-xs uppercase">
+                        Fabric
+                      </th>
+                      {stylingTable.columns.map((colName: string) => (
+                        <th key={colName} className="p-6 border-b border-pink-100 text-center">
+                          <span className="text-gray-900 font-bold text-[10px] uppercase leading-tight block">
+                            "{colName}"
+                          </span>
+                        </th>
                       ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-              <div className="bg-pink-50/30 p-4 border-t border-pink-100">
-                <p className="text-[11px] text-gray-500 text-center leading-relaxed italic">
-                  <strong>"{(category as any).stylingTable.topEntity.label}":</strong> {(category as any).stylingTable.topEntity.description}
-                </p>
+                  </thead>
+                  <tbody className="text-gray-700">
+                    {Object.entries(stylingTable.rows).map(([rowName, allowedStyles]: [string, any], index: number) => (
+                      <tr key={rowName} className="border-b border-pink-50 hover:bg-pink-50/5 transition-colors">
+                        {/* FAR LEFT ENTITY LABEL (Merged Column) */}
+                        {index === 0 && (
+                          <td rowSpan={Object.keys(stylingTable.rows).length} className="p-6 bg-pink-50/20 border-r border-pink-100 align-middle text-center">
+                            <p className="text-xs text-gray-500 font-medium leading-relaxed [writing-mode:vertical-lr] rotate-180 mx-auto">
+                              {stylingTable.leftEntity.description}
+                            </p>
+                          </td>
+                        )}
+                        <td className="p-6 font-bold text-black border-r border-pink-50 bg-gray-50/30">
+                          {rowName}
+                        </td>
+                        {stylingTable.columns.map((colName: string) => (
+                          <td key={colName} className="p-6 text-center">
+                            {allowedStyles.includes(colName) ? (
+                              <span className="text-pink-500 font-bold text-xl">✓</span>
+                            ) : (
+                              <span className="text-gray-200">—</span>
+                            )}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           )}
