@@ -110,7 +110,7 @@ export default async function CategoryPage({ params }: PageProps) {
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.map((product) => {
-            // Replicated Description Split Logic for Figcaption
+            // Description Split Logic (Hidden for UI, preserved for SEO)
             const hasH2 = product.description.includes('<h2');
             let introText = "";
             if (hasH2) {
@@ -124,27 +124,25 @@ export default async function CategoryPage({ params }: PageProps) {
 
             return (
               <div key={product.slug} className="group flex flex-col">
-                {/* Processed Product Page Link */}
                 <Link href={`/shop/product/${product.slug}`} className="block">
-                  <figure className="relative overflow-hidden rounded-2xl shadow-sm border border-pink-50 bg-gray-50">
-                    <div className="relative h-[300px] w-full">
+                  <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50">
+                    <div className="relative h-[450px] w-full p-4"> 
                       <Image 
                         src={`/images/${product.images[0].url.replace(/^\//, '')}`} 
-                        // Processed Image Alt
                         alt={product.images[0].alt || product.name}
                         fill 
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-contain transition-transform duration-500 group-hover:scale-105"
                         unoptimized
                       />
                     </div>
-                    {/* Dynamic Figcaption */}
-                    <figcaption className="p-4 text-xs leading-relaxed text-gray-600 bg-white border-t border-pink-50 italic">
-                      <strong className="block text-black not-italic mb-1 uppercase tracking-tighter">
-                        {product.name}
-                      </strong>
-                      {cleanCaption}
+                    {/* INVISIBLE CAPTION: Google can read this, but it won't show on screen */}
+                    <figcaption className="sr-only">
+                      {product.name}: {cleanCaption}
                     </figcaption>
                   </figure>
+                  <h3 className="mt-4 text-center text-sm font-bold uppercase tracking-tighter text-gray-900 group-hover:text-pink-600 transition-colors">
+                    {product.name}
+                  </h3>
                 </Link>
               </div>
             );
