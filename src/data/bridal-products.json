@@ -23,6 +23,21 @@
   "slug": "bridal-dupatta",
   "name": "Bridal Dupatta",
   "stylingTable": {
+  "leftEntity": {
+    "label": "Types of Dupattas",
+    "description": ""
+  },
+  "topEntity": {
+    "label": "Double Dupatta Wearing Styles",
+    "description": ""
+  },
+  "columns": [
+    "over the head to the back",
+    "freestyle",
+    "accordioned over the shoulder",
+    "over the arm"
+  ],
+  "rows": {
     "Net": ["over the head to the back", "freestyle", "accordioned over the shoulder", "over the arm"],
     "Velvet": ["over the head to the back", "accordioned over the shoulder", "over the arm"],
     "Silk": ["over the head to the back", "over the arm"],

@@ -79,14 +79,6 @@ export default async function CategoryPage({ params }: PageProps) {
     }
   }
 
-  // Define the style columns for the table
-  const STYLES = [
-    "over the head to the back",
-    "freestyle",
-    "accordioned over the shoulder",
-    "over the arm"
-  ];
-
   return (
     <div className="container mx-auto px-4 py-8">
       <Breadcrumbs 
@@ -182,7 +174,7 @@ export default async function CategoryPage({ params }: PageProps) {
       {category.longContent && (
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
           
-          {/* DYNAMIC STYLING TABLE */}
+          {/* DECOUPLED DYNAMIC STYLING TABLE */}
           {(category as any).stylingTable && (
             <div className="overflow-x-auto my-12 rounded-[2rem] border border-pink-100 shadow-sm bg-white">
               <table className="w-full text-left border-collapse min-w-[800px]">
@@ -190,26 +182,30 @@ export default async function CategoryPage({ params }: PageProps) {
                   <tr className="bg-pink-50/50">
                     <th className="p-6 border-b border-pink-100 w-1/4">
                       <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block mb-2">
-                        "Types of Dupattas"
+                        "{(category as any).stylingTable.leftEntity.label}"
                       </span>
                       <p className="text-xs text-gray-500 font-normal leading-tight normal-case">
-                        The base fabric determines the weight, drape, and structural integrity.
+                        {(category as any).stylingTable.leftEntity.description}
                       </p>
                     </th>
-                    {STYLES.map((style) => (
-                      <th key={style} className="p-6 border-b border-pink-100 text-center">
-                        <span className="text-[#db2777] font-bold text-xs uppercase block mb-1">"{style}"</span>
+                    {(category as any).stylingTable.columns.map((colName: string) => (
+                      <th key={colName} className="p-6 border-b border-pink-100 text-center">
+                        <span className="text-[#db2777] font-bold text-xs uppercase block mb-1">
+                          "{colName}"
+                        </span>
                       </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody className="text-gray-700">
-                  {Object.entries((category as any).stylingTable).map(([fabric, allowedStyles]: [string, any]) => (
-                    <tr key={fabric} className="border-b border-pink-50">
-                      <td className="p-6 bg-pink-50/20 font-bold text-black">{fabric}</td>
-                      {STYLES.map((style) => (
-                        <td key={style} className="p-6 text-center">
-                          {allowedStyles.includes(style) ? (
+                  {Object.entries((category as any).stylingTable.rows).map(([rowName, allowedStyles]: [string, any]) => (
+                    <tr key={rowName} className="border-b border-pink-50">
+                      <td className="p-6 bg-pink-50/20 font-bold text-black border-r border-pink-50">
+                        {rowName}
+                      </td>
+                      {(category as any).stylingTable.columns.map((colName: string) => (
+                        <td key={colName} className="p-6 text-center">
+                          {allowedStyles.includes(colName) ? (
                             <span className="text-pink-500 font-bold text-xl">✓</span>
                           ) : (
                             <span className="text-gray-200">—</span>
@@ -221,8 +217,8 @@ export default async function CategoryPage({ params }: PageProps) {
                 </tbody>
               </table>
               <div className="bg-pink-50/30 p-4 border-t border-pink-100">
-                <p className="text-[11px] text-gray-500 text-center leading-relaxed">
-                  <strong>Note on "Double Dupatta Wearing Styles":</strong> Most US-based Muslim brides opt for a lighter "Net" dupatta as the primary head covering while using heavier fabrics for the body drape.
+                <p className="text-[11px] text-gray-500 text-center leading-relaxed italic">
+                  <strong>"{(category as any).stylingTable.topEntity.label}":</strong> {(category as any).stylingTable.topEntity.description}
                 </p>
               </div>
             </div>
