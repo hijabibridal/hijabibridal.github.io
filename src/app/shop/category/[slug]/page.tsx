@@ -79,6 +79,14 @@ export default async function CategoryPage({ params }: PageProps) {
     }
   }
 
+  // Define the style columns for the table
+  const STYLES = [
+    "over the head to the back",
+    "freestyle",
+    "accordioned over the shoulder",
+    "over the arm"
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8">
       <Breadcrumbs 
@@ -110,8 +118,6 @@ export default async function CategoryPage({ params }: PageProps) {
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.map((product) => {
-            
-            // Logic to grab text before the first H2 for the main figcaption
             const hasH2 = product.description.includes('<h2');
             let introText = "";
             if (hasH2) {
@@ -125,7 +131,6 @@ export default async function CategoryPage({ params }: PageProps) {
 
             return (
               <div key={product.slug} className="group flex flex-col">
-                {/* VISIBLE HERO SECTION */}
                 <Link href={`/shop/product/${product.slug}`} className="block">
                   <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50">
                     <div className="relative h-[450px] w-full p-4"> 
@@ -137,7 +142,6 @@ export default async function CategoryPage({ params }: PageProps) {
                         unoptimized
                       />
                     </div>
-                    {/* Main Image Figcaption: Description before H2 */}
                     <figcaption className="sr-only">
                       {cleanDescriptionIntro}
                     </figcaption>
@@ -147,7 +151,6 @@ export default async function CategoryPage({ params }: PageProps) {
                   </h3>
                 </Link>
 
-                {/* INVISIBLE GALLERY SECTION */}
                 <div className="sr-only" aria-hidden="true">
                   {product.images.slice(1).map((img: any, idx: number) => (
                     <Link key={idx} href={`/shop/product/${product.slug}`}>
@@ -156,11 +159,6 @@ export default async function CategoryPage({ params }: PageProps) {
                           src={`/images/${img.url.replace(/^\//, '')}`} 
                           alt={img.alt || product.name} 
                         />
-                        {/* Hierarchy: 
-                          1. JSON figcaption 
-                          2. JSON alt (Fallback) 
-                          3. Description Intro (Final Fallback) 
-                        */}
                         <figcaption>
                           {img.figcaption || img.alt || cleanDescriptionIntro}
                         </figcaption>
@@ -180,9 +178,56 @@ export default async function CategoryPage({ params }: PageProps) {
         </div>
       )}
 
-      {/* Long Content & FAQ Sections */}
+      {/* Long Content Section */}
       {category.longContent && (
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
+          
+          {/* DYNAMIC STYLING TABLE */}
+          {(category as any).stylingTable && (
+            <div className="overflow-x-auto my-12 rounded-[2rem] border border-pink-100 shadow-sm bg-white">
+              <table className="w-full text-left border-collapse min-w-[800px]">
+                <thead>
+                  <tr className="bg-pink-50/50">
+                    <th className="p-6 border-b border-pink-100 w-1/4">
+                      <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block mb-2">
+                        "Types of Dupattas"
+                      </span>
+                      <p className="text-xs text-gray-500 font-normal leading-tight normal-case">
+                        The base fabric determines the weight, drape, and structural integrity.
+                      </p>
+                    </th>
+                    {STYLES.map((style) => (
+                      <th key={style} className="p-6 border-b border-pink-100 text-center">
+                        <span className="text-[#db2777] font-bold text-xs uppercase block mb-1">"{style}"</span>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700">
+                  {Object.entries((category as any).stylingTable).map(([fabric, allowedStyles]: [string, any]) => (
+                    <tr key={fabric} className="border-b border-pink-50">
+                      <td className="p-6 bg-pink-50/20 font-bold text-black">{fabric}</td>
+                      {STYLES.map((style) => (
+                        <td key={style} className="p-6 text-center">
+                          {allowedStyles.includes(style) ? (
+                            <span className="text-pink-500 font-bold text-xl">✓</span>
+                          ) : (
+                            <span className="text-gray-200">—</span>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="bg-pink-50/30 p-4 border-t border-pink-100">
+                <p className="text-[11px] text-gray-500 text-center leading-relaxed">
+                  <strong>Note on "Double Dupatta Wearing Styles":</strong> Most US-based Muslim brides opt for a lighter "Net" dupatta as the primary head covering while using heavier fabrics for the body drape.
+                </p>
+              </div>
+            </div>
+          )}
+
           {category.longContent.map((section: any, index: number) => (
             <div key={index} className="mb-16">
               <h2 className="text-3xl font-black text-gray-900 mb-6 uppercase tracking-tight">

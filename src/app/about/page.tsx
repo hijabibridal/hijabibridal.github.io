@@ -1,15 +1,53 @@
 import React from 'react';
 
 export default function AboutPage() {
+  const siteUrl = "https://hijabibridal.github.io";
+
+  // Structured Data for SEO-GEO-AEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Hijabi Bridal",
+    "image": `${siteUrl}/images/og-image.jpg`, 
+    "url": siteUrl,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressCountry": "DO"
+    },
+    "description": "The premier destination for the modern Muslim bride in the United States. Expert curation of modest bridal apparel and wedding accessories.",
+    "founder": {
+      "@type": "Person",
+      "jobTitle": "Technical Data Architect",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santiago",
+        "addressCountry": "DO"
+      }
+    },
+    // Updated to reflect Amazon Affiliate target market
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "priceRange": "$$"
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      {/* Injecting the Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-pink-50 py-20 px-4 text-center">
         <h1 className="text-5xl md:text-7xl font-black text-black uppercase tracking-tighter mb-6">
           Modesty Meets <span className="text-[#db2777]">Elegance</span>
         </h1>
         <p className="max-w-2xl mx-auto text-xl text-gray-700 leading-relaxed font-medium">
-          The premier destination for the modern Muslim bride in America. 
+          The premier destination for the modern Muslim bride in the United States. 
           We believe that choosing modesty should never mean compromising on your dream aesthetic.
         </p>
       </section>
@@ -22,30 +60,31 @@ export default function AboutPage() {
             At Hijabi Bridal, we understand that finding the perfect wedding ensemble is a deeply personal journey. For the North American bride, balancing traditional values with contemporary fashion can be a challenge.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            We curate the finest modest bridal wear—from intricate South Asian Muslim lehengas and shararas to minimalist Western-style bridal hijabs and accessories. Every item in our catalog is selected to help you feel confident, celebrated, and uniquely you on your special day.
+            Our mission is to bridge that gap by providing a curated selection of bridal wear that honors your heritage while celebrating your individual style across the United States.
           </p>
         </div>
-        <div className="bg-[#db2777] h-96 rounded-3xl flex items-center justify-center p-12 text-white italic text-2xl font-bold text-center">
-          "Redefining the modest bridal experience for a new generation of brides."
+        <div className="bg-gray-100 h-96 rounded-3xl overflow-hidden">
+            <div className="w-full h-full bg-pink-100 flex items-center justify-center text-pink-300 font-bold">
+                Mission Imagery
+            </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-white py-20 px-4 border-t border-pink-100">
+      <section className="bg-white py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-black uppercase tracking-tight mb-12 text-center">Why Hijabi Bridal?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-pink-50 rounded-2xl">
               <h3 className="text-[#db2777] font-bold text-xl mb-4 uppercase">Expert Curation</h3>
               <p className="text-gray-700">We filter through thousands of products to find the ones that meet our high standards for fabric quality and modest coverage.</p>
             </div>
             <div className="p-8 bg-pink-50 rounded-2xl">
-              <h3 className="text-[#db2777] font-bold text-xl mb-4 uppercase">Style Versatility</h3>
-              <p className="text-gray-700">Whether you are looking for traditional Desi red, royal green, or classic white, our collections cover the full cultural spectrum.</p>
+              <h3 className="text-[#db2777] font-bold text-xl mb-4 uppercase">U.S. Focused</h3>
+              <p className="text-gray-700">Our collections are specifically curated for brides within the United States, ensuring reliable shipping and familiar sizing.</p>
             </div>
             <div className="p-8 bg-pink-50 rounded-2xl">
               <h3 className="text-[#db2777] font-bold text-xl mb-4 uppercase">Trusted Partners</h3>
-              <p className="text-gray-700">As an Amazon Associate, we provide a secure and familiar shopping experience, ensuring your bridal items arrive safely and on time.</p>
+              <p className="text-gray-700">As an Amazon Associate, we provide a secure and familiar shopping experience, ensuring your bridal items arrive safely.</p>
             </div>
           </div>
         </div>
