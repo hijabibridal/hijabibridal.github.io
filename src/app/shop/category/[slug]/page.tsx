@@ -186,11 +186,10 @@ export default async function CategoryPage({ params }: PageProps) {
               <div className="overflow-x-auto rounded-[2rem] border border-pink-100 shadow-sm bg-white">
                 <table className="w-full text-left border-collapse min-w-[900px]">
                   <thead>
-                    {/* TOP ENTITY SPANNING ONLY STYLE COLUMNS */}
+                    {/* TOP ENTITY SPANNING ROW */}
                     <tr className="bg-pink-50/30">
-                      {/* Empty cell for the left vertical label column and the fabric name column */}
-                      <th colSpan={2} className="p-6 border-b border-pink-100"></th>
-                      {/* Span only across the 'Wearing Style' columns */}
+                      {/* Empty cell for the Left Entity column */}
+                      <th className="p-6 border-b border-pink-100"></th>
                       <th colSpan={stylingTable.columns.length} className="p-4 border-b border-pink-100 text-center">
                         <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block">
                           "{stylingTable.topEntity.label}"
@@ -203,13 +202,10 @@ export default async function CategoryPage({ params }: PageProps) {
                     
                     {/* HEADER COLUMN NAMES */}
                     <tr className="bg-white">
-                      <th className="p-6 border-b border-pink-100 bg-pink-50/10 w-[180px]">
+                      <th className="p-6 border-b border-pink-100 bg-pink-50/10 w-[220px]">
                         <span className="text-gray-900 font-black uppercase text-xs tracking-tighter">
                           "{stylingTable.leftEntity.label}"
                         </span>
-                      </th>
-                      <th className="p-6 border-b border-pink-100 w-[150px] font-bold text-gray-400 text-xs uppercase">
-                        Fabric
                       </th>
                       {stylingTable.columns.map((colName: string) => (
                         <th key={colName} className="p-6 border-b border-pink-100 text-center">
@@ -223,14 +219,7 @@ export default async function CategoryPage({ params }: PageProps) {
                   <tbody className="text-gray-700">
                     {Object.entries(stylingTable.rows).map(([rowName, allowedStyles]: [string, any], index: number) => (
                       <tr key={rowName} className="border-b border-pink-50 hover:bg-pink-50/5 transition-colors">
-                        {/* FAR LEFT ENTITY LABEL (Merged Column) */}
-                        {index === 0 && (
-                          <td rowSpan={Object.keys(stylingTable.rows).length} className="p-6 bg-pink-50/20 border-r border-pink-100 align-middle text-center">
-                            <p className="text-xs text-gray-500 font-medium leading-relaxed [writing-mode:vertical-lr] rotate-180 mx-auto">
-                              {stylingTable.leftEntity.description}
-                            </p>
-                          </td>
-                        )}
+                        {/* LEFT ENTITY ROW NAMES (Fabric Types) */}
                         <td className="p-6 font-bold text-black border-r border-pink-50 bg-gray-50/30">
                           {rowName}
                         </td>
@@ -245,6 +234,16 @@ export default async function CategoryPage({ params }: PageProps) {
                         ))}
                       </tr>
                     ))}
+                    {/* OPTIONAL VERTICAL DESCRIPTION (Appears as a footer row to maintain left-alignment) */}
+                    {stylingTable.leftEntity.description && (
+                      <tr className="bg-pink-50/10">
+                         <td colSpan={stylingTable.columns.length + 1} className="p-4 text-center">
+                            <p className="text-[10px] text-gray-500 font-medium leading-relaxed italic">
+                              <strong>"{stylingTable.leftEntity.label}":</strong> {stylingTable.leftEntity.description}
+                            </p>
+                         </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
