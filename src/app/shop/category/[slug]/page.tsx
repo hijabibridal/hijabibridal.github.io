@@ -121,11 +121,11 @@ export default async function CategoryPage({ params }: PageProps) {
               const paragraphs = product.description.split(/<br\s*\/?>\s*<br\s*\/?>|\n\n/);
               introText = paragraphs[0];
             }
+            // Strip HTML and trim whitespace
             const cleanCaption = introText.replace(/<[^>]*>?/gm, '').trim();
 
             return (
               <div key={product.slug} className="group flex flex-col">
-                {/* VISIBLE MAIN PRODUCT CARD */}
                 <Link href={`/shop/product/${product.slug}`} className="block">
                   <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50">
                     <div className="relative h-[450px] w-full p-4"> 
@@ -137,9 +137,9 @@ export default async function CategoryPage({ params }: PageProps) {
                         unoptimized
                       />
                     </div>
-                    {/* Main Invisible Caption for indexing */}
+                    {/* INVISIBLE CAPTION: Product name removed as requested */}
                     <figcaption className="sr-only">
-                      {product.name}: {cleanCaption}
+                      {cleanCaption}
                     </figcaption>
                   </figure>
                   <h3 className="mt-4 text-center text-sm font-bold uppercase tracking-tighter text-gray-900 group-hover:text-pink-600 transition-colors">
@@ -147,16 +147,17 @@ export default async function CategoryPage({ params }: PageProps) {
                   </h3>
                 </Link>
 
-                {/* INVISIBLE SECONDARY GALLERY: Google reads these, users don't see them */}
+                {/* INVISIBLE SECONDARY GALLERY */}
                 <div className="sr-only" aria-hidden="true">
                   {product.images.slice(1).map((img, idx) => (
                     <Link key={idx} href={`/shop/product/${product.slug}`}>
                       <figure>
                         <img 
                           src={`/images/${img.url.replace(/^\//, '')}`} 
-                          alt={img.alt || `${product.name} - detail view ${idx + 2}`} 
+                          alt={img.alt || `${product.name} - view ${idx + 2}`} 
                         />
-                        <figcaption>{product.name} - {img.alt || cleanCaption}</figcaption>
+                        {/* Secondary Invisible Caption: Prefix removed here too */}
+                        <figcaption>{img.alt || cleanCaption}</figcaption>
                       </figure>
                     </Link>
                   ))}
