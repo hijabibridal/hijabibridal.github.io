@@ -32,6 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <head>
+        {/* RESTORED: Google Site Verification for Search Console ownership */}
+        <meta name="google-site-verification" content="2LM4mclQm-UZp-Lft6E04fLlzcmmkafpqfNbMVntsqs" />
+
         {/* STEP 2: Force Google to see the new favicon and override old cache */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
