@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ProductGallery from '@/components/ProductGallery'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -42,6 +44,15 @@ export default async function ProductPage({ params }: PageProps) {
     notFound();
   }
 
+  // Logic for Color Matches Slider
+  const colors = ["red", "green", "blue", "white", "lilac", "fuschia", "champagne", "peach", "gold"];
+  const productColors = product.mainCategorySlugs.filter(s => colors.includes(s));
+  
+  const relatedProducts = productData.products.filter(p => 
+    p.slug !== product.slug && 
+    p.mainCategorySlugs.some(s => productColors.includes(s))
+  );
+
   // Split logic: Find the first <h2> to separate intro from body
   const hasH2 = product.description.includes('<h2');
   let introText = "";
@@ -52,7 +63,6 @@ export default async function ProductPage({ params }: PageProps) {
     introText = product.description.substring(0, splitIndex);
     remainingDescription = product.description.substring(splitIndex);
   } else {
-    // If no <h2>, split by the first double-break to isolate the first paragraph
     const paragraphs = product.description.split(/<br\s*\/?>\s*<br\s*\/?>|\n\n/);
     introText = paragraphs[0];
     remainingDescription = paragraphs.slice(1).join('<br><br>');
@@ -95,16 +105,45 @@ export default async function ProductPage({ params }: PageProps) {
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
-            {/* LEFT COLUMN: Gallery */}
+            {/* LEFT COLUMN: Gallery & Color Match Slider */}
             <div>
               <ProductGallery 
                 productName={product.name}
                 images={product.images.map(img => ({
                   ...img,
-                  // Amazon links removed unless type is 'collection'
                   amazonLink: product.type === 'collection' ? img.amazonLink : null
                 }))} 
               />
+
+              {/* Color Matches Slider Section */}
+              {relatedProducts.length > 0 && (
+                <div className="mt-8">
+                  <h3 className="text-black font-bold text-lg uppercase tracking-wider mb-4 border-b border-pink-100 pb-2">
+                    More in this Color
+                  </h3>
+                  <div className="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
+                    {relatedProducts.map((rp) => (
+                      <Link 
+                        key={rp.slug} 
+                        href={`/shop/product/${rp.slug}`}
+                        className="flex-shrink-0 w-32 group"
+                      >
+                        <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-gray-100 mb-2">
+                          <Image
+                            src={`/images/${rp.images[0].url}`}
+                            alt={rp.name}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                          />
+                        </div>
+                        <p className="text-xs font-medium text-gray-900 truncate group-hover:text-[#db2777]">
+                          {rp.name}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* RIGHT COLUMN: Product Info & Descriptions */}
@@ -124,7 +163,6 @@ export default async function ProductPage({ params }: PageProps) {
                 </a>
               )}
 
-              {/* Combined Block: Original Figcaption + Intro Paragraph */}
               <figure className="mb-8">
                 <figcaption className="text-gray-800 text-lg leading-relaxed border-l-4 border-pink-200 pl-6">
                   <div dangerouslySetInnerHTML={{ 
@@ -133,7 +171,6 @@ export default async function ProductPage({ params }: PageProps) {
                 </figcaption>
               </figure>
 
-              {/* Remaining Content: Headings, Links, and Body Text */}
               {remainingDescription && (
                 <div className="mt-4">
                   <div 
@@ -144,7 +181,6 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               )}
 
-              {/* FAQ Section */}
               {finalFaqs.length > 0 && (
                 <div className="mt-12 border-t border-pink-100 pt-8">
                   <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
