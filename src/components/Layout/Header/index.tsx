@@ -42,9 +42,8 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/shop/category/lehenga" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Lehengas</Link>
-          <Link href="/shop/category/jewelry" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Jewelry</Link>
-          <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Blog</Link>
+          <Link href="/shop" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Shop</Link>
+          <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Bride and Groom Guide</Link>
           <Link href="/about" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">About</Link>
         </nav>
 
