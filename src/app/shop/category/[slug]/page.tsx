@@ -3,7 +3,6 @@ import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import ProductCard from '@/components/ProductCard'
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -113,7 +112,6 @@ export default async function CategoryPage({ params }: PageProps) {
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.map((product) => {
-            // Your original logic preserved
             const hasH2 = product.description.includes('<h2');
             let introText = "";
             if (hasH2) {
@@ -126,8 +124,43 @@ export default async function CategoryPage({ params }: PageProps) {
             const cleanDescriptionIntro = introText.replace(/<[^>]*>?/gm, '').trim();
 
             return (
-              /* Using ProductCard for hover interactivity and SEO fallback logic */
-              <ProductCard key={product.slug} product={product} />
+              <div key={product.slug} className="group flex flex-col">
+                <Link href={`/shop/product/${product.slug}`} className="block">
+                  <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50">
+                    <div className="relative h-[450px] w-full p-4"> 
+                      <Image 
+                        src={`/images/${product.images[0].url.replace(/^\//, '')}`} 
+                        alt={product.images[0].alt || product.name}
+                        fill 
+                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        unoptimized
+                      />
+                    </div>
+                    <figcaption className="sr-only">
+                      {cleanDescriptionIntro}
+                    </figcaption>
+                  </figure>
+                  <h3 className="mt-4 text-center text-sm font-bold uppercase tracking-tighter text-gray-900 group-hover:text-pink-600 transition-colors">
+                    {product.name}
+                  </h3>
+                </Link>
+
+                <div className="sr-only" aria-hidden="true">
+                  {product.images.slice(1).map((img: any, idx: number) => (
+                    <Link key={idx} href={`/shop/product/${product.slug}`}>
+                      <figure>
+                        <img 
+                          src={`/images/${img.url.replace(/^\//, '')}`} 
+                          alt={img.alt || product.name} 
+                        />
+                        <figcaption>
+                          {img.figcaption || img.alt || cleanDescriptionIntro}
+                        </figcaption>
+                      </figure>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             );
           })}
         </div>
@@ -139,8 +172,11 @@ export default async function CategoryPage({ params }: PageProps) {
         </div>
       )}
 
+      {/* Long Content Section */}
       {category.longContent && (
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
+          
+          {/* DECOUPLED DYNAMIC STYLING TABLE */}
           {stylingTable && (
             <div className="mb-16">
               <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
@@ -150,7 +186,9 @@ export default async function CategoryPage({ params }: PageProps) {
               <div className="overflow-x-auto rounded-[2rem] border border-pink-100 shadow-sm bg-white">
                 <table className="w-full text-left border-collapse min-w-[900px]">
                   <thead>
+                    {/* TOP ENTITY SPANNING ROW */}
                     <tr className="bg-pink-50/30">
+                      {/* Empty cell for the Left Entity column */}
                       <th className="p-6 border-b border-pink-100"></th>
                       <th colSpan={stylingTable.columns.length} className="p-4 border-b border-pink-100 text-center">
                         <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block">
@@ -162,6 +200,7 @@ export default async function CategoryPage({ params }: PageProps) {
                       </th>
                     </tr>
                     
+                    {/* HEADER COLUMN NAMES */}
                     <tr className="bg-white">
                       <th className="p-6 border-b border-pink-100 bg-pink-50/10 w-[220px]">
                         <span className="text-gray-900 font-black uppercase text-xs tracking-tighter">
@@ -178,8 +217,9 @@ export default async function CategoryPage({ params }: PageProps) {
                     </tr>
                   </thead>
                   <tbody className="text-gray-700">
-                    {Object.entries(stylingTable.rows).map(([rowName, allowedStyles]: [string, any]) => (
+                    {Object.entries(stylingTable.rows).map(([rowName, allowedStyles]: [string, any], index: number) => (
                       <tr key={rowName} className="border-b border-pink-50 hover:bg-pink-50/5 transition-colors">
+                        {/* LEFT ENTITY ROW NAMES (Fabric Types) */}
                         <td className="p-6 font-bold text-black border-r border-pink-50 bg-gray-50/30">
                           {rowName}
                         </td>
@@ -194,6 +234,7 @@ export default async function CategoryPage({ params }: PageProps) {
                         ))}
                       </tr>
                     ))}
+                    {/* OPTIONAL VERTICAL DESCRIPTION (Appears as a footer row to maintain left-alignment) */}
                     {stylingTable.leftEntity.description && (
                       <tr className="bg-pink-50/10">
                          <td colSpan={stylingTable.columns.length + 1} className="p-4 text-center">
