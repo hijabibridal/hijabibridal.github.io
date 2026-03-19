@@ -3,7 +3,7 @@ import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import ProductCard from './ProductCard' // FIX: Corrected from ProductImage to ProductCard
+import ProductCard from '@/components/ProductCard'
 
 type PageProps = {
   params: Promise<{ slug: string }>;
