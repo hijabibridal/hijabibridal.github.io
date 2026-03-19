@@ -1,8 +1,8 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 
-// Updated to match your "Layout" (capital L) folder structure
-import Navbar from '../components/Layout/Header' 
+// Using the correct path for your Header based on your file structure
+import Header from '../components/Layout/Header' 
 import Footer from '../components/Layout/Footer'
 
 const poppins = Poppins({
@@ -15,7 +15,6 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Hijabi Bridal',
   description: 'Modest Wedding Inspiration & Shop',
-  // STEP 1: Fix the Site Name for Google Search Results
   openGraph: {
     siteName: 'Hijabi Bridal',
     title: 'Hijabi Bridal',
@@ -29,15 +28,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // JSON-LD to explicitly define the Site Name for Google
+  const siteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hijabi Bridal",
+    "alternateName": ["HijabiBridal", "HB Bridal"],
+    "url": "https://hijabibridal.github.io/" 
+  };
+
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <head>
-        {/* RESTORED: Google Site Verification for Search Console ownership */}
+        {/* Google Site Verification */}
         <meta name="google-site-verification" content="2LM4mclQm-UZp-Lft6E04fLlzcmmkafpqfNbMVntsqs" />
 
-        {/* STEP 2: Force Google to see the new favicon and override old cache */}
+        {/* Favicon & Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Injected Site Name Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
 
         {/* Google Tag Manager */}
         <script
@@ -49,10 +63,8 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-K885VPJ5');`,
           }}
         />
-        {/* End Google Tag Manager */}
       </head>
       <body className="font-sans antialiased">
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
             src="https://www.googletagmanager.com/ns.html?id=GTM-K885VPJ5"
@@ -61,10 +73,9 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
         
-        <Navbar />
-        {children}
+        <Header />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

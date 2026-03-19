@@ -29,46 +29,22 @@ export default function Header() {
         {/* Mobile Hamburger */}
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-pink-600 focus:outline-none">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6" : "M4 6h16M4 12h16m-7 6h7"} />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6" : "M4 6h16M4 12h16m4 6h16"} />
           </svg>
         </button>
 
         {/* Logo */}
-        <Link href="/" className="text-2xl font-black text-pink-600 tracking-tighter">
-          HIJABI BRIDAL
+        <Link href="/" className="flex items-center space-x-2">
+          <span className="text-2xl font-black tracking-tighter text-gray-900 uppercase">
+            Hijabi <span className="text-pink-600">Bridal</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8 items-center">
-          <div className="group relative py-4">
-            <button className="text-gray-800 hover:text-pink-600 font-black flex items-center uppercase tracking-tight">
-              Shop <span className="ml-1 text-[10px] text-pink-500">▼</span>
-            </button>
-            {/* Mega Dropdown */}
-            <div className="absolute top-full left-0 hidden group-hover:flex bg-white shadow-2xl border border-pink-50 p-8 w-[600px] rounded-b-2xl grid grid-cols-2 gap-10">
-              <div>
-                <p className="text-pink-600 font-black text-[11px] uppercase tracking-[0.2em] mb-4 border-b border-pink-50 pb-2">Color Collections</p>
-                <div className="grid grid-cols-2 gap-x-4">
-                  {colorCollections.map(c => (
-                    <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1.5 text-sm text-gray-600 hover:text-pink-500 transition-colors font-medium lowercase first-letter:uppercase">
-                      {c.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="text-pink-600 font-black text-[11px] uppercase tracking-[0.2em] mb-4 border-b border-pink-50 pb-2">Item Collections</p>
-                <div className="grid grid-cols-1">
-                  {itemCollections.map(c => (
-                    <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1.5 text-sm text-gray-600 hover:text-pink-500 transition-colors font-medium">
-                      {c.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Bride & Groom Guide</Link>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link href="/shop/category/lehenga" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Lehengas</Link>
+          <Link href="/shop/category/jewelry" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Jewelry</Link>
+          <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Blog</Link>
           <Link href="/about" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">About</Link>
         </nav>
 
@@ -84,7 +60,12 @@ export default function Header() {
               <div>
                 <p className="text-pink-600 font-black text-[10px] uppercase mb-2">By Color</p>
                 {colorCollections.map(c => (
-                  <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">
+                  <Link 
+                    key={c.slug} 
+                    href={`/shop/category/${c.slug}`} 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-1 text-sm font-bold text-gray-700"
+                  >
                     {c.name}
                   </Link>
                 ))}
@@ -92,15 +73,35 @@ export default function Header() {
               <div>
                 <p className="text-pink-600 font-black text-[10px] uppercase mb-2">By Item</p>
                 {itemCollections.map(c => (
-                  <Link key={c.slug} href={`/shop/category/${c.slug}`} className="block py-1 text-sm font-bold text-gray-700">
+                  <Link 
+                    key={c.slug} 
+                    href={`/shop/category/${c.slug}`} 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-1 text-sm font-bold text-gray-700"
+                  >
                     {c.name}
                   </Link>
                 ))}
               </div>
            </div>
            <div className="space-y-4 border-t pt-4">
-            <Link href="/blog" className="block text-lg font-black text-gray-800">GUIDE</Link>
-            <Link href="/about" className="block text-lg font-black text-gray-800">ABOUT</Link>
+            <Link 
+              href="/blog" 
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-lg font-black text-gray-800 hover:text-pink-600 uppercase"
+            >
+              Blog
+            </Link>
+            <Link 
+              href="/about" 
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-lg font-black text-gray-800 hover:text-pink-600 uppercase"
+            >
+              About
+            </Link>
+            <div className="pt-2">
+              <SearchBar />
+            </div>
            </div>
         </div>
       )}
