@@ -1,38 +1,53 @@
-import Link from 'next/link'
-import Image from 'next/image'
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProductCard({ product }: { product: any }) {
-  // Ensure we are pulling from /public/images/ and handling the filename correctly
-  const mainAlt = product.images?.[0]?.alt || product.name;
-  const imgSrc = `/images/${product.images?.[0]?.url?.replace(/^\//, '')}`;
+  // Track which image to show (0 = first, 1 = second on hover)
+  const [imgIndex, setImgIndex] = useState(0);
+
+  const hasSecondImage = product.images && product.images.length > 1;
+  
+  // Target the specific image object based on hover state
+  const currentImageData = product.images?.[imgIndex] || product.images?.[0];
+  
+  // Construct path and handle the lowercase keys: 'alt' and 'figcaption'
+  const imgSrc = `/images/${currentImageData?.url?.replace(/^\//, '')}`;
+  
+  // We combine the alt and figcaption into the Image 'alt' prop.
+  // This "passes" the data to the page source for SEO/Screen Readers 
+  // without displaying any text on the UI.
+  const currentAlt = currentImageData?.alt || currentImageData?.figcaption || product.name;
 
   return (
     <Link 
       href={`/shop/product/${product.slug}`} 
       className="group block bg-white rounded-2xl border border-pink-50 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+      onMouseEnter={() => hasSecondImage && setImgIndex(1)}
+      onMouseLeave={() => setImgIndex(0)}
     >
-      {/* Image Container: h-80 keeps the grid aligned regardless of image aspect ratio */}
+      {/* Image Container */}
       <div className="relative h-80 w-full bg-gray-50 overflow-hidden">
         <Image 
           src={imgSrc} 
-          alt={mainAlt}
+          alt={currentAlt}
           fill
           className="object-contain p-6 group-hover:scale-110 transition-transform duration-700 ease-in-out"
           unoptimized 
         />
         
-        {/* Subtle Pink Gradient Overlay on Hover */}
+        {/* Subtle Pink Gradient Overlay (Visual only, no text) */}
         <div className="absolute inset-0 bg-gradient-to-t from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 
       {/* Product Info */}
       <div className="p-6 bg-white">
-        {/* Force Black Text for the Product Name */}
         <h3 className="text-xl font-black text-black uppercase tracking-tighter line-clamp-2 leading-tight">
           {product.name}
         </h3>
         
-        {/* Pink "View Details" Link - Now moved up for a cleaner look */}
         <div className="mt-6 flex items-center justify-between">
           <p className="text-[#db2777] font-bold text-xs uppercase tracking-[0.2em]">
             View Details
@@ -48,5 +63,5 @@ export default function ProductCard({ product }: { product: any }) {
         </div>
       </div>
     </Link>
-  )
+  );
 }
