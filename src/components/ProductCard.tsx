@@ -20,15 +20,21 @@ export default function ProductCard({ product }: { product: any }) {
         onMouseEnter={() => hasSecondImage && setImgIndex(1)}
         onMouseLeave={() => setImgIndex(0)}
       >
-        {/* Aspect ratio 4/5 provides a tall portrait look that won't cut off heads or feet */}
-        <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50 aspect-[4/5] w-full">
+        {/* 1. aspect-[2/3] or [3/4] is best for full-length bridal wear. 
+          2. object-contain ensures the TOP and BOTTOM are never cut off.
+          3. We removed the 'p-6' padding so the image stays large.
+        */}
+        <figure className="relative overflow-hidden rounded-2xl border border-pink-50 bg-gray-50 aspect-[2/3] w-full">
           <Image 
             src={imgSrc} 
             alt={currentAlt}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-contain transition-transform duration-500 group-hover:scale-105"
             unoptimized 
           />
+          <figcaption className="sr-only">
+            {currentImageData?.figcaption || product.name}
+          </figcaption>
         </figure>
         
         <h3 className="mt-4 text-center text-sm font-bold uppercase tracking-tighter text-gray-900 group-hover:text-pink-600 transition-colors">
