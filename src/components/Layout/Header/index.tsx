@@ -40,9 +40,62 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav with Mega-Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/shop" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Shop</Link>
+          {/* SHOP MEGA MENU (Desktop Only) */}
+          <div className="group relative py-4">
+            <Link 
+              href="/shop" 
+              className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight flex items-center"
+            >
+              Shop
+              <svg className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
+              </svg>
+            </Link>
+
+            {/* MEGA MENU PANEL */}
+            <div className="absolute left-0 top-full hidden group-hover:block w-[450px] bg-white border border-pink-50 shadow-xl rounded-b-2xl p-8 z-50">
+              <div className="grid grid-cols-2 gap-10">
+                {/* Colors Side */}
+                <div>
+                  <p className="text-pink-600 font-black text-[11px] uppercase mb-4 tracking-widest border-b border-pink-50 pb-1">
+                    By Color
+                  </p>
+                  <div className="space-y-2">
+                    {colorCollections.map(c => (
+                      <Link 
+                        key={c.slug} 
+                        href={`/shop/category/${c.slug}`} 
+                        className="block text-sm font-bold text-gray-700 hover:text-pink-600 transition-colors"
+                      >
+                        {c.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Items Side */}
+                <div>
+                  <p className="text-pink-600 font-black text-[11px] uppercase mb-4 tracking-widest border-b border-pink-50 pb-1">
+                    By Item
+                  </p>
+                  <div className="space-y-2">
+                    {itemCollections.map(c => (
+                      <Link 
+                        key={c.slug} 
+                        href={`/shop/category/${c.slug}`} 
+                        className="block text-sm font-bold text-gray-700 hover:text-pink-600 transition-colors"
+                      >
+                        {c.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Link href="/blog" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">Bride and Groom Guide</Link>
           <Link href="/about" className="text-gray-800 hover:text-pink-600 font-black uppercase tracking-tight">About</Link>
         </nav>
@@ -52,7 +105,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Reverted to Original Style) */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-pink-50 p-6 space-y-6">
            <div className="grid grid-cols-2 gap-4">
