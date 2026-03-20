@@ -11,36 +11,48 @@ export default function SearchResults({ query }: { query: string }) {
     if (!query) return;
 
     const lowerQuery = query.toLowerCase().trim();
-    // Split query into individual words for better matching
-    const queryWords = lowerQuery.split(/\s+/);
+    // Split query into individual words (e.g., ["white", "hijab"])
+    const queryWords = lowerQuery.split(/\s+/).filter(word => word.length > 0);
     
     const scoredResults = productData.products
       .map(product => {
-        let score = 0;
         const productName = product.name.toLowerCase();
         const slugs = product.mainCategorySlugs.map(s => s.toLowerCase());
         const description = product.description.toLowerCase();
+        
+        // 1. STRICT MATCH CHECK: Every word in the query MUST appear somewhere in the product
+        const matchesAllWords = queryWords.every(word => 
+          productName.includes(word) || 
+          slugs.includes(word) || 
+          description.includes(word)
+        );
 
-        // 1. TOP PRIORITY: Exact Name Match (1000 points)
-        if (productName === lowerQuery) score += 1000;
+        // If it doesn't match all words, it gets a score of 0 and is filtered out
+        if (!matchesAllWords) return { ...product, score: 0 };
 
-        // 2. HIGH PRIORITY: Exact Category/Color Match (500 points per word)
-        // This makes "Red" actually find red items by checking your slugs
+        let score = 0;
+
+        // 2. SCORING FOR RANKING (The "Best" matches go to the top)
+        
+        // Exact full phrase match in name is the gold standard
+        if (productName.includes(lowerQuery)) score += 1000;
+
+        // Matches in the slugs (categories/colors) are high priority
         queryWords.forEach(word => {
           if (slugs.includes(word)) score += 500;
         });
 
-        // 3. MEDIUM PRIORITY: Name starts with or contains query (100 - 200 points)
-        if (productName.startsWith(lowerQuery)) score += 200;
-        else if (productName.includes(lowerQuery)) score += 100;
+        // Matches in the product name
+        queryWords.forEach(word => {
+          if (productName.includes(word)) score += 200;
+        });
 
-        // 4. LOW PRIORITY: Description contains query (10 points)
-        // Only count this if no other matches found to prevent "fluff" results
-        if (score === 0 && description.includes(lowerQuery)) score += 10;
+        // Matches in description are low priority
+        if (description.includes(lowerQuery)) score += 50;
 
         return { ...product, score };
       })
-      .filter(p => p.score > 0)
+      .filter(p => p.score > 0) // Only show products that passed the "All Words" test
       .sort((a, b) => b.score - a.score);
 
     setResults(scoredResults)
@@ -61,10 +73,10 @@ export default function SearchResults({ query }: { query: string }) {
       ) : (
         <div className="text-center py-20 bg-gray-50 rounded-[2rem] border-2 border-dashed border-gray-200">
           <p className="text-gray-500 text-lg font-bold">
-            No exact matches found. 
+            No items match all your search terms.
           </p>
           <p className="text-gray-400 text-sm mt-2">
-            Try searching for a color like "Red" or an item like "Lehenga".
+            Try a simpler search like "White" or "Hijab" separately.
           </p>
         </div>
       )}
