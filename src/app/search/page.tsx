@@ -16,16 +16,19 @@ function SearchContent() {
 
   useEffect(() => {
     if (query) {
-      // Split the query into individual keywords (e.g., "white", "hijab")
-      const keywords = query.split(' ').filter(word => word.length > 0);
+      // 1. Split the user's search into individual words (e.g., "white", "hijab")
+      const searchTerms = query.split(/\s+/).filter(word => word.length > 0);
 
       const filtered = productData.products.filter((product) => {
-        // Get the category tags (slugs) for this specific product
+        // 2. Get the tags (slugs) for this specific product
         const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
         
-        // STRICT RULE: Every word in the search query MUST match an exact slug in the product
-        // This prevents items from appearing just because a keyword is in the description
-        return keywords.every(keyword => productSlugs.includes(keyword));
+        // 3. THE FLEXIBLE ORDER RULE: 
+        // For every word the user typed, check if it exists ANYWHERE in the product's tags.
+        // This allows "white hijab" to match tags like ["bridal", "white", "hijab"]
+        return searchTerms.every(term => 
+          productSlugs.some(slug => slug === term || slug.includes(term))
+        );
       });
 
       setResults(filtered);

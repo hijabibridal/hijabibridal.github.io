@@ -8,16 +8,18 @@ export default function SearchResults({ query }: { query: string }) {
   const results = useMemo(() => {
     if (!query) return [];
 
-    // Clean and split the query into individual words (e.g., "white", "hijab")
+    // Split query into individual words (e.g., "white", "hijab")
     const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(t => t.length > 0);
     
     return productData.products.filter(product => {
       // Get the category tags (slugs) for this specific product
       const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
 
-      // THE STRICT RULE: Every word searched MUST exist in the product's slugs
-      // This ignores the description entirely.
-      return searchTerms.every(term => productSlugs.includes(term));
+      // STRICT RULE: Every word searched MUST exist in the product's tags (slugs)
+      // This allows "white hijab" to match slugs in any order.
+      return searchTerms.every(term => 
+        productSlugs.some(slug => slug === term || slug.includes(term))
+      );
     });
   }, [query]);
 
@@ -36,9 +38,7 @@ export default function SearchResults({ query }: { query: string }) {
       ) : (
         <div className="py-20 text-center bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200">
           <p className="text-xl text-gray-900 font-black uppercase tracking-tight">No Exact Matches</p>
-          <p className="text-gray-500 mt-2">
-            Try searching for specific categories like "White" or "Hijab".
-          </p>
+          <p className="text-gray-500 mt-2">Try searching for categories like "White" or "Hijab".</p>
         </div>
       )}
     </div>
