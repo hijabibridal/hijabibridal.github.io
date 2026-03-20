@@ -16,15 +16,16 @@ function SearchContent() {
 
   useEffect(() => {
     if (query) {
-      // Logic Update: Split the query into individual words
+      // Split the query into individual keywords (e.g., "white", "hijab")
       const keywords = query.split(' ').filter(word => word.length > 0);
 
       const filtered = productData.products.filter((product) => {
-        // Create a single searchable string for the product
-        const searchableText = `${product.name} ${product.description || ''} ${product.category || ''}`.toLowerCase();
+        // Get the category tags (slugs) for this specific product
+        const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
         
-        // Logic Update: Ensure EVERY word in the search query matches the product
-        return keywords.every(keyword => searchableText.includes(keyword));
+        // STRICT RULE: Every word in the search query MUST match an exact slug in the product
+        // This prevents items from appearing just because a keyword is in the description
+        return keywords.every(keyword => productSlugs.includes(keyword));
       });
 
       setResults(filtered);
@@ -47,13 +48,13 @@ function SearchContent() {
       {results.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {results.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id || product.slug} product={product} />
           ))}
         </div>
       ) : (
         <div className="text-center py-20 bg-gray-50 rounded-lg">
-          <p className="text-xl text-gray-600 mb-4">No matches found.</p>
-          <p className="text-gray-500">Try searching for keywords like "Groom", "Red", or "Nikkah".</p>
+          <p className="text-xl text-gray-600 mb-4">No exact matches found.</p>
+          <p className="text-gray-500">Try searching for specific categories like "Red", "White", or "Hijab".</p>
         </div>
       )}
     </div>
