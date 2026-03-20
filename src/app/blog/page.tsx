@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  // Safe access to the articles array from your JSON
   const articles = (blogData as any).articles || [];
 
   const categories = [
@@ -47,43 +46,42 @@ export default function BlogPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article: any) => {
-              return (
-                <Link 
-                  key={article.slug} 
-                  href={`/blog/${article.slug}`}
-                  className="group flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden"
-                >
-                  {/* Featured Image Section */}
-                  <div className="relative aspect-video w-full bg-gray-100">
-                    {article.featuredImageUrl ? (
-                      <Image
-                        src={article.featuredImageUrl}
-                        alt={article.featuredImageAlt || article.pageTitle}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="flex items-center justify-center h-full text-gray-400 italic">
-                        No image available
-                      </div>
-                    )}
-                  </div>
+            {articles.map((article: any) => (
+              <Link 
+                key={article.slug} 
+                href={`/blog/${article.slug}`}
+                className="group flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden h-full"
+              >
+                {/* Fixed Image Container */}
+                <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
+                  {article.featuredImageUrl ? (
+                    <Image
+                      src={article.featuredImageUrl}
+                      alt={article.featuredImageAlt || article.pageTitle}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full text-gray-400 italic">
+                      No image available
+                    </div>
+                  )}
+                </div>
 
-                  <div className="p-6">
-                    <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
-                      {article.mainCategorySlug || 'Wedding Tradition'}
-                    </span>
-                    <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
-                      {article.pageTitle}
-                    </h3>
-                    <p className="text-gray-600 line-clamp-3">
-                      {article.description || "Read more about this traditional look..."}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
+                    {article.mainCategorySlug || 'Wedding Tradition'}
+                  </span>
+                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
+                    {article.pageTitle}
+                  </h3>
+                  <p className="text-gray-600 line-clamp-3 mb-4">
+                    {article.description || "Read more about this traditional look..."}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         )}
       </div>
