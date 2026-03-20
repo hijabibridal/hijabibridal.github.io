@@ -1,5 +1,6 @@
 import blogData from '@/data/blog-articles.json'
 import Link from 'next/link'
+import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Metadata } from 'next'
 
@@ -25,10 +26,8 @@ export default function BlogPage() {
         
         <header className="my-10">
           <h1 className="text-5xl font-black uppercase tracking-tighter text-black">The Bridal Blog</h1>
-          {/* Branding: Pink decorative line for the USA market */}
           <div className="h-1.5 w-24 bg-pink-600 mt-4"></div>
 
-          {/* New Category Navigation Links */}
           <div className="flex flex-wrap gap-6 mt-8">
             {categories.map((cat) => (
               <Link 
@@ -53,19 +52,35 @@ export default function BlogPage() {
                 <Link 
                   key={article.slug} 
                   href={`/blog/${article.slug}`}
-                  className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
+                  className="group flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden"
                 >
-                  {/* Category slug name is pink */}
-                  <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
-                    {article.mainCategorySlug || 'Wedding Tradition'}
-                  </span>
-                  {/* FIXED: Article title is black, changes to pink only on hover */}
-                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
-                    {article.pageTitle}
-                  </h3>
-                  <p className="text-gray-600 line-clamp-3">
-                    {article.description || "Read more about this traditional look..."}
-                  </p>
+                  {/* Featured Image Section */}
+                  <div className="relative aspect-video w-full bg-gray-100">
+                    {article.featuredImageUrl ? (
+                      <Image
+                        src={article.featuredImageUrl}
+                        alt={article.featuredImageAlt || article.pageTitle}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center h-full text-gray-400 italic">
+                        No image available
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-6">
+                    <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
+                      {article.mainCategorySlug || 'Wedding Tradition'}
+                    </span>
+                    <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
+                      {article.pageTitle}
+                    </h3>
+                    <p className="text-gray-600 line-clamp-3">
+                      {article.description || "Read more about this traditional look..."}
+                    </p>
+                  </div>
                 </Link>
               );
             })}
