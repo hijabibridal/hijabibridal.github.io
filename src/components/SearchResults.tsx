@@ -1,35 +1,27 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import productData from '@/data/bridal-products.json'
 import ProductCard from '@/components/ProductCard'
 
 export default function SearchResults({ query }: { query: string }) {
-  const [results, setResults] = useState<any[]>([])
+  const results = useMemo(() => {
+    if (!query) return [];
 
-  useEffect(() => {
-    if (!query) return;
-
-    const keywords = query.toLowerCase().trim().split(/\s+/).filter(t => t.length > 0);
+    // Split query into individual words (e.g., "white", "hijab")
+    const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(t => t.length > 0);
     
-    const filtered = productData.products.filter(product => {
-      // 1. Get the product slug
-      const productSlug = (product.slug || "").toLowerCase();
-      
-      // 2. Get all image URLs from the images array
-      const imageUrls = (product.images || []).map(img => (img.url || "").toLowerCase());
+    return productData.products.filter(product => {
+      // Get the category tags (slugs) for this specific product
+      const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
 
-      // Search pool restricted to slug and url only
-      const searchPool = [productSlug, ...imageUrls];
-
-      // "AND" Logic: Every keyword must match something in the pool
-      return keywords.every(keyword => 
-        searchPool.some(item => item.includes(keyword))
+      // STRICT RULE: Every word searched MUST exist in the product's tags (slugs)
+      // This allows "white hijab" to match slugs in any order.
+      return searchTerms.every(term => 
+        productSlugs.some(slug => slug === term || slug.includes(term))
       );
     });
-
-    setResults(filtered);
-  }, [query])
+  }, [query]);
 
   return (
     <div className="max-w-7xl mx-auto px-4">
@@ -45,7 +37,8 @@ export default function SearchResults({ query }: { query: string }) {
         </div>
       ) : (
         <div className="py-20 text-center bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200">
-          <p className="text-xl text-gray-900 font-black uppercase">No Matches Found</p>
+          <p className="text-xl text-gray-900 font-black uppercase tracking-tight">No Exact Matches</p>
+          <p className="text-gray-500 mt-2">Try searching for categories like "White" or "Hijab".</p>
         </div>
       )}
     </div>
