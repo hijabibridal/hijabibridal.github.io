@@ -1,67 +1,51 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import productData from '@/data/bridal-products.json'
 import ProductCard from '@/components/ProductCard'
 
 export default function SearchResults({ query }: { query: string }) {
-  const [results, setResults] = useState<any[]>([])
+  const results = useMemo(() => {
+    if (!query) return [];
 
-  useEffect(() => {
-    if (!query) return;
-
-    const lowerQuery = query.toLowerCase().trim();
-    // Split query into individual words (e.g., ["white", "hijab"])
-    const queryWords = lowerQuery.split(/\s+/).filter(word => word.length > 0);
+    const searchTerms = query.toLowerCase().trim().split(/\s+/);
     
-    const scoredResults = productData.products
+    return productData.products
       .map(product => {
         const productName = product.name.toLowerCase();
-        const slugs = product.mainCategorySlugs.map(s => s.toLowerCase());
-        const description = product.description.toLowerCase();
+        const productDescription = (product.description || "").toLowerCase();
+        const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
         
-        // 1. STRICT MATCH CHECK: Every word in the query MUST appear somewhere in the product
-        const matchesAllWords = queryWords.every(word => 
-          productName.includes(word) || 
-          slugs.includes(word) || 
-          description.includes(word)
-        );
+        // COMBINE ALL RELEVANT TEXT INTO ONE STRING FOR THE SEARCH TO CHECK
+        const searchableText = `${productName} ${productSlugs.join(' ')} ${productDescription}`;
 
-        // If it doesn't match all words, it gets a score of 0 and is filtered out
-        if (!matchesAllWords) return { ...product, score: 0 };
+        // THE "STRICT" CHECK: Every single word from the search must be in the searchableText
+        const matchesAll = searchTerms.every(term => searchableText.includes(term));
 
+        if (!matchesAll) return null;
+
+        // SCORING: If it matches all words, we then decide which one goes FIRST
         let score = 0;
-
-        // 2. SCORING FOR RANKING (The "Best" matches go to the top)
         
-        // Exact full phrase match in name is the gold standard
-        if (productName.includes(lowerQuery)) score += 1000;
-
-        // Matches in the slugs (categories/colors) are high priority
-        queryWords.forEach(word => {
-          if (slugs.includes(word)) score += 500;
+        // Exact name matches are the highest priority
+        if (productName.includes(query.toLowerCase())) score += 100;
+        
+        // Category/Slug matches (like "white" or "hijab") are second priority
+        searchTerms.forEach(term => {
+          if (productSlugs.includes(term)) score += 50;
+          if (productName.includes(term)) score += 10;
         });
-
-        // Matches in the product name
-        queryWords.forEach(word => {
-          if (productName.includes(word)) score += 200;
-        });
-
-        // Matches in description are low priority
-        if (description.includes(lowerQuery)) score += 50;
 
         return { ...product, score };
       })
-      .filter(p => p.score > 0) // Only show products that passed the "All Words" test
-      .sort((a, b) => b.score - a.score);
-
-    setResults(scoredResults)
-  }, [query])
+      .filter((p): p is any => p !== null) // Remove items that didn't match all words
+      .sort((a, b) => b.score - a.score);   // Sort the "Survivors" by relevance
+  }, [query]);
 
   return (
-    <div>
-      <h2 className="text-2xl font-black text-gray-900 mb-8 uppercase tracking-tight">
-        {results.length} {results.length === 1 ? 'result' : 'results'} found for "{query}"
+    <div className="max-w-7xl mx-auto px-4">
+      <h2 className="text-2xl font-black text-gray-900 mb-8 uppercase tracking-tighter">
+        {results.length} {results.length === 1 ? 'Result' : 'Results'} for "{query}"
       </h2>
       
       {results.length > 0 ? (
@@ -71,13 +55,9 @@ export default function SearchResults({ query }: { query: string }) {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 bg-gray-50 rounded-[2rem] border-2 border-dashed border-gray-200">
-          <p className="text-gray-500 text-lg font-bold">
-            No items match all your search terms.
-          </p>
-          <p className="text-gray-400 text-sm mt-2">
-            Try a simpler search like "White" or "Hijab" separately.
-          </p>
+        <div className="py-20 text-center bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200">
+          <p className="text-gray-500 font-bold">No items found matching all terms.</p>
+          <p className="text-gray-400 text-sm mt-2">Try searching for just "{query.split(' ')[0]}"</p>
         </div>
       )}
     </div>
