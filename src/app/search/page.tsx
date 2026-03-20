@@ -5,10 +5,6 @@ import { useSearchParams } from 'next/navigation';
 import productData from '@/data/bridal-products.json';
 import ProductCard from '@/components/ProductCard'; 
 
-/**
- * SearchContent handles the filtering logic.
- * It must be inside a Suspense boundary because it uses useSearchParams.
- */
 function SearchContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q')?.toLowerCase() || '';
@@ -16,18 +12,22 @@ function SearchContent() {
 
   useEffect(() => {
     if (query) {
-      // 1. Split the user's search into individual words (e.g., "white", "hijab")
-      const searchTerms = query.split(/\s+/).filter(word => word.length > 0);
+      // Split the query into individual keywords for "AND" logic
+      const keywords = query.split(/\s+/).filter(word => word.length > 0);
 
       const filtered = productData.products.filter((product) => {
-        // 2. Get the tags (slugs) for this specific product
-        const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
+        // 1. Get the product slug
+        const productSlug = (product.slug || "").toLowerCase();
         
-        // 3. THE FLEXIBLE ORDER RULE: 
-        // For every word the user typed, check if it exists ANYWHERE in the product's tags.
-        // This allows "white hijab" to match tags like ["bridal", "white", "hijab"]
-        return searchTerms.every(term => 
-          productSlugs.some(slug => slug === term || slug.includes(term))
+        // 2. Get all image URLs from the images array
+        const imageUrls = (product.images || []).map(img => (img.url || "").toLowerCase());
+
+        // Create the search pool using only slug and url
+        const searchPool = [productSlug, ...imageUrls];
+
+        // "AND" Logic: Every keyword must be found in at least one item in the search pool
+        return keywords.every(keyword => 
+          searchPool.some(item => item.includes(keyword))
         );
       });
 
@@ -51,13 +51,12 @@ function SearchContent() {
       {results.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {results.map((product) => (
-            <ProductCard key={product.id || product.slug} product={product} />
+            <ProductCard key={product.slug} product={product} />
           ))}
         </div>
       ) : (
         <div className="text-center py-20 bg-gray-50 rounded-lg">
           <p className="text-xl text-gray-600 mb-4">No exact matches found.</p>
-          <p className="text-gray-500">Try searching for specific categories like "Red", "White", or "Hijab".</p>
         </div>
       )}
     </div>
@@ -66,12 +65,7 @@ function SearchContent() {
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600"></div>
-        <p className="ml-4 text-gray-600">Searching collection...</p>
-      </div>
-    }>
+    <Suspense fallback={<div className="min-h-screen" />}>
       <SearchContent />
     </Suspense>
   );
