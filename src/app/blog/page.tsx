@@ -52,15 +52,19 @@ export default function BlogPage() {
                 href={`/blog/${article.slug}`}
                 className="group flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden h-full"
               >
-                {/* Image container with forced aspect ratio */}
-                <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
+                {/* Image Container: 
+                   - w-4/5 makes the image 80% of the card width
+                   - mx-auto centers the image
+                   - mt-4 adds spacing from the top of the card
+                */}
+                <div className="relative aspect-video w-4/5 mx-auto mt-4 overflow-hidden bg-gray-100 rounded-xl">
                   {article.featuredImageUrl ? (
                     <Image
                       src={article.featuredImageUrl}
                       alt={article.featuredImageAlt || article.pageTitle}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 25vw"
                     />
                   ) : (
                     <div className="flex items-center justify-center h-full text-gray-400 italic">
@@ -73,10 +77,10 @@ export default function BlogPage() {
                   <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
                     {article.mainCategorySlug || 'Wedding Tradition'}
                   </span>
-                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors line-clamp-2">
+                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
                     {article.pageTitle}
                   </h3>
-                  <p className="text-gray-600 line-clamp-3">
+                  <p className="text-gray-600 line-clamp-3 mb-4">
                     {article.description || "Read more about this traditional look..."}
                   </p>
                 </div>
