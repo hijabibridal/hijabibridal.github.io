@@ -52,7 +52,7 @@ export default function BlogPage() {
                 href={`/blog/${article.slug}`}
                 className="group flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden h-full"
               >
-                {/* Fixed Image Container */}
+                {/* Image container with forced aspect ratio */}
                 <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
                   {article.featuredImageUrl ? (
                     <Image
@@ -73,10 +73,10 @@ export default function BlogPage() {
                   <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
                     {article.mainCategorySlug || 'Wedding Tradition'}
                   </span>
-                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
+                  <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors line-clamp-2">
                     {article.pageTitle}
                   </h3>
-                  <p className="text-gray-600 line-clamp-3 mb-4">
+                  <p className="text-gray-600 line-clamp-3">
                     {article.description || "Read more about this traditional look..."}
                   </p>
                 </div>
