@@ -90,10 +90,13 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* Only render the FAQ schema if FAQs exist to avoid GSC errors */}
+      {finalFaqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -103,7 +106,6 @@ export default async function ProductPage({ params }: PageProps) {
               { label: product.name, href: `/shop/product/${product.slug}` }
             ]} 
           />
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
             {/* LEFT COLUMN: Gallery & Color Match Slider */}
             <div>

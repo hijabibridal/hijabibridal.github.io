@@ -78,23 +78,13 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   const finalFaqs = Array.isArray(faqs) ? faqs : [];
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": finalFaqs
-  };
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": finalFaqs };
 
   return (
     <>
-      {/* FIXED: Only render script if FAQs actually exist */}
       {finalFaqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
-
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <Breadcrumbs 
