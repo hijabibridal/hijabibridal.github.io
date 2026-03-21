@@ -52,19 +52,18 @@ export default function BlogPage() {
                 href={`/blog/${article.slug}`}
                 className="group flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl transition-all bg-white overflow-hidden h-full"
               >
-                {/* Image Container: 
-                   - w-4/5 makes the image 80% of the card width
-                   - mx-auto centers the image
-                   - mt-4 adds spacing from the top of the card
+                {/* Image Container 
+                   - aspect-video keeps the container size consistent
+                   - object-contain ensures the full image is visible without cropping
                 */}
-                <div className="relative aspect-video w-4/5 mx-auto mt-4 overflow-hidden bg-gray-100 rounded-xl">
+                <div className="relative aspect-video w-full overflow-hidden bg-gray-50">
                   {article.featuredImageUrl ? (
                     <Image
                       src={article.featuredImageUrl}
                       alt={article.featuredImageAlt || article.pageTitle}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 25vw"
+                      className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
                     <div className="flex items-center justify-center h-full text-gray-400 italic">
