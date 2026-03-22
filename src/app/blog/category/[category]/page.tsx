@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import blogData from "@/data/blog-articles.json";
 import { Metadata } from "next";
+import Image from "next/image";
 
 interface BlogData {
   mainCategories: any[];
@@ -42,7 +43,6 @@ export default async function CategoryPage({ params }: PageProps) {
 
   if (!mainCategory) notFound();
 
-  // Filter and Reverse Logic
   const filtered = data.articles?.filter(
     (article: any) => article.mainCategorySlug === category
   ) || [];
@@ -73,15 +73,25 @@ export default async function CategoryPage({ params }: PageProps) {
             <Link 
               key={article.slug} 
               href={`/blog/${article.slug}`}
-              className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
+              className="group border border-gray-100 p-4 rounded-2xl hover:shadow-xl transition-all bg-white flex flex-col"
             >
-              <span className="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2 block">
+              {/* Image Container with object-contain to fit whole image */}
+              <div className="relative aspect-video mb-4 overflow-hidden rounded-xl bg-gray-50">
+                <Image
+                  src={`/images/${article.featuredImageUrl}`}
+                  alt={article.pageTitle}
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <span className="text-[10px] font-bold uppercase tracking-widest text-pink-600 mb-2 block">
                 {mainCategory.name}
               </span>
-              <h3 className="font-bold text-2xl mb-3 text-black group-hover:text-pink-600 transition-colors">
+              <h3 className="font-bold text-xl mb-3 text-black group-hover:text-pink-600 transition-colors leading-tight">
                 {article.pageTitle}
               </h3>
-              <p className="text-gray-600 line-clamp-3">
+              <p className="text-gray-600 text-sm line-clamp-2">
                 {article.description}
               </p>
             </Link>

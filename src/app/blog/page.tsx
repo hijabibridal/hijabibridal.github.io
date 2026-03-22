@@ -2,6 +2,7 @@ import Link from "next/link";
 import blogData from "@/data/blog-articles.json";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Blog | Hijabi Bridal",
@@ -9,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndex() {
-  // This pulls your articles and reverses them so the newest is first
   const articles = blogData.articles ? [...blogData.articles].reverse() : [];
 
   return (
@@ -32,12 +32,21 @@ export default function BlogIndex() {
             <Link 
               key={article.slug} 
               href={`/blog/${article.slug}`}
-              className="group border border-gray-100 p-6 rounded-2xl hover:shadow-xl transition-all bg-white"
+              className="group border border-gray-100 p-4 rounded-2xl hover:shadow-xl transition-all bg-white flex flex-col"
             >
-              <h3 className="font-bold text-2xl mb-3 group-hover:text-pink-600 transition-colors">
+              <div className="relative aspect-video mb-4 overflow-hidden rounded-xl bg-gray-50">
+                <Image
+                  src={`/images/${article.featuredImageUrl}`}
+                  alt={article.pageTitle}
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <h3 className="font-bold text-xl mb-3 group-hover:text-pink-600 transition-colors leading-tight">
                 {article.pageTitle}
               </h3>
-              <p className="text-gray-600 line-clamp-3">
+              <p className="text-gray-600 text-sm line-clamp-2">
                 {article.description}
               </p>
             </Link>
