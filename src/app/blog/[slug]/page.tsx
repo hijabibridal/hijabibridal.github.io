@@ -25,7 +25,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // You can add more terms here to make the matching even more precise
   const keywordMap = ["hijab", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
   const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
-  const matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
+  let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
+
+  // SEPARATE LOGIC FOR BODY TEXT PHRASE MATCHING
+  // This checks the body text specifically for "Muslim bridal dress" without altering the original keywordMap logic
+  const bodyTextLower = article.htmlBody.toLowerCase();
+  if (bodyTextLower.includes("muslim bridal dress")) {
+    matchedKeyword = "muslim-wedding-dresses";
+  }
 
   // Filter pool based on keyword appearing in mainCategorySlugs
   const relatedPool = productData.products.filter(p => 
