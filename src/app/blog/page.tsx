@@ -24,11 +24,14 @@ export default function BlogIndex() {
         <div className="h-1.5 w-24 bg-pink-600 mx-auto"></div>
       </header>
 
-      {articles.length === 0 ? (
-        <p className="text-center text-gray-500 italic">No articles found.</p>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article: any) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {articles.map((article: any) => {
+          // FIX: Handles path whether it starts with /images/ or not
+          const imagePath = article.featuredImageUrl.startsWith('/images/') 
+            ? article.featuredImageUrl 
+            : `/images/${article.featuredImageUrl}`;
+
+          return (
             <Link 
               key={article.slug} 
               href={`/blog/${article.slug}`}
@@ -36,7 +39,7 @@ export default function BlogIndex() {
             >
               <div className="relative aspect-video mb-4 overflow-hidden rounded-xl bg-gray-50">
                 <Image
-                  src={`/images/${article.featuredImageUrl}`}
+                  src={imagePath}
                   alt={article.pageTitle}
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-105"
@@ -50,9 +53,9 @@ export default function BlogIndex() {
                 {article.description}
               </p>
             </Link>
-          ))}
-        </div>
-      )}
+          );
+        })}
+      </div>
     </div>
   );
 }
