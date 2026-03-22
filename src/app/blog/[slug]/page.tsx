@@ -22,16 +22,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!article) notFound();
 
   // 1. KEYWORD DICTIONARY
-  // You can add more terms here to make the matching even more precise
+  // Original logic remains untouched to preserve existing matching behavior
   const keywordMap = ["hijab", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
   const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
   let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
 
   // SEPARATE LOGIC FOR BODY TEXT PHRASE MATCHING
-  // This checks the body text specifically for "Muslim bridal dress" without altering the original keywordMap logic
+  // This section handles specific long-tail phrases found within the article text
   const bodyTextLower = article.htmlBody.toLowerCase();
+  
   if (bodyTextLower.includes("muslim bridal dress")) {
     matchedKeyword = "muslim-wedding-dresses";
+  } else if (bodyTextLower.includes("muslim sherwani")) {
+    matchedKeyword = "muslim-groom-outfit";
   }
 
   // Filter pool based on keyword appearing in mainCategorySlugs
