@@ -22,17 +22,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!article) notFound();
 
   // 1. KEYWORD DICTIONARY
-  // Added "muslim bridal dress" to the map
-  const keywordMap = ["muslim bridal dress", "hijab", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
-  // We check the slug, title, AND the htmlBody to ensure we catch keywords within the text
-  const searchString = `${article.slug} ${article.pageTitle} ${article.htmlBody}`.toLowerCase();
-  
-  let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
-
-  // Override to map the specific phrase to your actual JSON category slug
-  if (matchedKeyword === "muslim bridal dress") {
-    matchedKeyword = "muslim-wedding-dresses";
-  }
+  // You can add more terms here to make the matching even more precise
+  const keywordMap = ["hijab", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
+  const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
+  const matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
 
   // Filter pool based on keyword appearing in mainCategorySlugs
   const relatedPool = productData.products.filter(p => 
