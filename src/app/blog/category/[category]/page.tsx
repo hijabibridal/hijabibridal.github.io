@@ -38,16 +38,15 @@ export default async function CategoryPage({ params }: PageProps) {
   const { category } = await params;
   const data = blogData as BlogData;
   
+  // Find the category definition from your JSON
   const mainCategory = data.mainCategories?.find((cat: any) => cat.slug === category);
 
   if (!mainCategory) notFound();
 
-  // Filter and Reverse Logic
-  const filtered = data.articles?.filter(
+  // Updated filtering logic to ensure all matching articles are captured
+  const categoryArticles = data.articles?.filter(
     (article: any) => article.mainCategorySlug === category
   ) || [];
-  
-  const categoryArticles = [...filtered].reverse();
 
   return (
     <div className="container mx-auto px-4 py-12">
