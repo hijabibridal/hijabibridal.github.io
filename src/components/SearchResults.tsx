@@ -12,7 +12,7 @@ export default function SearchResults({ query }: { query: string }) {
 
     const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(t => t.length > 0);
     
-    // 1. Filter Products
+    // --- LOGIC 1: PRODUCTS (STRICT CATEGORY MATCHING) ---
     const filteredProducts = productData.products.filter(product => {
       const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
       return searchTerms.every(term => 
@@ -20,10 +20,16 @@ export default function SearchResults({ query }: { query: string }) {
       );
     });
 
-    // 2. Filter Blog Articles (STRICT: Title and Slug only)
+    // --- LOGIC 2: BLOGS (SEPARATE & FLEXIBLE TITLE MATCHING) ---
+    // This ignores the product "slug" rules and just looks for keywords in the title/slug
     const filteredBlogs = (blogData as any).articles.filter((article: any) => {
-      const articleMetadata = `${article.pageTitle} ${article.slug}`.toLowerCase();
-      return searchTerms.every(term => articleMetadata.includes(term));
+      const searchableTitle = (article.pageTitle || "").toLowerCase();
+      const searchableSlug = (article.slug || "").toLowerCase();
+      
+      // We check if the terms exist anywhere in the title OR the slug string
+      return searchTerms.every(term => 
+        searchableTitle.includes(term) || searchableSlug.includes(term)
+      );
     });
 
     return { 
@@ -42,7 +48,7 @@ export default function SearchResults({ query }: { query: string }) {
       
       {totalResults > 0 ? (
         <div className="space-y-16">
-          {/* Product Results Section - Primary */}
+          {/* Products always come first */}
           {productResults.length > 0 && (
             <div>
               <h3 className="text-sm font-bold text-pink-600 uppercase tracking-widest mb-6 border-b border-pink-100 pb-2">
@@ -56,7 +62,7 @@ export default function SearchResults({ query }: { query: string }) {
             </div>
           )}
 
-          {/* Blog Results Section - Secondary */}
+          {/* Blogs are in a separate, clean list below */}
           {blogResults.length > 0 && (
             <div>
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-100 pb-2">
@@ -73,7 +79,7 @@ export default function SearchResults({ query }: { query: string }) {
                       {article.pageTitle}
                     </span>
                     <span className="text-xs font-black uppercase tracking-widest text-gray-300 group-hover:text-pink-500">
-                      Read →
+                      Read Article →
                     </span>
                   </Link>
                 ))}
