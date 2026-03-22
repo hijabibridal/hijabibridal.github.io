@@ -7,36 +7,40 @@ import ProductCard from '@/components/ProductCard'
 import Link from 'next/link'
 
 export default function SearchResults({ query }: { query: string }) {
-  const { productResults, blogResults } = useMemo(() => {
-    if (!query) return { productResults: [], blogResults: [] };
+  // Normalize search terms once
+  const searchTerms = useMemo(() => 
+    query.toLowerCase().trim().split(/\s+/).filter(t => t.length > 0),
+    [query]
+  );
 
-    const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(t => t.length > 0);
+  // SEPARATE LOGIC: PRODUCT FILTERING
+  const productResults = useMemo(() => {
+    if (searchTerms.length === 0) return [];
     
-    // --- LOGIC 1: PRODUCTS (STRICT CATEGORY MATCHING) ---
-    const filteredProducts = productData.products.filter(product => {
+    return productData.products.filter(product => {
       const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
+      // Strict rule: every word in query must be in product slugs
       return searchTerms.every(term => 
         productSlugs.some(slug => slug === term || slug.includes(term))
       );
     });
+  }, [searchTerms]);
 
-    // --- LOGIC 2: BLOGS (SEPARATE & FLEXIBLE TITLE MATCHING) ---
-    // This ignores the product "slug" rules and just looks for keywords in the title/slug
-    const filteredBlogs = (blogData as any).articles.filter((article: any) => {
-      const searchableTitle = (article.pageTitle || "").toLowerCase();
-      const searchableSlug = (article.slug || "").toLowerCase();
+  // SEPARATE LOGIC: BLOG FILTERING
+  const blogResults = useMemo(() => {
+    if (searchTerms.length === 0) return [];
+
+    // Access the articles array directly from the JSON structure
+    const articles = (blogData as any).articles || [];
+
+    return articles.filter((article: any) => {
+      const title = (article.pageTitle || "").toLowerCase();
+      const slug = (article.slug || "").toLowerCase();
       
-      // We check if the terms exist anywhere in the title OR the slug string
-      return searchTerms.every(term => 
-        searchableTitle.includes(term) || searchableSlug.includes(term)
-      );
+      // Match if the search terms appear in the title OR the slug
+      return searchTerms.every(term => title.includes(term) || slug.includes(term));
     });
-
-    return { 
-      productResults: filteredProducts, 
-      blogResults: filteredBlogs 
-    };
-  }, [query]);
+  }, [searchTerms]);
 
   const totalResults = productResults.length + blogResults.length;
 
@@ -48,7 +52,7 @@ export default function SearchResults({ query }: { query: string }) {
       
       {totalResults > 0 ? (
         <div className="space-y-16">
-          {/* Products always come first */}
+          {/* Products Section */}
           {productResults.length > 0 && (
             <div>
               <h3 className="text-sm font-bold text-pink-600 uppercase tracking-widest mb-6 border-b border-pink-100 pb-2">
@@ -62,7 +66,7 @@ export default function SearchResults({ query }: { query: string }) {
             </div>
           )}
 
-          {/* Blogs are in a separate, clean list below */}
+          {/* Separated Blog Section */}
           {blogResults.length > 0 && (
             <div>
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 border-b border-gray-100 pb-2">

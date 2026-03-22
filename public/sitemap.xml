@@ -1041,11 +1041,6 @@
       <image:caption>Gold and red Islamic groom dress featuring opulent waistcoats with intricate gold embroidery for a regal Nikkah.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/matching-maroon-muslim-bridal-lehenga.webp</image:loc>
-      <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Matching maroon Muslim bridal lehenga for a traditional attire look.</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/red-mens-dupatta.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
       <image:caption>Red dupatta for men with heavy embroidery, a key accessory for a red Islamic groom dress.</image:caption>
@@ -1059,6 +1054,11 @@
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gold-waistcoat-and-kurta.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
       <image:caption>Exquisite gold and red Islamic groom dress: gold waistcoat and kurta set for a luxurious Nikkah.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/matching-maroon-muslim-bridal-lehenga.webp</image:loc>
+      <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
+      <image:caption>Matching maroon Muslim bridal lehenga for a traditional attire look.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/red-and-gold-kameez-with-trousers.webp</image:loc>
@@ -2758,6 +2758,15 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-muslim-wedding-dress-3.webp</image:loc>
       <image:title>What Does a Muslim Bride Wear to Her Nikkah?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/what-is-a-nikah</loc>
+    <lastmod>2026-03-22</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-in-champagne-2.webp</image:loc>
+      <image:title>What Is a Nikah? The Islamic Marriage Ceremony Explained</image:title>
     </image:image>
   </url>
 </urlset>
