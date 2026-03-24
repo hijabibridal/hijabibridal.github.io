@@ -1,6 +1,5 @@
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
-import Breadcrumbs from '@/components/Breadcrumbs'
 import ProductGallery from '@/components/ProductGallery'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -100,12 +99,33 @@ export default async function ProductPage({ params }: PageProps) {
 
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <Breadcrumbs 
-            items={[
-              { label: 'Shop', href: '/shop' },
-              { label: product.name, href: `/shop/product/${product.slug}` }
-            ]} 
-          />
+          
+          {/* Inline Breadcrumb Logic - Replaces the separate component */}
+          <nav className="mb-6" aria-label="Breadcrumb">
+            <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+              {(product.breadcrumbs || []).map((bc: any, index: number) => {
+                const isLast = index === product.breadcrumbs.length - 1;
+                const internalHref = bc.item.replace("https://hijabibridal.github.io", "") || "/";
+                
+                return (
+                  <li key={index} className="flex items-center gap-2">
+                    {index > 0 && <span className="text-gray-400">/</span>}
+                    {isLast ? (
+                      <span className="text-gray-800 font-medium">{bc.name}</span>
+                    ) : (
+                      <Link 
+                        href={internalHref}
+                        className="hover:text-[#db2777] transition-colors"
+                      >
+                        {bc.name}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          </nav>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
             {/* LEFT COLUMN: Gallery & Color Match Slider */}
             <div>
