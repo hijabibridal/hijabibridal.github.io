@@ -44,7 +44,7 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   // Logic for Color Matches Slider
-  const colors = ["red", "green", "blue", "white", "lilac", "fuschia", "champagne", "peach", "gold"];
+  const colors = ["red", "green", "blue", "white", "lilac", "fuschia", "champagne", "peach", "gold", "silver", "black", "pink"];
   const productColors = product.mainCategorySlugs.filter(s => colors.includes(s));
   
   const relatedProducts = productData.products.filter(p => 
@@ -192,6 +192,37 @@ export default async function ProductPage({ params }: PageProps) {
                   }} />
                 </figcaption>
               </figure>
+
+              {/* Suggested Add-Ons Section - Positioned above H2 content */}
+              {(product as any).suggestedAddOns && (product as any).suggestedAddOns.length >= 2 && (
+                <div className="mt-4 mb-8">
+                  <p className="text-black font-bold mb-4 text-xl capitalize">
+                    This {
+                      product.mainCategorySlugs?.find(slug => 
+                        !colors.includes(slug.toLowerCase())
+                      )?.replace(/-/g, ' ') || 'style'
+                    } goes perfectly with these:
+                  </p>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    {(product as any).suggestedAddOns.slice(0, 2).map((addon: any, idx: number) => (
+                      <Link 
+                        key={idx} 
+                        href={`/shop/product/${addon.targetSlug}`} 
+                        className="group relative aspect-square overflow-hidden rounded-2xl border border-pink-100 shadow-sm block"
+                      >
+                        <Image
+                          src={addon.image.startsWith('http') || addon.image.startsWith('/') ? addon.image : `/images/${addon.image}`}
+                          alt={`Suggested accessory ${idx + 1}`}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {remainingDescription && (
                 <div className="mt-4">

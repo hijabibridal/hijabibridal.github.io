@@ -642,6 +642,16 @@
         "bridal-belt",
         "red"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/red-dress-for-muslim-wedding.webp", 
+          "targetSlug": "red-dress-for-muslim-wedding" 
+        },
+        { 
+          "image": "/images/white-muslim-wedding-dress.webp", 
+          "targetSlug": "white-muslim-wedding-dress" 
+        }
+      ]
       "images": [
         {
           "url": "/bridal-belt/gold-rhinestone-bridal-belt.webp",
