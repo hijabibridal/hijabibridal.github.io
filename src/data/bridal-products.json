@@ -840,6 +840,16 @@
         "bridal-dupatta",
         "green"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-white.webp", 
+          "targetSlug": "muslim-wedding-dress-white" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/light-green-bridal-nikkah-jewelry-set.webp", 
+          "targetSlug": "light-green-bridal-nikkah-jewelry-set" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/green-silk-bridal-dupatta.webp",
@@ -894,6 +904,16 @@
         "bridal-dupatta",
         "peach"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-peach.webp", 
+          "targetSlug": "muslim-wedding-dress-peach" 
+        },
+        { 
+          "image": "/images/silver-and-peach-wedding-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-peach-wedding-punjabi-jutti-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/peach-bridal-dupatta.webp",
@@ -947,6 +967,16 @@
       "mainCategorySlugs": [
         "bridal-dupatta",
         "red"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp", 
+          "targetSlug": "red-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers" 
+        }
       ],
       "images": [
         {
@@ -5613,7 +5643,7 @@
           "figcaption": "This lehenga reflects the latest Muslim fashion trends, making it perfect for a wedding where modesty and personal style are prioritized."
         }
       ],
-      "og_image": "maroon-georgette-muslim-lehenga-actual.webp",
+      "og_image": "muslim-lehenga/maroon-georgette-muslim-lehenga-actual.webp",
       "title_tag": "Maroon Muslim lehenga | Modest Fashion Options",
       "og_title": "Maroon Muslim lehenga | Modest Fashion Options",
       "og_type": "website",
