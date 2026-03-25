@@ -718,6 +718,16 @@
         "bridal-dupatta",
         "fuschia"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/fuschia-muslim-lehenga-readymade.webp", 
+          "targetSlug": "muslim-lehenga-in-fuschia-readymade" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
+          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/fuschia-ruffled-bridal-dupatta.webp",
@@ -765,6 +775,16 @@
       "mainCategorySlugs": [
         "bridal-dupatta",
         "gold"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/hijabi-lehenga-in-gold-and-light-green.webp", 
+          "targetSlug": hijabi-lehenga-in-light-green-and-gold" 
+        },
+        { 
+          "image": "/images/bridal-hijab/gold-fluff-bridal-hijab.webp", 
+          "targetSlug": "gold-fluff-bridal-hijab" 
+        }
       ],
       "images": [
         {
