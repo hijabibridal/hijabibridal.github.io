@@ -2,6 +2,15 @@ import productData from '@/data/bridal-products.json';
 import ProductCard from '@/components/ProductCard';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Shop Hijabi Bridal | Exclusive Muslim Wedding Dresses & Accessories',
+  description: 'Discover our Amazon collection of Muslim bridal dresses and accessories. From timeless classics to modern silhouettes, find the perfect look for your special day.',
+  openGraph: {
+    title: 'Shop Hijabi Bridal | Exclusive Muslim Wedding Dresses',
+    description: 'Browse our curated Amazon collection of Muslim bridal wear.',
+  },
+}
+
 // Simple shuffle function to mix the products
 function shuffle(array: any[]) {
   const shuffled = [...array];

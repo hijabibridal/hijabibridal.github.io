@@ -1,5 +1,13 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Our Story | Hijabi Bridal’s Commitment to Modest Elegance',
+  description: 'Learn about the vision behind Hijabi Bridal. We are dedicated to providing the best Amazon-curated Muslim bridal dresses and accessories.',
+  openGraph: {
+    title: 'Our Story | Hijabi Bridal',
+    description: 'The mission and heritage behind our curated bridal collections.',
+  },
+}
 export default function AboutPage() {
   const siteUrl = "https://hijabibridal.github.io";
 
@@ -15,7 +23,7 @@ export default function AboutPage() {
       "addressLocality": "Santiago",
       "addressCountry": "DO"
     },
-    "description": "The premier destination for the modern Muslim bride in the United States. Expert curation of modest bridal apparel and wedding accessories.",
+    "description": "Learn about the vision behind Hijabi Bridal. We are dedicated to providing the best Amazon-curated Muslim bridal dresses and accessories.",
     "founder": {
       "@type": "Person",
       "jobTitle": "Technical Data Architect",

@@ -13,6 +13,17 @@ const poppins = Poppins({
 })
 
 export const metadata = {
+  title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Inspiration',
+  description: 'Explore our Amazon collection of premium hijabi bridal wear. From elegant Muslim wedding dresses to Muslim lehengas and accessories. Find everything for your special day.',
+  openGraph: {
+    siteName: 'Hijabi Bridal',
+    title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Inspiration',
+    description: 'Explore our Amazon collection of premium hijabi bridal wear. From elegant Muslim wedding dresses to accessories.',
+    type: 'website',
+  },
+}
+
+export const metadata = {
   title: 'Hijabi Bridal',
   description: 'Modest Wedding Inspiration & Shop',
   openGraph: {
