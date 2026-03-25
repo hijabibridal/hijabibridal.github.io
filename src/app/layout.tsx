@@ -1,7 +1,6 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 
-// Using the correct path for your Header based on your file structure
 import Header from '../components/Layout/Header' 
 import Footer from '../components/Layout/Footer'
 
@@ -13,13 +12,14 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Inspiration',
-  description: 'Explore our Amazon collection of premium hijabi bridal wear. From elegant Muslim wedding dresses to Muslim lehengas and accessories. Find everything for your special day.',
+  title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
+  description: 'Shop premium Muslim wedding dresses, hijabi lehengas, bridal hijabs, nikkah jewelry and more — curated for US brides on Amazon. Free shipping, trusted seller.',
   openGraph: {
     siteName: 'Hijabi Bridal',
-    title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Inspiration',
-    description: 'Explore our Amazon collection of premium hijabi bridal wear. From elegant Muslim wedding dresses to accessories.',
+    title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
+    description: 'Shop premium Muslim wedding dresses, hijabi lehengas, bridal hijabs, nikkah jewelry and more — curated for US brides on Amazon.',
     type: 'website',
+    url: 'https://hijabibridal.github.io/',
   },
 }
 
@@ -28,13 +28,49 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // JSON-LD to explicitly define the Site Name for Google
-  const siteSchema = {
+  // WebSite schema — establishes site name and sitelinks searchbox eligibility
+  const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Hijabi Bridal",
-    "alternateName": ["HijabiBridal", "HB Bridal"],
-    "url": "https://hijabibridal.github.io/" 
+    "alternateName": ["HijabiBridal", "Hijabi Bridal Shop"],
+    "url": "https://hijabibridal.github.io/",
+    "description": "Premium Muslim wedding dresses, bridal hijabs, lehengas, and nikkah accessories curated for brides in the United States.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://hijabibridal.github.io/shop?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Organization schema — helps Google and AI engines recognise Hijabi Bridal as a distinct entity
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Hijabi Bridal",
+    "url": "https://hijabibridal.github.io/",
+    "logo": "https://hijabibridal.github.io/images/hero-bridal.jpg",
+    "description": "Hijabi Bridal is the premier destination for modest Muslim bridal wear in the United States. We curate premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, nikkah jewelry, and accessories available on Amazon.",
+    "foundingDate": "2024",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "knowsAbout": [
+      "Muslim wedding dresses",
+      "Hijabi bridal wear",
+      "Modest fashion",
+      "Islamic wedding attire",
+      "Nikkah ceremony",
+      "Bridal lehenga",
+      "Bridal hijab"
+    ],
+    "sameAs": [
+      "https://hijabibridal.github.io/"
+    ]
   };
 
   return (
@@ -47,10 +83,16 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        {/* Injected Site Name Schema */}
+        {/* WebSite Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
 
         {/* Google Tag Manager */}

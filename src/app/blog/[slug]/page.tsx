@@ -9,12 +9,37 @@ import Script from "next/script";
 
 const typedBlogData = blogData as any;
 
+// ─── Static params ────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
   const articles = typedBlogData?.articles || [];
   if (articles.length === 0) return [{ slug: "coming-soon" }];
   return articles.map((article: any) => ({ slug: article.slug }));
 }
 
+// ─── Per-page metadata (meta title + description for each blog post) ──────────
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params;
+  const article = typedBlogData?.articles?.find((a: any) => a.slug === slug);
+  if (!article) return {};
+
+  return {
+    title: `${article.pageTitle} | Hijabi Bridal`,
+    description: article.description,
+    openGraph: {
+      title: `${article.pageTitle} | Hijabi Bridal`,
+      description: article.description,
+      type: "article",
+      url: `https://hijabibridal.github.io/blog/${article.slug}`,
+      ...(article.featuredImageUrl
+        ? { images: [{ url: `https://hijabibridal.github.io${article.featuredImageUrl}` }] }
+        : {}),
+    },
+  };
+}
+
+// ─── Page component ───────────────────────────────────────────────────────────
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = typedBlogData?.articles?.find((a: any) => a.slug === slug);
@@ -28,7 +53,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
 
   // SEPARATE LOGIC FOR BODY TEXT PHRASE MATCHING
-  // This section handles specific long-tail phrases found within the article text
   const bodyTextLower = article.htmlBody.toLowerCase();
   
   if (bodyTextLower.includes("muslim bridal dress")) {
@@ -80,23 +104,97 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // 3. CONTENT SPLITTING
   const parts = article.htmlBody.split('<h2>');
 
-  const faqSchema = article.FAQ_schema ? {
+  // ─── Structured data schemas ─────────────────────────────────────────────────
+
+  // FAQPage schema — parsed from the stored FAQ_schema string in the JSON
+  const faqSchema = article.FAQ_schema
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": JSON.parse(article.FAQ_schema),
+      }
+    : null;
+
+  // BlogPosting / Article schema — tells Google and AI engines who wrote it and when
+  // datePublished / dateModified: add these fields to blog-articles.json per article
+  // for now we fall back to a reasonable static date so the schema is always valid.
+  const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": JSON.parse(article.FAQ_schema)
-  } : null;
+    "@type": "BlogPosting",
+    "headline": article.pageTitle,
+    "description": article.description,
+    "url": `https://hijabibridal.github.io/blog/${article.slug}`,
+    "datePublished": article.datePublished || "2025-01-01",
+    "dateModified": article.dateModified || article.datePublished || "2026-01-01",
+    "author": {
+      "@type": "Organization",
+      "name": "Hijabi Bridal",
+      "url": "https://hijabibridal.github.io/about",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hijabi Bridal",
+      "url": "https://hijabibridal.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hijabibridal.github.io/images/hero-bridal.jpg",
+      },
+    },
+    "image": article.featuredImageUrl
+      ? `https://hijabibridal.github.io${article.featuredImageUrl}`
+      : undefined,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://hijabibridal.github.io/blog/${article.slug}`,
+    },
+    "inLanguage": "en-US",
+    "keywords": article.description,
+  };
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
+
+      {/* FAQPage schema — rich results for FAQ accordions in Google */}
       {faqSchema && (
-        <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <Script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       )}
+
+      {/* BlogPosting / Article schema — E-E-A-T, authorship, AI citation signals */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
 
       <Breadcrumbs links={[{ href: '/', text: 'Home' }, { href: '/blog', text: 'Blog' }]} currentPage={article.pageTitle} />
       
       <header className="my-10">
         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black">{article.pageTitle}</h1>
         <div className="h-1.5 w-24 bg-pink-500 mt-4"></div>
+
+        {/* Author attribution — visible to users and crawlers for E-E-A-T */}
+        <p className="mt-4 text-sm text-gray-500">
+          By{" "}
+          <Link href="/about" className="font-medium text-pink-600 hover:underline">
+            Hijabi Bridal Team
+          </Link>
+          {article.datePublished && (
+            <>
+              {" · "}
+              <time dateTime={article.datePublished}>
+                {new Date(article.datePublished).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </>
+          )}
+        </p>
       </header>
 
       {article.featuredImageUrl && (
