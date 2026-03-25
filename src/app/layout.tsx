@@ -23,17 +23,6 @@ export const metadata = {
   },
 }
 
-export const metadata = {
-  title: 'Hijabi Bridal',
-  description: 'Modest Wedding Inspiration & Shop',
-  openGraph: {
-    siteName: 'Hijabi Bridal',
-    title: 'Hijabi Bridal',
-    description: 'Modest Wedding Inspiration & Shop',
-    type: 'website',
-  },
-}
-
 export default function RootLayout({
   children,
 }: {
