@@ -89,7 +89,6 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* Only render the FAQ schema if FAQs exist to avoid GSC errors */}
       {finalFaqs.length > 0 && (
         <script
           type="application/ld+json"
@@ -100,7 +99,6 @@ export default async function ProductPage({ params }: PageProps) {
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
           
-          {/* Inline Breadcrumb Logic - Replaces the separate component */}
           <nav className="mb-6" aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
               {(product.breadcrumbs || []).map((bc: any, index: number) => {
@@ -127,7 +125,7 @@ export default async function ProductPage({ params }: PageProps) {
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
-            {/* LEFT COLUMN: Gallery & Color Match Slider */}
+            {/* LEFT COLUMN */}
             <div>
               <ProductGallery 
                 productName={product.name}
@@ -136,39 +134,10 @@ export default async function ProductPage({ params }: PageProps) {
                   amazonLink: product.type === 'collection' ? img.amazonLink : null
                 }))} 
               />
-
-              {/* Color Matches Slider Section */}
-              {relatedProducts.length > 0 && (
-                <div className="mt-8">
-                  <h3 className="text-black font-bold text-lg uppercase tracking-wider mb-4 border-b border-pink-100 pb-2">
-                    More in this Color
-                  </h3>
-                  <div className="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
-                    {relatedProducts.map((rp) => (
-                      <Link 
-                        key={rp.slug} 
-                        href={`/shop/product/${rp.slug}`}
-                        className="flex-shrink-0 w-32 group"
-                      >
-                        <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-gray-100 mb-2">
-                          <Image
-                            src={`/images/${rp.images[0].url}`}
-                            alt={rp.name}
-                            fill
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
-                          />
-                        </div>
-                        <p className="text-xs font-medium text-gray-900 truncate group-hover:text-[#db2777]">
-                          {rp.name}
-                        </p>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+              {/* "More in This Color" has been removed from here */}
             </div>
 
-            {/* RIGHT COLUMN: Product Info & Descriptions */}
+            {/* RIGHT COLUMN */}
             <div className="flex flex-col">
               <h1 className="text-black font-black text-4xl lg:text-6xl uppercase tracking-tighter leading-none mb-6">
                 {product.name}
@@ -193,7 +162,6 @@ export default async function ProductPage({ params }: PageProps) {
                 </figcaption>
               </figure>
 
-              {/* Suggested Add-Ons Section - Positioned above H2 content */}
               {(product as any).suggestedAddOns && (product as any).suggestedAddOns.length >= 2 && (
                 <div className="mt-4 mb-8">
                   <p className="text-black font-bold mb-4 text-xl capitalize">
@@ -255,6 +223,36 @@ export default async function ProductPage({ params }: PageProps) {
               )}
             </div>
           </div>
+
+          {/* NEW POSITION: "More in this Color" Section positioned at the very bottom */}
+          {relatedProducts.length > 0 && (
+            <div className="mt-16 border-t border-pink-100 pt-12">
+              <h3 className="text-black font-bold text-2xl uppercase tracking-wider mb-8">
+                More in this Color
+              </h3>
+              <div className="flex overflow-x-auto gap-6 pb-6 no-scrollbar">
+                {relatedProducts.map((rp) => (
+                  <Link 
+                    key={rp.slug} 
+                    href={`/shop/product/${rp.slug}`}
+                    className="flex-shrink-0 w-48 group"
+                  >
+                    <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-100 mb-4">
+                      <Image
+                        src={`/images/${rp.images[0].url}`}
+                        alt={rp.name}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <p className="text-sm font-bold text-gray-900 truncate group-hover:text-[#db2777]">
+                      {rp.name}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
