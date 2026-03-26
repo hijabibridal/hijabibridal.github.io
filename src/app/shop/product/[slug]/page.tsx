@@ -89,7 +89,7 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {finalFaqs.length > 0 && (
+      {product.type === 'collection' && finalFaqs.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -1032,6 +1032,16 @@
         "bridal-dupatta",
         "champagne"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-champagne.webp", 
+          "targetSlug": "muslim-wedding-dress-champagne" 
+        },
+        { 
+          "image": "/images/bridal-hijab/champagne-crepe-bridal-hijab.webp", 
+          "targetSlug": "champagne-crepe-bridal-hijab" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/champagne-dupatta.webp",
@@ -1086,11 +1096,21 @@
         "bridal-dupatta",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-in-silver.webp", 
+          "targetSlug": "muslim-wedding-dress-in-silver" 
+        },
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/white-net-dupatta.webp",
           "alt": "White Net Dupatta with gold patterns and designs for bridal wearing styles.",
-          "amazonLink": "https://amzn.to/4kVNr79",
+          "amazonLink": "https://amzn.to/40VdJxa",
           "figcaption": "The White Net Dupatta features a premium net fabric and standard bridal length and width. It offers excellent styling inspiration for traditional and modern bridal looks."
         },
         {
@@ -1139,6 +1159,16 @@
       "mainCategorySlugs": [
         "bridal-dupatta",
         "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/green-bridal-sharara.webp", 
+          "targetSlug": "green-bridal-sharara" 
+        },
+        { 
+          "image": "/images/moroccan-caftan-green.webp", 
+          "targetSlug": "moroccan-caftan-green" 
+        }
       ],
       "images": [
         {
@@ -1194,6 +1224,16 @@
         "bridal-dupatta",
         "pink"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/baby-pink-muslim-bridal-lehenga.webp", 
+          "targetSlug": "baby-pink-muslim-bridal-lehenga" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", 
+          "targetSlug": "pink-bridal-jewelry-set" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/pink-net-dupatta.webp",
@@ -1242,11 +1282,21 @@
         "bridal-dupatta",
         "champagne"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/light-green-muslim-wedding-dress.webp", 
+          "targetSlug": "light-green-muslim-wedding-dress" 
+        },
+        { 
+          "image": "/images/sharara-maroon.webp", 
+          "targetSlug": "sharara-maroon" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/champagne-net-dupatta.webp",
           "alt": "Champagne Net Dupatta with intricate patterns and designs for bridal wearing styles.",
-          "amazonLink": "https://amzn.to/4kVNr79",
+          "amazonLink": "https://amzn.to/40VdJxa",
           "figcaption": "This Champagne Net Dupatta features high-quality patterns and designs on premium fabric. Standard length and width ensure it works perfectly for diverse styling inspiration."
         }
       ],
@@ -1290,11 +1340,21 @@
         "bridal-dupatta",
         "silver"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/sharara-lilac-ombre.webp", 
+          "targetSlug": "sharara-lilac-ombre" 
+        },
+        { 
+          "image": "/images/muslim-lehenga/white-bridal-lehenga.webp", 
+          "targetSlug": "white-bridal-lehenga" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/bridal-dupatta-silver-net.webp",
           "alt": "Silver Net Dupatta with gold patterns and designs for wedding styling inspiration.",
-          "amazonLink": "https://amzn.to/49o1BI5",
+          "amazonLink": "https://amzn.to/40VdJxa",
           "figcaption": "The Silver Net Dupatta combines metallic patterns and designs with a breathable net fabric. Ideal length and width allow for a variety of elegant wearing styles."
         }
       ],
@@ -1338,11 +1398,21 @@
         "bridal-dupatta",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/gold-dress-for-muslim-wedding.webp", 
+          "targetSlug": "gold-dress-for-muslim-wedding" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/gold-and-silver-bridal-jewelry-set-2.webp", 
+          "targetSlug": "gold-and-silver-bridal-jewelry-set" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/bridal-dupatta-off-white.webp",
           "alt": "Off White Dupatta with traditional patterns and designs for bridal wearing styles.",
-          "amazonLink": "https://amzn.to/4kVNr79",
+          "amazonLink": "https://amzn.to/40VdJxa",
           "figcaption": "This Off White Dupatta features subtle patterns and designs on a classic fabric. Its generous length and width provide the perfect styling inspiration for Nikah ceremonies."
         }
       ],
@@ -1386,11 +1456,21 @@
         "bridal-dupatta",
         "peach"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-peach.webp", 
+          "targetSlug": "muslim-wedding-dress-peach" 
+        },
+        { 
+          "image": "/images/silver-and-peach-wedding-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-peach-wedding-punjabi-jutti-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-dupatta/bridal-dupatta-peach.webp",
           "alt": "Peach Net Dupatta with intricate patterns and designs for wedding styling inspiration.",
-          "amazonLink": "https://amzn.to/3ODSUA4",
+          "amazonLink": "https://amzn.to/49o1BI5",
           "figcaption": "The Peach Net Dupatta features soft fabric and elegant patterns and designs. Standard length and width make it highly versatile for various modest wearing styles."
         }
       ],
@@ -1433,6 +1513,16 @@
       "mainCategorySlugs": [
         "bridal-dupatta",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/moroccan-caftan-sky-blue.webp", 
+          "targetSlug": "moroccan-caftan-sky-blue" 
+        },
+        { 
+          "image": "/images/dress-for-blue-muslim-wedding-2.webp", 
+          "targetSlug": "dress-for-blue-muslim-wedding" 
+        }
       ],
       "images": [
         {
@@ -2342,9 +2432,9 @@
       ],
       "images": [
         {
-          "url": "unused images/pink-hijabi-lehenga.webp",
+          "url": "bridal-hijab/pink-bridal-hijab.webp",
           "alt": "Pink Hijab - Pink Elegant",
-          "figcaption": "This Pink Bridal Hijab uses crisp materials to create graceful styles that suit modern wedding themes and 2026 fashion trends.",
+          "figcaption": "This Pink Bridal Hijab uses soft net materials to create graceful styles that suit modern wedding themes and 2026 fashion trends.",
           "amazonLink": "https://amzn.to/4jmjx9B"
         }
       ],
@@ -5016,9 +5106,15 @@
       ],
       "images": [
         {
-          "url": "muslim-lehenga/hijabi-lehenga-in-maroon-and-gold-actual.webp",
+          "url": "muslim-lehenga/hijabi-lehenga-in-maroon-and-gold.webp",
           "alt": "Muslim Lehenga in Maroon and Gold - Red Elegant",
           "figcaption": "Use this AI inspiration to achieve a stunning Maroon and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        },
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-maroon-and-gold-actual.webp",
+          "alt": "Actual Lehenga in Maroon and Gold - Stunning Red",
+          "figcaption": "A stunning Maroon and Gold Muslim Lehenga for your wedding occasion. Customize to blend modest fashion with your unique personal style.",
           "amazonLink": "https://amzn.to/49oqcfZ"
         }
       ],
@@ -5689,7 +5785,13 @@
           "alt": "Baby Pink Bridal Muslim Lehenga - Pink Modern",
           "figcaption": "Use this AI inspiration to achieve a stunning Baby Pink Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
           "amazonLink": "https://amzn.to/3Nxvj6Z"
-        }
+        },
+        {
+          "url": "muslim-lehenga/baby-pink-muslim-lehenga-actual.webp",
+          "alt": "Baby Pink Bridal Muslim Lehenga - Pink Modern",
+          "figcaption": "Customize this stunning Baby Pink Muslim Lehenga for your wedding, and blend modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/3Nxvj6Z"
+        },
       ],
       "og_image": "muslim-lehenga/baby-pink-muslim-bridal-lehenga.webp",
       "title_tag": "Baby Pink Muslim Lehenga | Modest Fashion Options",
@@ -7029,12 +7131,6 @@
       ],
       "images": [
         {
-          "url": "moroccan-caftan-green-silver.webp",
-          "alt": "Green Moroccan Bridal Caftan - Green Modern",
-          "figcaption": "A green bridal caftan with a bold color and traditional embroidery for a bride at a wedding reception.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        },
-        {
           "url": "moroccan-caftan-green.webp",
           "alt": "Green Moroccan Bridal Caftan - Green Modern",
           "figcaption": "A green bridal caftan with a bold color and traditional embroidery for a bride at a wedding reception.",
@@ -7764,6 +7860,12 @@
           "url": "muslim-wedding-dress-in-silver.webp",
           "alt": "Muslim Wedding Dress in Silver - Silver Modern",
           "figcaption": "This silver Muslim bridal anarkali is adorned with heavy silver embroidery on delicate net fabric, embodying bridal beauty.",
+          "amazonLink": "https://amzn.to/3GDpLnM"
+        },
+        {
+          "url": "muslim-wedding-dress-in-silver-2.webp",
+          "alt": "Actual Muslim Wedding Dress in Silver - Lovely Silver",
+          "figcaption": "This silver Muslim bridal anarkali is embellished silver embroidery on delicate net fabric, embodying Muslim bridal beauty.",
           "amazonLink": "https://amzn.to/3GDpLnM"
         }
       ],
