@@ -231,23 +231,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         )}
       </div> {/* Closes prose-pink div */}
 
-      {/* 3. BOTTOM CATEGORY LINKS (Moved inside the return) */}
+      {/* 3. BOTTOM CATEGORY LINKS (Randomly pulled from productData) */}
       <div className="mt-20 pt-10 border-t border-pink-100 flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-20">
-        {/* Note: Ensure randomCategories and ctaPhrases are defined at the top of your function! */}
-        {["nikah-dresses", "walima-outfits"].map((cat, index) => (
-          <Link 
-            key={cat} 
-            href={`/shop/category/${cat}`}
-            className="group flex flex-col items-center"
-          >
-            <span className="text-gray-500 uppercase text-[10px] tracking-[0.2em] mb-1">
-              Explore Collection
-            </span>
-            <span className="text-black font-black uppercase text-xl md:text-2xl tracking-tighter group-hover:text-pink-600 transition-colors border-b-2 border-transparent group-hover:border-pink-200">
-              {cat.replace(/-/g, ' ')}
-            </span>
-          </Link>
-        ))}
+        {Array.from(new Set(productData.products.flatMap((p: any) => p.mainCategorySlugs || [])))
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3)
+          .map((cat: string) => (
+            <Link 
+              key={cat} 
+              href={`/shop/category/${cat}`}
+              className="group flex flex-col items-center"
+            >
+              <span className="text-gray-500 uppercase text-[10px] tracking-[0.2em] mb-1">
+                Explore Collection
+              </span>
+              <span className="text-black font-black uppercase text-xl md:text-2xl tracking-tighter group-hover:text-pink-600 transition-colors border-b-2 border-transparent group-hover:border-pink-200">
+                {cat.replace(/-/g, ' ')}
+              </span>
+            </Link>
+          ))}
       </div>
     </div> // Closes main container div
   ); // This closing parenthesis MUST be after all JSX
