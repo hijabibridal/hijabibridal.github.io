@@ -905,7 +905,7 @@
     {
       "name": "Peach Embroidered Dupatta",
       "slug": "peach-embroidered-dupatta",
-      "description": "This dupatta features exquisite embroidery and a stunning peach color, curated by Hijabi Bridal to embody pure bridal elegance. Meticulously crafted from premium net fabric, this piece is designed to perfectly pair with any peach wedding dress or Muslim lehenga. The intricate patterns and designs reflect traditional artistry. This dupatta offers a generous length and width that caters to the radiant beauty of the bride while ensuring modest coverage. Embrace your special day adorned in this stunning bridal peach dupatta and let your beauty shine.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Versatile Wearing Styles for the Peach Dupatta</h2>This piece offers endless styling inspiration for diverse bridal looks. You can explore various wearing styles, such as draping the delicate fabric over your shoulders for a regal effect or wearing it to the back over your hijab to showcase the detailed patterns and designs. For a modern statement, consider using two dupattas—pairing this peach piece with a contrasting color—to enhance your overall appearance and create a timeless bridal silhouette.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "description": "This dupatta features exquisite embroidery and a stunning peach color, curated by Hijabi Bridal to embody pure bridal elegance. Meticulously crafted from premium net fabric, this piece is designed to perfectly pair with any peach wedding dress or Muslim lehenga. The intricate patterns and designs reflect traditional artistry. This dupatta offers a generous length and width that caters to the radiant beauty of the bride while ensuring modest coverage. Embrace your special day adorned in this stunning bridal peach dupatta and let your beauty shine.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Versatile Wearing Styles for the Peach Dupatta</h2>This piece offers endless styling inspiration for diverse bridal looks. You can explore various wearing styles, such as draping the delicate fabric over your shoulders for a regal effect or wearing it to the back over your hijab to showcase the detailed patterns and designs. Consider using two dupattas—pairing this peach piece with the dupatta from your bridal outfit—to enhance your overall appearance and create a timeless bridal silhouette.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
       "mainCategorySlugs": [
         "bridal-dupatta",
         "peach"
@@ -1759,6 +1759,140 @@
         {
           "name": "Red Velvet Dupatta",
           "item": "https://hijabibridal.github.io/shop/product/red-velvet-bridal-dupatta"
+        }
+      ]
+    },
+    {
+      "name": "White Embroidered Georgette Dupatta",
+      "slug": "white-embroidered-georgette-dupatta",
+      "description": "This opaque dupatta in off white features stunning gold gotta patti work. The thickness of the border makes it an ideal addition to an off white or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Length and Width Styling Inspiration for White Dupattas</h2>This dupatta is 2.4 meters long with a thisk white border that's similar to lace work. The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "white"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-in-champagne.webp", 
+          "targetSlug": "muslim-wedding-dress-in-champagne" 
+        },
+        { 
+          "image": "/images/muslim-lehenga/white-muslim-lehenga.webp", 
+          "targetSlug": "white-lehenga" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/white-embroidered-georgette-dupatta.webp",
+          "alt": "White Embroidered Georgette Dupatta with lace and sequin patterns and designs for bridal wearing styles.",
+          "amazonLink": "https://amzn.to/4lQX47i",
+          "figcaption": "The White Embroidered Georgette Dupatta features a premium opaque georgette fabric in the standard bridal length and width. It offers excellent styling inspiration for traditional and modern bridal looks."
+        },
+        {
+          "url": "bridal-dupatta/white-embroidered-georgette-dupatta-2.webp",
+          "alt": "White Embroidered GeorgetteDupatta featuring a thick border, ideal for layering with a hijabi lehenga.",
+          "amazonLink": "https://amzn.to/4lQX47i",
+          "figcaption": "Crafted with detailed patterns and designs, this white georgette embroidered dupatta offers the weight and drape required for elegant modest wearing styles."
+        }
+      ],
+      "og_image": "bridal-dupatta/white-embroidered-georgette-dupatta.webp",
+      "title_tag": "White Embroidered Bridal Dupatta | Amazon Styling",
+      "og_title": "White Embrolidered Bridal Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Shop our White Embroidered Georgette Dupatta on Amazon. Elegant patterns and designs in the perfect length and width for bridal wearing styles.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "White",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "White Embroidered Georgette Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/white-embroidered-georgette-dupatta"
+        }
+      ]
+    },
+    {
+      "name": "Gold Cotton Silk Bridal Dupatta",
+      "slug": "gold-cotton-silk-bridal-dupatta",
+      "description": "This gold dupatta features an opaque sheen that embodies pure refinement, making it a lovely choice for your Muslim wedding. Made from cotton silk, it complement a gold hijabi lehenga or a white Muslim wedding dress, adding a touch of opulence and grace to your bridal look. This wedding dupatta enhances the elegance of your ensemble, ensuring you shine on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this as a double dupatta</h2>For an enhanced bridal appearance, consider using two dupattas to create a stunning effect. The dupatta from your bridal oufit can cover your hijab and this one can be draped across the arm or shoulder for a regal effect. This dupatta is ideally worn over the shoulder or arm, while an off-white or gold dupatta with a wide, embroidered border can be placed over the hijab to the back.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/gold\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "gold"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/gold-hijabi-lehenga.webp", 
+          "targetSlug": "gold-hijabi-lehenga" 
+        },
+        { 
+          "image": "/images/bridal-hijab/gold-fluff-bridal-hijab.webp", 
+          "targetSlug": "gold-fluff-bridal-hijab" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/gold-cotton-silk-bridal-dupatta.webp",
+          "alt": "Luxurious and opaque, the Gold Cotton Silk Bridal Dupatta is the perfect style for a Muslim wedding lehenga.",
+          "amazonLink": "https://amzn.to/4cfkJu3",
+          "figcaption": "This Gold Cotton Silk Dupatta is a versatile masterpiece found on Amazon, perfect for adding a royal finish to your Nikkah outfit. The opaque sheen captures the light beautifully, making it an ideal choice to drape over your hair a double-dupatta bridal style."
+        },
+        {
+          "url": "bridal-dupatta/gold-cotton-silk-bridal-dupatta.webp",
+          "alt": "Gold cotton silk dupatta fully opaque.",
+          "amazonLink": "https://amzn.to/4cfkJu3",
+          "figcaption": "The soft texture of this Gold Dupatta is fully opaque. It wears perfectly over the head or shoulder with traditional gold jewelry and Muslim lehengas."
+        },
+        {
+          "url": "bridal-dupatta/gold-cotton-silk-bridal-dupatta-actual.webp",
+          "alt": "Close-up of gold cotton silk dupatta fabric.",
+          "amazonLink": "https://amzn.to/4cfkJu3",
+          "figcaption": "The fine texture of this Gold Dupatta allows for a perfect finish on your wedding day. Its opaque sheen complements both traditional gold jewelry and Muslim lehengas."
+        }
+      ],
+      "og_image": "bridal-dupatta/gold-cotton-silk-bridal-dupatta.webp",
+      "title_tag": "Gold Cotton Silk Dupatta | Amazon Styling 2026",
+      "og_title": "Gold Cotton Silk Dupatta | Amazon Wedding Styling",
+      "og_type": "website",
+      "meta_description": "Shop the best Gold Cotton Silk Dupatta on Amazon. Perfect for adding opulence to your gold hijabi lehenga. Opaque to cover your hair and makeup for 2026 weddings.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Gold",
+        "material": "Silk",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Gold Cotton Silk Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/gold-cotton-silk-bridal-dupatta"
         }
       ]
     },
