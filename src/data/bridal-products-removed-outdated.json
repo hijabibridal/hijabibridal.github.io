@@ -1,0 +1,64 @@
+{
+      "name": "Champagne Bridal Dupatta",
+      "slug": "champagne-bridal-dupatta",
+      "description": "This sheer net dupatta features stunning champagne overlay embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Fabric and Patterns and Designs for Champagne Dupattas</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "champagne"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-champagne.webp", 
+          "targetSlug": "muslim-wedding-dress-champagne" 
+        },
+        { 
+          "image": "/images/bridal-hijab/champagne-crepe-bridal-hijab.webp", 
+          "targetSlug": "champagne-crepe-bridal-hijab" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/champagne-dupatta.webp",
+          "alt": "Champagne Bridal Dupatta with elegant patterns and designs for wedding styling inspiration.",
+          "amazonLink": "https://amzn.to/4dNk3yb",
+          "figcaption": "This Champagne Bridal Dupatta is made from luxurious net fabric. Its ideal length and width provide high-quality styling inspiration and support multiple wearing styles."
+        },
+        {
+          "url": "bridal-dupatta/champagne-dupatta-2.webp",
+          "alt": "Champagne Dupatta featuring a thick border, ideal for layering with a hijabi lehenga.",
+          "amazonLink": "https://amzn.to/4dNk3yb",
+          "figcaption": "The neutral champagne tone and intricate patterns and designs make this dupatta a versatile choice for modern and traditional bridal looks."
+        }
+      ],
+      "og_image": "bridal-dupatta/champagne-dupatta.webp",
+      "title_tag": "Champagne Bridal Dupatta | Amazon Styling",
+      "og_title": "Champagne Bridal Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Order this Champagne Bridal Dupatta on Amazon. Features intricate patterns and designs on soft fabric, perfect for various bridal wearing styles.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Champagne",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Champagne Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/champagne-bridal-dupatta"
+        }
+      ]
+    },
