@@ -229,6 +229,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[parts.length - 1] }} />
           </>
         )}
+        {/* 3. BOTTOM CATEGORY LINKS (New Addition) */}
+      <div className="mt-20 pt-10 border-t border-pink-100 flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-20">
+        {randomCategories.map((cat, index) => (
+          <Link 
+            key={cat} 
+            href={`/shop/category/${cat}`}
+            className="group flex flex-col items-center"
+          >
+            <span className="text-gray-500 uppercase text-[10px] tracking-[0.2em] mb-1">
+              {ctaPhrases[index]}
+            </span>
+            <span className="text-black font-black uppercase text-xl md:text-2xl tracking-tighter group-hover:text-pink-600 transition-colors border-b-2 border-transparent group-hover:border-pink-200">
+              {cat.replace(/-/g, ' ')}
+            </span>
+          </Link>
+        ))}
       </div>
     </div>
   );
