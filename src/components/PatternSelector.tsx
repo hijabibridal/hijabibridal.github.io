@@ -20,6 +20,7 @@ export default function PatternSelector() {
             className="block w-full bg-white border-2 border-pink-200 text-gray-900 py-4 px-5 pr-10 rounded-2xl appearance-none cursor-pointer font-bold focus:outline-none focus:border-[#db2777] transition-colors"
             onChange={(e) => {
               if (e.target.value) {
+                // Matches the format: /patterns/26t 522 .pdf
                 const fileName = `/patterns/${e.target.value.toLowerCase()} 522 .pdf`;
                 window.open(fileName, '_blank');
               }

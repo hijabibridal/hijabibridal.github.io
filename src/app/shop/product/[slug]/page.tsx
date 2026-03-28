@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = use(params); // <--- CHANGE THIS LINE (Use 'use' instead of 'await')
+  const { slug } = await params; // Use await here, not use()
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return {};
 
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImageUrl = `${siteUrl}/images/${product.og_image}`;
 
   return {
-    metadataBase: new URL("https://hijabibridal.github.io"), // <--- ADD THIS LINE
+    metadataBase: new URL("https://hijabibridal.github.io"), 
     title: product.title_tag || product.name,
     description: product.meta_description,
     openGraph: {
