@@ -15,10 +15,7 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
 
   return (
     <div className="flex flex-col gap-6">
-      <div 
-        className="rounded-3xl overflow-hidden shadow-2xl border border-pink-50 bg-gray-50 relative w-full"
-        style={{ height: '640px', maxHeight: '80vh' }} 
-      >
+      <div className="relative aspect-[2/3] w-full overflow-hidden rounded-3xl border border-pink-50 bg-gray-50 shadow-2xl">
         <a 
           href={activeLink || '#'} 
           onClick={(e) => !activeLink && e.preventDefault()}
@@ -29,7 +26,8 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
           <img 
             src={mainSrc} 
             alt={activeImage.alt || productName} 
-            className="w-full h-full object-contain p-6 transition-transform duration-700 ease-in-out group-hover:scale-105"
+            className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover:scale-105"
+            // Removed "p-6" to match the card's full-bleed look
           />
           {activeLink && (
             <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 px-4 py-2 rounded-full shadow-lg">
