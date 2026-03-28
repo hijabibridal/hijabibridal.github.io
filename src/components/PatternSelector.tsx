@@ -15,7 +15,7 @@ export default function PatternSelector() {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 items-center">
-        <div className="relative w-full sm:w-152">
+        <div className="relative w-full sm:w-176">
           <select 
             className="block w-full bg-white border-2 border-pink-200 text-gray-900 py-4 px-5 pr-10 rounded-2xl appearance-none cursor-pointer font-bold focus:outline-none focus:border-[#db2777] transition-colors"
             onChange={(e) => {
