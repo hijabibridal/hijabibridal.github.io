@@ -126,16 +126,16 @@ export default async function ProductPage({ params }: PageProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
             {/* LEFT COLUMN */}
-            <div>
-              <ProductGallery 
-                productName={product.name}
-                images={product.images.map(img => ({
-                  ...img,
-                  amazonLink: product.type === 'collection' ? img.amazonLink : null
-                }))} 
-              />
-              {/* "More in This Color" has been removed from here */}
-            </div>
+            <div className="w-full">
+              <div className="relative aspect-[2/3] w-full overflow-hidden rounded-2xl border border-pink-50 bg-gray-50">
+                <ProductGallery 
+                  productName={product.name}
+                  images={product.images.map(img => ({
+                    ...img,
+                    amazonLink: product.type === 'collection' ? img.amazonLink : null
+                  }))} 
+                />
+              </div>
 
             {/* RIGHT COLUMN */}
             <div className="flex flex-col">
