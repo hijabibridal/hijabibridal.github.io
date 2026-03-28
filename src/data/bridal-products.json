@@ -4740,6 +4740,16 @@
         "muslim-lehenga",
         "blue"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/bridal-dupatta/blue-velvet-dupatta.webp", 
+          "targetSlug": "blue-velvet-bridal-dupatta" 
+        }
+      ],
       "images": [
         {
           "url": "muslim-lehenga/blue-hijabi-lehenga-actual.webp",
