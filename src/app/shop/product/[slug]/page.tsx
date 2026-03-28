@@ -1,3 +1,5 @@
+'use client'; // <--- ADD THIS AT THE VERY TOP
+
 import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 import ProductGallery from '@/components/ProductGallery'
@@ -14,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = use(params); // <--- CHANGE THIS LINE (Use 'use' instead of 'await')
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return {};
 
@@ -22,6 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImageUrl = `${siteUrl}/images/${product.og_image}`;
 
   return {
+    metadataBase: new URL("https://hijabibridal.github.io"), // <--- ADD THIS LINE
     title: product.title_tag || product.name,
     description: product.meta_description,
     openGraph: {
