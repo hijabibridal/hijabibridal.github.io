@@ -26,7 +26,7 @@ export default function PatternSelector() {
               }
             }}
           >
-            <option value="">SELECT YOUR SIZE (14 - 30)</option>
+            <option value="">SELECT YOUR SIZE (14Short - 30Tall)</option>
             {[14, 16, 18, 20, 22, 24, 26, 28, 30].map(num => 
               ['S', 'M', 'T'].map(letter => (
                 <option key={`${num}${letter}`} value={`${num}${letter}`}>Size {num}{letter}</option>
