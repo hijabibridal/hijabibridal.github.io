@@ -136,6 +136,7 @@ export default async function ProductPage({ params }: PageProps) {
                   }))} 
                 />
               </div>
+             </div>
 
             {/* RIGHT COLUMN */}
             <div className="flex flex-col">
