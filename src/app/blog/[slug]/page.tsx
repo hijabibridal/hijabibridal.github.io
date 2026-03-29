@@ -47,12 +47,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!article) notFound();
 
   // 1. KEYWORD DICTIONARY
-  // Original logic remains untouched to preserve existing matching behavior
   const keywordMap = ["hijab", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
   const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
   let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
 
-  // SEPARATE LOGIC FOR BODY TEXT PHRASE MATCHING
   const bodyTextLower = article.htmlBody.toLowerCase();
   
   if (bodyTextLower.includes("muslim bridal dress")) {
@@ -61,7 +59,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     matchedKeyword = "muslim-groom-outfit";
   }
 
-  // Filter pool based on keyword appearing in mainCategorySlugs
   const relatedPool = productData.products.filter(p => 
     p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
   );
@@ -104,9 +101,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // 3. CONTENT SPLITTING
   const parts = article.htmlBody.split('<h2>');
 
-  // ─── Structured data schemas ─────────────────────────────────────────────────
-
-  // FAQPage schema — parsed from the stored FAQ_schema string in the JSON
   const faqSchema = article.FAQ_schema
     ? {
         "@context": "https://schema.org",
@@ -115,9 +109,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       }
     : null;
 
-  // BlogPosting / Article schema — tells Google and AI engines who wrote it and when
-  // datePublished / dateModified: add these fields to blog-articles.json per article
-  // for now we fall back to a reasonable static date so the schema is always valid.
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -151,10 +142,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "keywords": article.description,
   };
 
+  // Logic for adding three other blog titles sorted by title
+  const otherBlogs = typedBlogData.articles
+    .filter((a: any) => a.slug !== article.slug)
+    .sort((a: any, b: any) => a.pageTitle.localeCompare(b.pageTitle))
+    .slice(0, 3);
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
 
-      {/* FAQPage schema — rich results for FAQ accordions in Google */}
       {faqSchema && (
         <Script
           id="faq-schema"
@@ -163,7 +159,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         />
       )}
 
-      {/* BlogPosting / Article schema — E-E-A-T, authorship, AI citation signals */}
       <Script
         id="article-schema"
         type="application/ld+json"
@@ -176,7 +171,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black">{article.pageTitle}</h1>
         <div className="h-1.5 w-24 bg-pink-500 mt-4"></div>
 
-        {/* Author attribution — visible to users and crawlers for E-E-A-T */}
         <p className="mt-4 text-sm text-gray-500">
           By{" "}
           <Link href="/about" className="font-medium text-pink-600 hover:underline">
@@ -209,7 +203,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         
         <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
 
-        {/* Gallery 1: Red, White, Champagne before first H2 */}
         {parts.length > 1 && (
           <>
             <ProductGallery items={galleryOneItems} />
@@ -217,22 +210,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </>
         )}
 
-        {/* Middle content */}
         {parts.slice(2, -1).map((part: string, i: number) => (
           <div key={i} dangerouslySetInnerHTML={{ __html: '<h2>' + part }} />
         ))}
 
-        {/* Gallery 2: Alternates before last H2 */}
         {parts.length > 2 && (
           <>
             <ProductGallery items={galleryTwoItems} />
             <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[parts.length - 1] }} />
           </>
         )}
-      </div> {/* Closes prose-pink div */}
+      </div>
 
-      {/* 3. BOTTOM CATEGORY LINKS (Randomly pulled from productData) */}
-      <div className="mt-20 pt-10 border-t border-pink-100 flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-20">
+      <div className="mt-20 pt-10 border-t border-pink-100 flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-10">
         {Array.from(new Set(productData.products.flatMap((p: any) => p.mainCategorySlugs || [])))
           .sort(() => 0.5 - Math.random())
           .slice(0, 3)
@@ -251,6 +241,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </Link>
           ))}
       </div>
-    </div> // Closes main container div
-  ); // This closing parenthesis MUST be after all JSX
+
+      {/* NEW: Related Blog Titles Sorted Alphabetically */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-20">
+        {otherBlogs.map((blog: any) => (
+          <Link 
+            key={blog.slug} 
+            href={`/blog/${blog.slug}`}
+            className="group flex flex-col items-center max-w-[250px]"
+          >
+            <span className="text-gray-400 uppercase text-[9px] tracking-[0.2em] mb-1">
+              Read More
+            </span>
+            <span className="text-gray-800 font-bold uppercase text-sm tracking-tight group-hover:text-pink-500 transition-colors">
+              {blog.pageTitle}
+            </span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }
