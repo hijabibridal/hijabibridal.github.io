@@ -1904,6 +1904,16 @@
         "bridal-hijab",
         "blue"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/hijabi-lehenga-in-navy-blue.webp", 
+          "targetSlug": "hijabi-lehenga-in-navy-blue" 
+        },
+        { 
+          "image": "/images/dubai-caftan-blue.webp", 
+          "targetSlug": "dubai-caftan-blue" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
@@ -1951,6 +1961,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/light-green-muslim-wedding-dress-closeup.webp", 
+          "targetSlug": "light-green-muslim-wedding-dress" 
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-transparent-white.webp", 
+          "targetSlug": "transparent-white-hijabi-nails" 
+        }
       ],
       "images": [
         {
@@ -2000,6 +2020,16 @@
         "bridal-hijab",
         "lilac"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/lavender-sharara-suit-2.webp", 
+          "targetSlug": "lavender-sharara-suit" 
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-lilac.webp", 
+          "targetSlug": "lilac-hijabi-nails" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/lavender-crepe-bridal-hijab.webp",
@@ -2048,6 +2078,16 @@
         "bridal-hijab",
         "green"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/green-silk-bridal-dupatta.webp", 
+          "targetSlug": "jade-green-silk-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry.webp", 
+          "targetSlug": "green-bridal-nikkah-jewelry" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/jade-green-crepe-bridal-hijab.webp",
@@ -2095,6 +2135,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/blue-bride---jewelry-set.webp", 
+          "targetSlug": "blue-bride---jewelry-set" 
+        },
+        { 
+          "image": "/images/sharara-light-blue-silver.webp", 
+          "targetSlug": "sharara-light-blue-silver" 
+        }
       ],
       "images": [
         {
@@ -3518,7 +3568,7 @@
         {
           "url": "halal-nails/halal-nails-lilac.webp",
           "alt": "Lilac Hijabi Nails in a soft pastel purple, ideal for modest brides seeking prayer-friendly materials.",
-          "amazonLink": "https://amzn.to/3VEK359",
+          "amazonLink": "https://amzn.to/4bFY1w3",
           "figcaption": "Pastel purple Halal nails press ons. Perfect for adherence to Islamic law, wudu-friendly."
         }
       ],
@@ -3566,7 +3616,7 @@
         {
           "url": "halal-nails/halal-nails-transparent-white.webp",
           "alt": "Transparent White Hijabi Nails with a sheer glossy finish, ideal for modest brides seeking prayer-friendly materials.",
-          "amazonLink": "https://amzn.to/3VEK359",
+          "amazonLink": "https://amzn.to/4sB71bz",
           "figcaption": "Sheer white Halal nails press ons in Hailey's style. Perfect for adherence to Islamic law, wudu-friendly."
         }
       ],
@@ -6471,60 +6521,6 @@
       ]
     },
     {
-      "name": "Muslim Wedding Dress Light Blue",
-      "slug": "muslim-wedding-dress-light-blue",
-      "description": "This light blue Muslim wedding dress is a breath of fresh air, featuring unique champagne-colored floral embroidery that adds a vintage touch to a modern color. Available in sizes 35-46, the dress is designed to offer a flattering fit for various body types. The contrast between the cool light blue and the warm champagne embroidery makes it one of the most visually striking Muslim Wedding Dresses in our collection. This dress is ideal for brides who want to incorporate color into their wedding day while maintaining a soft, traditional, and modest appearance.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Light Blue</h2>This light blue dress coordinates with styling for bridal looks that are unique and artistic. A champagne or cream-colored hijab will perfectly pick up the floral embroidery details. Consider wearing jewelry that mixes gold and silver to reflect the dual-tone nature of the dress. The dupatta can be draped over one arm to showcase the embroidery on the bodice, or used to create a layered headcovering for extra modesty. A fresh, dewy makeup look with a hint of blue or champagne shimmer on the eyes will perfectly finish this ethereal bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
-      "mainCategorySlugs": [
-        "muslim-wedding-dresses",
-        "blue"
-      ],
-      "images": [
-        {
-          "url": "muslim-wedding-dress-light-blue-2.webp",
-          "alt": "Muslim Wedding Dress Light Blue - Blue Modern",
-          "figcaption": "Muslim wedding dress light blue with champagne floral embroidery, a unique option for Muslim bridal wedding planning.",
-          "amazonLink": "https://amzn.to/4rARgjB"
-        },
-        {
-          "url": "muslim-wedding-dress-light-blue.webp",
-          "alt": "Muslim Wedding Dress Light Blue - Blue Modern",
-          "figcaption": "Muslim wedding dress light blue with champagne floral embroidery, a unique option for Muslim bridal wedding planning.",
-          "amazonLink": "https://amzn.to/4rARgjB"
-        }
-      ],
-      "og_image": "muslim-wedding-dress-light-blue.webp",
-      "title_tag": "Light Blue Muslim Wedding Dress Floral | Amazon",
-      "og_title": "Light Blue Muslim Wedding Dress Floral | Amazon",
-      "og_type": "website",
-      "meta_description": "Shop this light blue Muslim wedding dress on Amazon. Features champagne floral embroidery and a modern bridal silhouette.",
-      "attributes": {
-        "category": "Blue",
-        "color": "Blue",
-        "material": "Embroidery",
-        "style": "Modern / Modest",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Blue",
-          "item": "https://hijabibridal.github.io/shop/category/blue"
-        },
-        {
-          "name": "Muslim Wedding Dress Light Blue",
-          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-light-blue"
-        }
-      ]
-    },
-    {
       "name": "Blue Muslim Bridal Caftan",
       "slug": "blue-muslim-wedding-dress",
       "description": "This exquisite Blue Dubai Bridal Kaftan is a luxurious garment adorned with beautiful gold embroidery. This Muslim wedding dress embodies a perfect blend of traditional and modern styles, focusing on luxury and contemporary fashion trends. The kaftan showcases a V-neck design and sleeves embellished with gold embroidery on the cuffs, creating a dramatic flair for an opulent, statement-making look. Included with the kaftan are a belt and a matching bridal dupatta, making it a complete ensemble for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Muslim Bridal Caftan  </h2>This Muslim bridal coordinates with styling for bridal looks that can be enhanced with a hijab or shawl. The Dubai kaftan's versatility allows it to be paired with various head coverings, reflecting regional traditions and personal taste. For a classic touch, wear your hijab in a Turkish style, wrapping it around the neck and draping a coordinating scarf or shawl over it. Alternatively, opt for a chic turban style for a contemporary edge. To complete your look, elegant heels and luxurious jewelry from our Gold Muslim Wedding Shop will elevate your bridal beauty.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
@@ -7497,9 +7493,9 @@
       ]
     },
     {
-      "name": "Light Green Muslim Wedding Dress",
+      "name": "Sage Green Muslim Wedding Dress",
       "slug": "light-green-muslim-wedding-dress",
-      "description": "Let your Muslim wedding feature the Light Green Muslim Wedding Dress, expertly crafted in a harmonious fusion of tradition and contemporary pastel elegance. This modest wedding dress is a perfect choice for intimate Nikah ceremonies and refined celebrations. Made from delicate butterfly net paired with lightweight santoon, it is available in sizes 36 (XS) to 44 (XL) with lengths ranging from 50 to 57 inches. The gentle light green shade evokes a sense of calm and freshness, capturing the understated beauty necessary for a modern bride while honoring a rich cultural legacy.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Light Green Muslim Wedding Dress.</h2> This Muslim wedding coordinates with styling for bridal looks that celebrate both tradition and innovation. Elevate your look with an intricately styled curly updo to frame your face with soft sophistication. Drape your hijab in the classic style, ensuring the ends are smoothly tucked back, and crown it with delicate forehead jewelry in green that enhances your dress’s subtle charm. Make accordion-style pleats with the lightly embroidered main dupatta and secure it over one shoulder, tucking the pleats into a rhinestone bridal belt. Introduce a second, richly embroidered dupatta that echoes the light green hue, artfully draped to transition from a back detail to a flowing forearm accent.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+      "description": "Let your Muslim wedding feature the Sage Green Muslim Wedding Dress, expertly crafted in a harmonious fusion of tradition and contemporary pastel elegance. This modest wedding dress is a perfect choice for intimate Nikah ceremonies and refined celebrations. Made from delicate butterfly net paired with lightweight santoon, it is available in sizes 36 (XS) to 44 (XL) with lengths ranging from 50 to 57 inches. The gentle light green shade evokes a sense of calm and freshness, capturing the understated beauty necessary for a modern bride while honoring a rich cultural legacy.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sage Green Muslim Wedding Dress.</h2> This Muslim wedding coordinates with styling for bridal looks that celebrate both tradition and innovation. Elevate your look with an intricately styled curly updo to frame your face with soft sophistication. Drape your hijab in the classic style, ensuring the ends are smoothly tucked back, and crown it with delicate forehead jewelry in green that enhances your dress’s subtle charm. Make accordion-style pleats with the lightly embroidered main dupatta and secure it over one shoulder, tucking the pleats into a rhinestone bridal belt. Introduce a second, richly embroidered dupatta that echoes the light green hue, artfully draped to transition from a back detail to a flowing forearm accent.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
       "mainCategorySlugs": [
         "muslim-wedding-dresses",
         "green"
@@ -7519,8 +7515,8 @@
         }
       ],
       "og_image": "light-green-muslim-wedding-dress.webp",
-      "title_tag": "Light Green Muslim Bridal Dress on Amazon | 2026 Style",
-      "og_title": "Light Green Muslim Bridal Dress on Amazon | 2026 Style",
+      "title_tag": "Sage Green Muslim Bridal Dress on Amazon | 2026 Style",
+      "og_title": "Sage Green Muslim Bridal Dress on Amazon | 2026 Style",
       "og_type": "website",
       "meta_description": "Shop this light green Muslim bridal look on Amazon. Perfect wedding attire for a modest nikah, fitting your wedding planning needs and budget. See it now.",
       "attributes": {
@@ -7545,7 +7541,7 @@
           "item": "https://hijabibridal.github.io/shop/category/green"
         },
         {
-          "name": "Light Green Muslim Wedding Dress",
+          "name": "Sage Green Muslim Wedding Dress",
           "item": "https://hijabibridal.github.io/shop/product/light-green-muslim-wedding-dress"
         }
       ]
@@ -8353,12 +8349,6 @@
       "images": [
         {
           "url": "nikkah-jewelry/green-bridal-nikkah-jewelry-2.webp",
-          "alt": "Green Bridal Nikkah Jewelry - Green Modern",
-          "figcaption": "This green jewelry set is a sophisticated choice of nikkah jewelry for a traditional nikkah ceremony. It offers a breathtaking look that honors an Islamic wedding and long-standing Muslim wedding traditions.",
-          "amazonLink": "https://amzn.to/3VD7H1H"
-        },
-        {
-          "url": "nikkah-jewelry/green-bridal-nikkah-jewelry-for-bride.webp",
           "alt": "Green Bridal Nikkah Jewelry - Green Modern",
           "figcaption": "This green jewelry set is a sophisticated choice of nikkah jewelry for a traditional nikkah ceremony. It offers a breathtaking look that honors an Islamic wedding and long-standing Muslim wedding traditions.",
           "amazonLink": "https://amzn.to/3VD7H1H"

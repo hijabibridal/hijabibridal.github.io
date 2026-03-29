@@ -158,3 +158,391 @@
         }
       ]
     },
+    {
+      "name": "Muslim Lehenga in Fuschia and Gold",
+      "slug": "hijabi-lehenga-in-fuschia-and-gold",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the lehenga on Amazon in Pink: https://amzn.to/49oqcfZ Two can give a tailor enough fabric to create the look. Or do it yourself with our hip length choli sewing pattern. Scroll down!\nThis Muslim lehenga features a stunning fuschia and gold color palette that makes it irresistible. The semi-stitched skirt accommodates a maximum waist width of 43 inches, while the blouse is one meter unstitched, allowing for customization in length. The gorgeous bridal dupatta measures 2.25 meters, adding an elegant touch to this exquisite ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Amazon Color: PINK  </h2>This hijabi lehenga coordinates with styling for bridal looks, allowing brides to express their unique style. Pair it with a Turkish-style tucked hijab and exquisite nikkah jewelry for a complete ensemble. Enhance the look by draping a second dupatta over the hijab to the back for a royal effect, while the main dupatta can be beautifully accordioned over the shoulder. This lehenga seamlessly blends cultural pride with contemporary refinement, making it a perfect choice for a wedding celebration filled with elegance and sophistication.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "fuschia"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/gold-cotton-silk-bridal-dupatta.webp", 
+          "targetSlug": "gold-cotton-silk-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/bridal-dupatta/blue-velvet-dupatta.webp", 
+          "targetSlug": "blue-velvet-bridal-dupatta" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-fuschia-and-gold-actual.webp",
+          "alt": "Muslim Lehenga in Fuschia and Gold - Fuschia Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Fuschia and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        },
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-fuschia-and-gold.webp",
+          "alt": "Muslim Lehenga in Fuschia and Gold - Fuschia Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Fuschia and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        }
+      ],
+      "og_image": "muslim-lehenga/hijabi-lehenga-in-fuschia-and-gold.webp",
+      "title_tag": "Fuschia and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Fuschia and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Fuschia and Gold Muslim Lehenga for your bridal occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Fuschia",
+        "material": "High-Quality Materials",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Muslim Lehenga in Fuschia and Gold",
+          "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-fuschia-and-gold"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Lehenga in Blue and Gold",
+      "slug": "hijabi-lehenga-in-blue-and-gold",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the lehenga on Amazon in Blue: https://amzn.to/49oqcfZ Two can give a tailor enough fabric to create the look.\nThis Muslim lehenga features a stunning blue and gold color palette that makes it irresistible. The semi-stitched skirt accommodates a maximum waist width of 43 inches, while the blouse is one meter unstitched, allowing for customization in length. The gorgeous bridal dupatta measures 2.25 meters, adding an elegant touch to this exquisite ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Amazon Color: BLUE  </h2>This hijabi lehenga coordinates with styling for bridal looks, allowing brides to express their unique style. Pair it with a Turkish-style tucked hijab and exquisite nikkah jewelry for a complete ensemble. Enhance the look by draping a second dupatta over the hijab to the back for a royal effect, while the main dupatta can be beautifully accordioned over the shoulder. This lehenga seamlessly blends cultural pride with contemporary refinement, making it a perfect choice for a wedding celebration filled with elegance and sophistication.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "blue"
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-blue-and-gold-actual.webp",
+          "alt": "Muslim Lehenga in Blue and Gold - Blue Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Blue and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        },
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-blue-and-gold.webp",
+          "alt": "Muslim Lehenga in Blue and Gold - Blue Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Blue and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        }
+      ],
+      "og_image": "muslim-lehenga/hijabi-lehenga-in-blue-and-gold.webp",
+      "title_tag": "Blue and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Blue and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Blue and Gold Muslim Lehenga for your bridal occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Blue",
+        "material": "High-Quality Materials",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Muslim Lehenga in Blue and Gold",
+          "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-blue-and-gold"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Lehenga in Gray and Gold",
+      "slug": "hijabi-lehenga-in-gray-and-gold",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the lehenga on Amazon in Grey: https://amzn.to/49oqcfZ Two can give a tailor enough fabric to create the look.\nThis Muslim lehenga features a stunning gray and gold color palette that makes it irresistible. The semi-stitched skirt accommodates a maximum waist width of 43 inches, while the blouse is one meter unstitched, allowing for customization in length. The gorgeous bridal dupatta measures 2.25 meters, adding an elegant touch to this exquisite ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Amazon Color: GREY  </h2>This hijabi lehenga coordinates with styling for bridal looks, allowing brides to express their unique style. Pair it with a Turkish-style tucked hijab and exquisite nikkah jewelry for a complete ensemble. Enhance the look by draping a second dupatta over the hijab to the back for a royal effect, while the main dupatta can be beautifully accordioned over the shoulder. This lehenga seamlessly blends cultural pride with contemporary refinement, making it a perfect choice for a wedding celebration filled with elegance and sophistication.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/silver\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "silver"
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-gray-and-gold-actual.webp",
+          "alt": "Muslim Lehenga in Gray and Gold - Silver Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Gray and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        },
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-gray-and-gold.webp",
+          "alt": "Muslim Lehenga in Gray and Gold - Silver Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Gray and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        }
+      ],
+      "og_image": "muslim-lehenga/hijabi-lehenga-in-gray-and-gold.webp",
+      "title_tag": "Gray and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Gray and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Gray and Gold Muslim Lehenga for your bridal occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Silver",
+        "material": "High-Quality Materials",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Muslim Lehenga in Gray and Gold",
+          "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-gray-and-gold"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Lehenga in Maroon and Gold",
+      "slug": "hijabi-lehenga-in-maroon-and-gold",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the lehenga on Amazon in Red: https://amzn.to/49oqcfZ Two can give a tailor enough fabric to create the look.\nThis Muslim lehenga features a stunning maroon and gold color palette that makes it irresistible. The semi-stitched skirt accommodates a maximum waist width of 43 inches, while the blouse is one meter unstitched, allowing for customization in length. The gorgeous bridal dupatta measures 2.25 meters, adding an elegant touch to this exquisite ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Amazon Color: RED  </h2>This hijabi lehenga coordinates with styling for bridal looks, allowing brides to express their unique style. Pair it with a Turkish-style tucked hijab and exquisite nikkah jewelry for a complete ensemble. Enhance the look by draping a second dupatta over the hijab to the back for a royal effect, while the main dupatta can be beautifully accordioned over the shoulder. This lehenga seamlessly blends cultural pride with contemporary refinement, making it a perfect choice for a wedding celebration filled with elegance and sophistication.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "red"
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-red-and-gold.webp",
+          "alt": "Muslim Lehenga in Maroon and Gold - Red Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Maroon and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        },
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-maroon-and-gold-actual.webp",
+          "alt": "Actual Lehenga in Maroon and Gold - Stunning Red",
+          "figcaption": "A stunning Maroon and Gold Muslim Lehenga for your wedding occasion. Customize to blend modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49oqcfZ"
+        }
+      ],
+      "og_image": "muslim-lehenga/hijabi-lehenga-in-red-and-gold.webp",
+      "title_tag": "Maroon and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Maroon and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Maroon and Gold Muslim Lehenga for your bridal occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Red",
+        "material": "High-Quality Materials",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Muslim Lehenga in Maroon and Gold",
+          "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-maroon-and-gold"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Lehenga in Light Green and Gold",
+      "slug": "hijabi-lehenga-in-light-green-and-gold",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the lehenga on Amazon in Pista: https://amzn.to/49oqcfZ Two can give a tailor enough fabric to create the look.\nThis Muslim lehenga features a stunning light green and gold color palette that makes it irresistible. The semi-stitched skirt accommodates a maximum waist width of 43 inches, while the blouse is one meter unstitched, allowing for customization in length. The gorgeous bridal dupatta measures 2.25 meters, adding an elegant touch to this exquisite ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Amazon Color: PISTA  </h2>This hijabi lehenga coordinates with styling for bridal looks, allowing brides to express their unique style. Pair it with a Turkish-style tucked hijab and exquisite nikkah jewelry for a complete ensemble. Enhance the look by draping a second dupatta over the hijab to the back for a royal effect, while the main dupatta can be beautifully accordioned over the shoulder. This lehenga seamlessly blends cultural pride with contemporary refinement, making it a perfect choice for a wedding celebration filled with elegance and sophistication.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "green"
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-gold-and-light-green.webp",
+          "alt": "This stunning Light Green and Gold Muslim Lehenga features intricate designs and luxurious fabric for a special occasion.",
+          "amazonLink": "https://amzn.to/49oqcfZ",
+          "iptc": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "figcaption": "Use this AI inspiration to achieve a stunning Light Green and Gold Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style."
+        },
+        {
+          "url": "muslim-lehenga/hijabi-lehenga-in-gold-and-light-green-actual.webp",
+          "alt": "Customize this elegant Light Green and Gold Muslim Lehenga to knee length or connect the blouse to the skirt. It showcases intricate embroidery as one of your premier modest fashion options.",
+          "amazonLink": "https://amzn.to/49oqcfZ",
+          "figcaption": "Customize this lehenga for your special occasion; it stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
+        }
+      ],
+      "og_image": "muslim-lehenga/hijabi-lehenga-in-gold-and-light-green.webp",
+      "title_tag": "Light Green and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Light Green and Gold Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Light Green and Gold Muslim Lehenga for your bridal occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Green",
+        "material": "High-Quality Materials",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Muslim Lehenga in Light Green and Gold",
+          "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-light-green-and-gold"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Pink Lehenga: Readymade",
+      "slug": "muslim-bride-in-pink-lehenga",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a hijabi lehenga. Add hijab, then order the Muslim Bride in Pink Lehenga on Amazon in Light Rose: https://amzn.to/49TCY6R\nThis Muslim lehenga look features a stunning Pink Muslim Lehenga, crafted in luxurious georgette fabric. This exquisite readymade lehenga is designed for the perfect bridal moment, ensuring that every Muslim bride radiates beauty on her special day. The ensemble includes a beautifully embroidered organza dupatta, making it a true embodiment of elegance and tradition. Available in sizes ranging from 36\" bust to 50\" bust, this ready-made lehenga is perfect for modern brides seeking a timeless look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Lehenga in Amazon Color: LIGHT ROSE  </h2>This Muslim bride lehenga look coordinates with styling for bridal looks that enhance personal style. Layering the lehenga with nikkah jewelry necklaces creates a regal finish, while a loosely styled hijab with a choker beneath offers an effortlessly sophisticated appearance. For brides looking to elevate their attire, adding a second dupatta worn elegantly over one shoulder adds depth and drama to the overall bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "pink"
+      ],  
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/navy-blue-crepe-bridal-hijab.webp", 
+          "targetSlug": "navy-blue-crepe-bridal-hijab"  
+        },
+        { 
+          "image": "/images/bridal-dupatta/blue-velvet-dupatta.webp", 
+          "targetSlug": "blue-velvet-bridal-dupatta" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/muslim-bride-in-pink-lehenga.webp",
+          "alt": "Muslim Pink Lehenga: Readymade - Pink Modern",
+          "figcaption": "Use this AI inspiration to achieve a stunning Pink Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/49TCY6R"
+        }
+      ],
+      "og_image": "muslim-lehenga/muslim-bride-in-pink-lehenga.webp",
+      "title_tag": "Pink Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Pink Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Pink Muslim Lehenga for your bridal special occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Pink",
+        "material": "Georgette",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Muslim Pink Lehenga: Readymade",
+          "item": "https://hijabibridal.github.io/shop/product/muslim-bride-in-pink-lehenga"
+        }
+      ]
+    },
+    {
+      "name": "Pink Muslim Bridal Lehenga",
+      "slug": "pink-muslim-bridal-lehenga",
+      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the lehenga on Amazon in Bridal Pink: https://amzn.to/43hBgcg Two can give a tailor enough fabric to create the look.\nThis Muslim lehenga look features a stunning design in sequins for brides who seek a perfect blend of tradition and contemporary elegance. Crafted from luxurious satin and net fabric, it showcases intricate embroidery and shimmering sequin work that adds a regal touch. The lehenga boasts a flair of 2.75 meters, a height of 1.10 meters, and an unstitched blouse measuring 1 meter, allowing for a customizable fit. The net dupatta, measuring 2.25 meters, completes the ensemble with a soft, ethereal drape. Every bride deserves an outfit that enhances her grace, and this Sequin Bridal Pink Muslim Lehenga delivers a breathtaking presence.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this in Amazon Color: BRIDAL PINK.</h2> This Muslim lehenga look coordinates with pink bridal looks. To enhance its ethereal beauty, pair this lehenga with a softly draped complementary hijab. Complete the bridal look with delicate nikkah jewelry for a timeless touch. To elevate your ensemble, consider layering a second dupatta over the back of your hijab, whether matching or contrasting, for a regal and layered effect. Celebrate your wedding day with the elegance and beauty of our Sequin Bridal Pink Muslim Lehenga, where tradition meets sophistication in a breathtaking ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+      "mainCategorySlugs": [
+        "muslim-lehenga",
+        "pink"
+      ],
+      "images": [
+        {
+          "url": "muslim-lehenga/pink-muslim-bridal-lehenga.webp",
+          "alt": "Pink Muslim Bridal Lehenga - Pink Elegant",
+          "figcaption": "Use this AI inspiration to achieve a stunning Pink Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
+          "amazonLink": "https://amzn.to/43hBgcg"
+        }
+      ],
+      "og_image": "muslim-lehenga/pink-muslim-bridal-lehenga.webp",
+      "title_tag": "Pink Muslim Lehenga | Modest Fashion Options",
+      "og_title": "Pink Muslim Lehenga | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Explore the Pink Muslim Lehenga for your bridal occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
+      "attributes": {
+        "category": "Muslim Lehenga",
+        "color": "Pink",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Muslim Lehenga",
+          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
+        },
+        {
+          "name": "Pink Muslim Bridal Lehenga",
+          "item": "https://hijabibridal.github.io/shop/product/pink-muslim-bridal-lehenga"
+        }
+      ]
+    },
+    
