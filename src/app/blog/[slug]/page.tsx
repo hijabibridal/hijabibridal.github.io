@@ -142,11 +142,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "keywords": article.description,
   };
 
-  // Logic for adding three other blog titles sorted by title
-  const otherBlogs = typedBlogData.articles
-    .filter((a: any) => a.slug !== article.slug)
-    .sort((a: any, b: any) => a.pageTitle.localeCompare(b.pageTitle))
-    .slice(0, 3);
+  // Logic for adding three other blog titles sorted by title with keyword matching
+  const matchKeywords = ["dress", "lehenga", "nails", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
+  const currentTitleLower = article.pageTitle.toLowerCase();
+  const activeKeywords = matchKeywords.filter(word => currentTitleLower.includes(word));
+  
+  const otherBlogsPool = typedBlogData.articles.filter((a: any) => a.slug !== article.slug);
+  
+  const matchedBlogs = otherBlogsPool.filter((a: any) => {
+    const otherTitleLower = a.pageTitle.toLowerCase();
+    return activeKeywords.some(word => otherTitleLower.includes(word));
+  });
+
+  let finalDisplayBlogs = [...matchedBlogs];
+
+  if (finalDisplayBlogs.length < 3) {
+    const nonMatchedBlogs = otherBlogsPool.filter(
+      (a: any) => !matchedBlogs.some((m: any) => m.slug === a.slug)
+    );
+    finalDisplayBlogs = [...matchedBlogs, ...nonMatchedBlogs.slice(0, 3 - matchedBlogs.length)];
+  }
+
+  finalDisplayBlogs = finalDisplayBlogs.slice(0, 3).sort((a: any, b: any) => a.pageTitle.localeCompare(b.pageTitle));
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -244,7 +261,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* NEW: Related Blog Titles Sorted Alphabetically */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-20">
-        {otherBlogs.map((blog: any) => (
+        {finalDisplayBlogs.map((blog: any) => (
           <Link 
             key={blog.slug} 
             href={`/blog/${blog.slug}`}
