@@ -1,4 +1,5 @@
 import productData from '@/data/bridal-products.json'
+import blogData from '@/data/blog-articles.json'
 import { notFound } from 'next/navigation'
 import ProductGallery from '@/components/ProductGallery'
 import { Metadata } from 'next'
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params; // Use await here, not use()
+  const { slug } = await params; 
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return {};
 
@@ -43,6 +44,27 @@ export default async function ProductPage({ params }: PageProps) {
 
   if (!product) {
     notFound();
+  }
+
+  // --- BLOG MATCHING LOGIC ---
+  const keywords = ["dress", "lehenga", "groom", "nails", "jutti", "sharara", "hijab", "dupatta", "caftan", "jewelry"];
+  const productSlugParts = product.slug.split('-');
+  
+  // Find articles where a keyword exists in both product and blog slugs
+  const matchedArticles = (blogData.articles || []).filter(article => {
+    const articleSlugParts = article.slug.split('-');
+    return keywords.some(word => 
+      productSlugParts.includes(word) && articleSlugParts.includes(word)
+    );
+  });
+
+  // Ensure 3 articles: fill with general articles if not enough keyword matches
+  let displayArticles = matchedArticles.slice(0, 3);
+  if (displayArticles.length < 3) {
+    const fallbackArticles = (blogData.articles || []).filter(
+      a => !displayArticles.find(da => da.slug === a.slug)
+    );
+    displayArticles = [...displayArticles, ...fallbackArticles].slice(0, 3);
   }
 
   // Logic for Color Matches Slider
@@ -128,7 +150,7 @@ export default async function ProductPage({ params }: PageProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
             {/* LEFT COLUMN */}
-            <div className="w-full">
+            <div className="w-full order-1">
               <ProductGallery 
                 productName={product.name}
                 images={product.images.map(img => ({
@@ -139,7 +161,7 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
 
             {/* RIGHT COLUMN */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2">
               <h1 className="text-black font-black text-4xl lg:text-6xl uppercase tracking-tighter leading-none mb-6">
                 {product.name}
               </h1>
@@ -228,9 +250,27 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               )}
             </div>
+
+            {/* TEXT-ONLY BLOG SECTION */}
+            <div className="order-3 lg:order-2 lg:col-start-1 mt-12 lg:mt-6 border-t border-pink-50 pt-8">
+              <h3 className="text-black font-bold text-xl uppercase tracking-tight mb-6">
+                Recommended Reading
+              </h3>
+              <div className="space-y-6">
+                {displayArticles.map((article: any, idx: number) => (
+                  <Link key={idx} href={`/blog/${article.slug}`} className="group block">
+                    <h4 className="text-lg font-bold leading-tight text-gray-900 group-hover:text-[#db2777] transition-colors">
+                      {article.pageTitle}
+                    </h4>
+                    <span className="text-xs font-bold text-[#db2777] uppercase tracking-widest mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">
+                      Read Article →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* ... relatedProducts section remains exactly as is ... */}
           {relatedProducts.length > 0 && (
             <div className="mt-16 border-t border-pink-100 pt-12">
               <h3 className="text-black font-bold text-2xl uppercase tracking-wider mb-8">
