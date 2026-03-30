@@ -105,6 +105,8 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-K885VPJ5');`,
           }}
         />
+        <link rel="alternate" hreflang="en-us" href="https://hijabibridal.github.io/" />
+        <link rel="alternate" hreflang="x-default" href="https://hijabibridal.github.io/" />
       </head>
       <body className="font-sans antialiased">
         <noscript>
