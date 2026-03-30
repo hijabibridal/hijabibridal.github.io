@@ -111,6 +111,27 @@ export default async function ProductPage({ params }: PageProps) {
     "mainEntity": finalFaqs
   };
 
+  // Reusable Blog Section Component
+  const BlogSection = () => (
+    <div className="mt-12 lg:mt-6 border-t border-pink-50 pt-8">
+      <h3 className="text-black font-bold text-xl uppercase tracking-tight mb-6">
+        Recommended Reading
+      </h3>
+      <div className="space-y-6">
+        {displayArticles.map((article: any, idx: number) => (
+          <Link key={idx} href={`/blog/${article.slug}`} className="group block">
+            <h4 className="text-lg font-bold leading-tight text-gray-900 group-hover:text-[#db2777] transition-colors">
+              {article.pageTitle}
+            </h4>
+            <span className="text-xs font-bold text-[#db2777] uppercase tracking-widest mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">
+              Read Article →
+            </span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <>
       {product.type === 'collection' && finalFaqs.length > 0 && (
@@ -150,7 +171,7 @@ export default async function ProductPage({ params }: PageProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8 items-start">
             {/* LEFT COLUMN */}
-            <div className="w-full order-1">
+            <div className="w-full">
               <ProductGallery 
                 productName={product.name}
                 images={product.images.map(img => ({
@@ -158,10 +179,14 @@ export default async function ProductPage({ params }: PageProps) {
                   amazonLink: product.type === 'collection' ? img.amazonLink : null
                 }))} 
               />
+              {/* DESKTOP BLOG PLACEMENT */}
+              <div className="hidden lg:block">
+                <BlogSection />
+              </div>
             </div>
 
             {/* RIGHT COLUMN */}
-            <div className="flex flex-col order-2">
+            <div className="flex flex-col">
               <h1 className="text-black font-black text-4xl lg:text-6xl uppercase tracking-tighter leading-none mb-6">
                 {product.name}
               </h1>
@@ -249,24 +274,10 @@ export default async function ProductPage({ params }: PageProps) {
                   </div>
                 </div>
               )}
-            </div>
 
-            {/* TEXT-ONLY BLOG SECTION */}
-            <div className="order-3 lg:order-2 lg:col-start-1 mt-12 lg:mt-6 border-t border-pink-50 pt-8">
-              <h3 className="text-black font-bold text-xl uppercase tracking-tight mb-6">
-                Recommended Reading
-              </h3>
-              <div className="space-y-6">
-                {displayArticles.map((article: any, idx: number) => (
-                  <Link key={idx} href={`/blog/${article.slug}`} className="group block">
-                    <h4 className="text-lg font-bold leading-tight text-gray-900 group-hover:text-[#db2777] transition-colors">
-                      {article.pageTitle}
-                    </h4>
-                    <span className="text-xs font-bold text-[#db2777] uppercase tracking-widest mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">
-                      Read Article →
-                    </span>
-                  </Link>
-                ))}
+              {/* MOBILE BLOG PLACEMENT */}
+              <div className="lg:hidden">
+                <BlogSection />
               </div>
             </div>
           </div>
