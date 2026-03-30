@@ -2194,6 +2194,16 @@
         "bridal-hijab",
         "champagne"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/champagne-net-dupatta.webp", 
+          "targetSlug": "champagne-net-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-champagne.webp", 
+          "targetSlug": "champagne-hijabi-nails" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/champagne-crepe-bridal-hijab.webp",
@@ -2248,6 +2258,16 @@
         "bridal-hijab",
         "red"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
+          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+        },
+        { 
+          "image": "/images/red-dress-for-muslim-wedding1.webp", 
+          "targetSlug": "red-dress-for-muslim-wedding" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/red-crepe-bridal-hijab.webp",
@@ -2296,6 +2316,16 @@
         "bridal-hijab",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/white-muslim-wedding-dress.webp", 
+          "targetSlug": "white-muslim-wedding-dress" 
+        },
+        { 
+          "image": "/images/white-and-gold-sequin-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "white-and-gold-sequin-bridal-punjabi-jutti-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/off-white-crepe-bridal-hijab.webp",
@@ -2343,6 +2373,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "white"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/white-muslim-wedding-dress.webp", 
+          "targetSlug": "white-muslim-wedding-dress" 
+        },
+        { 
+          "image": "/images/white-and-gold-sequin-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "white-and-gold-sequin-bridal-punjabi-jutti-slippers" 
+        }
       ],
       "images": [
         {
@@ -2398,6 +2438,16 @@
         "bridal-hijab",
         "champagne"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-champagne.webp", 
+          "targetSlug": "muslim-wedding-dress-champagne" 
+        },
+        { 
+          "image": "/images/champagne-bridal-punjabi-jutti-velvet-slippers.webp", 
+          "targetSlug": "champagne-bridal-punjabi-jutti-velvet-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/champagne-bridal-hijab-shine.webp",
@@ -2445,6 +2495,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-bangles.webp", 
+          "targetSlug": "green-bridal-bangles" 
+        },
+        { 
+          "image": "/images/bridal-dupatta/green-velvet-dupatta.webp", 
+          "targetSlug": "green-velvet-bridal-dupatta" 
+        }
       ],
       "images": [
         {
@@ -2500,6 +2560,16 @@
         "bridal-hijab",
         "pink"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/gold-and-pink-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "gold-and-pink-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/muslim-lehenga/pink-flower-muslim-bridal-lehenga.webp", 
+          "targetSlug": "pink-flower-muslim-bridal-lehenga" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/pink-bridal-hijab.webp",
@@ -2547,6 +2617,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan-3.webp", 
+          "targetSlug": "lavender-muslim-wedding-kaftan" 
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-lilac.webp", 
+          "targetSlug": "lilac-hijabi-nails" 
+        }
       ],
       "images": [
         {
@@ -2602,6 +2682,16 @@
         "bridal-hijab",
         "pink"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/moroccan-caftan-pink-gold-closeup.webp", 
+          "targetSlug": "moroccan-caftan-pink-gold" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", 
+          "targetSlug": "pink-bridal-jewelry-set" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/pink-bridal-veil-hijab.webp",
@@ -2649,6 +2739,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "silver"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/halal-nails/halal-nails-silver-cat-eye.webp", 
+          "targetSlug": "silver-cat-eye-hijabi-nails" 
+        },
+        { 
+          "image": "/images/muslim-wedding-dress-in-silver.webp", 
+          "targetSlug": "muslim-wedding-dress-in-silver" 
+        }
       ],
       "images": [
         {
@@ -2698,6 +2798,16 @@
         "bridal-hijab",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/white%20faux%20fur%20hood%20attachment.webp", 
+          "targetSlug": "faux-fur-hood-attachment-white" 
+        },
+        { 
+          "image": "/images/muslim-lehenga/white-bridal-lehenga.webp", 
+          "targetSlug": "white-bridal-lehenga" 
+        }
+      ],
       "images": [
         {
           "url": "bridal-hijab/white-bridal-veil.webp",
@@ -2745,6 +2855,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "gold"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/gold-hijabi-lehenga.webp", 
+          "targetSlug": "gold-hijabi-lehenga" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/gold-and-silver-bridal-jewelry-set-2.webp", 
+          "targetSlug": "gold-and-silver-bridal-jewelry-set" 
+        }
       ],
       "images": [
         {
@@ -2799,6 +2919,16 @@
       "mainCategorySlugs": [
         "bridal-hijab",
         "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/lilac-muslim-wedding-dress.webp", 
+          "targetSlug": "lilac-muslim-wedding-dress" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/indian-bridal-jhumka-earrings.webp", 
+          "targetSlug": "indian-bridal-jhumka-earrings" 
+        }
       ],
       "images": [
         {
@@ -3197,13 +3327,13 @@
         {
           "url": "halal-nails/dark-red-square-cat-eye-halal-nail-color.webp",
           "alt": "Elevate your bridal look with Dark Red Cat Eye Artificial Nails. Perfect for at-home nail care, these stunning nails are on-trend for your wedding day.",
-          "amazonLink": "https://amzn.to/49CJVJ8",
+          "amazonLink": "https://amzn.to/3Q81j2w",
           "figcaption": "These Halal nails press on are Halal and a great alternative to nail polish. Perfect for adherence to Islamic law, wudu-friendly."
         },
         {
           "url": "halal-nails/dark-red-square-cat-eye-halal-nail-color2.webp",
           "alt": "Elegant Dark Red Cat Eye Artificial Nails showcasing luxurious nail art for a stunning look",
-          "amazonLink": "https://amzn.to/49CJVJ8",
+          "amazonLink": "https://amzn.to/3Q81j2w",
           "figcaption": "Achieve a Halal look with these Press-on Nails. Perfect for adherence to Islamic law, wudu-friendly."
         }
       ],
@@ -3296,7 +3426,7 @@
     {
       "name": "Fuschia Hijabi Nails",
       "slug": "fuschia-hijabi-nails",
-      "description": "These hijabi nails features a unique beauty that enhances your bridal look while ensuring compliance with Islamic fashion. Tested by hijabi brides, these press-on nails are designed to be easily removed for wudu when used with glue tabs, not nail glue. <br /><br /><a href=\"https://hijabibridal.github.io/shop/product/hijabi-nails-glue-tabs\" class=\"text-[#db2777] font-bold hover:underline\">Shop our glue tabs.</a>Glue tabs allow you to maintain your religious practices without sacrificing style. With our Fuschia Halal Nails, you can enjoy an elegant choice for your special day that is more wudu-compliant than traditional halal nail polish and more comfortable than nail rings.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear These Fuschia Hijabi Nails in Amazon Color: MAGENTA.</h2> These hijabi nails coordinates with styling for bridal looks, adding a touch of glamor that beautifully complements our exquisite nikkah jewelry and fuschia Muslim wedding dresses. At Hijabi Bridal, we understand the importance of merging faith with fashion, making these stunning nails the perfect accessory for your wedding ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/halal-nails\" class=\"text-[#db2777] font-bold hover:underline\">View all Halal Nails</a><br /><a href=\"https://hijabibridal.github.io/blog/halal-nails-press-on-guide\" class=\"text-[#db2777] font-bold hover:underline\">Read our Halal Nails Guide</a>",
+      "description": "These hijabi nails features a unique beauty that enhances your bridal look while ensuring compliance with Islamic fashion. Tested by hijabi brides, these press-on nails are designed to be easily removed for wudu when used with glue tabs, not nail glue. <br /><br /><a href=\"https://hijabibridal.github.io/shop/product/hijabi-nails-glue-tabs\" class=\"text-[#db2777] font-bold hover:underline\">Shop our glue tabs.</a>Glue tabs allow you to maintain your religious practices without sacrificing style. With our Fuschia Halal Nails, you can enjoy an elegant choice for your special day that is more wudu-compliant than traditional halal nail polish and more comfortable than nail rings.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear These Fuschia Hijabi Nails in Amazon Color: HOT PINK.</h2> These hijabi nails coordinates with styling for bridal looks, adding a touch of glamor that beautifully complements our exquisite nikkah jewelry and fuschia Muslim wedding dresses. At Hijabi Bridal, we understand the importance of merging faith with fashion, making these stunning nails the perfect accessory for your wedding ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/halal-nails\" class=\"text-[#db2777] font-bold hover:underline\">View all Halal Nails</a><br /><a href=\"https://hijabibridal.github.io/blog/halal-nails-press-on-guide\" class=\"text-[#db2777] font-bold hover:underline\">Read our Halal Nails Guide</a>",
       "mainCategorySlugs": [
         "halal-nails",
         "fuschia"
@@ -3305,13 +3435,13 @@
         {
           "url": "halal-nails/halal-nails-fuschia.webp",
           "alt": "Fuschia Hijabi Nails featuring a unique beauty effect in rani pink, designed for bridal style inspiration while adhering to Islamic fashion.",
-          "amazonLink": "https://amzn.to/4iygDzv",
+          "amazonLink": "https://amzn.to/4bHAmva",
           "figcaption": "Get halal beauty with halal press-on nails. Perfect for adherence to Islamic law, wudu-friendly."
         },
         {
           "url": "halal-nails/halal-nails-fuschia-actual.webp",
           "alt": "Fuschia Hijabi Nails showcasing exquisite modest nail art in a luxurious finish",
-          "amazonLink": "https://amzn.to/4iygDzv",
+          "amazonLink": "https://amzn.to/4bHAmva",
           "figcaption": "Vibrant press-on nails that are halal for your big day. Perfect for adherence to Islamic law, wudu-friendly."
         }
       ],
@@ -6209,60 +6339,6 @@
       ]
     },
     {
-      "name": "Muslim Wedding Dress in Red",
-      "slug": "muslim-wedding-dress-in-red",
-      "description": "This red Muslim wedding dress features a stunning design that embodies the essence of cultural significance and respect for tradition. The red Muslim wedding dress is crafted as a net Anarkali, ensuring a luxurious feel while maintaining modesty and formality. This exquisite piece stands out among the finest Muslim Wedding Dresses, making it a cherished choice for brides. The set includes a floor length dress, pants and Dupatta, offering a complete and stylish ensemble. Available in sizes 34-46, the rich red hue symbolizes joy and celebration, aligning perfectly with the festive nature of a wedding ceremony.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress in Red</h2>This red Muslim wedding dress coordinates with styling for bridal looks that evoke elegance and sophistication. An elaborate braided hairstyle under your hijab creates a regal appearance, while a refined Turkish hijab style can be enhanced with delicate jewelry. The dupatta arrangement adds to the overall allure, with a main dupatta elegantly draped over your layered hijab and an optional second dupatta for added flair. Pairing this red Muslim wedding dress with accessories in shimmering silver or gold will elevate your bridal style, ensuring you radiate beauty and grace on your special day.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
-      "mainCategorySlugs": [
-        "muslim-wedding-dresses",
-        "red"
-      ],
-      "images": [
-        {
-          "url": "muslim-wedding-dress-in-red-closeup.webp",
-          "alt": "Muslim Wedding Dress in Red - Red Elegant",
-          "figcaption": "Muslim wedding dress in red featuring a net Anarkali silhouette and floor-length design. A perfect choice for Muslim bridal wedding attire.",
-          "amazonLink": "https://amzn.to/3PgD9Tc"
-        },
-        {
-          "url": "muslim-wedding-dress-in-red.webp",
-          "alt": "Muslim Wedding Dress in Red - Red Elegant",
-          "figcaption": "Muslim wedding dress in red featuring a net Anarkali silhouette and floor-length design. A perfect choice for Muslim bridal wedding attire.",
-          "amazonLink": "https://amzn.to/3PgD9Tc"
-        }
-      ],
-      "og_image": "muslim-wedding-dress-in-red.webp",
-      "title_tag": "Red Muslim Wedding Dress Anarkali Set | Amazon",
-      "og_title": "Red Muslim Wedding Dress Anarkali Set | Amazon",
-      "og_type": "website",
-      "meta_description": "Shop this red Muslim wedding dress on Amazon. A complete net Anarkali set with floor-length dress, pants, and dupatta. Perfect for elegant wedding attire.",
-      "attributes": {
-        "category": "Red",
-        "color": "Red",
-        "material": "Net",
-        "style": "Elegant / Modest",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Red",
-          "item": "https://hijabibridal.github.io/shop/category/red"
-        },
-        {
-          "name": "Muslim Wedding Dress in Red",
-          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-in-red"
-        }
-      ]
-    },
-    {
       "name": "White Muslim Wedding Dress",
       "slug": "white-muslim-wedding-dress",
       "description": "This white Muslim wedding dress is a masterpiece of modesty and opulence, featuring heavy beadwork, mirrors, and zarkan. Designed in sizes XS to L, this ensemble includes a net dupatta and dress that reflects the light beautifully at any ceremony. The intricate detailing makes it one of the most sought-after Muslim Wedding Dresses for brides seeking a traditional yet radiant look. Whether for a Nikah or a grand reception, this dress ensures you stand out with grace.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this White Muslim Wedding Dress</h2>This white Muslim wedding dress coordinates with styling for bridal looks that emphasize light and shimmer. Opt for a clean, pinned hijab style to keep the focus on the heavy beadwork of the neckline. Minimalist silver jewelry will complement the mirrors and zarkan without competing for attention. Drape the net dupatta across one shoulder or over the head for a classic bridal silhouette. For an added touch of luxury, incorporate a matching belt to define the waist and add structure to the flowing fabric.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
@@ -6804,7 +6880,7 @@
     },
     {
       "name": "White Muslim Bridal Caftan",
-      "slug": "white-muslim-wedding-dress",
+      "slug": "white-muslim-bridal-caftan",
       "description": "This White Dubai Bridal Caftan is a simple cut designed for flow. With beautiful gold embroidery, it is perfect for Muslim wedding dresses. This caftan embraces a fusion of traditional and modern styles, focusing on luxury and contemporary fashion trends. It has a V-neck and sleeves adorned with gold embroidery on the cuffs, creating a dramatic flair for an opulent, statement-making look. Perfect for plus sizes, this white hijab wedding dress is available in sizes up to 5XL and includes a belt and matching bridal dupatta.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this White Bridal Caftan  </h2>This Muslim wedding coordinates with styling for bridal looks. The Dubai kaftan, being a single-piece garment, is versatile and can be worn with a hijab or shawl. Fabrics like chiffon, satin, or silk are common for the hijab, complementing the luxurious texture of the wedding kaftan. You can wear your hijab in a classic Turkish style that wraps around the neck, draping a coordinating scarf or shawl over your hair for added elegance. Alternatively, a turban style can be adopted for a chic, fashion-forward look, especially for brides seeking a contemporary edge.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
       "mainCategorySlugs": [
         "bridal-caftans",
@@ -6812,7 +6888,7 @@
       ],
       "images": [
         {
-          "url": "white-muslim-wedding-dress.webp",
+          "url": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp",
           "alt": "White Muslim Bridal Caftan - White Modern",
           "figcaption": "Bridal caftan in white with gold embroidery and fabric in every size for a pre-wedding style.",
           "amazonLink": "https://amzn.to/4fSoKEv"
@@ -7753,60 +7829,6 @@
         {
           "name": "Muslim Wedding Dress in Silver",
           "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-in-silver"
-        }
-      ]
-    },
-    {
-      "name": "Champagne Dress for Muslim Wedding",
-      "slug": "champagne-dress-for-muslim-wedding",
-      "description": "Let your Muslim wedding feature a stunning Muslim Wedding Dress in Champagne that embodies timeless grace. Draped in a soft, luxurious champagne tone, this modest wedding dress redefines understated elegance with a heavily embellished dupatta and decorative detailing along the dress’s bottom. The ensemble includes a lace overlay and matching pants, designed to empower and enchant brides on their special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Champagne Dress for Muslim Wedding  </h2>This Muslim wedding coordinates with styling for bridal looks that enhance the overall elegance of the outfit. Prepare to wear your hair down under your hijab, allowing the natural softness of your locks to complement the gentle champagne hues. Fashion a layered hijab featuring lace that matches the delicate overlay of the dress, and enhance the look with carefully placed jewelry along the hijab’s border. The main dupatta, heavily embellished, is intended to cascade beautifully behind you, while a complementary second dupatta in maroon or red can be draped over one shoulder for added versatility.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
-      "mainCategorySlugs": [
-        "muslim-wedding-dresses",
-        "champagne"
-      ],
-      "images": [
-        {
-          "url": "champagne-dress-for-muslim-wedding-closeup.webp",
-          "alt": "Champagne Dress for Muslim Wedding - Champagne Elegant",
-          "figcaption": "A champagne Muslim bridal dress with a refined lace overlay and a heavily embellished dupatta for timeless wedding elegance.",
-          "amazonLink": "https://amzn.to/4fGiyz7"
-        },
-        {
-          "url": "champagne-dress-for-muslim-wedding.webp",
-          "alt": "Champagne Dress for Muslim Wedding - Champagne Elegant",
-          "figcaption": "A champagne Muslim bridal dress with a refined lace overlay and a heavily embellished dupatta for timeless wedding elegance.",
-          "amazonLink": "https://amzn.to/4fGiyz7"
-        }
-      ],
-      "og_image": "champagne-dress-for-muslim-wedding.webp",
-      "title_tag": "Champagne Muslim Bridal Dress on Amazon | 2026",
-      "og_title": "Champagne Muslim Bridal Dress on Amazon | 2026",
-      "og_type": "website",
-      "meta_description": "Shop champagne Muslim bridal styles on Amazon. Elegant wedding attire for your wedding planning needs that fits your budget and location perfectly.",
-      "attributes": {
-        "category": "Champagne",
-        "color": "Champagne",
-        "material": "Lace",
-        "style": "Elegant / Modest",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Champagne",
-          "item": "https://hijabibridal.github.io/shop/category/champagne"
-        },
-        {
-          "name": "Champagne Dress for Muslim Wedding",
-          "item": "https://hijabibridal.github.io/shop/product/champagne-dress-for-muslim-wedding"
         }
       ]
     },
@@ -9889,60 +9911,6 @@
         {
           "name": "Lilac Ombre Silk Sharara",
           "item": "https://hijabibridal.github.io/shop/product/sharara-lilac-ombre"
-        }
-      ]
-    },
-    {
-      "name": "Green Velvet Gharara Set",
-      "slug": "gharara-green-velvet",
-      "description": "Step into luxury with this green velvet gharara clothing suit, perfect for a grand wedding reception. The top is made from heavy viscose velvet featuring designer cording dori embroidery with sequin and thread detailing. The matching heavy velvet bottom and soft net dupatta complete the regal silhouette, while the dull santoon inner lining ensures a comfortable fit for any body type. This green velvet style promotes body positivity and is designed to turn heads while addressing your fashion concerns with premium materials.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Green Velvet Gharara</h2>This gharara suit coordinates with styling for bridal looks. Since the velvet fabric is heavy and rich, pair it with gold nikkah jewelry to let the embroidery shine. A chiffon hijab in a matching green shade hypes the look, while the intricate velvet sharara (pants) and net dupatta will take center stage.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
-      "mainCategorySlugs": [
-        "sharara",
-        "green"
-      ],
-      "images": [
-        {
-          "url": "gharara-green-velvet-2.webp",
-          "alt": "Green Velvet Gharara Set - Green Luxury",
-          "figcaption": "A stunning green sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
-          "amazonLink": "https://amzn.to/4driHcc"
-        },
-        {
-          "url": "gharara-green-velvet.webp",
-          "alt": "Green Velvet Gharara Set - Green Luxury",
-          "figcaption": "A stunning green sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
-          "amazonLink": "https://amzn.to/4driHcc"
-        }
-      ],
-      "og_image": "gharara-green-velvet.webp",
-      "title_tag": "Green Velvet Gharara | Body Positivity and Silhouette Style",
-      "og_title": "Green Velvet Gharara | Body Positivity and Silhouette Style",
-      "og_type": "website",
-      "meta_description": "Explore this green velvet gharara suit. A stunning style in luxury fabric that supports body positivity and looks great on chubby girls.",
-      "attributes": {
-        "category": "Sharara",
-        "color": "Green",
-        "material": "Embroidery",
-        "style": "Luxury",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Sharara",
-          "item": "https://hijabibridal.github.io/shop/category/sharara"
-        },
-        {
-          "name": "Green Velvet Gharara Set",
-          "item": "https://hijabibridal.github.io/shop/product/gharara-green-velvet"
         }
       ]
     },
