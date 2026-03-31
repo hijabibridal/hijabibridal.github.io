@@ -7603,16 +7603,6 @@
           "image": "/images/halal-nails/halal-nails-fuschia.webp", 
           "targetSlug": "fuschia-hijabi-nails"  
         },
-        { 
-          "image": "/images/halal-nails/halal-nails-champagne.webp", 
-          "targetSlug": "champagne-hijabi-nails" 
-        }
-      ],"  
-        },
-        { 
-          "image": "/images/halal-nails/halal-nails-champagne.webp", 
-          "targetSlug": "champagne-hijabi-nails" 
-        }
       ],
       "images": [
         {
@@ -7773,6 +7763,70 @@
         {
           "name": "Muslim Wedding Dress White",
           "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-white"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Wedding Dress Light Blue",
+      "slug": "muslim-wedding-dress-light-blue",
+      "description": "This light blue Muslim wedding dress is a breath of fresh air, featuring unique champagne-colored floral embroidery that adds a vintage touch to a modern color. Available in sizes 35-46, the dress is designed to offer a flattering fit for various body types. The contrast between the cool light blue and the warm champagne embroidery makes it one of the most visually striking Muslim Wedding Dresses in our collection. This dress is ideal for brides who want to incorporate color into their wedding day while maintaining a soft, traditional, and modest appearance.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Light Blue</h2>This light blue dress coordinates with styling for bridal looks that are unique and artistic. A champagne or cream-colored hijab will perfectly pick up the floral embroidery details. Consider wearing jewelry that mixes gold and silver to reflect the dual-tone nature of the dress. The dupatta can be draped over one arm to showcase the embroidery on the bodice, or used to create a layered headcovering for extra modesty. A fresh, dewy makeup look with a hint of blue or champagne shimmer on the eyes will perfectly finish this ethereal bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+      "mainCategorySlugs": [
+        "muslim-wedding-dresses",
+        "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/white-net-bridal-dupatta.webp", 
+          "targetSlug": "white-net-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
+          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-wedding-dress-light-blue-2.webp",
+          "alt": "Muslim Wedding Dress Light Blue - Blue Modern",
+          "figcaption": "Muslim wedding dress light blue with champagne floral embroidery, a unique option for Muslim bridal wedding planning.",
+          "amazonLink": "https://amzn.to/3PUcD29"
+        },
+        {
+          "url": "muslim-wedding-dress-light-blue.webp",
+          "alt": "Muslim Wedding Dress Light Blue - Blue Modern",
+          "figcaption": "Muslim wedding dress light blue with champagne floral embroidery, a unique option for Muslim bridal wedding planning.",
+          "amazonLink": "https://amzn.to/3PUcD29"
+        }
+      ],
+      "og_image": "muslim-wedding-dress-light-blue.webp",
+      "title_tag": "Light Blue Muslim Wedding Dress Floral | Amazon",
+      "og_title": "Light Blue Muslim Wedding Dress Floral | Amazon",
+      "og_type": "website",
+      "meta_description": "Shop this light blue Muslim wedding dress on Amazon. Features champagne floral embroidery and a modern bridal silhouette.",
+      "attributes": {
+        "category": "Blue",
+        "color": "Blue",
+        "material": "Embroidery",
+        "style": "Modern / Modest",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Blue",
+          "item": "https://hijabibridal.github.io/shop/category/blue"
+        },
+        {
+          "name": "Muslim Wedding Dress Light Blue",
+          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-light-blue"
         }
       ]
     },
