@@ -7599,10 +7599,11 @@
         { 
           "image": "/images/bridal-dupatta/champagne-net-dupatta.webp", 
           "targetSlug": "champagne-net-bridal-dupatta"
+        },
         { 
           "image": "/images/halal-nails/halal-nails-fuschia.webp", 
           "targetSlug": "fuschia-hijabi-nails"  
-        },
+        }
       ],
       "images": [
         {
