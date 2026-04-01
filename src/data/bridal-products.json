@@ -8280,6 +8280,70 @@
       ]
     },
     {
+      "name": "Muslim Wedding Dress Fuschia Embroidered",
+      "slug": "muslim-wedding-dress-fuschia-embroidered",
+      "description": "This version of the fuschia Muslim wedding dress is made from premium georgette fabric, adorned with heavy embroidery, gold beadwork and beautiful sequins. Available in sizes 36-42, it caters to a wide range of bridal silhouettes. The set features a dupatta with allover embroidery a beautifully finished border that adds a touch of grandeur to the overall look. This fuschia georgette ensemble offers both the fluidity of the fabric and the structural beauty of the embroidery, making it a timeless choice for any Nikah or Walima.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Fuschia Embroidered</h2>This fuschia georgette dress coordinates with styling for bridal looks that are joyous and traditional. A fuschia ruffled dupatta, when used as a second dupatta, will provide a beautiful contrast to the textured georgette and sequins. Use the dupatta as a focal point by draping it across the chest or elegantly over the head. Gold jewelry will enhance this traditional look. For the makeup, a classic soft rose will blend in well, ensuring the bride looks radiant in every photograph.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/fuschia\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+      "mainCategorySlugs": [
+        "muslim-wedding-dresses",
+        "fuschia"
+      ],  
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/fuschia-ruffled-bridal-dupatta.webp", 
+          "targetSlug": "fuschia-ruffled-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/gold-and-silver-bridal-jewelry-set.webp", 
+          "targetSlug": "gold-and-silver-bridal-jewelry-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-wedding-dress-fuschia-embroidered.webp",
+          "alt": "Muslim Wedding Dress Fuschia Embroidered",
+          "figcaption": "Muslim wedding dress fuschia in georgette with heavy embroidery, gold beadwork and sequins for Muslim bridal wedding attire.",
+          "amazonLink": "https://amzn.to/4sKVLcK"
+        },
+        {
+          "url": "muslim-wedding-dress-fuschia-embroidered-2.webp",
+          "alt": "Muslim Wedding Dress Striped Fuschia Embroidery",
+          "figcaption": "Muslim wedding dress in fuschia in georgette with heavy embroidery, gold beadwork and sequins for Muslim bridal wedding attire.",
+          "amazonLink": "https://amzn.to/4sKVLcK"
+        }
+      ],
+      "og_image": "muslim-wedding-dress-fuschia-embroidered.webp",
+      "title_tag": "Fuschia Georgette Embroidered Muslim Wedding | Amazon",
+      "og_title": "Fuschia Georgette Embroidered Muslim Wedding | Amazon",
+      "og_type": "website",
+      "meta_description": "Discover this fuschia georgette Muslim wedding dress on Amazon. Features heavy embroidery, beadwork and sequins for stunning bridal beauty.",
+      "attributes": {
+        "category": "Fuschia",
+        "color": "Fuschia",
+        "material": "Georgette",
+        "style": "Elegant / Modest",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Fuschia",
+          "item": "https://hijabibridal.github.io/shop/category/white"
+        },
+        {
+          "name": "Muslim Wedding Dress Fuschia Embroidered",
+          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-fuschia-embroidered"
+        }
+      ]
+    },
+    {
       "name": "Covered Neck: Red Bridal Choker Set Nikkah Jewelry",
       "slug": "covered-neck-red-bridal-choker-set-nikkah-jewelry",
       "description": "This red bridal choker set covers your neck beautifully. Way better than a turtleneck! Perfectly designed for the lovely bride, this choker and earring set exudes timeless beauty with the luxurious sparkle of gold. Wear it with a double necklace to completely cover your neck and chest area.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">View all Nikkah Jewelry</a>",
