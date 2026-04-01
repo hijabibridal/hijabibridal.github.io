@@ -7904,7 +7904,7 @@
         "blue"
       ],
       "suggestedAddOns": [
-        "image": "/images/bridal-dupatta/sky-blue-dupatta.webp", 
+          "image": "/images/bridal-dupatta/sky-blue-dupatta.webp", 
           "targetSlug": "sky-blue-bridal-net-dupatta"
         },
         { 
@@ -8147,6 +8147,70 @@
         {
           "name": "Blue Dress for Muslim Wedding",
           "item": "https://hijabibridal.github.io/shop/product/blue-dress-for-muslim-wedding"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Wedding Dress Off White Multi",
+      "slug": "muslim-wedding-dress-offwhite-multi",
+      "description": "This version of the white Muslim wedding dress is made from premium georgette fabric, adorned with intricate embroidery in blue and pink and beautiful beadwork. Available in sizes S to XXL, it caters to a wide range of bridal silhouettes. The set features a dupatta with allover embroidery a beautifully finished border that adds a touch of grandeur to the overall look. As a staple in Muslim Wedding Dresses, this white georgette ensemble offers both the fluidity of the fabric and the structural beauty of the embroidery, making it a timeless choice for any Nikah or Walima.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Off White Multi</h2>This white georgette dress coordinates with styling for bridal looks that are clean and luminous. A white crepe hijab will provide a beautiful contrast to the textured georgette and sequins. Use the wide-bordered dupatta as a focal point by draping it across the chest or elegantly over the head. Silver or platinum jewelry with pearls will enhance the classic white-on-white aesthetic. For the makeup, a coral lip or a classic soft rose will stand out against the white fabric, ensuring the bride looks radiant in every photograph.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+      "mainCategorySlugs": [
+        "muslim-wedding-dresses",
+        "white"
+      ],  
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/off-white-crepe-bridal-hijab.webp", 
+          "targetSlug": "off-white-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/bridal-red-necklace-set.webp", 
+          "targetSlug": "bridal-red-necklace-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-wedding-dress-offwhite-multi.webp",
+          "alt": "Muslim Wedding Dress Off White - Embroidered",
+          "figcaption": "Muslim wedding dress white in georgette with heavy embroidery and beadwork, a perfect  choice for Muslim bridal wedding attire.",
+          "amazonLink": "https://amzn.to/3PUpUb2"
+        },
+        {
+          "url": "muslim-wedding-dress-offwhite-multi-2.webp",
+          "alt": "Muslim Wedding Dress Off White - Embroidery",
+          "figcaption": "Muslim wedding dress in off white in georgette with heavy embroidery and beadwork, a classic choice for Muslim bridal wedding attire.",
+          "amazonLink": "https://amzn.to/3PUpUb2"
+        }
+      ],
+      "og_image": "muslim-wedding-dress-offwhite-multi.webp",
+      "title_tag": "White Georgette Muslim Wedding Dress | Amazon",
+      "og_title": "White Georgette Muslim Wedding Dress | Amazon",
+      "og_type": "website",
+      "meta_description": "Discover this off white georgette Muslim wedding dress on Amazon. Features heavy embroidery and beadwork for stunning bridal beauty.",
+      "attributes": {
+        "category": "White",
+        "color": "White",
+        "material": "Georgette",
+        "style": "Elegant / Modest",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "White",
+          "item": "https://hijabibridal.github.io/shop/category/white"
+        },
+        {
+          "name": "Muslim Wedding Dress Off White Multi",
+          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-offwhite-multi"
         }
       ]
     },
