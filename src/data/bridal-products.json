@@ -8344,6 +8344,64 @@
       ]
     },
     {
+      "name": "Muslim Wedding Dress Blue and Gold",
+      "slug": "muslim-wedding-dress-blue-gold",
+      "description": "This masterpiece among Muslim Wedding Dresses that blends luxurious pink and gold embroidery in a floral pattern. Designed in satin, this modest wedding dress showcases an exquisite balance between tradition and contemporary style. The ensemble includes a dress, matching pants, and a simple dupatta, ensuring a sophisticated bridal silhouette. Available in sizes 34 to 42, this dress allows for a graceful drape, making it perfect for brides seeking elegance and modesty.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue and Gold Dress for Muslim Wedding  </h2>This Muslim wedding coordinates with styling for bridal looks that enhance the overall elegance of the ensemble. Opt for a braided bun or braided updo to complement the bold richness of this dress. A loose hijab paired with a choker necklace adds balance to the detailed embroidery, while forehead jewelry enhances the luxury of the look. The simple dupatta is best accordioned over one shoulder and tucked into a rhinestone belt to refine the silhouette. For added flair, consider pairing with a second matching blue or gold dupatta, draped elegantly over the hijab to create fluid motion.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+      "mainCategorySlugs": [
+        "muslim-wedding-dresses",
+        "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/blue-bridal-crown.webp", 
+          "targetSlug": "blue-bridal-crown"
+        },
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-wedding-dress-blue-gold.webp",
+          "alt": "Blue and Gold Dress for Muslim Wedding - Elegance",
+          "figcaption": "Blue and gold dress for Muslim wedding featuring luxurious satin fabric, adorned with exquisite gold and pink embroidery. A Muslim bridal choice that emphasizes bridal beauty.",
+          "amazonLink": "https://amzn.to/4lZL7ME"
+        }
+      ],
+      "og_image": "muslim-wedding-dress-blue-gold.webp",
+      "title_tag": "Best Blue and Gold Dress for Muslim Wedding 2026 | Amazon",
+      "og_title": "Best Blue and Gold Dress for Muslim Wedding 2026 | Amazon",
+      "og_type": "website",
+      "meta_description": "Discover our stunning satin teal blue dress for Muslim weddings curated from Amazon.com Modest formal wear with gold embroidery. Ideal for mosques and outdoor events.",
+      "attributes": {
+        "category": "Blue",
+        "color": "Blue",
+        "material": "Satin",
+        "style": "Elegant / Modest",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Blue",
+          "item": "https://hijabibridal.github.io/shop/category/blue"
+        },
+        {
+          "name": "Muslim Wedding Dress Blue and Gold",
+          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-blue-gold"
+        }
+      ]
+    },
+    {
       "name": "Covered Neck: Red Bridal Choker Set Nikkah Jewelry",
       "slug": "covered-neck-red-bridal-choker-set-nikkah-jewelry",
       "description": "This red bridal choker set covers your neck beautifully. Way better than a turtleneck! Perfectly designed for the lovely bride, this choker and earring set exudes timeless beauty with the luxurious sparkle of gold. Wear it with a double necklace to completely cover your neck and chest area.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">View all Nikkah Jewelry</a>",
