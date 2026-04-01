@@ -210,7 +210,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {article.featuredImageUrl && (
         <div className="mb-10 rounded-3xl overflow-hidden shadow-2xl relative bg-gray-50 h-[400px]">
-          <Image src={article.featuredImageUrl} alt={article.featuredImageAlt} fill className="object-contain p-4" unoptimized />
+          {/* Linked featured image logic using productUrl */}
+          {article.productUrl ? (
+            <Link href={article.productUrl.startsWith('/') ? article.productUrl : `/${article.productUrl}`} className="group cursor-pointer">
+              <Image 
+                src={article.featuredImageUrl} 
+                alt={article.featuredImageAlt} 
+                fill 
+                className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]" 
+                unoptimized 
+              />
+            </Link>
+          ) : (
+            <Image src={article.featuredImageUrl} alt={article.featuredImageAlt} fill className="object-contain p-4" unoptimized />
+          )}
         </div>
       )}
 
@@ -259,7 +272,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           ))}
       </div>
 
-      {/* NEW: Related Blog Titles Sorted Alphabetically */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-20">
         {finalDisplayBlogs.map((blog: any) => (
           <Link 
