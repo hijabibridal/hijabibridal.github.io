@@ -9156,54 +9156,6 @@
       ]
     },
     {
-      "name": "Gold Earrings for Muslim Bride",
-      "slug": "gold-earrings-for-muslim-bride",
-      "description": "These lovely earrings dangle from your hijab and clip onto your ears. You can attach the dangle to the side of your head, but they'll look even better across the front of your hijab! Elevate your special day with Hijabi Bridal's dedication impeccable craftsmanship and quality.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/gold\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">View all Nikkah Jewelry</a>",
-      "mainCategorySlugs": [
-        "nikkah-jewelry",
-        "gold"
-      ],
-      "images": [
-        {
-          "url": "nikkah-jewelry/gold-earrings-for-muslim-bride.webp",
-          "alt": "Gold Earrings for Muslim Bride - Gold Elegant",
-          "figcaption": "Impeccably crafted gold earrings are essential women nikkah jewelry for an Islamic wedding. These unique pieces clip onto the hijab, adding a regal touch to any nikkah ceremony.",
-          "amazonLink": "https://amzn.to/4gE1r1h"
-        }
-      ],
-      "og_image": "gold-earrings-for-muslim-bride.webp",
-      "title_tag": "Best Gold Earrings for Muslim Bride for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Gold Earrings for Muslim Bride for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with our stunning Gold Earrings for Muslim Bride. Perfectly designed to complement your hijab and enhance your elegance on your special day.",
-      "attributes": {
-        "category": "Nikkah Jewelry",
-        "color": "Gold",
-        "material": "High-Quality Materials",
-        "style": "Elegant",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Nikkah Jewelry",
-          "item": "https://hijabibridal.github.io/shop/category/nikkah-jewelry"
-        },
-        {
-          "name": "Gold Earrings for Muslim Bride",
-          "item": "https://hijabibridal.github.io/shop/product/gold-earrings-for-muslim-bride"
-        }
-      ]
-    },
-    {
       "name": "Heavy Bridal Kundan Set",
       "slug": "heavy-bridal-kundan-set",
       "description": "At Hijabi Bridal, we proudly present this exquisite Heavy Bridal Kundan Set, perfect for adding a touch of traditional elegance to your wedding. This set comes with large dangle earrings, nose ring and hand jewelry. The necklace is in two parts and is perfect for covering the upper chest area with bling. This heavy kundan bridal set, featuring a stunning kundan bridal choker set, is now available for convenient bridal kundan jewellery set online shopping. Discover the timeless beauty of our bridal kundan set online, meticulously crafted to enhance the grace of Muslim brides on their special day. Each piece in this collection captures the essence of luxury, making our kundan jewellery for bridal online shopping an indispensable part of your wedding preparations.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/gold\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">View all Nikkah Jewelry</a>",
@@ -9751,6 +9703,16 @@
         "sharara",
         "champagne"
       ],
+      "suggestedAddOns": [
+         { 
+          "image": "/images/bridal-dupatta/champagne-net-dupatta.webp", 
+          "targetSlug": "champagne-net-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/covered-neck-red-bridal-choker-set-nikkah-jewelry-2.webp", 
+          "targetSlug": "covered-neck-red-bridal-choker-set-nikkah-jewelry" 
+        }
+      ],
       "images": [
         {
           "url": "champagne-sharara-suits-2.webp",
@@ -9804,6 +9766,16 @@
       "mainCategorySlugs": [
         "sharara",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/blue-bride---jewelry-set.webp", 
+          "targetSlug": "blue-bride---jewelry-set"  
+        },
+        { 
+          "image": "/images/bridal-hijab/light-blue-crepe-bridal-hijab.webp", 
+          "targetSlug": "light-blue-crepe-bridal-hijab" 
+        }
       ],
       "images": [
         {
@@ -9859,6 +9831,16 @@
         "sharara",
         "green"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry.webp", 
+          "targetSlug": "green-bridal-nikkah-jewelry"  
+        },
+        { 
+          "image": "/images/bridal-dupatta/green-velvet-dupatta.webp", 
+          "targetSlug": "green-velvet-bridal-dupatta" 
+        }
+      ],
       "images": [
         {
           "url": "sharara-suit-in-green-2.webp",
@@ -9912,6 +9894,16 @@
       "mainCategorySlugs": [
         "sharara",
         "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/halal-nails/halal-nails-lilac.webp", 
+          "targetSlug": "lilac-hijabi-nails"  
+        },
+        { 
+          "image": "/images/bridal-hijab/bridal-hijab/lavender-crepe-bridal-hijab.webp", 
+          "targetSlug": "lavender-crepe-bridal-hijab" 
+        }
       ],
       "images": [
         {
@@ -9967,6 +9959,16 @@
         "sharara",
         "red"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/maroon-velvet-dupatta-2.webp", 
+          "targetSlug": "maroon-velvet-bridal-dupatta"  
+        },
+        { 
+          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
+          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+        }
+      ],
       "images": [
         {
           "url": "sharara-suit-in-maroon-2.webp",
@@ -10020,6 +10022,16 @@
       "mainCategorySlugs": [
         "sharara",
         "peach"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/peach%20faux%20fur%20wrap.webp", 
+          "targetSlug": "peach-wedding-faux-fur-wrap"  
+        },
+        { 
+          "image": "/images/silver-and-peach-wedding-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-peach-wedding-punjabi-jutti-slippers" 
+        }
       ],
       "images": [
         {
@@ -10081,6 +10093,16 @@
         "sharara",
         "blue"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta"  
+        },
+        { 
+          "image": "/images/nikkah-jewelry/indian-bridal-jhumka-earrings.webp", 
+          "targetSlug": "indian-bridal-jhumka-earrings" 
+        }
+      ],
       "images": [
         {
           "url": "teal-blue-sharara.webp",
@@ -10128,6 +10150,16 @@
       "mainCategorySlugs": [
         "sharara",
         "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry.webp", 
+          "targetSlug": "green-bridal-nikkah-jewelry"  
+        },
+        { 
+          "image": "/images/bridal-dupatta/green-velvet-dupatta.webp", 
+          "targetSlug": "green-velvet-bridal-dupatta" 
+        }
       ],
       "images": [
         {
@@ -10182,6 +10214,16 @@
       "mainCategorySlugs": [
         "sharara",
         "blue"
+      ],
+      "suggestedAddOns": [
+        {
+          "image": "/images/bridal-dupatta/sky-blue-dupatta.webp", 
+          "targetSlug": "sky-blue-bridal-net-dupatta"
+        },
+        { 
+          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
+          "targetSlug": "silver-bridal-jewelry-for-nikkah"  
+        }
       ],
       "images": [
         {
@@ -10249,6 +10291,16 @@
         "sharara",
         "red"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/maroon-velvet-dupatta-2.webp", 
+          "targetSlug": "maroon-velvet-bridal-dupatta"  
+        },
+        { 
+          "image": "/images/nikkah-jewelry/covered-neck-red-bridal-choker-set-nikkah-jewelry-2.webp", 
+          "targetSlug": "covered-neck-red-bridal-choker-set-nikkah-jewelry" 
+        }
+      ],
       "images": [
         {
           "url": "sharara-maroon-2.webp",
@@ -10302,6 +10354,16 @@
       "mainCategorySlugs": [
         "sharara",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab"  
+        },
+        { 
+          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
+          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
+        }
       ],
       "images": [
         {
@@ -10357,6 +10419,16 @@
         "sharara",
         "lilac"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab"  
+        },
+        { 
+          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
+          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
+        }
+      ],
       "images": [
         {
           "url": "sharara-lilac-ombre.webp",
@@ -10405,6 +10477,16 @@
         "sharara",
         "blue"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab"  
+        },
+        { 
+          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
+          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
+        }
+      ],
       "images": [
         {
           "url": "sharara-light-blue-silver-2.webp",
@@ -10448,6 +10530,198 @@
         {
           "name": "Light Blue and Silver Sharara",
           "item": "https://hijabibridal.github.io/shop/product/sharara-light-blue-silver"
+        }
+      ]
+    },
+    {
+      "name": "Sage Green Sharara Suit",
+      "slug": "sage-green-sharara-suit",
+      "description": "This exquisite sage green sharara clothing suit is crafted from silk and features metallic embroidery. The flared sharara and intricate patterns make it a standout choice for brides looking for traditional or modern style. It is designed to provide both comfort and an elegant silhouette for your body type on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Sage Green Sharara</h2>The lightweight fabric and detailed patterns allow for various wearing styles, ensuring you look radiant while celebrating body positivity. Pair this sharara clothing suit with a matching hijab and halal to elevate your bridal outfit. This piece offers the perfect style inspiration for a memorable and elegant wedding look.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/muslim-wedding-earrings.webp", 
+          "targetSlug": "muslim-wedding-earrings"  
+        },
+        { 
+          "image": "/images/bridal-hijab/sage-green-crepe-bridal-hijab.webp", 
+          "targetSlug": "sage-green-crepe-bridal-hijab" 
+        }
+      ],
+      "images": [
+        {
+          "url": "sage-green-sharara-suit.webp",
+          "alt": "Sage Green Sharara - Modern Flair",
+          "figcaption": "A stunning sage green sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        },
+        {
+          "url": "sage-green-sharara-suit-2.webp",
+          "alt": "Sage Green Sharara - 2026 Trends",
+          "figcaption": "A stunning green sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        }
+      ],
+      "og_image": "sage-green-sharara-suit.webp",
+      "title_tag": "Sage Green Bridal Sharara | Style for All Body Types",
+      "og_title": "Sage Green Bridal Sharara | Style for All Body Types",
+      "og_type": "website",
+      "meta_description": "Shop this sage green sharara suit. A beautiful silhouette in premium silk fabric, perfect for your bridal style with body positivity.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Green",
+        "material": "Silk",
+        "style": "Traditional",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Sage Green Sharara Suit",
+          "item": "https://hijabibridal.github.io/shop/product/sage-green-sharara-suit"
+        }
+      ]
+    },
+    {
+      "name": "Sharara Suit in Lavender",
+      "slug": "sharara-suit-in-lavender",
+      "description": "This exquisite lavender sharara clothing suit is crafted from silk and features metallic embroidery. The flared sharara and intricate patterns make it a standout choice for brides looking for traditional or modern style. It is designed to provide both comfort and an elegant silhouette for your body type on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Lavender Sharara</h2>The lightweight fabric and detailed patterns allow for various wearing styles, ensuring you look radiant while celebrating body positivity. Pair this sharara clothing suit with a matching hijab and halal to elevate your bridal outfit. This piece offers the perfect style inspiration for a memorable and elegant wedding look.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/muslim-wedding-earrings.webp", 
+          "targetSlug": "muslim-wedding-earrings"  
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-lilac.webp", 
+          "targetSlug": "lilac-hijabi-nails" 
+        }
+      ],
+      "images": [
+        {
+          "url": "sharara-suit-in-lavender.webp",
+          "alt": "Sharara in Lavender- Modern Flair",
+          "figcaption": "A stunning lavender sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        },
+        {
+          "url": "sharara-suit-in-lavender-2.webp",
+          "alt": "Sharara in Lavender - 2026 Trends",
+          "figcaption": "A stunning lavender sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        }
+      ],
+      "og_image": "sharara-suit-in-lavender.webp",
+      "title_tag": "Lavender Bridal Sharara | Style for All Body Types",
+      "og_title": "Lavender Bridal Sharara | Style for All Body Types",
+      "og_type": "website",
+      "meta_description": "Shop this lavender sharara suit. A beautiful silhouette in premium silk fabric, perfect for your bridal style with body positivity.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Lavender",
+        "material": "Silk",
+        "style": "Traditional",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Sharara Suit in Lavender",
+          "item": "https://hijabibridal.github.io/shop/product/sharara-suit-in-lavender"
+        }
+      ]
+    },
+    {
+      "name": "Sharara Suit in Pink",
+      "slug": "sharara-suit-in-pink",
+      "description": "This exquisite pink sharara clothing suit is crafted from silk and features metallic embroidery. The flared sharara and intricate patterns make it a standout choice for brides looking for traditional or modern style. It is designed to provide both comfort and an elegant silhouette for your body type on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Pink Sharara</h2>The lightweight fabric and detailed patterns allow for various wearing styles, ensuring you look radiant while celebrating body positivity. Pair this sharara clothing suit with a matching hijab and halal to elevate your bridal outfit. This piece offers the perfect style inspiration for a memorable and elegant wedding look.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "pink"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/silver-and-light-pink-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-light-pink-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", 
+          "targetSlug": "pink-bridal-jewelry-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "sharara-suit-in-pink.webp",
+          "alt": "Sharara in Pink- Romantic Flair",
+          "figcaption": "A stunning pink sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        },
+        {
+          "url": "sharara-suit-in-pink-2.webp",
+          "alt": "Sharara in Pink - 2026 Trends",
+          "figcaption": "A stunning pink sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        }
+      ],
+      "og_image": "sharara-suit-in-pink.webp",
+      "title_tag": "Pink Bridal Sharara | Style for All Body Types",
+      "og_title": "Pink Bridal Sharara | Style for All Body Types",
+      "og_type": "website",
+      "meta_description": "Shop this pink sharara suit. A beautiful silhouette in premium silk fabric, perfect for your bridal style with body positivity.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Pink",
+        "material": "Silk",
+        "style": "Traditional",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Sharara Suit in Pink",
+          "item": "https://hijabibridal.github.io/shop/product/sharara-suit-in-pink"
         }
       ]
     }
