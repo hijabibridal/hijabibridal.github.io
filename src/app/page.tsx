@@ -22,14 +22,14 @@ export default function HomePage() {
             Hijabi <span className="text-pink-500">Bridal</span>
           </h1>
           <p className="text-white text-lg md:text-2xl font-light tracking-[0.4em] uppercase mb-10">
-            Premium Collections
+            From Nails to Dresses and Shoes. Find Your Whole Outfit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/shop"
               className="bg-white text-black px-12 py-4 font-black uppercase tracking-widest hover:bg-pink-600 hover:text-white transition-all transform hover:scale-105"
             >
-              Shop All
+              View All
             </Link>
             <Link
               href="/about"

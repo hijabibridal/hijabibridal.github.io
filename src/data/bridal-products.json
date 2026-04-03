@@ -3323,6 +3323,16 @@
         "halal-nails",
         "red"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp", 
+          "targetSlug": "red-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/red-bridal-and-silver-sequin-jutti-slippers.webp", 
+          "targetSlug": "red-bridal-and-silver-sequin-jutti-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "halal-nails/dark-red-square-cat-eye-halal-nail-color.webp",
@@ -3376,6 +3386,16 @@
       "mainCategorySlugs": [
         "halal-nails",
         "champagne"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/champagne-bridal-hijab-shine.webp", 
+          "targetSlug": "champagne-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/muslim-bangles-in-bridal-champagne.webp", 
+          "targetSlug": "muslim-bangles-in-bridal-champagne" 
+        }
       ],
       "images": [
         {
@@ -3431,6 +3451,16 @@
         "halal-nails",
         "fuschia"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/faux%20fur%20hood%20attachment%20fuschia.webp", 
+          "targetSlug": "faux-fur-hood-attachment-fuschia" 
+        },
+        { 
+          "image": "/images/fuschia-and-gold-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "fuschia-and-gold-bridal-punjabi-jutti-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "halal-nails/halal-nails-fuschia.webp",
@@ -3484,6 +3514,16 @@
       "mainCategorySlugs": [
         "halal-nails"
       ],
+       "suggestedAddOns": [
+        { 
+          "image": "/images/halal-nails/halal-nails-transparent-white.webp", 
+          "targetSlug": "transparent-white-hijabi-nails" 
+        },
+        { 
+          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
+          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+        }
+      ],
       "images": [
         {
           "url": "halal-nails/halal-nails-glue-tabs.webp",
@@ -3531,6 +3571,16 @@
       "mainCategorySlugs": [
         "halal-nails",
         "silver"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        },
+        { 
+          "image": "/images/silver-bridal-jutti-slippers-with-sequins.webp", 
+          "targetSlug": "silver-bridal-jutti-slippers-with-sequins" 
+        }
       ],
       "images": [
         {
@@ -3585,6 +3635,16 @@
       "mainCategorySlugs": [
         "halal-nails",
         "white"
+      ],  
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        },
+        { 
+          "image": "/images/white-and-silver-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "white-and-silver-bridal-punjabi-jutti-slippers" 
+        }
       ],
       "images": [
         {
@@ -3640,6 +3700,16 @@
         "halal-nails",
         "pink"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/lilac-gold-sparkle-hijab.webp", 
+          "targetSlug": "lilac-gold-sparkle-hijab" 
+        },
+        { 
+          "image": "/images/bridal-hijab/white-bridal-veil.webp", 
+          "targetSlug": "white-hijab" 
+        }
+      ],
       "images": [
         {
           "url": "halal-nails/halal-nails-pink-ombre.webp",
@@ -3694,6 +3764,16 @@
         "halal-nails",
         "lilac"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/lavender-crepe-bridal-hijab.webp", 
+          "targetSlug": "lavender-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/bridal-hijab/lavender-sparkle-shayla-hijab.webp", 
+          "targetSlug": "lavender-sparkle-hijab" 
+        }
+      ],
       "images": [
         {
           "url": "halal-nails/halal-nails-lilac.webp",
@@ -3741,6 +3821,16 @@
       "mainCategorySlugs": [
         "halal-nails",
         "white"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/white-bridal-veil.webp", 
+          "targetSlug": "white-hijab"
+        },
+        { 
+          "image": "/images/silver-bridal-jutti-slippers-with-sequins.webp", 
+          "targetSlug": "silver-bridal-jutti-slippers-with-sequins" 
+        }
       ],
       "images": [
         {
@@ -7583,8 +7673,8 @@
           "targetSlug": "lilac-hijabi-nails"  
         },
         { 
-          "image": "/images/bridal-hijab/bridal-hijab/lavender-crepe-bridal-hijab.webp", 
-          "targetSlug": "lavender-crepe-bridal-hijab" 
+          "image": "/images/bridal-dupatta/bridal-dupatta-silver-net.webp", 
+          "targetSlug": "silver-net-bridal-dupatta" 
         }
       ],
       "images": [

@@ -12,8 +12,31 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
+  // metadataBase is required for Next.js to resolve absolute URLs and for
+  // Google to correctly read og:site_name from the rendered HTML
+  metadataBase: new URL('https://hijabibridal.github.io'),
+
+  // title.template applies "| Hijabi Bridal" to every child page automatically
+  title: {
+    default:  'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
+    template: '%s | Hijabi Bridal',
+  },
+
   description: 'Shop premium Muslim wedding dresses, hijabi lehengas, bridal hijabs, nikkah jewelry and more — curated for US brides on Amazon. Free shipping, trusted seller.',
+
+  // applicationName is the field Next.js exposes to Google as the site name
+  applicationName: 'Hijabi Bridal',
+
+  // alternates is the correct Next.js App Router way to emit hreflang tags.
+  // Putting <link> tags manually in <head> alongside this would create duplicates.
+  alternates: {
+    canonical: 'https://hijabibridal.github.io/',
+    languages: {
+      'en-US':    'https://hijabibridal.github.io/',
+      'x-default': 'https://hijabibridal.github.io/',
+    },
+  },
+
   openGraph: {
     siteName: 'Hijabi Bridal',
     title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
@@ -28,12 +51,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // WebSite schema — establishes site name and sitelinks searchbox eligibility
+  // WebSite schema — the `name` field here is what Google uses for the
+  // Search result site name when no other signal overrides it
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Hijabi Bridal",
-    "alternateName": ["HijabiBridal", "Hijabi Bridal Shop"],
+    // alternateName removed — alternate names can confuse Google's site name
+    // picker and cause it to choose the wrong one (e.g. "GitHub")
     "url": "https://hijabibridal.github.io/",
     "description": "Premium Muslim wedding dresses, bridal hijabs, lehengas, and nikkah accessories curated for brides in the United States.",
     "potentialAction": {
@@ -46,7 +71,6 @@ export default function RootLayout({
     }
   };
 
-  // Organization schema — helps Google and AI engines recognise Hijabi Bridal as a distinct entity
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -68,8 +92,10 @@ export default function RootLayout({
       "Bridal lehenga",
       "Bridal hijab"
     ],
+    // Pinterest profile gives Google an independent external source to confirm
+    // "Hijabi Bridal" as the site name — this is a strong fix for the GitHub naming issue
     "sameAs": [
-      "https://hijabibridal.github.io/"
+      "https://www.pinterest.com/HijabiBridal/"
     ]
   };
 
@@ -105,8 +131,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-K885VPJ5');`,
           }}
         />
-        <link rel="alternate" hreflang="en-us" href="https://hijabibridal.github.io/" />
-        <link rel="alternate" hreflang="x-default" href="https://hijabibridal.github.io/" />
       </head>
       <body className="font-sans antialiased">
         <noscript>
