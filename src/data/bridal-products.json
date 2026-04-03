@@ -6006,6 +6006,16 @@
         "bridal-caftans",
         "blue"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp", 
+          "targetSlug": "gold-bridal-jewellery-set" 
+        },
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta" 
+        }
+      ],
       "images": [
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp",
@@ -6053,6 +6063,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/silver-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        }
       ],
       "images": [
         {
@@ -6120,6 +6140,16 @@
         "bridal-caftans",
         "gold"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/bridal-dupatta-off-white.webp", 
+          "targetSlug": "off-white-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-white-cat-eye.webp", 
+          "targetSlug": "white-cat-eye-hijabi-nails" 
+        }
+      ],
       "images": [
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-gold-moroccan-wedding-kaftan.webp",
@@ -6173,6 +6203,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/silver-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        }
       ],
       "images": [
         {
@@ -6234,6 +6274,16 @@
         "bridal-caftans",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/gold-fluff-bridal-hijab.webp", 
+          "targetSlug": "gold-fluff-bridal-hijab" 
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-white-cat-eye.webp", 
+          "targetSlug": "white-cat-eye-hijabi-nails" 
+        }
+      ],
       "images": [
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan-dress.webp",
@@ -6282,6 +6332,16 @@
         "bridal-caftans",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta"  
+        },
+        { 
+          "image": "/images/halal-nails/halal-nails-white-cat-eye.webp", 
+          "targetSlug": "white-cat-eye-hijabi-nails" 
+        }
+      ],
       "images": [
         {
           "url": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp",
@@ -6329,6 +6389,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "white"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/silver-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        }
       ],
       "images": [
         {
@@ -6390,25 +6460,17 @@
         "bridal-caftans",
         "pink"
       ],
+       "suggestedAddOns": [
+        { 
+          "image": "/images/gold-and-pink-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "gold-and-pink-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", 
+          "targetSlug": "pink-bridal-jewelry-set" 
+        }
+      ],
       "images": [
-        {
-          "url": "moroccan-caftan-pink-gold-back.webp",
-          "alt": "Pink Moroccan Bridal Caftan - Pink Traditional",
-          "figcaption": "A pink bridal caftan featuring a pastel color and gold embroidery for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        },
-        {
-          "url": "moroccan-caftan-pink-gold-closeup.webp",
-          "alt": "Pink Moroccan Bridal Caftan - Pink Traditional",
-          "figcaption": "A pink bridal caftan featuring a pastel color and gold embroidery for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        },
-        {
-          "url": "moroccan-caftan-pink-gold.webp",
-          "alt": "Pink Moroccan Bridal Caftan - Pink Traditional",
-          "figcaption": "A pink bridal caftan featuring a pastel color and gold embroidery for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        },
         {
           "url": "moroccan-caftan-pink.webp",
           "alt": "Pink Moroccan Bridal Caftan - Pink Traditional",
@@ -6455,6 +6517,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/forest-green-chiffon-hijab.webp", 
+          "targetSlug": "forest-green-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry-for-bride.webp", 
+          "targetSlug": "green-bridal-nikkah-jewelry-for-bride" 
+        }
       ],
       "images": [
         {
@@ -6504,6 +6576,16 @@
         "bridal-caftans",
         "red"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
+          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+        }
+      ],
       "images": [
         {
           "url": "moroccan-caftan-maroon.webp",
@@ -6551,6 +6633,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp", 
+          "targetSlug": "gold-bridal-jewellery-set" 
+        },
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta" 
+        }
       ],
       "images": [
         {
@@ -6600,6 +6692,16 @@
         "bridal-caftans",
         "green"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/silver-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
+          "targetSlug": "silver-hijab" 
+        }
+      ],
       "images": [
         {
           "url": "moroccan-caftan-green-silver.webp",
@@ -6647,6 +6749,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "red"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp", 
+          "targetSlug": "red-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/covered-neck-red-bridal-choker-set-nikkah-jewelry-2.webp", 
+          "targetSlug": "covered-neck-red-bridal-choker-set-nikkah-jewelry" 
+        }
       ],
       "images": [
         {
@@ -6696,6 +6808,16 @@
         "bridal-caftans",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta"  
+        },
+        { 
+          "image": "/images/white-and-gold-sequin-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "white-and-gold-sequin-bridal-punjabi-jutti-slippers" 
+        }
+      ],
       "images": [
         {
           "url": "dubai-caftan-white.webp",
@@ -6743,6 +6865,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "white"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/bridal-white-necklace-set.webp", 
+          "targetSlug": "bridal-white-necklace-set"  
+        },
+        { 
+          "image": "/images/bridal-hijab/white-bridal-veil.webp", 
+          "targetSlug": "white-hijab" 
+        }
       ],
       "images": [
         {
@@ -6797,6 +6929,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "pink"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/gold-and-pink-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "gold-and-pink-bridal-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", 
+          "targetSlug": "pink-bridal-jewelry-set" 
+        }
       ],
       "images": [
         {
@@ -6858,6 +7000,16 @@
         "bridal-caftans",
         "white"
       ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/bridal-white-necklace-set.webp", 
+          "targetSlug": "bridal-white-necklace-set"  
+        },
+        { 
+          "image": "/images/bridal-hijab/white-bridal-veil.webp", 
+          "targetSlug": "white-hijab" 
+        }
+      ],
       "images": [
         {
           "url": "moroccan-caftan-white-gold-back.webp",
@@ -6917,6 +7069,16 @@
       "mainCategorySlugs": [
         "bridal-caftans",
         "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp", 
+          "targetSlug": "gold-bridal-jewellery-set" 
+        },
+        { 
+          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
+          "targetSlug": "gold-embroidered-bridal-dupatta" 
+        }
       ],
       "images": [
         {
@@ -9121,9 +9283,15 @@
           "alt": "Gold Bridal Jewellery Set - Gold Elegant",
           "figcaption": "This gold bridal set is a luxurious choice of women's jewelry for a regal Islamic wedding. It serves as breathtaking nikkah jewelry that highlights a bride's beauty and grace during the nikkah ceremony.",
           "amazonLink": "https://amzn.to/4izh7oQ"
+        },
+        {
+          "url": "nikkah-jewelry/gold-bridal-jewellery-set-2.webp",
+          "alt": "Gold Bridal Jewellery Set - Gold Elegant",
+          "figcaption": "This gold bridal set is a luxurious choice of women's jewelry for a regal Islamic wedding. It serves as breathtaking nikkah jewelry that highlights a bride's beauty and grace during the nikkah ceremony.",
+          "amazonLink": "https://amzn.to/4izh7oQ"
         }
       ],
-      "og_image": "nikkah-jewelry/gold-bridal-jewellery-set.webp",
+      "og_image": "nikkah-jewelry/gold-bridal-jewellery-set-2.webp",
       "title_tag": "Best Gold Bridal Jewellery Set for 2026 Brides | Amazon Product Styling",
       "og_title": "Best Gold Bridal Jewellery Set for 2026 Brides | Amazon Product Styling",
       "og_type": "website",
