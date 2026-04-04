@@ -22,7 +22,7 @@ export default function HomePage() {
             Hijabi <span className="text-pink-500">Bridal</span>
           </h1>
           <p className="text-white text-lg md:text-2xl font-light tracking-[0.4em] uppercase mb-10">
-            From Nails to Dresses and Shoes. Find Your Whole Outfit.
+            From Nails to Dresses and Shoes. Find Your Whole Outfit, Curated From Amazon.com
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
