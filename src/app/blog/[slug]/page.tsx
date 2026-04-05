@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!article) notFound();
 
   // 1. KEYWORD DICTIONARY
-  const keywordMap = ["hijab", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
+  const keywordMap = ["hijab", "caftan", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
   const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
   let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
 
