@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Shop Hijabi Bridal | Exclusive Muslim Wedding Dresses & Accessories',
-  description: 'Discover our Amazon collection of Muslim bridal dresses and accessories. From timeless classics to modern silhouettes, find the perfect look for your special day.',
+  description: 'Discover our Amazon collection of Muslim bridal dresses and accessories. From timeless classics to modern silhouettes, find your whole outfit for your special day.',
   openGraph: {
     title: 'Shop Hijabi Bridal | Exclusive Muslim Wedding Dresses',
     description: 'Browse our curated Amazon collection of Muslim bridal wear.',
@@ -24,7 +24,7 @@ function shuffle(array: any[]) {
 export default function ShopPage() {
   const shuffledProducts = shuffle(productData.products);
 
-  const colorSlugs = ['blue', 'pink', 'ivory', 'red', 'gold', 'silver', 'green', 'black', 'maroon', 'peach', 'white', 'champagne', 'nude'];
+  const colorSlugs = ['red', 'white', 'champagne', 'blue', 'fuschia', 'pink', 'lilac', 'gold', 'silver', 'green', 'peach'];
   
   const colorCategories = productData.mainCategories.filter(cat => 
     colorSlugs.includes(cat.slug)
