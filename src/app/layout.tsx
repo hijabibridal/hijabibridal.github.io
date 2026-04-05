@@ -104,6 +104,8 @@ export default function RootLayout({
       <head>
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="2LM4mclQm-UZp-Lft6E04fLlzcmmkafpqfNbMVntsqs" />
+ 
+        <meta name="p:domain_verify" content="3d6ce4e3a3471fdbc715788c9beb3a91"/>
 
         {/* Favicon & Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
