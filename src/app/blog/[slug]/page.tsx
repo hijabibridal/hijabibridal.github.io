@@ -63,9 +63,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
   );
 
-  const finalPool = relatedPool.length > 0 ? relatedPool : productData.products;
-
-  const finalPool = (relatedPool.length > 0 ? relatedPool : productData.products)
+  const finalPool = relatedPool.length > 0 ? relatedPool : productData.products
   .sort(() => 0.5 - Math.random()); // Add this line to shuffle
 
   // 2. PRODUCT SELECTION (75% Size: h-[192px])
