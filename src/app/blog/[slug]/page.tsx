@@ -9,6 +9,16 @@ import Script from "next/script";
 
 const typedBlogData = blogData as any;
 
+// ─── Shuffle Function ─────────────────────────────────────────────────────────
+function shuffle(array: any[]) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 // ─── Static params ────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
   const articles = typedBlogData?.articles || [];
@@ -63,21 +73,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
   );
 
-  const finalPool = relatedPool.length > 0 ? relatedPool : productData.products
-  .sort(() => 0.5 - Math.random()); // Add this line to shuffle
+  // Apply shuffle to the pool
+  const shuffledPool = shuffle(relatedPool.length > 0 ? relatedPool : productData.products);
 
   // 2. PRODUCT SELECTION (75% Size: h-[192px])
-  const getByColor = (color: string) => finalPool.find(p => 
+  const getByColor = (color: string) => shuffledPool.find(p => 
     p.mainCategorySlugs?.some(s => s.toLowerCase() === color.toLowerCase())
   );
 
   const galleryOneItems = [
-    getByColor('red') || finalPool[0],
-    getByColor('white') || finalPool[1],
-    getByColor('champagne') || finalPool[2]
+    getByColor('red') || shuffledPool[0],
+    getByColor('white') || shuffledPool[1],
+    getByColor('champagne') || shuffledPool[2]
   ].filter(Boolean).slice(0, 3);
 
-  const galleryTwoItems = finalPool
+  const galleryTwoItems = shuffledPool
     .filter(p => !p.mainCategorySlugs?.some(s => ['red', 'white', 'champagne'].includes(s.toLowerCase())))
     .slice(0, 3);
 
@@ -211,7 +221,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {article.featuredImageUrl && (
         <div className="mb-10 rounded-3xl overflow-hidden shadow-2xl relative bg-gray-50 h-[400px]">
-          {/* Linked featured image logic using productUrl */}
           {article.productUrl ? (
             <Link href={article.productUrl.startsWith('/') ? article.productUrl : `/${article.productUrl}`} className="group cursor-pointer">
               <Image 
@@ -291,4 +300,4 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
     </div>
   );
-} 
+}
