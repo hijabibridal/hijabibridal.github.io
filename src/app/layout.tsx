@@ -18,11 +18,11 @@ export const metadata = {
 
   // title.template applies "| Hijabi Bridal" to every child page automatically
   title: {
-    default:  'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
-    template: '%s | Hijabi Bridal',
+    default:  'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Halal Nails',
+<    template: '%s | Hijabi Bridal',
   },
 
-  description: 'Shop premium Muslim wedding dresses, hijabi lehengas, bridal hijabs, nikkah jewelry and more — curated for US brides on Amazon. Free shipping, trusted seller.',
+  description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon. Free shipping, trusted seller.',
 
   // applicationName is the field Next.js exposes to Google as the site name
   applicationName: 'Hijabi Bridal',
@@ -39,8 +39,8 @@ export const metadata = {
 
   openGraph: {
     siteName: 'Hijabi Bridal',
-    title: 'Hijabi Bridal | Muslim Wedding Dresses, Lehengas & Bridal Wear',
-    description: 'Shop premium Muslim wedding dresses, hijabi lehengas, bridal hijabs, nikkah jewelry and more — curated for US brides on Amazon.',
+    title: 'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Dupattas',
+    description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon.',
     type: 'website',
     url: 'https://hijabibridal.github.io/',
   },
@@ -60,7 +60,7 @@ export default function RootLayout({
     // alternateName removed — alternate names can confuse Google's site name
     // picker and cause it to choose the wrong one (e.g. "GitHub")
     "url": "https://hijabibridal.github.io/",
-    "description": "Premium Muslim wedding dresses, bridal hijabs, lehengas, and nikkah accessories curated for brides in the United States.",
+    "description": "Premium Muslim wedding dresses, bridal hijabs, Muslim lehengas, and nikkah accessories curated for United States brides.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
@@ -89,7 +89,7 @@ export default function RootLayout({
       "Modest fashion",
       "Islamic wedding attire",
       "Nikkah ceremony",
-      "Bridal lehenga",
+      "Muslim lehenga",
       "Bridal hijab"
     ],
     // Pinterest profile gives Google an independent external source to confirm

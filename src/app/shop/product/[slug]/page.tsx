@@ -50,7 +50,6 @@ export default async function ProductPage({ params }: PageProps) {
   const keywords = ["dress", "lehenga", "groom", "nails", "jutti", "sharara", "hijab", "dupatta", "caftan", "jewelry"];
   const productSlugParts = product.slug.split('-');
   
-  // Find articles where a keyword exists in both product and blog slugs
   const matchedArticles = (blogData.articles || []).filter(article => {
     const articleSlugParts = article.slug.split('-');
     return keywords.some(word => 
@@ -58,7 +57,6 @@ export default async function ProductPage({ params }: PageProps) {
     );
   });
 
-  // Ensure 3 articles: fill with general articles if not enough keyword matches
   let displayArticles = matchedArticles.slice(0, 3);
   if (displayArticles.length < 3) {
     const fallbackArticles = (blogData.articles || []).filter(
@@ -76,7 +74,7 @@ export default async function ProductPage({ params }: PageProps) {
     p.mainCategorySlugs.some(s => productColors.includes(s))
   );
 
-  // Split logic: Find the first <h2> to separate intro from body
+  // Split logic
   const hasH2 = product.description.includes('<h2');
   let introText = "";
   let remainingDescription = "";
@@ -111,6 +109,23 @@ export default async function ProductPage({ params }: PageProps) {
     "mainEntity": finalFaqs
   };
 
+  // --- IMAGE SCHEMA ---
+  // Tells Google explicitly which image is the primary/canonical product image.
+  // This prevents Google from picking suggestedAddOns or relatedProducts images
+  // as the representative image in search results.
+  const siteUrl = "https://hijabibridal.github.io";
+  const primaryImageUrl = `${siteUrl}/images/${product.images[0].url}`;
+
+  const imageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": primaryImageUrl,
+    "url": primaryImageUrl,
+    "name": product.images[0].alt || product.name,
+    "description": product.images[0].figcaption || product.meta_description,
+    "representativeOfPage": true,
+  };
+
   // Reusable Blog Section Component
   const BlogSection = () => (
     <div className="mt-12 lg:mt-6 border-t border-pink-50 pt-8">
@@ -134,12 +149,21 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
+      {/* FAQ schema — collection products only */}
       {product.type === 'collection' && finalFaqs.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
+
+      {/* ImageObject schema — all products.
+          representativeOfPage: true tells Google this is the canonical image
+          for this page, overriding its own image-picker heuristic */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
+      />
 
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -231,6 +255,9 @@ export default async function ProductPage({ params }: PageProps) {
                           src={addon.image.startsWith('http') || addon.image.startsWith('/') ? addon.image : `/images/${addon.image}`}
                           alt={`Suggested accessory ${idx + 1}`}
                           fill
+                          // loading="lazy" tells Google's crawler these images are
+                          // secondary — deprioritises them vs the main product image
+                          loading="lazy"
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
@@ -299,6 +326,10 @@ export default async function ProductPage({ params }: PageProps) {
                         src={`/images/${rp.images[0].url}`}
                         alt={rp.name}
                         fill
+                        // loading="lazy" deprioritises these carousel images so
+                        // Google's image picker doesn't mistake them for the
+                        // primary product image
+                        loading="lazy"
                         className="object-cover transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
