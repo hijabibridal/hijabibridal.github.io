@@ -19,7 +19,7 @@ export const metadata = {
   // title.template applies "| Hijabi Bridal" to every child page automatically
   title: {
     default:  'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Halal Nails',
-<    template: '%s | Hijabi Bridal',
+    template: '%s | Hijabi Bridal',
   },
 
   description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon. Free shipping, trusted seller.',
