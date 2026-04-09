@@ -3,7 +3,7 @@ import productData from '@/data/bridal-products.json'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import ProductCard from '@/components/ProductCard' // SUGGESTED CHANGE: Added Import
+import ProductCard from '@/components/ProductCard'
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -82,8 +82,51 @@ export default async function CategoryPage({ params }: PageProps) {
 
   const stylingTable = (category as any).stylingTable;
 
+  // Build schemas
+  // ImageObject — emitted for every category that has an imageUrl,
+  // regardless of whether it also has a FAQ. Previously this was only
+  // rendered inside the FAQ block, so 13 categories got no image schema.
+  const imageSchema = category.imageUrl
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": `https://hijabibridal.github.io/images/${category.imageUrl}`,
+        "url": `https://hijabibridal.github.io/images/${category.imageUrl}`,
+        "name": category.imageAlt || category.name,
+        "description": category.imageAlt || category.metaDescription,
+        "representativeOfPage": true,
+        ...(category.iptc ? { "digitalSourceType": category.iptc } : {}),
+      }
+    : null;
+
+  // FAQPage — only for categories that have FAQ_schema
+  const faqSchema = parsedFaqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": parsedFaqs,
+      }
+    : null;
+
   return (
     <div className="container mx-auto px-4 py-8">
+
+      {/* ImageObject schema — every category with an imageUrl */}
+      {imageSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
+        />
+      )}
+
+      {/* FAQPage schema — only categories with FAQ_schema */}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       <Breadcrumbs 
         links={[{ href: '/', text: 'Home' }, { href: '/shop', text: 'Shop' }]} 
         currentPage={category.name} 
@@ -112,7 +155,6 @@ export default async function CategoryPage({ params }: PageProps) {
 
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* SUGGESTED CHANGE: Replaced manual product map with ProductCard component */}
           {filteredProducts.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
@@ -139,9 +181,7 @@ export default async function CategoryPage({ params }: PageProps) {
               <div className="overflow-x-auto rounded-[2rem] border border-pink-100 shadow-sm bg-white">
                 <table className="w-full text-left border-collapse min-w-[900px]">
                   <thead>
-                    {/* TOP ENTITY SPANNING ROW */}
                     <tr className="bg-pink-50/30">
-                      {/* Empty cell for the Left Entity column */}
                       <th className="p-6 border-b border-pink-100"></th>
                       <th colSpan={stylingTable.columns.length} className="p-4 border-b border-pink-100 text-center">
                         <span className="text-[#db2777] font-black uppercase tracking-widest text-sm block">
@@ -153,7 +193,6 @@ export default async function CategoryPage({ params }: PageProps) {
                       </th>
                     </tr>
                     
-                    {/* HEADER COLUMN NAMES */}
                     <tr className="bg-white">
                       <th className="p-6 border-b border-pink-100 bg-pink-50/10 w-[220px]">
                         <span className="text-gray-900 font-black uppercase text-xs tracking-tighter">
@@ -172,7 +211,6 @@ export default async function CategoryPage({ params }: PageProps) {
                   <tbody className="text-gray-700">
                     {Object.entries(stylingTable.rows).map(([rowName, allowedStyles]: [string, any], index: number) => (
                       <tr key={rowName} className="border-b border-pink-50 hover:bg-pink-50/5 transition-colors">
-                        {/* LEFT ENTITY ROW NAMES (Fabric Types) */}
                         <td className="p-6 font-bold text-black border-r border-pink-50 bg-gray-50/30">
                           {rowName}
                         </td>
@@ -187,7 +225,6 @@ export default async function CategoryPage({ params }: PageProps) {
                         ))}
                       </tr>
                     ))}
-                    {/* OPTIONAL VERTICAL DESCRIPTION (Appears as a footer row to maintain left-alignment) */}
                     {stylingTable.leftEntity.description && (
                       <tr className="bg-pink-50/10">
                          <td colSpan={stylingTable.columns.length + 1} className="p-4 text-center">
@@ -216,6 +253,7 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           ))}
 
+          {/* FAQ rendered separately — schema is now at the top of the page */}
           {parsedFaqs.length > 0 && (
             <div className="mt-20 bg-pink-50/50 p-10 rounded-[2.5rem] border border-pink-100">
               <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
@@ -229,25 +267,6 @@ export default async function CategoryPage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ 
-                  __html: JSON.stringify([
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      "mainEntity": parsedFaqs
-                    },
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "ImageObject",
-                      "contentUrl": category.imageUrl,
-                      "description": category.imageAlt,
-                      "digitalSourceType": category.iptc
-                    }
-                  ]) 
-                }}
-              />
             </div>
           )}
         </section>
