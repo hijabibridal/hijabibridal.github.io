@@ -3541,6 +3541,122 @@
       ]
     },
     {
+      "name": "Peach Halal Nails",
+      "slug": "halal-nails-peach",
+      "description": "These halal nails feature a unique beauty that enhances your bridal look while ensuring compliance with Islamic fashion. Tested by hijabi brides, these press-on nails are designed to be easily removed for wudu when used with glue tabs, not nail glue. <br /><br /><a href=\"https://hijabibridal.github.io/shop/product/hijabi-nails-glue-tabs\" class=\"text-[#db2777] font-bold hover:underline\">Shop our glue tabs.</a>Glue tabs allow you to maintain your religious practices without sacrificing style. With our Peach Halal Nails, you can enjoy an elegant choice for your special day that is more wudu-compliant than traditional halal nail polish and more comfortable than nail rings.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear These Peach Hijabi Nails in Amazon Color: PEACH CORAL.</h2> These hijabi nails coordinates with styling for bridal looks, adding a touch of glamor that beautifully complements our exquisite nikkah jewelry and peach Muslim wedding dresses. At Hijabi Bridal, we understand the importance of merging faith with fashion, making these stunning nails the perfect accessory for your wedding ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/halal-nails\" class=\"text-[#db2777] font-bold hover:underline\">View all Halal Nails</a><br /><a href=\"https://hijabibridal.github.io/blog/halal-nails-press-on-guide\" class=\"text-[#db2777] font-bold hover:underline\">Read our Halal Nails Guide</a>",
+      "mainCategorySlugs": [
+        "halal-nails",
+        "peach"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/silver-and-peach-wedding-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-peach-wedding-punjabi-jutti-slippers" 
+        },
+        { 
+          "image": "/images/peach-sharara-suit.webp", 
+          "targetSlug": "peach-sharara-suit" 
+        }
+      ],
+      "images": [
+        {
+          "url": "halal-nails/halal-nails-peach.webp",
+          "alt": "Peach Halal Nails showcasing exquisite modest nail art in a luxurious finish",
+          "amazonLink": "https://amzn.to/4tLvhb7",
+          "figcaption": "Vibrant press-on nails that are halal for your big day. Perfect for adherence to Islamic law, wudu-friendly."
+        }
+      ],
+      "og_image": "halal-nails/halal-nails-peach.webp",
+      "title_tag": "Peach Halal Nails | Best Amazon Halal Nail Choice",
+      "og_title": "Peach Halal Nails - Romantic Peach Bridal Accessory",
+      "og_type": "website",
+      "meta_description": "Enhance your bridal style with Peach Halal Nails. Easy to remove for wudu, these nails combine elegance and Islamic fashion for a stunning look.",
+      "attributes": {
+        "category": "Halal Nails",
+        "color": "Peach",
+        "material": "High-Quality Materials",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Halal Nails",
+          "item": "https://hijabibridal.github.io/shop/category/halal-nails"
+        },
+        {
+          "name": "Peach Halal Nails",
+          "item": "https://hijabibridal.github.io/shop/product/halal-nails-peach"
+        }
+      ]
+    },
+    {
+      "name": "Blue Halal Nails",
+      "slug": "halal-nails-blue",
+      "description": "These halal nails feature a unique beauty that enhances your bridal look while ensuring compliance with Islamic fashion. Tested by hijabi brides, these press-on nails are designed to be easily removed for wudu when used with glue tabs, not nail glue. <br /><br /><a href=\"https://hijabibridal.github.io/shop/product/hijabi-nails-glue-tabs\" class=\"text-[#db2777] font-bold hover:underline\">Shop our glue tabs.</a>Glue tabs allow you to maintain your religious practices without sacrificing style. With our Blue Halal Nails, you can enjoy an elegant choice for your special day that is more wudu-compliant than traditional halal nail polish and more comfortable than nail rings.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear These Blue Hijabi Nails in Amazon Color: REGAL BLUE.</h2> These hijabi nails coordinates with styling for bridal looks, adding a touch of glamor that beautifully complements our exquisite nikkah jewelry and blue Muslim wedding dresses. At Hijabi Bridal, we understand the importance of merging faith with fashion, making these stunning nails the perfect accessory for your wedding ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/halal-nails\" class=\"text-[#db2777] font-bold hover:underline\">View all Halal Nails</a><br /><a href=\"https://hijabibridal.github.io/blog/halal-nails-press-on-guide\" class=\"text-[#db2777] font-bold hover:underline\">Read our Halal Nails Guide</a>",
+      "mainCategorySlugs": [
+        "halal-nails",
+        "blue"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/light-blue-crepe-bridal-hijab.webp", 
+          "targetSlug": "light-blue-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/muslim-wedding-dress-garden-blue-2.webp", 
+          "targetSlug": "muslim-wedding-dress-garden-blue" 
+        }
+      ],
+      "images": [
+        {
+          "url": "halal-nails/halal-nails-blue.webp",
+          "alt": "Blue Halal Nails showcasing exquisite modest nail art in a luxurious finish",
+          "amazonLink": "https://amzn.to/4tLvhb7",
+          "figcaption": "Vibrant press-on nails that are halal for your big day. Perfect for adherence to Islamic law, wudu-friendly."
+        }
+      ],
+      "og_image": "halal-nails/halal-nails-blue.webp",
+      "title_tag": "Blue Halal Nails | Best Amazon Halal Nail Choice",
+      "og_title": "Blue Halal Nails - Exotic Blue Bridal Accessory",
+      "og_type": "website",
+      "meta_description": "Enhance your bridal style with Blue Halal Nails. Easy to remove for wudu, these nails combine elegance and Islamic fashion for a stunning look.",
+      "attributes": {
+        "category": "Halal Nails",
+        "color": "Blue",
+        "material": "High-Quality Materials",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Halal Nails",
+          "item": "https://hijabibridal.github.io/shop/category/halal-nails"
+        },
+        {
+          "name": "Blue Halal Nails",
+          "item": "https://hijabibridal.github.io/shop/product/halal-nails-blue"
+        }
+      ]
+    },
+    {
       "name": "Halal Nails Glue Tabs",
       "slug": "hijabi-nails-glue-tabs",
       "description": "This hijabi nails product features glue tabs designed for easy application of halal nails, allowing for a five-minute manicure. These halal nail colors come off effortlessly when it's time to perform wudu, simply by prying off the halal press-on nails and rubbing off the glue tabs. With these glue tabs, you can apply and reapply your hijabi nails as desired, ensuring your nails remain elegant and intact throughout your wedding festivities. Note: some nails come with nail glue, not glue tabs. Nail glue is difficult to remove and not halal. <br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear Hijabi Nails Glue Tabs  </h2>This hijabi nails product is designed specifically for brides seeking a halal nail color alternative. These glue tabs ensure a secure hold while being gentle enough for hassle-free removal. A five minute application, apply the glue tabs to your nails and the halal nails over them. When you're ready to make wudu, just pry them off. Easy! Enhance your special day with halal nails that align with your values and beauty, knowing that every detail supports your Islamic fashion choices.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/none\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/halal-nails\" class=\"text-[#db2777] font-bold hover:underline\">View all Halal Nails</a><br /><a href=\"https://hijabibridal.github.io/blog/halal-nails-press-on-guide\" class=\"text-[#db2777] font-bold hover:underline\">Read our Halal Nails Guide</a>",
