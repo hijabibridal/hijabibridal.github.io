@@ -149,8 +149,8 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* FAQ schema — collection products only */}
-      {product.type === 'collection' && finalFaqs.length > 0 && (
+      {/* FAQ schema — any product with FAQ_schema data */}
+      {finalFaqs.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -200,7 +200,7 @@ export default async function ProductPage({ params }: PageProps) {
                 productName={product.name}
                 images={product.images.map(img => ({
                   ...img,
-                  amazonLink: product.type === 'collection' ? img.amazonLink : null
+                  amazonLink: img.amazonLink || null
                 }))} 
               />
               {/* DESKTOP BLOG PLACEMENT */}
