@@ -6106,64 +6106,6 @@
           "item": "https://hijabibridal.github.io/shop/product/baby-pink-muslim-bridal-lehenga"
         }
       ]
-    },    
-    {
-      "name": "Blue Muslim Bridal Caftan",
-      "slug": "blue-muslim-wedding-dress",
-      "description": "This exquisite Blue Dubai Bridal Kaftan is a luxurious garment adorned with beautiful gold embroidery. This Muslim wedding dress embodies a perfect blend of traditional and modern styles, focusing on luxury and contemporary fashion trends. The kaftan showcases a V-neck design and sleeves embellished with gold embroidery on the cuffs, creating a dramatic flair for an opulent, statement-making look. Included with the kaftan are a belt and a matching bridal dupatta, making it a complete ensemble for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Muslim Bridal Caftan  </h2>This Muslim bridal coordinates with styling for bridal looks that can be enhanced with a hijab or shawl. The Dubai kaftan's versatility allows it to be paired with various head coverings, reflecting regional traditions and personal taste. For a classic touch, wear your hijab in a Turkish style, wrapping it around the neck and draping a coordinating scarf or shawl over it. Alternatively, opt for a chic turban style for a contemporary edge. To complete your look, elegant heels and luxurious jewelry from our Gold Muslim Wedding Shop will elevate your bridal beauty.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp", 
-          "targetSlug": "gold-bridal-jewellery-set" 
-        },
-        { 
-          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
-          "targetSlug": "gold-embroidered-bridal-dupatta" 
-        }
-      ],
-      "images": [
-        {
-          "url": "hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp",
-          "alt": "Blue Muslim bridal caftan with gold embroidery and V-neck — Dubai-style nikah dress",
-          "figcaption": "A stunning bridal caftan in a jewel-tone blue color featuring gold embroidery and a V-neck design for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/422Bipt"
-        }
-      ],
-      "og_image": "hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp",
-      "title_tag": "Bridal Caftan for a Wedding | Bride Style on Amazon",
-      "og_title": "Bridal Caftan for a Wedding | Bride Style on Amazon",
-      "og_type": "website",
-      "meta_description": "Discover a bold bridal caftan for your wedding. This bride style features luxury fabric and embroidery for an unforgettable wedding ceremony look. Shop the collection!",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "Blue",
-        "material": "Embroidery",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "Blue Muslim Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/blue-muslim-wedding-dress"
-        }
-      ]
     },
     {
       "name": "Bridal Caftan in Blue",
@@ -6434,64 +6376,6 @@
       ]
     },
     {
-      "name": "White Muslim Bridal Caftan",
-      "slug": "white-muslim-bridal-caftan",
-      "description": "This White Dubai Bridal Caftan is a simple cut designed for flow. With beautiful gold embroidery, it is perfect for Muslim wedding dresses. This caftan embraces a fusion of traditional and modern styles, focusing on luxury and contemporary fashion trends. It has a V-neck and sleeves adorned with gold embroidery on the cuffs, creating a dramatic flair for an opulent, statement-making look. Perfect for plus sizes, this white hijab wedding dress is available in sizes up to 5XL and includes a belt and matching bridal dupatta.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this White Bridal Caftan  </h2>This Muslim wedding coordinates with styling for bridal looks. The Dubai kaftan, being a single-piece garment, is versatile and can be worn with a hijab or shawl. Fabrics like chiffon, satin, or silk are common for the hijab, complementing the luxurious texture of the wedding kaftan. You can wear your hijab in a classic Turkish style that wraps around the neck, draping a coordinating scarf or shawl over your hair for added elegance. Alternatively, a turban style can be adopted for a chic, fashion-forward look, especially for brides seeking a contemporary edge.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "white"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
-          "targetSlug": "gold-embroidered-bridal-dupatta"  
-        },
-        { 
-          "image": "/images/halal-nails/halal-nails-white-cat-eye.webp", 
-          "targetSlug": "white-cat-eye-hijabi-nails" 
-        }
-      ],
-      "images": [
-        {
-          "url": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp",
-          "alt": "White Muslim bridal caftan with gold embroidery — modest modern nikah dress for US brides",
-          "figcaption": "Bridal caftan in white with gold embroidery and fabric in every size for a pre-wedding style.",
-          "amazonLink": "https://amzn.to/4fSoKEv"
-        }
-      ],
-      "og_image": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp",
-      "title_tag": "White Bridal Caftan | Wedding Style for the Bride",
-      "og_title": "White Bridal Caftan | Wedding Style for the Bride",
-      "og_type": "website",
-      "meta_description": "Discover a beautiful white bridal caftan for your wedding. This elegant bride style features premium fabric and a unique embroidery design.",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "White",
-        "material": "Embroidery",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "White Muslim Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/white-muslim-wedding-dress"
-        }
-      ]
-    },
-    {
       "name": "Bridal Caftan for White Muslim Wedding",
       "slug": "dress-for-white-muslim-wedding",
       "description": "This Muslim wedding features a stunning White Moroccan Wedding Kaftan that showcases elaborate, traditional embroidery in silver thread. The outfit consists of two pieces: the Tahtiya, an inner dress made of fine, shiny fabric that is long-sleeved and modest, and the Dfina (or Fouqia), an outer, more elaborate over-dress that is sheer and richly decorated. Both pieces have a fancy collar and button up the front with traditional closures. This White Moroccan Wedding Kaftan is designed to accentuate the waist with a belt (mdamma) and is perfect for Muslim wedding dresses, special occasions, and formal events.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Bridal Caftan for a White Muslim Wedding  </h2>This Muslim wedding coordinates with styling for bridal looks that beautifully incorporate the hijab. Head coverings can be matched in color and decoration with the takchita, enhancing the outfitâ€™s harmony. A popular way to wear a white hijab wedding dress is to tuck the hijab neatly into the neckline of the caftan, creating a seamless and modest look. Alternatively, brides can opt for a layered effect for volume or a turban style for a chic, contemporary edge. Adding a coordinating scarf or shawl (dupatta) over the hijab elevates the overall elegance, making it a distinctive and expressive choice for the celebration.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
@@ -6558,180 +6442,6 @@
         {
           "name": "Bridal Caftan for White Muslim Wedding",
           "item": "https://hijabibridal.github.io/shop/product/dress-for-white-muslim-wedding"
-        }
-      ]
-    },
-    {
-      "name": "Pink Moroccan Bridal Caftan",
-      "slug": "moroccan-caftan-pink",
-      "description": "This elegant pink bridal caftan features a traditional Moroccan takchita design, perfect for a bride seeking a royal aesthetic. The set is crafted from soft pastel fabric and adorned with intricate gold embroidery and sequins across the bodice and sleeves. This complete ensemble includes a long-sleeve dress with a v-neckline, a decorative waist belt, and a matching hooded cape with embroidered trim, providing graceful movement for a wedding ceremony or reception. The floor-length silhouette and dramatic overlay create a regal presence for any formal wedding celebration.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Pink Moroccan Bridal Caftan</h2>A sleek formal updo will sit well under the hijab that's provided with the caftan. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "pink"
-      ],
-       "suggestedAddOns": [
-        { 
-          "image": "/images/gold-and-pink-bridal-punjabi-jutti-slippers.webp", 
-          "targetSlug": "gold-and-pink-bridal-punjabi-jutti-slippers" 
-        },
-        { 
-          "image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", 
-          "targetSlug": "pink-bridal-jewelry-set" 
-        }
-      ],
-      "images": [
-        {
-          "url": "moroccan-caftan-pink.webp",
-          "alt": "Pink Moroccan bridal caftan with gold embroidery — modest Islamic wedding dress for nikah.",
-          "figcaption": "A pink bridal caftan featuring a pastel color and gold embroidery for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        }
-      ],
-      "og_image": "moroccan-caftan-pink.webp",
-      "title_tag": "Pink Bridal Caftan | Pastel Wedding Style for a Bride",
-      "og_title": "Pink Bridal Caftan | Pastel Wedding Style for a Bride",
-      "og_type": "website",
-      "meta_description": "Discover this pink bridal caftan in a soft pastel color. This bride style features traditional embroidery and fabric for a beautiful wedding ceremony.",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "Pink",
-        "material": "Embroidery",
-        "style": "Traditional",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "Pink Moroccan Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/moroccan-caftan-pink"
-        }
-      ]
-    },
-    {
-      "name": "Green Moroccan Bridal Caftan",
-      "slug": "moroccan-caftan-green",
-      "description": "Make a statement with this green bridal caftan, designed with a bold color and traditional culture in mind. This Moroccan kaftan takchita showcases elaborate gold threadwork and ornate detailing that flows from the bodice down to the floor-length skirt. The wedding gown set comes with a long-sleeve v-neck dress, a matching hooded cape, and a waist belt to define your silhouette. Whether for a pre-wedding event or a grand wedding ceremony, the flowing fabric and regal design offer an authentic and luxurious look for the modern bride.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Green Moroccan Bridal Caftan</h2>A sleek formal updo will sit well under the hijab that's provided with the caftan. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "green"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/forest-green-chiffon-hijab.webp", 
-          "targetSlug": "forest-green-hijab" 
-        },
-        { 
-          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry-for-bride.webp", 
-          "targetSlug": "green-bridal-nikkah-jewelry-for-bride" 
-        }
-      ],
-      "images": [
-        {
-          "url": "moroccan-caftan-green.webp",
-          "alt": "Green Moroccan bridal caftan with bold color and traditional.",
-          "figcaption": "A green bridal caftan with a bold color and traditional embroidery for a bride at a wedding reception.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        }
-      ],
-      "og_image": "moroccan-caftan-green.webp",
-      "title_tag": "Green Bridal Caftan | Bold Wedding Style for a Bride",
-      "og_title": "Green Bridal Caftan | Bold Wedding Style for a Bride",
-      "og_type": "website",
-      "meta_description": "Shop this green bridal caftan for a bold wedding look. This traditional design features exquisite embroidery and fabric for a stunning wedding ceremony.",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "Green",
-        "material": "High-Quality Materials",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "Green Moroccan Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/moroccan-caftan-green"
-        }
-      ]
-    },
-    {
-      "name": "Maroon Moroccan Bridal Caftan",
-      "slug": "moroccan-caftan-maroon",
-      "description": "This stunning maroon bridal caftan is the epitome of traditional style and elegance. The deep, bold color is beautifully contrasted by intricate gold embroidery and sequins, reflecting a rich cultural aesthetic. Designed for a bride who wants a regal presence, the set includes a long-sleeve gown with a v-neckline and a dramatic hooded cape. The floor-length fabric ensures graceful movement during a wedding ceremony or reception, while the decorative waist belt provides a perfect fit for any size. This luxurious ensemble is ideal for weddings and special ceremonial occasions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Maroon Moroccan Bridal Caftan</h2>A sleek formal updo will sit well under the hijab that's provided with the caftan. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "red"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp", 
-          "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers" 
-        },
-        { 
-          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
-          "targetSlug": "dark-red-cat-eye-artificial-nails" 
-        }
-      ],
-      "images": [
-        {
-          "url": "moroccan-caftan-maroon.webp",
-          "alt": "Maroon Moroccan bridal caftan with traditional embroidery — modest Muslim wedding dress in deep red.",
-          "figcaption": "A maroon bridal caftan showcasing traditional culture and embroidery style for a bride.",
-          "amazonLink": "https://amzn.to/4t8hKuf"
-        }
-      ],
-      "og_image": "moroccan-caftan-maroon.webp",
-      "title_tag": "Maroon Bridal Caftan | Traditional Wedding Design for a Bride",
-      "og_title": "Maroon Bridal Caftan | Traditional Wedding Design for a Bride",
-      "og_type": "website",
-      "meta_description": "Embrace culture with this maroon bridal caftan. A traditional wedding style for the bride featuring luxury fabric and embroidery design.",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "Red",
-        "material": "Embroidery",
-        "style": "Traditional",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "Maroon Moroccan Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/moroccan-caftan-maroon"
         }
       ]
     },
@@ -6906,64 +6616,6 @@
         {
           "name": "Red Dubai Bridal Caftan",
           "item": "https://hijabibridal.github.io/shop/product/dubai-caftan-red"
-        }
-      ]
-    },
-    {
-      "name": "White Dubai Bridal Caftan",
-      "slug": "dubai-caftan-white",
-      "description": "This white Dubai bridal caftan is crafted from high-quality georgette and chiffon fabric for a soft, breathable, and skin-friendly experience. The gown features heavy gold embroidery and beadwork applique, creating a luxurious design perfect for a traditional wedding ceremony. Available in sizes xs to 5xl, this ensemble includes a matching hijab to complete your bridal look. The elegant white fabric and intricate gold details ensure a comfortable and sophisticated presence for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this White Dubai Bridal Caftan</h2>A sleek formal updo will sit well under the hijab that's provided with the caftan. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "white"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
-          "targetSlug": "gold-embroidered-bridal-dupatta"  
-        },
-        { 
-          "image": "/images/white-and-gold-sequin-bridal-punjabi-jutti-slippers.webp", 
-          "targetSlug": "white-and-gold-sequin-bridal-punjabi-jutti-slippers" 
-        }
-      ],
-      "images": [
-        {
-          "url": "dubai-caftan-white.webp",
-          "alt": "White Dubai bridal caftan with traditional embroidery and gold detail — modest Islamic nikah dress",
-          "figcaption": "A white bridal caftan with traditional embroidery and fabric for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4lGPJXZ"
-        }
-      ],
-      "og_image": "dubai-caftan-white.webp",
-      "title_tag": "White Bridal Caftan | Traditional Wedding Design for a Bride",
-      "og_title": "White Bridal Caftan | Traditional Wedding Design for a Bride",
-      "og_type": "website",
-      "meta_description": "Choose a stunning white bridal caftan with gold embroidery. A traditional wedding design perfect for any bride at her wedding ceremony.",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "White",
-        "material": "Georgette",
-        "style": "Traditional",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "White Dubai Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/dubai-caftan-white"
         }
       ]
     },
@@ -7235,6 +6887,192 @@
         }
       ]
     },
+    {
+    "name": "White Muslim Bridal Kaftan",
+    "slug": "white-muslim-bridal-caftan",
+    "description": "Is this the best bridal kaftan with veil for 2026 in white? Yes. This white Dubai bridal kaftan is a simple cut designed for flow. With beautiful gold embroidery, it is perfect for Muslim wedding dresses. This kaftan embraces a fusion of traditional and modern styles, focusing on luxury and contemporary fashion trends. It has a V-neck and sleeves adorned with gold embroidery on the cuffs, creating a dramatic flair for an opulent, statement-making look. Perfect for plus sizes, this white bridal kaftan with veil — a matching shayla wedding veil dupatta — is available in sizes up to 5XL and includes a belt and matching bridal dupatta.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this White Bridal Kaftan</h2>This Muslim wedding look coordinates beautifully with various bridal hijab styles. The Dubai kaftan, being a single-piece garment, is versatile and can be worn with the included shayla hijab or dupatta. You can wear your hijab in a classic Turkish style that wraps around the neck, or drape the included wedding veil dupatta over your hair for added elegance. Alternatively, a turban style can be adopted for a chic, fashion-forward look, especially for brides seeking a contemporary edge. The flowing silhouette also makes this an excellent choice for beach wedding attire.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+    "mainCategorySlugs": ["bridal-caftans", "white"],
+    "suggestedAddOns": [
+      {"image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", "targetSlug": "gold-embroidered-bridal-dupatta"},
+      {"image": "/images/halal-nails/halal-nails-white-cat-eye.webp", "targetSlug": "white-cat-eye-hijabi-nails"}
+    ],
+    "images": [
+      {
+        "url": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp",
+        "alt": "White Muslim bridal kaftan with gold embroidery — modest modern nikah dress for US brides",
+        "figcaption": "Bridal kaftan in white with gold embroidery and fabric in every size for a pre-wedding style.",
+        "amazonLink": "https://amzn.to/4fSoKEv"
+      }
+    ],
+    "og_image": "hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp",
+    "title_tag": "White Bridal Kaftan with Veil | Dubai Style Muslim Wedding Dress",
+    "og_title": "White Bridal Kaftan with Veil | Dubai Style Muslim Wedding Dress",
+    "og_type": "website",
+    "FAQ_schema": "[{\"@type\":\"Question\",\"name\":\"Is this one of the best bridal kaftans with veil for 2026 in white?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. This white bridal kaftan with veil includes a matching bridal dupatta that functions as a shayla-style hijab. The dupatta is worn over the head and draped across the shoulder, completing the bridal kaftan with veil look without requiring a separate purchase. This is the standard Dubai kaftan bridal ensemble \u2014 the belt and dupatta are included in the set.\"}},{\"@type\":\"Question\",\"name\":\"Is this white bridal kaftan suitable for beach wedding attire?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. The flowing, single-piece cut of this white Dubai bridal kaftan makes it one of the better choices for beach wedding attire among our kaftan collection. Its lightweight construction and floor-length silhouette move well in outdoor settings, and the absence of a structured underlayer makes it more comfortable in warm weather than a heavily boned wedding dress. The included bridal dupatta can be styled loosely for beach wedding attire or more formally for an indoor nikah ceremony.\"}},{\"@type\":\"Question\",\"name\":\"What sizes is this white bridal kaftan available in?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This white Muslim bridal kaftan is available in sizes up to 5XL, making it one of the most size-inclusive options in the collection. Unlike Indian bridal wear, which often requires precise fitting of a structured lehenga or salwar suit, the kaftan silhouette accommodates a wide range of body types without alteration. The included waist belt allows the bride to define her silhouette at the waist regardless of size. Plus size brides will find the flowing Dubai kaftan silhouette particularly flattering and easy to wear.\"}}]",
+    "meta_description": "Shop this white Dubai bridal kaftan with veil — gold embroidery, V-neck, sizes up to 5XL, belt and shayla dupatta included. Modest Muslim wedding dress on Amazon.",
+    "attributes": {"category": "Bridal Caftans", "color": "White", "material": "Embroidery", "style": "Modern", "condition": "New", "availability": "InStock"},
+    "breadcrumbs": [
+      {"name": "Home", "item": "https://hijabibridal.github.io/"},
+      {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+      {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+      {"name": "White Muslim Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/white-muslim-wedding-dress"}
+    ]
+  },
+  {
+    "name": "White Dubai Bridal Caftan",
+    "slug": "dubai-caftan-white",
+    "description": "This white Dubai bridal kaftan is crafted from high-quality georgette and chiffon fabric for a soft, breathable, and skin-friendly experience. The gown features heavy gold embroidery and beadwork applique, creating a luxurious design perfect for a traditional wedding ceremony. The mermaid cut silhouette fits closely through the bodice and flares below the knee, giving this bridal kaftan a contemporary structure that sets it apart from flowing A-line styles. Available in sizes XS to 5XL including plus sizes, this ensemble includes a matching shayla hijab that functions as the wedding veil, completing the bridal kaftan with veil look. The elegant white fabric and intricate gold details ensure a comfortable and sophisticated presence for your special day — and the lightweight georgette and chiffon construction also makes this suitable for beach wedding attire.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this White Dubai Bridal Kaftan</h2>A sleek formal updo will sit well under the shayla hijab provided with the kaftan. This mermaid cut bridal kaftan with veil pairs beautifully with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+    "mainCategorySlugs": ["bridal-caftans", "white"],
+    "suggestedAddOns": [
+      {"image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", "targetSlug": "gold-embroidered-bridal-dupatta"},
+      {"image": "/images/white-and-gold-sequin-bridal-punjabi-jutti-slippers.webp", "targetSlug": "white-and-gold-sequin-bridal-punjabi-jutti-slippers"}
+    ],
+    "images": [
+      {
+        "url": "dubai-caftan-white.webp",
+        "alt": "White Dubai bridal kaftan with mermaid cut, traditional embroidery and gold detail — modest Islamic nikah dress",
+        "figcaption": "A white bridal kaftan with traditional embroidery and fabric for a bride at a wedding ceremony.",
+        "amazonLink": "https://amzn.to/4lGPJXZ"
+      }
+    ],
+    "og_image": "dubai-caftan-white.webp",
+    "title_tag": "White Dubai Bridal Kaftan | Mermaid Cut Muslim Wedding Dress with Veil",
+    "og_title": "White Dubai Bridal Kaftan | Mermaid Cut Muslim Wedding Dress with Veil",
+    "og_type": "website",
+    "FAQ_schema": "[{\"@type\":\"Question\",\"name\":\"What is the mermaid cut on this white Dubai bridal kaftan?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This white Dubai bridal kaftan features a mermaid cut \u2014 a silhouette that fits closely through the bodice and flares at or below the knee. The mermaid cut gives this kaftan a more structured, contemporary look compared to the flowing A-line silhouette of most traditional kaftans. It suits brides who want the modesty and cultural elegance of a bridal kaftan with veil while achieving a more defined, form-flattering silhouette. The mermaid cut works particularly well for indoor nikah ceremonies and formal receptions. For plus size brides, the mermaid cut in this georgette and chiffon fabric provides structure without restriction.\"}},{\"@type\":\"Question\",\"name\":\"Does the mermaid cut work for beach wedding attire?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"The mermaid cut on this white Dubai bridal kaftan is more structured than a standard flowing kaftan, but the georgette and chiffon fabric keeps it lightweight enough for beach wedding attire in warm climates. For a beach wedding, the mermaid cut photographs well against natural light and ocean backgrounds. The matching shayla hijab included with this bridal kaftan with veil completes a cohesive modest bridal look suitable for outdoor ceremonies.\"}},{\"@type\":\"Question\",\"name\":\"What fabric is this white Dubai bridal kaftan made from?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This white Dubai bridal kaftan is crafted from georgette and chiffon \u2014 a combination that provides structure from the georgette layer and softness from the chiffon overlay. The heavy gold embroidery and beadwork applique are stitched onto the georgette base, which holds embellishment without puckering. Unlike lace kaftan styles that rely on the fabric's own pattern for visual interest, the embroidery and beadwork on this kaftan are applied as surface decoration. The beaded veil-style shayla hijab included with this kaftan matches the gold beadwork on the gown for a coordinated bridal kaftan with veil look.\"}}]",
+    "meta_description": "Shop this white Dubai bridal kaftan with mermaid cut — georgette and chiffon, heavy gold beadwork, shayla hijab wedding veil included, XS to 5XL. On Amazon.",
+    "attributes": {"category": "Bridal Caftans", "color": "White", "material": "Georgette", "style": "Traditional", "condition": "New", "availability": "InStock"},
+    "breadcrumbs": [
+      {"name": "Home", "item": "https://hijabibridal.github.io/"},
+      {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+      {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+      {"name": "White Dubai Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/dubai-caftan-white"}
+    ]
+  },
+  {
+    "name": "Maroon Moroccan Bridal Caftan",
+    "slug": "moroccan-caftan-maroon",
+    "description": "This stunning maroon bridal kaftan is the epitome of traditional style and elegance. The deep, bold color is beautifully contrasted by intricate gold embroidery and sequins, reflecting a rich cultural aesthetic rooted in Moroccan wedding dress tradition. Designed for a bride who wants a regal presence, the set includes a long-sleeve gown with a V-neckline and a dramatic hooded cape. This bridal kaftan with veil is completed by wearing the hooded cape over the shayla hijab — a styling approach central to Islamic wedding tradition. The floor-length fabric ensures graceful movement during a wedding ceremony or reception, while the decorative waist belt provides a perfect fit for plus sizes and all body types. This luxurious ensemble is ideal for weddings and special ceremonial occasions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Maroon Moroccan Bridal Kaftan</h2>A sleek formal updo will sit well under the shayla hijab styled with this kaftan. The hooded cape placed over the hijab creates the bridal kaftan with veil effect in the Moroccan wedding dress tradition. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+    "mainCategorySlugs": ["bridal-caftans", "red"],
+    "suggestedAddOns": [
+      {"image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp", "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers"},
+      {"image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", "targetSlug": "dark-red-cat-eye-artificial-nails"}
+    ],
+    "images": [
+      {
+        "url": "moroccan-caftan-maroon.webp",
+        "alt": "Maroon Moroccan bridal kaftan with traditional embroidery — modest Muslim wedding dress in deep red.",
+        "figcaption": "A maroon bridal kaftan showcasing traditional culture and embroidery style for a bride.",
+        "amazonLink": "https://amzn.to/4t8hKuf"
+      }
+    ],
+    "og_image": "moroccan-caftan-maroon.webp",
+    "title_tag": "Maroon Moroccan Bridal Kaftan with Veil | Traditional Muslim Wedding Dress",
+    "og_title": "Maroon Moroccan Bridal Kaftan with Veil | Traditional Muslim Wedding Dress",
+    "og_type": "website",
+    "FAQ_schema": "[{\"@type\":\"Question\",\"name\":\"What is a Moroccan bridal kaftan takchita?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A Moroccan bridal kaftan (takchita) is a two-piece traditional Moroccan wedding dress consisting of an inner dress and a decorative outer layer \u2014 typically a hooded cape or overdress. This maroon Moroccan bridal kaftan follows the takchita tradition: the inner gown with gold embroidery and sequins is worn beneath the matching hooded cape, which is styled over the shayla hijab for the complete bridal kaftan with veil look. The takchita is the most formal and traditional expression of the Moroccan wedding dress in Islamic wedding tradition.\"}},{\"@type\":\"Question\",\"name\":\"How is a Moroccan bridal kaftan different from Indian bridal wear?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A Moroccan bridal kaftan is a long, flowing Arab garment rooted in North African and Middle Eastern Islamic wedding tradition. Indian bridal wear, by contrast, typically consists of a structured lehenga skirt, fitted blouse, and dupatta \u2014 a silhouette that often exposes the midriff and requires a separate hijab as a head covering. The Moroccan bridal kaftan is a single-piece modest garment where the shayla hijab or hooded cape is included as part of the ensemble, making it a complete Islamic wedding tradition look. The embroidery traditions also differ: Moroccan kaftans feature arabesque and geometric gold threadwork, while Indian bridal wear uses zari and regional embroidery styles.\"}},{\"@type\":\"Question\",\"name\":\"Does this maroon Moroccan bridal kaftan include plus sizes?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. This maroon Moroccan bridal kaftan is available in a range of sizes including plus sizes. The flowing takchita silhouette with its outer hooded cape and adjustable waist belt is naturally accommodating across body types. The waist belt defines the silhouette without constriction, and the cape layer adds graceful volume regardless of size. For a vintage wedding style inspired by Moroccan court fashion, this maroon bridal kaftan with veil ensemble is a compelling alternative to both Indian bridal wear and Western gowns.\"}}]",
+    "meta_description": "Shop this maroon Moroccan bridal kaftan with veil — gold embroidery, hooded cape, shayla hijab, plus sizes. Traditional Muslim wedding dress on Amazon.",
+    "attributes": {"category": "Bridal Caftans", "color": "Red", "material": "Embroidery", "style": "Traditional", "condition": "New", "availability": "InStock"},
+    "breadcrumbs": [
+      {"name": "Home", "item": "https://hijabibridal.github.io/"},
+      {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+      {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+      {"name": "Maroon Moroccan Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/moroccan-caftan-maroon"}
+    ]
+  },
+  {
+    "name": "Blue Muslim Bridal Caftan",
+    "slug": "blue-muslim-wedding-dress",
+    "description": "This exquisite blue Dubai bridal kaftan is a luxurious garment adorned with beautiful gold embroidery. This Muslim wedding dress embodies a perfect blend of traditional and modern styles, focusing on luxury and contemporary fashion trends. The kaftan showcases a V-neck design and sleeves embellished with gold embroidery on the cuffs, creating a dramatic flair for an opulent, statement-making look. This is a complete bridal kaftan with veil ensemble — the included belt and matching bridal dupatta function as the shayla wedding veil, finishing the look in authentic Islamic wedding tradition. Ideal for a destination wedding in a Gulf Arab or Middle Eastern setting.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Muslim Bridal Kaftan</h2>This Muslim bridal look can be enhanced with the included dupatta styled as a hijab or shayla. The Dubai kaftan's versatility allows it to be paired with various head covering styles, reflecting regional traditions and personal taste. For a classic touch, wear your hijab in a Turkish style, wrapping it around the neck and draping the coordinating dupatta over it as a wedding veil layer. To complete your look, elegant heels and luxurious jewelry from our Gold Muslim Wedding Shop will elevate your bridal beauty.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+    "mainCategorySlugs": ["bridal-caftans", "blue"],
+    "suggestedAddOns": [
+      {"image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp", "targetSlug": "gold-bridal-jewellery-set"},
+      {"image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", "targetSlug": "gold-embroidered-bridal-dupatta"}
+    ],
+    "images": [
+      {
+        "url": "hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp",
+        "alt": "Blue Muslim bridal kaftan with gold embroidery and V-neck — Dubai-style nikah dress",
+        "figcaption": "A stunning bridal kaftan in a jewel-tone blue color featuring gold embroidery and a V-neck design for a bride at a wedding ceremony.",
+        "amazonLink": "https://amzn.to/422Bipt"
+      }
+    ],
+    "og_image": "hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp",
+    "title_tag": "Blue Bridal Kaftan with Veil | Dubai Muslim Wedding Dress on Amazon",
+    "og_title": "Blue Bridal Kaftan with Veil | Dubai Muslim Wedding Dress on Amazon",
+    "og_type": "website",
+    "FAQ_schema": "[{\"@type\":\"Question\",\"name\":\"How is this blue Dubai bridal kaftan styled as a bridal kaftan with veil?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This blue bridal kaftan with veil is styled using the included matching bridal dupatta as a shayla hijab. The dupatta is draped over the head and across one shoulder, creating the bridal kaftan with veil effect in a way consistent with Islamic wedding tradition. For a Turkish-style wrap, the dupatta is wound around the neck and pinned at the shoulder. For a looser South Asian-influenced style, it is draped across the head and shoulder without pinning. Both styles complete the bridal kaftan with veil look for a Muslim wedding ceremony.\"}},{\"@type\":\"Question\",\"name\":\"Is this blue bridal kaftan suitable for a destination wedding?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. The jewel-tone blue with gold embroidery of this Dubai bridal kaftan makes it an excellent choice for a destination wedding in the UAE, Qatar, or any Gulf Arab location where Dubai kaftan aesthetics are part of the local wedding culture. For brides planning a destination wedding with a Middle Eastern theme, this blue bridal kaftan with veil creates an authentic Arab bridal look that Indian bridal wear or Western gowns cannot replicate. The included dupatta hijab and belt complete the ensemble without requiring additional purchases.\"}},{\"@type\":\"Question\",\"name\":\"How does this blue bridal kaftan compare to Indian bridal wear?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This blue Dubai bridal kaftan is rooted in Arab Islamic wedding tradition rather than Indian bridal wear. Where Indian bridal wear pairs a lehenga skirt with a fitted blouse and requires a separate hijab as a head covering, this kaftan is a complete modest garment \u2014 the dupatta included in the set functions as the shayla hijab and wedding veil. The gold embroidery reflects Gulf Arab craftsmanship rather than the zari and gota patti typical of Indian bridal wear. Brides of any background who want an Arab aesthetic for their destination wedding frequently choose Dubai kaftan styles for this distinction.\"}}]",
+    "meta_description": "Shop this blue Dubai bridal kaftan with veil — jewel-tone blue, gold embroidery, V-neck, belt and shayla dupatta included. Modest Muslim wedding dress on Amazon.",
+    "attributes": {"category": "Bridal Caftans", "color": "Blue", "material": "Embroidery", "style": "Modern", "condition": "New", "availability": "InStock"},
+    "breadcrumbs": [
+      {"name": "Home", "item": "https://hijabibridal.github.io/"},
+      {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+      {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+      {"name": "Blue Muslim Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/blue-muslim-wedding-dress"}
+    ]
+  },
+  {
+    "name": "Pink Moroccan Bridal Caftan",
+    "slug": "moroccan-caftan-pink",
+    "description": "This elegant pink bridal kaftan features a traditional Moroccan takchita design, perfect for a bride seeking a royal aesthetic. The set is crafted from soft pastel fabric and adorned with intricate gold embroidery and sequins across the bodice and sleeves. This complete bridal kaftan with veil ensemble includes a long-sleeve dress with a V-neckline, a decorative waist belt, and a matching hooded cape with embroidered trim. The hooded cape worn over the shayla hijab completes the wedding veil effect in Moroccan Islamic wedding tradition. The floor-length silhouette and dramatic overlay create a regal presence for any formal wedding celebration, including destination wedding events where the Moroccan wedding dress tradition has cultural resonance. Available in plus sizes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Pink Moroccan Bridal Kaftan</h2>A sleek formal updo will sit well under the shayla hijab provided with this kaftan. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+    "mainCategorySlugs": ["bridal-caftans", "pink"],
+    "suggestedAddOns": [
+      {"image": "/images/gold-and-pink-bridal-punjabi-jutti-slippers.webp", "targetSlug": "gold-and-pink-bridal-punjabi-jutti-slippers"},
+      {"image": "/images/nikkah-jewelry/pink-bridal-jewelry-set.webp", "targetSlug": "pink-bridal-jewelry-set"}
+    ],
+    "images": [
+      {
+        "url": "moroccan-caftan-pink.webp",
+        "alt": "Pink Moroccan bridal kaftan with gold embroidery — modest Islamic wedding dress for nikah.",
+        "figcaption": "A pink bridal kaftan featuring a pastel color and gold embroidery for a bride at a wedding ceremony.",
+        "amazonLink": "https://amzn.to/4t8hKuf"
+      }
+    ],
+    "og_image": "moroccan-caftan-pink.webp",
+    "title_tag": "Pink Moroccan Bridal Kaftan with Veil | Pastel Muslim Wedding Dress",
+    "og_title": "Pink Moroccan Bridal Kaftan with Veil | Pastel Muslim Wedding Dress",
+    "og_type": "website",
+    "FAQ_schema": "[{\"@type\":\"Question\",\"name\":\"Is this pink Moroccan bridal kaftan suitable for a destination wedding?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. The pink Moroccan bridal kaftan is an excellent choice for a destination wedding in Morocco, the UAE, France, or any location where Moroccan wedding dress aesthetics have cultural resonance. The pastel color and traditional takchita silhouette photograph beautifully in natural light at outdoor destination wedding venues. The hooded cape styled over the shayla hijab creates the bridal kaftan with veil effect that is central to Moroccan wedding dress tradition. For a destination wedding, the kaftan's single-piece flowing construction also packs more easily than a structured Indian bridal wear lehenga set.\"}},{\"@type\":\"Question\",\"name\":\"What does this pink Moroccan bridal kaftan set include?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This pink Moroccan bridal kaftan set includes the long-sleeve inner dress with V-neckline and gold embroidery and sequins, the matching hooded cape with embroidered trim, and a decorative waist belt. The hooded cape worn over a shayla hijab completes the bridal kaftan with veil look in accordance with Islamic wedding tradition. Gold nikkah jewelry from the collection \u2014 particularly gold sets \u2014 coordinates well with the gold embroidery detail on this kaftan. This pink vintage wedding style is a modern interpretation of the classic Moroccan takchita.\"}},{\"@type\":\"Question\",\"name\":\"What size range is this pink Moroccan bridal kaftan available in?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This pink Moroccan bridal kaftan is available across a wide range of sizes including plus sizes. The takchita silhouette \u2014 with its flowing outer cape and adjustable waist belt \u2014 is naturally flattering across body types and does not require the precise structural fitting that Indian bridal wear or Western gowns demand. The waist belt allows brides to define their silhouette regardless of size. Check the Amazon listing for the full size chart.\"}}]",
+    "meta_description": "Shop this pink Moroccan bridal kaftan with veil — pastel pink takchita, gold embroidery, hooded cape, shayla hijab, plus sizes. Muslim wedding dress on Amazon.",
+    "attributes": {"category": "Bridal Caftans", "color": "Pink", "material": "Embroidery", "style": "Traditional", "condition": "New", "availability": "InStock"},
+    "breadcrumbs": [
+      {"name": "Home", "item": "https://hijabibridal.github.io/"},
+      {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+      {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+      {"name": "Pink Moroccan Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/moroccan-caftan-pink"}
+    ]
+  },
+  {
+    "name": "Green Moroccan Bridal Caftan",
+    "slug": "moroccan-caftan-green",
+    "description": "Make a statement with this green bridal kaftan, designed with a bold color and traditional Moroccan wedding dress culture in mind. This Moroccan kaftan (takchita) showcases elaborate gold threadwork and ornate detailing that flows from the bodice down to the floor-length skirt. The wedding gown set comes with a long-sleeve V-neck dress, a matching hooded cape, and a waist belt to define your silhouette. The complete bridal kaftan with veil look is achieved by wearing the hooded cape over the shayla hijab — the Moroccan Islamic wedding tradition for completing the ensemble. Available in plus sizes, the flowing fabric and regal design offer an authentic and luxurious look for the modern bride at a wedding ceremony, reception, or destination wedding.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Green Moroccan Bridal Kaftan</h2>A sleek formal updo will sit well under the shayla hijab styled with this kaftan. The hooded cape placed over the hijab creates the bridal kaftan with veil effect central to Moroccan wedding dress tradition. Adorn yourself with our faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+    "mainCategorySlugs": ["bridal-caftans", "green"],
+    "suggestedAddOns": [
+      {"image": "/images/bridal-hijab/forest-green-chiffon-hijab.webp", "targetSlug": "forest-green-hijab"},
+      {"image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry-for-bride.webp", "targetSlug": "green-bridal-nikkah-jewelry-for-bride"}
+    ],
+    "images": [
+      {
+        "url": "moroccan-caftan-green.webp",
+        "alt": "Green Moroccan bridal kaftan with bold color and traditional gold embroidery — modest Muslim wedding dress.",
+        "figcaption": "A green bridal kaftan with a bold color and traditional embroidery for a bride at a wedding reception.",
+        "amazonLink": "https://amzn.to/4t8hKuf"
+      }
+    ],
+    "og_image": "moroccan-caftan-green.webp",
+    "title_tag": "Green Moroccan Bridal Kaftan with Veil | Bold Muslim Wedding Dress",
+    "og_title": "Green Moroccan Bridal Kaftan with Veil | Bold Muslim Wedding Dress",
+    "og_type": "website",
+    "FAQ_schema": "[{\"@type\":\"Question\",\"name\":\"What is the cultural significance of a green bridal kaftan in Islamic wedding tradition?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Green holds particular significance in Islamic wedding tradition \u2014 it is the color most associated with Paradise in Islamic scripture and is considered a blessed color for ceremonial occasions. A green bridal kaftan worn at a nikah ceremony carries this cultural meaning while making a bold visual statement. In Moroccan wedding dress tradition, deep jewel-tone greens are among the most celebrated colors for the takchita ensemble. This green Moroccan bridal kaftan follows that tradition with elaborate gold threadwork that contrasts richly against the bold green base \u2014 a vintage wedding style rooted in centuries of North African Islamic wedding culture.\"}},{\"@type\":\"Question\",\"name\":\"Is this green Moroccan bridal kaftan suitable for a destination wedding?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. The bold green color and traditional Moroccan wedding dress silhouette make this kaftan particularly well suited to a destination wedding in North Africa or the Middle East. The hooded cape worn over a shayla hijab creates the bridal kaftan with veil effect in Moroccan tradition. For brides planning a destination wedding in Morocco or a Moroccan-themed reception in the US, this kaftan creates an authentic cultural look that Indian bridal wear or Western gowns cannot replicate. It is also available in plus sizes through the Amazon listing.\"}},{\"@type\":\"Question\",\"name\":\"How is this green Moroccan bridal kaftan styled?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A sleek formal updo sits well under the shayla hijab worn with this kaftan. The hooded cape is placed over the hijab, with the embroidered trim framing the face \u2014 creating the bridal kaftan with veil effect central to the Moroccan wedding dress tradition. Gold nikkah jewelry from the collection coordinates directly with the gold threadwork on the kaftan. The waist belt is worn over the outer cape to define the silhouette. For a complete look, green bridal bangles or a gold bridal jewelry set from the nikkah jewelry collection are the recommended accessories.\"}}]",
+    "meta_description": "Shop this green Moroccan bridal kaftan with veil — bold jewel-tone takchita, gold threadwork, hooded cape, shayla hijab, plus sizes. Muslim wedding dress on Amazon.",
+    "attributes": {"category": "Bridal Caftans", "color": "Green", "material": "High-Quality Materials", "style": "Modern", "condition": "New", "availability": "InStock"},
+    "breadcrumbs": [
+      {"name": "Home", "item": "https://hijabibridal.github.io/"},
+      {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+      {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+      {"name": "Green Moroccan Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/moroccan-caftan-green"}
+    ]
+  },
     {
       "name": "Sage Green Muslim Wedding Dress",
       "slug": "light-green-muslim-wedding-dress",
