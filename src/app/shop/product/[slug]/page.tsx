@@ -164,7 +164,7 @@ export default async function ProductPage({ params }: PageProps) {
       />
 
       {/* Tally exit-intent popup — only on AI-visualized products */}
-      {description?.includes('AI-visualized') && (
+      {product?.description?.includes('AI-visualized') && (
         <>
           <script
             dangerouslySetInnerHTML={{
@@ -173,7 +173,7 @@ export default async function ProductPage({ params }: PageProps) {
                   "formId": "Medqak",
                   "popup": {
                     "emoji": { "text": "👋", "animation": "wave" },
-                    "open": { "trigger": "time", "ms":60000 },
+                    "open": { "trigger": "time", "ms":100000 },
                     "autoClose": 5000
                   }
                 };
