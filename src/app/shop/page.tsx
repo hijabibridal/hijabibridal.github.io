@@ -98,7 +98,7 @@ export default function ShopPage() {
           </p>
 
           {/* One-sentence PAA answer — full max-w-xl width, same size as before */}
-          <div className="max-w-xl">
+          <div>
             <h2 className="text-xl font-black uppercase tracking-[0.25em] text-pink-600 mb-2">
               What is a Muslim wedding attire called?
             </h2>
