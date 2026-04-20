@@ -86,23 +86,23 @@ export default function ShopPage() {
 
       {/* ── HEADER ──────────────────────────────────────────────────────────
           H1 + item count + ONE-SENTENCE PAA answer.
-          Same text-sm / leading-relaxed as before — not visually smaller.
+          Same text-2xl / leading-relaxed as before — not visually smaller.
           max-w-xl keeps it roughly half-width so the grid shows above fold. */}
       <header className="py-10 bg-gray-50 border-b border-gray-100">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter mb-1">
             The <span className="text-pink-600">Boutique</span>
           </h1>
-          <p className="text-gray-400 font-bold uppercase tracking-[0.4em] text-xs mb-5">
+          <p className="text-gray-400 font-bold uppercase tracking-[0.4em] text-2xl mb-5">
             {productData.products.length} Items Available
           </p>
 
           {/* One-sentence PAA answer — full max-w-xl width, same size as before */}
           <div className="max-w-xl">
-            <h2 className="text-xs font-black uppercase tracking-[0.25em] text-pink-600 mb-2">
+            <h2 className="text-2xl font-black uppercase tracking-[0.25em] text-pink-600 mb-2">
               What is a Muslim wedding attire called?
             </h2>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-500 text-2xl leading-relaxed">
               Muslim wedding attire is called by many names — the abaya (a floor-length modest robe
               worn as a bridal caftan or kaftan), the bridal lehenga (a flared embroidered skirt
               with dupatta), or the shalwar kameez / sharara (a tunic-and-trouser or divided-skirt
