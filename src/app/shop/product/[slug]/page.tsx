@@ -157,13 +157,31 @@ export default async function ProductPage({ params }: PageProps) {
         />
       )}
 
-      {/* ImageObject schema — all products.
-          representativeOfPage: true tells Google this is the canonical image
-          for this page, overriding its own image-picker heuristic */}
+      {/* ImageObject schema — all products */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
+
+      {/* Tally exit-intent popup — only on AI-visualized products */}
+      {product.description.includes('AI-visualized') && (
+        <>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.TallyConfig = {
+                  "formId": "Medqak",
+                  "popup": {
+                    "emoji": { "text": "👋", "animation": "wave" },
+                    "open": { "trigger": "exit" }
+                  }
+                };
+              `,
+            }}
+          />
+          <script async src="https://tally.so/widgets/embed.js" />
+        </>
+      )}
 
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
