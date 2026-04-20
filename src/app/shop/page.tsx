@@ -107,7 +107,7 @@ export default function ShopPage() {
               worn as a bridal caftan or kaftan), the bridal lehenga (a flared embroidered skirt
               with dupatta), or the shalwar kameez / sharara (a tunic-and-trouser or divided-skirt
               suit) — each a form of Islamic bridal wear that fulfills the modesty requirements of a
-              nikah ceremony while reflecting the bride's heritage.
+              nikah ceremony while reflecting the bride's heritage... READ MORE BELOW
             </p>
           </div>
         </div>
