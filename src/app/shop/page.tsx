@@ -99,10 +99,10 @@ export default function ShopPage() {
 
           {/* One-sentence PAA answer — full max-w-xl width, same size as before */}
           <div className="max-w-xl">
-            <h2 className="text-2xl font-black uppercase tracking-[0.25em] text-pink-600 mb-2">
+            <h2 className="text-xl font-black uppercase tracking-[0.25em] text-pink-600 mb-2">
               What is a Muslim wedding attire called?
             </h2>
-            <p className="text-gray-500 text-2xl leading-relaxed">
+            <p className="text-gray-500 text-xl leading-relaxed">
               Muslim wedding attire is called by many names — the abaya (a floor-length modest robe
               worn as a bridal caftan or kaftan), the bridal lehenga (a flared embroidered skirt
               with dupatta), or the shalwar kameez / sharara (a tunic-and-trouser or divided-skirt
