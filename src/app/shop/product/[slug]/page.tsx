@@ -173,7 +173,7 @@ export default async function ProductPage({ params }: PageProps) {
                   "formId": "Medqak",
                   "popup": {
                     "emoji": { "text": "👋", "animation": "wave" },
-                    "open": { "trigger": "time", "ms":50000 },
+                    "open": { "trigger": "scroll", "scrollPercent":30 },
                     "autoClose": 5000
                   }
                 };
