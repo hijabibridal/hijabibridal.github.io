@@ -164,7 +164,7 @@ export default async function ProductPage({ params }: PageProps) {
       />
 
       {/* Tally exit-intent popup — only on AI-visualized products */}
-      {product?.description?.includes('AI-visualized') && (
+      {description?.includes('AI-visualized') && (
         <>
           <script
             dangerouslySetInnerHTML={{
