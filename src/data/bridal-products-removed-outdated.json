@@ -1656,95 +1656,44 @@
       ]
     },
 
-I need the pink collection page in the same format as we did red. These should be in place, the remainder, please write it: "slug": "peach", "name": "Peach", "titleTag": "Peach Collection | Hijabi Bridal"
+I need the fuschia collection page in the same format as we did green. These should be in place, the remainder, please write it: "slug": "fuschia", "name": "Fuschia", "titleTag": "Fuschia Collection | Hijabi Bridal", ignoring the misspelling.
 
 
 
 FYI: 
 
-Peach is not a widely used color, but it is a romantic and more mature version of the more common pastel color, pink.
+Rani Pink/Dark pink/magenta/fucshia is the same color and a very popular Indian bridal color. The lehenga we have is a Muslim lehenga: https://hijabibridal.github.io/shop/product/muslim-lehenga-in-fuschia-readymade. This is a good mother of the bride look: https://hijabibridal.github.io/shop/product/fuschia-dress-for-muslim-wedding 
 
 
-
-The description should have the first paa like this and it should be answered in the first paragraph using some of the entities that are set to be used more than others and explaining why peach is a top color for nikkah and walima: "description": "What colors are appropriate for a Muslim wedding? \n
+The description should have the first paa like this and it should be answered in the first paragraph using some of the entities that are set to be used more than others and explaining why peach is a top color for nikkah and walima: "description": "Is rani pink a good bridal color?\n and should be short, two or three sentences.
 
 
 
 Thereafter:
 
-First heading: What colors are appropriate for a Muslim wedding? Second heading: What color do Muslim brides usually wear? Third heading: Who spent $500,000 on their wedding dress?
+First heading: What is the best silver Muslim bridal 2026 collection? Second heading: What does a Muslim bride wear to her wedding? Third: What are female Muslim dresses called? Fourth: What color do Muslim brides usually wear?  - 
 Any others you deem suitable. Then faq schema that contains the same questions as the headings and any others you deem suitable. 
 
 Full entity list. Please deal with any duplicates:
+What does a Muslim bride wear to her wedding?
+{
+  "tier1": ["Muslim Bride", "Wedding Attire"],
+  "tier2": ["Silver Jewelry", "Hijab", "Abaya", "Nikah Dress", "Islamic Wedding Gown"],
+  "tier3": ["Middle Eastern Fashion", "South Asian Culture", "Wedding Traditions in the USA", "Islamic Marriage Ceremonies", "Bridal Wear Trends", "Cultural Exchange in American Weddings"]
+}
 
-- "peach muslim bridal" → 4 times
-- "Peach Muslim Bridal" → 4 times
-- "Wedding Dress" → 4 times
-- "Expensive" → 12 times
-- "Designer" → 12 times
-- "Muslim Wedding Traditions" → 4 times
-- "Bridal Fashion" → 4 times
-- "Luxury" → 12 times
-- "Kim Kardashian" → 3 times
-- "Celebrity Weddings" → 3 times
-- "High-End Fashion" → 3 times
-- "Islamic Wedding Customs" → 2 times
-- "Bridal Couture" → 3 times
-- "Wedding Planning in the USA" → 1 times
+What are female Muslim dresses called?
+{
+  ""tier1"": [""Abaya"", ""Hijab""],
+  ""tier2"": [""Bridal"", ""Silver"", ""Islamic"", ""Traditional"", ""Cultural""],
+  ""tier3"": [""Wedding Dresses"", ""Modest Fashion"", ""Women's Clothing"", ""Muslim Wedding Traditions"", ""Middle Eastern Style"", ""Elegant Occasion Wear""]
+}"
 
-- "peach muslim bridal" → 4 times
-- "Muslim brides" → 4 times
-- "bridal attire" → 4 times
-- "color preferences" → 4 times
-- "cultural traditions" → 4 times
-- "Peach color" → 4 times
-- "wedding customs" → 4 times
-- "Islamic wedding dress" → 4 times
-- "South Asian influences" → 2 times
-- "Middle Eastern wedding trends" → 2 times
-- "US Muslim wedding culture" → 2 times
-- "interfaith weddings" → 3 times
-- "bridal fashion trends" → 2 times
-- "cultural exchange in the USA" → 1 times
-
-- "Women peach muslim bridal" → 4 times
-- "Peach Wedding Dress" → 4 times
-- "Muslim Bridal Fashion" → 4 times
-- "Women's Wedding Wear" → 4 times
-- "High-End Fashion" → 4 times
-- "Bridal Couture" → 4 times
-- "Luxury Wedding" → 4 times
-- "Islamic Wedding Traditions" → 4 times
-- "Celebrity Weddings" → 3 times
-- "US Fashion Trends" → 2 times
-- "Wedding Planning" → 3 times
-- "Bridal Shopping" → 3 times
-- "Cultural Exchange in Fashion" → 2 times
-
-- "Women peach muslim bridal" → 4 times
-- "Muslim brides" → 4 times
-- "Peach bridal wear" → 4 times
-- "Traditional attire" → 4 times
-- "Cultural wedding customs" → 4 times
-- "Wedding dress colors" → 4 times
-- "Islamic wedding traditions" → 4 times
-- "Bridal fashion trends" → 4 times
-- "Asian American weddings" → 2 times
-- "US Muslim wedding customs" → 2 times
-- "Interfaith marriages" → 3 times
-- "Bridal style inspiration" → 2 times
-- "Wedding planning resources" → 2 times
-- "Cultural exchange in weddings" → 2 times
-
- 
-
-
-
-
-
-
-
-
-
+What color do Muslim brides usually wear?
+"{
+  ""tier1"": [""Muslim brides"", ""silver wedding attire""],
+  ""tier2"": [""traditional Islamic wedding dress"", ""white wedding alternatives"", ""cultural wedding customs"", ""Middle Eastern bridal wear"", ""South Asian wedding traditions""],
+  ""tier3"": [""henna night"", ""nikah ceremony"", ""walima reception"", ""Islamic wedding decor"", ""bridal jewelry trends"", ""cultural exchange in US weddings""]
+}"
 
 
