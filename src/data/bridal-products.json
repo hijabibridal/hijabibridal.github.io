@@ -1305,6 +1305,70 @@
       ]
     },
     {
+      "name": "Peach Bridal Dupatta",
+      "slug": "peach-bridal-dupatta",
+      "description": "This dupatta features exquisite embroidery and a soft peach color, curated by Hijabi Bridal to embody pure bridal elegance. Meticulously crafted from premium net fabric with a wide border, this piece is designed to perfectly pair with any peach wedding dress or sharara. The intricate patterns and designs reflect traditional artistry. This dupatta offers a generous length and width that caters to the radiant beauty of the bride while ensuring modest coverage. Embrace your special day adorned in this stunning bridal peach dupatta and let your beauty shine.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Versatile Wearing Styles for the Peach Dupatta</h2>This piece offers endless styling inspiration for diverse bridal looks. You can explore various wearing styles, such as draping the delicate fabric over your shoulders for a regal effect or wearing it to the back over your hijab to showcase the detailed patterns and designs. Consider using two dupattas—pairing this peach piece with the dupatta from your bridal outfit—to enhance your overall appearance and create a timeless bridal silhouette.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/peach\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "peach"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/peach-sharara-suit.webp", 
+          "targetSlug": "peach-sharara-suit" 
+        },
+        { 
+          "image": "/images/silver-and-peach-wedding-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-peach-wedding-punjabi-jutti-slippers" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/peach-bride-dupatta.webp",
+          "alt": "Peach Bridal Dupatta from Amazon featuring delicate metallic designs for bridal styling.",
+          "amazonLink": "https://amzn.to/4cGG7bK",
+          "figcaption": "This Peach Bridal Dupatta offers the perfect styling inspiration for 2026 brides. The premium net fabric features metallic embroidery patterns and designs that add subtle texture to a sharara. Its generous length and width make it easy to manipulate into various wearing styles."
+        },
+        {
+          "url": "bridal-dupatta/peach-bride-dupatta-closeup.webp",
+          "alt": "Close up of peach bridal dupatta with detailed embroidery.",
+          "amazonLink": "https://amzn.to/4cGG7bK",
+          "figcaption": "The lightweight net fabric used in this dupatta is ideal for double-draping. Whether you are looking for specific wearing styles or general bridal inspiration, the soft peach tone and metallic patterns and designs ensure a regal finish for any Muslim wedding dress."
+        }
+      ],
+      "og_image": "bridal-dupatta/peach-bride-dupatta.webp",
+      "title_tag": "Peach Bridal Dupatta | Amazon Styling",
+      "og_title": "Peach Bridal Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Shop this Peach Bridal Dupatta on Amazon. Features traditional patterns and designs with ample length and width for diverse bridal wearing styles.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Peach",
+        "material": "Embroidery",
+        "style": "Traditional",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Peach Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/peach-bridal-dupatta"
+        }
+      ]
+    },
+    {
       "name": "Red Net Dupatta",
       "slug": "red-net-bridal-dupatta",
       "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
