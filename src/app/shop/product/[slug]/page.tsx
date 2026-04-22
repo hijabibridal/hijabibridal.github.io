@@ -166,21 +166,27 @@ export default async function ProductPage({ params }: PageProps) {
       {/* Tally exit-intent popup — only on AI-visualized products */}
       {product.description.includes('AI-visualized') && (
         <>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.TallyConfig = {
-                  "formId": "Medqak",
-                  "popup": {
-                    "emoji": { "text": "👋", "animation": "wave" },
-                    "open": { "trigger": "scroll", "scrollPercent":30 },
-                    "autoClose": 5000
-                  }
-                };
-              `,
-            }}
-          />
-          <script async src="https://tally.so/widgets/embed.js" />
+          <script>
+ 	  window.TallyConfig = {
+            "formId": "Medqak",
+  	    "popup": {
+    	      "emoji": {
+      		"text": "👋",
+      		"animation": "wave"
+    	      },
+   	      "open": {
+     	        "trigger": "time",
+     	        "ms": 30000
+    	      },
+    	      "layout": "modal",
+   	      "showOnce": true,
+   	      "doNotShowAfterSubmit": true,
+   	      "formEventsForwarding": true
+  	    }
+	};
+	</script>
+
+	<script async src="https://tally.so/widgets/embed.js"></script>
         </>
       )}
 
