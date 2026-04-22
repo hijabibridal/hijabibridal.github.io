@@ -1550,6 +1550,70 @@
       ]
     },
     {
+      "name": "Ivory Net Dupatta",
+      "slug": "ivory-net-bridal-dupatta",
+      "description": "This sheer net dupatta features stunning silver embroidery in a geometric shape with sequins and mirrors. The thickness of the border makes it an ideal addition to a silver or red Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Length and Width Styling Inspiration for White Dupattas</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "white"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-lehenga/white-muslim-lehenga.webp", 
+          "targetSlug": "white-lehenga" 
+        },
+        { 
+          "image": "/images/muslim-wedding-dress-stripe-offwhite-multi-2.webp", 
+          "targetSlug": "muslim-wedding-dress-stripe-offwhite-multi" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/ivory-net-bridal-dupatta.webp",
+          "alt": "Ivory  Net Dupatta with silver patterns and designs for bridal wearing styles.",
+          "amazonLink": "https://amzn.to/4mMGNAP",
+          "figcaption": "The Ivory Net Dupatta features a premium net fabric and standard bridal length and width. It offers excellent styling inspiration for traditional and modern bridal looks."
+        },
+        {
+          "url": "bridal-dupatta/ivory-net-bridal-dupatta-2.webp",
+          "alt": "Closeup of Ivory Net Dupatta featuring a thick border, ideal for layering with a hijabi lehenga.",
+          "amazonLink": "https://amzn.to/4mMGNAP",
+          "figcaption": "Crafted with detailed patterns and designs, this ivory dupatta offers the weight and drape required for elegant modest wearing styles."
+        }
+      ],
+      "og_image": "bridal-dupatta/ivory-net-bridal-dupatta.webp",
+      "title_tag": "Ivory Net Bridal Dupatta | Amazon Styling",
+      "og_title": "Ivory Net Bridal Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Shop our Ivory Net Dupatta on Amazon. Elegant patterns and designs on net fabric with perfect length and width for bridal wearing styles.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "White",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Ivory Net Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/ivory-net-bridal-dupatta"
+        }
+      ]
+    },
+    {
       "name": "Green Net Dupatta",
       "slug": "green-net-bridal-dupatta",
       "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a green or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Fabric Details for the Green Net Dupatta</h2>The thick border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",

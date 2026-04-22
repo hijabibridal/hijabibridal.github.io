@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 
-const TARGET_DIR = './public/images/muslim-lehenga';
+const TARGET_DIR = './public/images/bridal-dupatta';
 
 async function convertJpgToWebp() {
   const files = fs.readdirSync(TARGET_DIR);
