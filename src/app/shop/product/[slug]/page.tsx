@@ -1,3 +1,5 @@
+'use client';
+import { useState, useEffect } from 'react'; // Add useEffect here
 import productData from '@/data/bridal-products.json'
 import blogData from '@/data/blog-articles.json'
 import { notFound } from 'next/navigation'
@@ -8,6 +10,41 @@ import Link from 'next/link'
 import PatternSelector from '@/components/PatternSelector';
 
 type PageProps = { params: Promise<{ slug: string }> };
+
+const [selectedImage, setSelectedImage] = useState(product.images[0]);
+
+  // --- Tally Logic Start ---
+  useEffect(() => {
+    // Only trigger if description mentions AI-visualized
+    if (!product.description.includes('AI-visualized')) return;
+
+    // Set configuration
+    (window as any).TallyConfig = {
+      "formId": "Medqak",
+      "popup": {
+        "emoji": { "text": "👋", "animation": "wave" },
+        "open": { "trigger": "time", "ms": 30000 },
+        "layout": "modal",
+        "showOnce": true,
+        "doNotShowAfterSubmit": true,
+        "formEventsForwarding": true
+      }
+    };
+
+    // Load script
+    const script = document.createElement('script');
+    script.src = "https://tally.so/widgets/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up to prevent multiple popups or ghost scripts
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, [product.description]); 
+  // --- Tally Logic End ---
 
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
@@ -162,33 +199,6 @@ export default async function ProductPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
-
-      {/* Tally exit-intent popup — only on AI-visualized products */}
-      {product.description.includes('AI-visualized') && (
-        <>
-          <script>
- 	  window.TallyConfig = {
-            "formId": "Medqak",
-  	    "popup": {
-    	      "emoji": {
-      		"text": "👋",
-      		"animation": "wave"
-    	      },
-   	      "open": {
-     	        "trigger": "time",
-     	        "ms": 30000
-    	      },
-    	      "layout": "modal",
-   	      "showOnce": true,
-   	      "doNotShowAfterSubmit": true,
-   	      "formEventsForwarding": true
-  	    }
-	};
-	</script>
-
-	<script async src="https://tally.so/widgets/embed.js"></script>
-        </>
-      )}
 
       <div className="bg-white min-h-screen text-black">
         <div className="max-w-7xl mx-auto px-4 py-8">
