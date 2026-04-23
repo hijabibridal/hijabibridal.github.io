@@ -2,7 +2,7 @@
   "mainCategories": [
     {
   "slug": "blue",
-  "name": "Blue",
+  "name": "Blue Muslim Bridal Collection",
   "titleTag": "Blue Muslim Bridal Collection 2026 | Hijabi Bridal",
   "imageUrl": "muslim-lehenga/hijabi-lehenga-in-navy-blue.webp",
   "imageAlt": "Hijabi Bridal blue Muslim bridal collection featuring lehengas, shararas, wedding dresses, caftans, and hijabs for the modest bride.",
@@ -1477,6 +1477,69 @@
       ]
     },
     {
+      "name": "Red Net Mirror Dupatta",
+      "slug": "red-net-mirror-dupatta",
+      "description": "This sheer net dupatta features stunning mirror work. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "red"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp", 
+          "targetSlug": "red-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/red-net-dupatta.webp",
+          "alt": "Red Net Dupatta with gold patterns and designs, ideal for hijabi bridal wearing styles.",
+          "amazonLink": "https://amzn.to/4b4GqgK",
+          "figcaption": "This Red Net Dupatta features intricate patterns and designs on a sheer net fabric. The generous length and width offer endless styling inspiration for the modern bride."
+        },
+        {
+          "url": "bridal-dupatta/red-net-dupatta-2.webp",
+          "alt": "Red Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+          "amazonLink": "https://amzn.to/4b4GqgK",
+          "figcaption": "The high-quality fabric of this red dupatta ensures it stays secure during various bridal wearing styles, making it a perfect addition to your wedding ensemble."
+        }
+      ],
+      "og_image": "bridal-dupatta/red-net-dupatta.webp",
+      "title_tag": "Red Net Bridal Dupatta | Amazon Styling",
+      "og_title": "Red Net Bridal Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Shop our Red Net Dupatta on Amazon. Features premium net fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Red",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Red Net Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/red-net-bridal-dupatta"
+        }
+      ]
+    },{
       "name": "Red Net Dupatta",
       "slug": "red-net-bridal-dupatta",
       "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
@@ -2539,63 +2602,49 @@
       ]
     },
     {
-      "name": "Navy Blue Hijab",
-      "slug": "navy-blue-crepe-bridal-hijab",
-      "description": "This Navy Blue Bridal Hijab features a stunning deep tone that perfectly complements your Muslim wedding dress. Crafted from premium material, a high-quality lightweight crepe, this piece is an essential accessory for Muslim women who prioritize both modest fashion and current fashion trends. The rich color of this hijab will enhance your wedding look, whether a traditional nikkah ceremony or modern receptions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: NAVY BLUE</h2>When selecting your bridal hijab, exploring different styles is key to achieving the perfect look. This shine of this crepe hijab coordinates beautifully with matching bridal dupattas. You can elegantly drape nikkah jewelry over it. Whether you are following a specific wedding theme or looking for inspiration from the latest fashion trends, the deep navy bridal hijab offers a sophisticated alternative to everyday chiffon hijabs, making it a memorable choice for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/muslim-lehenga/hijabi-lehenga-in-navy-blue.webp", 
-          "targetSlug": "hijabi-lehenga-in-navy-blue" 
-        },
-        { 
-          "image": "/images/dubai-caftan-blue.webp", 
-          "targetSlug": "dubai-caftan-blue" 
-        }
-      ],
-      "images": [
-        {
-          "url": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
-          "alt": "Navy Blue Hijab - Blue Modern",
-          "figcaption": "The Navy Blue Hijab is a staple in bridal modest fashion, offering high-quality lightweight crepe material that support various elegant styles.",
-          "amazonLink": "https://amzn.to/4k2xRVj"
-        }
-      ],
-      "og_image": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
-      "title_tag": "Navy Blue Bridal Hijab | Premium Material & Trending Color for 2026",
-      "og_title": "Navy Blue Bridal Hijab | Premium Lightweight Crepe",
-      "og_type": "website",
-      "meta_description": "Discover the Navy Blue Bridal Hijab. Featuring high-quality lightweight crepe material for versatile styles, it's designed to match 2026 fashion trends.",
-      "attributes": {
-        "category": "Bridal Hijab",
-        "color": "Blue",
-        "material": "Crepe",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Hijab",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"
-        },
-        {
-          "name": "Navy Blue Hijab",
-          "item": "https://hijabibridal.github.io/shop/product/navy-blue-crepe-bridal-hijab"
-        }
-      ]
+  "name": "Navy Blue Hijab",
+  "slug": "navy-blue-crepe-bridal-hijab",
+  "description": "This navy blue bridal hijab features a stunning deep tone that perfectly complements your Muslim wedding dress. Crafted from premium material, a high-quality lightweight crepe, this piece is an essential accessory for Muslim women who prioritize both modest fashion and current fashion trends. The rich dark blue color of this hijab will enhance your wedding attire, whether a traditional nikkah ceremony or modern reception, making it a natural partner for any dark blue Muslim bridal look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: NAVY BLUE</h2>When selecting your bridal hijab, exploring different styles is key to achieving the perfect look. The shine of this crepe hijab coordinates beautifully with matching bridal dupattas. You can elegantly drape nikkah jewelry over it. Whether you are following a specific wedding theme or looking for inspiration from the latest fashion trends, the deep navy bridal hijab offers a sophisticated alternative to everyday chiffon hijabs, making it a memorable choice for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/muslim-lehenga/hijabi-lehenga-in-navy-blue.webp",
+      "targetSlug": "hijabi-lehenga-in-navy-blue"
     },
+    {
+      "image": "/images/dubai-caftan-blue.webp",
+      "targetSlug": "dubai-caftan-blue"
+    }
+  ],
+  "images": [
+    {
+      "url": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
+      "alt": "Navy Blue Hijab - Blue Modern",
+      "figcaption": "For a Muslim bride, the dark blue Muslim bridal color means a confident, individual choice made purely for the beauty of the color. This navy blue crepe hijab completes a dark blue Muslim bridal look with exactly that same quiet confidence.",
+      "amazonLink": "https://amzn.to/4k2xRVj"
+    }
+  ],
+  "og_image": "bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
+  "title_tag": "Navy Blue Bridal Hijab | Premium Material & Trending Color for 2026",
+  "og_title": "Navy Blue Bridal Hijab | Premium Lightweight Crepe",
+  "og_type": "website",
+  "meta_description": "Discover the Navy Blue Bridal Hijab. Featuring high-quality lightweight crepe material for versatile styles, it's designed to match 2026 fashion trends.",
+  "attributes": {
+    "category": "Bridal Hijab",
+    "color": "Blue",
+    "material": "Crepe",
+    "style": "Modern",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What does a dark blue wedding dress mean for a Muslim bride?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A bride who chooses navy or dark blue is doing so entirely for aesthetic reasons. Dark blue — particularly navy — is an unexpected and visually striking choice in the context of Muslim bridal fashion, where red, green, and ivory are far more common. That unexpectedness is what makes it such a compelling fashion statement for a bride who wants to stand apart. For a Muslim bride, a dark blue wedding dress carries no symbolic meaning. Islamic wedding customs do not assign significance to bridal colors.\"}}, {\"@type\": \"Question\", \"name\": \"What color hijab goes with a dark blue Muslim bridal dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A matching navy blue hijab creates a monochromatic bridal look that is clean and intentional — this navy blue crepe hijab is designed specifically for that purpose. For brides who prefer contrast, a silver or ivory hijab paired with a dark blue wedding dress creates an elegant tonal balance that photographs beautifully. Gold-toned accessories and nikkah jewelry in either direction add warmth and keep the look within Muslim bridal tradition.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Bridal Hijab", "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"},
+    {"name": "Navy Blue Hijab", "item": "https://hijabibridal.github.io/shop/product/navy-blue-crepe-bridal-hijab"}
+  ]
+},
     {
       "name": "Sage Green Bridal Hijab",
       "slug": "sage-green-crepe-bridal-hijab",
@@ -5902,75 +5951,61 @@
       ]
     },
     {
-      "name": "Muslim Lehenga in Navy Blue",
-      "slug": "hijabi-lehenga-in-navy-blue",
-      "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the Hijabi Lehenga in Navy Blue on Amazon: https://amzn.to/4qEXkYD Two can give a tailor enough fabric to create the look. Or create it yourself with a longer choli! Free sewing pattern below.\nMuslim  lehenga features exquisite embroidery and a customizable design that defines elegance for modern Muslim brides. Crafted for a nikkah celebration, this stunning Navy Blue Muslim Wedding Lehenga includes an unstitched one-meter length blouse suitable for a width up to 44 inches and a semi-stitched skirt tailored for up to a 42-inch waist. Every detail ensures that you look radiant on your special day, blending tradition with contemporary navy blue color. This Muslim lehenga serves as a perfect canvas for accessorizing, allowing you to express your unique personality while maintaining modest fashion principles.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Navy Blue  </h2>This hijabi lehenga coordinates with styling for bridal looks, making it ideal for your signature hijab styling and a second bridal dupatta. The versatility of this ensemble allows you to create a unique bridal look that reflects your personality, complemented by timeless nikkah jewelry. The flow of the lehenga enhances its royal appeal, ensuring you stand out during your memorable wedding celebration.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
-      "mainCategorySlugs": [
-        "muslim-lehenga",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/navy-blue-crepe-bridal-hijab.webp", 
-          "targetSlug": "navy-blue-crepe-bridal-hijab"  
-        },
-        { 
-          "image": "/images/bridal-dupatta/blue-velvet-dupatta.webp", 
-          "targetSlug": "blue-velvet-bridal-dupatta" 
-        }
-      ],
-      "images": [
-        {
-          "url": "muslim-lehenga/hijabi-lehenga-in-navy-blue.webp",
-          "alt": "Navy blue Muslim bridal lehenga — modest South Asian wedding dress with dupatta",
-          "figcaption": "Use this AI inspiration to achieve a stunning Navy Blue Muslim Lehenga for your wedding occasion, blending modest fashion with your unique personal style.",
-          "amazonLink": "https://amzn.to/4qEXkYD"
-        },
-        {
-          "url": "muslim-lehenga/navy-blue-muslim-lehenga-actual.webp",
-          "alt": "Customize this semi stitched Navy blue Muslim bridal lehenga for a modest South Asian wedding dress with dupatta.",
-          "figcaption": "Customize this to achieve a stunning Navy Blue Muslim Lehenga for your wedding, blending modest, modern fashion with your unique personal style.",
-          "amazonLink": "https://amzn.to/4qEXkYD"
-        },
-        {
-          "url": "muslim-lehenga/navy-blue-muslim-lehenga-closeup.webp",
-          "alt": "Closeup view: customize this semi stitched Navy blue Muslim bridal lehenga for a modest South Asian wedding dress with dupatta.",
-          "figcaption": "Customize this Navy Blue Lehenga to achieve stunning modern Muslim style for your wedding occasion.",
-          "amazonLink": "https://amzn.to/4qEXkYD"
-        }
-      ],
-      "og_image": "muslim-lehenga/hijabi-lehenga-in-navy-blue.webp",
-      "title_tag": "Navy Blue Muslim Lehenga | Modest Fashion Options",
-      "og_title": "Navy Blue Muslim Lehenga | Modest Fashion Options",
-      "og_type": "website",
-      "meta_description": "Explore the Navy Blue Muslim Lehenga for your bridal special occasion. Discover elegant modest fashion fashion options that balance tradition and style.",
-      "attributes": {
-        "category": "Muslim Lehenga",
-        "color": "Blue",
-        "material": "Embroidery",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Muslim Lehenga",
-          "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"
-        },
-        {
-          "name": "Muslim Lehenga in Navy Blue",
-          "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-navy-blue"
-        }
-      ]
+  "name": "Muslim Lehenga in Navy Blue",
+  "slug": "hijabi-lehenga-in-navy-blue",
+  "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order the Hijabi Lehenga in Navy Blue on Amazon: https://amzn.to/4qEXkYD Two can give a tailor enough fabric to create the look. Or create it yourself with a longer choli! Free sewing pattern below.\nThis dark blue Muslim bridal lehenga features exquisite embroidery and a customizable design that defines elegance for modern Muslim brides. Crafted for a nikkah celebration, this stunning navy blue Muslim wedding lehenga includes an unstitched one-meter length blouse suitable for a width up to 44 inches and a semi-stitched skirt tailored for up to a 42-inch waist. Every detail ensures that you look radiant on your special day, blending Islamic wedding traditions with contemporary navy blue color. This Muslim lehenga serves as a perfect canvas for accessorizing, allowing you to express your unique personality while maintaining modest fashion principles.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Lehenga in Navy Blue</h2>This hijabi lehenga coordinates with styling for bridal looks, making it ideal for your signature hijab styling and a second bridal dupatta. The versatility of this ensemble allows you to create a unique bridal look that reflects your personality, complemented by timeless nikkah jewelry. The flow of the lehenga enhances its royal appeal, ensuring you stand out during your memorable wedding celebration.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
+  "mainCategorySlugs": ["muslim-lehenga", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-hijab/navy-blue-crepe-bridal-hijab.webp",
+      "targetSlug": "navy-blue-crepe-bridal-hijab"
     },
+    {
+      "image": "/images/bridal-dupatta/blue-velvet-dupatta.webp",
+      "targetSlug": "blue-velvet-bridal-dupatta"
+    }
+  ],
+  "images": [
+    {
+      "url": "muslim-lehenga/hijabi-lehenga-in-navy-blue.webp",
+      "alt": "Navy blue Muslim bridal lehenga — modest South Asian wedding dress with dupatta",
+      "figcaption": "A navy blue wedding dress means something different in every tradition — but in the American Muslim community, it means a bride with exceptional taste. A Muslim bride chooses it because it is a commanding, sophisticated color that photographs with extraordinary depth.",
+      "amazonLink": "https://amzn.to/4qEXkYD"
+    },
+    {
+      "url": "muslim-lehenga/navy-blue-muslim-lehenga-actual.webp",
+      "alt": "Customize this semi stitched Navy blue Muslim bridal lehenga for a modest South Asian wedding dress with dupatta.",
+      "figcaption": "Customize this to achieve a stunning navy blue Muslim lehenga for your wedding, blending modest, modern fashion with your unique personal style.",
+      "amazonLink": "https://amzn.to/4qEXkYD"
+    },
+    {
+      "url": "muslim-lehenga/navy-blue-muslim-lehenga-closeup.webp",
+      "alt": "Closeup view: customize this semi stitched Navy blue Muslim bridal lehenga for a modest South Asian wedding dress with dupatta.",
+      "figcaption": "Customize this navy blue lehenga to achieve stunning modern Muslim bridal style for your wedding occasion.",
+      "amazonLink": "https://amzn.to/4qEXkYD"
+    }
+  ],
+  "og_image": "muslim-lehenga/hijabi-lehenga-in-navy-blue.webp",
+  "title_tag": "Navy Blue Muslim Lehenga | Modest Fashion Options",
+  "og_title": "Navy Blue Muslim Lehenga | Modest Fashion Options",
+  "og_type": "website",
+  "meta_description": "Explore the Navy Blue Muslim Lehenga for your bridal special occasion. Discover elegant modest fashion options that balance Islamic wedding traditions and style.",
+  "attributes": {
+    "category": "Muslim Lehenga",
+    "color": "Blue",
+    "material": "Embroidery",
+    "style": "Modern",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What does a navy blue wedding dress mean for a Muslim bride?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A bride who chooses a navy blue lehenga like this one is making a fashion statement: navy is a rare, visually commanding choice that stands apart from the reds and greens more commonly seen at Muslim weddings, and that unexpectedness is precisely its appeal.For a Muslim bride, a navy blue wedding dress has no prescribed symbolism. Islamic wedding customs do not attach meaning to bridal colors, and there is no cultural significance assigned to navy blue in Muslim bridal tradition. \"}}, {\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Muslim brides wear a wide range of colors depending on their cultural customs and personal preference. Red and maroon are the most traditional choices in Pakistani bridal wear; Indian Muslim weddings frequently feature green, peach, and mustard. Middle Eastern wedding customs favor ivory, champagne, and gold. In the US Muslim community, bridal fashion has expanded to include navy, blue, pink, and ivory as fully accepted wedding attire colors. Islamic wedding traditions require only that the dress be modest — the color is entirely the bride's choice.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Muslim Lehenga", "item": "https://hijabibridal.github.io/shop/category/muslim-lehenga"},
+    {"name": "Muslim Lehenga in Navy Blue", "item": "https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-navy-blue"}
+  ]
+},
     {
       "name": "Muslim Lehenga in Fuschia: Readymade",
       "slug": "muslim-lehenga-in-fuschia-readymade",
@@ -7104,69 +7139,55 @@
       ]
     },
     {
-      "name": "Blue Dubai Bridal Caftan",
-      "slug": "dubai-caftan-blue",
-      "description": "This exquisite blue Dubai bridal caftan is crafted from georgette and butter crepe, featuring a bold color accented with sequins and heavy gold embroidery. Designed for a regal presence, the gown flows beautifully and is available in sizes xs to 5xl to ensure a perfect fit for any bride. This traditional style is ideal for a wedding ceremony or a grand reception, offering a blend of luxurious fabric and cultural heritage. The intricate gold detailing provides a star-quality sparkle for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Dubai Bridal Caftan</h2>Flowing curls suit this look under your hijab. Pair it with one of our hijabs or dupattas in our Blue Collection and faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
-      "mainCategorySlugs": [
-        "bridal-caftans",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp", 
-          "targetSlug": "gold-bridal-jewellery-set" 
-        },
-        { 
-          "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp", 
-          "targetSlug": "gold-embroidered-bridal-dupatta" 
-        }
-      ],
-      "images": [
-        {
-          "url": "dubai-caftan-blue-closeup.webp",
-          "alt": "Closeup of blue Dubai bridal caftan with gold embroidery — jewel-tone modest Muslim nikah dress",
-          "figcaption": "Closeup of blue bridal caftan in a bold color with gold embroidery for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4lA8sEC"
-        },
-        {
-          "url": "dubai-caftan-blue.webp",
-          "alt": "Blue Dubai bridal caftan with gold embroidery — jewel-tone modest Muslim nikah dress",
-          "figcaption": "A blue bridal caftan in a bold color with gold embroidery for a bride at a wedding ceremony.",
-          "amazonLink": "https://amzn.to/4lA8sEC"
-        }
-      ],
-      "og_image": "dubai-caftan-blue.webp",
-      "title_tag": "Blue Bridal Caftan | Bold Wedding Style for a Bride",
-      "og_title": "Blue Bridal Caftan | Bold Wedding Style for a Bride",
-      "og_type": "website",
-      "meta_description": "Shop this blue bridal caftan for a bold wedding look. This traditional design features exquisite embroidery and fabric for a stunning wedding ceremony.",
-      "attributes": {
-        "category": "Bridal Caftans",
-        "color": "Blue",
-        "material": "Georgette",
-        "style": "Traditional",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Caftans",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"
-        },
-        {
-          "name": "Blue Dubai Bridal Caftan",
-          "item": "https://hijabibridal.github.io/shop/product/dubai-caftan-blue"
-        }
-      ]
+  "name": "Blue Dubai Bridal Caftan",
+  "slug": "dubai-caftan-blue",
+  "description": "This exquisite blue Dubai bridal caftan is crafted from georgette and butter crepe, featuring a bold dark blue color accented with sequins and heavy gold embroidery. Designed for a regal presence, the gown flows beautifully and is available in sizes xs to 5xl to ensure a perfect fit for any bride. This dark blue Muslim bridal style is ideal for a wedding ceremony or a grand reception, offering a blend of luxurious fabric and cultural heritage rooted in Middle Eastern wedding customs. The intricate gold detailing provides a star-quality sparkle for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Dubai Bridal Caftan</h2>Flowing curls suit this look under your hijab. Pair it with one of our hijabs or dupattas in our Blue Collection and faux gold <a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">nikkah jewelry collection</a>.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-caftans\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Caftans</a>",
+  "mainCategorySlugs": ["bridal-caftans", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/nikkah-jewelry/gold-bridal-jewellery-set-2.webp",
+      "targetSlug": "gold-bridal-jewellery-set"
     },
+    {
+      "image": "/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp",
+      "targetSlug": "gold-embroidered-bridal-dupatta"
+    }
+  ],
+  "images": [
+    {
+      "url": "dubai-caftan-blue-closeup.webp",
+      "alt": "Closeup of blue Dubai bridal caftan with gold embroidery — jewel-tone modest Muslim nikah dress",
+      "figcaption": "Closeup of this dark blue Muslim bridal caftan with gold embroidery — a bold wedding attire choice for a bride seeking a fashion statement at her nikah ceremony or reception.",
+      "amazonLink": "https://amzn.to/4lA8sEC"
+    },
+    {
+      "url": "dubai-caftan-blue.webp",
+      "alt": "Blue Dubai bridal caftan with gold embroidery — jewel-tone modest Muslim nikah dress",
+      "figcaption": "A Muslim bride who wears dark blue is simply choosing one of the most visually striking colors available to her. This blue Dubai bridal caftan, with its deep jewel tone and gold embroidery, is precisely the kind of unexpected, stunning choice that dark blue makes possible.",
+      "amazonLink": "https://amzn.to/4lA8sEC"
+    }
+  ],
+  "og_image": "dubai-caftan-blue.webp",
+  "title_tag": "Blue Bridal Caftan | Bold Wedding Style for a Bride",
+  "og_title": "Blue Bridal Caftan | Bold Wedding Style for a Bride",
+  "og_type": "website",
+  "meta_description": "Shop this blue bridal caftan for a bold wedding look. This traditional design features exquisite embroidery and fabric for a stunning wedding ceremony.",
+  "attributes": {
+    "category": "Bridal Caftans",
+    "color": "Blue",
+    "material": "Georgette",
+    "style": "Traditional",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What does a dark blue wedding dress mean for a Muslim bride?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"In the American Muslim community, dark blue Muslim bridal fashion has grown in popularity precisely because it is so striking and so rare. For a Muslim bride, a dark blue wedding dress means nothing beyond the bride's own aesthetic confidence. Islamic wedding customs place no symbolic weight on bridal colors, so dark blue — including the deep jewel tone of this caftan — is simply a beautiful, unexpected choice. It is not a statement about tradition, religion, or family values; it is a fashion statement, full stop.\"}}, {\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Muslim brides wear whatever color reflects their cultural customs and personal style, as Islamic wedding traditions do not prescribe a bridal color. Red dominates Pakistani bridal wear; green, mustard, and peach are common in Indian Muslim weddings; ivory and gold are favored in Middle Eastern wedding customs. In the US Muslim community, cultural exchange across all these traditions has produced a full spectrum of accepted bridal colors — including dark blue, navy, pink, and champagne. A bride choosing this blue Dubai bridal caftan is fully within that tradition of personal expression.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Bridal Caftans", "item": "https://hijabibridal.github.io/shop/category/bridal-caftans"},
+    {"name": "Blue Dubai Bridal Caftan", "item": "https://hijabibridal.github.io/shop/product/dubai-caftan-blue"}
+  ]
+},
     {
     "name": "White Muslim Bridal Kaftan",
     "slug": "white-muslim-bridal-caftan",
@@ -11074,69 +11095,55 @@
       ]
     },
     {
-      "name": "Blue Ombre Chinon Silk Sharara",
-      "slug": "sharara-blue-ombre",
-      "description": "This blue ombre sharara clothing suit is designed from pure chinon silk fabric, ensuring a lightweight and breathable experience for the bride. The gown features eye-catching silver moti embroidery that adds a touch of sparkle to the flowing silhouette. Available in multiple sizes, this sharara (pants) set is tailored to suit various body types, promoting body positivity and confidence. The unique ombre transition offers a modern style that effectively addresses fashion concerns for special wedding occasions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Ombre Sharara</h2>This sharara suit coordinates with styling for bridal looks. Complement the blue ombre tones with a silver-toned hijab and matching accessories. The lightweight silk fabric allows for effortless movement, making it ideal to pair with a second blue dupatta draped gracefully to accentuate the silver moti work and the flared sharara silhouette.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
-      "mainCategorySlugs": [
-        "sharara",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
-          "targetSlug": "silver-hijab"  
-        },
-        { 
-          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
-          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
-        }
-      ],
-      "images": [
-        {
-          "url": "sharara-blue-ombre-closeup.webp",
-          "alt": "Blue ombre chinon silk sharara — modest Muslim bridal outfit in gradient silk for nikah",
-          "figcaption": "This blue ombre sharara style draws the eye down to the knees. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
-          "amazonLink": "https://amzn.to/4lzYkM9"
-        },
-        {
-          "url": "sharara-blue-ombre.webp",
-          "alt": "Blue ombre chinon silk sharara — modest Muslim bridal outfit in gradient silk for nikah",
-          "figcaption": "Blue ombre chinon silk sharara with a stunning gradient effect — a modern modest Muslim bridal outfit in luxury silk for nikah ceremonies.",
-          "amazonLink": "https://amzn.to/4lzYkM9"
-        }
-      ],
-      "og_image": "sharara-blue-ombre.webp",
-      "title_tag": "Blue Ombre Sharara | Body Positivity and Fabric Style",
-      "og_title": "Blue Ombre Sharara | Body Positivity and Fabric Style",
-      "og_type": "website",
-      "meta_description": "Shop our blue ombre sharara clothing suit. Designed with soft fabric for a beautiful silhouette, this style is perfect for chubby girls and all body types.",
-      "attributes": {
-        "category": "Sharara",
-        "color": "Blue",
-        "material": "Silk",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Sharara",
-          "item": "https://hijabibridal.github.io/shop/category/sharara"
-        },
-        {
-          "name": "Blue Ombre Chinon Silk Sharara",
-          "item": "https://hijabibridal.github.io/shop/product/sharara-blue-ombre"
-        }
-      ]
+  "name": "Blue Ombre Chinon Silk Sharara",
+  "slug": "sharara-blue-ombre",
+  "description": "This blue ombre sharara clothing suit is designed from pure chinon silk fabric, ensuring a lightweight and breathable experience for the bride. The gown features eye-catching silver moti embroidery that adds a touch of sparkle to the flowing silhouette. Available in multiple sizes, this dark blue Muslim bridal sharara set is tailored to suit various body types, promoting body positivity and confidence. The unique ombre transition offers a modern fashion statement that effectively addresses bridal fashion concerns for special wedding occasions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Blue Ombre Sharara</h2>This sharara suit coordinates with styling for bridal looks. Complement the blue ombre tones with a silver-toned hijab and matching accessories. The lightweight silk fabric allows for effortless movement, making it ideal to pair with a second blue dupatta draped gracefully to accentuate the silver moti work and the flared sharara silhouette.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+  "mainCategorySlugs": ["sharara", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp",
+      "targetSlug": "silver-hijab"
     },
+    {
+      "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp",
+      "targetSlug": "silver-bridal-jewelry-for-nikkah"
+    }
+  ],
+  "images": [
+    {
+      "url": "sharara-blue-ombre-closeup.webp",
+      "alt": "Blue ombre chinon silk sharara — modest Muslim bridal outfit in gradient silk for nikah",
+      "figcaption": "For Muslim brides, a dark blue wedding dress carries no prescribed symbolism — it is simply a stunning, unexpected choice. This blue ombre sharara, with its gradient from deep navy at the hem to a softer tone at the waist, is the kind of dark blue bridal look that makes an impression for its sheer visual impact alone.",
+      "amazonLink": "https://amzn.to/4lzYkM9"
+    },
+    {
+      "url": "sharara-blue-ombre.webp",
+      "alt": "Blue ombre chinon silk sharara — modest Muslim bridal outfit in gradient silk for nikah",
+      "figcaption": "Blue ombre chinon silk sharara with a stunning gradient effect — a modern, modest dark blue Muslim bridal outfit in luxury silk for nikah ceremonies.",
+      "amazonLink": "https://amzn.to/4lzYkM9"
+    }
+  ],
+  "og_image": "sharara-blue-ombre.webp",
+  "title_tag": "Blue Ombre Sharara | Body Positivity and Fabric Style",
+  "og_title": "Blue Ombre Sharara | Body Positivity and Fabric Style",
+  "og_type": "website",
+  "meta_description": "Shop our blue ombre sharara clothing suit. Designed with soft fabric for a beautiful silhouette, this style is perfect for chubby girls and all body types.",
+  "attributes": {
+    "category": "Sharara",
+    "color": "Blue",
+    "material": "Silk",
+    "style": "Modern",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What does a dark blue wedding dress mean for a Muslim bride?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A Muslim bride who chooses dark blue, navy, or a deep ombre blue sharara like this one is making a purely aesthetic decision: it is an unexpected, visually striking color that stands apart from the more common reds and greens of South Asian Muslim bridal fashion. The cultural significance lies in the bride's confidence and individuality, not in any prescribed meaning attached to the color. For Muslim brides, a dark blue wedding dress carries no religious or cultural symbolism — Islamic wedding customs do not assign meaning to bridal colors.\"}}, {\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Muslim brides wear a wide range of colors depending on their cultural background. Red and maroon are the most traditional choices in Pakistani bridal wear and across much of South Asian Muslim bridal fashion. Indian Muslim weddings frequently feature green, peach, and mustard alongside red. Middle Eastern wedding customs lean toward ivory, gold, and champagne. In the US Muslim community, cultural exchange across these traditions has made navy, blue, pink, and ivory equally accepted as bridal colors. Islamic wedding traditions do not prescribe a specific color — only that the wedding attire be modest and appropriate for the occasion.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Sharara", "item": "https://hijabibridal.github.io/shop/category/sharara"},
+    {"name": "Blue Ombre Chinon Silk Sharara", "item": "https://hijabibridal.github.io/shop/product/sharara-blue-ombre"}
+  ]
+ },
     {
       "name": "Lilac Ombre Silk Sharara",
       "slug": "sharara-lilac-ombre",
