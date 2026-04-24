@@ -288,7 +288,8 @@ export default async function ProductPage({ params }: PageProps) {
               )}
 
               {/* --- SEWING PATTERN SECTION --- */}
-              {product.mainCategorySlugs?.includes('muslim-lehenga') && (
+              {product.mainCategorySlugs?.includes('muslim-lehenga') &&
+               !product.name.toLowerCase().includes('readymade') && (
                 <PatternSelector />
               )}
 
