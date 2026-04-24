@@ -2821,63 +2821,49 @@
       ]
     },
     {
-      "name": "Light Blue Muslim Bridal Hijab",
-      "slug": "light-blue-crepe-bridal-hijab",
-      "description": "This Light Blue Bridal Hijab is designed to complement your Muslim wedding dress with a touch of serenity. Featuring high-quality crepe materials, this accessory is ideal for Muslim women who love timeless modest fashion trends. Its airy colors are perfectly suited for coastal or daytime wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: LIGHT BLUE</h2>Exploring various bridal styles is simple when you have versatile materials. This crepe hijab drapes effortlessly, providing a stable base for silver nikkah jewelry and heavily embroidered dupattas. If you are seeking inspiration from modern wedding themes or minimalist fashion trends, this light blue bridal hijab is a durable and stylish upgrade over basic chiffon for all formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
-      "mainCategorySlugs": [
-        "bridal-hijab",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/nikkah-jewelry/blue-bride---jewelry-set.webp", 
-          "targetSlug": "blue-bride---jewelry-set" 
-        },
-        { 
-          "image": "/images/sharara-light-blue-silver.webp", 
-          "targetSlug": "sharara-light-blue-silver" 
-        }
-      ],
-      "images": [
-        {
-          "url": "bridal-hijab/light-blue-crepe-bridal-hijab.webp",
-          "alt": "Light Blue Bridal Hijab - Blue Elegant",
-          "figcaption": "The Light Blue Bridal Hijab combines soft colors with the high-quality texture of crepe material.",
-          "amazonLink": "https://amzn.to/4k2xRVj"
-        }
-      ],
-      "og_image": "bridal-hijab/light-blue-crepe-bridal-hijab.webp",
-      "title_tag": "Light Blue Bridal Hijab | Serene Amazon Styling 2026",
-      "og_title": "Light Blue Bridal Hijab | Timeless Crepe Fashion",
-      "og_type": "website",
-      "meta_description": "Our Light Blue Bridal Hijab offers a serene touch for your special day. Made with premium crepe material for a flawless modest bridal look.",
-      "attributes": {
-        "category": "Bridal Hijab",
-        "color": "Blue",
-        "material": "Crepe",
-        "style": "Elegant",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Hijab",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"
-        },
-        {
-          "name": "Light Blue Muslim Bridal Hijab",
-          "item": "https://hijabibridal.github.io/shop/product/light-blue-crepe-bridal-hijab"
-        }
-      ]
+  "name": "Light Blue Muslim Bridal Hijab",
+  "slug": "light-blue-crepe-bridal-hijab",
+  "description": "This light blue bridal hijab is designed to complement your Muslim wedding dress with a touch of serenity. Featuring high-quality crepe materials, this accessory is ideal for Muslim women who love timeless modest fashion trends consistent with Islamic traditions. Its airy wedding colors are perfectly suited for coastal or daytime wedding themes rooted in American Muslim culture.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: LIGHT BLUE</h2>Exploring various bridal styles is simple when you have versatile materials. This crepe hijab drapes effortlessly, providing a stable base for silver nikkah jewelry and heavily embroidered dupattas. If you are seeking inspiration from modern wedding themes or minimalist fashion trends, this light blue bridal hijab is a durable and stylish upgrade over basic chiffon for all formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+  "mainCategorySlugs": ["bridal-hijab", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/nikkah-jewelry/blue-bride---jewelry-set.webp",
+      "targetSlug": "blue-bride---jewelry-set"
     },
+    {
+      "image": "/images/sharara-light-blue-silver.webp",
+      "targetSlug": "sharara-light-blue-silver"
+    }
+  ],
+  "images": [
+    {
+      "url": "bridal-hijab/light-blue-crepe-bridal-hijab.webp",
+      "alt": "Light Blue Bridal Hijab - Blue Elegant",
+      "figcaption": "The light blue bridal hijab combines soft wedding colors with the high-quality texture of crepe material — a natural complement to light blue Muslim bridal bridal attire for Muslim weddings.",
+      "amazonLink": "https://amzn.to/4k2xRVj"
+    }
+  ],
+  "og_image": "bridal-hijab/light-blue-crepe-bridal-hijab.webp",
+  "title_tag": "Light Blue Bridal Hijab | Serene Amazon Styling 2026",
+  "og_title": "Light Blue Bridal Hijab | Timeless Crepe Fashion",
+  "og_type": "website",
+  "meta_description": "Our light blue Muslim bridal hijab offers a serene touch for your special day. Made with premium crepe material for a flawless modest bridal look.",
+  "attributes": {
+    "category": "Bridal Hijab",
+    "color": "Blue",
+    "material": "Crepe",
+    "style": "Elegant",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A light blue Muslim bridal hijab paired with a matching dress or sharara is a fully appropriate and increasingly popular choice for Muslim weddings, especially among brides navigating interfaith marriages or cultural fusion weddings where an inclusive, universally elegant color is an asset. Muslim brides wear a wide range of wedding colors, none of which are prescribed by Islamic traditions. Cultural customs vary: South Asian traditions favor red, maroon, and green; Middle Eastern influences lean toward ivory, gold, and champagne; and American Muslim culture has embraced softer, more contemporary colors including light blue.\"}}, {\"@type\": \"Question\", \"name\": \"What hijab fabric is best for a Muslim bridal look?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Crepe is one of the best hijab fabrics for Muslim weddings because it holds its drape without slipping, has a subtle sheen that reads well in wedding photography, and is lightweight enough for all-day wear. It pairs naturally with georgette and silk bridal attire — the fabrics most commonly used in light blue Muslim bridal sharara and wedding dress styles — making it a cohesive and practical choice for the full bridal look.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Bridal Hijab", "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"},
+    {"name": "Light Blue Muslim Bridal Hijab", "item": "https://hijabibridal.github.io/shop/product/light-blue-crepe-bridal-hijab"}
+  ]
+},
     {
       "name": "Champagne Bridal Hijab",
       "slug": "champagne-crepe-bridal-hijab",
@@ -8516,69 +8502,55 @@
       ]
     },
     {
-      "name": "Light Blue Muslim Bridal Dress",
-      "slug": "muslim-wedding-dress-light-blue",
-      "description": "This light blue Muslim wedding dress is a breath of fresh air, featuring unique champagne-colored floral embroidery that adds a vintage touch to a modern color. Available in sizes 35-46, the dress is designed to offer a flattering fit for various body types. The contrast between the cool light blue and the warm champagne embroidery makes it one of the most visually striking Muslim Wedding Dresses in our collection. This dress is ideal for brides who want to incorporate color into their wedding day while maintaining a soft, traditional, and modest appearance.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Light Blue</h2>This light blue dress coordinates with styling for bridal looks that are unique and artistic. A champagne or cream-colored hijab will perfectly pick up the floral embroidery details. Consider wearing jewelry that mixes gold and silver to reflect the dual-tone nature of the dress. The dupatta can be draped over one arm to showcase the embroidery on the bodice, or used to create a layered headcovering for extra modesty. A fresh, dewy makeup look with a hint of blue or champagne shimmer on the eyes will perfectly finish this ethereal bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
-      "mainCategorySlugs": [
-        "muslim-wedding-dresses",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-dupatta/white-net-bridal-dupatta.webp", 
-          "targetSlug": "white-net-bridal-dupatta" 
-        },
-        { 
-          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
-          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
-        }
-      ],
-      "images": [
-        {
-          "url": "muslim-wedding-dress-light-blue-2.webp",
-          "alt": "Light blue Muslim wedding dress with champagne floral embroidery — modest nikah gown",
-          "figcaption": "Muslim wedding dress light blue with champagne floral embroidery, a unique option for Muslim bridal wedding planning.",
-          "amazonLink": "https://amzn.to/3PUcD29"
-        },
-        {
-          "url": "muslim-wedding-dress-light-blue.webp",
-          "alt": "Light blue Muslim wedding dress with champagne floral embroidery — modest nikah gown",
-          "figcaption": "Muslim wedding dress light blue with champagne floral embroidery, a unique option for Muslim bridal wedding planning.",
-          "amazonLink": "https://amzn.to/3PUcD29"
-        }
-      ],
-      "og_image": "muslim-wedding-dress-light-blue.webp",
-      "title_tag": "Light Blue Muslim Wedding Dress Floral | Amazon",
-      "og_title": "Light Blue Muslim Wedding Dress Floral | Amazon",
-      "og_type": "website",
-      "meta_description": "Shop this light blue Muslim wedding dress on Amazon. Features champagne floral embroidery and a modern bridal silhouette.",
-      "attributes": {
-        "category": "Blue",
-        "color": "Blue",
-        "material": "Embroidery",
-        "style": "Modern / Modest",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Blue",
-          "item": "https://hijabibridal.github.io/shop/category/blue"
-        },
-        {
-          "name": "Light Blue Muslim Bridal Dress",
-          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-light-blue"
-        }
-      ]
+  "name": "Light Blue Muslim Bridal Dress",
+  "slug": "muslim-wedding-dress-light-blue",
+  "description": "This light blue Muslim wedding dress is a breath of fresh air, featuring unique champagne-colored floral embroidery that adds a vintage touch to a modern color. Available in sizes 35-46, the dress is designed to offer a flattering fit for various body types. The contrast between the cool light blue and the warm champagne embroidery makes it one of the most visually striking pieces of light blue Muslim bridal bridal attire in our collection. This dress is ideal for brides who want to incorporate color into their wedding day while maintaining a soft, traditional, and modest appearance in keeping with Islamic traditions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Light Blue</h2>This light blue Muslim bridal attire coordinates with styling for bridal looks that are unique and artistic. A champagne or cream-colored hijab will perfectly pick up the floral embroidery details. Consider wearing jewelry that mixes gold and silver to reflect the dual-tone nature of the dress. The dupatta can be draped over one arm to showcase the embroidery on the bodice, or used to create a layered headcovering for extra modesty. A fresh, dewy makeup look with a hint of blue or champagne shimmer on the eyes will perfectly finish this ethereal bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+  "mainCategorySlugs": ["muslim-wedding-dresses", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-dupatta/white-net-bridal-dupatta.webp",
+      "targetSlug": "white-net-bridal-dupatta"
     },
+    {
+      "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp",
+      "targetSlug": "silver-bridal-jewelry-for-nikkah"
+    }
+  ],
+  "images": [
+    {
+      "url": "muslim-wedding-dress-light-blue-2.webp",
+      "alt": "Light blue Muslim wedding dress with champagne floral embroidery — modest nikah gown",
+      "figcaption": "Light blue Muslim wedding dress with champagne floral embroidery — a distinctive bridal attire choice for brides who want a fresh take on wedding colors within American Muslim culture.",
+      "amazonLink": "https://amzn.to/3PUcD29"
+    },
+    {
+      "url": "muslim-wedding-dress-light-blue.webp",
+      "alt": "Light blue Muslim wedding dress with champagne floral embroidery — modest nikah gown",
+      "figcaption": "Light blue Muslim wedding dress with champagne floral embroidery — a unique option for light blue Muslim bridal attire that reflects US Muslim wedding trends toward softer, more personal wedding colors.",
+      "amazonLink": "https://amzn.to/3PUcD29"
+    }
+  ],
+  "og_image": "muslim-wedding-dress-light-blue.webp",
+  "title_tag": "Light Blue Muslim Wedding Dress Floral | Amazon",
+  "og_title": "Light Blue Muslim Wedding Dress Floral | Amazon",
+  "og_type": "website",
+  "meta_description": "Shop this light blue Muslim wedding dress on Amazon. Light blue Muslim bridal attire that features champagne floral embroidery, a modern bridal silhouette.",
+  "attributes": {
+    "category": "Blue",
+    "color": "Blue",
+    "material": "Embroidery",
+    "style": "Modern / Modest",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"In American Muslim culture, light blue Muslim bridal attire has become an increasingly popular wedding color for brides who want something soft, elegant, and distinctly their own — particularly for interfaith marriages and cultural fusion weddings where a neutral, beautiful color speaks across communities.Muslim brides wear a range of colors shaped by their cultural customs, family traditions, and personal style. Islamic traditions do not prescribe a specific bridal color, so what a bride wears reflects her community's conventions rather than any religious requirement. Red and maroon are the most traditional in South Asian Muslim families; ivory and gold are common across Middle Eastern influences.\"}}, {\"@type\": \"Question\", \"name\": \"Can a Muslim bride wear a light blue wedding dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes, absolutely. A light blue wedding dress is a fully valid and appropriate choice for Muslim weddings. Islamic traditions require only that the bridal attire be modest — fully covered, opaque, and non-form-fitting. The color is entirely the bride's own choice. Light blue Muslim bridal fashion has grown significantly as a category in the US, reflecting a broader shift in American Muslim culture toward more personal, expressive wedding colors that still honor modest fashion values.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Blue", "item": "https://hijabibridal.github.io/shop/category/blue"},
+    {"name": "Light Blue Muslim Bridal Dress", "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-light-blue"}
+  ]
+},
     {
       "name": "Muslim Wedding Dress Lavender",
       "slug": "muslim-wedding-dress-lavender",
@@ -9376,59 +9348,45 @@
       ]
     },
     {
-      "name": "Blue Bride - Jewelry Set",
-      "slug": "blue-bride---jewelry-set",
-      "description": "This Blue Jewellery Set Marriage comes with crown jewelry to place over your hijab, earrings with dangle and hand jewelry. The necklace is in two parts and is perfect for covering the upper chest area with bling. Shop now to add this captivating piece to your wedding ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">View all Nikkah Jewelry</a>",
-      "mainCategorySlugs": [
-        "nikkah-jewelry",
-        "blue"
-      ],
-      "images": [
-        {
-          "url": "nikkah-jewelry/blue-bride---jewelry-set-2.webp",
-          "alt": "Blue Bride - Jewelry Set - Blue Elegant",
-          "figcaption": "This captivating blue set is a premier example of women nikkah jewelry for a modern nikkah ceremony. It provides a complete look of women's jewelry that honors an Islamic wedding theme.",
-          "amazonLink": "https://amzn.to/4gp6e72"
-        },
-        {
-          "url": "nikkah-jewelry/blue-bride---jewelry-set.webp",
-          "alt": "Blue Bride - Jewelry Set - Blue Elegant",
-          "figcaption": "This captivating blue set is a premier example of women nikkah jewelry for a modern nikkah ceremony. It provides a complete look of women's jewelry that honors an Islamic wedding theme.",
-          "amazonLink": "https://amzn.to/4gp6e72"
-        }
-      ],
-      "og_image": "nikkah-jewelry/blue-bride---jewelry-set.webp",
-      "title_tag": "Best Blue Bride - Jewelry Set for 2026 Brides | Amazon Product Styling",
-      "og_title": "Best Blue Bride - Jewelry Set for 2026 Brides | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Elevate your bridal look with the Blue Bride - Jewelry Set, featuring stunning crown jewelry, dangle earrings, and a dazzling necklace. Perfect for Muslim weddings.",
-      "attributes": {
-        "category": "Nikkah Jewelry",
-        "color": "Blue",
-        "material": "Lace",
-        "style": "Elegant",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Nikkah Jewelry",
-          "item": "https://hijabibridal.github.io/shop/category/nikkah-jewelry"
-        },
-        {
-          "name": "Blue Bride - Jewelry Set",
-          "item": "https://hijabibridal.github.io/shop/product/blue-bride---jewelry-set"
-        }
-      ]
+  "name": "Blue Bride - Jewelry Set",
+  "slug": "blue-bride---jewelry-set",
+  "description": "This blue jewelry set for Muslim weddings comes with crown jewelry to place over your hijab, earrings with dangle, and hand jewelry. The necklace is in two parts and is perfect for covering the upper chest area with bling, making it an ideal complement to any light blue Muslim bridal bridal attire. Shop now to add this captivating piece to your wedding ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/nikkah-jewelry\" class=\"text-[#db2777] font-bold hover:underline\">View all Nikkah Jewelry</a>",
+  "mainCategorySlugs": ["nikkah-jewelry", "blue"],
+  "images": [
+    {
+      "url": "nikkah-jewelry/blue-bride---jewelry-set-2.webp",
+      "alt": "Blue Bride - Jewelry Set - Blue Elegant",
+      "figcaption": "This captivating blue set is a premier example of nikkah jewelry for a modern nikah ceremony, reflecting American Muslim culture's embrace of light blue as a bridal attire color. It provides a complete look of women's jewelry that honors an Islamic wedding theme.",
+      "amazonLink": "https://amzn.to/4gp6e72"
     },
+    {
+      "url": "nikkah-jewelry/blue-bride---jewelry-set.webp",
+      "alt": "Blue Bride - Jewelry Set - Blue Elegant",
+      "figcaption": "This captivating blue set is a premier example of nikkah jewelry for a modern nikah ceremony. It provides a complete look of light blue Muslim bridal jewelry that honors an Islamic wedding theme.",
+      "amazonLink": "https://amzn.to/4gp6e72"
+    }
+  ],
+  "og_image": "nikkah-jewelry/blue-bride---jewelry-set.webp",
+  "title_tag": "Best Blue Bride - Jewelry Set for 2026 Brides | Amazon Product Styling",
+  "og_title": "Best Blue Bride - Jewelry Set for 2026 Brides | Amazon Product Styling",
+  "og_type": "website",
+  "meta_description": "Elevate your light blue Muslim bridal look with the Blue Bride jewelry set, featuring a stunning crown, dangle earrings, and a dazzling necklace. Perfect for Muslim weddings.",
+  "attributes": {
+    "category": "Nikkah Jewelry",
+    "color": "Blue",
+    "material": "Lace",
+    "style": "Elegant",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A blue jewelry set like this one is a natural complement to light blue Muslim bridal bridal attire and reflects the broader shift in US Muslim wedding trends toward cohesive, color-matched bridal styling. Muslim brides wear colors shaped by their family's cultural customs, regional traditions, and personal preference. Islamic traditions set no color requirement for bridal attire — only that it be modest. Red is the dominant color in South Asian traditions; ivory and champagne are common across Middle Eastern influences; and American Muslim culture has seen strong growth in light blue, blush, and silver as wedding colors.\"}}, {\"@type\": \"Question\", \"name\": \"What jewelry completes a light blue Muslim bridal look?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A full set of blue-toned nikkah jewelry — crown, earrings, necklace, and hand jewelry — is the most cohesive choice for a light blue Muslim bridal bridal attire. Blue jewelry coordinates naturally with light blue, sky blue, and powder blue wedding dresses, shararas, and hijabs, creating a unified look that photographs well and reflects the color-matched styling that has become a hallmark of US Muslim wedding trends. Silver-based settings with blue stones or enamel detail are the most versatile option for interfaith marriages and cultural fusion weddings where the jewelry needs to work across a mixed guest environment.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Nikkah Jewelry", "item": "https://hijabibridal.github.io/shop/category/nikkah-jewelry"},
+    {"name": "Blue Bride - Jewelry Set", "item": "https://hijabibridal.github.io/shop/product/blue-bride---jewelry-set"}
+  ]
+},
     {
       "name": "Bridal Champagne Bangles",
       "slug": "bridal-champagne-bangles",
@@ -10508,69 +10466,55 @@
       ]
     },
     {
-      "name": "Sharara in Blue",
-      "slug": "sharara-in-blue",
-      "description": "This sharara clothing suit features a lightweight and airy net fabric, adorned with heavy champagne-colored embroidery for an elegantly refined touch. The design includes a traditional three-piece ensemble consisting of a kurta or kameez, a heavily flared pair of sharara, and a dupatta, making it an ideal choice for various wedding occasions. The fabric adds volume and structure, enhancing the defined silhouette of the garment, while the floral patterns create a cohesive style.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara in Blue</h2>This sharara coordinates with styling for bridal looks. When you select a pastel color like aqua, you can mix it with luxurious fabrics like georgette or silk for your dupatta and hijab. This sharara invites a braided crown or intricate braids for a regal appearance. You can also opt for a second dupatta with detailed embroidery or sequins to serve as a focal point, enhancing the overall elegance of your ensemble. Thoughtful accessorizing with jewelry and stylish dupatta draping further elevates the look, allowing for a personalized and statement-making style that is perfect for any special occasion.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
-      "mainCategorySlugs": [
-        "sharara",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/nikkah-jewelry/blue-bride---jewelry-set.webp", 
-          "targetSlug": "blue-bride---jewelry-set"  
-        },
-        { 
-          "image": "/images/bridal-hijab/light-blue-crepe-bridal-hijab.webp", 
-          "targetSlug": "light-blue-crepe-bridal-hijab" 
-        }
-      ],
-      "images": [
-        {
-          "url": "sharara-in-blue-2.webp",
-          "alt": "Blue sharara suit with traditional embroidery — modest Muslim bridal outfit for all body types",
-          "figcaption": " Blue sharara suit with traditional embroidery — a modest Muslim bridal outfit that draws the eye to the knees for a flattering silhouette on all body types.",
-          "amazonLink": "https://amzn.to/3GGRjsi"
-        },
-        {
-          "url": "sharara-in-blue.webp",
-          "alt": "Blue sharara suit with traditional embroidery — modest Muslim bridal outfit for all body types",
-          "figcaption": " Blue sharara suit with traditional embroidery — a modest Muslim bridal outfit that draws the eye to the knees for a flattering silhouette on all body types.",
-          "amazonLink": "https://amzn.to/3GGRjsi"
-        }
-      ],
-      "og_image": "sharara-in-blue.webp",
-      "title_tag": "Sharara in Blue | Fashion Concerns and Body Positivity Style",
-      "og_title": "Sharara in Blue | Fashion Concerns and Body Positivity Style",
-      "og_type": "website",
-      "meta_description": "Discover this blue sharara. A perfect style for chubby girls that celebrates body positivity with a flowing silhouette and soft fabric.",
-      "attributes": {
-        "category": "Sharara",
-        "color": "Blue",
-        "material": "Embroidery",
-        "style": "Traditional",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Sharara",
-          "item": "https://hijabibridal.github.io/shop/category/sharara"
-        },
-        {
-          "name": "Sharara in Blue",
-          "item": "https://hijabibridal.github.io/shop/product/sharara-in-blue"
-        }
-      ]
+  "name": "Sharara in Blue",
+  "slug": "sharara-in-blue",
+  "description": "This sharara clothing suit features a lightweight and airy net fabric, adorned with heavy champagne-colored embroidery for an elegantly refined touch. The design includes a traditional three-piece ensemble consisting of a kurta or kameez, a heavily flared pair of sharara, and a dupatta, making it an ideal choice for Muslim weddings. The fabric adds volume and structure, enhancing the defined silhouette of the garment, while the floral patterns create a cohesive style rooted in South Asian traditions for this light blue Muslim bridal attire.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara in Blue</h2>This sharara coordinates with styling for bridal looks. When you select a pastel color like aqua, you can mix it with luxurious fabrics like georgette or silk for your dupatta and hijab. This sharara invites a braided crown or intricate braids for a regal appearance. You can also opt for a second dupatta with detailed embroidery or sequins to serve as a focal point, enhancing the overall elegance of your ensemble. Thoughtful accessorizing with jewelry and stylish dupatta draping further elevates the look, allowing for a personalized and statement-making style that is perfect for any special occasion.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+  "mainCategorySlugs": ["sharara", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/nikkah-jewelry/blue-bride---jewelry-set.webp",
+      "targetSlug": "blue-bride---jewelry-set"
     },
+    {
+      "image": "/images/bridal-hijab/light-blue-crepe-bridal-hijab.webp",
+      "targetSlug": "light-blue-crepe-bridal-hijab"
+    }
+  ],
+  "images": [
+    {
+      "url": "sharara-in-blue-2.webp",
+      "alt": "Blue sharara suit with traditional embroidery — modest Muslim bridal outfit for all body types",
+      "figcaption": "Blue sharara suit with traditional embroidery — a modest Muslim bridal outfit that draws the eye to the knees for a flattering silhouette on all body types.",
+      "amazonLink": "https://amzn.to/3GGRjsi"
+    },
+    {
+      "url": "sharara-in-blue.webp",
+      "alt": "Blue sharara suit with traditional embroidery — modest Muslim bridal outfit for all body types",
+      "figcaption": "Blue sharara suit with traditional embroidery — light blue Muslim bridal attire that draws the eye to the knees for a flattering silhouette on all body types.",
+      "amazonLink": "https://amzn.to/3GGRjsi"
+    }
+  ],
+  "og_image": "sharara-in-blue.webp",
+  "title_tag": "Sharara in Blue | Fashion Concerns and Body Positivity Style",
+  "og_title": "Sharara in Blue | Fashion Concerns and Body Positivity Style",
+  "og_type": "website",
+  "meta_description": "Discover this blue sharara, light blue Muslim bridal attire rooted in South Asian traditions. A perfect style for chubby girls that celebrates body positivity.",
+  "attributes": {
+    "category": "Sharara",
+    "color": "Blue",
+    "material": "Embroidery",
+    "style": "Traditional",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Light blue Muslim bridal attire in particular has grown steadily as a choice among brides who want something soft, distinctive, and fully within modest fashion conventions. Muslim brides wear a wide range of colors depending on their cultural customs and personal style. There is no single prescribed color in Islamic traditions — bridal attire varies significantly across communities. Red and maroon dominate South Asian traditions; ivory and gold reflect Middle Eastern influences; and American Muslim culture has expanded the palette further to include light blue, blush, and champagne.\"}}, {\"@type\": \"Question\", \"name\": \"Is light blue an appropriate color for a Muslim bride?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. Light blue is a fully appropriate bridal color for Muslim weddings. Islamic traditions place no color restrictions on bridal attire — only that the dress be modest, opaque, and non-form-fitting. Light blue Muslim bridal fashion has become one of the most popular non-traditional wedding colors in the US Muslim community, particularly for daytime nikah ceremonies and cultural fusion weddings where brides want a color that feels personal and contemporary.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Sharara", "item": "https://hijabibridal.github.io/shop/category/sharara"},
+    {"name": "Sharara in Blue", "item": "https://hijabibridal.github.io/shop/product/sharara-in-blue"}
+  ]
+},
     {
       "name": "Sharara Suit in Green",
       "slug": "sharara-suit-in-green",
@@ -10956,81 +10900,55 @@
       ]
     },
     {
-      "name": "Light Blue Embroidered Gharara",
-      "slug": "sharara-light-blue",
-      "description": "This light blue sharara clothing suit is crafted from premium georgette fabric, offering a soft and breathable feel for all-day comfort. The ensemble features allover silver embroidery that enhances the graceful silhouette, making it an ideal choice for wedding celebrations. Designed to cater to various body types, this style promotes body positivity and provides a flattering fit for the modern bride. The lightweight material ensures easy movement, addressing common fashion concerns while maintaining a regal appearance.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Light Blue Sharara</h2>This sharara suit coordinates with styling for bridal looks. Pair this light blue style with a matching silver-edged hijab and delicate jewelry to highlight the intricate embroidery. For a complete ensemble, consider a sleek updo under your hijab and a second dupatta that drapes elegantly over one shoulder, showcasing the silhouette and premium fabric of the sharara (pants).<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
-      "mainCategorySlugs": [
-        "sharara",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        {
-          "image": "/images/bridal-dupatta/sky-blue-dupatta.webp", 
-          "targetSlug": "sky-blue-bridal-net-dupatta"
-        },
-        { 
-          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
-          "targetSlug": "silver-bridal-jewelry-for-nikkah"  
-        }
-      ],
-      "images": [
-        {
-          "url": "sharara-light-blue-2.webp",
-          "alt": "Light blue embroidered sharara — modest Muslim bridal outfit flattering for all body types",
-          "figcaption": "This light blue sharara style draws the eye down to the knees. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
-          "amazonLink": "https://amzn.to/4sKEakJ"
-        },
-        {
-          "url": "sharara-light-blue-silver-2.webp",
-          "alt": "Light blue embroidered sharara — modest Muslim bridal outfit flattering for all body types",
-          "figcaption": "This light blue sharara style draws the eye down to the knees. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
-          "amazonLink": "https://amzn.to/4sKEakJ"
-        },
-        {
-          "url": "sharara-light-blue-silver.webp",
-          "alt": "Light blue embroidered sharara — modest Muslim bridal outfit flattering for all body types",
-          "figcaption": " Light blue embroidered sharara with a flattering flared silhouette — a modest Muslim bridal outfit perfect for all body types at nikah and walima events.",
-          "amazonLink": "https://amzn.to/4sKEakJ"
-        },
-        {
-          "url": "sharara-light-blue.webp",
-          "alt": "Light Blue Embroidered Sharara - Blue Modern",
-          "figcaption": "This light blue sharara style draws the eye down to the knees. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
-          "amazonLink": "https://amzn.to/4sKEakJ"
-        }
-      ],
-      "og_image": "sharara-light-blue.webp",
-      "title_tag": "Light Blue Sharara Suit | Style for Your Body Type",
-      "og_title": "Light Blue Sharara Suit | Style for Your Body Type",
-      "og_type": "website",
-      "meta_description": "Explore our light blue sharara clothing suit. This style features a beautiful silhouette and premium fabric perfect for chubby girls and body positivity.",
-      "attributes": {
-        "category": "Sharara",
-        "color": "Blue",
-        "material": "Georgette",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Sharara",
-          "item": "https://hijabibridal.github.io/shop/category/sharara"
-        },
-        {
-          "name": "Light Blue Embroidered Gharara",
-          "item": "https://hijabibridal.github.io/shop/product/sharara-light-blue"
-        }
-      ]
+  "name": "Light Blue Embroidered Gharara",
+  "slug": "sharara-light-blue",
+  "description": "This light blue sharara clothing suit is crafted from premium georgette fabric, offering a soft and breathable feel for all-day comfort. This light blue Muslim bridal attire features allover silver embroidery that enhances the graceful silhouette, making it an ideal choice for Muslim weddings and cultural fusion weddings alike. Designed to cater to various body types, this style promotes body positivity and provides a flattering fit for the modern bride. The lightweight material ensures easy movement, addressing common fashion concerns while maintaining a regal appearance consistent with Islamic traditions.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Light Blue Sharara</h2>This sharara suit coordinates with styling for bridal looks. Pair this light blue style with a matching silver-edged hijab and delicate jewelry to highlight the intricate embroidery. For a complete ensemble, consider a sleek updo under your hijab and a second dupatta that drapes elegantly over one shoulder, showcasing the silhouette and premium fabric of the sharara pants.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+ "mainCategorySlugs": ["sharara", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-dupatta/sky-blue-dupatta.webp",
+      "targetSlug": "sky-blue-bridal-net-dupatta"
     },
+    {
+      "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp",
+      "targetSlug": "silver-bridal-jewelry-for-nikkah"
+    }
+  ],
+  "images": [
+    {
+      "url": "sharara-light-blue-2.webp",
+      "alt": "Light blue embroidered sharara — modest blue Muslim bridal outfit flattering for all body types",
+      "figcaption": "This light blue sharara style draws the eye down to the knees. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
+      "amazonLink": "https://amzn.to/4sKEakJ"
+    },
+    {
+      "url": "sharara-light-blue.webp",
+      "alt": "Light Blue Embroidered Sharara - Blue Modern",
+      "figcaption": "This light blue sharara style draws the eye down to the knees. It is the perfect light blue Muslim bridal attire for chubby girls looking for a flattering and elegant wedding ensemble.",
+      "amazonLink": "https://amzn.to/4sKEakJ"
+    }
+  ],
+  "og_image": "sharara-light-blue.webp",
+  "title_tag": "Light Blue Sharara Suit | Style for Your Body Type",
+  "og_title": "Light Blue Sharara Suit | Style for Your Body Type",
+  "og_type": "website",
+  "meta_description": "Explore our light blue sharara clothing suit — light blue Muslim bridal attire featuring premium georgette fabric and a graceful silhouette perfect for all body types.",
+  "attributes": {
+    "category": "Sharara",
+    "color": "Blue",
+    "material": "Georgette",
+    "style": "Modern",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A light blue sharara like this one reflects bridal attire choices that are at once modest, culturally informed, and distinctly contemporary. Muslim brides wear a wide spectrum of colors shaped by cultural customs and regional traditions rather than any single Islamic rule. Red remains the most common color in South Asian traditions, while Middle Eastern influences favor ivory, gold, and champagne. In American Muslim culture, US Muslim wedding trends have shifted toward softer, more personal wedding colors — and light blue Muslim bridal attire sits squarely at the center of that shift.\"}}, {\"@type\": \"Question\", \"name\": \"What is a gharara and how does it differ from a sharara?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A gharara is a traditional dress from South Asian traditions consisting of a short kurta paired with wide-leg pants that flare dramatically from the knee down, creating a skirt-like silhouette. A sharara flares from the hip rather than the knee, giving it a fuller, more voluminous look from waist to hem. Both are popular choices for Muslim weddings and both work beautifully as light blue Muslim bridal bridal attire when styled with a coordinating hijab and dupatta.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Sharara", "item": "https://hijabibridal.github.io/shop/category/sharara"},
+    {"name": "Light Blue Embroidered Gharara", "item": "https://hijabibridal.github.io/shop/product/sharara-light-blue"}
+  ]
+},
     {
       "name": "Maroon Silk Sharara Set",
       "slug": "sharara-maroon",
@@ -11204,69 +11122,55 @@
       ]
     },
     {
-      "name": "Light Blue and Silver Sharara",
-      "slug": "sharara-light-blue-silver",
-      "description": "This light blue and silver sharara clothing suit is a beautiful blend of tradition and modernity. The kurta is made from a soft silk blend fabric featuring intricate silver and jari embroidery, paired with a matching organza dupatta. The flared sharara (pants) create a graceful silhouette that is designed to flatter various body types, celebrating body positivity for all brides. This elegant light blue style is perfect for a nikkah or walimah, providing a fresh look that addresses common fashion concerns with ease.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Light Blue and Silver Sharara</h2>This sharara suit coordinates with styling for bridal looks. Enhance the silver jari work by wearing silver-toned jewelry. A sleek updo under your hijab paired with the organza dupatta draped over the head or shoulders creates a sophisticated silhouette, perfectly highlighting the premium fabric and intricate patterns of the sharara (pants).<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
-      "mainCategorySlugs": [
-        "sharara",
-        "blue"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp", 
-          "targetSlug": "silver-hijab"  
-        },
-        { 
-          "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp", 
-          "targetSlug": "silver-bridal-jewelry-for-nikkah" 
-        }
-      ],
-      "images": [
-        {
-          "url": "sharara-light-blue-silver-2.webp",
-          "alt": "Light blue and silver sharara — modest Muslim bridal outfit with metallic embroidery",
-          "figcaption": "This light blue sharara draws the eye down to the end of the flared top. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
-          "amazonLink": "https://amzn.to/4rG45td"
-        },
-        {
-          "url": "sharara-light-blue-silver.webp",
-          "alt": "Light blue and silver sharara — modest Muslim bridal outfit with metallic embroidery",
-          "figcaption": " Light blue and silver sharara with metallic embroidery — a modern modest Muslim bridal outfit with a flattering flared silhouette for all body types.",
-          "amazonLink": "https://amzn.to/4rG45td"
-        }
-      ],
-      "og_image": "sharara-light-blue-silver.webp",
-      "title_tag": "Light Blue Silver Sharara | Silhouette and Fabric Style",
-      "og_title": "Light Blue Silver Sharara | Silhouette and Fabric Style",
-      "og_type": "website",
-      "meta_description": "Shop our light blue silver sharara suit. A silk fabric style with a graceful silhouette that promotes body positivity for chubby girls.",
-      "attributes": {
-        "category": "Sharara",
-        "color": "Blue",
-        "material": "Silk",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Sharara",
-          "item": "https://hijabibridal.github.io/shop/category/sharara"
-        },
-        {
-          "name": "Light Blue and Silver Sharara",
-          "item": "https://hijabibridal.github.io/shop/product/sharara-light-blue-silver"
-        }
-      ]
+  "name": "Light Blue and Silver Sharara",
+  "slug": "sharara-light-blue-silver",
+  "description": "This light blue and silver sharara clothing suit is a beautiful blend of tradition and modernity rooted in South Asian traditions. The kurta is made from a soft silk blend fabric featuring intricate silver and jari embroidery, paired with a matching organza dupatta. The flared sharara (pants) create a graceful silhouette that is designed to flatter various body types, celebrating body positivity for all brides. This elegant light blue Muslim bridal attire is perfect for a nikkah or walimah, providing a fresh look that addresses common fashion concerns with ease.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Light Blue and Silver Sharara</h2>This sharara suit coordinates with styling for bridal looks. Enhance the silver jari work by wearing silver-toned jewelry. A sleek updo under your hijab paired with the organza dupatta draped over the head or shoulders creates a sophisticated silhouette, perfectly highlighting the premium fabric and intricate patterns of the sharara (pants).<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+  "mainCategorySlugs": ["sharara", "blue"],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-hijab/silver-fluff-bridal-hijab.webp",
+      "targetSlug": "silver-hijab"
     },
+    {
+      "image": "/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp",
+      "targetSlug": "silver-bridal-jewelry-for-nikkah"
+    }
+  ],
+  "images": [
+    {
+      "url": "sharara-light-blue-silver-2.webp",
+      "alt": "Light blue and silver sharara — modest Muslim bridal outfit with metallic embroidery",
+      "figcaption": "This light blue sharara draws the eye down to the end of the flared top. It is a perfect choice for chubby girls looking for a flattering and elegant wedding ensemble.",
+      "amazonLink": "https://amzn.to/4rG45td"
+    },
+    {
+      "url": "sharara-light-blue-silver.webp",
+      "alt": "Light blue and silver sharara — modest Muslim bridal outfit with metallic embroidery",
+      "figcaption": "Light blue and silver sharara with metallic embroidery — modern modest light blue Muslim bridal attire with a flattering flared silhouette for all body types.",
+      "amazonLink": "https://amzn.to/4rG45td"
+    }
+  ],
+  "og_image": "sharara-light-blue-silver.webp",
+  "title_tag": "Light Blue Silver Sharara | Silhouette and Fabric Style",
+  "og_title": "Light Blue Silver Sharara | Silhouette and Fabric Style",
+  "og_type": "website",
+  "meta_description": "Shop our light blue Muslim bridal silver sharara suit. Silk fabric light blue Muslim bridal attire with a graceful silhouette that promotes body positivity for chubby girls.",
+  "attributes": {
+    "category": "Sharara",
+    "color": "Blue",
+    "material": "Silk",
+    "style": "Modern",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Light blue Muslim bridal attire, in particular, has become a popular choice for brides who want both modest fashion and a distinctive visual presence. There is no single answer — bridal attire for Muslim weddings varies widely by community and cultural customs. Red is the most traditional choice in South Asian traditions; ivory and gold reflect Middle Eastern influences; and American Muslim culture has made room for a full range of wedding colors including light blue, silver, blush, and champagne. For brides drawn to interfaith marriages or cultural fusion weddings, soft colors like light blue communicate celebration without leaning heavily on any single tradition.\"}}, {\"@type\": \"Question\", \"name\": \"Does silver jewelry suit a light blue Muslim bridal outfit?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes — silver is the most natural jewelry pairing for a light blue Muslim bridal outfit. Light blue and silver sit in the same cool tonal family, creating a cohesive look that feels deliberate and polished in wedding photography. This combination aligns with US Muslim wedding trends toward clean, contemporary bridal attire while remaining fully grounded in modest fashion conventions. A silver bridal crown, chandelier earrings, and matching hand jewelry complete the look without competing with the embroidery of the dress.\"}}]",
+  "breadcrumbs": [
+    {"name": "Home", "item": "https://hijabibridal.github.io/"},
+    {"name": "Shop", "item": "https://hijabibridal.github.io/shop"},
+    {"name": "Sharara", "item": "https://hijabibridal.github.io/shop/category/sharara"},
+    {"name": "Light Blue and Silver Sharara", "item": "https://hijabibridal.github.io/shop/product/sharara-light-blue-silver"}
+  ]
+},
     {
       "name": "Sage Green Sharara Suit",
       "slug": "sage-green-sharara-suit",
