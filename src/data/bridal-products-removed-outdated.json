@@ -1656,44 +1656,42 @@
       ]
     },
 
-I need the fuschia collection page in the same format as we did green. These should be in place, the remainder, please write it: "slug": "fuschia", "name": "Fuschia", "titleTag": "Fuschia Collection | Hijabi Bridal", ignoring the misspelling.
-
+I need the lilac collection page in the same format as we did silver. These should be in place, the remainder, please write it: "slug": "lilac", "name": "Lilac", "titleTag": "Lilac Collection | Hijabi Bridal"
 
 
 FYI: 
+Lilac is a trending color for the walima ceremony
 
-Rani Pink/Dark pink/magenta/fucshia is the same color and a very popular Indian bridal color. The lehenga we have is a Muslim lehenga: https://hijabibridal.github.io/shop/product/muslim-lehenga-in-fuschia-readymade. This is a good mother of the bride look: https://hijabibridal.github.io/shop/product/fuschia-dress-for-muslim-wedding 
 
-
-The description should have the first paa like this and it should be answered in the first paragraph using some of the entities that are set to be used more than others and explaining why peach is a top color for nikkah and walima: "description": "Is rani pink a good bridal color?\n and should be short, two or three sentences.
-
+The description should have the first paa like this and it should be answered in the first paragraph using some of the entities that are set to be used more than others and explaining why silver is a top color for nikkah and walima: "description": "What is the best color for a walima function?\n...." and should be short, two or three sentences.
 
 
 Thereafter:
 
-First heading: What is the best silver Muslim bridal 2026 collection? Second heading: What does a Muslim bride wear to her wedding? Third: What are female Muslim dresses called? Fourth: What color do Muslim brides usually wear?  - 
+First heading: What is the best color for a walima function? Second heading: What is the significance of a purple wedding dress? Third: What color do Muslim brides usually wear?  - 
 Any others you deem suitable. Then faq schema that contains the same questions as the headings and any others you deem suitable. 
 
-Full entity list. Please deal with any duplicates:
-What does a Muslim bride wear to her wedding?
-{
-  "tier1": ["Muslim Bride", "Wedding Attire"],
-  "tier2": ["Silver Jewelry", "Hijab", "Abaya", "Nikah Dress", "Islamic Wedding Gown"],
-  "tier3": ["Middle Eastern Fashion", "South Asian Culture", "Wedding Traditions in the USA", "Islamic Marriage Ceremonies", "Bridal Wear Trends", "Cultural Exchange in American Weddings"]
-}
+Full entity list:
+What is the best color for a walima function?
+"{
+  ""tier1"": [""lilac Muslim bridal"", Walima Function"", ""Lilac Color""],
+  ""tier2"": [""Wedding Reception"", ""Bridal Dress"", ""Pakistani Culture"", ""Wedding Decor"", ""Fashion Trends""],
+  ""tier3"": [""Muslim Wedding Traditions"", ""South Asian Community"", ""US Wedding Venues"", ""Cultural Exchange"", ""Fashion Designers"", ""Event Planning""]
+}"
 
-What are female Muslim dresses called?
-{
-  ""tier1"": [""Abaya"", ""Hijab""],
-  ""tier2"": [""Bridal"", ""Silver"", ""Islamic"", ""Traditional"", ""Cultural""],
-  ""tier3"": [""Wedding Dresses"", ""Modest Fashion"", ""Women's Clothing"", ""Muslim Wedding Traditions"", ""Middle Eastern Style"", ""Elegant Occasion Wear""]
+What is the significance of a purple wedding dress?
+"{
+  ""tier1"": [""lilac Muslim bridal"", lavender wedding dress"", ""muslim bridal wear""],
+  ""tier2"": [""purple color symbolism"", ""cultural significance"", ""bridal fashion trends"", ""islamic wedding traditions"", ""wedding dress styles""],
+  ""tier3"": [""vintage weddings"", ""boho chic weddings"", ""spring wedding inspiration"", ""moroccan wedding traditions"", ""american muslim weddings"", ""unique wedding attire""]
 }"
 
 What color do Muslim brides usually wear?
 "{
-  ""tier1"": [""Muslim brides"", ""silver wedding attire""],
-  ""tier2"": [""traditional Islamic wedding dress"", ""white wedding alternatives"", ""cultural wedding customs"", ""Middle Eastern bridal wear"", ""South Asian wedding traditions""],
-  ""tier3"": [""henna night"", ""nikah ceremony"", ""walima reception"", ""Islamic wedding decor"", ""bridal jewelry trends"", ""cultural exchange in US weddings""]
+  ""tier1"": [""lilac Muslim bridal"", Muslim brides"", ""wedding attire""],
+  ""tier2"": [""traditional wedding colors"", ""bridal dress"", ""cultural significance"", ""Islamic customs"", ""ceremony wear""],
+  ""tier3"": [""American Muslim culture"", ""South Asian wedding traditions"", ""Middle Eastern bridal fashion"", ""Islamic wedding ceremonies in the US"", ""interfaith weddings"", ""cultural fusion in wedding attire""]
 }"
 
-
+Bot protection for GitHub Pages:
+GitHub Pages is static so you can't do server-side blocking, but you can add a robots.txt to disallow known bot crawlers, and add Cloudflare as a proxy (free tier) in front of your GitHub Pages site — Cloudflare automatically blocks a huge percentage of bot traffic and you can add country-blocking rules (e.g. block Singapore). That's the most effective free option for a static site.

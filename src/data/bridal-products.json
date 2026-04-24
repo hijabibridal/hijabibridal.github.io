@@ -110,77 +110,82 @@
       "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What is a bridal caftan?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A bridal caftan is a long, flowing modest wedding dress rooted in Middle Eastern and North African culture. It is typically floor-length, often cinched at the waist with a bridal belt, and made from fabrics like silk, velvet, georgette, or brocade. Unlike a conventional wedding gown, a bridal caftan requires no structured boning or complex alteration, making it one of the most immediately wearable and size-inclusive wedding dress options available to US brides, boasting little or no customization.\"}}, {\"@type\": \"Question\", \"name\": \"What is the best bridal caftan style for 2026?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The strongest bridal caftan styles are the embroidered traditional caftan for formal nikah ceremonies, the pastel caftan for summer wedding trends in 2026 and pre-wedding events, the boho chic style caftan for destination weddings and beach weddings, and the Hollywood high fashion caftan in luxury fabric for evening wear and honeymoon fashion. This choice is open to custom design. The right choice depends on the occasion, season, and the bride's personal aesthetic.\"}}, {\"@type\": \"Question\", \"name\": \"Is a bridal caftan a good choice for a beach wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. A bridal caftan is one of the best wedding dress choices for a beach wedding. Its flowing unstructured silhouette moves naturally outdoors and lightweight luxury fabrics like jacquard and silk georgette breathe in heat and photograph beautifully in natural light. For a destination wedding or beach wedding, a chiffon or cotton caftan is more practical than a structured gown.\"}}, {\"@type\": \"Question\", \"name\": \"What luxury fabric is best for a bridal caftan?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Silk is the gold standard luxury fabric for bridal caftans — it drapes beautifully, photographs with depth, and is the most customizable. Jacquard is a lighter alternative suited to beach weddings and destination weddings. Velvet is the best luxury fabric for traditional and winter wedding caftans, along with georgette. Brocade works well for structured reception styles.\"}}, {\"@type\": \"Question\", \"name\": \"Are bridal caftans available in plus sizes?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. The bridal caftan is one of the most naturally plus size-friendly wedding dress options available. Its flowing silhouette is flattering across a wide range of body types without requiring complex alteration. Plus size caftan designs typically feature layered takchita cuts that create a graceful silhouette. All styles in our collection are available through Amazon with size charts and require little or no customization.\"}}, {\"@type\": \"Question\", \"name\": \"Can a bridal caftan be worn as wedding guest attire?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. A caftan in a non-white color — dusty rose, sage green, champagne, or navy — is widely appropriate as wedding guest attire at Muslim weddings. It respects modesty requirements, suits summer wedding trends, and is culturally resonant in Middle Eastern, North African, and West African wedding contexts. Many US Muslim women purchase a caftan specifically as wedding guest attire for summer and fall weddings.\"}}, {\"@type\": \"Question\", \"name\": \"Can a caftan double as honeymoon fashion?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. A silk or printed caftan transitions naturally from wedding celebrations to post-wedding travel as honeymoon fashion. It functions as modest coverage, resort wear, and evening wear simultaneously. The same caftan worn at a reception can be repacked for a beach honeymoon destination without any styling adjustment — making it one of the most customizable and cost-effective wedding purchases a bride can make.\"}}, {\"@type\": \"Question\", \"name\": \"Where can I buy a bridal caftan in the USA?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Bridal caftans are available through Amazon, where all styles in our collection are listed with US shipping. Our Hijabi Bridal collection includes Moroccan, Dubai, and African boubou caftan styles in georgette, jacquard and brocade embroidered fabrics across a range of colors and sizes.\"}}]"
     },
     {
-      "slug": "bridal-dupatta",
-      "name": "Bridal Dupatta",
-      "stylingTable": {
-        "chartName": "How to Add a Double Dupatta to Your Bridal Look",
-        "leftEntity": {
-          "label": "Types of Dupattas",
-          "description": ""
-        },
-        "topEntity": {
-          "label": "Double Dupatta Wearing Styles",
-          "description": ""
-        },
-        "columns": [
-          "over the head to the back",
-          "freestyle",
-          "accordioned over the shoulder",
-          "over the arm"
-        ],
-        "rows": {
-          "Net": [
-            "over the head to the back",
-            "freestyle",
-            "accordioned over the shoulder",
-            "over the arm"
-          ],
-          "Velvet": [
-            "over the head to the back",
-            "accordioned over the shoulder",
-            "over the arm"
-          ],
-          "Silk": [
-            "over the head to the back",
-            "over the arm"
-          ],
-          "Organza": [
-            "over the head to the back",
-            "freestyle",
-            "over the arm"
-          ],
-          "Chiffon": [
-            "over the arm"
-          ]
-        }
-      },
-      "titleTag": "Bridal Dupatta Collection | Hijabi Bridal",
-      "imageUrl": "bridal-dupatta/maroon-velvet-dupatta.webp",
-      "imageAlt": "Hijabi Bridal Dupatta Collection, featuring this Maroon Velvet Dupatta, and other colors like red, champagne, gold, white, and more.",
-      "metaDescription": "Explore our curated selection of bridal dupattas, and get the perfect add-on for bridal double dupatta styles for Muslim lehengas and shararas",
-      "description": "Can I wear a dupatta if I'm not Indian or Pakistani?\nBecause similar shawls are worn by many Muslims around the world, the dupatta is a global garment that transcends a single border. While deeply rooted in South Asia, it is essential to note that long shawls are worn in Sudan, Somalia, Iran, and Tanzania. The bridal dupatta has become a premier choice for Muslim brides, offering a silhouette that is both regal and respectful of diverse wedding traditions. READ MORE BELOW...",
-      "longContent": [
-        {
-          "heading": "What does a bride wear on her wedding day?",
-          "paragraphs": [
-            "On her wedding day, a bride typically selects traditional attire that reflects her personal taste. The use of a traditional scarf (dupatta) is particularly popular due to the heavy South Asian influence seen in many North American ceremonies, though similar shawls are worn in Sudan, Somalia, Iran, and Tanzania. A bridal ensemble often consists of a flared skirt, a tailored blouse, and a large dupatta that can be draped to provide modest coverage. This dupatta serves as a versatile accessory that completes the bridal look. Whether the bride chooses a dupatta for its religious use or its aesthetic appeal, the dupatta remains a focal point."
-          ]
-        },
-        {
-          "heading": "Why Use a Dupatta on Your Wedding Day?",
-          "paragraphs": [
-            "When you wear a bridal dupatta, you are honoring a legacy of textile art. A well-styled dupatta is a sign of tradition. You might see a bridal dupatta draped over one shoulder or used as a veil. Because the dupatta is so lightweight, it is the ideal accessory for a US bride. The dupatta allows for a seamless blend of modesty and high fashion."
-          ]
-        },
-        {
-          "heading": "The Importance of Fabric and Texture",
-          "paragraphs": [
-            "The foundation of any stunning bridal look is the fabric of the dupatta. For a high-end bridal dupatta, designers often utilize heavy, luxurious velvets, or delicate chiffons and organzas. The choice of fabric dictates how the dupatta moves or stays. A silk dupatta offers a polished look, while a velvet dupatta is ideal for winter ceremonies. A chiffon dupatta creates a lighter, ethereal look. Whether it is an embroidered dupatta from India or a similar shawl from Iran, the texture is paramount.",
-            "The interplay between fabric and light is a key consideration in modern wedding fashion. No dupatta is complete without detailed embellishments that play with the lighting of the venue. The way a dupatta catches the light can transform the look of your primary dress. On the wedding day, the dupatta adds a layer of sophistication. A bride may even choose a second dupatta to drape over her head for the ceremony. For hijabis, it's worn over the hijab to the back, so the detailed edge shows near the face."
-          ]
-        }
+  "slug": "bridal-dupatta",
+  "name": "Bridal Dupatta",
+  "stylingTable": {
+    "chartName": "How to Add a Double Dupatta to Your Bridal Look",
+    "leftEntity": {
+      "label": "Types of Dupattas",
+      "description": ""
+    },
+    "topEntity": {
+      "label": "Double Dupatta Wearing Styles",
+      "description": ""
+    },
+    "columns": [
+      "over the head to the back",
+      "freestyle",
+      "accordioned over the shoulder",
+      "over the arm"
+    ],
+    "rows": {
+      "Net": [
+        "over the head to the back",
+        "freestyle",
+        "accordioned over the shoulder",
+        "over the arm"
       ],
-      "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Can I wear a dupatta if I'm not Indian?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes! The dupatta is a versatile accessory. Since similar shawls are worn in Sudan, Somalia, Iran, and Tanzania, it is a global piece of attire.\"}}, {\"@type\": \"Question\", \"name\": \"What does a red dupatta symbolize?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A red dupatta is a traditional wedding color that symbolizes new beginnings and happiness for the couple.\"}}, {\"@type\": \"Question\", \"name\": \"What fabrics are best for a bridal dupatta?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Popular fabrics include organza and velvet for structure, or chiffon, silk and georgette for a more fluid, lightweight drape during the ceremony.\"}}, {\"@type\": \"Question\", \"name\": \"Is the dupatta only worn in India?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"While most famous in South Asia, similar shawls are worn as part of traditional bridal attire in other areas of the world.\"}}]"
+      "Velvet": [
+        "over the head to the back",
+        "accordioned over the shoulder",
+        "over the arm"
+      ],
+      "Silk": [
+        "over the head to the back",
+        "over the arm"
+      ],
+      "Organza": [
+        "over the head to the back",
+        "freestyle",
+        "over the arm"
+      ],
+      "Chiffon": [
+        "over the arm"
+      ]
+    }
+  },
+  "titleTag": "Bridal Dupatta Collection | Hijabi Bridal",
+  "imageUrl": "bridal-dupatta/maroon-velvet-dupatta.webp",
+  "imageAlt": "Hijabi Bridal Dupatta Collection, featuring this Maroon Velvet Dupatta, and other colors like red, champagne, gold, white, and more.",
+  "metaDescription": "Shop our bridal dupatta collection — embroidered fabrics in velvet, net, silk, and georgette. Flattering double dupatta styles for Muslim brides and hijabi brides across the USA.",
+  "description": "What are the latest bridal dupatta trends?\nThe biggest shift in bridal dupatta styling right now is the move toward double dupatta looks — layering a heavier, embroidered outer piece over a lighter, more fluid second dupatta — alongside a growing preference for rich luxury textiles like velvet and silk over standard synthetic fabrics. Brides across the US desi community are choosing contemporary styles that honor cultural heritage without sacrificing modern bridal aesthetics. While deeply rooted in South Asia, it is essential to note that similar long shawls are worn in Sudan, Somalia, Iran, and Tanzania. The bridal dupatta has become a global choice for modest brides. READ MORE BELOW...",
+  "longContent": [
+    {
+      "heading": "What are the latest bridal dupatta trends?",
+      "paragraphs": [
+        "In 2026, the most searched bridal dupatta looks is the double dupatta, centered on richly worked surfaces — dense zari borders, mirror embroidery at the edges, and sequin scatter across net and georgette base fabrics — paired with the kind of luxury textiles that photograph with depth and dimension under event lighting.The latest bridal dupatta trends are being shaped by three forces simultaneously: Indian wedding trends pushing toward heavier embroidered fabrics and more dramatic border work, contemporary styles emerging from the US desi community that blend South Asian fashion with Western bridal aesthetics, and a broader Bollywood inspiration cycle that keeps refreshing the color and embellishment vocabulary every season.",
+        "Traditional designs are not disappearing — they are being recontextualized. The classic red velvet bridal dupatta with a thick gold border remains one of the most purchased pieces in our collection, and it is exactly the kind of traditional design that holds its place in Indian wedding trends year after year because it is never actually out of season. What has changed is the appetite for pairing those traditional designs with contemporary styles in a single look: a heavily embroidered velvet piece worn over the hijab to the back, framed by a second, lighter net or organza dupatta draped across the arm or accordion-folded over one shoulder. This double-dupatta layering technique is the dominant styling trend across South Asian fashion editorial coverage right now, and it is the approach our collection is specifically designed to support.",
+        "Luxury textiles are defining the upper tier of the 2026 bridal dupatta market. Silk dupattas in jade green and champagne, velvet pieces in maroon and gold, and heavily embroidered fabrics in net with metallic thread borders are all performing strongly in both search and purchase data. Bollywood inspiration continues to drive color choices — the same jewel tones and embellishment-forward looks that appear on screen translate directly into bridal dupatta searches within the US desi community, which is why our collection prioritizes depth of color and quality of embellishment over breadth of inventory. For brides who want to understand how [South Asian bridal fashion](https://www.vogue.com/article/south-asian-bridal-fashion-guide) is evolving in the US context, the shift toward heavier fabrics, bolder borders, and intentional double-dupatta layering reflects exactly where the category is heading in 2026."
+      ]
+    },
+    {
+      "heading": "What is a bridal dupatta?",
+      "paragraphs": [
+        "A bridal dupatta is a large, decorative scarf — typically two to three meters long — that forms one of the most important pieces of Indian wedding attire and, more broadly, South Asian heritage bridal wear. It is worn draped over the head, across the shoulders, or over one arm, and it functions simultaneously as a modesty garment, a statement accessory, and a piece of cultural significance that connects the bride to generations of wedding fashion before her. The word dupatta comes from the Sanskrit root meaning two-layered cloth, which reflects both its physical construction and its layered role in the bridal look — it is at once functional wedding attire and a deeply symbolic piece of ethnic fashion.",
+        "In terms of cultural significance, the bridal dupatta carries meaning across multiple traditions. In Punjabi culture, the dupatta is a central element of the wedding ceremony itself — the groom's family may present it to the bride, and its color often signals the stage of the wedding event. In Muslim wedding customs, the dupatta serves a specific function as a modesty cover worn over the hijab, allowing the bride to meet the requirements of Islamic dress while still wearing the full grandeur of her bridal wear. Across both of these contexts, the bridal dupatta is never a minor accessory — it is a defining piece of the bridal look. While deeply rooted in South Asia, it is essential to note that similar long shawls are worn in Sudan, Somalia, Iran, and Tanzania, which is why we think of the dupatta as a global modest bridal accessory rather than a culturally exclusive one.",
+        "From a wedding fashion standpoint, the bridal dupatta is also one of the most technically demanding pieces in the ensemble. Bridal accessories at this level require embroidered fabrics, luxury textiles, and border work that can hold up through a full wedding day of movement, photography, and ceremony. Our collection spans net, velvet, silk, georgette, and organza — each fabric behaving differently when draped, pinned, or accordion-folded, and each carrying its own relationship to light, weight, and embellishment. For hijabi brides specifically, the dupatta functions as a bridal accessory worn over the hijab, pinned at the crown so the embroidered or metallic border frames the face — a styling approach that makes the quality of the border work one of the most important purchasing considerations in the entire bridal accessories category. For a deeper look at how [ethnic fashion](https://www.brides.com/south-asian-wedding-fashion-8413215) has shaped US bridal trends, the dupatta's growing mainstream visibility is one of the clearest indicators of South Asian heritage's influence on American wedding culture."
+      ]
+    },
+    {
+      "heading": "Can a bridal dupatta be reused?",
+      "paragraphs": [
+        "Yes — and reusing a bridal dupatta is one of the most practical and elegant forms of accessory styling available to South Asian brides. Because a well-made, embroidered bridal dupatta is constructed from luxury textiles designed to last, it holds its shape, color, and embellishment through multiple events when properly cared for. The traditional pieces in our collection, while not custom-made, are built with this longevity in mind: the embroidered borders on our velvet and net dupattas use thread weights and attachment methods that do not loosen with normal handling, and the base fabrics — silk, velvet, georgette — are all materials with a proven track record in Indian wedding attire and South Asian weddings in the USA as heirloom-quality textiles.",
+        "The most natural place to reuse a bridal dupatta is across the multiple events that make up a South Asian wedding weekend. A bride who wears her embroidered champagne dupatta at the nikah can re-style the same piece at the walima wedding reception by changing the drape — from pinned over the hijab at the ceremony to accordion-folded over one shoulder in a more relaxed, contemporary pose. It's accessory styling flexibility. Our brides choose whether to invest in a single high-quality, traditional piece or purchase separate dupattas for each event. The same designer-level, custom-made piece reads differently depending on how it is worn, which makes reuse feel intentional rather than repetitive. Designer cultural heritage pieces are designed to be worn more than once — that is part of what makes them traditional in the first place.",
+        "Beyond the wedding weekend, a bridal dupatta can be reused as a statement piece at future wedding receptions, Eid celebrations, and formal events where traditional Indian wedding attire is appropriate. A heavily embroidered velvet dupatta in maroon or gold can be worn easily with a different outfit. Brides in the US desi community frequently incorporate their bridal dupattas into anniversary looks or family event attire as a way of honoring the cultural significance of the original garment. For wedding planning purposes, treating the bridal dupatta as a long-term investment rather than a single-use accessory is both financially sensible and consistent with the fashion trends in South Asian weddings in the USA, where the emphasis on quality construction and traditional craftsmanship is increasingly aligned with sustainability values. For guidance on caring for embroidered luxury textiles between events, [textile care resources](https://textilelearner.net/velvet-fabric-properties/) recommend storing velvet and embroidered fabrics flat, away from direct light, to preserve both the pile and the metallic thread work through multiple seasons of use."
+      ]
+    }
+  ],
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What are the latest bridal dupatta trends?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The leading bridal dupatta trends in 2026 center on double dupatta layering — pairing a heavy, embroidered velvet or net piece worn over the hijab with a lighter second dupatta draped over the arm or shoulder — alongside a strong preference for luxury textiles like silk and velvet over synthetic fabrics. Bollywood inspiration continues to drive jewel-tone color choices, while the US desi community is shaping contemporary styles that blend South Asian fashion with Western bridal aesthetics. Traditional designs with dense border work remain consistently popular, particularly in red, maroon, gold, and champagne.\"}}, {\"@type\": \"Question\", \"name\": \"What is a bridal dupatta?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A bridal dupatta is a large decorative scarf — typically two to three meters long — that is one of the defining pieces of Indian wedding attire and South Asian heritage bridal wear. It is worn draped over the head, across the shoulders, or over one arm, and it carries cultural significance across Punjabi culture and in Muslim wedding customs around the world. For hijabi brides, it is pinned over the hijab so the embroidered border frames the face. While rooted in South Asia, similar long shawls are worn in Sudan, Somalia, Iran, and Tanzania, making it a global modest bridal accessory.\"}}, {\"@type\": \"Question\", \"name\": \"Can a bridal dupatta be reused?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. A well-made, embroidered bridal dupatta in luxury textiles like velvet, silk, or georgette is designed to last through multiple events. Beyond the wedding weekend, a traditional, modern or custom-made bridal dupatta can be reused at future receptions, Eid celebrations, and formal events. Store velvet and embroidered pieces flat, away from direct light, to preserve the fabric and metallic thread work between uses.\"}}, {\"@type\": \"Question\", \"name\": \"Can I wear a bridal dupatta if I am not Indian or Pakistani?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Absolutely. While the bridal dupatta is deeply rooted in South Asian heritage, similar long shawls are worn as part of traditional bridal and formal attire in other countries as well. Muslim brides from diverse backgrounds — including those with no South Asian heritage — wear dupattas as a modest bridal accessory that aligns with Islamic dress standards. The dupatta is a global garment, and any bride drawn to its elegance, cultural significance, or practical modesty function is welcome to wear one.\"}}]"
     },
     {
   "slug": "bridal-hijab",
