@@ -1526,69 +1526,70 @@
       ]
     },
     {
-      "name": "Red Net Dupatta",
-      "slug": "red-net-bridal-dupatta",
-      "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
-      "mainCategorySlugs": [
-        "bridal-dupatta",
-        "red"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp", 
-          "targetSlug": "red-crepe-bridal-hijab" 
-        },
-        { 
-          "image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp", 
-          "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers" 
-        }
-      ],
-      "images": [
-        {
-          "url": "bridal-dupatta/red-net-dupatta.webp",
-          "alt": "Red Net Dupatta with gold patterns and designs, ideal for hijabi bridal wearing styles.",
-          "amazonLink": "https://amzn.to/4b4GqgK",
-          "figcaption": "This Red Net Dupatta features intricate patterns and designs on a sheer net fabric. The generous length and width offer endless styling inspiration for the modern bride."
-        },
-        {
-          "url": "bridal-dupatta/red-net-dupatta-2.webp",
-          "alt": "Red Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
-          "amazonLink": "https://amzn.to/4b4GqgK",
-          "figcaption": "The high-quality fabric of this red dupatta ensures it stays secure during various bridal wearing styles, making it a perfect addition to your wedding ensemble."
-        }
-      ],
-      "og_image": "bridal-dupatta/red-net-dupatta.webp",
-      "title_tag": "Red Net Bridal Dupatta | Amazon Styling",
-      "og_title": "Red Net Bridal Dupatta | Amazon Product Styling",
-      "og_type": "website",
-      "meta_description": "Shop our Red Net Dupatta on Amazon. Features premium net fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026.",
-      "attributes": {
-        "category": "Bridal Dupatta",
-        "color": "Red",
-        "material": "Embroidery",
-        "style": "Elegant",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Bridal Dupatta",
-          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
-        },
-        {
-          "name": "Red Net Dupatta",
-          "item": "https://hijabibridal.github.io/shop/product/red-net-bridal-dupatta"
-        }
-      ]
+  "name": "Red Net Dupatta",
+  "slug": "red-net-bridal-dupatta",
+  "description": "This sheer red Muslim bridal dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a red or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+  "mainCategorySlugs": [
+    "bridal-dupatta",
+    "red"
+  ],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp",
+      "targetSlug": "red-crepe-bridal-hijab"
     },
+    {
+      "image": "/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp",
+      "targetSlug": "maroon-and-gold-bridal-punjabi-jutti-slippers"
+    }
+  ],
+  "images": [
+    {
+      "url": "bridal-dupatta/red-net-dupatta.webp",
+      "alt": "Red Net Dupatta with gold patterns and designs, ideal for hijabi bridal wearing styles.",
+      "amazonLink": "https://amzn.to/4b4GqgK",
+      "figcaption": "This red Muslim bridal dupatta features sheer net fabric with a thick gold embroidered border — pin it over the hijab for the nikah ceremony so the border frames the face, or accordion-fold it over one shoulder for the walima reception."
+    },
+    {
+      "url": "bridal-dupatta/red-net-dupatta-2.webp",
+      "alt": "Red Dupatta featuring a thick gold border, ideal for layering with a hijabi lehenga.",
+      "amazonLink": "https://amzn.to/4b4GqgK",
+      "figcaption": "The sheer net base and thick gold border make this red Muslim bridal dupatta an ideal second layer over the dupatta that came with your lehenga or wedding dress — the contrast in fabric weight adds dimension to the full bridal look."
+    }
+  ],
+  "og_image": "bridal-dupatta/red-net-dupatta.webp",
+  "title_tag": "Red Net Bridal Dupatta | Amazon Styling",
+  "og_title": "Red Net Bridal Dupatta | Amazon Product Styling",
+  "og_type": "website",
+  "meta_description": "Shop this red Muslim bridal dupatta on Amazon — sheer net fabric with thick gold embroidered border. Worn over the hijab for the nikah or layered as a double dupatta. Available on Amazon.",
+  "attributes": {
+    "category": "Bridal Dupatta",
+    "color": "Red",
+    "material": "Embroidery",
+    "style": "Elegant",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"This red Muslim bridal dupatta pairs with the most traditional answer to that question — red is the dominant bridal color in Pakistani wedding customs and South Asian Islamic wedding traditions, worn at nikah ceremonies and walima receptions for generations. Green, ivory, and champagne are also traditional depending on cultural background. In the American Muslim community, the accepted palette has expanded to include pink, navy, lilac, and sage — but red remains the most culturally rooted choice.\"}}, {\"@type\": \"Question\", \"name\": \"Why do Muslim brides wear red?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Red is the dominant bridal color in Pakistani wedding customs and South Asian Islamic wedding traditions — a cultural convention passed down through generations, not a religious requirement. Islamic customs govern modesty and coverage, not color. Muslim brides from South Asian backgrounds choose red for its deep association with celebration and the joy of the nikah ceremony; Muslim brides from other backgrounds may choose any color that feels meaningful to them.\"}}, {\"@type\": \"Question\", \"name\": \"How do I wear a dupatta over a hijab for a Muslim wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Set your nikkah jewelry over the hijab first, then center the dupatta over the crown and pin it so the gold border frames your face on both sides, with both ends falling to the back. For a reception look, accordion-fold one end and drape it over a shoulder. This red Muslim bridal dupatta also works as a second layer over the dupatta that came with your outfit — the sheer net contrasts with heavier fabrics to add depth to the full bridal look.\"}}]",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "item": "https://hijabibridal.github.io/"
+    },
+    {
+      "name": "Shop",
+      "item": "https://hijabibridal.github.io/shop"
+    },
+    {
+      "name": "Bridal Dupatta",
+      "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+    },
+    {
+      "name": "Red Net Dupatta",
+      "item": "https://hijabibridal.github.io/shop/product/red-net-bridal-dupatta"
+    }
+  ]
+},
     {
       "name": "White Net Dupatta",
       "slug": "white-net-bridal-dupatta",
@@ -7974,69 +7975,70 @@
       ]
     },
     {
-      "name": "Red Dress for Muslim Wedding",
-      "slug": "red-dress-for-muslim-wedding",
-      "description": "This red Muslim wedding dress features a refined lace overlay that accentuates its vibrant red hue. This stunning modest wedding dress is expertly crafted for the contemporary bride, combining the rich heritage of Muslim wedding dresses with modern fashion sensibilities. Available in sizes ranging from S to XXL, this dress ensures a flattering fit for every silhouette. The ensemble includes the dress, matching pants, and a simple dupatta, making it a complete choice for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Red Dress for Muslim Wedding  </h2>This red Muslim wedding dress coordinates with styling for bridal looks. Prepare to wear your hair down under your hijab to create a soft, natural frame that balances the bold red palette. Style your hijab in a layered fashion using lace that echoes the dress’s overlay, and enhance it with subtle jewelry for a regal touch. The primary dupatta is lightly embroidered and designed to flow gracefully over your shoulders, while a second dupatta can add drama to your look. Complement this ensemble with contrast accents in white, gold, or silver to enhance its charm.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
-      "mainCategorySlugs": [
-        "muslim-wedding-dresses",
-        "red"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp", 
-          "targetSlug": "red-crepe-bridal-hijab" 
-        },
-        { 
-          "image": "/images/bridal-dupatta/red-net-dupatta.webp", 
-          "targetSlug": "red-net-bridal-dupatta" 
-        }
-      ],
-      "images": [
-        {
-          "url": "red-dress-for-muslim-wedding.webp",
-          "alt": "Red Muslim wedding dress with lace overlay and modest pants — modern nikah bridal outfit",
-          "figcaption": "A vibrant red Muslim bridal gown with a refined lace overlay and dupatta, offering a bold yet traditional look.",
-          "amazonLink": "https://amzn.to/4a00vmp"
-        },
-        {
-          "url": "red-dress-for-muslim-wedding1.webp",
-          "alt": "Red Muslim wedding dress with lace overlay and dupatta — modern nikah bridal outfit",
-          "figcaption": "A vibrant red Muslim bridal gown with a refined lace overlay and modest pants, offering a bold yet traditional look.",
-          "amazonLink": "https://amzn.to/4a00vmp"
-        }
-      ],
-      "og_image": "red-dress-for-muslim-wedding.webp",
-      "title_tag": "Red Muslim Bridal Dress on Amazon | 2026 Modest",
-      "og_title": "Red Muslim Bridal Dress on Amazon | 2026 Modest",
-      "og_type": "website",
-      "meta_description": "Get this red Muslim bridal gown on Amazon. Perfect wedding attire to include in your wedding planning for a stunning look at any location and budget.",
-      "attributes": {
-        "category": "Red",
-        "color": "Red",
-        "material": "Lace",
-        "style": "Modern / Modest",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Red",
-          "item": "https://hijabibridal.github.io/shop/category/red"
-        },
-        {
-          "name": "Red Dress for Muslim Wedding",
-          "item": "https://hijabibridal.github.io/shop/product/red-dress-for-muslim-wedding"
-        }
-      ]
+  "name": "Red Dress for Muslim Wedding",
+  "slug": "red-dress-for-muslim-wedding",
+  "description": "This red Muslim bridal dress features a refined lace overlay that accentuates its vibrant red hue. This stunning modest wedding dress is expertly crafted for the contemporary bride, combining the rich heritage of Muslim wedding dresses with modern fashion sensibilities. Available in sizes ranging from S to XXL, this dress ensures a flattering fit for every silhouette. The ensemble includes the dress, matching pants, and a simple dupatta, making it a complete choice for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Red Dress for Muslim Wedding  </h2>This red Muslim wedding dress coordinates with styling for bridal looks. Prepare to wear your hair down under your hijab to create a soft, natural frame that balances the bold red palette. Style your hijab in a layered fashion using lace that echoes the dress\u2019s overlay, and enhance it with subtle jewelry for a regal touch. The primary dupatta is lightly embroidered and designed to flow gracefully over your shoulders, while a second dupatta can add drama to your look. Complement this ensemble with contrast accents in white, gold, or silver to enhance its charm.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+  "mainCategorySlugs": [
+    "muslim-wedding-dresses",
+    "red"
+  ],
+  "suggestedAddOns": [
+    {
+      "image": "/images/bridal-hijab/red-crepe-bridal-hijab.webp",
+      "targetSlug": "red-crepe-bridal-hijab"
     },
+    {
+      "image": "/images/bridal-dupatta/red-net-dupatta.webp",
+      "targetSlug": "red-net-bridal-dupatta"
+    }
+  ],
+  "images": [
+    {
+      "url": "red-dress-for-muslim-wedding.webp",
+      "alt": "Red Muslim bridal dress with lace overlay and modest pants \u2014 modern nikah bridal outfit",
+      "figcaption": "This modern red Muslim bridal dress features a lace overlay and minimal embroidery — a contemporary take on traditional red wedding attire. Includes matching pants and dupatta.",
+      "amazonLink": "https://amzn.to/4a00vmp"
+    },
+    {
+      "url": "red-dress-for-muslim-wedding1.webp",
+      "alt": "Red Muslim bridal dress with lace overlay and dupatta \u2014 modern nikah bridal outfit",
+      "figcaption": "The lace overlay keeps this red Muslim bridal dress light and modern while the matching dupatta can be pinned over the hijab for the nikah ceremony or draped over the shoulder for the walima reception.",
+      "amazonLink": "https://amzn.to/4a00vmp"
+    }
+  ],
+  "og_image": "red-dress-for-muslim-wedding.webp",
+  "title_tag": "Red Muslim Bridal Dress on Amazon | 2026 Modest",
+  "og_title": "Red Muslim Bridal Dress on Amazon | 2026 Modest",
+  "og_type": "website",
+  "meta_description": "Shop this red Muslim bridal dress on Amazon — a modern Muslim wedding dress with lace overlay, minimal embroidery, matching pants and dupatta. Sizes S to XXL.",
+  "attributes": {
+    "category": "Red",
+    "color": "Red",
+    "material": "Lace",
+    "style": "Modern / Modest",
+    "condition": "New",
+    "availability": "InStock"
+  },
+  "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"This red Muslim bridal dress represents the most traditional answer to that question as red is the dominant bridal color in Pakistani wedding customs. Across South Asian Islamic wedding traditions red has been worn at nikah ceremonies and walima receptions for generations. It is a cultural tradition, though, not an Islamic requirement, which is why Muslim brides from other backgrounds freely choose different colors. That said, red remains the most purchased bridal color in American Muslim weddings.\"}}, {\"@type\": \"Question\", \"name\": \"Why do Muslim brides wear red?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Red is the dominant bridal color in Pakistani wedding customs and South Asian Islamic wedding traditions — a cultural convention passed down through generations rather than a religious requirement. Islamic customs govern modesty and coverage, not color. Muslim brides from South Asian backgrounds choose red for its deep association with celebration and the joy of the nikah ceremony; Muslim brides from other backgrounds choose any color that feels meaningful to them.\"}}, {\"@type\": \"Question\", \"name\": \"What makes this a modern Muslim wedding dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"This red Muslim bridal dress takes a modern approach through its lace overlay and minimal embroidery — a deliberate departure from the heavily embellished surfaces common in traditional red wedding attire. The lace adds texture and bridal character without the weight of dense threadwork, making it lighter and more comfortable across a full wedding day. It includes matching modest pants and a dupatta, completing the look without requiring additional purchases.\"}}]",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "item": "https://hijabibridal.github.io/"
+    },
+    {
+      "name": "Shop",
+      "item": "https://hijabibridal.github.io/shop"
+    },
+    {
+      "name": "Red",
+      "item": "https://hijabibridal.github.io/shop/category/red"
+    },
+    {
+      "name": "Red Dress for Muslim Wedding",
+      "item": "https://hijabibridal.github.io/shop/product/red-dress-for-muslim-wedding"
+    }
+  ]
+},
     {
       "name": "Blue Muslim Wedding Dress on Amazon",
       "slug": "blue-muslim-wedding-dress-on-amazon",
