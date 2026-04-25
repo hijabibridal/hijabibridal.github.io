@@ -1691,43 +1691,70 @@
   ],
   "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"What color do Muslim brides wear for a wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Muslim brides today wear a wide range of colors. While red is the traditional choice in Pakistan-inspired and South Asian ceremonies, modern Muslim wedding dresses now come in champagne, blush, sage, ivory, and powder blue. These looks honor Islamic customs and cultural influences while reflecting the American fusion spirit of contemporary weddings.\"}}, {\"@type\": \"Question\", \"name\": \"Which color is best for Nikkah?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The best color for a Nikkah depends on your personal and cultural background. Red is the most classic Pakistan-inspired choice, but champagne, ivory, and pale gold are widely accepted as Islamic attire for the Nikkah. Muslim wedding dresses with hijab in coordinating tones — paired with hijab styles that complement the fabric — create the most elegant Nikkah look.\"}}, {\"@type\": \"Question\", \"name\": \"What defines the traditional bridal look for 2026?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The 2026 traditional look is defined by silhouettes like the anarkali dress, modesty rooted in Islamic customs, and pastel or jewel-toned palettes. Modern Muslim wedding dresses this season favor delicate surface embroidery, making traditional attire feel refined across multiple ceremonies.\"}}, {\"@type\": \"Question\", \"name\": \"How can I incorporate cultural influences into my wedding attire?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Honor your heritage by choosing traditionally Islamic designs like abaya-style caftans, anarkalis, like the ones on this page, Muslim lehengas and shararas. Pairing these garments with traditional hijab styles and halal nail art creates a look rooted in Islamic customs while feeling personal.\"}}, {\"@type\": \"Question\", \"name\": \"What should brides wear to their henna night?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The henna night calls for festive designs in vibrant colors — greens, mustard yellows, and terracotta are popular choices that photograph well against mehndi patterns.\"}}, {\"@type\": \"Question\", \"name\": \"What location is best for a traditional 2026 wedding?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Historic venues, ballrooms with architectural detail, or traditional garden settings complement the Islamic-inspired and American fusion aesthetic of 2026 bridal trends.\"}}, {\"@type\": \"Question\", \"name\": \"How does the season impact traditional wedding planning?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Seasonality shapes fabric and color. Winter ceremonies favor deeper tones, while spring and summer celebrations lean toward lighter silks and floral embroideries.\"}}]"
 }
-
-I need the lilac collection page in the same format as we did silver. These should be in place, the remainder, please write it: "slug": "lilac", "name": "Lilac", "titleTag": "Lilac Collection | Hijabi Bridal"
-
-
-FYI: 
-Lilac is a trending color for the walima ceremony
-
-
-The description should have the first paa like this and it should be answered in the first paragraph using some of the entities that are set to be used more than others and explaining why silver is a top color for nikkah and walima: "description": "What is the best color for a walima function?\n...." and should be short, two or three sentences.
-
-
-Thereafter:
-
-First heading: What is the best color for a walima function? Second heading: What is the significance of a purple wedding dress? Third: What color do Muslim brides usually wear?  - 
-Any others you deem suitable. Then faq schema that contains the same questions as the headings and any others you deem suitable. 
-
-Full entity list:
-What is the best color for a walima function?
-"{
-  ""tier1"": [""lilac Muslim bridal"", Walima Function"", ""Lilac Color""],
-  ""tier2"": [""Wedding Reception"", ""Bridal Dress"", ""Pakistani Culture"", ""Wedding Decor"", ""Fashion Trends""],
-  ""tier3"": [""Muslim Wedding Traditions"", ""South Asian Community"", ""US Wedding Venues"", ""Cultural Exchange"", ""Fashion Designers"", ""Event Planning""]
-}"
-
-What is the significance of a purple wedding dress?
-"{
-  ""tier1"": [""lilac Muslim bridal"", lavender wedding dress"", ""muslim bridal wear""],
-  ""tier2"": [""purple color symbolism"", ""cultural significance"", ""bridal fashion trends"", ""islamic wedding traditions"", ""wedding dress styles""],
-  ""tier3"": [""vintage weddings"", ""boho chic weddings"", ""spring wedding inspiration"", ""moroccan wedding traditions"", ""american muslim weddings"", ""unique wedding attire""]
-}"
-
-What color do Muslim brides usually wear?
-"{
-  ""tier1"": [""lilac Muslim bridal"", Muslim brides"", ""wedding attire""],
-  ""tier2"": [""traditional wedding colors"", ""bridal dress"", ""cultural significance"", ""Islamic customs"", ""ceremony wear""],
-  ""tier3"": [""American Muslim culture"", ""South Asian wedding traditions"", ""Middle Eastern bridal fashion"", ""Islamic wedding ceremonies in the US"", ""interfaith weddings"", ""cultural fusion in wedding attire""]
-}"
+{
+      "name": "Green Sharara",
+      "slug": "green-bridal-sharara",
+      "description": "This exquisite green sharara clothing suit is crafted from lightweight net fabric and features heavy champagne embroidery. The flared sharara and intricate patterns make it a standout choice for brides looking for traditional style. It is designed to provide both comfort and an elegant silhouette for your body type on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Green Sharara</h2>The lightweight fabric and detailed patterns allow for various wearing styles, ensuring you look radiant while celebrating body positivity. Pair this sharara clothing suit with a matching dupatta and statement jewelry to elevate your bridal outfit. This piece offers the perfect style inspiration for a memorable and elegant wedding look.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry.webp", 
+          "targetSlug": "green-bridal-nikkah-jewelry"  
+        },
+        { 
+          "image": "/images/bridal-dupatta/green-velvet-dupatta.webp", 
+          "targetSlug": "green-velvet-bridal-dupatta" 
+        }
+      ],
+      "images": [
+        {
+          "url": "green-bridal-sharara-2.webp",
+          "alt": "Green bridal sharara — traditional modest Muslim wedding outfit for hijabi brides",
+          "figcaption": "A stunning green sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "amazonLink": "https://amzn.to/3GGRjsi"
+        },
+        {
+          "url": "green-bridal-sharara.webp",
+          "alt": "Green bridal sharara — traditional modest Muslim wedding outfit for hijabi brides",
+          "figcaption": "Green bridal sharara in a traditional modest style — a stunning Muslim wedding outfit for hijabi brides celebrating their nikah or walima. ",
+          "amazonLink": "https://amzn.to/3GGRjsi"
+        }
+      ],
+      "og_image": "green-bridal-sharara.webp",
+      "title_tag": "Green Bridal Sharara | Style for Chubby Girls and Body Types",
+      "og_title": "Green Bridal Sharara | Style for Chubby Girls and Body Types",
+      "og_type": "website",
+      "meta_description": "Shop the green sharara suit. A beautiful silhouette in premium fabric, perfect for chubby girls and celebrating body positivity with style.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Green",
+        "material": "Embroidery",
+        "style": "Traditional",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Green Sharara",
+          "item": "https://hijabibridal.github.io/shop/product/green-bridal-sharara"
+        }
+      ]
+    },
 
 Bot protection for GitHub Pages:
 GitHub Pages is static so you can't do server-side blocking, but you can add a robots.txt to disallow known bot crawlers, and add Cloudflare as a proxy (free tier) in front of your GitHub Pages site — Cloudflare automatically blocks a huge percentage of bot traffic and you can add country-blocking rules (e.g. block Singapore). That's the most effective free option for a static site.
