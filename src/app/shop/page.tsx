@@ -4,11 +4,11 @@ import Link from 'next/link';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'What is Muslim Wedding Attire Called? | Hijabi Bridal Shop',
-  description: 'Muslim wedding attire is called an abaya, bridal lehenga, or shalwar kameez. Discover all styles in our curated Amazon collection of Muslim wedding dresses and accessories.',
+  title: 'What is a Muslim wedding dress called? | Hijabi Bridal Shop',
+  description: 'A Muslim wedding dress is called an abaya, a Muslim bridal dress with sleeves, a bridal lehenga, or shalwar kameez. Discover all styles in our curated Amazon collection of Muslim wedding dresses and accessories.',
   openGraph: {
-    title: 'What is Muslim Wedding Attire Called? | Hijabi Bridal',
-    description: 'Browse our curated Amazon collection of Muslim bridal wear — abaya, lehenga, sharara, kaftan, sherwani and more.',
+    title: 'What is a Muslim wedding dress called? | Hijabi Bridal',
+    description: 'Browse our curated Amazon collection of Muslim bridal wear — abaya, dresses, lehenga, sharara, kaftan, and more.',
   },
 }
 
@@ -27,10 +27,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is Muslim wedding attire called?",
+      "name": "What is a Muslim wedding dress called?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Muslim wedding attire is called by different names depending on the bride or groom's cultural background. For brides, the most common terms are the abaya (a long, floor-length modest gown also worn as a bridal caftan or kaftan), the bridal lehenga (a flared embroidered skirt with matching blouse and dupatta), and the shalwar kameez or sharara (a tunic-and-trouser or divided-skirt suit). For grooms, the traditional long coat (sherwani) is the defining Muslim wedding dress across Pakistani, Indian, and broader South Asian communities."
+        "text": "A Muslim wedding dress is called by different names depending on the bride or groom's cultural background. For brides, the most common terms are the abaya (a long, floor-length modest gown also worn as a bridal caftan or kaftan), the bridal lehenga (a flared embroidered skirt with matching blouse and dupatta), and the shalwar kameez or sharara (a tunic-and-trouser or divided-skirt suit) or it's simply a Muslim bridal dress with sleeves."
       }
     },
     {
@@ -100,14 +100,14 @@ export default function ShopPage() {
           {/* One-sentence PAA answer — full max-w-xl width, same size as before */}
           <div>
             <h2 className="text-xl font-black uppercase tracking-[0.25em] text-pink-600 mb-2">
-              What is a Muslim wedding attire called?
+              What is a Muslim wedding dress called?
             </h2>
             <p className="text-gray-500 text-xl leading-relaxed">
-              Muslim wedding attire is called by many names — the abaya (a floor-length modest robe
+              A Muslim wedding dress is called by many names — the abaya (a floor-length modest robe
               worn as a bridal caftan or kaftan), the bridal lehenga (a flared embroidered skirt
               with dupatta), or the shalwar kameez / sharara (a tunic-and-trouser or divided-skirt
-              suit) — each a form of Islamic bridal wear that fulfills the modesty requirements of a
-              nikah ceremony while reflecting the bride's heritage... READ MORE BELOW
+              suit) or it can simply be a Muslim bridal dress with sleeves — each a form of Islamic 	      bridal wear that fulfills the modesty requirements of a
+              nikah ceremony while reflecting the bride's heritage and wedding customs in the USA... READ MORE BELOW
             </p>
           </div>
         </div>
@@ -275,21 +275,21 @@ export default function ShopPage() {
               the products. ───────────────────────────────────────────────── */}
           <article className="border-t-2 border-pink-100 pt-16 mt-8 max-w-3xl">
             <h2 className="text-3xl font-black uppercase tracking-tighter text-gray-900 mb-8">
-              What is a Muslim wedding attire called?
+              What is a Muslim wedding dress called?
             </h2>
             <div className="space-y-5 text-gray-600 text-base leading-relaxed">
               <p>
-                What is a Muslim wedding attire called — and which style is right for you? The abaya,
+                What is a Muslim wedding dress called — and which style is right for you? The abaya,
                 in its bridal form, is the most widely recognized piece of Islamic bridal wear for
                 brides from Arab, North African, and convert backgrounds. In its bridal incarnation,
                 the abaya functions as a cultural dress statement as much as a religious one — it
                 signals modest elegance through its floor-length, long-sleeved silhouette. The bridal
                 abaya in white, champagne, or gold is the leading wedding gown choice for nikah
-                ceremony looks that draw from Middle Eastern culture. In this collection, the abaya
-                finds expression in Dubai-style kaftans and Moroccan takchita sets — different
-                regional names for the same abaya-rooted modest wedding gown tradition. Every abaya
+                ceremony looks that draw from Middle Eastern fashion. In this collection, the abaya
+                finds expression in Dubai-style kaftans and Moroccan takchita sets that are fully embroidered. These are different
+                regional names for the same abaya-rooted modest wedding gown tradition for the nikah ceremony. Every abaya
                 style here follows the Islamic marriage customs of full coverage and dignified
-                presentation.
+                presentation. Purchasing a separate scarf will make a kaftan the perfect hijab wedding dress.
               </p>
               <p>
                 The bridal lehenga is the dominant cultural dress for Muslim bridal dress occasions
@@ -298,19 +298,22 @@ export default function ShopPage() {
                 long-sleeved blouse that covers the midriff, and a matching dupatta worn as a hijab.
                 The bridal lehenga is the quintessential Islamic bridal wear for South Asian
                 fashion-influenced nikah ceremony celebrations, and the most popular colors in 2026
-                are all represented in this collection. Bridal jewelry is an essential companion to
+                are all represented in this collection. Bridal lehengas from Amazon can be readymade with long sleeves, or semi-stitched, meaning they have enough fabric included for a short choli. These need customization. Bridal jewelry is an essential companion to
                 the bridal lehenga: nikkah jewelry sets in kundan, gold, and pearl coordinate with
                 the embroidery weight and color of South Asian bridal lehengas.
+              </p> 
+	      <p>
+                A Muslim bridal dress with sleeves can be any modest dress you choose. Our collection called Muslim Wedding Dresses falls into this category, and are also known as anarkali. These are floor-length Muslim bridal dresses with sleeves, pants and a dupatta included. Hijab wedding dresses, as Muslim wedding dresses are also called, are different from ball gowns. They are of simple construction with no ribbing. Most are a modern style that follow wedding customs in the USA, and might have lace overlays. They are embroidered, but minimally. Some have sheer long sleeves, that are easily covered by the dupatta in a single or double dupatta style. These dresses are part of South Asian culture and are formal enough for any nikah ceremony.
               </p>
               <p>
                 The shalwar kameez — the tunic-and-trouser traditional attire most familiar to South
                 Asian communities, and equivalent in bridal use to the sharara suit — offers a fluid
                 alternative to the bridal lehenga for Muslim wedding traditions occasions. Both are
-                forms of traditional attire rooted in South Asian fashion, both are fully compatible
-                with Islamic marriage customs, and both require the same bridal jewelry and hijab
+                forms of traditional attire rooted in South Asian culture, both are fully compatible
+                with Islamic marriage customs, both have long sleeves, are romantically embroidered, and both require the same bridal jewelry and hijab
                 coordination. The shalwar kameez in its bridal sharara form is particularly
                 recommended for brides who want the visual impact of the lehenga without the
-                structured waistband. The shalwar kameez is the Muslim bridal dress workhorse of the
+                but with more comfortable sharara pants. The shalwar kameez is the Muslim bridal dress workhorse of the
                 South Asian fashion wardrobe.
               </p>
               <p>
@@ -318,7 +321,7 @@ export default function ShopPage() {
                 The Dubai kaftan — a single-piece abaya-silhouette gown with gold embroidery and a
                 V-neck — is the most contemporary expression of the abaya as cultural dress for a
                 nikah ceremony. The Moroccan takchita is a two-piece abaya-style set with a sheer
-                embroidered outer layer over a long-sleeved inner dress — the most formally
+                embroidered outer layer over inner dress with long sleeves — the most formally
                 significant abaya form for grand wedding celebrations rooted in Middle Eastern
                 culture. The African boubou is a wide-sleeved abaya-style kaftan that reflects West
                 African Muslim wedding traditions. Each is a valid cultural expression of the abaya
@@ -369,7 +372,7 @@ export default function ShopPage() {
                 extension of the everyday shalwar kameez into formal, traditional wedding dress
                 territory. A well-chosen Middle Eastern dishdasha (long robe) serves the same
                 cultural function as the sherwani in Arab Muslim communities. Across Pakistani,
-                Indian, and Middle Eastern traditions, the sherwani or its regional equivalent is
+                Indian, and Middle Eastern fashion, the sherwani or its regional equivalent is
                 universally recognized as the Muslim wedding dress for the groom.
               </p>
               <p>
@@ -435,7 +438,7 @@ export default function ShopPage() {
                 <details className="group border-b border-pink-50">
                   <summary className="cursor-pointer flex justify-between items-start gap-4 py-4 list-none">
                     <span className="font-bold text-gray-900 group-open:text-pink-600 text-sm leading-snug transition-colors">
-                      What is Muslim wedding attire called?
+                      What is a Muslim wedding dress called?
                     </span>
                     <span className="transition-transform group-open:rotate-180 shrink-0 mt-0.5 text-gray-400">
                       <svg fill="none" height="18" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" width="18">
@@ -444,13 +447,11 @@ export default function ShopPage() {
                     </span>
                   </summary>
                   <p className="text-gray-500 text-sm leading-relaxed pb-5 pt-1 max-w-2xl">
-                    Muslim wedding attire is called by different names depending on the bride or
+                    Muslim wedding dresses are called by different names depending on the bride or
                     groom's cultural background. For brides, the most common terms are the abaya (a
                     long, floor-length modest gown also worn as a bridal caftan or kaftan), the
                     bridal lehenga (a flared embroidered skirt with matching blouse and dupatta),
-                    and the shalwar kameez or sharara (a tunic-and-trouser or divided-skirt suit).
-                    For grooms, the traditional long coat (sherwani) is the defining Muslim wedding
-                    dress across Pakistani, Indian, and broader South Asian communities.
+                    and the shalwar kameez or sharara (a tunic-and-trouser or divided-skirt suit). Any long, modest dress can even qualify as a Muslim bridal dress with sleeves. Our collection contains floor-length anarkali as Muslim Wedding Dresses.
                   </p>
                 </details>
                 <details className="group border-b border-pink-50">
