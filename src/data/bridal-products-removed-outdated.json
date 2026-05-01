@@ -1789,3 +1789,112 @@ python looker-bot.py --only dataforseo paa
 
 # Just check anomalies
 python looker-bot.py --only gsc
+
+
+# ─── 10. COVERAGE (who publishes about your topics — editorial/blog only) ──────
+
+def fetch_coverage():
+    """
+    Uses Serper to find editorial/blog content covering key topics in last 2 years.
+    Filters out commercial retailers — only blogs, magazines, editorial sites.
+    Topics: inexpensive wedding, cheap wedding, expenses, muslim bridal
+    Columns: Topic | Domain | URL | Title | Date_Published | Appearances
+    Then a summary block at bottom showing domain frequency across all topics.
+    """
+    serper_key = os.getenv("SERPER_KEY")
+    if not serper_key:
+        raise ValueError("SERPER_KEY not in .env")
+
+    # Muslim magazines, bridal editorial and marriage sites
+    # Mix of Muslim-specific publications + mainstream bridal press that covers our topics
+    target_domains = [
+        # Muslim lifestyle & fashion magazines
+        'muslimgirl.com', 'mvslim.com', 'aboutislam.net', 'sisters-magazine.com',
+        'aquila-style.com', 'ilmfeed.com', 'muslimmatters.org',
+        'themuslimvibe.com', 'halaltimes.com', 'crescentrating.com',
+        'productivemuslim.com', 'islamicfashioninstitute.com',
+        # Muslim marriage & wedding sites
+        'muslimweddingguide.com', 'nikkah.com', 'half-our-deen.com',
+        'zawaj.com', 'singlemuslim.com', 'islamicmarriage.com',
+        # Mainstream bridal press (covers modest/Muslim weddings)
+        'brides.com', 'theknot.com', 'weddingwire.com',
+        'marthastewartweddings.com', 'stylemepretty.com',
+        'greenweddingshoes.com', 'junebugweddings.com',
+        # Fashion & lifestyle editorial
+        'refinery29.com', 'popsugar.com', 'allure.com',
+        'harpersbazaar.com', 'elle.com', 'vogue.com',
+    ]
+
+    # Broad topics — we want to know who covers our space
+    topics = [
+        "inexpensive wedding",
+        "cheap wedding",
+	"muslim bridal",
+        "expenses",
+    ]
+
+    from datetime import timedelta as _td
+    two_years_ago = (datetime.now() - _td(days=730)).strftime('%Y-%m-%d')
+
+    coverage_rows = []
+    domain_counter = {}  # {domain: {topic: count}}
+
+    # Search each target domain separately for each topic using site: operator
+    # This guarantees results ONLY from Muslim magazines and marriage sites
+    for topic in topics:
+        print(f"    → Coverage search: {topic}...")
+        topic_count = 0
+        for target in target_domains:
+            try:
+                resp = requests.post(
+                    "https://google.serper.dev/search",
+                    headers={"X-API-KEY": serper_key, "Content-Type": "application/json"},
+                    json={
+                        "q":   f'"{topic}" site:{target} after:{two_years_ago}',
+                        "gl":  "us",
+                        "hl":  "en",
+                        "num": 5,
+                    },
+                    timeout=10
+                )
+                results = resp.json().get('organic', [])
+                for res in results:
+                    url    = res.get('link', '')
+                    title  = res.get('title', '')
+                    date   = res.get('date', '—')
+                    domain = url.split('/')[2].replace('www.', '') if url else ''
+                    if not title or not url:
+                        continue
+                    coverage_rows.append([topic, domain, url, title, date, "✓"])
+                    if domain not in domain_counter:
+                        domain_counter[domain] = {}
+                    domain_counter[domain][topic] = domain_counter[domain].get(topic, 0) + 1
+                    topic_count += 1
+            except Exception as e:
+                pass  # silently skip domains that return no results
+        print(f"      {topic_count} results from target publications")
+
+    # Build summary rows — domains appearing most across topics
+    summary_rows = [["", "", "", "", "", ""]]
+    summary_rows.append(["=== DOMAIN FREQUENCY SUMMARY ===", "", "", "", "", ""])
+    summary_rows.append(["Domain", "Muslim_Lehenga", "Halal_Nails", "Muslim_Bridal", "Total_Appearances", ""])
+    for domain, topic_counts in sorted(domain_counter.items(),
+                                        key=lambda x: -sum(x[1].values())):
+        summary_rows.append([
+            domain,
+            topic_counts.get("inexpensive wedding", 0),
+            topic_counts.get("cheap wedding", 0),
+	    topic_counts.get("expenses", 0),
+            topic_counts.get("muslim bridal", 0),
+            sum(topic_counts.values()),
+            "",
+        ])
+
+    headers = ["Topic", "Domain", "URL", "Title", "Date_Published", "Target_Publication"]
+    all_rows = [headers] + coverage_rows + summary_rows
+
+    pd.DataFrame(coverage_rows, columns=headers).to_csv('coverage_backup.csv', index=False)
+    ws = _ws("Coverage")
+    ws.clear()
+    ws.update(values=all_rows, range_name="A1")
+    print(f"    → {len(coverage_rows)} coverage results + {len(domain_counter)} unique domains")
