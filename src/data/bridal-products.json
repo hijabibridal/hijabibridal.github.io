@@ -4005,9 +4005,9 @@
     {
       "name": "White Faux Fur Coverup",
       "slug": "white-wedding-faux-fur-coverup",
-      "description": "The perfect accessory for added coverage and style! Tuck in a non-sheer hijab and you're too lovely!.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/faux-fur\" class=\"text-[#db2777] font-bold hover:underline\">View all Faux Fur</a>",
+      "description": "The perfect accessory for added coverage and style! Tuck in a non-sheer hijab and you're too lovely!.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/white\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/cape\" class=\"text-[#db2777] font-bold hover:underline\">View all Faux Fur</a>",
       "mainCategorySlugs": [
-        "faux-fur",
+        "cape",
         "white"
       ],
       "images": [
@@ -4040,8 +4040,8 @@
           "item": "https://hijabibridal.github.io/shop"
         },
         {
-          "name": "Faux Fur",
-          "item": "https://hijabibridal.github.io/shop/category/faux-fur"
+          "name": "Cape",
+          "item": "https://hijabibridal.github.io/shop/category/cape"
         },
         {
           "name": "White Faux Fur Coverup",
