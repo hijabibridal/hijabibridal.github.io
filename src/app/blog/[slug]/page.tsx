@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const galleryOneItems = [
     getByColor('red') || shuffledPool[0],
     getByColor('white') || shuffledPool[1],
-    getByColor('champagne') || shuffledPool[2]
+    getByColor('green') || shuffledPool[2]
   ].filter(Boolean).slice(0, 3);
 
   const galleryTwoItems = shuffledPool
@@ -154,7 +154,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   // Logic for adding three other blog titles sorted by title with keyword matching
-  const matchKeywords = ["dress", "lehenga", "nails", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
+  const matchKeywords = ["dress", "lehenga", "green", "nails", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
   const currentTitleLower = article.pageTitle.toLowerCase();
   const activeKeywords = matchKeywords.filter(word => currentTitleLower.includes(word));
   
