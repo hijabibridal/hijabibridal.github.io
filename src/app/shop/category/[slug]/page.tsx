@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: PageProps) {
   
   if (!category) notFound();
 
-  const COLOR_PRIORITY = ['white', 'red', 'champagne'];
+  const COLOR_PRIORITY = ['white', 'red', 'green'];
   const TYPE_PRIORITY = ['sharara', 'muslim-lehenga', 'muslim-wedding-dresses'];
 
   const filteredProducts = productData.products
