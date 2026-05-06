@@ -9357,11 +9357,75 @@
         },
         {
           "name": "Fuschia",
-          "item": "https://hijabibridal.github.io/shop/category/white"
+          "item": "https://hijabibridal.github.io/shop/category/fuschia"
         },
         {
           "name": "Muslim Wedding Dress Fuschia Embroidered",
           "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-fuschia-embroidered"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Wedding Dress Green Embroidered",
+      "slug": "muslim-wedding-dress-green-embroidered",
+      "description": "This version of the green Muslim wedding dress is made from premium georgette fabric, adorned with heavy embroidery, gold beadwork and beautiful sequins. Available in sizes 36-42, it caters to a wide range of bridal silhouettes. The set features a dupatta with allover embroidery a beautifully finished border that adds a touch of grandeur to the overall look. This fuschia georgette ensemble offers both the fluidity of the fabric and the structural beauty of the embroidery, making it a timeless choice for any Nikah or Walima.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Muslim Wedding Dress Green Embroidered</h2>This green georgette dress coordinates with styling for bridal looks that are joyous and traditional. A green and gold dupatta, when used as a second dupatta, will provide a beautiful compliment to the textured georgette and sequins. Use the dupatta as a focal point by draping it across the chest or elegantly over the head. Gold jewelry will enhance this traditional look. For the makeup, a classic soft rose will blend in well, ensuring the bride looks radiant in every photograph.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-wedding-dresses\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Wedding Dresses</a>",
+      "mainCategorySlugs": [
+        "muslim-wedding-dresses",
+        "green"
+      ],  
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-dupatta/green-net-dupatta.webp", 
+          "targetSlug": "green-net-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/gold-and-silver-bridal-jewelry-set.webp", 
+          "targetSlug": "gold-and-silver-bridal-jewelry-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "muslim-wedding-dress-green-embroidered.webp",
+          "alt": "Green embroidered Muslim wedding dress — heavy gold work on dark green Muslim bridal attire for nikah",
+          "figcaption": "Muslim wedding dress green in georgette with heavy embroidery, gold beadwork and sequins for Muslim bridal wedding attire.",
+          "amazonLink": "https://amzn.to/3OZV5ll"
+        },
+        {
+          "url": "muslim-wedding-dress-green-embroidered-2.webp",
+          "alt": "Green embroidered Muslim wedding dress — bold modest Islamic bridal gown for nikah",
+          "figcaption": "Muslim wedding dress in green in georgette with heavy embroidery, gold beadwork and sequins for Muslim bridal wedding attire.",
+          "amazonLink": "https://amzn.to/3OZV5ll"
+        }
+      ],
+      "og_image": "muslim-wedding-dress-green-embroidered.webp",
+      "title_tag": "Green Georgette Embroidered Muslim Wedding | Amazon",
+      "og_title": "Green Georgette Embroidered Muslim Wedding | Amazon",
+      "og_type": "website",
+      "meta_description": "Discover this dark green Muslim bridal dress with heavy gold embroidery on Amazon. Matching dupatta for stunning bridal beauty.",
+      "attributes": {
+        "category": "Green",
+        "color": "Green",
+        "material": "Georgette",
+        "style": "Elegant / Modest",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Green",
+          "item": "https://hijabibridal.github.io/shop/category/green"
+        },
+        {
+          "name": "Muslim Wedding Dress Green Embroidered",
+          "item": "https://hijabibridal.github.io/shop/product/muslim-wedding-dress-green-embroidered"
         }
       ]
     },
