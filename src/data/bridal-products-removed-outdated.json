@@ -1775,6 +1775,8 @@
 Bot protection for GitHub Pages:
 GitHub Pages is static so you can't do server-side blocking, but you can add a robots.txt to disallow known bot crawlers, and add Cloudflare as a proxy (free tier) in front of your GitHub Pages site — Cloudflare automatically blocks a huge percentage of bot traffic and you can add country-blocking rules (e.g. block Singapore). That's the most effective free option for a static site.
 
+node convert-new-jpg.mjs "C:\Users\haira\Downloads\HBmigration\public\images\muslim-lehenga"
+
 # Full run — everything
 python looker-bot.py
 

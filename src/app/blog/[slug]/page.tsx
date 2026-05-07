@@ -56,21 +56,39 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // 1. KEYWORD DICTIONARY
-  const keywordMap = ["hijab", "caftan", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
-  const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
-  let matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
+  // 3. CONTENT SPLITTING (moved up so intro is available for product matching)
+  const parts = article.htmlBody.split('<h2>');
+  const introPart = parts[0];
 
-  const bodyTextLower = article.htmlBody.toLowerCase();
-  
-  if (bodyTextLower.includes("muslim bridal dress")) {
-    matchedKeyword = "muslim-wedding-dresses";
-  } else if (bodyTextLower.includes("muslim sherwani")) {
-    matchedKeyword = "muslim-groom-outfit";
+  // 1. EXTRACT CATEGORY FROM INTRO LINK ("Shop all our..." / "Browse all...")
+  //    Articles contain an <a href="/shop/category/SLUG">Shop all our …</a> before the first h2.
+  //    We pull that category slug directly — no title/body guessing needed.
+  const shopLinkMatch = introPart.match(
+    /<a\s[^>]*href=["']([^"']*\/shop\/category\/([^"'/?\s]+))[^"']*["'][^>]*>\s*(?:Shop all|Browse all)[^<]*/i
+  );
+  const categorySlugFromLink = shopLinkMatch?.[2] ?? null;
+
+  let matchedKeyword: string;
+
+  if (categorySlugFromLink) {
+    // Primary: use the explicit category link from the article intro
+    matchedKeyword = categorySlugFromLink;
+  } else {
+    // Fallback: old title/body heuristics
+    const keywordMap = ["hijab", "caftan", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
+    const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
+    matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
+
+    const bodyTextLower = article.htmlBody.toLowerCase();
+    if (bodyTextLower.includes("muslim bridal dress")) {
+      matchedKeyword = "muslim-wedding-dresses";
+    } else if (bodyTextLower.includes("muslim sherwani")) {
+      matchedKeyword = "muslim-groom-outfit";
+    }
   }
 
-  const relatedPool = productData.products.filter(p => 
-    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword))
+  const relatedPool = productData.products.filter(p =>
+    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword.toLowerCase()))
   );
 
   // Apply shuffle to the pool
@@ -108,9 +126,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       ))}
     </div>
   );
-
-  // 3. CONTENT SPLITTING
-  const parts = article.htmlBody.split('<h2>');
 
   const faqSchema = article.FAQ_schema
     ? {
