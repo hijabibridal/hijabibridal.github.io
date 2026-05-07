@@ -6,18 +6,9 @@ import blogData from "@/data/blog-articles.json";
 import productData from "@/data/bridal-products.json"; 
 import type { Metadata } from "next";
 import Script from "next/script";
+import ShuffledProductGallery from "@/components/ShuffledProductGallery";
 
 const typedBlogData = blogData as any;
-
-// ─── Shuffle Function ─────────────────────────────────────────────────────────
-function shuffle(array: any[]) {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-}
 
 // ─── Static params ────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -93,40 +84,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   );
 
   // Apply shuffle to the pool
-  const shuffledPool = shuffle(relatedPool.length > 0 ? relatedPool : productData.products);
+  // 2. PRODUCT POOL — passed to client component which shuffles on each page load
+  // For color categories: use only exact color matches (e.g. "green" not "sage-green")
+  const colorSlugs = ['red', 'white', 'green', 'champagne', 'blue', 'gold', 'pink', 'black', 'ivory', 'navy', 'maroon', 'purple', 'fuschia', 'peach', 'yellow', 'orange', 'teal', 'burgundy'];
+  const matchedIsColor = colorSlugs.includes(matchedKeyword.toLowerCase());
 
-  // 2. PRODUCT SELECTION (75% Size: h-[192px])
-  const getByColor = (color: string) => shuffledPool.find(p => 
-    p.mainCategorySlugs?.some(s => s.toLowerCase() === color.toLowerCase())
-  );
+  const categoryPool = matchedIsColor
+    ? productData.products.filter(p =>
+        p.mainCategorySlugs?.some((s: string) => s.toLowerCase() === matchedKeyword.toLowerCase())
+      )
+    : productData.products.filter(p =>
+        p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword.toLowerCase()))
+      );
 
-  const galleryOneItems = [
-    getByColor('red') || shuffledPool[0],
-    getByColor('white') || shuffledPool[1],
-    getByColor('green') || shuffledPool[2]
-  ].filter(Boolean).slice(0, 3);
-
-  const galleryTwoItems = shuffledPool
-    .filter(p => !p.mainCategorySlugs?.some(s => ['red', 'white', 'champagne'].includes(s.toLowerCase())))
-    .slice(0, 3);
-
-  const ProductGallery = ({ items }: { items: any[] }) => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10 not-prose">
-      {items.map((prod) => (
-        <Link key={prod.slug} href={`/shop/product/${prod.slug}`} className="group block">
-          <div className="relative h-[192px] w-full rounded-2xl overflow-hidden shadow-sm bg-gray-50 mb-2 border border-pink-50">
-            <Image 
-              src={`/images/${prod.images[0].url.replace(/^\//, '')}`} 
-              alt={prod.name} fill className="object-cover transition-transform duration-500 group-hover:scale-105" unoptimized 
-            />
-          </div>
-          <p className="text-black font-bold uppercase text-[10px] tracking-widest text-center group-hover:text-pink-600">
-            {prod.name}
-          </p>
-        </Link>
-      ))}
-    </div>
-  );
+  // Fall back to all products if category pool is empty
+  const galleryPool = categoryPool.length > 0 ? categoryPool : productData.products;
 
   const faqSchema = article.FAQ_schema
     ? {
@@ -261,7 +233,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {parts.length > 1 && (
           <>
-            <ProductGallery items={galleryOneItems} />
+            <ShuffledProductGallery pool={galleryPool} galleryIndex={1} />
             <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[1] }} />
           </>
         )}
@@ -272,7 +244,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {parts.length > 2 && (
           <>
-            <ProductGallery items={galleryTwoItems} />
+            <ShuffledProductGallery pool={galleryPool} galleryIndex={2} />
             <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[parts.length - 1] }} />
           </>
         )}
