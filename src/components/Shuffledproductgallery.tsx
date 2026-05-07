@@ -68,4 +68,4 @@ export default function ShuffledProductGallery({ pool, galleryIndex }: Props) {
       ))}
     </div>
   );
-}
+} 
