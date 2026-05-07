@@ -63,10 +63,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // 1. EXTRACT CATEGORY FROM INTRO LINK ("Shop all our..." / "Browse all...")
   //    Articles contain an <a href="/shop/category/SLUG">Shop all our …</a> before the first h2.
   //    We pull that category slug directly — no title/body guessing needed.
+  // Match ANY anchor in the intro that links to /shop/category/SLUG
   const shopLinkMatch = introPart.match(
-    /<a\s[^>]*href=["']([^"']*\/shop\/category\/([^"'/?\s]+))[^"']*["'][^>]*>\s*(?:Shop all|Browse all)[^<]*/i
+    /<a\s[^>]*href=["'][^"']*\/shop\/category\/([^"'/?\s]+)[^"']*["'][^>]*>/i
   );
-  const categorySlugFromLink = shopLinkMatch?.[2] ?? null;
+  const categorySlugFromLink = shopLinkMatch?.[1] ?? null;
 
   let matchedKeyword: string;
 
@@ -94,29 +95,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // Apply shuffle to the pool
   const shuffledPool = shuffle(relatedPool.length > 0 ? relatedPool : productData.products);
 
-  // 2. PRODUCT SELECTION
-  // If the matched category is itself a color slug, use the pool directly.
-  // Otherwise, try to diversify gallery one by color within the category pool.
-  const colorSlugs = ['red', 'white', 'green', 'champagne', 'blue', 'gold', 'pink', 'black', 'ivory', 'navy', 'maroon', 'purple'];
-  const matchedIsColor = colorSlugs.includes(matchedKeyword.toLowerCase());
-
-  const getByColor = (color: string) => shuffledPool.find(p =>
-    p.mainCategorySlugs?.some((s: string) => s.toLowerCase() === color.toLowerCase())
+  // 2. PRODUCT SELECTION (75% Size: h-[192px])
+  const getByColor = (color: string) => shuffledPool.find(p => 
+    p.mainCategorySlugs?.some(s => s.toLowerCase() === color.toLowerCase())
   );
 
-  const galleryOneItems = matchedIsColor
-    ? shuffledPool.slice(0, 3)
-    : [
-        getByColor('red') || shuffledPool[0],
-        getByColor('white') || shuffledPool[1],
-        getByColor('green') || shuffledPool[2],
-      ].filter(Boolean).slice(0, 3);
+  const galleryOneItems = [
+    getByColor('red') || shuffledPool[0],
+    getByColor('white') || shuffledPool[1],
+    getByColor('green') || shuffledPool[2]
+  ].filter(Boolean).slice(0, 3);
 
-  const galleryTwoItems = matchedIsColor
-    ? shuffledPool.slice(3, 6)
-    : shuffledPool
-        .filter(p => !p.mainCategorySlugs?.some((s: string) => ['red', 'white', 'champagne'].includes(s.toLowerCase())))
-        .slice(0, 3);
+  const galleryTwoItems = shuffledPool
+    .filter(p => !p.mainCategorySlugs?.some(s => ['red', 'white', 'champagne'].includes(s.toLowerCase())))
+    .slice(0, 3);
 
   const ProductGallery = ({ items }: { items: any[] }) => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10 not-prose">
