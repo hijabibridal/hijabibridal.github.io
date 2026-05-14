@@ -196,7 +196,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <>
               {" · "}
               <time dateTime={article.datePublished}>
-                {new Date(article.datePublished).toLocaleDateString("en-US", {
+                {"Published: "}{new Date(article.datePublished).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </>
+          )}
+          {article.dateModified && article.dateModified !== article.datePublished && (
+            <>
+              {" · "}
+              <time dateTime={article.dateModified}>
+                {"Updated: "}{new Date(article.dateModified).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
