@@ -13,7 +13,7 @@ interface Product {
 
 interface Props {
   pool: Product[];
-  galleryIndex: 1 | 2; // 1 = top gallery, 2 = bottom gallery
+  galleryIndex: number;
 }
 
 function clientShuffle(array: Product[]): Product[] {
@@ -29,22 +29,9 @@ export default function ShuffledProductGallery({ pool, galleryIndex }: Props) {
   const [items, setItems] = useState<Product[]>([]);
 
   useEffect(() => {
-    // Shuffle the full pool on every page load, then pick 3 non-overlapping items
-    // Gallery 1 picks from the first half of the shuffled pool (indices 0–2)
-    // Gallery 2 picks from the second half (indices 3–5) so they never repeat
-    const shuffled = clientShuffle(pool);
-    if (galleryIndex === 1) {
-      setItems(shuffled.slice(0, 3));
-    } else {
-      // If pool has 6+ items, take items 3–5 (guaranteed different from gallery 1)
-      // If pool is small (<6), re-shuffle independently so at least the order differs
-      if (pool.length >= 6) {
-        setItems(shuffled.slice(3, 6));
-      } else {
-        setItems(clientShuffle(pool).slice(0, 3));
-      }
-    }
-  }, []); // runs once on mount (i.e. each page load/refresh)
+    // Each gallery gets its own independent shuffle so they always differ
+    setItems(clientShuffle(pool).slice(0, 3));
+  }, []);
 
   if (items.length === 0) return null;
 
@@ -68,4 +55,4 @@ export default function ShuffledProductGallery({ pool, galleryIndex }: Props) {
       ))}
     </div>
   );
-} 
+}

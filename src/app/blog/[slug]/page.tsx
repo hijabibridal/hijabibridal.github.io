@@ -231,23 +231,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         
         <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
 
-        {parts.length > 1 && (
-          <>
-            <ShuffledProductGallery pool={galleryPool} galleryIndex={1} />
-            <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[1] }} />
-          </>
-        )}
-
-        {parts.slice(2, -1).map((part: string, i: number) => (
-          <div key={i} dangerouslySetInnerHTML={{ __html: '<h2>' + part }} />
+        {parts.slice(1).map((part: string, i: number) => (
+          <div key={i}>
+            <ShuffledProductGallery pool={galleryPool} galleryIndex={(i + 1) as any} />
+            <div dangerouslySetInnerHTML={{ __html: '<h2>' + part }} />
+          </div>
         ))}
-
-        {parts.length > 2 && (
-          <>
-            <ShuffledProductGallery pool={galleryPool} galleryIndex={2} />
-            <div dangerouslySetInnerHTML={{ __html: '<h2>' + parts[parts.length - 1] }} />
-          </>
-        )}
       </div>
 
       <div className="mt-20 pt-10 border-t border-pink-100 flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-10">
