@@ -1462,6 +1462,80 @@
       ]
     },
 
+    {
+      "name": "Champagne Gharara Suits",
+      "slug": "champagne-sharara-suits",
+      "description": "This sharara clothing suit features a stunning combination of deep burgundy and soft champagne tones, designed for the modern Muslim bride. The exquisite Burgundy and Champagne Muslim Wedding Sharara beautifully balances bold richness with understated grace, making it a standout choice among Muslim wedding dresses for walimah or nikkah ceremonies. Crafted in embroidered georgette and silk fabric, the set includes a rich burgundy top adorned with silver embroidery, creating a striking contrast against the flowing champagne-colored sharara and dupatta. Available in sizes 36 to 44, with a top length of 38-39 inches, this silhouette is tailored to flatter and enhance the bride's body type.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Champagne Muslim Wedding Dress</h2>This sharara suit coordinates with styling for bridal looks. Elevate the beauty of your sharara with carefully chosen styling elements. Opt for a braided bun or updo to frame your face elegantly and complement the regal feel of the outfit. Style your loose hijab with a choker to cover your neck and adorn the edge with traditional forehead jewelry for added opulence. The champagne dupatta is best accordioned over one shoulder and tucked into a rhinestone belt, while a second dupatta in maroon or gold can be draped elegantly over the hijab, allowing one side to cascade onto the opposite wrist. Hijab and extra dupatta not included.<br /><br />Sharara.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "champagne"
+      ],
+      "suggestedAddOns": [
+         { 
+          "image": "/images/bridal-dupatta/champagne-net-dupatta.webp", 
+          "targetSlug": "champagne-net-bridal-dupatta" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/covered-neck-red-bridal-choker-set-nikkah-jewelry-2.webp", 
+          "targetSlug": "covered-neck-red-bridal-choker-set-nikkah-jewelry" 
+        }
+      ],
+      "images": [
+        {
+          "url": "champagne-sharara-suits-3.webp",
+          "alt": "This AI-inspiration shows you the sharara hijab style with a champagne silk sharara.",
+          "figcaption": "This AI-inspiration shows you the sharara hijab style with a champagne silk sharara.",
+ 	  "iptc": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "amazonLink": "https://amzn.to/436wob0"
+        },
+        {
+          "url": "champagne-sharara-suits-2.webp",
+          "alt": "Champagne sharara suit with embroidery — modest Muslim bridal outfit for nikah or walima",
+          "figcaption": "Champagne sharara suit with embroidery — a regal modest Muslim bridal outfit for nikah ceremonies and walima receptions. Flattering for all body types.",
+          "amazonLink": "https://amzn.to/44CVWhj"
+        },
+        {
+          "url": "champagne-sharara-suits.webp",
+          "alt": "Champagne sharara suit with embroidery — modest Muslim bridal outfit for nikah or walima",
+          "figcaption": "Champagne sharara suit with embroidery — a regal modest Muslim bridal outfit for nikah ceremonies and walima receptions. Flattering for all body types.",
+          "amazonLink": "https://amzn.to/44CVWhj"
+        }
+      ],
+      "og_image": "champagne-sharara-suits.webp",
+      "title_tag": "Champagne Sharara Suits | Style for Your Body Type",
+      "og_title": "Champagne Sharara Suits | Style for Your Body Type",
+      "og_type": "website",
+      "meta_description": "Explore our Champagne sharara clothing suit. This style features a beautiful silhouette and premium fabric perfect for chubby girls and body positivity.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Champagne",
+        "material": "Georgette",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Champagne Gharara Suits",
+          "item": "https://hijabibridal.github.io/shop/product/champagne-sharara-suits"
+        }
+      ]
+    },
+
+    
+
 Bot protection for GitHub Pages:
 GitHub Pages is static so you can't do server-side blocking, but you can add a robots.txt to disallow known bot crawlers, and add Cloudflare as a proxy (free tier) in front of your GitHub Pages site — Cloudflare automatically blocks a huge percentage of bot traffic and you can add country-blocking rules (e.g. block Singapore). That's the most effective free option for a static site.
 
