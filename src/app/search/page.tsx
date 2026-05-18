@@ -22,26 +22,38 @@ function SearchContent() {
       const searchTerms = query.split(/\s+/).filter(word => word.length > 0);
 
       // 1. ORIGINAL PRODUCT LOGIC (Unchanged)
-      const filteredProducts = productData.products.filter((product) => {
-        const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
+      const filteredProducts = productData.products
+        .filter((product) => {
+          const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
 
-      // Build a broader searchable string from multiple fields
-      const searchableText = [
-        product.name,
-        product.description,
-        product.slug,
-        ...(product.mainCategorySlugs || []),
-        ...(product.tags || []),
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
+          const searchableText = [
+            product.name,
+            product.description,
+            product.slug,
+            ...(product.mainCategorySlugs || []),
+            ...(product.tags || []),
+          ]
+            .filter(Boolean)
+            .join(' ')
+            .toLowerCase();
 
-      return searchTerms.every(term =>
-        productSlugs.some(slug => slug === term || slug.includes(term)) ||
-        searchableText.includes(term)
-      );
-    });
+          return searchTerms.every(term =>
+            productSlugs.some(slug => slug === term || slug.includes(term)) ||
+            searchableText.includes(term)
+          );
+        })
+        .sort((a, b) => {
+          const aNameMatch = searchTerms.every(term =>
+            a.name?.toLowerCase().includes(term)
+          );
+          const bNameMatch = searchTerms.every(term =>
+            b.name?.toLowerCase().includes(term)
+          );
+
+          if (aNameMatch && !bNameMatch) return -1;
+          if (!aNameMatch && bNameMatch) return 1;
+          return 0;
+        });
 
       // 2. SEPARATE BLOG LOGIC (Title and Slug only)
       const filteredBlogs = (blogData as any).articles.filter((article: any) => {
