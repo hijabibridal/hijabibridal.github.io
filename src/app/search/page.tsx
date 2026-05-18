@@ -24,10 +24,24 @@ function SearchContent() {
       // 1. ORIGINAL PRODUCT LOGIC (Unchanged)
       const filteredProducts = productData.products.filter((product) => {
         const productSlugs = (product.mainCategorySlugs || []).map(s => s.toLowerCase());
-        return searchTerms.every(term => 
-          productSlugs.some(slug => slug === term || slug.includes(term))
-        );
-      });
+
+      // Build a broader searchable string from multiple fields
+      const searchableText = [
+        product.name,
+        product.description,
+        product.slug,
+        ...(product.mainCategorySlugs || []),
+        ...(product.tags || []),
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      return searchTerms.every(term =>
+        productSlugs.some(slug => slug === term || slug.includes(term)) ||
+        searchableText.includes(term)
+      );
+    });
 
       // 2. SEPARATE BLOG LOGIC (Title and Slug only)
       const filteredBlogs = (blogData as any).articles.filter((article: any) => {
