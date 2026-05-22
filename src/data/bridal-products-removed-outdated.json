@@ -1548,7 +1548,7 @@ python looker-bot.py
 python looker-bot.py --only ga4 gsc stats
 
 # Save Tavily credits, run everything else
-python looker-bot.py --skip tavily social
+python looker-bot-pet.py --skip tavily social gsc
 
 # Just refresh SEO data
 python looker-bot.py --only dataforseo paa
