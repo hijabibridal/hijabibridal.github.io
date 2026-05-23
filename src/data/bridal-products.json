@@ -12049,9 +12049,9 @@
   ]
 },
     {
-      "name": "Sage Green Sharara Suit",
+      "name": "Sage Green Hijab Fashion",
       "slug": "sage-green-sharara-suit",
-      "description": "This exquisite sage green Muslim bridal sharara dress is crafted from silk and features metallic embroidery. The flared sharara and intricate patterns make it a standout choice for brides looking for traditional or modern style. It is designed to provide both comfort and an elegant silhouette for your body type on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Sage Green Sharara Dress </h2>The lightweight fabric and detailed patterns allow for various wearing styles, ensuring you look radiant while celebrating body positivity. Pair this sharara clothing suit with a matching hijab and halal nails to elevate your bridal outfit. This piece offers the perfect style inspiration for a memorable and elegant wedding look.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "description": "Sage is trending in 2026, as is sage green hijab fashion. Shop this exquisite sage Muslim bridal sharara dress, crafted from silk with metallic embroidery. The flared sharara and intricate patterns make it a standout choice for brides and anyone looking for traditional style with a modern color. It is designed to provide both comfort and an elegant silhouette for your body type.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Sharara Dress </h2>The lightweight fabric and detailed patterns allow for various wearing styles, ensuring you look radiant while celebrating body positivity. Style your hair in a sleek updo, then pair this sharara clothing suit with a matching hijab and maang tikka to elevate your bridal outfit. This piece offers the perfect style inspiration for a memorable and elegant wedding look.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
       "mainCategorySlugs": [
         "sharara",
         "green"
@@ -12068,24 +12068,30 @@
       ],
       "images": [
         {
+          "url": "sage-green-hijab-fashion.webp",
+          "alt": "Sage green hijab fashion is this sharara dress — modern modest Muslim bridal wear for nikah or walima",
+          "figcaption": "Sage green hijab fashion is this Muslim bridal sharara dress set with a modest silhouette and a trending 2026 color for Muslim bridal wear at nikah and walima ceremonies.",
+          "amazonLink": "https://amzn.to/4v3nWp7"
+        },
+        {
           "url": "sage-green-sharara-suit.webp",
-          "alt": "Sage green Muslim bridal sharara dress — modern modest Muslim bridal wear for nikah or walima",
-          "figcaption": "Sage green Muslim bridal sharara dress set with a modern modest silhouette and a trending 2026 color for Muslim bridal wear at nikah and walima ceremonies.",
+          "alt": "Muslim bridal sharara dress — modern modest Muslim bridal wear in sage green for nikah or walima",
+          "figcaption": "Muslim bridal sharara dress set with a modern modest silhouette and a trending 2026 sage green color for Muslim bridal wear at nikah and walima ceremonies.",
           "amazonLink": "https://amzn.to/4v3nWp7"
         },
         {
           "url": "sage-green-sharara-suit-2.webp",
-          "alt": "Sage green sharara suit — modern modest Muslim bridal outfit for nikah or walima",
-          "figcaption": "A stunning green sharara clothing suit draws the eye down to the knees. It offers style inspiration and promotes body positivity for the modern bride.",
+          "alt": "Closeup of sharara suit — modern modest Muslim bridal outfit in sage greenfor nikah or walima",
+          "figcaption": "A stunning sharara clothing suit draws the eye down to the knees. It offers style inspiration in trending sage green and promotes body positivity for the modern bride.",
           "amazonLink": "https://amzn.to/4v3nWp7"
         }
       ],
-      "og_image": "sage-green-sharara-suit.webp",
-      "title_tag": "Sage Green Bridal Sharara | Style for All Body Types",
-      "og_title": "Sage Green Bridal Sharara | Style for All Body Types",
+      "og_image": "sage-green-hijab-fashion.webp",
+      "title_tag": "Sage Green Hijab Fashion | Style for All Body Types",
+      "og_title": "Sage Green Hijab Fashion | Style for All Body Types",
       "og_type": "website",
       "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Best Sage green Muslim bridal for 2026?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"This sage green Muslim bridal sharara is now trending as part of the Muslim bridal wear sage color uptick of 2026. While green is one of the most traditional bridal colors for Indian brides, Pakistani suits, abaya styles and even Eid collections, sage green is what's new for this traditional color. For hijab fashion, our sage green Muslim bridal hijab goes perfectly with this sharara.\"}}]",
-      "meta_description": "Shop this sage green sharara suit. A beautiful silhouette in premium silk fabric, perfect for your bridal style with body positivity.",
+      "meta_description": "Shop this sage green hijab fashion. A sharara suit with beautiful silhouette in premium silk fabric and metallic embroidery, perfect for your bridal style with body positivity.",
       "attributes": {
         "category": "Sharara",
         "color": "Green",
@@ -12108,7 +12114,7 @@
           "item": "https://hijabibridal.github.io/shop/category/sharara"
         },
         {
-          "name": "Sage Green Sharara Suit",
+          "name": "Sage Green Hijab Fashion",
           "item": "https://hijabibridal.github.io/shop/product/sage-green-sharara-suit"
         }
       ]
