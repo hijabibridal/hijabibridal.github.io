@@ -3125,17 +3125,17 @@
       ]
     },
     {
-      "name": "Red Bridal Hijab",
+      "name": "Red Islamic Bridal Hijab",
       "slug": "red-crepe-bridal-hijab",
-      "description": "Make a bold statement with this Red Bridal Hijab, the ultimate classic for a traditional red Muslim wedding dress. Featuring lightweight crepe materials, this hijab is a staple for Muslim women who value heritage within modern fashion trends. The vibrant colors of this piece are specifically chosen for festive and cultural wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: RED</h2>Traditional bridal styles often require materials that can support heavy embroidery and nikkah jewelry. This crepe hijab provides the necessary durability while maintaining an elegant drape. Whether you are honoring timeless wedding themes or exploring contemporary fashion trends, this red bridal hijab offers a rich sheen that outperforms chiffon for your formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+      "description": "This Red Islamic Bridal Hijab is the ultimate classic for a traditional red Muslim wedding dress. Featuring lightweight satin crepe material, this hijab is a staple for Muslim women who value heritage within modern fashion trends. The vibrant colors of this piece are specifically chosen for festive and cultural wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: RED</h2>Traditional bridal styles often require materials that can support heavy embroidery and nikkah jewelry. This crepe hijab provides the necessary durability while maintaining an elegant drape. Whether you are honoring timeless wedding themes or exploring contemporary fashion trends, this hijab offers a rich sheen that outperforms chiffon for your formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
       "mainCategorySlugs": [
         "bridal-hijab",
         "red"
       ],
       "suggestedAddOns": [
         { 
-          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
-          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+          "image": "/images/bridal-hijab/red-gold-sparkle-hijab.webp", 
+          "targetSlug": "red-gold-sparkle-hijab" 
         },
         { 
           "image": "/images/red-dress-for-muslim-wedding1.webp", 
@@ -3144,17 +3144,17 @@
       ],
       "images": [
         {
-          "url": "bridal-hijab/red-crepe-bridal-hijab.webp",
-          "alt": "Red Bridal Hijab - Red Modern",
-          "figcaption": "The Red Bridal Hijab is the gold standard for traditional styles, utilizing high-quality crepe materials.",
+          "url": "bridal-hijab/red-islamic-bridal-hijab.webp",
+          "alt": "Lightweight satin crepe red Islamic bridal hijab",
+          "figcaption": "The red Islamic bridal hijab the gold standard to accompany traditional red wedding dresses, utilizing high-quality, shiny lightweight satin crepe.",
           "amazonLink": "https://amzn.to/4k2xRVj"
         }
       ],
-      "og_image": "bridal-hijab/red-crepe-bridal-hijab.webp",
-      "title_tag": "Red Bridal Hijab | Traditional Styling from Amazon 2026",
-      "og_title": "Red Bridal Hijab | Vibrant Crepe Fashion Trends",
+      "og_image": "bridal-hijab/red-islamic-bridal-hijab.webp",
+      "title_tag": "Red Islamic Bridal Hijab | Traditional Styling from Amazon 2026",
+      "og_title": "Red Islamic Bridal Hijab | Vibrant Crepe Fashion Trends",
       "og_type": "website",
-      "meta_description": "Our Red Bridal Hijab is the perfect match for traditional bridal attire. Crafted with durable crepe materials for an elegant and modest wedding look.",
+      "meta_description": "Our Red Islamic Bridal Hijab is the perfect match for traditional bridal attire. Crafted with lightweight satin crepe material for an elegant wedding look.",
       "attributes": {
         "category": "Bridal Hijab",
         "color": "Red",
@@ -3177,8 +3177,72 @@
           "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"
         },
         {
-          "name": "Red Bridal Hijab",
+          "name": "Red Islamic Bridal Hijab",
           "item": "https://hijabibridal.github.io/shop/product/red-crepe-bridal-hijab"
+        }
+      ]
+    },
+    {
+      "name": "Red Gold Sparkle Hijab",
+      "slug": "red-gold-sparkle-hijab",
+      "description": "This Red Gold Sparkle Hijab is the ultimate classic for a traditional gold and red Muslim wedding dress. Featuring chiffon material that flecked with gold specks and a beaded border, this hijab is a staple for Muslim women who value heritage within modern fashion trends. The vibrant colors of this piece are specifically chosen for festive and cultural wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: 001red</h2>Traditional bridal styles often require materials that can support heavy embroidery and nikkah jewelry. This crepe hijab provides the necessary durability while maintaining an elegant drape. Whether you are honoring timeless wedding themes or exploring contemporary fashion trends, this chiffon hijab texture is close to everyday chiffon hijabs and therefore easy to wrap for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+      "mainCategorySlugs": [
+        "bridal-hijab",
+        "red"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
+          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+        },
+        { 
+          "image": "/images/red-dress-for-muslim-wedding1.webp", 
+          "targetSlug": "red-dress-for-muslim-wedding" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-hijab/red-gold-sparkle-hijab.webp",
+          "alt": "Red chiffon hijab with gold specks and a beaded border.",
+          "figcaption": "This red hijab is the gold standard to accompany traditional red wedding dresses that have gold embroidery, utilizing high-quality chiffon.",
+          "amazonLink": "https://amzn.to/4k2xRVj"
+        },
+        {
+          "url": "bridal-hijab/red-gold-sparkle-hijab-closeup.webp",
+          "alt": "Closeup of red chiffon hijab with gold specks and a beaded border.",
+          "figcaption": "This red hijab is the gold standard to accompany traditional red wedding dresses that have gold embroidery, utilizing high-quality chiffon. Closeup shot.",
+          "amazonLink": "https://amzn.to/4k2xRVj"
+        }
+      ],
+      "og_image": "bridal-hijab/red-gold-sparkle-hijab.webp",
+      "title_tag": "Red Sparkle Chiffon | Traditional Styling from Amazon 2026",
+      "og_title": "Red Sparkle Chiffon | Vibrant Fashion Trends",
+      "og_type": "website",
+      "meta_description": "Our red hijab with gold sparkles is the perfect match for traditional bridal attire. Crafted with chiffon for an easy wrap, elegant wedding look.",
+      "attributes": {
+        "category": "Bridal Hijab",
+        "color": "Red",
+        "material": "Chiffon",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Hijab",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"
+        },
+        {
+          "name": "Red Gold Sparkle Hijab",
+          "item": "https://hijabibridal.github.io/shop/product/red-gold-sparkle-hijab"
         }
       ]
     },
