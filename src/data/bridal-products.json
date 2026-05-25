@@ -3377,9 +3377,9 @@
       ]
     },
     {
-      "name": "Champagne Hijab",
+      "name": "Champagne Hijab Elegant",
       "slug": "champagne-hijab",
-      "description": "This Hijab features a stunning champagne color that perfectly complements your Muslim wedding dress or hijabi lehenga. Designed for Muslim women who appreciate modest fashion, this hijab adds a touch of sparkle to your bridal ensemble, making it an ideal choice for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this in Amazon Color: BEIGE  </h2>This Hijab coordinates with styling for bridal looks, ensuring you achieve an elegant and sophisticated appearance. This versatile piece can be styled to suit various occasions, including as a turban or as a Turkish hijab with dangling jewelry, enhancing your overall bridal aesthetic.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+      "description": "Shop this champagne hijab, elegant color that perfectly complements your Muslim wedding dress or lehenga with hijab. Designed for Muslim women who appreciate modest fashion, this hijab adds a touch of sparkle to your bridal ensemble, making it an ideal choice for your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Hijab in Amazon Color: BEIGE  </h2>This hijab coordinates well with styling for bridal looks, ensuring you achieve an elegant and sophisticated appearance. This versatile piece can be styled to suit various occasions, including as a turban or as a Turkish hijab with dangling jewelry, enhancing your overall bridal aesthetic.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
       "mainCategorySlugs": [
         "bridal-hijab",
         "champagne"
@@ -3396,17 +3396,17 @@
       ],
       "images": [
         {
-          "url": "bridal-hijab/champagne-bridal-hijab-shine.webp",
-          "alt": "Champagne Hijab in a luxurious material, featuring a soft sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.",
+          "url": "bridal-hijab/champagne-hijab-elegant.webp",
+          "alt": "Champagne Hijab, elegant material, featuring a silver sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.",
           "amazonLink": "https://amzn.to/4jmjx9B",
-          "figcaption": "This Champagne Bridal Hijab highlights how high-quality materials and versatile styles align with 2026 fashion trends for elegant wedding themes."
+          "figcaption": "Champagne hijab with elegant silver sheen highlights how high-quality materials align with 2026 fashion trends for elegant wedding themes."
         }
       ],
-      "og_image": "bridal-hijab/champagne-bridal-hijab-shine.webp",
-      "title_tag": "Champagne Bridal Hijab | Amazon Modest Collection 2026",
-      "og_title": "Elegant Champagne Hijab - Perfect for 2026 Brides",
+      "og_image": "bridal-hijab/champagne-hijab-elegant.webp",
+      "title_tag": "Champagne Hijab Elegant | Amazon Modest Collection 2026",
+      "og_title": "Champagne Hijab Elegant - Perfect for 2026 Brides",
       "og_type": "website",
-      "meta_description": "Elevate your bridal look with our Champagne Hijab, a perfect blend of elegance and modest fashion for Muslim women. Ideal for special occasions.",
+      "meta_description": "Elevate your bridal look with our champagne hijab, an elegant blend of style and modest fashion for Muslim women. Ideal for special occasions.",
       "attributes": {
         "category": "Bridal Hijab",
         "color": "Champagne",
@@ -3429,7 +3429,7 @@
           "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"
         },
         {
-          "name": "Champagne Hijab",
+          "name": "Champagne Hijab Elegant",
           "item": "https://hijabibridal.github.io/shop/product/champagne-hijab"
         }
       ]
