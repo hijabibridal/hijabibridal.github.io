@@ -8,7 +8,6 @@ import productData from '@/data/bridal-products.json';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // FULL LIST OF COLORS FROM YOUR JSON
   const colors = [
     'blue', 'champagne', 'fuschia', 'gold', 'green', 
     'lilac', 'peach', 'pink', 'red', 'silver', 'white'
@@ -42,7 +41,6 @@ export default function Header() {
 
         {/* Desktop Nav with Mega-Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          {/* SHOP MEGA MENU (Desktop Only) */}
           <div className="group relative py-4">
             <Link 
               href="/shop" 
@@ -57,7 +55,6 @@ export default function Header() {
             {/* MEGA MENU PANEL */}
             <div className="absolute left-0 top-full hidden group-hover:block w-[450px] bg-white border border-pink-50 shadow-xl rounded-b-2xl p-8 z-50">
               <div className="grid grid-cols-2 gap-10">
-                {/* Colors Side */}
                 <div>
                   <p className="text-pink-600 font-black text-[11px] uppercase mb-4 tracking-widest border-b border-pink-50 pb-1">
                     By Color
@@ -75,7 +72,6 @@ export default function Header() {
                   </div>
                 </div>
 
-                {/* Items Side */}
                 <div>
                   <p className="text-pink-600 font-black text-[11px] uppercase mb-4 tracking-widest border-b border-pink-50 pb-1">
                     By Item
@@ -105,7 +101,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu (Reverted to Original Style) */}
+      {/* Mobile Search Bar — always visible below logo row */}
+      <div className="md:hidden px-4 pb-3">
+        <SearchBar />
+      </div>
+
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-pink-50 p-6 space-y-6">
            <div className="grid grid-cols-2 gap-4">
@@ -151,9 +152,6 @@ export default function Header() {
             >
               About
             </Link>
-            <div className="pt-2">
-              <SearchBar />
-            </div>
            </div>
         </div>
       )}
