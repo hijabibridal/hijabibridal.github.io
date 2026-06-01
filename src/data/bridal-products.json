@@ -3069,9 +3069,9 @@
   ]
 },
     {
-      "name": "Champagne Bridal Hijab",
+      "name": "Champagne Satin Hijab",
       "slug": "champagne-crepe-bridal-hijab",
-      "description": "This Champagne Bridal Hijab offers a luxurious glow that enhances the  your Muslim wedding dress. Using premium crepe material, this hijab is a top choice for Muslim women who follow high-end modest fashion trends. The warm, shimmering colors are perfect for grand ballroom wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: Bronze</h2>To achieve sophisticated bridal styles, your materials must have a natural luster. This crepe hijab provides a rich texture that beautifully anchors gold or silver nikkah jewelry. Whether you are aiming for classic royal wedding themes or contemporary fashion trends, the champagne bridal hijab offers a more shiny and professional finish than chiffon for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
+      "description": "This Champagne Satin Hijab offers a luxurious glow that enhances the  your Muslim wedding dress. Using premium lightweight crepe material with a satin finish, this hijab is a top choice for Muslim women who follow high-end modest fashion trends. The warm, shimmering colors are perfect for grand ballroom wedding themes.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Materials, Styles, and Colors for this Hijab in Amazon Color: Bronze</h2>To achieve sophisticated bridal styles, your materials must have a natural luster. This hijab provides a rich texture that beautifully anchors gold or silver nikkah jewelry. Whether you are aiming for classic royal wedding themes or contemporary fashion trends, this hijab offers a more shiny and professional finish than chiffon for formal events.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/champagne\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-hijab\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Hijab</a>",
       "mainCategorySlugs": [
         "bridal-hijab",
         "champagne"
@@ -3088,23 +3088,23 @@
       ],
       "images": [
         {
-          "url": "bridal-hijab/champagne-crepe-bridal-hijab.webp",
-          "alt": "Champagne Bridal Hijab - Champagne Elegant",
-          "figcaption": "The Champagne Bridal Hijab provides a regal finish with its high-quality crepe materials and warm tones.",
+          "url": "bridal-hijab/champagne-satin-hijab.webp",
+          "alt": "Champagne Satin Hijab - lightweight crepe with satin finish",
+          "figcaption": "The Champagne Satin Hijab provides a regal finish with its high-quality, lightweight crepe material and warm tone.",
           "amazonLink": "https://amzn.to/4k2xRVj"
         },
         {
-          "url": "bridal-hijab/champagne-crepe-bridal-hijab2.webp",
-          "alt": "Champagne Bridal Hijab - Champagne Elegant",
-          "figcaption": "The Champagne Bridal Hijab provides a regal finish with its high-quality crepe materials and warm tones.",
+          "url": "bridal-hijab/champagne-satin-hijab2.webp",
+          "alt": "Closeup of Champagne Satin Hijab - lightweight crepe with satin finish",
+          "figcaption": "Closeup of the Champagne Satin Hijab luxurious finish.",
           "amazonLink": "https://amzn.to/4k2xRVj"
         }
       ],
-      "og_image": "bridal-hijab/champagne-crepe-bridal-hijab.webp",
-      "title_tag": "Champagne Bridal Hijab | Luxury Amazon Styling 2026",
-      "og_title": "Champagne Bridal Hijab | Elegant Bronze Crepe",
+      "og_image": "bridal-hijab/champagne-satin-hijab.webp",
+      "title_tag": "Champagne Satin Hijab | Luxury Amazon Styling 2026",
+      "og_title": "Champagne Satin Hijab | Elegant Lightweight",
       "og_type": "website",
-      "meta_description": "The Champagne Bridal Hijab adds a golden glow to your bridal attire. Crafted from premium crepe materials for a high-end modest look.",
+      "meta_description": "The Champagne Satin Hijab adds a golden glow to your bridal attire. Crafted from premium lightweight crepe material with satin finish for a high-end look.",
       "attributes": {
         "category": "Bridal Hijab",
         "color": "Champagne",
@@ -3127,7 +3127,7 @@
           "item": "https://hijabibridal.github.io/shop/category/bridal-hijab"
         },
         {
-          "name": "Champagne Bridal Hijab",
+          "name": "Champagne Satin Hijab",
           "item": "https://hijabibridal.github.io/shop/product/champagne-crepe-bridal-hijab"
         }
       ]
@@ -6999,7 +6999,7 @@
           "targetSlug": "gold-and-pearl-wedding-crown" 
         },
         { 
-          "image": "/images/bridal-hijab/champagne-crepe-bridal-hijab.webp", 
+          "image": "/images/bridal-hijab/champagne-satin-hijab.webp", 
           "targetSlug": "champagne-crepe-bridal-hijab" 
         }
       ],
