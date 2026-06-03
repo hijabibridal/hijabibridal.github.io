@@ -9172,7 +9172,7 @@
       "item": "https://hijabibridal.github.io/shop/category/red"
     },
     {
-      "name": "Red Dress for Muslim Wedding",
+      "name": "Red Muslim Wedding Dress",
       "item": "https://hijabibridal.github.io/shop/product/red-dress-for-muslim-wedding"
     }
   ]
@@ -11797,6 +11797,70 @@
         {
           "name": "Sharara Suit in Green",
           "item": "https://hijabibridal.github.io/shop/product/sharara-suit-in-green"
+        }
+      ]
+    },
+    {
+      "name": "Gold Sharara",
+      "slug": "gold-sharara",
+      "description": "This sharara clothing suit is in gold, making it the perfect choice for displaying femininity at weddings with a green double dupatta and jewelry. This ready-made garment consists of three pieces. The dress is in jacquard, the dupatta is net and the pants are satin with net overlay embroidery that matches the dupagga. Sizes for this gold outfit range from Small to XXL, ensuring a fit for various body types and promoting body positivity.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara Suit in Gold</h2>This sharara suit coordinates well with styling for bridal looks, allowing for personalization through hairstyle and head covering. Choose a sleek bun under your hijab. Additionally, pairing the main embroidered dupatta with a heavy dupatta in green velvet creates a graceful look, while accessories can be customized to complete the bridal appearance.<br /><br />Sharara.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "gold"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/nikkah-jewelry/green-bridal-nikkah-jewelry.webp", 
+          "targetSlug": "green-bridal-nikkah-jewelry"  
+        },
+        { 
+          "image": "/images/bridal-dupatta/green-velvet-dupatta.webp", 
+          "targetSlug": "green-velvet-bridal-dupatta" 
+        }
+      ],
+      "images": [
+        {
+          "url": "gold-sharara.webp",
+          "alt": "Gold sharara with embroidery — modest Muslim bridal outfit promoting body positivity",
+          "figcaption": "Embrace your unique style with this gold sharara clothing suit that draws the eye down to the hem. It promotes body positivity and confidence.",
+          "amazonLink": "https://amzn.to/3RZJmnO"
+        },
+        {
+          "url": "gold-sharara-closeup.webp",
+          "alt": "Gold sharara suit with embroidery — modest Muslim bridal outfit promoting body positivity",
+          "figcaption": "Gold sharara suit with elegant embroidery — a modest Muslim bridal outfit that flatters all body types with its flared silhouette.",
+          "amazonLink": "https://amzn.to/3RZJmnO"
+        }
+      ],
+      "og_image": "gold-sharara.webp",
+      "title_tag": "Gold Sharara Suit | Body Positivity and Fabric Style",
+      "og_title": "Gold Sharara Suit | Body Positivity and Fabric Style",
+      "og_type": "website",
+      "meta_description": "Shop our gold sharara clothing suit. Designed with jacquard fabric and heavy embroidery for a beautiful silhouette - perfect for chubby girls and all body types.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Gold",
+        "material": "Jacquard",
+        "style": "Embroidered",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Gold Sharara",
+          "item": "https://hijabibridal.github.io/shop/product/gold-sharara"
         }
       ]
     },
