@@ -24,10 +24,10 @@ export default function HomePage() {
               View All
             </Link>
             <Link
-              href="/about"
+              href="/shop/category/muslim-lehenga"
               className="bg-transparent border-2 border-white text-white px-12 py-4 font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all"
             >
-              Our Story
+              Muslim Lehengas
             </Link>
           </div>
         </div>
