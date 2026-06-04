@@ -8,14 +8,6 @@ export default function HomePage() {
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section className="relative h-[100vh] flex items-center justify-center bg-gray-900">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-bridal.jpg"
-            alt="Hijabi Bridal — Muslim wedding dresses and bridal wear in the USA"
-            fill
-            className="object-cover opacity-60"
-            priority
-            unoptimized
-          />
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 leading-none">
