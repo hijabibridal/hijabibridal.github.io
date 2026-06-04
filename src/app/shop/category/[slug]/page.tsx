@@ -50,7 +50,9 @@ export default async function CategoryPage({ params }: PageProps) {
   const filteredProducts = productData.products
     .filter((p) => p.mainCategorySlugs.includes(slug))
     .sort((a, b) => {
-      const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
+      const aNameRed = slug === 'red' && a.name.toLowerCase().includes('red');
+      const bNameRed = slug === 'red' && b.name.toLowerCase().includes('red');
+      if (aNameRed !== bNameRed) return aNameRed ? -1 : 1;const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
       const bColorMatch = COLOR_PRIORITY.findIndex(color => b.mainCategorySlugs.includes(color));
       if (aColorMatch !== bColorMatch) {
         if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
