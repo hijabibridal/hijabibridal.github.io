@@ -6700,6 +6700,70 @@
       ]
     },
     {
+      "name": "Lilac Sharara",
+      "slug": "lilac-sharara",
+      "description": "This is a stunning lilac sharara, crafted in luxurious georgette fabric with gold embroidery ensuring that every Muslim bride radiates beauty on her special day. The ensemble includes a beautifully embroidered net dupatta, making it a true embodiment of elegance and tradition. Available in sizes XS - XXL, this sharara is perfect for modern brides seeking a timeless look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara</h2>This Muslim bride look coordinates well with styling for bridal looks that enhance personal style. Layering the dresswith nikkah jewelry necklaces creates a regal finish, while a loosely styled hijab with a choker beneath offers an effortlessly sophisticated appearance. For brides looking to elevate their attire, adding a second dupatta worn elegantly over one shoulder adds depth and drama to the overall bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/lilac-gold-sparkle-hijab.webp", 
+          "targetSlug": "lilac-gold-sparkle-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/heavy-bridal-kundan-set.webp", 
+          "targetSlug": "heavy-bridal-kundan-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "lilac-sharara.webp",
+          "alt": "This lilac sharara showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "figcaption": "Shop this stunning lilac and purple sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your wedding occasion, blending modest fashion with your unique personal style."
+        },
+        {
+          "url": "lilac-sharara-closeup.webp",
+          "alt": "Closeup of lilac sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "figcaption": "This lilac sharara has a knee length choli and stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
+        }
+      ],
+      "og_image": "lilac-sharara.webp",
+      "title_tag": "Lilac Sharara | Modest Fashion Options",
+      "og_title": "Lilac Sharara | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Shop this lilac and purple sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your Muslim wedding.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Lilac",
+        "material": "Georgette",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Lilac Sharara",
+          "item": "https://hijabibridal.github.io/shop/product/lilac-sharara"
+        }
+      ]
+    },
+    {
       "name": "Readymade Blue Muslim Lehenga",
       "slug": "readymade-blue-hijabi-lehenga",
       "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order this lehenga on Amazon in Blue: https://amzn.to/3WvTVhT\nThis Muslim lehenga features a breathtaking ensemble designed for the modern Muslim bride who cherishes both tradition and contemporary style. Crafted in premium georgette with gold embroidery and available in sizes XS-XX, this exquisite outfit is tailored to perfection. A matching dupatta completes the ensemble, enhancing its elegance and charm.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Readymade Blue Muslim Lehenga  </h2>This Muslim lehenga coordinates with a blue or aqua hijab. You can style your hijab in a classic manner, adorned with carefully placed jewelry along the hijab's border for a captivating focal point. The main dupatta can be gracefully draped over your hijab to the back, while an optional second dupatta around one shoulder adds beauty to your bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
