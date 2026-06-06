@@ -6700,70 +6700,6 @@
       ]
     },
     {
-      "name": "Lilac Sharara",
-      "slug": "lilac-sharara",
-      "description": "This is a stunning lilac sharara, crafted in luxurious georgette fabric with gold embroidery ensuring that every Muslim bride radiates beauty on her special day. The ensemble includes a beautifully embroidered net dupatta, making it a true embodiment of elegance and tradition. Available in sizes XS - XXL, this sharara is perfect for modern brides seeking a timeless look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara</h2>This Muslim bride look coordinates well with styling for bridal looks that enhance personal style. Layering the dresswith nikkah jewelry necklaces creates a regal finish, while a loosely styled hijab with a choker beneath offers an effortlessly sophisticated appearance. For brides looking to elevate their attire, adding a second dupatta worn elegantly over one shoulder adds depth and drama to the overall bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
-      "mainCategorySlugs": [
-        "sharara",
-        "lilac"
-      ],
-      "suggestedAddOns": [
-        { 
-          "image": "/images/bridal-hijab/lilac-gold-sparkle-hijab.webp", 
-          "targetSlug": "lilac-gold-sparkle-hijab" 
-        },
-        { 
-          "image": "/images/nikkah-jewelry/heavy-bridal-kundan-set.webp", 
-          "targetSlug": "heavy-bridal-kundan-set" 
-        }
-      ],
-      "images": [
-        {
-          "url": "lilac-sharara.webp",
-          "alt": "This lilac sharara showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.",
-          "amazonLink": "https://amzn.to/4dTkCpR",
-          "figcaption": "Shop this stunning lilac and purple sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your wedding occasion, blending modest fashion with your unique personal style."
-        },
-        {
-          "url": "lilac-sharara-closeup.webp",
-          "alt": "Closeup of lilac sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.",
-          "amazonLink": "https://amzn.to/4dTkCpR",
-          "figcaption": "This lilac sharara has a knee length choli and stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
-        }
-      ],
-      "og_image": "lilac-sharara.webp",
-      "title_tag": "Lilac Sharara | Modest Fashion Options",
-      "og_title": "Lilac Sharara | Modest Fashion Options",
-      "og_type": "website",
-      "meta_description": "Shop this lilac and purple sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your Muslim wedding.",
-      "attributes": {
-        "category": "Sharara",
-        "color": "Lilac",
-        "material": "Georgette",
-        "style": "Modern",
-        "condition": "New",
-        "availability": "InStock"
-      },
-      "breadcrumbs": [
-        {
-          "name": "Home",
-          "item": "https://hijabibridal.github.io/"
-        },
-        {
-          "name": "Shop",
-          "item": "https://hijabibridal.github.io/shop"
-        },
-        {
-          "name": "Sharara",
-          "item": "https://hijabibridal.github.io/shop/category/sharara"
-        },
-        {
-          "name": "Lilac Sharara",
-          "item": "https://hijabibridal.github.io/shop/product/lilac-sharara"
-        }
-      ]
-    },
-    {
       "name": "Readymade Blue Muslim Lehenga",
       "slug": "readymade-blue-hijabi-lehenga",
       "description": "Inspiration: This AI-visualized look demonstrates how you can achieve a Muslim lehenga. Add hijab, then order this lehenga on Amazon in Blue: https://amzn.to/3WvTVhT\nThis Muslim lehenga features a breathtaking ensemble designed for the modern Muslim bride who cherishes both tradition and contemporary style. Crafted in premium georgette with gold embroidery and available in sizes XS-XX, this exquisite outfit is tailored to perfection. A matching dupatta completes the ensemble, enhancing its elegance and charm.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Readymade Blue Muslim Lehenga  </h2>This Muslim lehenga coordinates with a blue or aqua hijab. You can style your hijab in a classic manner, adorned with carefully placed jewelry along the hijab's border for a captivating focal point. The main dupatta can be gracefully draped over your hijab to the back, while an optional second dupatta around one shoulder adds beauty to your bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/muslim-lehenga\" class=\"text-[#db2777] font-bold hover:underline\">View all Muslim Lehenga</a>",
@@ -11797,6 +11733,206 @@
     {"name": "Sharara in Blue", "item": "https://hijabibridal.github.io/shop/product/sharara-in-blue"}
   ]
 },
+{
+      "name": "Lilac Sharara",
+      "slug": "lilac-sharara",
+      "description": "This is a stunning lilac sharara, crafted in luxurious georgette fabric with gold embroidery ensuring that every Muslim bride radiates beauty on her special day. The ensemble includes a beautifully embroidered net dupatta, making it a true embodiment of elegance and tradition. Available in sizes XS - XXL, this sharara is perfect for modern brides seeking a timeless look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara</h2>This Muslim bride look coordinates well with styling for bridal looks that enhance personal style. Layering the dresswith nikkah jewelry necklaces creates a regal finish, while a loosely styled hijab with a choker beneath offers an effortlessly sophisticated appearance. For brides looking to elevate their attire, adding a second dupatta worn elegantly over one shoulder adds depth and drama to the overall bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/lilac\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "lilac"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/lilac-gold-sparkle-hijab.webp", 
+          "targetSlug": "lilac-gold-sparkle-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/heavy-bridal-kundan-set.webp", 
+          "targetSlug": "heavy-bridal-kundan-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "lilac-sharara.webp",
+          "alt": "This lilac sharara showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "figcaption": "Shop this stunning lilac and purple sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your wedding occasion, blending modest fashion with your unique personal style."
+        },
+        {
+          "url": "lilac-sharara-closeup.webp",
+          "alt": "Closeup of lilac sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "figcaption": "This lilac sharara has a knee length choli and stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
+        }
+      ],
+      "og_image": "lilac-sharara.webp",
+      "title_tag": "Lilac Sharara | Modest Fashion Options",
+      "og_title": "Lilac Sharara | Modest Fashion Options",
+      "og_type": "website",
+      "meta_description": "Shop this lilac and purple sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your Muslim wedding.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Lilac",
+        "material": "Georgette",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Lilac Sharara",
+          "item": "https://hijabibridal.github.io/shop/product/lilac-sharara"
+        }
+      ]
+    },
+    {
+      "name": "Sage Green Hijab Style",
+      "slug": "sage-green-hijab-style",
+      "description": "This stunning sharara is in sage green hijab style, crafted in luxurious georgette fabric with gold embroidery ensuring that every Muslim bride radiates beauty on her special day. The ensemble includes a beautifully embroidered net dupatta, making it a true embodiment of elegance and tradition. Available in sizes XS - XXL, this sharara is perfect for modern brides seeking a timeless look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara</h2>This Muslim bride look coordinates well with styling for bridal looks that enhance personal style. Layering the dresswith nikkah jewelry necklaces creates a regal finish, while a loosely styled hijab with a choker beneath offers an effortlessly sophisticated appearance. For brides looking to elevate their attire, adding a second dupatta worn elegantly over one shoulder adds depth and drama to the overall bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/bridal-hijab/forest-green-chiffon-hijab.webp", 
+          "targetSlug": "forest-green-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/heavy-bridal-kundan-set.webp", 
+          "targetSlug": "heavy-bridal-kundan-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "sage-green-hijab-style.webp",
+          "alt": "This sharara in sage green hijab style showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "iptc": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "figcaption": "Shop this stunning dark green sharara dress paired with sage green hijab style. The AI image shows you how to style the hijab! Luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your Muslim wedding occasion, blending modest fashion with your unique personal style."
+        },
+        {
+          "url": "sage-green-hijab-style-actual.webp",
+          "alt": "Actual version of sage sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "figcaption": "This sage sharara has a knee length choli and stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
+        },
+        {
+          "url": "sage-green-hijab-style-actual-closup.webp",
+          "alt": "Closeup version of sage sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.",
+          "amazonLink": "https://amzn.to/4dTkCpR",
+          "figcaption": "This sage sharara has a knee length choli and stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
+        }
+      ],
+      "og_image": "sage-green-hijab-style.webp",
+      "title_tag": "Sage Green Hijab Style | Modest Sharara Options",
+      "og_title": "Sage Green Hijab Style | Modest Sharara Options",
+      "og_type": "website",
+      "meta_description": "Shop this sharara in sage green hijab style with luxurious georgette fabric with intricate metallic embroidery and matching net dupatta for your Muslim wedding.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Green",
+        "material": "Georgette",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Sage Green Hijab Style",
+          "item": "https://hijabibridal.github.io/shop/product/sage-green-hijab-style"
+        }
+      ]
+    },
+    {
+      "name": "Sage Green Hijab Outfit",
+      "slug": "sage-green-hijab-outfit",
+      "description": "This stunning sharara is a sage green hijab outfit, crafted in luxurious silk fabric with gold embroidery ensuring that every Muslim bride radiates beauty on her special day. The ensemble includes a beautifully embroidered dupatta, making it a true embodiment of elegance and tradition. Available in sizes 36 - 44, this sharara is perfect for modern brides seeking a timeless look.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Sharara</h2>This Muslim bride look coordinates well with styling for bridal looks that enhance personal style. Layering the dresswith nikkah jewelry necklaces creates a regal finish, while a loosely styled hijab with a choker beneath offers an effortlessly sophisticated appearance. For brides looking to elevate their attire, adding a second dupatta worn elegantly over one shoulder adds depth and drama to the overall bridal ensemble.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/sharara\" class=\"text-[#db2777] font-bold hover:underline\">View all Sharara</a>",
+      "mainCategorySlugs": [
+        "sharara",
+        "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/bridal-hijab/bridal-hijab/sage-green-hijab.webp", 
+          "targetSlug": "sage-green-crepe-bridal-hijab" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/heavy-bridal-kundan-set.webp", 
+          "targetSlug": "heavy-bridal-kundan-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "sage-green-hijab-outfit.webp",
+          "alt": "This sharara is a sage green hijab outfit showcasing luxurious silk fabric with intricate metallic embroidery, perfect for a Muslim wedding.",
+          "amazonLink": "https://amzn.to/4o8Z3Fb",
+          "iptc": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "figcaption": "Shop this stunning sage green hijab outfit, a silk sharara. The AI image shows you how to style the hijab! Intricate metallic embroidery and matching dupatta for your Muslim wedding occasion, blending modest fashion with your unique personal style."
+        },
+        {
+          "url": "sage-green-hijab-outfit-actual.webp",
+          "alt": "Actual version of sage sharara in luxurious silk fabric with intricate metallic embroidery and matching dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.",
+          "amazonLink": "https://amzn.to/4o8Z3Fb",
+          "figcaption": "This sage sharara has a knee length choli and stands out among modern fashion options for those seeking the perfect balance of modest fashion and elegance."
+        }
+      ],
+      "og_image": "sage-green-hijab-outfit.webp",
+      "title_tag": "Sage Green Hijab Outfit | Modest Sharara Options",
+      "og_title": "Sage Green Hijab Outfit | Modest Sharara Options",
+      "og_type": "website",
+      "meta_description": "Shop this sage green hijab outfit, a sharara in luxurious silk fabric with intricate metallic embroidery and matching dupatta for your Muslim wedding.",
+      "attributes": {
+        "category": "Sharara",
+        "color": "Green",
+        "material": "Silk",
+        "style": "Modern",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Sharara",
+          "item": "https://hijabibridal.github.io/shop/category/sharara"
+        },
+        {
+          "name": "Sage Green Hijab Outfit",
+          "item": "https://hijabibridal.github.io/shop/product/sage-green-hijab-outfit"
+        }
+      ]
+    },
     {
       "name": "Sharara Suit in Green",
       "slug": "sharara-suit-in-green",
