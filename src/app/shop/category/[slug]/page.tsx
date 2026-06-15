@@ -38,6 +38,11 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+// ─── Helper: slugify heading text for anchor IDs ──────────────────────────────
+function toAnchor(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
   const category = productData.mainCategories.find((c) => c.slug === slug);
@@ -84,10 +89,23 @@ export default async function CategoryPage({ params }: PageProps) {
 
   const stylingTable = (category as any).stylingTable;
 
+  // Build TOC entries from longContent headings (+ stylingTable if present)
+  const tocEntries: { label: string; anchor: string }[] = [];
+  if (stylingTable?.chartName) {
+    tocEntries.push({ label: stylingTable.chartName, anchor: toAnchor(stylingTable.chartName) });
+  }
+  if (category.longContent) {
+    (category.longContent as any[]).forEach((section: any) => {
+      if (section.heading) {
+        tocEntries.push({ label: section.heading, anchor: toAnchor(section.heading) });
+      }
+    });
+  }
+  if (parsedFaqs.length > 0) {
+    tocEntries.push({ label: 'Frequently Asked Questions', anchor: 'faq' });
+  }
+
   // Build schemas
-  // ImageObject — emitted for every category that has an imageUrl,
-  // regardless of whether it also has a FAQ. Previously this was only
-  // rendered inside the FAQ block, so 13 categories got no image schema.
   const imageSchema = category.imageUrl
     ? {
         "@context": "https://schema.org",
@@ -101,7 +119,6 @@ export default async function CategoryPage({ params }: PageProps) {
       }
     : null;
 
-  // FAQPage — only for categories that have FAQ_schema
   const faqSchema = parsedFaqs.length > 0
     ? {
         "@context": "https://schema.org",
@@ -113,7 +130,6 @@ export default async function CategoryPage({ params }: PageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
 
-      {/* ImageObject schema — every category with an imageUrl */}
       {imageSchema && (
         <script
           type="application/ld+json"
@@ -121,7 +137,6 @@ export default async function CategoryPage({ params }: PageProps) {
         />
       )}
 
-      {/* FAQPage schema — only categories with FAQ_schema */}
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -172,10 +187,56 @@ export default async function CategoryPage({ params }: PageProps) {
       {/* Long Content Section */}
       {category.longContent && (
         <section className="mt-24 max-w-4xl mx-auto border-t border-gray-100 pt-16">
-          
+
+          {/* ── Table of Contents (category) ── */}
+          {tocEntries.length > 0 && (
+            <nav className="mb-16 border border-pink-100 rounded-2xl bg-pink-50/40 overflow-hidden">
+              <div className="flex items-start gap-6 p-6">
+
+                {/* Category image */}
+                {category.imageUrl && (
+                  <Link
+                    href={`/shop/category/${slug}`}
+                    className="shrink-0 rounded-xl overflow-hidden border border-pink-100 shadow-sm"
+                    aria-label={category.imageAlt || category.name}
+                  >
+                    <Image
+                      src={`/images/${category.imageUrl}`}
+                      alt={category.imageAlt || category.name}
+                      width={96}
+                      height={96}
+                      className="object-cover w-24 h-24"
+                      unoptimized
+                    />
+                  </Link>
+                )}
+
+                {/* TOC list */}
+                <div className="flex-1 min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-pink-400 font-bold mb-3">
+                    Scroll Down to Read
+                  </p>
+                  <ol className="space-y-1.5 list-none">
+                    {tocEntries.map((entry, i) => (
+                      <li key={i}>
+                        <a
+                          href={`#${entry.anchor}`}
+                          className="text-sm font-medium text-gray-700 hover:text-pink-600 transition-colors flex items-start gap-2"
+                        >
+                          <span className="text-pink-300 font-black shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                          <span>{entry.label}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+            </nav>
+          )}
+
           {/* DECOUPLED DYNAMIC STYLING TABLE */}
           {stylingTable && (
-            <div className="mb-16">
+            <div id={toAnchor(stylingTable.chartName)} className="mb-16">
               <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
                 {stylingTable.chartName}
               </h2>
@@ -242,8 +303,8 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           )}
 
-          {category.longContent.map((section: any, index: number) => (
-            <div key={index} className="mb-16">
+          {(category.longContent as any[]).map((section: any, index: number) => (
+            <div key={index} id={toAnchor(section.heading)} className="mb-16">
               <h2 className="text-3xl font-black text-gray-900 mb-6 uppercase tracking-tight">
                 {section.heading}
               </h2>
@@ -255,9 +316,9 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           ))}
 
-          {/* FAQ rendered separately — schema is now at the top of the page */}
+          {/* FAQ */}
           {parsedFaqs.length > 0 && (
-            <div className="mt-20 bg-pink-50/50 p-10 rounded-[2.5rem] border border-pink-100">
+            <div id="faq" className="mt-20 bg-pink-50/50 p-10 rounded-[2.5rem] border border-pink-100">
               <h2 className="text-3xl font-black text-gray-900 mb-8 uppercase tracking-tight">
                 Frequently Asked Questions
               </h2>
