@@ -193,24 +193,6 @@ export default async function CategoryPage({ params }: PageProps) {
             <nav className="mb-16 border border-pink-100 rounded-2xl bg-pink-50/40 overflow-hidden">
               <div className="flex items-start gap-6 p-6">
 
-                {/* Category image */}
-                {category.imageUrl && (
-                  <Link
-                    href={`/shop/category/${slug}`}
-                    className="shrink-0 rounded-xl overflow-hidden border border-pink-100 shadow-sm"
-                    aria-label={category.imageAlt || category.name}
-                  >
-                    <Image
-                      src={`/images/${category.imageUrl}`}
-                      alt={category.imageAlt || category.name}
-                      width={96}
-                      height={96}
-                      className="object-cover w-24 h-24"
-                      unoptimized
-                    />
-                  </Link>
-                )}
-
                 {/* TOC list */}
                 <div className="flex-1 min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-pink-400 font-bold mb-3">
