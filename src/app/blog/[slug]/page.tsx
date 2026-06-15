@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   return articles.map((article: any) => ({ slug: article.slug }));
 }
 
-// ─── Per-page metadata (meta title + description for each blog post) ──────────
+// ─── Per-page metadata ────────────────────────────────────────────────────────
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
@@ -40,6 +40,12 @@ export async function generateMetadata(
   };
 }
 
+// ─── Helper: extract h2 text from HTML string ─────────────────────────────────
+function extractH2Headings(html: string): string[] {
+  const matches = [...html.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi)];
+  return matches.map((m) => m[1].replace(/<[^>]+>/g, '').trim());
+}
+
 // ─── Page component ───────────────────────────────────────────────────────────
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -47,14 +53,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!article) notFound();
 
-  // 3. CONTENT SPLITTING (moved up so intro is available for product matching)
+  // 3. CONTENT SPLITTING
   const parts = article.htmlBody.split('<h2>');
   const introPart = parts[0];
 
-  // 1. EXTRACT CATEGORY FROM INTRO LINK ("Shop all our..." / "Browse all...")
-  //    Articles contain an <a href="/shop/category/SLUG">Shop all our …</a> before the first h2.
-  //    We pull that category slug directly — no title/body guessing needed.
-  // Match ANY anchor in the intro that links to /shop/category/SLUG
+  // Extract h2 headings for TOC — strip any HTML tags inside heading text
+  const h2Headings = parts.slice(1).map((part: string) => {
+    const closeTag = part.indexOf('</h2>');
+    const raw = closeTag !== -1 ? part.slice(0, closeTag) : part.slice(0, 80);
+    return raw.replace(/<[^>]+>/g, '').trim();
+  });
+
+  // Slugify for anchor IDs
+  const toAnchor = (text: string) =>
+    text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+  // 1. EXTRACT CATEGORY FROM INTRO LINK
   const shopLinkMatch = introPart.match(
     /<a\s[^>]*href=["'][^"']*\/shop\/category\/([^"'/?\s]+)[^"']*["'][^>]*>/i
   );
@@ -63,10 +77,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   let matchedKeyword: string;
 
   if (categorySlugFromLink) {
-    // Primary: use the explicit category link from the article intro
     matchedKeyword = categorySlugFromLink;
   } else {
-    // Fallback: old title/body heuristics
     const keywordMap = ["hijab", "caftan", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
     const searchString = `${article.slug} ${article.pageTitle}`.toLowerCase();
     matchedKeyword = keywordMap.find(word => searchString.includes(word)) || "bridal";
@@ -79,13 +91,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     }
   }
 
-  const relatedPool = productData.products.filter(p =>
-    p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword.toLowerCase()))
-  );
-
-  // Apply shuffle to the pool
-  // 2. PRODUCT POOL — passed to client component which shuffles on each page load
-  // For color categories: use only exact color matches (e.g. "green" not "sage-green")
   const colorSlugs = ['red', 'white', 'green', 'champagne', 'blue', 'gold', 'pink', 'black', 'ivory', 'navy', 'maroon', 'purple', 'fuschia', 'peach', 'yellow', 'orange', 'teal', 'burgundy'];
   const matchedIsColor = colorSlugs.includes(matchedKeyword.toLowerCase());
 
@@ -97,7 +102,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         p.mainCategorySlugs?.some((s: string) => s.toLowerCase().includes(matchedKeyword.toLowerCase()))
       );
 
-  // Fall back to all products if category pool is empty
   const galleryPool = categoryPool.length > 0 ? categoryPool : productData.products;
 
   const faqSchema = article.FAQ_schema
@@ -141,7 +145,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "keywords": article.description,
   };
 
-  // Logic for adding three other blog titles sorted by title with keyword matching
   const matchKeywords = ["dress", "lehenga", "green", "nails", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
   const currentTitleLower = article.pageTitle.toLowerCase();
   const activeKeywords = matchKeywords.filter(word => currentTitleLower.includes(word));
@@ -237,18 +240,44 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
+      {/* ── Table of Contents (blog) ── */}
+      {h2Headings.length > 0 && (
+        <nav className="mb-10 border border-pink-100 rounded-2xl px-6 py-5 bg-pink-50/40">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-pink-400 font-bold mb-3">
+            Click to Read
+          </p>
+          <ol className="space-y-1.5 list-none">
+            {h2Headings.map((heading, i) => (
+              <li key={i}>
+                <a
+                  href={`#${toAnchor(heading)}`}
+                  className="text-sm font-medium text-gray-700 hover:text-pink-600 transition-colors flex items-start gap-2"
+                >
+                  <span className="text-pink-300 font-black shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{heading}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
       <div className="prose prose-pink max-w-none text-lg text-black
                    [&_h2]:!text-pink-600 [&_h2]:!font-bold [&_h2]:text-3xl [&_h2]:mt-12 [&_h2]:mb-6
                    [&_h3]:!text-pink-500 [&_h3]:!font-normal [&_h3]:!not-italic [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3">
         
         <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
 
-        {parts.slice(1).map((part: string, i: number) => (
-          <div key={i}>
-            <ShuffledProductGallery pool={galleryPool} galleryIndex={(i + 1) as any} />
-            <div dangerouslySetInnerHTML={{ __html: '<h2>' + part }} />
-          </div>
-        ))}
+        {parts.slice(1).map((part: string, i: number) => {
+          const headingText = h2Headings[i] || '';
+          const anchorId = toAnchor(headingText);
+          return (
+            <div key={i}>
+              <ShuffledProductGallery pool={galleryPool} galleryIndex={(i + 1) as any} />
+              <div id={anchorId} dangerouslySetInnerHTML={{ __html: '<h2>' + part }} />
+            </div>
+          );
+        })}
       </div>
 
       <div className="mt-20 pt-10 border-t border-pink-100 flex flex-col md:flex-row justify-center items-center gap-8 text-center pb-10">
