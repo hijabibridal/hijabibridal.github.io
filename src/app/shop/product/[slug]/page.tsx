@@ -5,7 +5,7 @@ import ProductGallery from '@/components/ProductGallery'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import PatternSelector from '@/components/PatternSelector'
+import PatternSelector from '@/components/PatternSelector';
 import AmazonButton from '@/components/AmazonButton';
 
 type PageProps = { params: Promise<{ slug: string }> };
