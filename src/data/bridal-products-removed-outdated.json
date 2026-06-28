@@ -1706,6 +1706,135 @@
         }
       ]
     },
+{
+      "name": "Blush Sequin Dupatta",
+      "slug": "blush-sequin-bridal-dupatta",
+      "description": "This sheer net dupatta features stunning sequin embroidery. The thickness of the gold fringe border border makes it an ideal addition to a pink or contrasting gold Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Patterns and Designs Styling Inspiration for Pink Dupattas</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/pink\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "pink"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/pink-sharara-suit-2.webp", 
+          "targetSlug": "pink-sharara-suit" 
+        },
+        { 
+          "image": "/images/silver-and-light-pink-bridal-punjabi-jutti-slippers.webp", 
+          "targetSlug": "silver-and-light-pink-bridal-punjabi-jutti-slippers" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/blush-sequin-bridal-dupatta.webp",
+          "alt": "Blush Sequin Dupatta with gold fringe for hijabi bridal outfits.",
+          "amazonLink": "https://amzn.to/4sXKF3i",
+          "figcaption": "The Blush Sequin Dupatta offers romantic glamor and traditional patterns and designs. Its ample length and width allow for creative and elegant wearing styles."
+        },
+        {
+          "url": "bridal-dupatta/blush-sequin-bridal-dupatta-closeup.webp",
+          "alt": "Closeup of Blush Sequin Dupatta with gold fringe and elegant patterns and designs for hijabi bridal outfits.",
+          "amazonLink": "https://amzn.to/4sXKF3i",
+          "figcaption": "Closeup of the Blush Sequin Dupatta offers romantic glamor and traditional patterns and designs. Its ample length and width allow for creative and elegant wearing styles."
+        }
+      ],
+      "og_image": "bridal-dupatta/blush-sequin-bridal-dupatta.webp",
+      "title_tag": "Blush Sequin Dupatta | Amazon Styling",
+      "og_title": "Blush Sequin Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Shop our Blush Sequin Dupatta on Amazon. Features sequin beautiful patterns and designs on net fabric, ideal for various bridal wearing styles.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Pink",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Pink Net Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/pink-net-bridal-dupatta"
+        }
+      ]
+    },
+    {
+      "name": "Red Net Mirror Dupatta",
+      "slug": "red-net-mirror-dupatta",
+      "description": "This sheer net dupatta features stunning mirror work. The thickness of the edgesmakes it an ideal addition to a red wedding dress. Use it as one of your double dupattas for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Red Net Dupatta</h2>The thick mirrored edges makes this an ideal dupatta to wear over your hijab, cascading down the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/red\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "red"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp", 
+          "targetSlug": "dark-red-cat-eye-artificial-nails" 
+        },
+        { 
+          "image": "/images/red-dress-for-muslim-wedding.webp", 
+          "targetSlug": "red-dress-for-muslim-wedding" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/red-net-mirror-dupatta.webp",
+          "alt": "Red Net Mirror Dupatta with mirror embroidery on the edges, ideal for hijabi bridal wearing styles.",
+          "amazonLink": "https://amzn.to/4mKE1vQ",
+          "figcaption": "This Red Net Mirror Dupatta features intricate mirror embroidery  designs on a sheer net fabric. The generous length offers endless styling inspiration for the modern bride."
+        },
+        {
+          "url": "bridal-dupatta/red-net-mirror-dupatta-2.webp",
+          "alt": "Red Mirror Dupatta featuring a thick edges, ideal for layering with a hijabi lehenga.",
+          "amazonLink": "https://amzn.to/4mKE1vQ",
+          "figcaption": "The high-quality fabric of this red mirror dupatta ensures it stays secure during various bridal wearing styles, making it a perfect addition to your wedding ensemble."
+        }
+      ],
+      "og_image": "bridal-dupatta/red-net-mirror-dupatta.webp",
+      "title_tag": "Red Net Mirror Dupatta | Amazon Styling",
+      "og_title": "Red Net Mirror Dupatta | Amazon Product Styling",
+      "og_type": "website",
+      "meta_description": "Shop our Red Net Mirror Dupatta on Amazon. Features premium net fabric with elegant patterns and designs, perfect for diverse bridal wearing styles in 2026.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Red",
+        "material": "Embroidery",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Red Net Mirror Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/red-net-mirror-dupatta"
+        }
+      ]
+    },
+    
     
 
     
