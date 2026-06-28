@@ -8,7 +8,7 @@ type Props = {
 
 export default function AmazonButton({ href, productName, productSlug }: Props) {
   return (
-    
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer sponsored nofollow"
