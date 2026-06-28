@@ -252,7 +252,7 @@ export default async function ProductPage({ params }: PageProps) {
  		  }}
 	        >
   		  Purchase on Amazon.com
-		</a>
+</a>
               )}
 
               <figure className="mb-8">
