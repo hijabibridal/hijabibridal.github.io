@@ -236,24 +236,12 @@ export default async function ProductPage({ params }: PageProps) {
               </h1>
 
               {product.images[0]?.amazonLink && (
-                <a 
-                  href={product.images[0].amazonLink}
- 		  target="_blank"
-  		  rel="noopener noreferrer sponsored nofollow"
-  		  onClick={() => {
-    		    if (typeof window !== 'undefined' && window.gtag) {
-     		      window.gtag('event', 'click', {
-       		        link_url: product.images[0].amazonLink,
-      		        link_text: 'Purchase on Amazon',
-       		        outbound: true,
-       		        product_name: product.name,
-     		      })
-   		    }
- 		  }}
-	        >
-  		  Purchase on Amazon.com
-</a>
-              )}
+  		<AmazonButton
+   		  href={product.images[0].amazonLink}
+    		  productName={product.name}
+  		  productSlug={product.slug}
+ 		 />
+	       )}
 
               <figure className="mb-8">
                 <figcaption className="text-gray-800 text-lg leading-relaxed border-l-4 border-pink-200 pl-6">
