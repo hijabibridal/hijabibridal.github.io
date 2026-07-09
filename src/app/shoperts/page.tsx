@@ -102,17 +102,27 @@ export default function PakistaniBridalPartnershipPage() {
             <p className="text-gray-600 font-medium">Timeless cuts beautifully customized for perfect modesty coverage.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="flex flex-col">
-              <div className="bg-pink-100 aspect-[4/5] rounded-3xl flex items-center justify-center text-pink-400 font-bold text-lg shadow-inner mb-4">
-                [ Image Asset: pakistani-lehenga-with-hijab.webp ]
-              </div>
+      <div className="flex flex-col">
+        {/* Swapped text placeholder for a real img tag pointing to your .jpg file */}
+        <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-inner mb-4">
+          <img 
+            src="/images/pakistani-lehenga-with-hijab.webp" 
+            alt="Pakistani Lehenga with Hijab" 
+            className="w-full h-full object-cover"
+          />
+        </div>
               <h3 className="text-xl font-bold uppercase tracking-tight mb-1">Pakistani Lehenga with Hijab</h3>
               <p className="text-gray-600 text-sm">A sweeping, heavily detailed skirt paired with a longer top and perfectly color-matched, elegant hijab draping.</p>
             </div>
             <div className="flex flex-col">
-              <div className="bg-pink-100 aspect-[4/5] rounded-3xl flex items-center justify-center text-pink-400 font-bold text-lg shadow-inner mb-4">
-                [ Image Asset: muslim-gharara.webp ]
-              </div>
+        {/* Swapped text placeholder for a real img tag pointing to your .jpg file */}
+        <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-inner mb-4">
+          <img 
+            src="/images/muslim-gharara.webp" 
+            alt="Muslim Sharara Ensemble" 
+            className="w-full h-full object-cover"
+          />
+        </div>
               <h3 className="text-xl font-bold uppercase tracking-tight mb-1">Muslim Gharara Ensemble</h3>
               <p className="text-gray-600 text-sm">Wide-legged, flowing statement pants paired with an intricately embroidered tunic for a regal, classic silhouette.</p>
             </div>
@@ -129,7 +139,7 @@ export default function PakistaniBridalPartnershipPage() {
             Shoperts works as a premium helper to connect you directly to the massive, stunning wedding apparel industry in Pakistan. Sourcing an authentic, high-end bridal outfit across borders can feel confusing if you aren't familiar with local workshops, sizes, or safe shipping methods. 
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Through their expert <strong>bespoke-tailoring</strong> service, Shoperts provides an easy, personal styling and ordering package. They handle everything from finding the best local fabric weavers to managing accurate sizing measurements, looking over the final dress for strict quality checks, and shipping it safely right to your door.
+            Through their expert <strong>bespoke-tailoring</strong> service, Shoperts provides an easy, <a href="https://shoperts.com/bespoke-tailoring" className="text-blue-600 hover:underline">personal styling and ordering package.</a> They handle everything from finding the best local fabrics to managing accurate sizing measurements, looking over the final dress for strict quality checks, and shipping it safely right to your door.
           </p>
           <div className="border-l-4 border-[#db2777] pl-4 italic text-gray-7xl text-gray-800 font-semibold text-lg bg-pink-50 py-4 pr-4 rounded-r-xl">
             "Shoperts is a tech-driven platform that manages the global supply chain, logistics, custom clearance and ensures doorstep delivery."
@@ -176,15 +186,15 @@ export default function PakistaniBridalPartnershipPage() {
             {/* Question 3 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
               <h3 className="text-xl font-bold text-black mb-3 flex items-start">
-                <span className="text-[#db2777] mr-3 font-mono">03.</span> How do the outfits work for the different wedding days?
+                <span className="text-[#db2777] mr-3 font-mono">03.</span> How many functions are there in a Pakistani wedding?
               </h3>
               <p className="text-gray-700 leading-relaxed pl-8">
-                Traditional weddings are a huge event celebrated over three completely separate days, and the bride changes her entire look for each part of the celebration:
+                Traditional weddings are a huge event celebrated over three completely separate days, and the bride changes her entire look for each part of the celebration, following cultural traditions. Here's the Pakistani wedding functions list:
               </p>
               <ul className="list-disc pl-14 mt-4 space-y-3 text-gray-700">
-                <li><strong>The Henna Party (Day 1):</strong> This is a fun, relaxed kick-off night full of music and henna. Brides usually wear cheerful colors like bright yellows or greens with lighter, simpler embroidery so they can move around and celebrate easily.</li>
-                <li><strong>The Wedding (Day 2):</strong> This is the main, formal wedding ceremony. This is when you wear the most dramatic, high-ticket traditional red or deep jewel-toned bridal lehenga with a long train and heavy, ornate detailing.</li>
-                <li><strong>The Reception (Day 3):</strong> The final party hosted by the groom's family. The style here completely shifts into modern glamour—think elegant pastels, sparkling contemporary gowns, or unique cuts with long, beautiful trailing details.</li>
+                <li><strong>The Henna Night (Day 1):</strong> This is a fun, relaxed kick-off night full of beautiful dresses, games and mehndi. Brides usually wear cheerful colors like bright yellows or greens with lighter, simpler embroidery than what is usually seen at the marriage ceremony.</li>
+                <li><strong>The Nikah (Day 2):</strong> The baraat is the main, formal marriage ceremony. This is when the Muslim bride wears the most dramatic, high-ticket traditional red or trending pastel bridal lehenga with a long dupatta and heavy, ornate detailing.</li>
+                <li><strong>The Walima (Day 3):</strong> The final wedding reception hosted by the groom's family. The style here is usually a replica of the Pakistani wedding dress in a different color —think elegant pastels, sparkling Muslim gowns, or unique cuts with long, beautiful trailing details. Pakistani cuisine and wedding attire for the bridal party and guests both take center stage here.</li>
               </ul>
             </div>
           </div>
