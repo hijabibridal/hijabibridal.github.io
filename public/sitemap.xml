@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://hijabibridal.github.io/</loc><lastmod>2026-04-05</lastmod></url>
-  <url><loc>https://hijabibridal.github.io/shop</loc><lastmod>2026-04-05</lastmod></url>
-  <url><loc>https://hijabibridal.github.io/blog</loc><lastmod>2026-04-05</lastmod></url>
+  <url><loc>https://hijabibridal.github.io/</loc><lastmod>2026-07-09</lastmod></url>
+  <url><loc>https://hijabibridal.github.io/shop</loc><lastmod>2026-07-09</lastmod></url>
+  <url><loc>https://hijabibridal.github.io/blog</loc><lastmod>2026-07-09</lastmod></url>
   
   
   <url>
     <loc>https://hijabibridal.github.io/shop/product/bridal-belt</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-belt/gold-rhinestone-bridal-belt.webp</image:loc>
@@ -33,7 +33,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/fuschia-ruffled-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/fuschia-ruffled-bridal-dupatta.webp</image:loc>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-embroidered-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/gold-Muslim-wedding-dupatta.webp</image:loc>
@@ -62,23 +62,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/jade-green-silk-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/green-silk-bridal-dupatta.webp</image:loc>
-      <image:title>Jade Green Silk Bridal Dupatta</image:title>
-      <image:caption>Jade Green Silk Bridal Dupatta from Amazon with intricate patterns and designs, perfect for diverse wearing styles.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/green-silk-bridal-dupatta2.webp</image:loc>
-      <image:title>Jade Green Silk Bridal Dupatta</image:title>
-      <image:caption>Jade Green Silk Bridal Dupatta from Amazon with intricate patterns.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://hijabibridal.github.io/shop/product/peach-embroidered-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/peach-bridal-dupatta.webp</image:loc>
@@ -92,8 +77,23 @@
     </image:image>
   </url>
   <url>
+    <loc>https://hijabibridal.github.io/shop/product/peach-bridal-dupatta</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/peach-bride-dupatta.webp</image:loc>
+      <image:title>Peach Bridal Dupatta</image:title>
+      <image:caption>Peach Bridal Dupatta from Amazon featuring delicate metallic designs for bridal styling.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/peach-bride-dupatta-closeup.webp</image:loc>
+      <image:title>Peach Bridal Dupatta</image:title>
+      <image:caption>Close up of peach bridal dupatta with detailed embroidery.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://hijabibridal.github.io/shop/product/red-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/red-net-dupatta.webp</image:loc>
@@ -108,7 +108,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/white-net-bridal-dupatta.webp</image:loc>
@@ -122,8 +122,23 @@
     </image:image>
   </url>
   <url>
+    <loc>https://hijabibridal.github.io/shop/product/ivory-net-bridal-dupatta</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/ivory-net-bridal-dupatta.webp</image:loc>
+      <image:title>Ivory Net Dupatta</image:title>
+      <image:caption>Ivory  Net Dupatta with silver patterns and designs for bridal wearing styles.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/ivory-net-bridal-dupatta-2.webp</image:loc>
+      <image:title>Ivory Net Dupatta</image:title>
+      <image:caption>Closeup of Ivory Net Dupatta featuring a thick border, ideal for layering with a hijabi lehenga.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://hijabibridal.github.io/shop/product/green-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/green-net-dupatta.webp</image:loc>
@@ -138,7 +153,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/pink-net-dupatta.webp</image:loc>
@@ -148,7 +163,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/champagne-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/champagne-net-dupatta.webp</image:loc>
@@ -158,7 +173,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/bridal-dupatta-silver-net.webp</image:loc>
@@ -167,8 +182,23 @@
     </image:image>
   </url>
   <url>
+    <loc>https://hijabibridal.github.io/shop/product/silver-organza-bridal-dupatta</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/silver-organza-bridal-dupatta.webp</image:loc>
+      <image:title>Silver Organza Dupatta</image:title>
+      <image:caption>Silver Organza Dupatta with silver patterns and designs for wedding styling inspiration.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/silver-organza-bridal-dupatta-closeup.webp</image:loc>
+      <image:title>Silver Organza Dupatta</image:title>
+      <image:caption>Silver Organza Dupatta with silver patterns and designs for wedding styling inspiration.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://hijabibridal.github.io/shop/product/off-white-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/bridal-dupatta-off-white.webp</image:loc>
@@ -178,7 +208,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/peach-net-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/bridal-dupatta-peach.webp</image:loc>
@@ -188,7 +218,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sky-blue-bridal-net-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/sky-blue-dupatta.webp</image:loc>
@@ -197,8 +227,23 @@
     </image:image>
   </url>
   <url>
+    <loc>https://hijabibridal.github.io/shop/product/peach-velvet-bridal-dupatta</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/peach-velvet-dupatta.webp</image:loc>
+      <image:title>Peach Velvet Dupatta</image:title>
+      <image:caption>Peach Velvet Dupatta with silver patterns and designs for bridal wearing styles.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/peach-velvet-dupatta-2.webp</image:loc>
+      <image:title>Peach Velvet Dupatta</image:title>
+      <image:caption>Peach Velvet Dupatta featuring a thick silver border, ideal for layering with a hijabi lehenga.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://hijabibridal.github.io/shop/product/maroon-velvet-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/maroon-velvet-dupatta.webp</image:loc>
@@ -213,7 +258,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/green-velvet-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/green-velvet-dupatta.webp</image:loc>
@@ -228,7 +273,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/blue-velvet-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/blue-velvet-dupatta.webp</image:loc>
@@ -243,7 +288,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-velvet-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/red-velvet-dupatta.webp</image:loc>
@@ -258,7 +303,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-embroidered-georgette-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/white-embroidered-georgette-dupatta.webp</image:loc>
@@ -273,7 +318,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-cotton-silk-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/gold-cotton-silk-bridal-dupatta.webp</image:loc>
@@ -293,27 +338,27 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/navy-blue-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/navy-blue-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Navy Blue Hijab</image:title>
-      <image:caption>Navy Blue Hijab - Blue Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/navy-blue-hijab-fashion.webp</image:loc>
+      <image:title>Navy Blue Hijab Fashion</image:title>
+      <image:caption>Navy Blue Hijab fashion in lightweight satin crepe</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sage-green-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/sage-green-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Sage Green Bridal Hijab</image:title>
-      <image:caption>Sage Green Bridal Hijab - Green Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/sage-green-hijab.webp</image:loc>
+      <image:title>Sage Green Hijab</image:title>
+      <image:caption>Sage Green Hijab in lightweight satin-finished crepe for Muslim bridal wear</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lavender-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/lavender-crepe-bridal-hijab.webp</image:loc>
@@ -323,7 +368,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/jade-green-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/jade-green-crepe-bridal-hijab.webp</image:loc>
@@ -333,77 +378,97 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/light-blue-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/light-blue-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Light Blue Bridal Hijab</image:title>
+      <image:title>Light Blue Muslim Bridal Hijab</image:title>
       <image:caption>Light Blue Bridal Hijab - Blue Elegant</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/champagne-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/champagne-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Champagne Bridal Hijab</image:title>
-      <image:caption>Champagne Bridal Hijab - Champagne Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/champagne-satin-hijab.webp</image:loc>
+      <image:title>Champagne Satin Hijab</image:title>
+      <image:caption>Champagne Satin Hijab - lightweight crepe with satin finish</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/champagne-crepe-bridal-hijab2.webp</image:loc>
-      <image:title>Champagne Bridal Hijab</image:title>
-      <image:caption>Champagne Bridal Hijab - Champagne Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/champagne-satin-hijab2.webp</image:loc>
+      <image:title>Champagne Satin Hijab</image:title>
+      <image:caption>Closeup of Champagne Satin Hijab - lightweight crepe with satin finish</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/red-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Red Bridal Hijab</image:title>
-      <image:caption>Red Bridal Hijab - Red Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/red-islamic-bridal-hijab.webp</image:loc>
+      <image:title>Red Islamic Bridal Hijab</image:title>
+      <image:caption>Lightweight satin crepe red Islamic bridal hijab</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/red-gold-sparkle-hijab</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/red-gold-sparkle-hijab.webp</image:loc>
+      <image:title>Red Gold Sparkle Hijab</image:title>
+      <image:caption>Red chiffon hijab with gold specks and a beaded border.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/red-gold-sparkle-hijab-closeup.webp</image:loc>
+      <image:title>Red Gold Sparkle Hijab</image:title>
+      <image:caption>Closeup of red chiffon hijab with gold specks and a beaded border.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/off-white-crepe-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/off-white-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Off-White Bridal Hijab</image:title>
-      <image:caption>Off-White Bridal Hijab - White Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/off-white-hijab-modest-fashion.webp</image:loc>
+      <image:title>Off White Hijab Modest Fashion</image:title>
+      <image:caption>Off White Hijab is modest fashion in lightweight satin crepe</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/off-white-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/off-white-hijab.webp</image:loc>
-      <image:title>Off-White Hijab</image:title>
-      <image:caption>Off-White Hijab - White Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/cream-hijab-elegant.webp</image:loc>
+      <image:title>Cream Hijab Elegant</image:title>
+      <image:caption>Cream hijab - elegant in chiffon with gold sparkles</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/off-white-hijab2.webp</image:loc>
-      <image:title>Off-White Hijab</image:title>
-      <image:caption>Off-White Hijab - White Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/cream-hijab-elegant-2.webp</image:loc>
+      <image:title>Cream Hijab Elegant</image:title>
+      <image:caption>Cream hijab - elegant in chiffon with gold sparkles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/cream-hijab-elegant-3.webp</image:loc>
+      <image:title>Cream Hijab Elegant</image:title>
+      <image:caption>Cream hijab - elegant in chiffon with gold sparkles</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/champagne-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/champagne-bridal-hijab-shine.webp</image:loc>
-      <image:title>Champagne Hijab</image:title>
-      <image:caption>Champagne Hijab in a luxurious material, featuring a soft sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/champagne-beige-hijab.webp</image:loc>
+      <image:title>Champagne Beige Hijab</image:title>
+      <image:caption>Champagne beige hijab, elegant material, featuring a silver sheen and flowing style, perfect for bridal style inspiration with a hijabi lehenga.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/forest-green-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/forest-green-chiffon-hijab.webp</image:loc>
@@ -418,7 +483,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/pink-bridal-hijab.webp</image:loc>
@@ -428,7 +493,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lavender-sparkle-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/lavender-sparkle-shayla-hijab.webp</image:loc>
@@ -443,7 +508,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/hijabi-in-pink</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/pink-bridal-veil-hijab.webp</image:loc>
@@ -453,7 +518,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/silver-fluff-bridal-hijab.webp</image:loc>
@@ -463,7 +528,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/white-bridal-veil.webp</image:loc>
@@ -473,7 +538,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-fluff-bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/gold-fluff-bridal-hijab-actual.webp</image:loc>
@@ -488,7 +553,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lilac-gold-sparkle-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/lilac-gold-sparkle-hijab-closeup.webp</image:loc>
@@ -503,7 +568,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/peach-wedding-faux-fur-wrap</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/peach faux fur wrap.webp</image:loc>
@@ -513,7 +578,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-chiffon-cape-for-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white chiffon cape.webp</image:loc>
@@ -528,7 +593,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-velvet-cape-for-muslim-bridal-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white velvet cape.webp</image:loc>
@@ -543,7 +608,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/faux-fur-hood-attachment-fuschia</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/faux fur hood attachment fuschia.webp</image:loc>
@@ -553,7 +618,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-wedding-faux-fur-coverup</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/faux fur shawl white.webp</image:loc>
@@ -563,7 +628,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-sew-in-fur-hood-attachment</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/fur hood attachment pink.webp</image:loc>
@@ -573,7 +638,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/faux-fur-hood-attachment-white</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white faux fur hood attachment.webp</image:loc>
@@ -583,7 +648,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/dark-red-cat-eye-artificial-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/dark-red-square-cat-eye-halal-nail-color.webp</image:loc>
@@ -598,77 +663,97 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/champagne-hijabi-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-champagne.webp</image:loc>
-      <image:title>Champagne Hijabi Nails</image:title>
-      <image:caption>Champagne Hijabi Nails showcasing a luxurious, elegant design with a glossy finish, perfect for bridal style inspiration and featuring wudu-friendly functionality.</image:caption>
+      <image:title>Champagne Wudu-Friendly Press On Nails</image:title>
+      <image:caption>Champagne Halal Press On Nails showcasing a luxurious, elegant design with a glossy finish, perfect for bridal style inspiration and featuring wudu-friendly functionality.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-champagne-actual.webp</image:loc>
-      <image:title>Champagne Hijabi Nails</image:title>
-      <image:caption>Elegant Champagne Hijabi Nails showcasing wudu-friendly designs for the modern bride</image:caption>
+      <image:title>Champagne Wudu-Friendly Press On Nails</image:title>
+      <image:caption>Elegant Champagne Halal Press On Nails showcasing wudu-friendly designs for the modern bride</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/fuschia-hijabi-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-fuschia.webp</image:loc>
-      <image:title>Fuschia Hijabi Nails</image:title>
-      <image:caption>Fuschia Hijabi Nails featuring a unique beauty effect in rani pink, designed for bridal style inspiration while adhering to Islamic fashion.</image:caption>
+      <image:title>Fuschia Salah-Friendly Press On Nails</image:title>
+      <image:caption>Fuschia Halal Press On Nails featuring a unique beauty effect in rani pink, designed for bridal style inspiration while adhering to Islamic fashion.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-fuschia-actual.webp</image:loc>
-      <image:title>Fuschia Hijabi Nails</image:title>
-      <image:caption>Fuschia Hijabi Nails showcasing exquisite modest nail art in a luxurious finish</image:caption>
+      <image:title>Fuschia Salah-Friendly Press On Nails</image:title>
+      <image:caption>Fuschia Halal Press On Nails showcasing exquisite modest nail art in a luxurious finish</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/halal-nails-peach</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-peach.webp</image:loc>
+      <image:title>Peach Halal Nails</image:title>
+      <image:caption>Peach Halal Nails showcasing exquisite modest nail art in a luxurious finish</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/halal-nails-blue</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails.webp</image:loc>
+      <image:title>Halal Nails</image:title>
+      <image:caption>Halal Nails - exquisite modest nails in a luxurious blue finish</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/hijabi-nails-glue-tabs</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-glue-tabs.webp</image:loc>
-      <image:title>Hijabi Nails Glue Tabs</image:title>
-      <image:caption>A set of Hijabi Nails Glue Tabs to help you apply elegant nail colors with a glossy finish, designed for easy application and perfect for modest nail art.</image:caption>
+      <image:title>Halal Press On Nails Glue Tabs</image:title>
+      <image:caption>A set of Halal Press On Nails Glue Tabs to help you apply elegant nail colors, designed for easy halal application and removal and perfect for modest nail art.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-cat-eye-hijabi-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-silver-cat-eye.webp</image:loc>
-      <image:title>Silver Cat Eye Hijabi Nails</image:title>
-      <image:caption>Silver Cat Eye Hijabi Nails in Volcano Gray, showcasing a stunning shimmer and elegant design, ideal for modest brides seeking prayer-friendly materials.</image:caption>
+      <image:title>Silver Cat Eye Halal Press On Nails</image:title>
+      <image:caption>Silver Cat Eye Halal Press On Nails in Volcano Gray, showcasing a stunning shimmer and elegant design, ideal for modest brides seeking prayer-friendly materials.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-silver-cat-eye-actual.webp</image:loc>
-      <image:title>Silver Cat Eye Hijabi Nails</image:title>
-      <image:caption>Elegant Silver Cat Eye Hijabi Nails featuring easy removal for a hassle-free, luxurious experience</image:caption>
+      <image:title>Silver Cat Eye Halal Press On Nails</image:title>
+      <image:caption>Elegant Silver Cat Eye Halal Press On Nails featuring easy removal for a hassle-free, luxurious experience</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-cat-eye-hijabi-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-white-cat-eye.webp</image:loc>
-      <image:title>White Cat Eye Hijabi Nails</image:title>
-      <image:caption>White Cat Eye Hijabi Nails featuring a stunning cat eye design, perfect for brides. These nails are made with prayer-friendly materials and provide a modest yet elegant look.</image:caption>
+      <image:title>White Cat Eye Wudu-Friendly Press On Nails</image:title>
+      <image:caption>White Cat Eye Halal Press On Nails featuring a stunning cat eye design, perfect for brides. These nails are made with prayer-friendly materials and provide a modest yet elegant look.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-white-cat-eye-actual.webp</image:loc>
-      <image:title>White Cat Eye Hijabi Nails</image:title>
-      <image:caption>Elegant White Cat Eye Hijabi Nails featuring easy removal for a stunning, modest look</image:caption>
+      <image:title>White Cat Eye Wudu-Friendly Press On Nails</image:title>
+      <image:caption>Elegant White Cat Eye Halal Press On Nails featuring easy removal for a stunning, modest look</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-ombre-halal-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-pink-ombre.webp</image:loc>
@@ -683,27 +768,27 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lilac-hijabi-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-lilac.webp</image:loc>
-      <image:title>Lilac Hijabi Nails</image:title>
-      <image:caption>Lilac Hijabi Nails in a soft pastel purple, ideal for modest brides seeking prayer-friendly materials.</image:caption>
+      <image:title>Lilac Halal Press On Nails</image:title>
+      <image:caption>Lilac Halal Press On Nails in a soft pastel purple, ideal for modest brides seeking prayer-friendly materials.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/transparent-white-hijabi-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/halal-nails/halal-nails-transparent-white.webp</image:loc>
-      <image:title>Transparent White Hijabi Nails</image:title>
-      <image:caption>Transparent White Hijabi Nails with a sheer glossy finish, ideal for modest brides seeking prayer-friendly materials.</image:caption>
+      <image:title>Transparent White Salah-Friendly Press On Nails</image:title>
+      <image:caption>Transparent White Halal Press On Nails with a sheer glossy finish, ideal for modest brides seeking prayer-friendly materials.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/champagne-bridal-punjabi-jutti-velvet-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/champagne-bridal-punjabi-jutti-velvet-slippers.webp</image:loc>
@@ -713,7 +798,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/fuschia-and-gold-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/fuschia-and-gold-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -723,7 +808,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-and-light-pink-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/silver-and-light-pink-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -733,7 +818,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/maroon-and-gold-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -743,7 +828,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/maroon-and-gold-sequin-bridal-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/maroon-and-gold-sequin-bridal-jutti-slippers.webp</image:loc>
@@ -753,7 +838,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-and-peach-wedding-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/silver-and-peach-wedding-punjabi-jutti-slippers.webp</image:loc>
@@ -763,7 +848,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-and-red-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/gold-and-red-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -773,7 +858,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-and-red-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/silver-and-red-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -783,7 +868,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-bridal-and-silver-sequin-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-bridal-and-silver-sequin-jutti-slippers.webp</image:loc>
@@ -793,7 +878,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/silver-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -803,17 +888,17 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-bridal-jutti-slippers-with-sequins</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/silver-bridal-jutti-slippers-with-sequins.webp</image:loc>
-      <image:title>Jutti in silver jutti</image:title>
-      <image:caption>Jutti in silver jutti - Silver Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/silver-muslim-bridal-shoes.webp</image:loc>
+      <image:title>Silver Muslim Bridal Shoes</image:title>
+      <image:caption>Silver Muslim bridal shoes with sequins - jutti</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-and-silver-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white-and-silver-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -823,7 +908,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-and-gold-sequin-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white-and-gold-sequin-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -833,7 +918,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-and-pink-bridal-punjabi-jutti-slippers</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/gold-and-pink-bridal-punjabi-jutti-slippers.webp</image:loc>
@@ -843,82 +928,82 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-muslim-groom-outfits-for-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-african-military-sherwani.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Military style white sherwani traditional attire for a Muslim wedding groom.</image:caption>
+      <image:caption>Military style white cotton sherwani, modern attire for a Muslim wedding groom.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-african-military-sherwani-actual.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Actual fabric view of a white military sherwani Muslim groom outfit for wedding.</image:caption>
+      <image:caption>Actual fabric view of a white cotton military sherwani Muslim groom outfit for wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gold-jutti-leather.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Gold leather jutti traditional attire to complement a Muslim groom outfit for weddings.</image:caption>
+      <image:caption>Gold leather jutti embroidered leather shoes to complement a Muslim groom outfit for weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-groom-wedding-slippers.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Cream and white wedding juttis, a staple of traditional attire for a Muslim groom outfit for weddings.</image:caption>
+      <image:caption>Cream and white leather wedding juttis, a staple of traditional footwear for a Muslim groom outfit for weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/off-white-sherwani.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Off-white cotton sherwani traditional attire for a Muslim groom outfit for wedding.</image:caption>
+      <image:caption>Off-white cotton sherwani traditional South Asian attire for a Muslim groom outfit for wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-and-gold-waistcoat.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>White and gold embroidered waistcoat for a Muslim groom outfit for wedding in traditional attire.</image:caption>
+      <image:caption>White and gold embroidered waistcoat for a Muslim groom outfit for wedding in traditional layered attire.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-thobe.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Clean white thobe traditional attire for a Muslim wedding and a modern Muslim groom outfit for weddings.</image:caption>
+      <image:caption>Clean white thobe traditional attire for a Muslim wedding and a Arab Muslim groom outfit for weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-moroccan-shirt.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>White Muslim groom outfit for weddings featuring intricate embroidery and luxurious cotton fabric.</image:caption>
+      <image:caption>White Moroccan Muslim groom thobe for weddings featuring intricate gold embroidery and luxurious cotton fabric.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/off-white-cream-sherwani-kurta.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Cream sherwani kurta traditional attire for a Muslim groom outfit for weddings.</image:caption>
+      <image:caption>Cream sherwani kurta traditional South Asian attire for a Muslim groom outfit for weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/embroidered-white-jubbah.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Embroidered white cotton jubbah traditional attire for a Muslim groom outfit for weddings.</image:caption>
+      <image:caption>Embroidered luxurious white cotton jubbah traditional attire for a Muslim groom outfit for weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-stamped-african-sherwani.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>White and gold stamped African sherwani for a Muslim groom outfit at a Muslim wedding.</image:caption>
+      <image:caption>White and gold stamped African cotton sherwani for a modern Muslim groom outfit at a Muslim wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-stamped-african-sherwani-actual.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Close up of gold stamping on a white Muslim groom outfit for wedding, modern attire.</image:caption>
+      <image:caption>Close up of gold stamping on a white Muslim groom outfit in cotton for wedding, modern attire.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-short-african-kurta-set.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Short African style white kurta set modern attire for a Muslim groom outfit for weddings.</image:caption>
+      <image:caption>Short African style white cotton kurta set, modern attire for a Muslim groom outfit for weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-nigerian-caftan.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>White and gold Nigerian caftan traditional attire for a Muslim wedding.</image:caption>
+      <image:caption>White and gold cotton Nigerian caftan traditional attire for a Muslim wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-nigerian-caftan-actual.webp</image:loc>
       <image:title>Collection: White Muslim Groom Outfits for Wedding</image:title>
-      <image:caption>Gold embroidery on a Nigerian Muslim groom outfit for wedding.</image:caption>
+      <image:caption>Gold embroidery on a white cotton Nigerian Muslim groom outfit for wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-arab-wedding-caftan.webp</image:loc>
@@ -933,7 +1018,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/blue-islamic-nikah-dress-for-groom</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/navy-wedding-dishdasha.webp</image:loc>
@@ -943,22 +1028,22 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/royal-blue-muslim-groom-wedding-outfit.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Royal blue Islamic nikah dress for groom with gold stamping</image:caption>
+      <image:caption>Royal blue cotton modern Islamic nikah dress for groom with gold stamping</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/royal-blue-muslim-groom-wedding-outfit-detail.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Close up detail of a royal blue Islamic nikah dress for groom with gold stamping.</image:caption>
+      <image:caption>Close up detail of a modern royal blue cotton Islamic nikah dress for groom with gold stamping.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/royal-blue-muslim-groom-wedding-outfit.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Elegant royal blue Islamic nikah dress for groom in African style.</image:caption>
+      <image:caption>Elegant royal blue cotton Islamic nikah dress for groom in modern African style.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/blue-wedding-jutti-groom.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Elegant jutti for a Blue Islamic nikah dress for groom, a key part of traditional attire.</image:caption>
+      <image:caption>Elegant blue jutti, traditional footwear for a Islamic nikah dress for groom, a key part of traditional attire.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/royal-blue-kurta-set.webp</image:loc>
@@ -973,7 +1058,7 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/navy-gold-patterned-sherwani.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Exquisite Blue Islamic nikah dress for groom, navy blue sherwani with antique gold patterns.</image:caption>
+      <image:caption>Exquisite Blue Islamic nikah dress for groom, South Asian navy blue sherwani with antique gold patterns.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/embroidered-navy-jubbah.webp</image:loc>
@@ -983,12 +1068,12 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/navy-gold-stamped-african-sherwani.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Navy and gold stamped African style Islamic nikah dress for groom.</image:caption>
+      <image:caption>Navy and gold stamped modern African style Islamic nikah dress for groom.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/navy-gold-stamped-african-sherwani-actual.webp</image:loc>
       <image:title>Collection: Blue Islamic Nikah Dress for Grooms</image:title>
-      <image:caption>Detailed view of navy and gold stamped African traditional attire for a Muslim wedding.</image:caption>
+      <image:caption>Detailed view of navy and gold stamped African modern attire for a Muslim wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/matching-navy-blue-hijabi-lehenga.webp</image:loc>
@@ -1003,17 +1088,17 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-grooms-outfit-for-muslims</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gunmetal-kurta-and-sherwani.webp</image:loc>
       <image:title>Collection: Silver Groom&apos;s Outfit for Muslims</image:title>
-      <image:caption>Sophisticated grooms outfit for Muslims featuring a gunmetal sherwani for a traditional Muslim wedding.</image:caption>
+      <image:caption>Sophisticated South Asian groom outfit for Muslims featuring a gunmetal sherwani an dkurta for a modern Muslim wedding.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gunmetal-jutti.webp</image:loc>
       <image:title>Collection: Silver Groom&apos;s Outfit for Muslims</image:title>
-      <image:caption>Gunmetal color jutti designed to complement a grooms outfit for Muslims.</image:caption>
+      <image:caption>Gunmetal color jutti, traditional footwear designed to complement a silver grooms outfit for Muslims.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/silver-jutti.webp</image:loc>
@@ -1023,7 +1108,7 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/silver-kurta2.webp</image:loc>
       <image:title>Collection: Silver Groom&apos;s Outfit for Muslims</image:title>
-      <image:caption>Shimmering silver kurta set as a luxurious grooms outfit for Muslims.</image:caption>
+      <image:caption>Shimmering silver kurta set as a luxurious South Asian grooms outfit for Muslims.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/silver-djellaba-moroccan-shirt.webp</image:loc>
@@ -1038,12 +1123,12 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-and-red-islamic-groom-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/red-gold-waistcoat.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Gold and red Islamic groom dress featuring opulent waistcoats with intricate gold embroidery for a regal Nikkah.</image:caption>
+      <image:caption>Gold and red Islamic groom dress featuring opulent waistcoat for layering over kurta with intricate gold embroidery for a regal Nikkah.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/red-mens-dupatta.webp</image:loc>
@@ -1058,7 +1143,7 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gold-waistcoat-and-kurta.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Exquisite gold and red Islamic groom dress: gold waistcoat and kurta set for a luxurious Nikkah.</image:caption>
+      <image:caption>Exquisite gold Islamic groom dress: gold waistcoat and kurta set for a luxurious South Asian Nikkah.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/matching-maroon-muslim-bridal-lehenga.webp</image:loc>
@@ -1068,22 +1153,22 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/red-and-gold-kameez-with-trousers.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Luxurious gold and red Islamic groom dress featuring an intricate kurta set for a stunning Nikkah celebration.</image:caption>
+      <image:caption>Luxurious gold and red Islamic groom dress - an intricate kurta set for a stunning South Asian Nikkah celebration.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gold-and-red-kameez-with-trousers.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Elegant gold and red Islamic groom dress featuring a gold and red kurta set.</image:caption>
+      <image:caption>Elegant gold and red South Asian Islamic groom dress - gold and red kurta set.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/red-and-gold-mens-jutti.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Elegant gold and red Islamic groom dress jutti featuring intricate fabric.</image:caption>
+      <image:caption>Elegant gold and red Islamic groom dress leather jutti, traditional footwear featuring intricate embroidery.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/gold-and-red-mens-jutti.webp</image:loc>
       <image:title>Collection: Gold and Red Islamic Groom Dress</image:title>
-      <image:caption>Elegant gold and red Islamic groom dress featuring gold jutti with intricate embroidery.</image:caption>
+      <image:caption>Elegant gold and red Islamic groom dress footwear in leather, gold jutti with intricate embroidery.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/maroon-gold-stamped-african-sherwani-actual.webp</image:loc>
@@ -1097,883 +1182,1043 @@
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/blue-hijabi-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/blue-hijabi-lehenga-bridal-style.webp</image:loc>
-      <image:title>Blue Muslim Lehenga</image:title>
-      <image:caption>Blue Muslim Lehenga - Blue Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/blue-hijabi-lehenga-actual.webp</image:loc>
-      <image:title>Blue Muslim Lehenga</image:title>
-      <image:caption>Blue Muslim Lehenga - Blue Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/blue-hijabi-lehenga-actual1.webp</image:loc>
-      <image:title>Blue Muslim Lehenga</image:title>
-      <image:caption>Blue Muslim Lehenga - Blue Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-hijabi-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/gold-hijabi-lehenga.webp</image:loc>
-      <image:title>Gold Muslim Lehenga</image:title>
-      <image:caption>AI Gold Muslim Lehenga - Gold Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/bridal-lehenga-with-hijab.webp</image:loc>
+      <image:title>Bridal Lehenga with Hijab</image:title>
+      <image:caption>Bridal lehenga with hijab, AI visualized, in gold with lace overlay, small sequins and embroidery — Islamic wedding dress for US brides.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/gold-bridal-lehenga.webp</image:loc>
-      <image:title>Gold Muslim Lehenga</image:title>
-      <image:caption>Gold Muslim Lehenga - Gold Luxury</image:caption>
+      <image:title>Bridal Lehenga with Hijab</image:title>
+      <image:caption>Customize this semi stitched gold lehenga with lace overlay, small sequins and embroidery as an Islamic wedding dress for US brides.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/gold-bridal-lehenga-actual.webp</image:loc>
-      <image:title>Gold Muslim Lehenga</image:title>
-      <image:caption>Gold Muslim Lehenga - Gold Elegant</image:caption>
+      <image:title>Bridal Lehenga with Hijab</image:title>
+      <image:caption>Customize this semi stitched gold lehenga with lace overlay, small sequins and embroidery as an Islamic wedding dress for US brides.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/green-hijabi-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/green-hijabi-lehenga.webp</image:loc>
-      <image:title>Green Muslim Lehenga</image:title>
-      <image:caption>Green Muslim Lehenga - Green Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/green-muslim-bridal-lehenga.webp</image:loc>
+      <image:title>Green Muslim Bridal Lehenga</image:title>
+      <image:caption>Green Muslim bridal lehenga with multi-color embroidery — modest hijabi wedding outfit</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/green-flower-bridal-lehenga-actual.webp</image:loc>
-      <image:title>Green Muslim Lehenga</image:title>
-      <image:caption>Customize this Green Muslim Lehenga - Green Luxury</image:caption>
+      <image:title>Green Muslim Bridal Lehenga</image:title>
+      <image:caption>Customize this green lehenga with multi-color embroidery for a modest Muslim wedding outfit.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/green-flower-bridal-lehenga-closeup.webp</image:loc>
-      <image:title>Green Muslim Lehenga</image:title>
-      <image:caption>Green Muslim Lehenga Closeup</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-blue</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijabi-lehenga-in-blue.webp</image:loc>
-      <image:title>Muslim Lehenga in Blue</image:title>
-      <image:caption>Muslim Lehenga in Blue - Blue Elegant</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijabi-lehenga-in-blue-actual.webp</image:loc>
-      <image:title>Muslim Lehenga in Blue</image:title>
-      <image:caption>Muslim Lehenga in Blue - Aqua Elegant</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-navy-blue</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijabi-lehenga-in-navy-blue.webp</image:loc>
-      <image:title>Muslim Lehenga in Navy Blue</image:title>
-      <image:caption>Muslim Lehenga in Navy Blue - Blue Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/navy-blue-muslim-lehenga-actual.webp</image:loc>
-      <image:title>Muslim Lehenga in Navy Blue</image:title>
-      <image:caption>Muslim Lehenga in Navy Blue - Customize Yours</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/navy-blue-muslim-lehenga-closeup.webp</image:loc>
-      <image:title>Muslim Lehenga in Navy Blue</image:title>
-      <image:caption>Muslim Lehenga in Navy Blue - Closeup</image:caption>
+      <image:title>Green Muslim Bridal Lehenga</image:title>
+      <image:caption>Closeup view: customize this Green Lehenga with multi-color embroidery for a modest Muslim wedding outfit.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-lehenga-in-fuschia-readymade</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/fuschia-muslim-lehenga-readymade.webp</image:loc>
       <image:title>Muslim Lehenga in Fuschia: Readymade</image:title>
-      <image:caption>This readymade fuschia Muslim lehenga showcases luxurious georgette fabric with intricate embroidery and sequins, perfect for a bridal occasion.</image:caption>
+      <image:caption>This readymade fuschia Muslim lehenga showcases luxurious georgette fabric with intricate silver embroidery and sequins, perfect for a bridal occasion.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/fuschia-muslim-lehenga-readymade-actual.webp</image:loc>
       <image:title>Muslim Lehenga in Fuschia: Readymade</image:title>
-      <image:caption>This readymade fuschia Muslim lehenga has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
+      <image:caption>Readymade fuchsia Muslim bridal lehenga in georgette with silver embroidery and sequins — nikah outfit</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-flower-muslim-bridal-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-flower-muslim-bridal-lehenga.webp</image:loc>
-      <image:title>Pink Flower Muslim Bridal Lehenga</image:title>
-      <image:caption>Pink Flower Muslim Bridal Lehenga - Pink Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/islamic-bridal-lehenga-with-hijab.webp</image:loc>
+      <image:title>Islamic Bridal Lehenga with Hijab</image:title>
+      <image:caption>AI helps you visualize this Islamic bridal lehenga with hijab - a pink lehenga with purple floral embroidery — modest nikah dress</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/flower-embroidered-muslim-lehenga-pink-actual.webpebp</image:loc>
-      <image:title>Pink Flower Muslim Bridal Lehenga</image:title>
-      <image:caption>Pink Flower Muslim Bridal Lehenga - Pink Lovely</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/flower-embroidered-muslim-lehenga-pink-actual.webp</image:loc>
+      <image:title>Islamic Bridal Lehenga with Hijab</image:title>
+      <image:caption>Customize this semi stitched lehenga with purple floral embroidery for a modest nikah dress</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/flower-embroidered-muslim-lehenga-pink-closeup.webp</image:loc>
-      <image:title>Pink Flower Muslim Bridal Lehenga</image:title>
-      <image:caption>Pink Flower Muslim Bridal Lehenga - Closeup</image:caption>
+      <image:title>Islamic Bridal Lehenga with Hijab</image:title>
+      <image:caption>Closeup view: Customize this semi stitched lehenga with purple floral embroidery for a modest nikah dress.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-silver-muslim-bridal-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-silver-muslim-bridal-lehenga.jfif</image:loc>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-silver-muslim-bridal-lehenga.webp</image:loc>
       <image:title>Pink and Silver Muslim Bridal Lehenga</image:title>
-      <image:caption>Pink Silver Muslim Bridal Lehenga - Pink Elegant</image:caption>
+      <image:caption>Pink and silver Muslim bridal lehenga with sequins and embroidery over artificial silk — hijabi nikah outfit</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-silver-muslim-bridal-lehenga-2.webp</image:loc>
       <image:title>Pink and Silver Muslim Bridal Lehenga</image:title>
-      <image:caption>Pink Silver Muslim Bridal Lehenga - Pink Lovely</image:caption>
+      <image:caption>Customize this pink and silver Muslim bridal lehenga with embroidery and sequins for a hijabi nikah outfit</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-silver-muslim-bridal-lehenga-3.webp</image:loc>
       <image:title>Pink and Silver Muslim Bridal Lehenga</image:title>
-      <image:caption>Pink Silver Muslim Bridal Lehenga - Closeup</image:caption>
+      <image:caption>Closeup view: Customize this pink and silver Muslim bridal lehenga with embroidery and sequins over artificial silk for a hijabi nikah outfit</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-muslim-bridal-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/red-muslim-bridal-lehenga.webp</image:loc>
       <image:title>Red Muslim Bridal Lehenga</image:title>
-      <image:caption>Red Muslim Bridal Lehenga - Red Elegance</image:caption>
+      <image:caption>Red Muslim bridal lehenga in silk with multi-color embroidery — traditional nikah outfit for hijabi brides</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/red-islamic-lehenga-actual.webp</image:loc>
       <image:title>Red Muslim Bridal Lehenga</image:title>
-      <image:caption>Red Muslim Bridal Lehenga - Red Luxury</image:caption>
+      <image:caption>This red bridal lehenga in silk with multi-color embroidery is ready to customize for a traditional nikah outfit for hijabi brides</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/red-islamic-lehenga-closeup.webp</image:loc>
       <image:title>Red Muslim Bridal Lehenga</image:title>
-      <image:caption>Red Muslim Bridal Lehenga - Red Tradition</image:caption>
+      <image:caption>Closeup view: This red bridal lehenga in silk with multi-color embroidery is ready to customize for a traditional nikah outfit for hijabi brides.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/readymade-maroon-muslim-bridal-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/readymade-maroon-muslim-bridal-lehenga.webp</image:loc>
-      <image:title>Readymade Maroon Muslim Lehenga</image:title>
-      <image:caption>Readymade Maroon Muslim Lehenga - Red Traditional</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijab-with-lehenga.webp</image:loc>
+      <image:title>Hijab with Lehenga</image:title>
+      <image:caption>This hijab with lehenga is readymade in maroon with antique gold embroidery and matching dupatta — traditional Islamic wedding dress ships from Amazon</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/maroon-antique-gold-muslim-lehenga-actual.webp</image:loc>
-      <image:title>Readymade Maroon Muslim Lehenga</image:title>
-      <image:caption>Readymade Maroon Muslim Lehenga - Red Elegance</image:caption>
+      <image:title>Hijab with Lehenga</image:title>
+      <image:caption>Readymade maroon bridal lehenga with antique gold embroidery and matching dupatta — traditional Islamic wedding dress ships from Amazon</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/maroon-antique-gold-muslim-lehenga-closeup.webp</image:loc>
-      <image:title>Readymade Maroon Muslim Lehenga</image:title>
-      <image:caption>Readymade Maroon Muslim Lehenga - Lovely Red</image:caption>
+      <image:title>Hijab with Lehenga</image:title>
+      <image:caption>Closeup view: Readymade maroon lehenga with antique gold embroidery and matching dupatta — traditional Islamic wedding dress ships from Amazon</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-lehenga-in-lilac-readymade</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/muslim-lehenga-in-lilac-readymade.webp</image:loc>
       <image:title>Muslim Lehenga in Lilac: Readymade</image:title>
-      <image:caption>This readymade lilac Muslim lehenga showcases luxurious georgette fabric with intricate embroidery and sequins, perfect for a bridal occasion.</image:caption>
+      <image:caption>This readymade lilac Muslim lehenga showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/muslim-lehenga-in-lilac-readymade-2.webp</image:loc>
       <image:title>Muslim Lehenga in Lilac: Readymade</image:title>
-      <image:caption>This readymade lilac Muslim lehenga has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
+      <image:caption>This readymade lilac Muslim lehenga in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/readymade-blue-hijabi-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/readymade-blue-hijabi-lehenga.webp</image:loc>
       <image:title>Readymade Blue Muslim Lehenga</image:title>
-      <image:caption>Readymade Blue Muslim Lehenga - Blue Modern</image:caption>
+      <image:caption>Readymade blue and jade green Muslim bridal lehenga with gold embroidery — modest hijabi nikah outfit ships from Amazon</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/islamic-bridal-lehenga-aqua.webp</image:loc>
       <image:title>Readymade Blue Muslim Lehenga</image:title>
-      <image:caption>Readymade Blue Muslim Lehenga - Aqua</image:caption>
+      <image:caption>Readymade blue and jade Muslim bridal lehenga with gold embroidery — modest hijabi nikah outfit ships from Amazon</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-lehenga.webp</image:loc>
-      <image:title>White Muslim Lehenga</image:title>
-      <image:caption>Customize this White Muslim Lehenga to hip length, crafted from lace with embroidery and shimmering sequins, ideal for bridal style inspiration.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/muslim-bridal-lehenga.webp</image:loc>
+      <image:title>Muslim Bridal Lehenga</image:title>
+      <image:caption>Use this AI inspiration to achieve a Muslim bridal lehenga with a hip length choli. White Muslim bridal wear crafted from lace with embroidery and shimmering sequins and yellow matching dupatta, ideal for bridal style inspiration.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-lehenga-actual.webp</image:loc>
-      <image:title>White Muslim Lehenga</image:title>
-      <image:caption>Customize this elegant White Muslim Lehenga to hip length while featuring lace with embroidery, one of the premier fashion options for luxury weddings.</image:caption>
+      <image:title>Muslim Bridal Lehenga</image:title>
+      <image:caption>Customize this elegant White Muslim Lehenga to hip length - Muslim bridal wear features white lace with embroidery and yellow matching dupatta, one of the premier fashion options for luxury weddings.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-lehenga-actual2.webp</image:loc>
-      <image:title>White Muslim Lehenga</image:title>
-      <image:caption>Customize this White Muslim Lehenga to hip length while featuring intricate embellishments, perfect for an occasion where modest fashion is essential.</image:caption>
+      <image:title>Muslim Bridal Lehenga</image:title>
+      <image:caption>Customize this White Muslim Lehenga to hip length - Muslim bridal wear features intricate lace, embellishments, and matching yellow dupatta - perfect for an occasion where modest fashion is essential.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-lehenga-closeup.webp</image:loc>
-      <image:title>White Muslim Lehenga</image:title>
-      <image:caption>Customize this close-up of a White Muslim Lehenga to hip length while showcasing lace with embroidery, perfect for a bridal occasion.</image:caption>
+      <image:title>Muslim Bridal Lehenga</image:title>
+      <image:caption>Customize this close-up of a White Muslim Lehenga to hip length while showcasing lace with embroidery, perfect Muslim bridal wear.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-bridal-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-bridal-lehenga.webp</image:loc>
-      <image:title>White Bridal Lehenga</image:title>
-      <image:caption>White Bridal Lehenga - White Purity</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/lehenga-with-hijab.webp</image:loc>
+      <image:title>Lehenga with Hijab</image:title>
+      <image:caption>Lehenga with hijab in lace with added dupatta and hijab — modest white Muslim bridal wear for nikah ceremony</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-bridal-lehenga-actual.webp</image:loc>
-      <image:title>White Bridal Lehenga</image:title>
-      <image:caption>White Bridal Lehenga - White Modern</image:caption>
+      <image:title>Lehenga with Hijab</image:title>
+      <image:caption>Customize this lace White bridal lehenga to achieve modest Muslim bridal wear for your nikah ceremony</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-bridal-lehenga-2.webp</image:loc>
+      <image:title>Lehenga with Hijab</image:title>
+      <image:caption>Lace White Muslim bridal lehenga — modest Muslim bridal wear for nikah ceremony</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/white-muslim-bridal-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-bridal-lehenga.webp</image:loc>
+      <image:title>White Muslim Bridal Lehenga</image:title>
+      <image:caption>White Muslim bridal lehenga in organza and satin with silver embroidery. The added hijab makes this a modest white Muslim bridal wear for nikah ceremony</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-bridal-lehenga-actual.webp</image:loc>
+      <image:title>White Muslim Bridal Lehenga</image:title>
+      <image:caption>Original photo of the readymade white Muslim bridal lehenga with silver embroidery on organza overlay over satin base. Modest Muslim bridal wear for your nikah ceremony</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-bridal-lehenga-detail.webp</image:loc>
+      <image:title>White Muslim Bridal Lehenga</image:title>
+      <image:caption>White Muslim bridal lehenga - readymade modest Muslim bridal wear with silver embroidery on organza overlay for nikah ceremony</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-bridal-lehenga-in-maroon-readymade</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/maroon-georgette-muslim-lehenga-actual.webp</image:loc>
       <image:title>Bridal Muslim Lehenga in Maroon: Readymade</image:title>
-      <image:caption>This Maroon Muslim lehenga features elegant georgette fabric with delicate embroidery, perfect for a bridal occasion.</image:caption>
+      <image:caption>This readymade Maroon Muslim lehenga features elegant georgette fabric with delicate metallic embroidery and matching organza dupatta, perfect for a bridal occasion.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/maroon-muslim-lehenga-full-view.webp</image:loc>
       <image:title>Bridal Muslim Lehenga in Maroon: Readymade</image:title>
-      <image:caption>Wear this elegant Maroon Muslim lehenga showcasing intricate embroidery, one of the premier fashion options for modest fashion.</image:caption>
+      <image:caption>Wear this elegant Maroon Muslim lehenga showcasing intricate metallic embroidery and matching organza dupatta, one of the premier fashion options for modest fashion.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/baby-pink-muslim-bridal-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://hijabibridal.github.io/shop/product/light-blue-muslim-bridal-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/baby-pink-muslim-bridal-lehenga.webp</image:loc>
-      <image:title>Baby Pink Bridal Muslim Lehenga</image:title>
-      <image:caption>Baby Pink Bridal Muslim Lehenga - Pink Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/muslim-lehenga-with-hijab.webp</image:loc>
+      <image:title>Muslim Lehenga with Hijab</image:title>
+      <image:caption>Muslim lehenga with hijab — soft pastel blue modest nikah dress with pink flower embroidery for hijabi brides</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/baby-pink-muslim-lehenga-actual.webp</image:loc>
-      <image:title>Baby Pink Bridal Muslim Lehenga</image:title>
-      <image:caption>Baby Pink Bridal Muslim Lehenga - Pink Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/light-blue-muslim-bridal-lehenga-actual.webp</image:loc>
+      <image:title>Muslim Lehenga with Hijab</image:title>
+      <image:caption>This light blue lehenga with pink flower embroidery is ready to customize as a soft pastel modest nikah dress for hijabi brides</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/blue-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://hijabibridal.github.io/shop/product/hijabi-lehenga-in-blue</loc>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp</image:loc>
-      <image:title>Blue Muslim Bridal Caftan</image:title>
-      <image:caption>Blue Muslim Bridal Caftan - Blue Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijabi-lehenga-in-blue.webp</image:loc>
+      <image:title>Muslim Lehenga in Blue</image:title>
+      <image:caption>Muslim lehenga in blue and aqua metallic silk with embroidery — hijabi bridal look for nikah</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijabi-lehenga-in-blue-actual.webp</image:loc>
+      <image:title>Muslim Lehenga in Blue</image:title>
+      <image:caption>Customize this semi stitched Muslim lehenga in blue and agua silk with metallic embroidery for a hijabi bridal look for nikah</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/dress-for-muslim-wedding-in-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://hijabibridal.github.io/shop/product/sage-green-muslim-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-1.webp</image:loc>
-      <image:title>Bridal Caftan in Blue</image:title>
-      <image:caption>Traditional bridal caftan in a bold blue color with shiny fabric for a bride at a wedding ceremony.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/sage-green-hijab-fashion.webp</image:loc>
+      <image:title>Sage Green Hijab Fashion</image:title>
+      <image:caption>AI-inspiration, imagine this lehenga in sage green hijab fashion. Georgette with silver foil designs for your nikkah</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-3.webp</image:loc>
-      <image:title>Bridal Caftan in Blue</image:title>
-      <image:caption>Wedding design in blue showcasing style and fabric perfect for a reception.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/blue moroccan muslim caftan back.webp</image:loc>
-      <image:title>Bridal Caftan in Blue</image:title>
-      <image:caption>Bridal caftan in a bold color featuring fabric and embroidery for a pre-wedding event.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-2.webp</image:loc>
-      <image:title>Bridal Caftan in Blue</image:title>
-      <image:caption>Wedding dress in blue available in every size for a bride to show her culture.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/sage-green-muslim-lehenga-actual.webp</image:loc>
+      <image:title>Sage Green Hijab Fashion</image:title>
+      <image:caption>Customize this elegant lehenga to knee length or connect the blouse to the skirt for sage green modest fashion. It showcases silver foil designs as one of your premier modest fashion options.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/gold-kaftan-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://hijabibridal.github.io/shop/product/pink-silver-muslim-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-gold-moroccan-wedding-kaftan.webp</image:loc>
-      <image:title>Gold Bridal Caftan for Muslim Wedding</image:title>
-      <image:caption>Bridal caftan for a wedding ceremony featuring shiny fabric and embroidery for every size for a bride.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/modest-lehenga.webp</image:loc>
+      <image:title>Modest Lehenga</image:title>
+      <image:caption>AI-inspiration, imagine this pink lehenga as a modest lehenga in georgette with silver foil designs for your nikkah</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-gold-moroccan-wedding-kaftan-3.webp</image:loc>
-      <image:title>Gold Bridal Caftan for Muslim Wedding</image:title>
-      <image:caption>Traditional style and culture design for a bride at a reception.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-silver-muslim-lehenga-actual.webp</image:loc>
+      <image:title>Modest Lehenga</image:title>
+      <image:caption>Customize this elegant Pink and Silver Lehenga to knee length or connect the blouse to the skirt. It showcases silver foil designs as one of your premier modest fashion options.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/lavender-muslim-wedding-kaftan</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://hijabibridal.github.io/shop/product/light-pink-organza-muslim-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan-3.webp</image:loc>
-      <image:title>Lavender Muslim Bridal Caftan</image:title>
-      <image:caption>Bridal caftan in a pastel color with embroidery and shiny fabric for a pre-wedding event.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/lehenga-muslim-bride-with-hijab.webp</image:loc>
+      <image:title>Lehenga Muslim Bride with Hijab</image:title>
+      <image:caption>Lehenga for Muslim bride with hijab. Soft pink modest nikah dress in embroidered organza with net ruffle for hijabi brides</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan-2.webp</image:loc>
-      <image:title>Lavender Muslim Bridal Caftan</image:title>
-      <image:caption>Style and design in a pastel color for a bride at a reception.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/light-pink-organza-muslim-lehenga-actual.webp</image:loc>
+      <image:title>Lehenga Muslim Bride with Hijab</image:title>
+      <image:caption>This light pink lehenga in embroidered organza with a net ruffle is ready to customize as a soft pastel modest nikah dress for hijabi brides</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan.webp</image:loc>
-      <image:title>Lavender Muslim Bridal Caftan</image:title>
-      <image:caption>Traditional wedding design featuring embroidery for a bride to showcase her culture.</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/light-pink-organza-muslim-lehenga-closeup.webp</image:loc>
+      <image:title>Lehenga Muslim Bride with Hijab</image:title>
+      <image:caption>This closeup of a light pink lehenga in embroidered organza with a net ruffle is ready to customize as a soft pastel modest nikah dress for hijabi brides</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/pink-muslim-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/lehenga-for-muslim-girl.webp</image:loc>
+      <image:title>Lehenga for Muslim Girl</image:title>
+      <image:caption>Lehenga for a Muslim girl — soft pastel modest pibnk nikah dress in georgette with a net embroidered overlay and heavy beadwork and sequins for hijabi brides</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-muslim-lehenga-actual.webp</image:loc>
+      <image:title>Lehenga for Muslim Girl</image:title>
+      <image:caption>This pink lehenga is in georgette with a net embroidered overlay and heavy beadwork and sequins is ready to customize as a soft pastel modest nikah dress for hijabi brides</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-muslim-lehenga-closeup.webp</image:loc>
+      <image:title>Lehenga for Muslim Girl</image:title>
+      <image:caption>This closeup of a light pink lehenga in georgette with a net embroidered overlay and heavy beadwork and sequins is ready to customize as a soft pastel modest nikah dress for hijabi brides</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/maroon-muslim-lehenga</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/lehenga-muslim.webp</image:loc>
+      <image:title>Lehenga Muslim</image:title>
+      <image:caption>Lehenga for Muslims in maroon art silk with metallic embroidery - AI-visualized for your nikkah</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/maroon-muslim-lehenga-actual.webp</image:loc>
+      <image:title>Lehenga Muslim</image:title>
+      <image:caption>Lehenga in maroon art silk with metallic embroidery - perfect to customize for your nikkah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-bridal-caftan-in-white</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan-dress.webp</image:loc>
       <image:title>Muslim Bridal Caftan in White</image:title>
-      <image:caption>Bridal caftan in white with embroidery and gold design for a bride at a wedding ceremony.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/white-muslim-bridal-caftan</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-white-dubai-bridal-kaftan.webp</image:loc>
-      <image:title>White Muslim Bridal Caftan</image:title>
-      <image:caption>White Muslim Bridal Caftan - White Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/dress-for-white-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-white-moroccan-wedding-kaftan-4.webp</image:loc>
-      <image:title>Bridal Caftan for White Muslim Wedding</image:title>
-      <image:caption>Traditional bridal caftan in white with embroidery and fabric for a bride at a reception.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-white-moroccan-wedding-kaftan-2.webp</image:loc>
-      <image:title>Bridal Caftan for White Muslim Wedding</image:title>
-      <image:caption>Wedding design in white featuring fabric and style perfect for a pre-wedding event.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-white-moroccan-wedding-kaftan.webp</image:loc>
-      <image:title>Bridal Caftan for White Muslim Wedding</image:title>
-      <image:caption>Traditional style and culture for a bride at a wedding ceremony.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-pink</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-pink.webp</image:loc>
-      <image:title>Pink Moroccan Bridal Caftan</image:title>
-      <image:caption>Pink Moroccan Bridal Caftan - Pink Traditional</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-green</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-green.webp</image:loc>
-      <image:title>Green Moroccan Bridal Caftan</image:title>
-      <image:caption>Green Moroccan Bridal Caftan - Green Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-maroon</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-maroon.webp</image:loc>
-      <image:title>Maroon Moroccan Bridal Caftan</image:title>
-      <image:caption>Maroon Moroccan Bridal Caftan - Red Traditional</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-sky-blue</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-sky-blue.webp</image:loc>
-      <image:title>Sky Blue Moroccan Bridal Caftan</image:title>
-      <image:caption>Sky Blue Moroccan Bridal Caftan - Blue Traditional</image:caption>
+      <image:caption>White Dubai bridal caftan with gold embroidery — modest Islamic wedding dress for nikah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-green-silver</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-green-silver.webp</image:loc>
       <image:title>Green and Silver Moroccan Bridal Caftan</image:title>
-      <image:caption>Green and Silver Moroccan Bridal Caftan - Green Elegant</image:caption>
+      <image:caption>Green and silver Moroccan bridal caftan with silver embroidery — elegant modest Muslim wedding dress.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/dubai-caftan-red</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/dubai-caftan-red.webp</image:loc>
       <image:title>Red Dubai Bridal Caftan</image:title>
-      <image:caption>Red Dubai Bridal Caftan - Red Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/dubai-caftan-white</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/dubai-caftan-white.webp</image:loc>
-      <image:title>White Dubai Bridal Caftan</image:title>
-      <image:caption>White Dubai Bridal Caftan - White Traditional</image:caption>
+      <image:caption>Red Dubai bridal caftan with traditional embroidery — modest Muslim nikah dress</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/african-boubou-caftan-white</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/african-boubou-caftan-white-closeup.webp</image:loc>
       <image:title>White African Boubou Bridal Caftan</image:title>
-      <image:caption>White African Boubou Bridal Caftan - White Modern</image:caption>
+      <image:caption>Closeup of lace for White African boubou bridal caftan — modest West African Muslim wedding dress</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/african-boubou-caftan-white.webp</image:loc>
       <image:title>White African Boubou Bridal Caftan</image:title>
-      <image:caption>White African Boubou Bridal Caftan - White Modern</image:caption>
+      <image:caption>White African boubou bridal caftan in lace — modest West African Muslim wedding dress</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-pink-gold</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-pink-gold-back.webp</image:loc>
       <image:title>Pink and Gold Moroccan Bridal Caftan</image:title>
-      <image:caption>Pink and Gold Moroccan Bridal Caftan - Pink Modern</image:caption>
+      <image:caption>Back view of pink and gold Moroccan bridal caftan with gold foil design — modest Muslim wedding dress</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-pink-gold-closeup.webp</image:loc>
       <image:title>Pink and Gold Moroccan Bridal Caftan</image:title>
-      <image:caption>Pink and Gold Moroccan Bridal Caftan - Pink Modern</image:caption>
+      <image:caption>Closeup of pink and gold Moroccan bridal caftan with gold foil design — modest Muslim wedding dress</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-pink-gold.webp</image:loc>
       <image:title>Pink and Gold Moroccan Bridal Caftan</image:title>
-      <image:caption>Pink and Gold Moroccan Bridal Caftan - Pink Modern</image:caption>
+      <image:caption>Pink and gold Moroccan bridal caftan with gold foil design — modest Muslim wedding dress</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-white-gold</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-white-gold-back.webp</image:loc>
-      <image:title>White and Gold Moroccan Bridal Caftan</image:title>
-      <image:caption>White and Gold Moroccan Bridal Caftan - White Modern</image:caption>
+      <image:title>White Islamic Bridal Dress</image:title>
+      <image:caption>Back view of white and gold Moroccan bridal caftan with gold embroidery — modest Muslim wedding dress all sizes</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-white-gold-closeup.webp</image:loc>
-      <image:title>White and Gold Moroccan Bridal Caftan</image:title>
-      <image:caption>White and Gold Moroccan Bridal Caftan - White Modern</image:caption>
+      <image:title>White Islamic Bridal Dress</image:title>
+      <image:caption>Closeup of white and gold Moroccan bridal caftan with gold embroidery — modest Muslim wedding dress all sizes</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-white-gold.webp</image:loc>
-      <image:title>White and Gold Moroccan Bridal Caftan</image:title>
-      <image:caption>White and Gold Moroccan Bridal Caftan - White Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/white-islamic-bridal-dress.webp</image:loc>
+      <image:title>White Islamic Bridal Dress</image:title>
+      <image:caption>White Islamic bridal dress with gold embroidery — modest Muslim wedding caftan for all sizes</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/dubai-caftan-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/dubai-caftan-blue-closeup.webp</image:loc>
       <image:title>Blue Dubai Bridal Caftan</image:title>
-      <image:caption>Blue Dubai Bridal Caftan - Blue Traditional</image:caption>
+      <image:caption>Closeup of blue Dubai bridal caftan with gold embroidery — jewel-tone modest Muslim nikah dress</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/dubai-caftan-blue.webp</image:loc>
       <image:title>Blue Dubai Bridal Caftan</image:title>
-      <image:caption>Blue Dubai Bridal Caftan - Blue Traditional</image:caption>
+      <image:caption>Blue Dubai bridal caftan with gold embroidery — jewel-tone modest Muslim nikah dress</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/white-muslim-bridal-caftan</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/white-muslim-bridal-dress.webp</image:loc>
+      <image:title>White Muslim Bridal Dress</image:title>
+      <image:caption>White Muslim bridal dress with gold embroidery — modest modern nikah dress for US brides</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/dubai-caftan-white</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/white-muslim-bridal-gown.webp</image:loc>
+      <image:title>White Muslim Bridal Gown</image:title>
+      <image:caption>White Muslim bridal gown, kaftan with mermaid cut, traditional embroidery and gold detail — modest Islamic nikah dress</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-maroon</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-maroon.webp</image:loc>
+      <image:title>Maroon Moroccan Bridal Kaftan</image:title>
+      <image:caption>Maroon Moroccan bridal kaftan with traditional embroidery — modest Muslim wedding dress in deep red.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/blue-muslim-wedding-dress</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-dubai-bridal-kaftan.webp</image:loc>
+      <image:title>Blue Muslim Bridal Kaftan</image:title>
+      <image:caption>Blue Muslim bridal kaftan with gold embroidery and V-neck — Dubai-style nikah dress</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-pink</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-pink.webp</image:loc>
+      <image:title>Pink Moroccan Bridal Kaftan</image:title>
+      <image:caption>Pink Moroccan bridal kaftan with gold embroidery — modest Islamic wedding dress for nikah.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-green</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-green.webp</image:loc>
+      <image:title>Green Moroccan Bridal Kaftan</image:title>
+      <image:caption>Green Moroccan bridal kaftan with bold color and traditional gold embroidery — modest Muslim wedding dress.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/dress-for-white-muslim-wedding</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-takchita-wedding-dress.webp</image:loc>
+      <image:title>Moroccan Takchita Wedding Dress</image:title>
+      <image:caption>Moroccan takchita wedding dress with silver embroidery in white — traditional kaftan wedding dress for Muslim wedding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-takchita-wedding-dress-rear.webp</image:loc>
+      <image:title>Moroccan Takchita Wedding Dress</image:title>
+      <image:caption>Moroccan takchita wedding dress in white — takchita two-piece inner tahtiya and outer dfina, rear view</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-takchita-wedding-dress-closeup.webp</image:loc>
+      <image:title>Moroccan Takchita Wedding Dress</image:title>
+      <image:caption>Moroccan takchita wedding dress front closure and collar embroidery detail</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/dress-for-muslim-wedding-in-blue</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-1.webp</image:loc>
+      <image:title>Bridal Kaftan in Blue</image:title>
+      <image:caption>Blue Moroccan bridal kaftan with traditional embroidery — takchita wedding dress for Muslim wedding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-3.webp</image:loc>
+      <image:title>Bridal Kaftan in Blue</image:title>
+      <image:caption>Blue Moroccan bridal kaftan — takchita outer dfina embroidery detail, reception style</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/blue moroccan muslim caftan back.webp</image:loc>
+      <image:title>Bridal Kaftan in Blue</image:title>
+      <image:caption>Blue Moroccan bridal kaftan — takchita back view showing full embroidery coverage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-blue-moroccan-wedding-kaftan-2.webp</image:loc>
+      <image:title>Bridal Kaftan in Blue</image:title>
+      <image:caption>Blue Moroccan bridal kaftan — takchita front closure detail, all sizes available</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/gold-kaftan-for-muslim-wedding</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-gold-moroccan-wedding-kaftan.webp</image:loc>
+      <image:title>Gold Bridal Kaftan for Muslim Wedding</image:title>
+      <image:caption>Gold Moroccan bridal kaftan with lace and embroidery — takchita wedding dress for Muslim wedding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-gold-moroccan-wedding-kaftan-3.webp</image:loc>
+      <image:title>Gold Bridal Kaftan for Muslim Wedding</image:title>
+      <image:caption>Gold Moroccan bridal kaftan — takchita outer dfina lace overlay detail, reception style</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/lavender-muslim-wedding-kaftan</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan-3.webp</image:loc>
+      <image:title>Lavender Muslim Bridal Kaftan</image:title>
+      <image:caption>Lavender Moroccan bridal kaftan with embroidery — takchita wedding dress for nikah or mehndi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan-2.webp</image:loc>
+      <image:title>Lavender Muslim Bridal Kaftan</image:title>
+      <image:caption>Lavender Moroccan bridal kaftan — takchita outer dfina embroidery detail, reception style</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/hijabi-bridal-modest-islamic-wedding-dress-lavender-moroccan-wedding-kaftan.webp</image:loc>
+      <image:title>Lavender Muslim Bridal Kaftan</image:title>
+      <image:caption>Lavender Moroccan bridal kaftan — takchita front closure and collar embroidery detail</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/moroccan-caftan-sky-blue</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-sky-blue.webp</image:loc>
+      <image:title>Sky Blue Moroccan Bridal Kaftan</image:title>
+      <image:caption>Sky blue Moroccan bridal kaftan with gold embroidery — pastel Moroccan wedding gown for Muslim wedding</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/light-green-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/light-green-muslim-wedding-dress-closeup.webp</image:loc>
-      <image:title>Sage Green Muslim Wedding Dress</image:title>
-      <image:caption>Light Green Muslim Wedding Dress - Green Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/light-green-muslim-wedding-dress.webp</image:loc>
+      <image:title>Sage Green Hijab Modest Fashion</image:title>
+      <image:caption>Sage green Muslim wedding dress in satin with butterfly net overlay and dupatta — modest nikah gown in 2026 trending color for US brides</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/light-green-muslim-wedding-dress.webp</image:loc>
-      <image:title>Sage Green Muslim Wedding Dress</image:title>
-      <image:caption>Light Green Muslim Wedding Dress - Green Modern</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/light-green-muslim-wedding-dress-closeup.webp</image:loc>
+      <image:title>Sage Green Hijab Modest Fashion</image:title>
+      <image:caption>Closeup of sage green Muslim bridal dress in satin with butterfly net overlay, small sequins and heavy embroidery — modest nikah gown in trending color for US brides</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-modest-fashion.webp</image:loc>
+      <image:title>Sage Green Hijab Modest Fashion</image:title>
+      <image:caption>Sage green hijab modest fashion dress in satin with butterfly net overlay and dupatta — modest nikah gown in 2026 trending color for US brides</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/silver-champagne-muslim-wedding-dress</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/silver-champagne-muslim-wedding-dress-closeup.webp</image:loc>
+      <image:title>Silver and Champagne Muslim Wedding Dress</image:title>
+      <image:caption>Closup of silver satin Muslim wedding dress with butterfly net overlay, champagne color embroidery and small sequins — modest nikah gown for US brides</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/silver-champagne-muslim-wedding-dress.webp</image:loc>
+      <image:title>Silver and Champagne Muslim Wedding Dress</image:title>
+      <image:caption>Silver satin Muslim wedding dress with champagne color embroidery and small sequins on butterfly net overlay — modest nikah gown for US brides</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lilac-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/lilac-muslim-wedding-dress-closeup.webp</image:loc>
-      <image:title>Lilac Muslim Wedding Dress</image:title>
-      <image:caption>Lilac Muslim Wedding Dress - Lilac Mughal-era</image:caption>
+      <image:title>Lilac Muslim Bridal Dress</image:title>
+      <image:caption>Closeup of lilac Muslim wedding dress in satin with butterfly net overlay in heavy gold embroidery and small sequins — modest Islamic bridal gown in trending color for nikkah.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/lilac-muslim-wedding-dress.webp</image:loc>
-      <image:title>Lilac Muslim Wedding Dress</image:title>
-      <image:caption>Lilac Muslim Wedding Dress - Lilac Mughal-era</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/lilac-muslim-bridal-dress.webp</image:loc>
+      <image:title>Lilac Muslim Bridal Dress</image:title>
+      <image:caption>Lilac Muslim bridal dress in satin with butterfly net overlay in heavy gold embroidery and small sequins — modest dress in trending color for nikkah.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-blue-actual.webp</image:loc>
       <image:title>Muslim Wedding Dress Blue</image:title>
-      <image:caption>Muslim Wedding Dress Blue - Blue Mughal-era</image:caption>
+      <image:caption>Blue Muslim wedding dress with stunning silver embroidery on net over satin with a modest silhouette — trending color nikah gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-blue.webp</image:loc>
       <image:title>Muslim Wedding Dress Blue</image:title>
-      <image:caption>Muslim Wedding Dress Blue - Blue Mughal-era</image:caption>
+      <image:caption>Blue Muslim wedding dress with dramatic allover silver embroidery, small sequins and modest silhouette — nikah gown in trending color</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-in-silver</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-in-silver.webp</image:loc>
       <image:title>Muslim Wedding Dress in Silver</image:title>
-      <image:caption>Muslim Wedding Dress in Silver - Silver Modern</image:caption>
+      <image:caption>Silver Muslim wedding dress in satin with heavy embroidery on net overlay with net dupatta — modest bridal anarkali</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-in-silver-2.webp</image:loc>
       <image:title>Muslim Wedding Dress in Silver</image:title>
-      <image:caption>Actual Muslim Wedding Dress in Silver - Lovely Silver</image:caption>
+      <image:caption>Silver Muslim wedding dress with heavy embroidery on net — modest bridal anarkali</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/peach-dress-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/peach-dress-for-muslim-wedding.webp</image:loc>
-      <image:title>Peach Dress for Muslim Wedding</image:title>
-      <image:caption>Peach Dress for Muslim Wedding - Peach Mughal-era</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/peach-muslim-bridal-dress.webp</image:loc>
+      <image:title>Peach Muslim Bridal Dress</image:title>
+      <image:caption>Peach Muslim bridal dress with net overlay and heavy ivory embroidery — modest bridal gown for nikah in beautiful pastel color.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-dress-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/red-muslim-bridal-dress.webp</image:loc>
+      <image:title>Red Muslim Bridal Dress</image:title>
+      <image:caption>Red Muslim bridal dress, modern lace overlay, minimal embroidery and double dupatta for a modern Muslim wedding option</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-dress-for-muslim-wedding.webp</image:loc>
-      <image:title>Red Dress for Muslim Wedding</image:title>
-      <image:caption>Red Dress for Muslim Wedding - Red Modern</image:caption>
+      <image:title>Red Muslim Bridal Dress</image:title>
+      <image:caption>Red Muslim bridal dress with modern lace overlay, minimal embroidery and dupatta for a  modern Muslim wedding dress</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-dress-for-muslim-wedding1.webp</image:loc>
-      <image:title>Red Dress for Muslim Wedding</image:title>
-      <image:caption>Red Dress for Muslim Wedding - Red Modern</image:caption>
+      <image:title>Red Muslim Bridal Dress</image:title>
+      <image:caption>Closeup of Red Muslim bridal dress with modern lace overlay, minimal embroidery and dupatta for a  modern Muslim wedding dress</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/blue-muslim-wedding-dress-on-amazon</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/blue-muslim-wedding-dress-on-amazon-side.webp</image:loc>
-      <image:title>Blue Muslim Wedding Dress on Amazon</image:title>
-      <image:caption>Blue Muslim Wedding Dress on Amazon - Blue Modern</image:caption>
+      <image:title>Blue Muslim Wedding Dress from Amazon</image:title>
+      <image:caption>Sky blue Muslim wedding dress with beautiful modern lace overlay and dupatta — nikah or walimah outfit on Amazon</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/blue-muslim-wedding-dress-on-amazon.webp</image:loc>
-      <image:title>Blue Muslim Wedding Dress on Amazon</image:title>
-      <image:caption>Blue Muslim Wedding Dress on Amazon - Blue Modern</image:caption>
+      <image:title>Blue Muslim Wedding Dress from Amazon</image:title>
+      <image:caption>Sky blue Muslim wedding dress with loverly modern lace overlay and dupatta — perfect nikah outfit on Amazon</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lavender-dress-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/lavender-muslim-wedding-dress-with-hijab.webp</image:loc>
+      <image:title>Lavender Muslim Wedding Dress</image:title>
+      <image:caption>Imagine our Lavender Muslim wedding dress with hijab using AI- silver allover embroidery on net overlay with matching silver dupatta and hijab — trending color Islamic bridal gown for nikkah</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/lavender-dress-for-muslim-wedding.webp</image:loc>
-      <image:title>Lavender Dress for Muslim Wedding</image:title>
-      <image:caption>Lavender Dress for Muslim Wedding - Lilac Mughal-era</image:caption>
+      <image:title>Lavender Muslim Wedding Dress</image:title>
+      <image:caption>Lavender Muslim wedding dress with silver allover embroidery on net overlay — trending color Islamic bridal gown for nikkah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-wine-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/red-wine-muslim-wedding-dress-with-hijab.webp</image:loc>
+      <image:title>Red Wine Muslim Wedding Dress</image:title>
+      <image:caption>Red wine Muslim wedding dress with hijab, heavy embroidered fabric and second silver dupatta — formal modest bridal gown for your nikkah</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-wine-muslim-wedding-dress-2.webp</image:loc>
       <image:title>Red Wine Muslim Wedding Dress</image:title>
-      <image:caption>Red Wine Muslim Wedding Dress - Red Elegant</image:caption>
+      <image:caption>Red wine Muslim wedding dress with heavy embroidered fabric — formal modest bridal gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-wine-muslim-wedding-dress.webp</image:loc>
       <image:title>Red Wine Muslim Wedding Dress</image:title>
-      <image:caption>Red Wine Muslim Wedding Dress - Red Elegant</image:caption>
+      <image:caption>Red wine Muslim wedding dress with heavy embroidered fabric — formal modest bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/dress-for-blue-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/dress-for-blue-muslim-wedding-2.webp</image:loc>
       <image:title>Dress for Blue Muslim Wedding</image:title>
-      <image:caption>Dress for Blue Muslim Wedding - Blue Elegant</image:caption>
+      <image:caption>Detailed view of aqua blue Muslim wedding dress - allover silver embroidery on net overlay with small sequins — modest nikah gown for hijabi brides</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/dress-for-blue-muslim-wedding.webp</image:loc>
       <image:title>Dress for Blue Muslim Wedding</image:title>
-      <image:caption>Dress for Blue Muslim Wedding - Blue Elegant</image:caption>
+      <image:caption>Aqua blue Muslim wedding dress - allover silver embroidery on net overlay with small sequins — modest nikah gown for hijabi brides</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-in-champagne</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/champagne-muslim-wedding-dresses-with-hijab.webp</image:loc>
+      <image:title>Champagne Muslim Wedding Dresses</image:title>
+      <image:caption>Visualize champagne Muslim wedding dressses with hijab with AI-inspiration - allover matching embroidery and small sequins over butterfly net overlay — lightweight modern modesty for nikkah</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-in-champagne-2.webp</image:loc>
-      <image:title>Muslim Wedding Dress in Champagne</image:title>
-      <image:caption>Muslim Wedding Dress in Champagne - Champagne Modern</image:caption>
+      <image:title>Champagne Muslim Wedding Dresses</image:title>
+      <image:caption>Closeup of champagne Muslim wedding dress in butterfly net with allover matching embroidery and small sequins — lightweight modest bridal gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-in-champagne.webp</image:loc>
-      <image:title>Muslim Wedding Dress in Champagne</image:title>
-      <image:caption>Muslim Wedding Dress in Champagne - Champagne Modern</image:caption>
+      <image:title>Champagne Muslim Wedding Dresses</image:title>
+      <image:caption>Champagne Muslim wedding dress with hijab allover embroidery on butterfly net overlay with matching dupatta — lightweight modern attire for nikkah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/fuschia-dress-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/fuschia-dress-for-muslim-wedding.webp</image:loc>
       <image:title>Fuschia Dress for Muslim Wedding</image:title>
-      <image:caption>Fuschia Dress for Muslim Wedding - Fuschia Mughal-era</image:caption>
+      <image:caption>Fuchsia Muslim wedding dress with allover silver embroidery — modest Mughal bridal gown for nikah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/white-muslim-wedding-dresses-with-hijab.webp</image:loc>
+      <image:title>White Muslim Wedding Dresses</image:title>
+      <image:caption>White Muslim wedding dresses with hijab added with AI-visualization. Fully embroidered  with beadwork and mirrors — modest Islamic bridal gown</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/white-muslim-wedding-dress.webp</image:loc>
-      <image:title>White Muslim Wedding Dress</image:title>
-      <image:caption>White Muslim Wedding Dress - White Traditional</image:caption>
+      <image:title>White Muslim Wedding Dresses</image:title>
+      <image:caption>White Muslim wedding dress with beadwork and mirrors — modest Islamic bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-white</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/white-muslim-bridal-look-with-hijab.webp</image:loc>
+      <image:title>White Muslim Bridal Look with Hijab</image:title>
+      <image:caption>AI-inspiration of a white Muslim bridal look with hijab in georgette with sequins — original nikah gown on Amazon</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-white-2.webp</image:loc>
-      <image:title>Muslim Wedding Dress White</image:title>
-      <image:caption>Muslim Wedding Dress White - White Elegant</image:caption>
+      <image:title>White Muslim Bridal Look with Hijab</image:title>
+      <image:caption>White Muslim wedding dress in georgette with sequins — modest nikah gown on Amazon</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-white.webp</image:loc>
-      <image:title>Muslim Wedding Dress White</image:title>
-      <image:caption>Muslim Wedding Dress White - White Elegant</image:caption>
+      <image:title>White Muslim Bridal Look with Hijab</image:title>
+      <image:caption>White Muslim wedding dress in georgette with sequins — modest nikah gown on Amazon</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-light-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-light-blue-2.webp</image:loc>
-      <image:title>Muslim Wedding Dress Light Blue</image:title>
-      <image:caption>Muslim Wedding Dress Light Blue - Blue Modern</image:caption>
+      <image:title>Light Blue Muslim Bridal Dress</image:title>
+      <image:caption>Light blue Muslim wedding dress with champagne floral embroidery — modest nikah gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-light-blue.webp</image:loc>
-      <image:title>Muslim Wedding Dress Light Blue</image:title>
-      <image:caption>Muslim Wedding Dress Light Blue - Blue Modern</image:caption>
+      <image:title>Light Blue Muslim Bridal Dress</image:title>
+      <image:caption>Light blue Muslim wedding dress with champagne floral embroidery — modest nikah gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-lavender</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-lavender-2.webp</image:loc>
       <image:title>Muslim Wedding Dress Lavender</image:title>
-      <image:caption>Muslim Wedding Dress Lavender - Multi Traditional</image:caption>
+      <image:caption>Lavender Muslim wedding dress with lace embroidery — whimsical modest bridal gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-lavender.webp</image:loc>
       <image:title>Muslim Wedding Dress Lavender</image:title>
-      <image:caption>Muslim Wedding Dress Lavender - Multi Traditional</image:caption>
+      <image:caption>Lavender Muslim wedding dress with lace embroidery — whimsical modest bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-garden-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-garden-blue-2.webp</image:loc>
       <image:title>Muslim Wedding Dress Garden Blue</image:title>
-      <image:caption>Muslim Wedding Dress Lavender - Multi Traditional</image:caption>
+      <image:caption>Garden blue Muslim wedding dress with embroidery — modest Islamic bridal gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-garden-blue.webp</image:loc>
       <image:title>Muslim Wedding Dress Garden Blue</image:title>
-      <image:caption>Muslim Wedding Dress Lavender - Multi Traditional</image:caption>
+      <image:caption>Garden blue Muslim wedding dress with embroidery — modest Islamic bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/aqua-blue-muslim-wedding-dress</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/aqua-blue-muslim-wedding-dress.webp</image:loc>
-      <image:title>Aqua and Blue Muslim Wedding Dress</image:title>
-      <image:caption>Aqua and Blue Muslim Wedding Dress- True Blue</image:caption>
+      <image:title>Aqua and Royal Blue Muslim Bridal Dress</image:title>
+      <image:caption>Aqua blue Muslim wedding dress with silver embroidery — modest nikah gown for US brides</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/aqua-blue-muslim-wedding-dress-2.webp</image:loc>
-      <image:title>Aqua and Blue Muslim Wedding Dress</image:title>
-      <image:caption>Aqua and Blue Muslim Wedding Dress - For Love</image:caption>
+      <image:title>Aqua and Royal Blue Muslim Bridal Dress</image:title>
+      <image:caption>Aqua blue Muslim wedding dress with silver embroidery — modest nikah gown for US brides</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/fuschia-gold-muslim-wedding-dress</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/fuschia-orange-muslim-wedding-dress.webp</image:loc>
+      <image:title>Fuschia and Gold Muslim Wedding Dress</image:title>
+      <image:caption>Fuschia orange Muslim wedding dress with gold embroidery — modest nikah gown for US brides</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/fuschia-orange-muslim-wedding-dress-2.webp</image:loc>
+      <image:title>Fuschia and Gold Muslim Wedding Dress</image:title>
+      <image:caption>Fuschia orange Muslim wedding dress with gold embroidery — modest nikah gown for US brides</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/green-dress-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/green-dress-for-muslim-wedding-2.webp</image:loc>
-      <image:title>Green Dress for Muslim Wedding</image:title>
-      <image:caption>Green Dress for Muslim Wedding - Green Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/green-dress-for-muslim-wedding.webp</image:loc>
+      <image:title>Green Nikkah Dress with Veil</image:title>
+      <image:caption>Green Muslim wedding dress with embroidery and sequins — modest Islamic bridal gown</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/green-dress-for-muslim-wedding.webp</image:loc>
-      <image:title>Green Dress for Muslim Wedding</image:title>
-      <image:caption>Green Dress for Muslim Wedding - Green Elegant</image:caption>
+      <image:loc>https://hijabibridal.github.io/images/green-dress-for-muslim-wedding-2.webp</image:loc>
+      <image:title>Green Nikkah Dress with Veil</image:title>
+      <image:caption>Green nikkah dress with veil has embroidery and sequins — modest Islamic bridal gown</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/green-dress-for-muslim-wedding-hijab.webp</image:loc>
+      <image:title>Green Nikkah Dress with Veil</image:title>
+      <image:caption>Green nikkah dress with hijab has embroidery and sequins — modest Islamic bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/blue-dress-for-muslim-wedding</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/blue-dress-for-muslim-wedding.webp</image:loc>
       <image:title>Blue Dress for Muslim Wedding</image:title>
-      <image:caption>Blue Dress for Muslim Wedding - Blue Elegance</image:caption>
+      <image:caption>Blue Muslim wedding dress with embroidery — regal modest bridal gown for nikah</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/blue-dress-for-muslim-wedding-2.webp</image:loc>
       <image:title>Blue Dress for Muslim Wedding</image:title>
-      <image:caption>Blue  Dress for Muslim Wedding - Blue Elegance</image:caption>
+      <image:caption>Blue Muslim wedding dress with embroidery — regal modest bridal gown for nikah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-offwhite-multi</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-bride-dress.webp</image:loc>
+      <image:title>Muslim Bride Dress</image:title>
+      <image:caption>Muslim bride dress with AI hijab - off white with multicolor embroidery — modest modern wedding gown</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-offwhite-multi.webp</image:loc>
-      <image:title>Muslim Wedding Dress Off White Multi</image:title>
-      <image:caption>Muslim Wedding Dress Off White - Embroidered</image:caption>
+      <image:title>Muslim Bride Dress</image:title>
+      <image:caption>Off white Muslim wedding dress with multicolor embroidery — modest Islamic nikah gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-offwhite-multi-2.webp</image:loc>
-      <image:title>Muslim Wedding Dress Off White Multi</image:title>
-      <image:caption>Muslim Wedding Dress Off White - Embroidery</image:caption>
+      <image:title>Muslim Bride Dress</image:title>
+      <image:caption>Off white Muslim wedding dress with multicolor embroidery — modest Islamic nikah gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-stripe-offwhite-multi</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-stripe-offwhite-multi.webp</image:loc>
       <image:title>Muslim Wedding Dress Striped Off White Multi</image:title>
-      <image:caption>Muslim Wedding Dress Striped Off White - Embroidered</image:caption>
+      <image:caption>Striped off white Muslim wedding dress with embroidery — modest Islamic bridal gown</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-stripe-offwhite-multi-2.webp</image:loc>
       <image:title>Muslim Wedding Dress Striped Off White Multi</image:title>
-      <image:caption>Muslim Wedding Dress Striped Off White - Embroidery</image:caption>
+      <image:caption>Striped off white Muslim wedding dress with embroidery — modest Islamic bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-fuschia-embroidered</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-fuschia-embroidered.webp</image:loc>
       <image:title>Muslim Wedding Dress Fuschia Embroidered</image:title>
-      <image:caption>Muslim Wedding Dress Fuschia Embroidered</image:caption>
+      <image:caption>Fuchsia embroidered Muslim wedding dress — bold modest Islamic bridal gown for nikah</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-fuschia-embroidered-2.webp</image:loc>
       <image:title>Muslim Wedding Dress Fuschia Embroidered</image:title>
-      <image:caption>Muslim Wedding Dress Striped Fuschia Embroidery</image:caption>
+      <image:caption>Fuchsia embroidered Muslim wedding dress — bold modest Islamic bridal gown for nikah</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-green-embroidered</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/green-muslim-wedding-dress.webp</image:loc>
+      <image:title>Green Muslim Wedding Dress</image:title>
+      <image:caption>Green Muslim wedding dress — heavy gold work on dark green Muslim bridal attire for nikah</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-green-embroidered-2.webp</image:loc>
+      <image:title>Green Muslim Wedding Dress</image:title>
+      <image:caption>Green embroidered Muslim wedding dress — bold modest Islamic bridal gown for nikah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-dress-blue-gold</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-blue-gold.webp</image:loc>
       <image:title>Muslim Wedding Dress Blue and Gold</image:title>
-      <image:caption>Blue and Gold Dress for Muslim Wedding - Elegance</image:caption>
+      <image:caption>Blue and gold Muslim wedding dress with regal embroidery — modest nikah bridal gown</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/covered-neck-red-bridal-choker-set-nikkah-jewelry</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/covered-neck-red-bridal-choker-set-nikkah-jewelry-2.webp</image:loc>
@@ -1983,12 +2228,12 @@
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/covered-neck-red-bridal-choker-set-nikkah-jewelry.webp</image:loc>
       <image:title>Covered Neck: Red Bridal Choker Set Nikkah Jewelry</image:title>
-      <image:caption>Covered Neck: Red Bridal Choker Set Nikkah Jewelry - Red Elegant</image:caption>
+      <image:caption>Red Bridal Choker Set, Nikkah Jewelry to modestly cover your neck</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/blue-bridal-crown</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/blue-bridal-crown-2.webp</image:loc>
@@ -2003,7 +2248,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-and-pearl-wedding-crown</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/gold-and-pearl-wedding-crown-2.webp</image:loc>
@@ -2018,7 +2263,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/blue-bride---jewelry-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/blue-bride---jewelry-set-2.webp</image:loc>
@@ -2033,7 +2278,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/bridal-champagne-bangles</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/bridal-champagne-bangles.webp</image:loc>
@@ -2043,7 +2288,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-bridal-jewelry-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/red-bridal-jewelry-set-2.webp</image:loc>
@@ -2058,7 +2303,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-bridal-jewelry-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/pink-bridal-jewelry-set-2.webp</image:loc>
@@ -2073,7 +2318,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/green-bridal-nikkah-jewelry</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/green-bridal-nikkah-jewelry-2.webp</image:loc>
@@ -2088,7 +2333,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/bridal-white-necklace-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/bridal-white-necklace-set.webp</image:loc>
@@ -2098,7 +2343,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-bangles-in-bridal-champagne</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/muslim-bangles-in-bridal-champagne-2.webp</image:loc>
@@ -2113,7 +2358,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/fuschia-wedding-silk-thread-bangles</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/fuschia-wedding-silk-thread-bangles-2.webp</image:loc>
@@ -2128,7 +2373,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-and-silver-bridal-jewelry-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/gold-and-silver-bridal-jewelry-set-2.webp</image:loc>
@@ -2143,7 +2388,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gold-bridal-jewellery-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/gold-bridal-jewellery-set.webp</image:loc>
@@ -2158,7 +2403,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/heavy-bridal-kundan-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/heavy-bridal-kundan-set-2.webp</image:loc>
@@ -2173,7 +2418,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/gray-and-gold-bridal-bangles</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/gray-and-gold-bridal-bangles.webp</image:loc>
@@ -2183,7 +2428,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/green-bridal-bangles</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/green-bridal-bangles.webp</image:loc>
@@ -2193,7 +2438,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/green-bridal-nikkah-jewelry-for-bride</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/green-bridal-nikkah-jewelry-for-bride.webp</image:loc>
@@ -2203,7 +2448,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/indian-bridal-jhumka-earrings</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/indian-bridal-jhumka-earrings.webp</image:loc>
@@ -2213,7 +2458,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/light-green-bridal-bangles</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/light-green-bridal-bangles.webp</image:loc>
@@ -2223,7 +2468,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/light-green-bridal-nikkah-jewelry-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/light-green-bridal-nikkah-jewelry-set.webp</image:loc>
@@ -2233,7 +2478,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/muslim-wedding-earrings</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/muslim-wedding-earrings-2.webp</image:loc>
@@ -2248,7 +2493,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/red-bridal-bangles-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/red-bridal-bangles-set.webp</image:loc>
@@ -2258,7 +2503,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/bridal-red-necklace-set</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/bridal-red-necklace-set.webp</image:loc>
@@ -2268,7 +2513,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-bridal-jewelry-for-nikkah</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/nikkah-jewelry/silver-bridal-jewelry-for-nikkah.webp</image:loc>
@@ -2277,143 +2522,153 @@
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/champagne-sharara-suits</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/champagne-sharara-suits-2.webp</image:loc>
-      <image:title>Champagne Gharara Suits</image:title>
-      <image:caption>Champagne Sharara Suits - Champagne Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/champagne-sharara-suits.webp</image:loc>
-      <image:title>Champagne Gharara Suits</image:title>
-      <image:caption>Champagne Sharara Suits - Champagne Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-in-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-in-blue-2.webp</image:loc>
       <image:title>Sharara in Blue</image:title>
-      <image:caption>Sharara in Blue - Blue Traditional</image:caption>
+      <image:caption>Blue sharara suit with traditional embroidery — modest Muslim bridal outfit for all body types</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-in-blue.webp</image:loc>
       <image:title>Sharara in Blue</image:title>
-      <image:caption>Sharara in Blue - Blue Traditional</image:caption>
+      <image:caption>Blue sharara suit with traditional embroidery — modest Muslim bridal outfit for all body types</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/lilac-sharara</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/lilac-sharara.webp</image:loc>
+      <image:title>Lilac Sharara</image:title>
+      <image:caption>This lilac sharara showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/lilac-sharara-closeup.webp</image:loc>
+      <image:title>Lilac Sharara</image:title>
+      <image:caption>Closeup of lilac sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/sage-green-hijab-style</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-style.webp</image:loc>
+      <image:title>Sage Green Hijab Style</image:title>
+      <image:caption>This sharara in sage green hijab style showcases luxurious georgette fabric with intricate metallic embroidery and matching net dupatta, perfect for a bridal occasion.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-style-actual.webp</image:loc>
+      <image:title>Sage Green Hijab Style</image:title>
+      <image:caption>Actual version of sage sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-style-actual-closup.webp</image:loc>
+      <image:title>Sage Green Hijab Style</image:title>
+      <image:caption>Closeup version of sage sharara in luxurious georgette fabric with intricate metallic embroidery and matching net dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/sage-green-hijab-outfit</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-outfit.webp</image:loc>
+      <image:title>Sage Green Hijab Outfit</image:title>
+      <image:caption>This sharara is a sage green hijab outfit showcasing luxurious silk fabric with intricate metallic embroidery, perfect for a Muslim wedding.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-outfit-actual.webp</image:loc>
+      <image:title>Sage Green Hijab Outfit</image:title>
+      <image:caption>Actual version of sage sharara in luxurious silk fabric with intricate metallic embroidery and matching dupatta has a knee length choli, one of the premier Muslim fashion options for modest fashion and elegance.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-suit-in-green</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-green-2.webp</image:loc>
       <image:title>Sharara Suit in Green</image:title>
-      <image:caption>Sharara Suit in Green - Green Elegant</image:caption>
+      <image:caption>Green sharara suit with embroidery — modest Muslim bridal outfit promoting body positivity</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-green.webp</image:loc>
       <image:title>Sharara Suit in Green</image:title>
-      <image:caption>Sharara Suit in Green - Green Elegant</image:caption>
+      <image:caption>Green sharara suit with embroidery — modest Muslim bridal outfit promoting body positivity</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/gold-sharara</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/gold-sharara.webp</image:loc>
+      <image:title>Gold Sharara</image:title>
+      <image:caption>Gold sharara with embroidery — modest Muslim bridal outfit promoting body positivity</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/gold-sharara-closeup.webp</image:loc>
+      <image:title>Gold Sharara</image:title>
+      <image:caption>Gold sharara suit with embroidery — modest Muslim bridal outfit promoting body positivity</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/lavender-sharara-suit</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/lavender-sharara-suit-2.webp</image:loc>
       <image:title>Lavender Sharara Suit</image:title>
-      <image:caption>Lavender Sharara Suit - Lilac Elegant</image:caption>
+      <image:caption>Lavender sharara suit — modest Muslim bridal outfit in soft lilac for nikah or walima</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/lavender-sharara-suit.webp</image:loc>
       <image:title>Lavender Sharara Suit</image:title>
-      <image:caption>Lavender Sharara Suit - Lilac Elegant</image:caption>
+      <image:caption>Lavender sharara suit — modest Muslim bridal outfit in soft lilac for nikah or walima</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-suit-in-maroon</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-maroon-3.webp</image:loc>
+      <image:title>Sharara Suit in Maroon</image:title>
+      <image:caption>This AI-inspiration shows you the sharara hijab style with a maroon sharara.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-maroon-2.webp</image:loc>
       <image:title>Sharara Suit in Maroon</image:title>
-      <image:caption>Sharara Suit in Maroon - Red Traditional</image:caption>
+      <image:caption>Maroon sharara suit — traditional modest Muslim bridal outfit for South Asian nikah</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-maroon.webp</image:loc>
       <image:title>Sharara Suit in Maroon</image:title>
-      <image:caption>Sharara Suit in Maroon - Red Traditional</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/peach-sharara-suit</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/peach-sharara-suit-2.webp</image:loc>
-      <image:title>Peach Sharara Suit</image:title>
-      <image:caption>Peach Sharara Suit - Peach Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/peach-sharara-suit-3.webp</image:loc>
-      <image:title>Peach Sharara Suit</image:title>
-      <image:caption>Peach Sharara Suit - Peach Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/peach-sharara-suit.webp</image:loc>
-      <image:title>Peach Sharara Suit</image:title>
-      <image:caption>Peach Sharara Suit - Peach Modern</image:caption>
+      <image:caption>Maroon sharara suit — traditional modest Muslim bridal outfit for South Asian nikah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/teal-blue-sharara</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/teal-blue-sharara.webp</image:loc>
       <image:title>Teal Blue Sharara</image:title>
-      <image:caption>Teal Blue Sharara - Blue Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/green-bridal-sharara</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/green-bridal-sharara-2.webp</image:loc>
-      <image:title>Green Sharara</image:title>
-      <image:caption>Green Sharara - Green Traditional</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/green-bridal-sharara.webp</image:loc>
-      <image:title>Green Sharara</image:title>
-      <image:caption>Green Sharara - Green Traditional</image:caption>
+      <image:caption>Teal blue sharara suit — modern modest Muslim bridal outfit with cultural style</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-light-blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-light-blue-2.webp</image:loc>
       <image:title>Light Blue Embroidered Gharara</image:title>
-      <image:caption>Light Blue Embroidered Sharara - Blue Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-light-blue-silver-2.webp</image:loc>
-      <image:title>Light Blue Embroidered Gharara</image:title>
-      <image:caption>Light Blue Embroidered Sharara - Blue Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-light-blue-silver.webp</image:loc>
-      <image:title>Light Blue Embroidered Gharara</image:title>
-      <image:caption>Light Blue Embroidered Sharara - Blue Modern</image:caption>
+      <image:caption>Light blue embroidered sharara — modest blue Muslim bridal outfit flattering for all body types</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-light-blue.webp</image:loc>
@@ -2422,248 +2677,233 @@
     </image:image>
   </url>
   <url>
-    <loc>https://hijabibridal.github.io/shop/product/sharara-maroon</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-maroon-2.webp</image:loc>
-      <image:title>Maroon Silk Sharara Set</image:title>
-      <image:caption>Maroon Silk Sharara Set - Red Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-maroon.webp</image:loc>
-      <image:title>Maroon Silk Sharara Set</image:title>
-      <image:caption>Maroon Silk Sharara Set - Red Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/sharara-blue-ombre</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-blue-ombre-closeup.webp</image:loc>
-      <image:title>Blue Ombre Chinon Silk Sharara</image:title>
-      <image:caption>Blue Ombre Chinon Silk Sharara - Blue Modern</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-blue-ombre.webp</image:loc>
-      <image:title>Blue Ombre Chinon Silk Sharara</image:title>
-      <image:caption>Blue Ombre Chinon Silk Sharara - Blue Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://hijabibridal.github.io/shop/product/sharara-lilac-ombre</loc>
-    <lastmod>2026-04-05</lastmod>
-    
-    <image:image>
-      <image:loc>https://hijabibridal.github.io/images/sharara-lilac-ombre.webp</image:loc>
-      <image:title>Lilac Ombre Silk Sharara</image:title>
-      <image:caption>Lilac Ombre Silk Sharara - Lilac Modern</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-light-blue-silver</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-light-blue-silver-2.webp</image:loc>
       <image:title>Light Blue and Silver Sharara</image:title>
-      <image:caption>Light Blue and Silver Sharara - Blue Modern</image:caption>
+      <image:caption>Light blue and silver sharara — modest Muslim bridal outfit with metallic embroidery</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-light-blue-silver.webp</image:loc>
       <image:title>Light Blue and Silver Sharara</image:title>
-      <image:caption>Light Blue and Silver Sharara - Blue Modern</image:caption>
+      <image:caption>Light blue and silver sharara — modest Muslim bridal outfit with metallic embroidery</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sage-green-sharara-suit</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-fashion.webp</image:loc>
+      <image:title>Sage Green Hijab Fashion Outfit</image:title>
+      <image:caption>Sage green hijab fashion outfit - sharara set in silk with gold embroidery — modern modest Muslim bridal wear for nikah or walima</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://hijabibridal.github.io/images/sage-green-sharara-suit.webp</image:loc>
-      <image:title>Sage Green Sharara Suit</image:title>
-      <image:caption>Sage Green Sharara - Modern Flair</image:caption>
+      <image:title>Sage Green Hijab Fashion Outfit</image:title>
+      <image:caption>Muslim bridal sharara — modern modest Muslim bridal wear in sage green for nikah or walima</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sage-green-sharara-suit-2.webp</image:loc>
-      <image:title>Sage Green Sharara Suit</image:title>
-      <image:caption>Sage Green Sharara - 2026 Trends</image:caption>
+      <image:title>Sage Green Hijab Fashion Outfit</image:title>
+      <image:caption>Closeup of sharara suit — modern modest Muslim bridal outfit in sage greenfor nikah or walima</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-suit-in-lavender</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-lavender.webp</image:loc>
-      <image:title>Sharara Suit in Lavender</image:title>
-      <image:caption>Sharara in Lavender- Modern Flair</image:caption>
+      <image:title>Sharara Set in Lavender</image:title>
+      <image:caption>Lavender sharara suit — modest Muslim bridal outfit in soft pastel for hijabi brides</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-lavender-2.webp</image:loc>
-      <image:title>Sharara Suit in Lavender</image:title>
-      <image:caption>Sharara in Lavender - 2026 Trends</image:caption>
+      <image:title>Sharara Set in Lavender</image:title>
+      <image:caption>Lavender sharara suit — modest Muslim bridal outfit in soft pastel for hijabi brides</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/sharara-suit-in-pink</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-pink.webp</image:loc>
-      <image:title>Sharara Suit in Pink</image:title>
-      <image:caption>Sharara in Pink- Romantic Flair</image:caption>
+      <image:title>Sharara Kurta Set in Pink</image:title>
+      <image:caption>Pink sharara suit — modest Muslim bridal outfit with romantic silhouette for nikah</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-pink-2.webp</image:loc>
-      <image:title>Sharara Suit in Pink</image:title>
-      <image:caption>Sharara in Pink - 2026 Trends</image:caption>
+      <image:title>Sharara Kurta Set in Pink</image:title>
+      <image:caption>Pink sharara suit — modest Muslim bridal outfit with romantic silhouette for nikah</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/pink-sharara-suit</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/pink-sharara-suit.webp</image:loc>
-      <image:title>Pink Sharara Suit</image:title>
-      <image:caption>Pink Sharara- Innocence and Romance</image:caption>
+      <image:title>Pink Sharara Set</image:title>
+      <image:caption>Pink sharara suit with embroidery — modest Muslim nikah outfit flattering for all body types</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/pink-sharara-suit-2.webp</image:loc>
-      <image:title>Pink Sharara Suit</image:title>
-      <image:caption>Pink Sharara - 2026 Trends</image:caption>
+      <image:title>Pink Sharara Set</image:title>
+      <image:caption>Pink sharara suit with embroidery — modest Muslim nikah outfit flattering for all body types</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/silver-sharara-suit</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/silver-sharara-suit.webp</image:loc>
-      <image:title>Silver Sharara Suit</image:title>
-      <image:caption>Silver Sharara- Absolute Elegance</image:caption>
+      <image:title>Silver Sharara Kurta Set</image:title>
+      <image:caption>Silver sharara suit with metallic embroidery — glamorous modest Muslim bridal outfit for nikah</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/shop/product/green-bridal-sharara</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/green-bridal-sharara-r2.webp</image:loc>
+      <image:title>Green Sharara</image:title>
+      <image:caption>Green bridal sharara — traditional modest Muslim wedding outfit for hijabi brides</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/green-bridal-sharara-r.webp</image:loc>
+      <image:title>Green Sharara</image:title>
+      <image:caption>Green bridal sharara — traditional modest Muslim wedding outfit for hijabi brides</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/product/white-gold-sharara-suit</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/white-gold-sharara-suit-3.webp</image:loc>
+      <image:title>White and Gold Sharara Suit</image:title>
+      <image:caption>This AI-inspiration shows you the sharara hijab style with the white and gold sharara.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white-gold-sharara-suit-2.webp</image:loc>
       <image:title>White and Gold Sharara Suit</image:title>
-      <image:caption>White and Gold Sharara Suit - Bridal Elegance</image:caption>
+      <image:caption>White and gold sharara suit — modest Muslim bridal outfit for nikah in modern color</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/white-gold-sharara-suit.webp</image:loc>
       <image:title>White and Gold Sharara Suit</image:title>
-      <image:caption>White and Gold Sharara Suit - Bridal Elegance</image:caption>
+      <image:caption>White and gold sharara suit — modest Muslim bridal outfit for nikah in modern color</image:caption>
     </image:image>
   </url>
   
   
   <url>
     <loc>https://hijabibridal.github.io/shop/category/blue</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/bridal-belt</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/bridal-caftans</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/bridal-hijab</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/cape</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/champagne</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/faux-fur</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/fuschia</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/gold</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/green</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/halal-nails</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/jutti</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/lilac</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/muslim-groom-outfit</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/muslim-lehenga</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/muslim-wedding-dresses</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/nikkah-jewelry</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/peach</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/pink</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/red</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/sharara</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/silver</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/shop/category/white</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
   </url>
   
   
   <url>
     <loc>https://hijabibridal.github.io/blog/muslim-groom-outfit-style-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bloggroom1.webp</image:loc>
@@ -2672,7 +2912,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/why-bridal-lehengas-are-islamic</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-muslim-bridal-lehenga.webp</image:loc>
@@ -2681,7 +2921,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/muslim-wedding-dress-white-or-red</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/e6d25e_e3f2c8837d9140479112115acd8eae3f~mv2.png.webp</image:loc>
@@ -2690,7 +2930,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/4-ways-to-double-wrap-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/blogdupatta3.webp</image:loc>
@@ -2699,43 +2939,43 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/what-to-wear-to-a-muslim-wedding-guest-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/blogguests.webp</image:loc>
+      <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/navy-short-african-kurta-set.webp</image:loc>
       <image:title>Guests: What to Wear to a Muslim Wedding?</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/bridal-hijab-vs-veil-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-hijab/jade-green-crepe-bridal-hijab.webp</image:loc>
-      <image:title>Bridal Hijab vs. Veil: What Every Bride and Guest Should Know</image:title>
+      <image:loc>https://hijabibridal.github.io/images/hijabwithveil.webp</image:loc>
+      <image:title>Bridal Hijab vs. Veil: What Every Bride Should Know</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/halal-nails-press-on-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bloghalalnails.webp</image:loc>
-      <image:title>Halal Nails Press On: The Complete Guide for Muslim Women</image:title>
+      <image:title>Halal Press On Nails: The Complete Guide for Muslim Women</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/muslim-lehenga-modest-fashion-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/pink-flower-muslim-bridal-lehenga.webp</image:loc>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/islamic-bridal-lehenga-with-hijab.webp</image:loc>
       <image:title>Muslim Lehenga: Modest Fashion, Cultural Significance &amp; Style Guide for Every Occasion</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/muslim-sherwani-photos-do-muslims-wear-sherwani</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/navy-gold-patterned-sherwani.webp</image:loc>
@@ -2744,25 +2984,25 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/muslim-bridal-lehenga-cost-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/gold-hijabi-lehenga.webp</image:loc>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/bridal-lehenga-with-hijab.webp</image:loc>
       <image:title>How Much Does a Muslim Bridal Lehenga Cost?</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/what-does-a-muslim-bride-wear-to-her-nikkah</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/red-muslim-wedding-dress-3.webp</image:loc>
-      <image:title>What Does a Muslim Bride Wear to Her Nikkah?</image:title>
+      <image:loc>https://hijabibridal.github.io/images/green-dress-for-muslim-wedding-hijab.webp</image:loc>
+      <image:title>What Does a Muslim Bride Wear?</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/what-is-a-nikah</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-in-champagne-2.webp</image:loc>
@@ -2771,7 +3011,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/best-muslim-bridal-dresses-for-sale-2026</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/blue-muslim-wedding-dress-on-amazon-side.webp</image:loc>
@@ -2780,34 +3020,34 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/best-modern-muslim-wedding-dresses-2026</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/red-dress-for-muslim-wedding1.webp</image:loc>
-      <image:title>Best Modern Muslim Wedding Dresses for 2026</image:title>
+      <image:title>Best Modern Muslim Wedding Dresses for 2026 US Muslim Brides</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/how-to-drape-a-heavy-bridal-dupatta</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/white-embroidered-georgette-dupatta.webp</image:loc>
-      <image:title>How to Drape a Heavy Bridal Dupatta: Techniques, Styles, and Tips</image:title>
+      <image:loc>https://hijabibridal.github.io/images/bridal-dupatta/maroon-velvet-dupatta.webp</image:loc>
+      <image:title>How to Drape a Heavy Bridal Dupatta from Online: Techniques, Styles, and Tips</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/is-lehenga-allowed-in-islam-muslim-lehenga-with-price</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
-      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/white-muslim-lehenga.webp</image:loc>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/muslim-bridal-lehenga.webp</image:loc>
       <image:title>Is Lehenga Allowed in Islam? Muslim Lehenga With Price Guide</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/how-to-look-expensive-as-a-hijabi</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/bridal-hijab/gold-fluff-bridal-hijab.webp</image:loc>
@@ -2816,7 +3056,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/best-muslim-bridal-dresses-online-2026</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/muslim-wedding-dress-offwhite-multi-2.webp</image:loc>
@@ -2825,7 +3065,7 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/what-is-the-difference-between-sharara-and-gharara-pants</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/sharara-suit-in-maroon.webp</image:loc>
@@ -2834,11 +3074,83 @@
   </url>
   <url>
     <loc>https://hijabibridal.github.io/blog/how-much-should-a-nikkah-dress-cost-bridal-caftan-guide</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     
     <image:image>
       <image:loc>https://hijabibridal.github.io/images/moroccan-caftan-maroon.webp</image:loc>
       <image:title>How Much Should a Nikkah Dress Cost? The Bridal Caftan Guide</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/what-does-the-groom-wear-in-a-muslim-wedding</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-groom-outfit/white-gold-stamped-african-sherwani-actual.webp</image:loc>
+      <image:title>What Does the Groom Wear in a Muslim Wedding?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/what-color-do-muslim-brides-usually-wear</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/sage-green-hijab-modest-fashion.webp</image:loc>
+      <image:title>What Color Do Muslim Brides Usually Wear? Sage Green</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/what-color-do-muslim-brides-usually-wear-white</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/white-muslim-bridal-look-with-hijab.webp</image:loc>
+      <image:title>What Color Do Muslim Brides Usually Wear? White</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/what-color-do-muslim-brides-wear-for-a-wedding-red</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/hijab-with-lehenga.webp</image:loc>
+      <image:title>What Color Do Muslim Brides Wear for a Wedding? Red</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/what-is-punjabi-jutti-made-of</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/maroon-and-gold-bridal-punjabi-jutti-slippers.webp</image:loc>
+      <image:title>What Are Punjabi Juttis Made Of? Leather &amp; Embellishments</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/is-rani-pink-a-good-bridal-color</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/fuschia-muslim-lehenga-readymade.webp</image:loc>
+      <image:title>Is Rani Pink a Good Bridal Color? Perfect for Muslim Brides</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/trends-in-pakistani-bridal-fashion</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/lavender-muslim-wedding-dress-with-hijab.webp</image:loc>
+      <image:title>What Are the Latest Trends in Pakistani Bridal Fashion?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hijabibridal.github.io/blog/which-type-of-lehenga-is-trending-now</loc>
+    <lastmod>2026-07-09</lastmod>
+    
+    <image:image>
+      <image:loc>https://hijabibridal.github.io/images/muslim-lehenga/navy-blue-hijab-modest-fashion.webp</image:loc>
+      <image:title>Which Type of Lehenga Is Trending Now?</image:title>
     </image:image>
   </url>
 </urlset>
