@@ -2,7 +2,7 @@ import React from 'react';
 
 export const metadata = {
   title: 'Pakistani Bridal & Lehenga Custom Sourcing | Hijabi Bridal x Shoperts',
-  description: 'Discover bespoke Pakistani wedding lehengas and bridal outfits. Hijabi Bridal partners with Shoperts to bring authentic, high-ticket custom tailoring from Pakistan straight to Western brides.',
+  description: 'Discover bespoke Pakistani wedding lehengas and bridal outfits. Hijabi Bridal partners with Shoperts to bring authentic, custom tailoring from Pakistan straight to Western brides.',
   openGraph: {
     title: 'Custom Pakistani Bridal Sourcing | Hijabi Bridal x Shoperts',
     description: 'Bespoke Pakistani wedding wear curated and tailored for the modern Western bride.',
@@ -18,7 +18,7 @@ export default function PakistaniBridalPartnershipPage() {
         {/* Shoperts Logo */}
         <div className="max-w-[320px] mx-auto mb-8 bg-black p-4 rounded-xl shadow-md border border-gray-800">
           <img 
-            src="/images/shoperts-logo.png" 
+            src="/images/shoperts-logo.webp" 
             alt="Shoperts Upscale Shopping Logo" 
             className="w-full h-auto object-contain"
           />
@@ -26,18 +26,18 @@ export default function PakistaniBridalPartnershipPage() {
 
         <span className="text-[#db2777] uppercase font-bold tracking-widest text-sm block mb-4">Exclusive Bridal Sourcing</span>
         <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6 max-w-5xl mx-auto leading-none">
-          Hijabi Bridal Partners with <span className="text-[#db2777]">Shoperts Upscale Shopping</span> to bring you customized Pakistani wedding lehenga and bridal outfits.
+          Hijabi Bridal Partners with <span className="text-[#db2777]">Shoperts Upscale Shopping</span>.
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-700 leading-relaxed font-medium">
-          We are bringing the incredible artistry of Pakistan’s world-famous bridal designers straight to you. Get access to elite, custom-tailored luxury without dealing with any of the long-distance shipping or ordering stress.
+          Difficulty finding just the right look for your wedding? If you're scrolling instead of planning, we have the right solution. <a href="https://shoperts.com/bespoke-tailoring" className="text-blue-600 hover:underline">Get your dreams customized</a> right to your door. Shoperts harnesses the incredible artistry of Pakistan’s world-famous textile industry and bridal designers just for you. Affordable pricing! Try this world class shopping experience to customize Pakistani bridal lehenga and outfits for your wedding. Comfortable wedding outfit planning, elite, custom-tailored luxury - no stress.
         </p>
       </section>
 
       {/* Massive Media Showcase / Embedded Reels Section */}
       <section className="bg-white py-16 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-black uppercase tracking-tight mb-2">Curated Bridal Previews</h2>
-          <p className="text-gray-600 font-medium">Take a look inside the craftsmanship, tailoring process, and final high-end looks.</p>
+          <h2 className="text-3xl font-black uppercase tracking-tight mb-2">Shoperts Previews</h2>
+          <p className="text-gray-600 font-medium">Take a look inside how Shoperts works. Then <a href="https://shoperts.com/bespoke-tailoring" className="text-blue-600 hover:underline">get started today!</a></p>
         </div>
         
         {/* 3x Larger Grid for Instagram Embeds */}
@@ -82,7 +82,7 @@ export default function PakistaniBridalPartnershipPage() {
         {/* Upscaled Testimonials Post Integration */}
         <div className="max-w-3xl mx-auto bg-pink-50 rounded-3xl p-8 sm:p-12 border border-pink-100 text-center flex flex-col items-center shadow-sm">
           <h3 className="text-3xl font-black uppercase tracking-tight mb-2">Real Bride Feedback</h3>
-          <p className="text-gray-600 mb-8 text-base font-medium">Hear directly from clients who trusted this custom sourcing process.</p>
+          <p className="text-gray-600 mb-8 text-base font-medium">Hear directly from clients who trusted Shopert's custom sourcing process.</p>
           <div className="w-full min-h-[500px] sm:min-h-[650px] overflow-hidden rounded-2xl border bg-white shadow-xl">
             <iframe 
               src="https://www.instagram.com/p/DZs48NrhkLX/embed" 
@@ -104,16 +104,16 @@ export default function PakistaniBridalPartnershipPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="flex flex-col">
               <div className="bg-pink-100 aspect-[4/5] rounded-3xl flex items-center justify-center text-pink-400 font-bold text-lg shadow-inner mb-4">
-                [ Image Asset: pakistani-lehenga-with-hijab.jpg ]
+                [ Image Asset: pakistani-lehenga-with-hijab.webp ]
               </div>
               <h3 className="text-xl font-bold uppercase tracking-tight mb-1">Pakistani Lehenga with Hijab</h3>
               <p className="text-gray-600 text-sm">A sweeping, heavily detailed skirt paired with a longer top and perfectly color-matched, elegant hijab draping.</p>
             </div>
             <div className="flex flex-col">
               <div className="bg-pink-100 aspect-[4/5] rounded-3xl flex items-center justify-center text-pink-400 font-bold text-lg shadow-inner mb-4">
-                [ Image Asset: muslim-sharara.jpg ]
+                [ Image Asset: muslim-gharara.webp ]
               </div>
-              <h3 className="text-xl font-bold uppercase tracking-tight mb-1">Muslim Sharara Ensemble</h3>
+              <h3 className="text-xl font-bold uppercase tracking-tight mb-1">Muslim Gharara Ensemble</h3>
               <p className="text-gray-600 text-sm">Wide-legged, flowing statement pants paired with an intricately embroidered tunic for a regal, classic silhouette.</p>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function PakistaniBridalPartnershipPage() {
           <div className="text-4xl mb-4">🪡 ✨</div>
           <h3 className="text-2xl font-black uppercase tracking-tight mb-2">Custom Tailoring Packages</h3>
           <p className="text-gray-600 max-w-sm mb-4">Beautiful, personalized wedding styles made exactly to your measurements.</p>
-          <span className="text-xs bg-white text-gray-400 font-mono tracking-widest px-4 py-2 rounded-full uppercase border">Ranges: $500 CAD – $4,000 CAD</span>
+          <span className="text-xs bg-white text-gray-400 font-mono tracking-widest px-4 py-2 rounded-full uppercase border">Packages Start at $500 CAD / $350 USD</span>
         </div>
       </section>
 
@@ -169,7 +169,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-[#db2777] mr-3 font-mono">02.</span> What is the difference between Indian and Pakistani lehengas?
               </h3>
               <p className="text-gray-700 leading-relaxed pl-8">
-                While they have similar shapes, the styles are quite different. Indian wedding outfits love bright, vibrant colors like deep reds and oranges, using heavy silk or velvet fabrics packed with highly reflective mirrors and sequins. On the other hand, a <strong>Pakistani bridal</strong> outfit focuses on soft, flowing elegance. They tend to use gorgeous pastel colors (like champagne, mint, rose, and cream) and intricate, delicate embroidery like pearls and metallic threadwork that look incredibly royal while keeping the dress light and easy to move in.
+                While they have similar shapes, the styles are quite different. Indian wedding outfits love bright, vibrant colors like deep reds and oranges, using heavy silk or velvet fabrics packed with highly reflective mirrors and sequins. On the other hand, a <strong>Pakistani bridal</strong> outfit focuses on soft, flowing elegance. They tend to use gorgeous trending, pastel colors (like champagne, sage, sky blue, and ivory) and intricate, delicate embroidery like pearls and metallic threadwork that look incredibly royal while keeping the dress light and easy to move in.
               </p>
             </div>
 
