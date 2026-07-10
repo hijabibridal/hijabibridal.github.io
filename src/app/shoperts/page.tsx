@@ -18,7 +18,7 @@ export default function PakistaniBridalPartnershipPage() {
         {/* Shoperts Logo */}
         <div className="max-w-[320px] mx-auto mb-8 bg-black p-4 rounded-xl shadow-md border border-gray-800">
           <img 
-            src="/images/shoperts-logo.webp" 
+            src="/images/shoperts/shoperts-logo.webp" 
             alt="Shoperts Upscale Shopping Logo" 
             className="w-full h-auto object-contain"
           />
@@ -105,7 +105,7 @@ export default function PakistaniBridalPartnershipPage() {
             <div className="flex flex-col">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-inner mb-4">
                 <img 
-                  src="/images/pakistani-lehenga-with-hijab.webp" 
+                  src="/images/shoperts/pakistani-lehenga-with-hijab.webp" 
                   alt="Pakistani Lehenga with Hijab" 
                   className="w-full h-full object-cover"
                 />
@@ -116,7 +116,7 @@ export default function PakistaniBridalPartnershipPage() {
             <div className="flex flex-col">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-inner mb-4">
                 <img 
-                  src="/images/muslim-gharara.webp" 
+                  src="/images/shoperts/muslim-gharara.webp" 
                   alt="Muslim Sharara Ensemble" 
                   className="w-full h-full object-cover"
                 />
@@ -218,7 +218,7 @@ export default function PakistaniBridalPartnershipPage() {
           </div>
           <div className="w-full overflow-hidden rounded-2xl border bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
             <img 
-              src="/images/shoperts_banner.jpg" 
+              src="/images/shoperts/shoperts_banner_2.jpg" 
               alt="Shoperts Consultation Custom Sourcing Banner Asset" 
               className="w-full h-auto object-cover display-block"
             />
@@ -243,7 +243,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-1" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/805 clicks last 30 days.jpg" alt="Total Clicks Dashboard" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/805 clicks last 30 days.jpg" alt="Total Clicks Dashboard" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -261,7 +261,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-2" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/where last 805 clicks are from.jpg" alt="Traffic Geography Breakdown" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/where last 805 clicks are from.jpg" alt="Traffic Geography Breakdown" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -279,7 +279,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-3" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/google ai box.jpg" alt="Google AI Module Extraction" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/google ai box.jpg" alt="Google AI Module Extraction" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -297,7 +297,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-4" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/first page of google.jpg" alt="Organic First Page Rankings" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/first page of google.jpg" alt="Organic First Page Rankings" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -315,7 +315,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-5" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/more blog page impressions.jpg" alt="Blog Architecture Impressions Map" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/more blog page impressions.jpg" alt="Blog Architecture Impressions Map" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -333,7 +333,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-6" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/pakistani bridal trends.jpg" alt="Bridal Fashion Trend Content Hub" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/pakistani bridal trends.jpg" alt="Bridal Fashion Trend Content Hub" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -351,7 +351,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-7" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/automation to rise quickly.jpg" alt="SEO Prompt Architecture" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/automation to rise quickly.jpg" alt="SEO Prompt Architecture" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -369,7 +369,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-8" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/category pages next most impressions.jpg" alt="Category Collection Analytics" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/category pages next most impressions.jpg" alt="Category Collection Analytics" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -387,7 +387,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-9" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/shoperts/images/product pages least impressions and clicks.jpg" alt="Product Target Deep Analysis" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/product pages least impressions and clicks.jpg" alt="Product Target Deep Analysis" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -396,15 +396,15 @@ export default function PakistaniBridalPartnershipPage() {
 
         {/* Modal Overlay Windows (Pure CSS via :target pseudo-selectors) */}
         {[
-          { id: "modal-1", src: "/shoperts/images/805 clicks last 30 days.jpg", title: "Total Monthly Organic Traffic Visibility" },
-          { id: "modal-2", src: "/shoperts/images/where last 805 clicks are from.jpg", title: "Global Core Market Demographics" },
-          { id: "modal-3", src: "/shoperts/images/google ai box.jpg", title: "Google AI Overview System Architecture" },
-          { id: "modal-4", src: "/shoperts/images/first page of google.jpg", title: "Organic First Page Positions" },
-          { id: "modal-5", src: "/shoperts/images/more blog page impressions.jpg", title: "Blog Content Impression Funnel Map" },
-          { id: "modal-6", src: "/shoperts/images/pakistani bridal trends.jpg", title: "Active Fashion Trend Index Node" },
-          { id: "modal-7", src: "/shoperts/images/automation to rise quickly.jpg", title: "Programmatic Search Prompt Setup" },
-          { id: "modal-8", src: "/shoperts/images/category pages next most impressions.jpg", title: "Category Routing Surfaces Analysis" },
-          { id: "modal-9", src: "/shoperts/images/product pages least impressions and clicks.jpg", title: "Transactional Buyer Intent Endpoints" }
+          { id: "modal-1", src: "/images/shoperts/805 clicks last 30 days.jpg", title: "Total Monthly Organic Traffic Visibility" },
+          { id: "modal-2", src: "/images/shoperts/where last 805 clicks are from.jpg", title: "Global Core Market Demographics" },
+          { id: "modal-3", src: "/images/shoperts/google ai box.jpg", title: "Google AI Overview System Architecture" },
+          { id: "modal-4", src: "/images/shoperts/first page of google.jpg", title: "Organic First Page Positions" },
+          { id: "modal-5", src: "/images/shoperts/more blog page impressions.jpg", title: "Blog Content Impression Funnel Map" },
+          { id: "modal-6", src: "/images/shoperts/pakistani bridal trends.jpg", title: "Active Fashion Trend Index Node" },
+          { id: "modal-7", src: "/images/shoperts/automation to rise quickly.jpg", title: "Programmatic Search Prompt Setup" },
+          { id: "modal-8", src: "/images/shoperts/category pages next most impressions.jpg", title: "Category Routing Surfaces Analysis" },
+          { id: "modal-9", src: "/images/shoperts/product pages least impressions and clicks.jpg", title: "Transactional Buyer Intent Endpoints" }
         ].map((modal) => (
           <div key={modal.id} id={modal.id} className="hidden target:flex fixed inset-0 z-50 bg-black/95 backdrop-blur-sm items-center justify-center p-4">
             <a href="#walkthrough-dashboard" className="absolute inset-0 cursor-zoom-out" title="Close overlay"></a>
