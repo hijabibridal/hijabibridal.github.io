@@ -14,13 +14,15 @@ export default function AmazonButton({ href, productName, productSlug }: Props) 
       rel="noopener noreferrer sponsored nofollow"
       className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6"
       onClick={() => {
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'click', {
+        if (typeof window !== 'undefined') {
+          // Push to dataLayer — works with GTM (how GA4 is loaded on this site)
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push({
+            event: 'amazon_click',
             link_url: href,
-            link_text: 'Purchase on Amazon',
-            outbound: true,
             product_name: productName,
             product_slug: productSlug,
+            outbound: true,
           });
         }
       }}
