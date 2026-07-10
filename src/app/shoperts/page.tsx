@@ -205,7 +205,7 @@ export default function PakistaniBridalPartnershipPage() {
           <span className="text-[#db2777] font-bold uppercase tracking-wider block mb-2">Our Traffic Partnership Blueprint</span>
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">How Hijabi Bridal Capitalizes Sourcing Traffic For You</h2>
           <p className="text-gray-600 max-w-3xl mx-auto font-medium text-base leading-relaxed">
-            We don't just showcase data—we build deliberate visual pipelines that capture high-intent buyers and deliver them straight to Shoperts[cite: 3]. Let's walk through how our system captures organic interest and funnels highly qualified clients directly to your tailored consultation checkout[cite: 3].
+            Let's walk through how our system captures organic interest and funnels highly qualified, high-intent clients directly to your tailored consultation checkout[cite: 3].
           </p>
         </div>
 
@@ -214,11 +214,11 @@ export default function PakistaniBridalPartnershipPage() {
           <div className="text-center md:text-left mb-6 px-2">
             <span className="text-xs bg-[#db2777] text-white font-mono uppercase tracking-widest px-3 py-1 rounded-full font-bold">Active Funnel Canvas</span>
             <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-1">Your Contextual Banner Integration</h3>
-            <p className="text-gray-600 text-sm font-medium">This banner is deliberately mapped inside our high-volume internal category tiers to catch buyers right when interest peaks[cite: 3].</p>
+            <p className="text-gray-600 text-sm font-medium">This banner will be mapped inside our high-volume internal category pages to catch buyers after scrolling and upon realizing they want something more than readymade garments and Indian accessories.</p>
           </div>
           <div className="w-full overflow-hidden rounded-2xl border bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
             <img 
-              src="/images/shoperts/shoperts_banner_2.jpg" 
+              src="/images/shoperts/shoperts_banner_2.png" 
               alt="Shoperts Consultation Custom Sourcing Banner Asset" 
               className="w-full h-auto object-cover display-block"
             />
@@ -235,7 +235,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 01 / 09 • Traffic Pipeline</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Our Current Active Volume</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our core optimization setup recorded <strong>805 direct search engine clicks</strong> over the trailing 28 days[cite: 3]. When combined with internal platform navigation, our system moves <strong>1,425 total monthly hits</strong> across the bridal ecosystem—providing an active audience asset ready to route straight to your checkout[cite: 3].
+                  Our core optimization setup recorded <strong>805 direct search engine clicks</strong> over the last 28 days. When combined with internal platform navigation, our system moves <strong>1,425 total monthly hits</strong> across the bridal ecosystem—providing an active audience asset ready to route straight to your bespoke tailoring page. At five months old, our Google rank shows the work of our proprietary search optimization tools.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-9" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">← Back</a>
@@ -253,7 +253,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 02 / 09 • Geotargeting</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Your High-Value Target Audience</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our users match your target buyer profile precisely. Placements are heavily concentrated in wealthy Western consumer sectors: the <strong>United States, India, United Kingdom, and Canada</strong>. We capture brides actively looking for premium international sourcing solutions.
+                  Our users match your target buyer profile of Muslim brides precisely - with the sole difference that we sell readymade garments and leave any customization of semi-stiched varieties to the buyer. Placements are heavily concentrated in wealthy Western consumer sectors: the <strong>United States, India, United Kingdom, and Canada</strong>.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-1" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -271,7 +271,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 03 / 09 • Intent Capture</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Dominating the New Google AI Landscape</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  The new search structure strongly favors rich, authoritative concepts inside its generative AI Overview containers[cite: 3]. When brides click your details through these spaces, they aren't just researching—they are showing immediate commercial intent to purchase[cite: 3].
+                  The new search structure strongly favors rich, authoritative concepts inside its generative AI Overview containers. When brides click your details through these spaces, they aren't just researching—they are showing immediate commercial intent to purchase. This is demonstrated by the amount of clicks we gather even given the obtacles in the new Google interface, including the AI box (1% commercial clicks) and standard blue links below reduced to half their original capture. Google shows our combined click through rate (CTR) at 1.8%.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-2" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -289,7 +289,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 04 / 09 • SERP Dominance</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Intercepting Ready Buyers First</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  By securing top page placements for tailored keyphrases, we catch customers right when they are ready to plan their wedding. We aim to convert this attention into consultations by sending these shoppers directly to you[cite: 3].
+                  By securing top page placements for tailored keyphrases and questions, we catch customers right when they are ready to plan their wedding. We aim to convert this attention into consultations by sending these shoppers who want something more directly to you. While conversion rates are around 2.5%, online conversion rates are less. We convert at a healthy 5.21%, according to Amazon, but that still leaves other visitors who could find what they want with Shoperts.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-3" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -307,7 +307,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 05 / 09 • Funnel Mechanics</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">High-Volume Content Engines</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Search architecture naturally drops the largest volume of high-intent traffic into our informative, deep blog spaces[cite: 3]. This content acts as our main system funnel to introduce and highlight the unique benefits of Shoperts' custom services[cite: 3].
+                  Search architecture naturally drops the largest volume of high-intent traffic into our informative, deep blog spaces. This content acts as our main system funnel to other pages. Visitors then browse the site according to their preferences, landing on category pages which use the Shoperts banner to highlight your custom services. 
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-4" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -325,7 +325,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 06 / 09 • Co-Branded Authority</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Featuring Your Brand Directly</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our dedicated Pakistani bridal trends section is already ranking at #8 on page 1[cite: 3]. We plan to rewrite this section to include expert quotes directly from you[cite: 3]. This builds immediate trust and lets us seamlessly guide readers to your affiliate tracking links[cite: 3].
+                  In addition to adding Shoperts to our menu, we'll also include your services in our dedicated Pakistani bridal trends blog article. This page is already ranking at #8 on Google. We plan to rewrite this section to include expert quotes directly from you and questions with higher traffic rates. This is designed to build immediate trust and lets us seamlessly guide readers to your affiliate tracking links.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-5" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -343,7 +343,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 07 / 09 • Added Value</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Grow Your Own Search Footprint</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  To grow your direct traffic, we highly recommend launching a blog on your main domain[cite: 3]. You can use our specialized automation setup for $100/month to generate optimized prompts, allowing you to build and expand your content catalog seamlessly[cite: 3].
+                  To grow your direct traffic, we'll use a joint system that works for us both. If you add a link to us from your site, it will help increase traffic. Also, we highly recommend your launching a blog on your main domain. For quick ranking, we charge a monthly fee for the use of our specialized automation setup after a one month free trial, during which I work with you to help you obtain the best results. Claude AI will take any of the prompts generated for your site and craft excellent articles for you. Your increased rank will help us on Google, and our increased rank helps you as well.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-6" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -361,7 +361,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 08 / 09 • On-Site Layout</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Strategic Banner Placement</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our collections get strong internal view numbers across the main catalog mapping[cite: 3]. Placing your banner right inside these targeted categories captures users while they are actively looking for custom styles[cite: 3].
+                  Our collections get strong internal view numbers across the catalog pages. Placing your banner right inside these targeted categories captures users while they are feeling the pinch of wanting their dream look while browsing readymade garments.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-7" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -379,7 +379,7 @@ export default function PakistaniBridalPartnershipPage() {
                 <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 09 / 09 • Win-Win Terms</span>
                 <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Our Performance Projections</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  While online standards fluctuate, our system operates at a highly focused <strong>5.21% intent rate</strong>[cite: 3]. Based on our 307 direct exit clicks, this translates to an estimated **2 to 16 verified, serious buyers sent to you each month**[cite: 3]. We will use custom tag parameters to track this clear value pipeline, requesting a simple **10% commission on finalized orders**[cite: 3].
+                  While online standards fluctuate, our system operates at a highly focused <strong>5.21% purchase rate on Amazon. Based on our 307 clicks that went to Amazon during the last 28 days out of 1425 overall, our estimated CTR for Amazon is over 20%. 4% conversion on 307 clicks is an expected 12 buys, but we achieved 16. And because, as you stated, the bridal market is heavily into customization, not readymade, you should convert at a higher rate monthly. We're happy to follow the numbers and make any adjustments to this plan towards our joint success. We will use custom tag parameters to track this value pipeline, requesting a **10% commission on finalized orders**.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-8" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -387,7 +387,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-9" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/shoperts/product pages least impressions and clicks.jpg" alt="Product Target Deep Analysis" className="w-full h-full object-contain p-2" />
+                <img src="/images/shoperts/site inviting.jpg" alt="Product Target Deep Analysis" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
