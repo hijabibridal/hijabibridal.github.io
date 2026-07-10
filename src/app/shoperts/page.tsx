@@ -205,7 +205,7 @@ export default function PakistaniBridalPartnershipPage() {
           <span className="text-[#db2777] font-bold uppercase tracking-wider block mb-2">Our Traffic Partnership Blueprint</span>
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">How Hijabi Bridal Capitalizes Sourcing Traffic For You</h2>
           <p className="text-gray-600 max-w-3xl mx-auto font-medium text-base leading-relaxed">
-            Let's walk through how our system captures organic interest and funnels highly qualified, high-intent clients directly to your tailored consultation checkout[cite: 3].
+            Let's walk through how our system captures organic interest and funnels highly qualified, high-intent clients directly to your tailored consultation checkout.
           </p>
         </div>
 
@@ -218,7 +218,7 @@ export default function PakistaniBridalPartnershipPage() {
           </div>
           <div className="w-full overflow-hidden rounded-2xl border bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
             <img 
-              src="/images/shoperts/shoperts_banner_2.png" 
+              src="/images/shoperts/shoperts_banner.png" 
               alt="Shoperts Consultation Custom Sourcing Banner Asset" 
               className="w-full h-auto object-cover display-block"
             />
