@@ -199,14 +199,30 @@ export default function PakistaniBridalPartnershipPage() {
         </div>
       </section>
 
-      {/* Traffic & Conversion Strategy Walkthrough */}
-      <section id="walkthrough-dashboard" className="max-w-5xl mx-auto py-20 px-4 border-t border-gray-200 scroll-smooth">
-        <div className="text-center mb-12">
-          <span className="text-[#db2777] font-bold uppercase tracking-wider block mb-2">Performance & Conversion Metrics</span>
-          <h2 className="text-3xl font-black uppercase tracking-tight mb-4">Traffic Channel Strategy Walkthrough</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto font-medium text-sm">
-            A step-by-step review of current organic search visibility, system automation pipelines, and localized commercial target intent. Click any screen asset to view full high-resolution details in an overlay panel.
+      {/* Strategic Value Proposition & Traffic Walkthrough */}
+      <section id="walkthrough-dashboard" className="max-w-5xl mx-auto py-24 px-4 border-t border-gray-200 scroll-smooth">
+        <div className="text-center mb-16">
+          <span className="text-[#db2777] font-bold uppercase tracking-wider block mb-2">Our Traffic Partnership Blueprint</span>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">How Hijabi Bridal Capitalizes Sourcing Traffic For You</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto font-medium text-base leading-relaxed">
+            We don't just showcase data—we build deliberate visual pipelines that capture high-intent buyers and deliver them straight to Shoperts[cite: 3]. Let's walk through how our system captures organic interest and funnels highly qualified clients directly to your tailored consultation checkout[cite: 3].
           </p>
+        </div>
+
+        {/* Live Banner Asset Implementation Showcase */}
+        <div className="mb-16 max-w-4xl mx-auto bg-gradient-to-br from-pink-50 to-white rounded-3xl p-6 border border-pink-100 shadow-sm">
+          <div className="text-center md:text-left mb-6 px-2">
+            <span className="text-xs bg-[#db2777] text-white font-mono uppercase tracking-widest px-3 py-1 rounded-full font-bold">Active Funnel Canvas</span>
+            <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-1">Your Contextual Banner Integration</h3>
+            <p className="text-gray-600 text-sm font-medium">This banner is deliberately mapped inside our high-volume internal category tiers to catch buyers right when interest peaks[cite: 3].</p>
+          </div>
+          <div className="w-full overflow-hidden rounded-2xl border bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img 
+              src="/images/shoperts_banner.jpg" 
+              alt="Shoperts Consultation Custom Sourcing Banner Asset" 
+              className="w-full h-auto object-cover display-block"
+            />
+          </div>
         </div>
 
         {/* Walkthrough Slider Wrapper */}
@@ -216,10 +232,10 @@ export default function PakistaniBridalPartnershipPage() {
             {/* Step 1 */}
             <div id="step-1" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 01 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Total Monthly Visibility</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 01 / 09 • Traffic Pipeline</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Our Current Active Volume</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our underlying SEO platform successfully tracked 805 total organic search engine clicks over the trailing 28-day verification period, establishing a clear baseline layer of steady organic consumer volume.
+                  Our core optimization setup recorded <strong>805 direct search engine clicks</strong> over the trailing 28 days[cite: 3]. When combined with internal platform navigation, our system moves <strong>1,425 total monthly hits</strong> across the bridal ecosystem—providing an active audience asset ready to route straight to your checkout[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-9" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">← Back</a>
@@ -227,17 +243,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-1" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/805 clicks last 30 days.jpg" alt="Total Clicks Dashboard" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/805 clicks last 30 days.jpg" alt="Total Clicks Dashboard" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 2 */}
             <div id="step-2" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 02 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Target Market Demographics</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 02 / 09 • Geotargeting</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Your High-Value Target Audience</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Geographic distributions are heavily clustered across prominent Western consumer blocks, led directly by verified search placements inside the United States, India, United Kingdom, and Canada.
+                  Our users match your target buyer profile precisely. Placements are heavily concentrated in wealthy Western consumer sectors: the <strong>United States, India, United Kingdom, and Canada</strong>. We capture brides actively looking for premium international sourcing solutions.
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-1" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -245,17 +261,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-2" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/where last 805 clicks are from.jpg" alt="Traffic Geography Breakdown" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/where last 805 clicks are from.jpg" alt="Traffic Geography Breakdown" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 3 */}
             <div id="step-3" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 03 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Google AI Overview Placement</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 03 / 09 • Intent Capture</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Dominating the New Google AI Landscape</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Modern search layers prioritize structured, highly original concepts for dynamic AI Overview boxes. Capturing links here routes consumers who display clear intent straight to our platform.
+                  The new search structure strongly favors rich, authoritative concepts inside its generative AI Overview containers[cite: 3]. When brides click your details through these spaces, they aren't just researching—they are showing immediate commercial intent to purchase[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-2" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -263,17 +279,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-3" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/google ai box.jpg" alt="Google AI Module Extraction" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/google ai box.jpg" alt="Google AI Module Extraction" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 4 */}
             <div id="step-4" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 04 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">First Page List Dominance</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 04 / 09 • SERP Dominance</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Intercepting Ready Buyers First</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Securing a presence on page 1 for core structural keyphrases intercepts active shoppers at the precise moment they seek tailored luxury packages or custom bridal designs.
+                  By securing top page placements for tailored keyphrases, we catch customers right when they are ready to plan their wedding. We aim to convert this attention into consultations by sending these shoppers directly to you[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-3" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -281,17 +297,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-4" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/first page of google.jpg" alt="Organic First Page Rankings" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/first page of google.jpg" alt="Organic First Page Rankings" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 5 */}
             <div id="step-5" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 05 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Blog Content Impressions</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 05 / 09 • Funnel Mechanics</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">High-Volume Content Engines</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Search architecture naturally routes high initial search visibility to long-form blog articles, capturing wide top-of-funnel queries effectively before passing them down.
+                  Search architecture naturally drops the largest volume of high-intent traffic into our informative, deep blog spaces[cite: 3]. This content acts as our main system funnel to introduce and highlight the unique benefits of Shoperts' custom services[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-4" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -299,17 +315,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-5" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/more blog page impressions.jpg" alt="Blog Architecture Impressions Map" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/more blog page impressions.jpg" alt="Blog Architecture Impressions Map" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 6 */}
             <div id="step-6" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 06 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Bridal Trend Capitalization</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 06 / 09 • Co-Branded Authority</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Featuring Your Brand Directly</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our specific Pakistani bridal fashion trends page sits stably on the upper pages of search queries, allowing us to seamlessly embed custom brand quotes to capture qualified, targeted users.
+                  Our dedicated Pakistani bridal trends section is already ranking at #8 on page 1[cite: 3]. We plan to rewrite this section to include expert quotes directly from you[cite: 3]. This builds immediate trust and lets us seamlessly guide readers to your affiliate tracking links[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-5" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -317,17 +333,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-6" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/pakistani bridal trends.jpg" alt="Bridal Fashion Trend Content Hub" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/pakistani bridal trends.jpg" alt="Bridal Fashion Trend Content Hub" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 7 */}
             <div id="step-7" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 07 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Programmatic Search Framework</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 07 / 09 • Added Value</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Grow Your Own Search Footprint</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Applying organized prompt files and strict technical semantic rules allows us to scale keyword footprints cleanly across several high-intent terms simultaneously.
+                  To grow your direct traffic, we highly recommend launching a blog on your main domain[cite: 3]. You can use our specialized automation setup for $100/month to generate optimized prompts, allowing you to build and expand your content catalog seamlessly[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-6" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -335,17 +351,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-7" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/automation to rise quickly.jpg" alt="SEO Prompt Architecture" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/automation to rise quickly.jpg" alt="SEO Prompt Architecture" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 8 */}
             <div id="step-8" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 08 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Category Page Internal Funnels</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 08 / 09 • On-Site Layout</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Strategic Banner Placement</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Main collections display high internal impression numbers on our live site mapping. This provides an optimal visual canvas to introduce conversion banners.
+                  Our collections get strong internal view numbers across the main catalog mapping[cite: 3]. Placing your banner right inside these targeted categories captures users while they are actively looking for custom styles[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-7" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -353,17 +369,17 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-8" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/category pages next most impressions.jpg" alt="Category Collection Analytics" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/category pages next most impressions.jpg" alt="Category Collection Analytics" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
             {/* Step 9 */}
             <div id="step-9" className="w-full flex-shrink-0 snap-start grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 09 / 09</span>
-                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">High-Value Bottom Intent</h3>
+                <span className="text-xs bg-pink-100 text-[#db2777] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">Step 09 / 09 • Win-Win Terms</span>
+                <h3 className="text-xl font-black uppercase tracking-tight mt-3 mb-2">Our Performance Projections</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Deep transactional product endpoints see fewer total views but collect highly focused click-through numbers from users who display immediate buying intent.
+                  While online standards fluctuate, our system operates at a highly focused <strong>5.21% intent rate</strong>[cite: 3]. Based on our 307 direct exit clicks, this translates to an estimated **2 to 16 verified, serious buyers sent to you each month**[cite: 3]. We will use custom tag parameters to track this clear value pipeline, requesting a simple **10% commission on finalized orders**[cite: 3].
                 </p>
                 <div className="flex gap-3">
                   <a href="#step-8" className="p-3 bg-white hover:bg-gray-100 rounded-full border shadow-sm text-xs font-bold transition-all">←</a>
@@ -371,7 +387,7 @@ export default function PakistaniBridalPartnershipPage() {
                 </div>
               </div>
               <a href="#modal-9" className="block aspect-[16/9] bg-white rounded-2xl border overflow-hidden shadow-sm hover:opacity-90 transition-opacity cursor-zoom-in">
-                <img src="/images/product pages least impressions and clicks.jpg" alt="Product Target Deep Analysis" className="w-full h-full object-contain p-2" />
+                <img src="/shoperts/images/product pages least impressions and clicks.jpg" alt="Product Target Deep Analysis" className="w-full h-full object-contain p-2" />
               </a>
             </div>
 
@@ -380,15 +396,15 @@ export default function PakistaniBridalPartnershipPage() {
 
         {/* Modal Overlay Windows (Pure CSS via :target pseudo-selectors) */}
         {[
-          { id: "modal-1", src: "/images/805 clicks last 30 days.jpg", title: "Total Monthly Organic Traffic Visibility" },
-          { id: "modal-2", src: "/images/where last 805 clicks are from.jpg", title: "Global Core Market Demographics" },
-          { id: "modal-3", src: "/images/google ai box.jpg", title: "Google AI Overview System Architecture" },
-          { id: "modal-4", src: "/images/first page of google.jpg", title: "Organic First Page Positions" },
-          { id: "modal-5", src: "/images/more blog page impressions.jpg", title: "Blog Content Impression Funnel Map" },
-          { id: "modal-6", src: "/images/pakistani bridal trends.jpg", title: "Active Fashion Trend Index Node" },
-          { id: "modal-7", src: "/images/automation to rise quickly.jpg", title: "Programmatic Search Prompt Setup" },
-          { id: "modal-8", src: "/images/category pages next most impressions.jpg", title: "Category Routing Surfaces Analysis" },
-          { id: "modal-9", src: "/images/product pages least impressions and clicks.jpg", title: "Transactional Buyer Intent Endpoints" }
+          { id: "modal-1", src: "/shoperts/images/805 clicks last 30 days.jpg", title: "Total Monthly Organic Traffic Visibility" },
+          { id: "modal-2", src: "/shoperts/images/where last 805 clicks are from.jpg", title: "Global Core Market Demographics" },
+          { id: "modal-3", src: "/shoperts/images/google ai box.jpg", title: "Google AI Overview System Architecture" },
+          { id: "modal-4", src: "/shoperts/images/first page of google.jpg", title: "Organic First Page Positions" },
+          { id: "modal-5", src: "/shoperts/images/more blog page impressions.jpg", title: "Blog Content Impression Funnel Map" },
+          { id: "modal-6", src: "/shoperts/images/pakistani bridal trends.jpg", title: "Active Fashion Trend Index Node" },
+          { id: "modal-7", src: "/shoperts/images/automation to rise quickly.jpg", title: "Programmatic Search Prompt Setup" },
+          { id: "modal-8", src: "/shoperts/images/category pages next most impressions.jpg", title: "Category Routing Surfaces Analysis" },
+          { id: "modal-9", src: "/shoperts/images/product pages least impressions and clicks.jpg", title: "Transactional Buyer Intent Endpoints" }
         ].map((modal) => (
           <div key={modal.id} id={modal.id} className="hidden target:flex fixed inset-0 z-50 bg-black/95 backdrop-blur-sm items-center justify-center p-4">
             <a href="#walkthrough-dashboard" className="absolute inset-0 cursor-zoom-out" title="Close overlay"></a>
