@@ -297,6 +297,48 @@ export default async function ProductPage({ params }: PageProps) {
                 })()
               )}
 
+              {/* MOBILE BLOG PLACEMENT */}
+              <div className="lg:hidden">
+                <BlogSection />
+              </div>
+            </div> {/* <-- FIXED: Closes Right Column flex-col */}
+          </div> {/* <-- FIXED: Closes Grid container */}
+
+          {relatedProducts.length > 0 && (
+            <div className="mt-16 border-t border-pink-100 pt-12">
+              <h3 className="text-black font-bold text-2xl uppercase tracking-wider mb-8">
+                More in this Color
+              </h3>
+              <div className="flex overflow-x-auto gap-6 pb-6 no-scrollbar">
+                {relatedProducts.map((rp) => (
+                  <Link 
+                    key={rp.slug} 
+                    href={`/shop/product/${rp.slug}`}
+                    className="flex-shrink-0 w-48 group"
+                  >
+                    <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-100 mb-4">
+                      <Image
+                        src={`/images/${rp.images[0].url}`}
+                        alt={rp.name}
+                        fill
+                        loading="lazy"
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <p className="text-sm font-bold text-gray-900 truncate group-hover:text-[#db2777]">
+                      {rp.name}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
           {relatedProducts.length > 0 && (
             <div className="mt-16 border-t border-pink-100 pt-12">
               <h3 className="text-black font-bold text-2xl uppercase tracking-wider mb-8">
