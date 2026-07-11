@@ -275,28 +275,28 @@ export default async function ProductPage({ params }: PageProps) {
               )}
 
               {product.FAQ_schema && (
-  		<div className="mt-12 border-t border-pink-100 pt-8">
-    		  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
-      		    Frequently Asked Questions
-    		  </h2>
-    		  <div className="space-y-6">
-      		    {/* Assuming product.FAQ_schema is the array of questions */}
-      		    {product.FAQ_schema.map((faq: any, index: number) => (
-        	      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
-          	        <h3 className="font-bold text-xl mb-2">{faq.name}</h3>
-          	        <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
-        	      </div>
-      		    ))}
-    		  </div>
-  		</div>
-	      )}
+                (() => {
+                  const faqs = typeof product.FAQ_schema === 'string' 
+                    ? JSON.parse(product.FAQ_schema) 
+                    : product.FAQ_schema;
 
-              {/* MOBILE BLOG PLACEMENT */}
-              <div className="lg:hidden">
-                <BlogSection />
-              </div>
-            </div>
-          </div>
+                  return Array.isArray(faqs) ? (
+                    <div className="mt-12 border-t border-pink-100 pt-8">
+                      <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
+                        Frequently Asked Questions
+                      </h2>
+                      <div className="space-y-6">
+                        {faqs.map((faq: any, index: number) => (
+                          <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
+                            <h3 className="font-bold text-xl mb-2">{faq.name}</h3>
+                            <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null;
+                })()
+              )}
 
           {relatedProducts.length > 0 && (
             <div className="mt-16 border-t border-pink-100 pt-12">
