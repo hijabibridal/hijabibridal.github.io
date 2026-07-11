@@ -130,7 +130,6 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-
       {/* ImageObject schema — all products */}
       <script
         type="application/ld+json"
