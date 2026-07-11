@@ -130,13 +130,6 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* FAQ schema — any product with FAQ_schema data */}
-      {finalFaqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
 
       {/* ImageObject schema — all products */}
       <script
