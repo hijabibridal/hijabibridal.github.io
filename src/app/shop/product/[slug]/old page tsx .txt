@@ -90,6 +90,26 @@ export default async function ProductPage({ params }: PageProps) {
     remainingDescription = paragraphs.slice(1).join('<br><br>');
   }
 
+  // FAQ parsing
+  let faqs = [];
+  if (product.FAQ_schema) {
+    try {
+      faqs = typeof product.FAQ_schema === 'string' 
+        ? JSON.parse(product.FAQ_schema) 
+        : product.FAQ_schema;
+    } catch (e) {
+      console.error("FAQ parse error:", e);
+    }
+  }
+
+  const finalFaqs = Array.isArray(faqs) ? faqs : [];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": finalFaqs
+  };
+
   // --- IMAGE SCHEMA ---
   // Tells Google explicitly which image is the primary/canonical product image.
   // This prevents Google from picking suggestedAddOns or relatedProducts images
@@ -281,22 +301,25 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               )}
 
-              {product.FAQ_schema && (
-  		<div className="mt-12 border-t border-pink-100 pt-8">
-    		  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
-      		    Frequently Asked Questions
-    		  </h2>
-    		  <div className="space-y-6">
-      		    {/* Assuming product.FAQ_schema is the array of questions */}
-      		    {product.FAQ_schema.map((faq: any, index: number) => (
-        	      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
-          	        <h3 className="font-bold text-xl mb-2">{faq.name}</h3>
-          	        <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
-        	      </div>
-      		    ))}
-    		  </div>
-  		</div>
-	      )}
+              {finalFaqs.length > 0 && (
+                <div className="mt-12 border-t border-pink-100 pt-8">
+                  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-6">
+                    {finalFaqs.map((faq: any, index: number) => (
+                      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
+                        <h3 className="font-bold text-xl mb-2">
+                          {faq.name}
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          {faq.acceptedAnswer.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* MOBILE BLOG PLACEMENT */}
               <div className="lg:hidden">
