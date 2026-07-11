@@ -90,6 +90,26 @@ export default async function ProductPage({ params }: PageProps) {
     remainingDescription = paragraphs.slice(1).join('<br><br>');
   }
 
+  // FAQ parsing
+  let faqs = [];
+  if (product.FAQ_schema) {
+    try {
+      faqs = typeof product.FAQ_schema === 'string' 
+        ? JSON.parse(product.FAQ_schema) 
+        : product.FAQ_schema;
+    } catch (e) {
+      console.error("FAQ parse error:", e);
+    }
+  }
+
+  const finalFaqs = Array.isArray(faqs) ? faqs : [];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": finalFaqs
+  };
+
   // --- IMAGE SCHEMA ---
   // Tells Google explicitly which image is the primary/canonical product image.
   // This prevents Google from picking suggestedAddOns or relatedProducts images
@@ -130,6 +150,14 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
+      {/* FAQ schema — any product with FAQ_schema data */}
+      {finalFaqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       {/* ImageObject schema — all products */}
       <script
         type="application/ld+json"
@@ -273,71 +301,32 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               )}
 
-              {product.FAQ_schema && (
-                (() => {
-                  const faqs = typeof product.FAQ_schema === 'string' 
-                    ? JSON.parse(product.FAQ_schema) 
-                    : product.FAQ_schema;
-
-                  return Array.isArray(faqs) ? (
-                    <div className="mt-12 border-t border-pink-100 pt-8">
-                      <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
-                        Frequently Asked Questions
-                      </h2>
-                      <div className="space-y-6">
-                        {faqs.map((faq: any, index: number) => (
-                          <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
-                            <h3 className="font-bold text-xl mb-2">{faq.name}</h3>
-                            <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
-                          </div>
-                        ))}
+              {finalFaqs.length > 0 && (
+                <div className="mt-12 border-t border-pink-100 pt-8">
+                  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-6">
+                    {finalFaqs.map((faq: any, index: number) => (
+                      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
+                        <h3 className="font-bold text-xl mb-2">
+                          {faq.name}
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          {faq.acceptedAnswer.text}
+                        </p>
                       </div>
-                    </div>
-                  ) : null;
-                })()
+                    ))}
+                  </div>
+                </div>
               )}
 
               {/* MOBILE BLOG PLACEMENT */}
               <div className="lg:hidden">
                 <BlogSection />
               </div>
-            </div> {/* <-- FIXED: Closes Right Column flex-col */}
-          </div> {/* <-- FIXED: Closes Grid container */}
-
-          {relatedProducts.length > 0 && (
-            <div className="mt-16 border-t border-pink-100 pt-12">
-              <h3 className="text-black font-bold text-2xl uppercase tracking-wider mb-8">
-                More in this Color
-              </h3>
-              <div className="flex overflow-x-auto gap-6 pb-6 no-scrollbar">
-                {relatedProducts.map((rp) => (
-                  <Link 
-                    key={rp.slug} 
-                    href={`/shop/product/${rp.slug}`}
-                    className="flex-shrink-0 w-48 group"
-                  >
-                    <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-100 mb-4">
-                      <Image
-                        src={`/images/${rp.images[0].url}`}
-                        alt={rp.name}
-                        fill
-                        loading="lazy"
-                        className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                    <p className="text-sm font-bold text-gray-900 truncate group-hover:text-[#db2777]">
-                      {rp.name}
-                    </p>
-                  </Link>
-                ))}
-              </div>
             </div>
-          )}
-        </div>
-      </div>
-    </>
-  );
-}
+          </div>
 
           {relatedProducts.length > 0 && (
             <div className="mt-16 border-t border-pink-100 pt-12">
