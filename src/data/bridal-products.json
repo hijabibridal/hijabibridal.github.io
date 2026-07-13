@@ -2125,6 +2125,70 @@
       ]
     },
     {
+      "name": "Jade Green Silk Bridal Dupatta",
+      "slug": "jade-green-silk-bridal-dupatta",
+      "description": "This dupatta features a stunning jade color silk fabric that beautifully complements a light pink hijabi lehenga or a blush pink Muslim wedding dress. The length and width of this opaque dupatta provide ample coverage, allowing it to elegantly drape over your outfit while enhancing your overall bridal look. With its intricate patterns and designs, this dupatta is perfect for various occasions, adding a touch of sophistication to your ensemble.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">How to Wear this Green Dupatta  </h2>This opaque silk dupatta gracefully covers your hair and can be adorned with flowers that peek out from the side. To ensure it stays in place, consider pinning the border to your hair, allowing you to showcase the dupatta's beauty without worry.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/green\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
+      "mainCategorySlugs": [
+        "bridal-dupatta",
+        "green"
+      ],
+      "suggestedAddOns": [
+        { 
+          "image": "/images/muslim-wedding-dress-white.webp", 
+          "targetSlug": "muslim-wedding-dress-white" 
+        },
+        { 
+          "image": "/images/nikkah-jewelry/light-green-bridal-nikkah-jewelry-set.webp", 
+          "targetSlug": "light-green-bridal-nikkah-jewelry-set" 
+        }
+      ],
+      "images": [
+        {
+          "url": "bridal-dupatta/green-silk-bridal-dupatta.webp",
+          "alt": "Jade Green Silk Bridal Dupatta from Amazon with intricate patterns and designs, perfect for diverse wearing styles.",
+          "amazonLink": "https://amzn.to/3B8HGjX",
+          "figcaption": "This Jade Green Silk Dupatta is a premier choice for bridal styling inspiration. The high-quality fabric and generous length and width allow for multiple wearing styles, from a traditional head covering to a modern shoulder drape. The intricate embroidery patterns and designs stand out vividly against silk, making it an essential piece for 2026 wedding wardrobes."
+        },
+        {
+          "url": "bridal-dupatta/green-silk-bridal-dupatta2.webp",
+          "alt": "Jade Green Silk Bridal Dupatta from Amazon with intricate patterns.",
+          "amazonLink": "https://amzn.to/3B8HGjX",
+          "figcaption": "This lightweight green silk dupatta makes it perfect for contrasting with heavy jewelry. Its rich pigment is designed to stand out beautifully against pastel-toned Muslim wedding dresses."
+        }
+      ],
+      "og_image": "bridal-dupatta/green-silk-bridal-dupatta.webp",
+      "title_tag": "Jade Green Silk Bridal Dupatta | Amazon Styling 2026",
+      "og_title": "Jade Green Silk Bridal Dupatta | Amazon Wedding Styling",
+      "og_type": "website",
+      "meta_description": "Shop the best Jade Green Silk Dupatta on Amazon. Opaque, luxurious fabric perfect for contrasting pink Muslim lehengas and modest bridal hair covering.",
+      "attributes": {
+        "category": "Bridal Dupatta",
+        "color": "Green",
+        "material": "Silk",
+        "style": "Elegant",
+        "condition": "New",
+        "availability": "InStock"
+      },
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "item": "https://hijabibridal.github.io/"
+        },
+        {
+          "name": "Shop",
+          "item": "https://hijabibridal.github.io/shop"
+        },
+        {
+          "name": "Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/category/bridal-dupatta"
+        },
+        {
+          "name": "Jade Green Silk Bridal Dupatta",
+          "item": "https://hijabibridal.github.io/shop/product/jade-green-silk-bridal-dupatta"
+        }
+      ]
+    },
+    {
       "name": "Sky Blue Dupatta",
       "slug": "sky-blue-bridal-net-dupatta",
       "description": "This sheer net dupatta features stunning gold embroidery. The thickness of the border makes it an ideal addition to a blue or contrasting Muslim lehenga or wedding dress. Use it as one of your double dupatta for a bridal look that sets you apart on your special day.<br /><br /><h2 class=\"text-[#db2777] text-2xl font-bold mt-8 mb-4\">Wearing Styles and Styling Inspiration for the Sky Blue Dupatta</h2>The thick gold border makes this an ideal dupatta to wear over your hijab, to the back. First set your jewelry over your hijab, then pin the dupatta so that it frames the jewelry and your face. Lovely! It is best worn to the back, but it can be accordion-wrapped over one shoulder to add the perfect touch of elegance to your ensemble. For a more dramatic effect, consider pairing it with the dupatta that came with your bridal outfit to enhance your overall appearance and create a stunning bridal outfit.<br /><br /><a href=\"https://hijabibridal.github.io/shop/category/blue\" class=\"text-[#db2777] font-bold hover:underline\">Shop this color collection</a><br /><a href=\"https://hijabibridal.github.io/shop/category/bridal-dupatta\" class=\"text-[#db2777] font-bold hover:underline\">View all Bridal Dupattas</a>",
