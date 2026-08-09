@@ -5,6 +5,10 @@
   --font-poppins: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-padding-top: 100px; /* set to your Header's real rendered height + ~15px buffer */
+}
+
 body {
   font-family: var(--font-poppins) !important;
 }
