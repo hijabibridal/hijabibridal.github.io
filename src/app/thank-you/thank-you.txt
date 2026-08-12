@@ -1,0 +1,4 @@
+Enter the URL that will be used to redirect your customers after a payment. This URL must meet the guidelines detailed below. 
+According to our User Agreement, you must explain to the buyer on the page displayed by the return URL that the payment has been made and the transaction completed.
+You must explain on the page displayed by the return URL that payment transaction details will be emailed to the buyer.
+Example: Thank you for your payment. Your transaction has been completed, and a receipt for your purchase has been emailed to you. Log into your PayPal account to view transaction details.

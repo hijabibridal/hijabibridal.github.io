@@ -2344,6 +2344,3 @@ git add .
 git commit -m "Your description here"
 git push origin main
 
-sorry i didn't see the google tage manager instructions. i have this setup now there, screenshot. however, it disconnected again and i got the same message as before in preview. i re-ran the amazon clicks only in teh command prompt . got same message    → No Amazon click data found.
-
-      Check: GA4 Admin → Data Streams → Enhanced Measurement → Outbound clicks ON
