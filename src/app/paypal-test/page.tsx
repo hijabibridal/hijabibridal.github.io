@@ -9,7 +9,7 @@ export default function PayPalTestPage() {
   useEffect(() => {
     const script = document.createElement('script')
     script.src =
-      'https://www.paypal.com/sdk/js?client-id=BAAGXFcABmGYsu3sSR7CBoopizFVTwzHVp8XzZwfs45JPPZ9CYmUBhktn-FGdS7fGuG2zN_fsii3jNcEg&components=hosted-buttons&disable-funding=venmo&currency=USD'
+      'https://www.paypal.com/sdk/js?client-id=BAAGXFcABmGYsu3sSR7CBoopizFVTwzHVp8XzZwfs45JPPZ9CYmUBhktn-FGdS7fGuG2zN_-fsii3jNcEg&components=hosted-buttons&disable-funding=venmo&currency=USD'
     script.async = true
 
     script.onload = () => {
