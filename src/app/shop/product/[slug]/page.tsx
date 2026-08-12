@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PatternSelector from '@/components/PatternSelector';
 import AmazonButton from '@/components/AmazonButton';
+import PayPalButton from '@/components/PayPalButton';
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -243,6 +244,10 @@ export default async function ProductPage({ params }: PageProps) {
   		  productSlug={product.slug}
  		 />
 	       )}
+
+              {product.slug === 'hnb1001' && (
+                <PayPalButton hostedButtonId="YJR7FGY6LZBGU" />
+              )}
 
               <figure className="mb-8">
                 <figcaption className="text-gray-800 text-lg leading-relaxed border-l-4 border-pink-200 pl-6">
