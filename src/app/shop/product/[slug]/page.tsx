@@ -7,9 +7,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PatternSelector from '@/components/PatternSelector';
 import AmazonButton from '@/components/AmazonButton';
-import PayPalButton from '@/components/PayPalButton';
+import AddToCartButton from '@/components/AddToCartButton';
 
 type PageProps = { params: Promise<{ slug: string }> };
+
+// Products that show the PayPal button instead of the Amazon button.
+// Add your real product slugs here once you're done testing.
+const PAYPAL_SLUGS = ['hnb1001'];
 
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
@@ -237,16 +241,20 @@ export default async function ProductPage({ params }: PageProps) {
                 {product.name}
               </h1>
 
-              {product.images[0]?.amazonLink && (
-  		<AmazonButton
-   		  href={product.images[0].amazonLink}
-    		  productName={product.name}
-  		  productSlug={product.slug}
- 		 />
-	       )}
-
-              {product.slug === 'hnb1001' && (
-                <PayPalButton hostedButtonId="YJR7FGY6LZBGU" />
+              {PAYPAL_SLUGS.includes(product.slug) ? (
+                <AddToCartButton
+                  slug={product.slug}
+                  name={product.name}
+                  price={parseFloat((product as any).price) || 30.0}
+                />
+              ) : (
+                product.images[0]?.amazonLink && (
+                  <AmazonButton
+                    href={product.images[0].amazonLink}
+                    productName={product.name}
+                    productSlug={product.slug}
+                  />
+                )
               )}
 
               <figure className="mb-8">

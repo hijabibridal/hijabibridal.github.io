@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 
 import Header from '../components/Layout/Header' 
 import Footer from '../components/Layout/Footer'
+import { CartProvider } from '@/context/CartContext'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -143,10 +144,12 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-        
-        <Header />
-        <main>{children}</main>
-        <Footer />
+
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   )
