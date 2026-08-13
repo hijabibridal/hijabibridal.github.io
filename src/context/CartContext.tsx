@@ -6,6 +6,10 @@ export type CartItem = {
   slug: string
   name: string
   price: number // per-unit price in USD
+  color?: string
+  sku?: string
+  image?: string
+  url?: string
   quantity: number
 }
 
@@ -45,12 +49,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [items, hydrated])
 
+  // Items are matched by slug + color, so the same product in two different
+  // colors shows as two separate cart lines instead of merging.
   const addItem = (item: Omit<CartItem, 'quantity'>) => {
     setItems((prev) => {
-      const existing = prev.find((i) => i.slug === item.slug)
+      const existing = prev.find((i) => i.slug === item.slug && i.color === item.color)
       if (existing) {
         return prev.map((i) =>
-          i.slug === item.slug ? { ...i, quantity: i.quantity + 1 } : i
+          i.slug === item.slug && i.color === item.color
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
         )
       }
       return [...prev, { ...item, quantity: 1 }]
