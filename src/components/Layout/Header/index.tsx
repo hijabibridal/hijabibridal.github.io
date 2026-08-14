@@ -126,11 +126,6 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-
-              {/* PROMO BANNER */}
-              <div className="mt-8 pt-6 border-t border-pink-50">
-                <PromoBanner />
-              </div>
             </div>
           </div>
 
@@ -139,6 +134,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
+          <PromoBanner compact />
           <div className="w-64">
             <SearchBar />
           </div>
@@ -151,9 +147,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Search Bar — always visible below logo row */}
-      <div className="md:hidden px-4 pb-3">
-        <SearchBar />
+      {/* Mobile Search Bar + Promo Banner — always visible below logo row */}
+      <div className="md:hidden px-4 pb-3 flex items-center gap-3">
+        <div className="flex-1">
+          <SearchBar />
+        </div>
+        <PromoBanner compact />
       </div>
 
       {/* Mobile Menu */}
@@ -186,11 +185,6 @@ export default function Header() {
                   </Link>
                 ))}
               </div>
-           </div>
-
-           {/* PROMO BANNER — mobile */}
-           <div className="border-t pt-4" onClick={() => setIsMenuOpen(false)}>
-             <PromoBanner compact />
            </div>
 
            <div className="space-y-4 border-t pt-4">
