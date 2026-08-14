@@ -98,8 +98,11 @@ export default function ThankYouPage() {
       const emailjs = (window as any).emailjs
       await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         to_email: FEEDBACK_RECIPIENT,
+        name: order?.shippingName || 'Not provided',
+        email: order?.email || 'Not provided',
         message: feedback,
         order_summary: orderSummaryText,
+      })
       })
       setSendStatus('sent')
       setFeedback('')
