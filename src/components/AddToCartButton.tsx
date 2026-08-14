@@ -1,19 +1,14 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
 
 type AddToCartButtonProps = {
-  // The current product page's slug — determines which color this
-  // specific button adds. No dropdown here since each product page is
-  // already one specific color; pick a different color from /cart instead.
   initialSlug: string
 }
 
 export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
-  const { addItem } = useCart()
-  const router = useRouter()
+  const { addItem, openDrawer } = useCart()
 
   const variant =
     HALAL_NAILS_VARIANTS.find((v) => v.slug === initialSlug) || HALAL_NAILS_VARIANTS[0]
@@ -28,7 +23,7 @@ export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
       image: variant.image,
       url: variant.url,
     })
-    router.push('/cart')
+    openDrawer()
   }
 
   return (

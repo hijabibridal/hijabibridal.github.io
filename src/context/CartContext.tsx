@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 export type CartItem = {
   slug: string
   name: string
-  price: number // per-unit price in USD
+  price: number
   color?: string
   sku?: string
   image?: string
@@ -21,6 +21,10 @@ type CartContextType = {
   clearCart: () => void
   itemCount: number
   subtotal: number
+  isDrawerOpen: boolean
+  openDrawer: () => void
+  closeDrawer: () => void
+  toggleDrawer: () => void
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
@@ -29,6 +33,7 @@ const STORAGE_KEY = 'hijabi-bridal-cart'
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
   const [hydrated, setHydrated] = useState(false)
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   useEffect(() => {
     try {
@@ -49,8 +54,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [items, hydrated])
 
-  // Items are matched by slug + color, so the same product in two different
-  // colors shows as two separate cart lines instead of merging.
   const addItem = (item: Omit<CartItem, 'quantity'>) => {
     setItems((prev) => {
       const existing = prev.find((i) => i.slug === item.slug && i.color === item.color)
@@ -82,9 +85,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const itemCount = items.reduce((sum, i) => sum + i.quantity, 0)
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0)
 
+  const openDrawer = () => setIsDrawerOpen(true)
+  const closeDrawer = () => setIsDrawerOpen(false)
+  const toggleDrawer = () => setIsDrawerOpen((o) => !o)
+
   return (
     <CartContext.Provider
-      value={{ items, addItem, removeItem, updateQuantity, clearCart, itemCount, subtotal }}
+      value={{
+        items, addItem, removeItem, updateQuantity, clearCart,
+        itemCount, subtotal, isDrawerOpen, openDrawer, closeDrawer, toggleDrawer,
+      }}
     >
       {children}
     </CartContext.Provider>
