@@ -114,11 +114,11 @@ export default function ThankYouPage() {
       {/* Required PayPal confirmation language */}
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
-          Thank You For Your Payment
+          We're So Excited! Thank you!
         </h1>
         <p className="text-lg text-gray-800">
           Your transaction has been completed, and a receipt for your purchase has
-          been emailed to you.
+          been emailed to you. You'll receive another email once your order ships.
         </p>
       </div>
 
@@ -145,8 +145,7 @@ export default function ThankYouPage() {
                   <p className="text-gray-700 mt-2 leading-relaxed">
                     Your purchase includes {quantityWord(item.quantity)} 120 pack of
                     Halal Nails in your color choice. Each pack contains 5 different
-                    colors. A 10 sheet pack of glue tabs (240 count) is also included.
-                    Free shipping in the continental United States.
+                    colors. {quantityWord(item.quantity)} 10 sheet pack of glue tabs (240 count) is also included.
                   </p>
                 </div>
               ))}
@@ -169,12 +168,11 @@ export default function ThankYouPage() {
           <div className="mt-12 bg-pink-50/40 rounded-2xl p-6">
             <h3 className="font-bold text-lg mb-3">
               Questions? Or are you just excited about your order? We're hyped too!
-              Tell us all the details!
             </h3>
             <textarea
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}
-              placeholder="Tell us what you're most excited to wear these with..."
+              placeholder="Tell us the details..."
               rows={4}
               className="w-full rounded-lg border border-pink-200 p-3 mb-3"
             />

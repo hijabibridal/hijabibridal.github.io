@@ -36,7 +36,7 @@ function PromoBanner({ compact = false }: { compact?: boolean }) {
         <Image src={PROMO_IMAGE} alt="Halal Nails" fill className="object-cover" />
       </div>
       <span className="font-black text-pink-600 uppercase tracking-tight group-hover:underline">
-        Halal Nails here!
+        Halal Nails here
       </span>
     </Link>
   );
