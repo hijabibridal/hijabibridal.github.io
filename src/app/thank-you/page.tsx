@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react'
 // 1. EMAILJS_TEMPLATE_ID — from EmailJS dashboard → Email Templates
 // 2. EMAILJS_PUBLIC_KEY  — from EmailJS dashboard → Account → General
 const EMAILJS_SERVICE_ID = 'service_g0iivoj'
-const EMAILJS_TEMPLATE_ID = 'template_1ra81pg' // <-- fill in
-const EMAILJS_PUBLIC_KEY = 'F6VfvNJX20W8urASX' // <-- fill in
+const EMAILJS_TEMPLATE_ID = 'template_1ra81pg'
+const EMAILJS_PUBLIC_KEY = 'F6VfvNJX20W8urASX'
 const FEEDBACK_RECIPIENT = 'nooradrip@gmail.com'
 
 type OrderItem = {
@@ -114,12 +114,18 @@ export default function ThankYouPage() {
       {/* Required PayPal confirmation language */}
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
-          We're So Excited! Thank you!
+          Thank You For Your Payment
         </h1>
         <p className="text-lg text-gray-800">
           Your transaction has been completed, and a receipt for your purchase has
-          been emailed to you. You'll receive another email once your order ships.
+          been emailed to you.
         </p>
+        <a
+          href="https://hijabibridal.github.io/shop/category/halal-nails"
+          className="inline-block mt-6 bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
+        >
+          Continue Shopping Halal Nails
+        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -145,7 +151,8 @@ export default function ThankYouPage() {
                   <p className="text-gray-700 mt-2 leading-relaxed">
                     Your purchase includes {quantityWord(item.quantity)} 120 pack of
                     Halal Nails in your color choice. Each pack contains 5 different
-                    colors. {quantityWord(item.quantity)} 10 sheet pack of glue tabs (240 count) is also included.
+                    colors. A 10 sheet pack of glue tabs (240 count) is also included.
+                    Free shipping in the continental United States.
                   </p>
                 </div>
               ))}
@@ -168,11 +175,12 @@ export default function ThankYouPage() {
           <div className="mt-12 bg-pink-50/40 rounded-2xl p-6">
             <h3 className="font-bold text-lg mb-3">
               Questions? Or are you just excited about your order? We're hyped too!
+              Tell us all the details!
             </h3>
             <textarea
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}
-              placeholder="Tell us the details..."
+              placeholder="Tell us what you're most excited to wear these with..."
               rows={4}
               className="w-full rounded-lg border border-pink-200 p-3 mb-3"
             />

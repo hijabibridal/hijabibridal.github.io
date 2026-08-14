@@ -4,13 +4,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
+import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
 
 export default function CartDrawer() {
   const {
-    items, removeItem, updateQuantity, subtotal, itemCount,
+    items, addItem, removeItem, updateQuantity, subtotal, itemCount,
     isDrawerOpen, closeDrawer,
   } = useCart()
   const router = useRouter()
+
+  const cartSlugs = new Set(items.map((i) => i.slug))
+  const otherVariants = HALAL_NAILS_VARIANTS.filter((v) => !cartSlugs.has(v.slug))
 
   const handleCheckout = () => {
     closeDrawer()
@@ -79,6 +83,42 @@ export default function CartDrawer() {
                   <p className="text-sm font-bold">${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
               ))}
+            </div>
+          )}
+
+          {otherVariants.length > 0 && (
+            <div className="mt-6 pt-6 border-t border-pink-50">
+              <h3 className="text-sm font-bold text-gray-800 mb-1">
+                Choose Your Color Pack. Tabs Included.
+              </h3>
+              <p className="text-xs text-gray-500 mb-3">Add another color to your order.</p>
+              <div className="space-y-3">
+                {otherVariants.map((v) => (
+                  <div key={v.sku} className="flex items-center gap-3">
+                    <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                      <Image src={v.image} alt={v.color} fill className="object-cover" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-bold">{v.color}</p>
+                      <p className="text-[11px] text-gray-500">
+                        {v.stock > 0 ? `${v.stock} in stock` : 'Out of Stock'}
+                      </p>
+                    </div>
+                    <button
+                      disabled={v.stock <= 0}
+                      onClick={() =>
+                        addItem({
+                          slug: v.slug, name: v.name, price: BUNDLE_PRICE,
+                          color: v.color, sku: v.sku, image: v.image, url: v.url,
+                        })
+                      }
+                      className="bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-1.5 px-4 rounded-full text-[11px] uppercase tracking-wider transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      Add
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
