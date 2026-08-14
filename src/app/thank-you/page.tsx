@@ -2,10 +2,6 @@
 
 import { useEffect, useState } from 'react'
 
-// --- EmailJS config ---
-// Service ID is set from what you gave me. You still need to fill in:
-// 1. EMAILJS_TEMPLATE_ID — from EmailJS dashboard → Email Templates
-// 2. EMAILJS_PUBLIC_KEY  — from EmailJS dashboard → Account → General
 const EMAILJS_SERVICE_ID = 'service_g0iivoj'
 const EMAILJS_TEMPLATE_ID = 'template_1ra81pg'
 const EMAILJS_PUBLIC_KEY = 'F6VfvNJX20W8urASX'
@@ -31,6 +27,7 @@ type OrderSummary = {
     country_code?: string
   } | null
   shippingName: string | null
+  email?: string
   capturedAt: string
 }
 
@@ -65,7 +62,6 @@ export default function ThankYouPage() {
       console.error('Failed to read order summary:', err)
     }
 
-    // Load EmailJS SDK once, so the feedback box can send without a page reload.
     const script = document.createElement('script')
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js'
     script.async = true
@@ -103,7 +99,6 @@ export default function ThankYouPage() {
         message: feedback,
         order_summary: orderSummaryText,
       })
-      })
       setSendStatus('sent')
       setFeedback('')
     } catch (err) {
@@ -114,7 +109,8 @@ export default function ThankYouPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* Required PayPal confirmation language */}
+      {/* Required PayPal confirmation language is in the paragraph below —
+          the heading itself is free-form branding copy. */}
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
           We're so excited! Thanks!
@@ -154,7 +150,8 @@ export default function ThankYouPage() {
                   <p className="text-gray-700 mt-2 leading-relaxed">
                     Your purchase includes {quantityWord(item.quantity)} 120 pack of
                     Halal Nails in your color choice. Each pack contains 5 different
-                    colors. {quantityWord(item.quantity)} 10 sheet pack of glue tabs (240 count) is also included.
+                    colors. {quantityWord(item.quantity)} 10 sheet pack of glue tabs
+                    (240 count) is also included.
                   </p>
                 </div>
               ))}
