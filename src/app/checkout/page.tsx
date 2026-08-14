@@ -44,7 +44,7 @@ export default function CheckoutPage() {
 
     const script = document.createElement('script')
     script.src =
-      'https://www.paypal.com/sdk/js?client-id=BAAYoVVna5Xc7jZjLHp3aU44-gGQEsR5J4suS_7EPMjdwN9gMq5WuLGuOtqIQ3V1B8tonRiznu5DcYAeOQ&components=buttons&disable-funding=credit&currency=USD'
+      'https://www.paypal.com/sdk/js?client-id=AamFfLtt8xCMkZ8zqTHX_YyB5krZwLGqcc_cXGzJ6K7vvkrV3Pf5MycAMDhcPjYQ9-69XsyQlNly1Boe&components=buttons&disable-funding=credit&currency=USD'
     script.async = true
 
     script.onload = () => {
