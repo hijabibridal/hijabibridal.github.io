@@ -103,11 +103,15 @@ export default function CartDrawer() {
               <div className="space-y-3">
                 {otherVariants.map((v) => (
                   <div key={v.sku} className="flex items-center gap-3">
-                    <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100 shrink-0">
-                      <Image src={v.image} alt={v.color} fill className="object-cover" />
-                    </div>
+                    <Link href={v.url} className="shrink-0">
+                      <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100">
+                        <Image src={v.image} alt={v.color} fill className="object-cover" />
+                      </div>
+                    </Link>
                     <div className="flex-1">
-                      <p className="text-xs font-bold">{v.color}</p>
+                      <Link href={v.url} className="text-xs font-bold hover:text-[#db2777]">
+                        {v.color}
+                      </Link>
                       <p className="text-[11px] text-gray-500">
                         {v.stock > 0 ? `${v.stock} in stock` : 'Out of Stock'}
                       </p>
