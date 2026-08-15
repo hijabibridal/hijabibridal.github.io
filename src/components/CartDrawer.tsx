@@ -56,12 +56,20 @@ export default function CartDrawer() {
               {items.map((item) => (
                 <div key={item.slug + (item.color || '')} className="flex items-center gap-4 border-b border-pink-50 pb-4">
                   {item.image && (
-                    <div className="relative w-14 h-14 rounded-lg overflow-hidden bg-gray-100 shrink-0">
-                      <Image src={item.image} alt={item.color || item.name} fill className="object-cover" />
-                    </div>
+                    <Link href={item.url || '#'} className="shrink-0">
+                      <div className="relative w-14 h-14 rounded-lg overflow-hidden bg-gray-100">
+                        <Image src={item.image} alt={item.color || item.name} fill className="object-cover" />
+                      </div>
+                    </Link>
                   )}
                   <div className="flex-1">
-                    <p className="font-bold text-sm">{item.name}</p>
+                    {item.url ? (
+                      <Link href={item.url} className="font-bold text-sm hover:text-[#db2777]">
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <p className="font-bold text-sm">{item.name}</p>
+                    )}
                     {item.color && <p className="text-xs text-gray-500">Color: {item.color}</p>}
                     <div className="flex items-center gap-2 mt-1">
                       <input
