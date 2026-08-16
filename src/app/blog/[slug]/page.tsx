@@ -57,13 +57,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const parts = article.htmlBody.split('<h2>');
   const introPart = parts[0];
 
-  // Extract h2 headings for TOC — strip any HTML tags inside heading text
-  const h2Headings = parts.slice(1).map((part: string) => {
-    const closeTag = part.indexOf('</h2>');
-    const raw = closeTag !== -1 ? part.slice(0, closeTag) : part.slice(0, 80);
-    return raw.replace(/<[^>]+>/g, '').trim();
-  });
-
   // Slugify for anchor IDs
   const toAnchor = (text: string) =>
     text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
