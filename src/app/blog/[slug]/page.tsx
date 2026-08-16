@@ -54,8 +54,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!article) notFound();
 
   // 3. CONTENT SPLITTING
-  const parts = article.htmlBody.split('<h2>');
+  // Split on the same pattern extractH2Headings uses to find them, so parts
+  // and headings always line up even if an <h2> tag carries attributes.
+  const parts = article.htmlBody.split(/<h2[^>]*>/i);
   const introPart = parts[0];
+  const h2Headings = extractH2Headings(article.htmlBody);
 
   // Slugify for anchor IDs
   const toAnchor = (text: string) =>
@@ -101,7 +104,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": JSON.parse(article.FAQ_schema),
+        "mainEntity": typeof article.FAQ_schema === 'string'
+          ? JSON.parse(article.FAQ_schema)
+          : article.FAQ_schema,
       }
     : null;
 
@@ -141,9 +146,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const matchKeywords = ["dress", "lehenga", "green", "nails", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
   const currentTitleLower = article.pageTitle.toLowerCase();
   const activeKeywords = matchKeywords.filter(word => currentTitleLower.includes(word));
-  
-  const otherBlogsPool = typedBlogData.articles.filter((a: any) => a.slug !== article.slug);
-  
+
+  const otherBlogsPool = (typedBlogData?.articles || []).filter((a: any) => a.slug !== article.slug);
+
   const matchedBlogs = otherBlogsPool.filter((a: any) => {
     const otherTitleLower = a.pageTitle.toLowerCase();
     return activeKeywords.some(word => otherTitleLower.includes(word));
@@ -231,28 +236,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Image src={article.featuredImageUrl} alt={article.featuredImageAlt} fill className="object-contain p-4" unoptimized />
           )}
         </div>
-      )}
-
-      {/* ── Table of Contents (blog) ── */}
-      {h2Headings.length > 0 && (
-        <nav className="mb-10 border border-pink-100 rounded-2xl px-6 py-5 bg-pink-50/40">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-pink-400 font-bold mb-3">
-            Click to Read
-          </p>
-          <ol className="space-y-1.5 list-none">
-            {h2Headings.map((heading, i) => (
-              <li key={i}>
-                <a
-                  href={`#${toAnchor(heading)}`}
-                  className="text-sm font-medium text-gray-700 hover:text-pink-600 transition-colors flex items-start gap-2"
-                >
-                  <span className="text-pink-300 font-black shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                  <span>{heading}</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
       )}
 
       <div className="prose prose-pink max-w-none text-lg text-black
