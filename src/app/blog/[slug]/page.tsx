@@ -233,6 +233,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
+      {/* ── Table of Contents (blog) ── */}
+      {h2Headings.length > 0 && (
+        <nav className="mb-10 border border-pink-100 rounded-2xl px-6 py-5 bg-pink-50/40">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-pink-400 font-bold mb-3">
+            Click to Read
+          </p>
+          <ol className="space-y-1.5 list-none">
+            {h2Headings.map((heading, i) => (
+              <li key={i}>
+                <a
+                  href={`#${toAnchor(heading)}`}
+                  className="text-sm font-medium text-gray-700 hover:text-pink-600 transition-colors flex items-start gap-2"
+                >
+                  <span className="text-pink-300 font-black shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{heading}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
       <div className="prose prose-pink max-w-none text-lg text-black
                    [&_h2]:!text-pink-600 [&_h2]:!font-bold [&_h2]:text-3xl [&_h2]:mt-12 [&_h2]:mb-6
                    [&_h3]:!text-pink-500 [&_h3]:!font-normal [&_h3]:!not-italic [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3">
