@@ -135,6 +135,15 @@ export default function CheckoutPage() {
               const order = await actions.order.capture()
               console.log('Order captured:', order)
 
+              // Save the RAW response no matter what happens next — this
+              // guarantees we can see exactly what PayPal actually returned,
+              // without needing DevTools at all.
+              try {
+                localStorage.setItem('hijabi-bridal-debug-capture', JSON.stringify(order, null, 2))
+              } catch (err) {
+                console.error('Failed to store debug capture:', err)
+              }
+
               const captureStatus =
                 order?.purchase_units?.[0]?.payments?.captures?.[0]?.status
               const isCompleted = order?.status === 'COMPLETED' && captureStatus === 'COMPLETED'

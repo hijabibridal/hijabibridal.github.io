@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from 'react'
 
+// --- EmailJS config ---
+// Service ID is set from what you gave me. You still need to fill in:
+// 1. EMAILJS_TEMPLATE_ID — from EmailJS dashboard → Email Templates
+// 2. EMAILJS_PUBLIC_KEY  — from EmailJS dashboard → Account → General
 const EMAILJS_SERVICE_ID = 'service_g0iivoj'
 const EMAILJS_TEMPLATE_ID = 'template_1ra81pg'
 const EMAILJS_PUBLIC_KEY = 'F6VfvNJX20W8urASX'
@@ -51,6 +55,7 @@ function formatAddress(addr: OrderSummary['shippingAddress']) {
 
 export default function ThankYouPage() {
   const [order, setOrder] = useState<OrderSummary | null>(null)
+  const [debugCapture, setDebugCapture] = useState<string | null>(null)
   const [feedback, setFeedback] = useState('')
   const [sendStatus, setSendStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
@@ -62,6 +67,14 @@ export default function ThankYouPage() {
       console.error('Failed to read order summary:', err)
     }
 
+    try {
+      const rawCapture = localStorage.getItem('hijabi-bridal-debug-capture')
+      if (rawCapture) setDebugCapture(rawCapture)
+    } catch (err) {
+      console.error('Failed to read debug capture:', err)
+    }
+
+    // Load EmailJS SDK once, so the feedback box can send without a page reload.
     const script = document.createElement('script')
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js'
     script.async = true
@@ -109,11 +122,10 @@ export default function ThankYouPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* Required PayPal confirmation language is in the paragraph below —
-          the heading itself is free-form branding copy. */}
+      {/* Required PayPal confirmation language */}
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
-          We're so excited! Thanks!
+          Thank You For Your Payment
         </h1>
         <p className="text-lg text-gray-800">
           Your transaction has been completed, and a receipt for your purchase has
@@ -150,8 +162,8 @@ export default function ThankYouPage() {
                   <p className="text-gray-700 mt-2 leading-relaxed">
                     Your purchase includes {quantityWord(item.quantity)} 120 pack of
                     Halal Nails in your color choice. Each pack contains 5 different
-                    colors. {quantityWord(item.quantity)} 10 sheet pack of glue tabs
-                    (240 count) is also included.
+                    colors. A 10 sheet pack of glue tabs (240 count) is also included.
+                    Free shipping in the continental United States.
                   </p>
                 </div>
               ))}
@@ -170,15 +182,24 @@ export default function ThankYouPage() {
             </div>
           )}
 
+          {/* TEMPORARY DEBUG PANEL — remove once payment issue is resolved */}
+          {debugCapture && (
+            <div className="mt-8 bg-gray-100 rounded-2xl p-4">
+              <p className="font-bold text-sm mb-2">Debug: Raw PayPal Capture Response</p>
+              <pre className="text-xs overflow-x-auto whitespace-pre-wrap break-all">{debugCapture}</pre>
+            </div>
+          )}
+
           {/* Feedback box */}
           <div className="mt-12 bg-pink-50/40 rounded-2xl p-6">
             <h3 className="font-bold text-lg mb-3">
               Questions? Or are you just excited about your order? We're hyped too!
+              Tell us all the details!
             </h3>
             <textarea
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}
-              placeholder="Tell us all the details!..."
+              placeholder="Tell us what you're most excited to wear these with..."
               rows={4}
               className="w-full rounded-lg border border-pink-200 p-3 mb-3"
             />
