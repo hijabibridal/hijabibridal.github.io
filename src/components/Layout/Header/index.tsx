@@ -11,7 +11,7 @@ import CartDrawer from '@/components/CartDrawer';
 // ASSUMPTION FLAGGED: path follows the same /images/halal-nails/attachments/
 // pattern as your other product images — double-check this matches your
 // actual /public/images folder.
-const PROMO_IMAGE = '/images/halal-nails/attachments/berries-halal-nails-five.png';
+const PROMO_IMAGE = '/images/halal-nails/attachments/berries-halal-nails-five.webp';
 const PROMO_LINK = 'https://hijabibridal.github.io/shop/category/halal-nails';
 
 function CartIcon() {
