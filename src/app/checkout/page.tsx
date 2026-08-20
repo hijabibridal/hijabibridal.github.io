@@ -134,6 +134,24 @@ export default function CheckoutPage() {
             onApprove: async (_data: any, actions: any) => {
               const order = await actions.order.capture()
               console.log('Order captured:', order)
+
+              const captureStatus =
+                order?.purchase_units?.[0]?.payments?.captures?.[0]?.status
+              const isCompleted = order?.status === 'COMPLETED' && captureStatus === 'COMPLETED'
+
+              if (!isCompleted) {
+                // The API call succeeded, but the payment itself did not —
+                // e.g. PENDING (common on a new live account's first real
+                // transaction, held for manual review) or DECLINED.
+                console.error('Payment not completed. status:', order?.status, 'captureStatus:', captureStatus)
+                setSdkStatus(
+                  captureStatus === 'PENDING'
+                    ? 'pending-review'
+                    : 'declined'
+                )
+                return
+              }
+
               setSdkStatus('paid')
 
               try {
@@ -278,6 +296,18 @@ export default function CheckoutPage() {
       <div ref={paypalContainerRef} style={{ display: canCheckout ? 'block' : 'none' }}></div>
 
       {canCheckout && sdkStatus !== 'rendered' && sdkStatus !== 'paid' && (
+        {sdkStatus === 'pending-review' && (
+          <p className="text-sm text-amber-700 bg-amber-50 rounded-lg p-3 mt-3">
+            Your payment is being held for review by PayPal — this is common for a
+            first transaction on a new account. You'll be notified once it clears;
+            no charge has been finalized yet.
+          </p>
+        )}
+        {sdkStatus === 'declined' && (
+          <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mt-3">
+            This payment was declined. Please try a different card or payment method.
+          </p>
+        )}
         <p style={{ fontSize: 12, color: '#888' }}>paypal status: {sdkStatus}</p>
       )}
     </div>
