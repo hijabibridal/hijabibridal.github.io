@@ -1,6 +1,6 @@
 // Change this one number to update the price everywhere (product page,
 // cart, PayPal order) without touching any component code.
-export const BUNDLE_PRICE = 40.0
+export const BUNDLE_PRICE = 1.0
 
 export type NailVariant = {
   name: string
@@ -17,7 +17,7 @@ export type NailVariant = {
 // Double check these match your actual /public/images folder structure.
 export const HALAL_NAILS_VARIANTS: NailVariant[] = [
   {
-    name: 'Halal Nails Pink Neutrals with Tabs',
+    name: 'Halal Nails Pink Neutrals with Halal Nail Glue',
     color: 'Pink Neutrals',
     image: '/images/halal-nails/attachments/pink-neutrals-halal-nails-solo.png',
     sku: 'hnb1001',
@@ -26,7 +26,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
     slug: 'halal-nails-pink-neutrals',
   },
   {
-    name: 'Halal Nails Cool Neutrals with Tabs',
+    name: 'Halal Nails Cool Neutrals with Halal Nail Glue',
     color: 'Cool Neutrals',
     image: '/images/halal-nails/attachments/cool-neutrals-halal-nails-solo.png',
     sku: 'hnb1002',
@@ -35,8 +35,8 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
     slug: 'halal-nails-cool-neutrals',
   },
   {
-    name: 'Halal Nails Berries with Tabs',
-    color: 'Berries',
+    name: 'Halal Nails Autumn Berries with Halal Nail Glue',
+    color: 'Autumn Berries',
     image: '/images/halal-nails/attachments/berries-halal-nails-solo.png',
     sku: 'hnb1003',
     stock: 20,
