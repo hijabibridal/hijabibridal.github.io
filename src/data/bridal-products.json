@@ -4268,11 +4268,11 @@
       ],
        "suggestedAddOns": [
         { 
-          "image": "/images/halal-nails/attachments/berries-halal-nails-solo.webp", 
+          "image": "/images/halal-nails/attachments/berries-red-apple.webp", 
           "targetSlug": "halal-nails-berries" 
         },
         { 
-          "image": "/images/halal-nails/attachments/pink-neutrals-halal-nails-solo.webp", 
+          "image": "/images/halal-nails/attachments/pink-neutrals-rose.webp", 
           "targetSlug": "halal-nails-pink-neutrals" 
         }
       ],
@@ -4399,7 +4399,7 @@
       ],
       "suggestedAddOns": [
         { 
-          "image": "/images/halal-nails/attachments/pink-neutrals-halal-nails-solo.webp", 
+          "image": "/images/halal-nails/attachments/pink-neutrals-rose.webp", 
           "targetSlug": "halal-nails-pink-neutrals" 
         },
         { 
@@ -4409,10 +4409,16 @@
       ],
       "images": [
         {
+          "url": "halal-nails/attachments/berries-red-apple.webp",
+          "alt": "Red Apple color from Autumn Berries.",
+          "amazonLink": "https://www.amazon.com/dp/B0HCM2M9F5",
+          "figcaption": "Available soon! Bookmark this page and check back in September 2026 for your ready-to-wear kit of halal fake nails with halal nail glue. Autumn Berries in Black Cherry, Magenta, Chilled Berry, Red Apple and Hot Pink. All flatter your skin tone."
+        },
+        {
           "url": "halal-nails/attachments/berries-halal-nails-solo.webp",
           "alt": "120 pack of halal press on nails in Autumn Berries, 5 colors, 24 nails each.",
           "amazonLink": "https://www.amazon.com/dp/B0HCM2M9F5",
-          "figcaption": "Available soon! Bookmark this page and check back in September 2026 for your ready-to-wear kit of halal fake nails with halal nail glue. Autumn Berries in black cherry, magenta, chilled berry, red apple and hot pink. All flatter your skin tone."
+          "figcaption": "We're handing over your best red color!"
         },
         {
           "url": "halal-nails/attachments/halal-nails-hand-logo2.webp",
@@ -4449,7 +4455,7 @@
           "figcaption": "We're handing over your best red color!"
         }
       ],
-      "og_image": "halal-nails/attachments/berries-halal-nails-solo.webp",
+      "og_image": "halal-nails/attachments/berries-red-apple.webp",
       "title_tag": "Autumn Berries Halal Nails Press On Nails: Perfect Shape, 5 Colors",
       "og_title": "Halal Nails Press On Nails: Perfect Shape and Length in Berries | 120 Nails in Five Colors",
       "og_type": "website",
@@ -4492,7 +4498,7 @@
       ],
       "suggestedAddOns": [
         { 
-          "image": "/images/halal-nails/attachments/cool-neutrals-halal-nails-solo.webp", 
+          "image": "/images/halal-nails/attachments/cool-neutrals-blue.webp", 
           "targetSlug": "halal-nails-cool-neutrals" 
         },
         { 
@@ -4502,10 +4508,16 @@
       ],
       "images": [
         {
+          "url": "halal-nails/attachments/pink-neutrals-rose.webp",
+          "alt": "Pink Neutrals Halal Nails in Rose",
+          "amazonLink": "https://www.amazon.com/dp/B0HCM8PXGW",
+          "figcaption": "Available soon! Bookmark this page and check back in September 2026 for your ready-to-wear kit of halal fake nails with halal nail glue. Pink Neutrals in Rose, Muted Lilac and Champagne with Baby Pink and Lavender. All flatter your skin tone."
+        },
+        {
           "url": "halal-nails/attachments/pink-neutrals-halal-nails-solo.webp",
           "alt": "120 pack of halal press on nails in Nude Pink, 5 colors, 24 nails each.",
           "amazonLink": "https://www.amazon.com/dp/B0HCM8PXGW",
-          "figcaption": "Available soon! Bookmark this page and check back in September 2026 for your ready-to-wear kit of halal fake nails with halal nail glue. Pink Neutrals in rose, muted lilac and champagne with baby pink and lavender. All flatter your skin tone."
+          "figcaption": "Choose your best pink!"
         },
         {
           "url": "halal-nails/attachments/halal-nails-hand-logo2.webp",
@@ -4542,7 +4554,7 @@
           "figcaption": "Choose your best pink!"
         }
       ],
-      "og_image": "halal-nails/attachments/pink-neutrals-halal-nails-solo.webp",
+      "og_image": "halal-nails/attachments/pink-neutrals-rose.webp",
       "title_tag": "Pink Neutrals Halal Nails Press On Nails: Perfect Shape, 5 Colors",
       "og_title": "Halal Nails Press On Nails: Perfect Shape and Length in Pink Neutrals| 120 Nails in Five Colors",
       "og_type": "website",
@@ -4585,7 +4597,7 @@
       ],
       "suggestedAddOns": [
         { 
-          "image": "/images/halal-nails/attachments/berries-halal-nails-solo.webp", 
+          "image": "/images/halal-nails/attachments/berries-red-apple.webp", 
           "targetSlug": "halal-nails-berries" 
         },
         { 
@@ -4595,10 +4607,16 @@
       ],
       "images": [
         {
+          "url": "halal-nails/attachments/cool-neutrals-blue.webp",
+          "alt": "Cool Neutrals Halal Nails in Ice Blue.",
+          "amazonLink": "https://www.amazon.com/dp/B0HCM9HFR8",
+          "figcaption": "Available soon! Bookmark this page and check back in September 2026 for your ready-to-wear kit of halal fake nails with halal nail glue. Cool Neutrals in Ice Blue, Champagne, Storm, Rose and Muted Lilac. All flatter your skin tone."
+        },
+        {
           "url": "halal-nails/attachments/cool-neutrals-halal-nails-solo.webp",
           "alt": "120 pack of halal press on nails in cool nudes, 5 colors, 24 nails each.",
           "amazonLink": "https://www.amazon.com/dp/B0HCM9HFR8",
-          "figcaption": "Available soon! Bookmark this page and check back in September 2026 for your ready-to-wear kit of halal fake nails with halal nail glue. Cool Neutrals in ice blue, champagne, storm, rose and muted lilac. All flatter your skin tone."
+          "figcaption": "Trending cool colors!"
         },
         {
           "url": "halal-nails/attachments/halal-nails-hand-logo2.webp",
@@ -4635,7 +4653,7 @@
           "figcaption": "Trending cool colors!"
         }
       ],
-      "og_image": "halal-nails/attachments/cool-neutrals-halal-nails-solo.webp",
+      "og_image": "halal-nails/attachments/cool-neutrals-blue.webp",
       "title_tag": "Cool Neutrals Halal Nails Press On Nails: Perfect Shape, 5 Colors",
       "og_title": "Halal Nails Press On Nails: Perfect Shape and Length in Cool Neutrals| 120 Nails in Five Colors",
       "og_type": "website",
