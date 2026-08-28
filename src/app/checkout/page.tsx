@@ -8,6 +8,7 @@ import {
   getShippingStatus,
   FLAT_RATE_AMOUNT,
 } from '@/data/paypal-countries'
+import DigitalWalletButtons from '@/components/DigitalWalletButtons'
 
 type FormState = {
   fullName: string
@@ -45,12 +46,114 @@ export default function CheckoutPage() {
 
   const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported'
 
-  // Live refs so the PayPal callback (set up once) always reads current
-  // form/cart state instead of a stale snapshot from first render.
   const stateRef = useRef({ items, form, total, shippingCost })
   useEffect(() => {
     stateRef.current = { items, form, total, shippingCost }
   }, [items, form, total, shippingCost])
+
+  // ─── Shared order-building logic — used by BOTH the main PayPal
+  // Buttons AND Google Pay, so they stay perfectly in sync. ───────────
+  function buildOrderRequestBody() {
+    const { items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping } =
+      stateRef.current
+    const itemTotal = currentItems.reduce((sum, i) => sum + i.price * i.quantity, 0)
+
+    const skuList = currentItems.map((i) => `${i.sku}x${i.quantity}`).join(',')
+    const rawCustomId = `SKUS:${skuList}|NOTE:${f.deliveryInstructions}`
+    const customId = rawCustomId.slice(0, 127)
+
+    const [givenName, ...rest] = f.fullName.trim().split(' ')
+    const surname = rest.join(' ') || givenName
+
+    return {
+      payer: {
+        email_address: f.email,
+        name: { given_name: givenName, surname },
+        ...(f.phone && {
+          phone: { phone_type: 'MOBILE', phone_number: { national_number: f.phone.replace(/\D/g, '') } },
+        }),
+      },
+      purchase_units: [
+        {
+          custom_id: customId,
+          items: currentItems.map((i) => ({
+            name: i.color ? `${i.name} (${i.color})` : i.name,
+            sku: i.sku,
+            unit_amount: { currency_code: 'USD', value: i.price.toFixed(2) },
+            quantity: String(i.quantity),
+          })),
+          amount: {
+            currency_code: 'USD',
+            value: currentTotal.toFixed(2),
+            breakdown: {
+              item_total: { currency_code: 'USD', value: itemTotal.toFixed(2) },
+              shipping: { currency_code: 'USD', value: currentShipping.toFixed(2) },
+            },
+          },
+          shipping: {
+            name: { full_name: f.fullName },
+            address: {
+              address_line_1: f.line1,
+              address_line_2: f.line2 || undefined,
+              admin_area_2: f.city,
+              admin_area_1: f.state,
+              postal_code: f.postalCode,
+              country_code: f.countryCode,
+            },
+          },
+        },
+      ],
+      application_context: { shipping_preference: 'SET_PROVIDED_ADDRESS' },
+    }
+  }
+
+  // Shared post-payment handling — same status check, storage, redirect
+  // logic regardless of which payment method was used.
+  async function handleApprovedOrder(order: any) {
+    console.log('Order captured:', order)
+
+    try {
+      localStorage.setItem('hijabi-bridal-debug-capture', JSON.stringify(order, null, 2))
+    } catch (err) {
+      console.error('Failed to store debug capture:', err)
+    }
+
+    const captureStatus = order?.purchase_units?.[0]?.payments?.captures?.[0]?.status
+    const isCompleted = order?.status === 'COMPLETED' && captureStatus === 'COMPLETED'
+
+    if (!isCompleted) {
+      console.error('Payment not completed. status:', order?.status, 'captureStatus:', captureStatus)
+      setSdkStatus(captureStatus === 'PENDING' ? 'pending-review' : 'declined')
+      return
+    }
+
+    setSdkStatus('paid')
+
+    try {
+      const { items: currentItems, form: f, total: currentTotal } = stateRef.current
+      const orderSummary = {
+        items: currentItems.map((i) => ({
+          name: i.name, color: i.color || null, sku: i.sku || null, quantity: i.quantity,
+        })),
+        deliveryInstructions: f.deliveryInstructions,
+        total: currentTotal.toFixed(2),
+        shippingAddress: {
+          address_line_1: f.line1, address_line_2: f.line2,
+          admin_area_2: f.city, admin_area_1: f.state,
+          postal_code: f.postalCode, country_code: f.countryCode,
+        },
+        shippingName: f.fullName,
+        email: f.email,
+        capturedAt: new Date().toISOString(),
+      }
+      localStorage.setItem('hijabi-bridal-last-order', JSON.stringify(orderSummary))
+    } catch (err) {
+      console.error('Failed to store order summary:', err)
+    }
+
+    clearCart()
+    window.location.href = 'https://hijabibridal.github.io/thank-you'
+  }
 
   const hasRenderedRef = useRef(false)
 
@@ -61,9 +164,11 @@ export default function CheckoutPage() {
 
     const script = document.createElement('script')
     script.src =
-      // SANDBOX client-id for testing with dummy cards — swap back to the
-      // live one before real customers use this page.
-      'https://www.paypal.com/sdk/js?client-id=BAAYoVVna5Xc7jZjLHp3aU44-gGQEsR5J4suS_7EPMjdwN9gMq5WuLGuOtqIQ3V1B8tonRiznu5DcYAeOQ&components=buttons&disable-funding=credit&currency=USD'
+      'https://www.paypal.com/sdk/js?client-id=BAAYoVVna5Xc7jZjLHp3aU44-gGQEsR5J4suS_7EPMjdwN9gMq5WuLGuOtqIQ3V1B8tonRiznu5DcYAeOQ' +
+      '&components=buttons,googlepay' +
+      '&disable-funding=credit' +
+      '&enable-funding=venmo,paylater,ideal,blik,bancontact' +
+      '&currency=USD'
     script.async = true
 
     script.onload = () => {
@@ -73,122 +178,11 @@ export default function CheckoutPage() {
         paypal
           .Buttons({
             style: { layout: 'vertical', height: 45, tagline: false },
-
-            createOrder: (_data: any, actions: any) => {
-              const { items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping } =
-                stateRef.current
-              const itemTotal = currentItems.reduce((sum, i) => sum + i.price * i.quantity, 0)
-
-              const skuList = currentItems.map((i) => `${i.sku}x${i.quantity}`).join(',')
-              const rawCustomId = `SKUS:${skuList}|NOTE:${f.deliveryInstructions}`
-              const customId = rawCustomId.slice(0, 127)
-
-              const [givenName, ...rest] = f.fullName.trim().split(' ')
-              const surname = rest.join(' ') || givenName
-
-              return actions.order.create({
-                payer: {
-                  email_address: f.email,
-                  name: { given_name: givenName, surname },
-                  ...(f.phone && {
-                    phone: { phone_type: 'MOBILE', phone_number: { national_number: f.phone.replace(/\D/g, '') } },
-                  }),
-                },
-                purchase_units: [
-                  {
-                    custom_id: customId,
-                    items: currentItems.map((i) => ({
-                      name: i.color ? `${i.name} (${i.color})` : i.name,
-                      sku: i.sku,
-                      unit_amount: { currency_code: 'USD', value: i.price.toFixed(2) },
-                      quantity: String(i.quantity),
-                    })),
-                    amount: {
-                      currency_code: 'USD',
-                      value: currentTotal.toFixed(2),
-                      breakdown: {
-                        item_total: { currency_code: 'USD', value: itemTotal.toFixed(2) },
-                        shipping: { currency_code: 'USD', value: currentShipping.toFixed(2) },
-                      },
-                    },
-                    shipping: {
-                      name: { full_name: f.fullName },
-                      address: {
-                        address_line_1: f.line1,
-                        address_line_2: f.line2 || undefined,
-                        admin_area_2: f.city,
-                        admin_area_1: f.state,
-                        postal_code: f.postalCode,
-                        country_code: f.countryCode,
-                      },
-                    },
-                  },
-                ],
-                // We already collected the address ourselves — lock PayPal
-                // to using it rather than letting the buyer pick a
-                // different one inside the popup.
-                application_context: { shipping_preference: 'SET_PROVIDED_ADDRESS' },
-              })
-            },
-
+            createOrder: (_data: any, actions: any) => actions.order.create(buildOrderRequestBody()),
             onApprove: async (_data: any, actions: any) => {
               const order = await actions.order.capture()
-              console.log('Order captured:', order)
-
-              // Save the RAW response no matter what happens next — this
-              // guarantees we can see exactly what PayPal actually returned,
-              // without needing DevTools at all.
-              try {
-                localStorage.setItem('hijabi-bridal-debug-capture', JSON.stringify(order, null, 2))
-              } catch (err) {
-                console.error('Failed to store debug capture:', err)
-              }
-
-              const captureStatus =
-                order?.purchase_units?.[0]?.payments?.captures?.[0]?.status
-              const isCompleted = order?.status === 'COMPLETED' && captureStatus === 'COMPLETED'
-
-              if (!isCompleted) {
-                // The API call succeeded, but the payment itself did not —
-                // e.g. PENDING (common on a new live account's first real
-                // transaction, held for manual review) or DECLINED.
-                console.error('Payment not completed. status:', order?.status, 'captureStatus:', captureStatus)
-                setSdkStatus(
-                  captureStatus === 'PENDING'
-                    ? 'pending-review'
-                    : 'declined'
-                )
-                return
-              }
-
-              setSdkStatus('paid')
-
-              try {
-                const { items: currentItems, form: f, total: currentTotal } = stateRef.current
-                const orderSummary = {
-                  items: currentItems.map((i) => ({
-                    name: i.name, color: i.color || null, sku: i.sku || null, quantity: i.quantity,
-                  })),
-                  deliveryInstructions: f.deliveryInstructions,
-                  total: currentTotal.toFixed(2),
-                  shippingAddress: {
-                    address_line_1: f.line1, address_line_2: f.line2,
-                    admin_area_2: f.city, admin_area_1: f.state,
-                    postal_code: f.postalCode, country_code: f.countryCode,
-                  },
-                  shippingName: f.fullName,
-                  email: f.email,
-                  capturedAt: new Date().toISOString(),
-                }
-                localStorage.setItem('hijabi-bridal-last-order', JSON.stringify(orderSummary))
-              } catch (err) {
-                console.error('Failed to store order summary:', err)
-              }
-
-              clearCart()
-              window.location.href = 'https://hijabibridal.github.io/thank-you'
+              await handleApprovedOrder(order)
             },
-
             onError: (err: any) => {
               console.error('PayPal Buttons error:', err)
               setSdkStatus('render-error')
@@ -205,7 +199,7 @@ export default function CheckoutPage() {
 
     script.onerror = () => setSdkStatus('load-error')
     document.body.appendChild(script)
-  }, [items, clearCart])
+  }, [items])
 
   const handleChange = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -303,6 +297,22 @@ export default function CheckoutPage() {
       )}
 
       <div ref={paypalContainerRef} style={{ display: canCheckout ? 'block' : 'none' }}></div>
+
+      {canCheckout && (
+        <DigitalWalletButtons
+          createOrderPayload={async () => {
+            // NOTE: unlike the main Buttons flow, this does not yet call a
+            // real PayPal order-creation endpoint — see the caveat flagged
+            // separately about verifying this works without a backend.
+            return buildOrderRequestBody()
+          }}
+          onPaymentApproved={handleApprovedOrder}
+          onPaymentError={(err) => {
+            console.error('Google Pay error:', err)
+            setSdkStatus('declined')
+          }}
+        />
+      )}
 
       {sdkStatus === 'pending-review' && (
         <p className="text-sm text-amber-700 bg-amber-50 rounded-lg p-3 mt-3">
