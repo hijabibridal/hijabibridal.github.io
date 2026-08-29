@@ -40,8 +40,10 @@ export default function CheckoutPage() {
   const shippingCost = shippingStatus === 'flat' ? FLAT_RATE_AMOUNT : 0
   const total = subtotal + shippingCost
 
+  // Phone is now required — LingXing's fulfillment API rejects orders
+  // without a recipient phone number.
   const requiredFieldsFilled =
-    form.fullName && form.email && form.line1 && form.city &&
+    form.fullName && form.email && form.phone && form.line1 && form.city &&
     form.postalCode && form.countryCode
 
   const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported'
@@ -59,7 +61,10 @@ export default function CheckoutPage() {
     const itemTotal = currentItems.reduce((sum, i) => sum + i.price * i.quantity, 0)
 
     const skuList = currentItems.map((i) => `${i.sku}x${i.quantity}`).join(',')
-    const rawCustomId = `SKUS:${skuList}|NOTE:${f.deliveryInstructions}`
+    // Phone is embedded here (not just sent via payer.phone) because
+    // classic IPN's own payload does not reliably include a phone field —
+    // custom_id is the one field confirmed to survive the IPN round-trip.
+    const rawCustomId = `SKUS:${skuList}|PHONE:${f.phone}|NOTE:${f.deliveryInstructions}`
     const customId = rawCustomId.slice(0, 127)
 
     const [givenName, ...rest] = f.fullName.trim().split(' ')
@@ -237,7 +242,7 @@ export default function CheckoutPage() {
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
         <input placeholder="Email Address" type="email" value={form.email} onChange={handleChange('email')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
-        <input placeholder="Phone (optional)" value={form.phone} onChange={handleChange('phone')}
+        <input placeholder="Phone Number" value={form.phone} onChange={handleChange('phone')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
         <input placeholder="Address Line 1" value={form.line1} onChange={handleChange('line1')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
@@ -292,7 +297,7 @@ export default function CheckoutPage() {
 
       {!canCheckout && (
         <p className="text-sm text-gray-500 mb-4">
-          Fill in your name, email, and full address above to continue.
+          Fill in your name, email, phone, and full address above to continue.
         </p>
       )}
 
