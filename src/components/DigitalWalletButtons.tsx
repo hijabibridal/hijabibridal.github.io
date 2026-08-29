@@ -2,9 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+// Your Netlify backend site — separate domain from the frontend, hence
+// the CORS headers on the functions themselves.
+const BACKEND_BASE = 'https://hijabi-bridal-backend.netlify.app'
+
 type DigitalWalletButtonsProps = {
-  // Shared with the main PayPal Buttons flow — same createOrder/onApprove
-  // logic, just triggered from a different payment method.
+  // Returns the same order-shape object the main PayPal button already
+  // builds (payer, purchase_units, application_context) — NOT a real
+  // PayPal order yet, just the request body to send to our backend.
   createOrderPayload: () => any
   onPaymentApproved: (order: any) => Promise<void>
   onPaymentError: (err: any) => void
@@ -19,16 +24,12 @@ export default function DigitalWalletButtons({
   const [googlePayEligible, setGooglePayEligible] = useState(false)
 
   useEffect(() => {
-    // Depends on the main PayPal SDK script already having loaded (from
-    // the primary Buttons setup) — this effect assumes window.paypal
-    // exists by the time it runs.
     const paypal = (window as any).paypal
     if (!paypal) {
       console.error('PayPal SDK not loaded yet — Google Pay button cannot initialize.')
       return
     }
 
-    // Requires Google's own Pay JS library, separate from PayPal's SDK.
     const googleScript = document.createElement('script')
     googleScript.src = 'https://pay.google.com/gp/p/js/pay.js'
     googleScript.async = true
@@ -55,7 +56,23 @@ export default function DigitalWalletButtons({
           const button = paymentsClient.createButton({
             onClick: async () => {
               try {
-                const order = await createOrderPayload()
+                // 1. Create the real PayPal order server-side (needs the
+                // secret, so this goes through our Netlify function).
+                const orderRequestBody = createOrderPayload()
+                const createResponse = await fetch(
+                  `${BACKEND_BASE}/.netlify/functions/create-order`,
+                  {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderRequestBody),
+                  }
+                )
+                const order = await createResponse.json()
+                if (!order.id) {
+                  throw new Error('Order creation failed: ' + JSON.stringify(order))
+                }
+
+                // 2. Show the Google Pay sheet.
                 const paymentDataRequest = {
                   apiVersion: 2,
                   apiVersionMinor: 0,
@@ -63,18 +80,37 @@ export default function DigitalWalletButtons({
                   merchantInfo: config.merchantInfo,
                   transactionInfo: {
                     totalPriceStatus: 'FINAL',
-                    totalPrice: order.amount, // expected to be a string like "1.00"
+                    totalPrice: order.purchase_units[0].amount.value,
                     currencyCode: 'USD',
                   },
                   callbackIntents: ['PAYMENT_AUTHORIZATION'],
                 }
-
                 const paymentData = await paymentsClient.loadPaymentData(paymentDataRequest)
+
+                // 3. Confirm the order with PayPal, client-side (no
+                // secret needed for this step — the SDK handles it).
                 const confirmResult = await googlepay.confirmOrder({
                   orderId: order.id,
                   paymentMethodData: paymentData.paymentMethodData,
                 })
-                await onPaymentApproved(confirmResult)
+
+                if (confirmResult.status !== 'APPROVED') {
+                  throw new Error('Order not approved: ' + JSON.stringify(confirmResult))
+                }
+
+                // 4. Capture the payment server-side (needs the secret
+                // again — back through our Netlify function).
+                const captureResponse = await fetch(
+                  `${BACKEND_BASE}/.netlify/functions/capture-order`,
+                  {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ orderId: order.id }),
+                  }
+                )
+                const captureResult = await captureResponse.json()
+
+                await onPaymentApproved(captureResult)
               } catch (err) {
                 onPaymentError(err)
               }

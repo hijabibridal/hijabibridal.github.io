@@ -19,7 +19,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
   {
     name: 'Halal Nails Pink Neutrals with Halal Nail Glue',
     color: 'Pink Neutrals',
-    image: '/images/halal-nails/attachments/pink-neutrals-halal-nails-solo.png',
+    image: '/images/halal-nails/attachments/pink-neutrals-halal-nails-solo.webp',
     sku: 'hnb1001',
     stock: 60,
     url: 'https://hijabibridal.github.io/shop/product/halal-nails-pink-neutrals',
@@ -28,7 +28,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
   {
     name: 'Halal Nails Cool Neutrals with Halal Nail Glue',
     color: 'Cool Neutrals',
-    image: '/images/halal-nails/attachments/cool-neutrals-halal-nails-solo.png',
+    image: '/images/halal-nails/attachments/cool-neutrals-halal-nails-solo.webp',
     sku: 'hnb1002',
     stock: 20,
     url: 'https://hijabibridal.github.io/shop/product/halal-nails-cool-neutrals',
@@ -37,7 +37,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
   {
     name: 'Halal Nails Autumn Berries with Halal Nail Glue',
     color: 'Autumn Berries',
-    image: '/images/halal-nails/attachments/berries-halal-nails-solo.png',
+    image: '/images/halal-nails/attachments/berries-halal-nails-solo.webp',
     sku: 'hnb1003',
     stock: 20,
     url: 'https://hijabibridal.github.io/shop/product/halal-nails-berries',
