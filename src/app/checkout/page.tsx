@@ -301,9 +301,9 @@ export default function CheckoutPage() {
       {canCheckout && (
         <DigitalWalletButtons
           createOrderPayload={async () => {
-            // NOTE: unlike the main Buttons flow, this does not yet call a
-            // real PayPal order-creation endpoint — see the caveat flagged
-            // separately about verifying this works without a backend.
+            // Returns the raw order-shape object; DigitalWalletButtons
+            // sends this to the create-order Netlify function, which
+            // creates the real PayPal order server-side.
             return buildOrderRequestBody()
           }}
           onPaymentApproved={handleApprovedOrder}

@@ -58,7 +58,10 @@ export default function DigitalWalletButtons({
               try {
                 // 1. Create the real PayPal order server-side (needs the
                 // secret, so this goes through our Netlify function).
-                const orderRequestBody = createOrderPayload()
+                // AWAITED — createOrderPayload is async; forgetting this
+                // would send an empty body instead of the real order data.
+                const orderRequestBody = await createOrderPayload()
+
                 const createResponse = await fetch(
                   `${BACKEND_BASE}/.netlify/functions/create-order`,
                   {
