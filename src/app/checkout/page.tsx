@@ -36,6 +36,10 @@ export default function CheckoutPage() {
   const [sdkStatus, setSdkStatus] = useState('idle')
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
 
+  const fieldError = (field: keyof FormState) => !form[field]
+  const fieldClass = (field: keyof FormState, base: string) =>
+    `${base} ${fieldError(field) ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`
+
   const shippingStatus = form.countryCode ? getShippingStatus(form.countryCode) : null
   const shippingCost = shippingStatus === 'flat' ? FLAT_RATE_AMOUNT : 0
   const total = subtotal + shippingCost
@@ -47,6 +51,17 @@ export default function CheckoutPage() {
     form.postalCode && form.countryCode
 
   const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported'
+
+  const REQUIRED_FIELD_LABELS: { key: keyof FormState; label: string }[] = [
+    { key: 'fullName', label: 'Full Name' },
+    { key: 'email', label: 'Email Address' },
+    { key: 'phone', label: 'Phone Number' },
+    { key: 'line1', label: 'Address Line 1' },
+    { key: 'city', label: 'City' },
+    { key: 'postalCode', label: 'Postal / Zip Code' },
+    { key: 'countryCode', label: 'Country' },
+  ]
+  const missingFields = REQUIRED_FIELD_LABELS.filter((f) => !form[f.key]).map((f) => f.label)
 
   const stateRef = useRef({ items, form, total, shippingCost })
   useEffect(() => {
@@ -172,7 +187,7 @@ export default function CheckoutPage() {
       'https://www.paypal.com/sdk/js?client-id=BAAYoVVna5Xc7jZjLHp3aU44-gGQEsR5J4suS_7EPMjdwN9gMq5WuLGuOtqIQ3V1B8tonRiznu5DcYAeOQ' +
       '&components=buttons,googlepay' +
       '&disable-funding=credit' +
-      '&enable-funding=venmo,paylater,ideal,blik,bancontact' +
+      '&enable-funding=paylater,ideal,blik,bancontact,eps,mybank,trustly' +
       '&currency=USD'
     script.async = true
 
@@ -239,23 +254,23 @@ export default function CheckoutPage() {
       <h2 className="text-xl font-bold mb-4">Shipping & Contact Info</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
         <input placeholder="Full Name" value={form.fullName} onChange={handleChange('fullName')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
+          className={fieldClass('fullName', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")} />
         <input placeholder="Email Address" type="email" value={form.email} onChange={handleChange('email')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
+          className={fieldClass('email', "border rounded-lg px-3 py-2 text-sm")} />
         <input placeholder="Phone Number" value={form.phone} onChange={handleChange('phone')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
+          className={fieldClass('phone', "border rounded-lg px-3 py-2 text-sm")} />
         <input placeholder="Address Line 1" value={form.line1} onChange={handleChange('line1')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
+          className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")} />
         <input placeholder="Address Line 2 (optional)" value={form.line2} onChange={handleChange('line2')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
         <input placeholder="City" value={form.city} onChange={handleChange('city')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
+          className={fieldClass('city', "border rounded-lg px-3 py-2 text-sm")} />
         <input placeholder="State / Province" value={form.state} onChange={handleChange('state')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
         <input placeholder="Postal / Zip Code" value={form.postalCode} onChange={handleChange('postalCode')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
+          className={fieldClass('postalCode', "border rounded-lg px-3 py-2 text-sm")} />
         <select value={form.countryCode} onChange={handleChange('countryCode')}
-          className="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+          className={fieldClass('countryCode', "border rounded-lg px-3 py-2 text-sm")}>
           <option value="">Select Country</option>
           {ALL_PAYPAL_COUNTRIES.map((c) => (
             <option key={c.code} value={c.code}>{c.name}</option>
@@ -295,10 +310,19 @@ export default function CheckoutPage() {
         <span>${total.toFixed(2)}</span>
       </div>
 
-      {!canCheckout && (
-        <p className="text-sm text-gray-500 mb-4">
-          Fill in your name, email, phone, and full address above to continue.
+      {!canCheckout && missingFields.length > 0 && (
+        <p className="text-sm text-red-600 mb-4">
+          Please fill in: {missingFields.join(', ')}
         </p>
+      )}
+
+      {canCheckout && (
+        <div className="flex items-center gap-2 mb-3 text-xs text-gray-500">
+          <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <span>Payments are securely processed by PayPal. Buyer Protection included.</span>
+        </div>
       )}
 
       <div ref={paypalContainerRef} style={{ display: canCheckout ? 'block' : 'none' }}></div>

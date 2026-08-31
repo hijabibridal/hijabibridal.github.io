@@ -2301,7 +2301,7 @@
 Bot protection for GitHub Pages:
 GitHub Pages is static so you can't do server-side blocking, but you can add a robots.txt to disallow known bot crawlers, and add Cloudflare as a proxy (free tier) in front of your GitHub Pages site — Cloudflare automatically blocks a huge percentage of bot traffic and you can add country-blocking rules (e.g. block Singapore). That's the most effective free option for a static site.
 
-node convert-new-jpg.mjs "C:\Users\haira\Downloads\HBmigration\public\images\muslim-lehenga"
+node convert-new-jpg.mjs "C:\Users\haira\Downloads\HBmigration\public\images\halal-nails\attachments"
 
 # Full run — everything
 python looker-bot.py
@@ -2310,7 +2310,7 @@ python looker-bot.py
 python looker-bot.py --only ga4 gsc stats
 
 # Save Tavily credits, run everything else
-python looker-bot-pet.py --skip tavily social gsc
+python looker-bot.py --skip tavily social gsc
 
 # Just refresh SEO data
 python looker-bot.py --only dataforseo paa
@@ -2343,3 +2343,27 @@ islamic bridal gowns
 git add .
 git commit -m "Your description here"
 git push origin main
+
+
+# Domain-specific commercial signals for South-Asian / modest bridal fashion
+DOMAIN_INTENT_SIGNALS = [
+    # garment types that are almost always purchase queries
+    "halal press on nails", "adhesive tabs",
+    # occasion-purchase triggers
+    "bridal", "bride", "wedding", "ramadan", "eid",
+    # descriptors that signal shopping intent in this category
+    "wudu", "easy",
+]
+
+SEED_KEYWORDS = [
+    "halal nails",
+    "adhesive tabs",
+    "fake nails haram",
+    "halal nails press on",  
+    "halal fake nails",
+    "halal press on nails",
+    "wudu friendly nails",
+    "muslim nails",
+    "halal nail glue",
+    "wudu friendly nail glue"
+]
