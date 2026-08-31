@@ -11,16 +11,17 @@ const LegalPage = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">1. Shipping Policy</h2>
         <p>Direct Factory Sourcing & Quality Assurance</p>
-        <p>For Halal Nails, we partner directly with specialized manufacturers to design and produce our product collections. Every order undergoes a manual quality check before it is packaged. By dispatching items directly from our international production facilities to you, we maintain strict quality standards.<br /></p>
+	<p></p>
+        <p>For Halal Nails, we partner directly with specialized manufacturers to design and produce our product collections. Every order undergoes a manual quality check before it is packaged. By dispatching items directly from our international production facilities to you, we maintain strict quality standards.</p>
 	<p>Processing & Shipping Timelines</p>
 	<p>Processing & Quality Check: 1 to 3 business days.</p>
-	<p>Standard Shipping Window: 7 to 12 business days after dispatch.<br /></p>
-	<p>Currently we ship to US, UK, Canada, Australia, France, Germany, the Netherlands, Belgium, Japan, South Korea, Singapore and Malaysia. Unfortunately, we can't ship to remote areas like Alaska, Scottish Highlands, NWT, Outback, Corsica, Baltic Islands, Wadden Islands, Okinawa Outer Islands, Jeju Island, Sentosa, East Malaysia and the like. Please check your postal code on the checkout page if you're unsure whether we ship to your area.<br /></p>
-	<p>Tracking: Once your order ships, you will receive an email with a tracking number. Carrier updates may take 2 to 4 business days to display online.<br /></p>
+	<p>Standard Shipping Window: 7 to 12 business days after dispatch.</p>
+	<p>Currently we ship to US, UK, Canada, Australia, France, Germany, the Netherlands, Belgium, Japan, South Korea, Singapore and Malaysia. Unfortunately, we can't ship to remote areas like Alaska, Scottish Highlands, NWT, Outback, Corsica, Baltic Islands, Wadden Islands, Okinawa Outer Islands, Jeju Island, Sentosa, East Malaysia and the like. Please check your postal code on the checkout page if you're unsure whether we ship to your area.</p>
+	<p>Tracking: Once your order ships, you will receive an email with a tracking number. Carrier updates may take 2 to 4 business days to display online.</p>
 	<p>100% Pre-paid Customs & Import Fees (DDP)</p>
-	<p>We're proud to ship all orders DDP (Delivered Duty Paid). All import taxes, VAT, GST, and customs duties are fully prepaid by us. You will never be charged extra fees upon delivery!<br /></p>
+	<p>We're proud to ship all orders DDP (Delivered Duty Paid). All import taxes, VAT, GST, and customs duties are fully prepaid by us. You will never be charged extra fees upon delivery!</p>
 	<p>US Delivery Guarantee</p>
-	<p>If your order experiences an unexpected shipping delay exceeding 30 days, we will contact you immediately to offer an updated delivery date or an instant 100% refund.<br /></p>
+	<p>If your order experiences an unexpected shipping delay exceeding 30 days, we will contact you immediately to offer an updated delivery date or an instant 100% refund.</p>
       </section>
 
       <section className="mb-8">
