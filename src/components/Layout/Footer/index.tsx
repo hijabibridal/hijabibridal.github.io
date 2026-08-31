@@ -17,6 +17,7 @@ const Footer: FC = () => {
             >
               Legal
             </Link>
+	  </div>
         </div>
       </div>
     </footer>
