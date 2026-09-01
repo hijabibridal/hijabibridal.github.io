@@ -4,8 +4,11 @@ import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import {
-  ALL_PAYPAL_COUNTRIES,
+  SUPPORTED_COUNTRIES,
   getShippingStatus,
+  getTransitMessage,
+  isRemoteBlockedPostalCode,
+  REMOTE_POSTAL_BLOCK_MESSAGE,
   FLAT_RATE_AMOUNT,
 } from '@/data/paypal-countries'
 import DigitalWalletButtons from '@/components/DigitalWalletButtons'
@@ -41,6 +44,11 @@ export default function CheckoutPage() {
     `${base} ${fieldError(field) ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`
 
   const shippingStatus = form.countryCode ? getShippingStatus(form.countryCode) : null
+  const postalBlocked =
+    form.countryCode && form.postalCode
+      ? isRemoteBlockedPostalCode(form.countryCode, form.postalCode)
+      : false
+  const transitMessage = form.countryCode ? getTransitMessage(form.countryCode) : null
   const shippingCost = shippingStatus === 'flat' ? FLAT_RATE_AMOUNT : 0
   const total = subtotal + shippingCost
 
@@ -50,7 +58,7 @@ export default function CheckoutPage() {
     form.fullName && form.email && form.phone && form.line1 && form.city &&
     form.postalCode && form.countryCode
 
-  const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported'
+  const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked
 
   const REQUIRED_FIELD_LABELS: { key: keyof FormState; label: string }[] = [
     { key: 'fullName', label: 'Full Name' },
@@ -272,7 +280,7 @@ export default function CheckoutPage() {
         <select value={form.countryCode} onChange={handleChange('countryCode')}
           className={fieldClass('countryCode', "border rounded-lg px-3 py-2 text-sm")}>
           <option value="">Select Country</option>
-          {ALL_PAYPAL_COUNTRIES.map((c) => (
+          {SUPPORTED_COUNTRIES.map((c) => (
             <option key={c.code} value={c.code}>{c.name}</option>
           ))}
         </select>
@@ -292,6 +300,14 @@ export default function CheckoutPage() {
         <p className="text-sm text-gray-700 bg-pink-50 rounded-lg p-3 mb-6">
           A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order.
         </p>
+      )}
+      {postalBlocked && (
+        <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
+          {REMOTE_POSTAL_BLOCK_MESSAGE}
+        </p>
+      )}
+      {!postalBlocked && transitMessage && (
+        <p className="text-sm text-gray-600 mb-6">{transitMessage}</p>
       )}
 
       <label className="block text-sm font-bold text-gray-800 mb-6">
@@ -317,11 +333,19 @@ export default function CheckoutPage() {
       )}
 
       {canCheckout && (
-        <div className="flex items-center gap-2 mb-3 text-xs text-gray-500">
-          <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-          <span>Payments are securely processed by PayPal. Buyer Protection included.</span>
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-2 text-xs text-gray-500">
+            <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <span>Payments are securely processed by PayPal. Buyer Protection included.</span>
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/card_logos.png"
+            alt="We accept Visa, Mastercard, American Express, and Discover"
+            style={{ height: 28 }}
+          />
         </div>
       )}
 

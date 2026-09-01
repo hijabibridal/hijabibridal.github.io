@@ -104,10 +104,14 @@ export const ALL_PAYPAL_COUNTRIES = [
   { name: 'Zimbabwe', code: 'ZW' },
 ]
 
-// --- Your shipping rules — edit these three lines to change coverage ---
-export const FREE_SHIPPING_COUNTRIES = ['US', 'GB']
-export const FLAT_RATE_COUNTRIES = ['IN', 'DE', 'AU']
-export const FLAT_RATE_AMOUNT = 5.0
+// --- Your shipping rules ---
+// SA and UAE cancelled per your instruction. FR/JP/KR/MY are here but
+// FLAGGED: order-webhook.js has no logistics channel configured for any
+// of these four yet — get codes from SPfulfillment before this goes live,
+// or remove them from this list until then.
+export const FREE_SHIPPING_COUNTRIES = ['US', 'DE', 'FR', 'NL', 'BE', 'GB', 'CA', 'AU', 'JP', 'KR', 'SG', 'MY']
+export const FLAT_RATE_COUNTRIES: string[] = []
+export const FLAT_RATE_AMOUNT = 3.0
 
 export type ShippingStatus = 'free' | 'flat' | 'unsupported'
 
@@ -115,4 +119,151 @@ export function getShippingStatus(countryCode: string): ShippingStatus {
   if (FREE_SHIPPING_COUNTRIES.includes(countryCode)) return 'free'
   if (FLAT_RATE_COUNTRIES.includes(countryCode)) return 'flat'
   return 'unsupported'
+}
+
+// Only show countries you actually ship to in the checkout dropdown,
+// instead of all ~180 PayPal-supported countries.
+export const SUPPORTED_COUNTRIES = ALL_PAYPAL_COUNTRIES.filter(
+  (c) => FREE_SHIPPING_COUNTRIES.includes(c.code) || FLAT_RATE_COUNTRIES.includes(c.code)
+)
+
+// --- Estimated transit time + carrier per country ---
+export const TRANSIT_TIMES: Record<string, { days: string; carrier: string }> = {
+  US: { days: '5–9 business days', carrier: 'USPS' },
+  DE: { days: '8–12 business days', carrier: 'DHL' },
+  FR: { days: '8–10 business days', carrier: 'La Poste / Colissimo' },
+  NL: { days: '8–12 business days', carrier: 'PostNL' },
+  BE: { days: '8–12 business days', carrier: 'bpost' },
+  GB: { days: '4–7 business days', carrier: 'Royal Mail / Evri' },
+  CA: { days: '7–12 business days', carrier: 'Canada Post' },
+  AU: { days: '6–9 business days', carrier: 'Australia Post' },
+  JP: { days: '3–6 business days', carrier: 'Local Courier' },
+  KR: { days: '3–6 business days', carrier: 'Local Courier' },
+  SG: { days: '4–7 business days', carrier: 'SingPost' },
+  MY: { days: '4–7 business days', carrier: 'Pos Malaysia' },
+}
+
+export function getTransitMessage(countryCode: string): string | null {
+  const info = TRANSIT_TIMES[countryCode]
+  if (!info) return null
+  return `Your package will be dispatched within 3 days and be delivered to you via ${info.carrier} in ${info.days} thereafter. Usually on the sooner end!`
+}
+
+// --- Remote-area postal code blocking ---
+// Blocks known remote/surcharge zones per YunExpress's Tier 1 remote-region
+// list. Message shown when a postal code falls inside a blocked range.
+export const REMOTE_POSTAL_BLOCK_MESSAGE =
+  "Sorry we don't deliver to this postal/zip code. Please choose another."
+
+type RemoteBlock = {
+  country: string
+  region: string
+  test: (postalCode: string) => boolean
+}
+
+// Helper: numeric range check, tolerant of dashes/spaces/leading zeros.
+function inNumericRange(value: string, min: number, max: number): boolean {
+  const digits = value.replace(/\D/g, '')
+  if (!digits) return false
+  const num = parseInt(digits, 10)
+  return num >= min && num <= max
+}
+
+// Helper: UK-style alpha prefix + numeric range, e.g. "BT1"–"BT94".
+function inUkPrefixRange(value: string, prefix: string, min: number, max: number): boolean {
+  const normalized = value.toUpperCase().replace(/\s/g, '')
+  if (!normalized.startsWith(prefix)) return false
+  const numPart = normalized.slice(prefix.length).match(/^\d+/)
+  if (!numPart) return false
+  const num = parseInt(numPart[0], 10)
+  return num >= min && num <= max
+}
+
+const REMOTE_BLOCKS: RemoteBlock[] = [
+  // United States
+  { country: 'US', region: 'Alaska', test: (p) => inNumericRange(p, 99501, 99950) },
+  { country: 'US', region: 'Hawaii', test: (p) => inNumericRange(p, 96701, 96898) },
+  { country: 'US', region: 'Puerto Rico & US Virgin Islands', test: (p) =>
+      inNumericRange(p, 600, 988) || inNumericRange(p, 801, 851) },
+  { country: 'US', region: 'Guam & Northern Mariana Is.', test: (p) => inNumericRange(p, 96910, 96952) },
+  { country: 'US', region: 'APO / FPO Military Addresses', test: (p) =>
+      inNumericRange(p, 9000, 9999) || inNumericRange(p, 96200, 96699) },
+
+  // United Kingdom
+  { country: 'GB', region: 'Northern Ireland', test: (p) => inUkPrefixRange(p, 'BT', 1, 94) },
+  { country: 'GB', region: 'Scottish Highlands & Islands', test: (p) =>
+      inUkPrefixRange(p, 'HS', 1, 9) ||
+      inUkPrefixRange(p, 'IV', 1, 56) ||
+      inUkPrefixRange(p, 'KW', 1, 17) ||
+      inUkPrefixRange(p, 'PA', 20, 78) ||
+      inUkPrefixRange(p, 'PH', 19, 50) ||
+      inUkPrefixRange(p, 'ZE', 1, 3) ||
+      inUkPrefixRange(p, 'FK', 17, 21) },
+  { country: 'GB', region: 'Isle of Man & Scilly Isles', test: (p) =>
+      inUkPrefixRange(p, 'IM', 1, 9) || inUkPrefixRange(p, 'TR', 21, 25) },
+  { country: 'GB', region: 'Channel Islands', test: (p) =>
+      inUkPrefixRange(p, 'GY', 1, 10) || inUkPrefixRange(p, 'JE', 1, 4) },
+
+  // Canada
+  { country: 'CA', region: 'Northern Territories', test: (p) => {
+      const normalized = p.toUpperCase().replace(/\s/g, '')
+      return /^[YX]0[A-Z]/.test(normalized)
+    } },
+  { country: 'CA', region: 'Rural / fly-in postcodes', test: (p) => {
+      const normalized = p.toUpperCase().replace(/\s/g, '')
+      return /^[A-Z]0[A-Z]\d[A-Z]\d$/.test(normalized) || /^[A-Z]0[A-Z]/.test(normalized)
+    } },
+
+  // Australia
+  { country: 'AU', region: 'Outback Northern Territory', test: (p) => inNumericRange(p, 800, 899) },
+  { country: 'AU', region: 'Offshore Territories', test: (p) => {
+      const digits = p.replace(/\D/g, '')
+      return ['2898', '2899', '6798', '6799'].includes(digits)
+    } },
+  { country: 'AU', region: 'Remote WA, QLD & TAS Outer', test: (p) =>
+      inNumericRange(p, 6700, 6797) || inNumericRange(p, 4700, 4899) || inNumericRange(p, 7000, 7499) },
+
+  // France
+  { country: 'FR', region: 'Corsica', test: (p) => inNumericRange(p, 20000, 20999) },
+  { country: 'FR', region: 'DOM-TOM Overseas', test: (p) =>
+      inNumericRange(p, 97100, 97899) || inNumericRange(p, 98400, 98899) },
+
+  // Germany
+  { country: 'DE', region: 'North Sea & Baltic Islands', test: (p) => {
+      const digits = p.replace(/\D/g, '')
+      const exact = ['18565', '25849', '25859', '25863', '25869', '27498']
+      if (exact.includes(digits)) return true
+      return inNumericRange(p, 25929, 25999) || inNumericRange(p, 26465, 26579)
+    } },
+
+  // Netherlands
+  { country: 'NL', region: 'Wadden Islands', test: (p) =>
+      inNumericRange(p, 1790, 1797) || inNumericRange(p, 8881, 8899) || inNumericRange(p, 9160, 9179) },
+
+  // Japan — format like "901-3300"; strip dash and compare digit string
+  { country: 'JP', region: 'Okinawa Outer Islands', test: (p) => {
+      const digits = p.replace(/\D/g, '')
+      return digits.length === 7 && digits >= '9013300' && digits <= '9071800'
+    } },
+  { country: 'JP', region: 'Izu & Ogasawara Islands', test: (p) => {
+      const digits = p.replace(/\D/g, '')
+      return digits.length === 7 && digits >= '1000100' && digits <= '1002101'
+    } },
+
+  // South Korea
+  { country: 'KR', region: 'Jeju Island & Ulleungdo', test: (p) =>
+      inNumericRange(p, 63000, 63644) || inNumericRange(p, 40200, 40240) },
+
+  // Singapore
+  { country: 'SG', region: 'Sentosa Island', test: (p) => inNumericRange(p, 98000, 98999) },
+  { country: 'SG', region: 'Jurong Island', test: (p) => inNumericRange(p, 627000, 629999) },
+
+  // Malaysia
+  { country: 'MY', region: 'East Malaysia (Sabah & Sarawak)', test: (p) =>
+      inNumericRange(p, 88000, 91399) || inNumericRange(p, 93000, 98899) },
+]
+
+export function isRemoteBlockedPostalCode(countryCode: string, postalCode: string): boolean {
+  if (!postalCode) return false
+  return REMOTE_BLOCKS.some((block) => block.country === countryCode && block.test(postalCode))
 }
