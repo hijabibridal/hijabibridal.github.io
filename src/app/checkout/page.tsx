@@ -344,12 +344,14 @@ export default function CheckoutPage() {
       <div ref={paypalContainerRef} style={{ display: canCheckout ? 'block' : 'none' }}></div>
 
       {canCheckout && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src="/images/card_logos.png"
-          alt="We accept Visa, Mastercard, American Express, and Discover"
-          style={{ height: 28, marginTop: 8 }}
-        />
+        <div className="flex justify-center mt-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/card_logos.png"
+            alt="We accept Visa, Mastercard, American Express, and Discover"
+            style={{ height: 28 }}
+          />
+        </div>
       )}
 
       {canCheckout && (
