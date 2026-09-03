@@ -36,10 +36,23 @@ export default function CheckoutPage() {
   const { items, subtotal, itemCount, clearCart } = useCart()
   const router = useRouter()
   const paypalContainerRef = useRef<HTMLDivElement>(null)
+  const addressInputRef = useRef<HTMLInputElement>(null)
   const [sdkStatus, setSdkStatus] = useState('idle')
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
 
-  const fieldError = (field: keyof FormState) => !form[field]
+  // Only starts flagging fields red once a country's been picked — showing
+  // everything red on a blank page reads as pressuring for info before the
+  // visitor's done anything. Email/phone also check actual format, not
+  // just presence.
+  const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const isFieldInvalid = (field: keyof FormState) => {
+    const value = form[field]
+    if (!value) return true
+    if (field === 'email') return !EMAIL_PATTERN.test(value)
+    if (field === 'phone') return value.replace(/\D/g, '').length < 7
+    return false
+  }
+  const fieldError = (field: keyof FormState) => !!form.countryCode && isFieldInvalid(field)
   const fieldClass = (field: keyof FormState, base: string) =>
     `${base} ${fieldError(field) ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`
 
@@ -55,8 +68,8 @@ export default function CheckoutPage() {
   // Phone is now required — LingXing's fulfillment API rejects orders
   // without a recipient phone number.
   const requiredFieldsFilled =
-    form.fullName && form.email && form.phone && form.line1 && form.city &&
-    form.postalCode && form.countryCode
+    form.fullName && !isFieldInvalid('email') && !isFieldInvalid('phone') &&
+    form.line1 && form.city && form.postalCode && form.countryCode
 
   const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked
 
@@ -235,6 +248,59 @@ export default function CheckoutPage() {
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
   }
 
+  // ─── Google Places Autocomplete on the address field ──────────────
+  // ⚠️ Requires a real Google Places API key (Google Cloud Console →
+  // enable "Places API" → generate a key) — set it below. Won't show
+  // suggestions until that key exists. Restricted to whichever country
+  // is currently selected, so results are relevant rather than global.
+  const GOOGLE_PLACES_API_KEY = 'YOUR_GOOGLE_PLACES_API_KEY'
+
+  useEffect(() => {
+    if (!form.countryCode || GOOGLE_PLACES_API_KEY === 'YOUR_GOOGLE_PLACES_API_KEY') return
+
+    const scriptId = 'google-places-script'
+    const initAutocomplete = () => {
+      if (!addressInputRef.current || !(window as any).google) return
+      const autocomplete = new (window as any).google.maps.places.Autocomplete(addressInputRef.current, {
+        componentRestrictions: { country: form.countryCode.toLowerCase() },
+        fields: ['address_components', 'formatted_address'],
+      })
+
+      autocomplete.addListener('place_changed', () => {
+        const place = autocomplete.getPlace()
+        const components = place.address_components || []
+
+        const getComponent = (type: string) =>
+          components.find((c: any) => c.types.includes(type))?.long_name || ''
+
+        const streetNumber = getComponent('street_number')
+        const route = getComponent('route')
+        const city = getComponent('locality') || getComponent('postal_town')
+        const state = getComponent('administrative_area_level_1')
+        const postalCode = getComponent('postal_code')
+
+        setForm((prev) => ({
+          ...prev,
+          line1: [streetNumber, route].filter(Boolean).join(' ') || prev.line1,
+          city: city || prev.city,
+          state: state || prev.state,
+          postalCode: postalCode || prev.postalCode,
+        }))
+      })
+    }
+
+    if ((window as any).google) {
+      initAutocomplete()
+    } else if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script')
+      script.id = scriptId
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_PLACES_API_KEY}&libraries=places`
+      script.async = true
+      script.onload = initAutocomplete
+      document.body.appendChild(script)
+    }
+  }, [form.countryCode])
+
   if (itemCount === 0) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center">
@@ -261,14 +327,26 @@ export default function CheckoutPage() {
 
       <h2 className="text-xl font-bold mb-4">Shipping & Contact Info</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <select value={form.countryCode} onChange={handleChange('countryCode')}
+          className={`${fieldClass('countryCode', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")}`}>
+          <option value="">Select Country</option>
+          {SUPPORTED_COUNTRIES.map((c) => (
+            <option key={c.code} value={c.code}>{c.name}</option>
+          ))}
+        </select>
         <input placeholder="Full Name" value={form.fullName} onChange={handleChange('fullName')}
           className={fieldClass('fullName', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")} />
         <input placeholder="Email Address" type="email" value={form.email} onChange={handleChange('email')}
           className={fieldClass('email', "border rounded-lg px-3 py-2 text-sm")} />
         <input placeholder="Phone Number" value={form.phone} onChange={handleChange('phone')}
           className={fieldClass('phone', "border rounded-lg px-3 py-2 text-sm")} />
-        <input placeholder="Address Line 1" value={form.line1} onChange={handleChange('line1')}
-          className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")} />
+        <input
+          ref={addressInputRef}
+          placeholder="Start typing your address..."
+          value={form.line1}
+          onChange={handleChange('line1')}
+          className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")}
+        />
         <input placeholder="Address Line 2 (optional)" value={form.line2} onChange={handleChange('line2')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
         <input placeholder="City" value={form.city} onChange={handleChange('city')}
@@ -277,13 +355,6 @@ export default function CheckoutPage() {
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm" />
         <input placeholder="Postal / Zip Code" value={form.postalCode} onChange={handleChange('postalCode')}
           className={fieldClass('postalCode', "border rounded-lg px-3 py-2 text-sm")} />
-        <select value={form.countryCode} onChange={handleChange('countryCode')}
-          className={fieldClass('countryCode', "border rounded-lg px-3 py-2 text-sm")}>
-          <option value="">Select Country</option>
-          {SUPPORTED_COUNTRIES.map((c) => (
-            <option key={c.code} value={c.code}>{c.name}</option>
-          ))}
-        </select>
       </div>
 
       {shippingStatus === 'unsupported' && (

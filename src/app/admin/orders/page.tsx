@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-const BACKEND_BASE = 'https://hijabi-bridal-backend.netlify.app'
+const BACKEND_BASE = 'https://hijabi-bridal-cloudflare.nooradrip.workers.dev'
 
 type Order = {
   orderId: string
@@ -42,7 +42,7 @@ export default function AdminOrdersPage() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch(`${BACKEND_BASE}/.netlify/functions/list-orders`, {
+      const res = await fetch(`${BACKEND_BASE}/list-orders`, {
         headers: { 'x-admin-password': pw },
       })
       if (res.status === 401) {
@@ -67,7 +67,7 @@ export default function AdminOrdersPage() {
   const updateStatus = async (orderId: string, status: string) => {
     const tracking = trackingInputs[orderId] || { number: '', carrier: '', url: '' }
     try {
-      await fetch(`${BACKEND_BASE}/.netlify/functions/update-order-status`, {
+      await fetch(`${BACKEND_BASE}/update-order-status`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-admin-password': password },
         body: JSON.stringify({
@@ -128,8 +128,6 @@ export default function AdminOrdersPage() {
               </span>
             </div>
 
-            {/* Full shipping info — backup reference in case LingXing data is
-                ever wrong, missing, or needs a manual double-check. */}
             <div className="bg-gray-50 rounded-lg p-3 mb-3 text-sm text-gray-700">
               <p className="font-bold text-xs uppercase text-gray-500 mb-1">Shipping Address</p>
               <p>{order.addressLine1}</p>
@@ -149,7 +147,6 @@ export default function AdminOrdersPage() {
               ))}
             </div>
 
-            {/* Tracking fields — only relevant for the "Shipped" action */}
             <div className="grid grid-cols-3 gap-2 mb-3">
               <input
                 placeholder="Tracking number"

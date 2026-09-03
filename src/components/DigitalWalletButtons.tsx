@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const BACKEND_BASE = 'https://hijabi-bridal-backend.netlify.app'
+const BACKEND_BASE = 'https://hijabi-bridal-cloudflare.nooradrip.workers.dev'
 
 type DigitalWalletButtonsProps = {
   createOrderPayload: () => any
@@ -11,7 +11,7 @@ type DigitalWalletButtonsProps = {
 }
 
 async function createRealOrder(orderRequestBody: any) {
-  const createResponse = await fetch(`${BACKEND_BASE}/.netlify/functions/create-order`, {
+  const createResponse = await fetch(`${BACKEND_BASE}/create-order`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(orderRequestBody),
@@ -24,7 +24,7 @@ async function createRealOrder(orderRequestBody: any) {
 }
 
 async function captureRealOrder(orderId: string) {
-  const captureResponse = await fetch(`${BACKEND_BASE}/.netlify/functions/capture-order`, {
+  const captureResponse = await fetch(`${BACKEND_BASE}/capture-order`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ orderId }),
@@ -120,11 +120,6 @@ export default function DigitalWalletButtons({
     document.body.appendChild(googleScript)
 
     // ─── Apple Pay ─────────────────────────────────────────────────
-    // ⚠️ Requires a domain-verification file hosted on your live site and
-    // registered in PayPal's dashboard, plus PayPal's own production
-    // onboarding for Apple Pay (same "capabilities=APPLE_PAY" activation
-    // pattern we've been fighting for Google Pay). Code alone will not
-    // make this functional. Testable only on a real Apple device in Safari.
     const applePaySessionAvailable =
       typeof (window as any).ApplePaySession !== 'undefined' &&
       (window as any).ApplePaySession.canMakePayments()
