@@ -254,19 +254,13 @@ export default function CheckoutPage() {
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
   }
 
-  // Runs when the visitor leaves the address field — not on every
+  // Runs once, when the visitor leaves the address field — not on every
   // keystroke. This is the only point (besides picking a real suggestion)
-  // where we touch React state for this field.
-  // ⚠️ Reading the raw typed text (as opposed to a selected place) from
-  // this newer element isn't as clearly documented as the old widget —
-  // this is my best attempt, but the manual-entry fallback path
-  // specifically may need one more adjustment once tested live.
+  // where we touch React state for this field, which is what keeps
+  // Google's own script from fighting with React while typing.
   const handleAddressBlur = () => {
-    const el = placeAutocompleteRef.current
-    const domValue = el?.value ?? el?.shadowRoot?.querySelector('input')?.value ?? ''
-    if (domValue) {
-      setForm((prev) => ({ ...prev, line1: domValue }))
-    }
+    const domValue = addressInputRef.current?.value || ''
+    setForm((prev) => ({ ...prev, line1: domValue }))
     setAddressTouched(true)
     if (userEditedSinceConfirm.current) {
       setAddressConfirmedByAutocomplete(false)
@@ -274,54 +268,49 @@ export default function CheckoutPage() {
   }
 
   // ─── Google Places Autocomplete on the address field ──────────────
-  // Using PlaceAutocompleteElement (Google's current recommended API) —
-  // the older google.maps.places.Autocomplete class used previously is
-  // no longer provisioned for new Google Cloud projects as of March
-  // 2025, which is very likely why it behaved erratically. This is a
-  // self-contained web component rather than something attached to a
-  // plain <input>, so it's appended into a container div instead.
+  // ⚠️ Requires a real Google Places API key (Google Cloud Console →
+  // enable "Places API" → generate a key) — set it below. Won't show
+  // suggestions until that key exists. Restricted to whichever country
+  // is currently selected, so results are relevant rather than global.
   const GOOGLE_PLACES_API_KEY = 'AIzaSyCVzmLmZNb7moxks70aP9EXm9Qd-lWKXJA'
-  const placeAutocompleteRef = useRef<any>(null)
 
   useEffect(() => {
-    if (!form.countryCode || !addressInputRef.current) return
+    if (!form.countryCode) return
 
     const scriptId = 'google-places-script'
+    const initAutocomplete = () => {
+      if (!addressInputRef.current || !(window as any).google) return
+      const inputEl = addressInputRef.current
 
-    const initAutocomplete = async () => {
-      const container = addressInputRef.current as any
-      if (!container || !(window as any).google) return
-
-      // Clear out any previous instance before creating a new one
-      // (e.g. when the country changes and we need new restrictions).
-      container.innerHTML = ''
-
-      const { PlaceAutocompleteElement } = await (window as any).google.maps.importLibrary('places')
-      const placeAutocomplete = new PlaceAutocompleteElement({
-        includedRegionCodes: [form.countryCode.toLowerCase()],
+      const autocomplete = new (window as any).google.maps.places.Autocomplete(inputEl, {
+        componentRestrictions: { country: form.countryCode.toLowerCase() },
+        fields: ['address_components', 'formatted_address'],
       })
-      placeAutocomplete.id = 'address-autocomplete'
-      placeAutocomplete.style.width = '100%'
-      container.appendChild(placeAutocomplete)
-      placeAutocompleteRef.current = placeAutocomplete
 
-      // Standard DOM listener rather than a React prop — Google's own
-      // docs specifically recommend this, since React's synthetic event
-      // system doesn't reliably handle custom Web Component events.
-      placeAutocomplete.addEventListener('gmp-select', async ({ placePrediction }: any) => {
-        const place = placePrediction.toPlace()
-        await place.fetchFields({ fields: ['addressComponents', 'formattedAddress'] })
+      // A plain native listener — updates a ref only, never React state,
+      // so it can never collide with Google's own per-keystroke DOM work.
+      // Just marks "the user has changed something since the last
+      // confirmed selection" for handleAddressBlur to check later.
+      inputEl.addEventListener('input', () => {
+        userEditedSinceConfirm.current = true
+      })
 
-        const components = place.addressComponents || []
-        if (!components.length) return
+      autocomplete.addListener('place_changed', () => {
+        const place = autocomplete.getPlace()
+        const components = place.address_components || []
 
+        if (!components.length) {
+          // User pressed Enter/clicked away without picking a real
+          // suggestion — Places returns an empty result in that case.
+          return
+        }
         userEditedSinceConfirm.current = false
         setAddressConfirmedByAutocomplete(true)
         setManualAddressAccepted(false)
         setAddressTouched(true)
 
         const getComponent = (type: string) =>
-          components.find((c: any) => c.types.includes(type))?.longText || ''
+          components.find((c: any) => c.types.includes(type))?.long_name || ''
 
         const streetNumber = getComponent('street_number')
         const route = getComponent('route')
@@ -337,21 +326,14 @@ export default function CheckoutPage() {
           postalCode: postalCode || prev.postalCode,
         }))
       })
-
-      // The component has its own internal input — track edits on it
-      // the same low-frequency, ref-only way as before.
-      placeAutocomplete.addEventListener('input', () => {
-        userEditedSinceConfirm.current = true
-      })
-      placeAutocomplete.addEventListener('blur', handleAddressBlur)
     }
 
-    if ((window as any).google?.maps?.importLibrary) {
+    if ((window as any).google) {
       initAutocomplete()
     } else if (!document.getElementById(scriptId)) {
       const script = document.createElement('script')
       script.id = scriptId
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_PLACES_API_KEY}&loading=async&libraries=places`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_PLACES_API_KEY}&libraries=places`
       script.async = true
       script.onload = initAutocomplete
       document.body.appendChild(script)
@@ -398,14 +380,13 @@ export default function CheckoutPage() {
         <input placeholder="Phone Number" value={form.phone} onChange={handleChange('phone')}
           className={fieldClass('phone', "border rounded-lg px-3 py-2 text-sm")} />
         <div className="sm:col-span-2">
-          <div
+          <input
             ref={addressInputRef}
-            className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full min-h-[42px]")}
-          >
-            {!form.countryCode && (
-              <span className="text-gray-400">Select a country above first...</span>
-            )}
-          </div>
+            placeholder="Start typing your address..."
+            defaultValue={form.line1}
+            onBlur={handleAddressBlur}
+            className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full")}
+          />
           {addressTouched && form.line1 && !addressConfirmedByAutocomplete && (
             <div className="mt-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
               <p className="text-xs text-amber-800 mb-2">
