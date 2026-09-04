@@ -359,7 +359,7 @@ export default function CheckoutPage() {
           <input
             ref={addressInputRef}
             placeholder="Start typing your address..."
-            value={form.line1}
+            defaultValue={form.line1}
             onChange={handleChange('line1')}
             className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full")}
           />
