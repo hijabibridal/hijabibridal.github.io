@@ -37,7 +37,9 @@ export default function CheckoutPage() {
   const router = useRouter()
   const paypalContainerRef = useRef<HTMLDivElement>(null)
   const addressInputRef = useRef<HTMLInputElement>(null)
+  const userEditedSinceConfirm = useRef(false) // plain ref — never triggers a re-render
   const [addressConfirmedByAutocomplete, setAddressConfirmedByAutocomplete] = useState(false)
+  const [addressTouched, setAddressTouched] = useState(false)
   const [manualAddressAccepted, setManualAddressAccepted] = useState(false)
   const [sdkStatus, setSdkStatus] = useState('idle')
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
@@ -249,10 +251,20 @@ export default function CheckoutPage() {
   const handleChange = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
-    if (field === 'line1') {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }))
+  }
+
+  // Runs once, when the visitor leaves the address field — not on every
+  // keystroke. This is the only point (besides picking a real suggestion)
+  // where we touch React state for this field, which is what keeps
+  // Google's own script from fighting with React while typing.
+  const handleAddressBlur = () => {
+    const domValue = addressInputRef.current?.value || ''
+    setForm((prev) => ({ ...prev, line1: domValue }))
+    setAddressTouched(true)
+    if (userEditedSinceConfirm.current) {
       setAddressConfirmedByAutocomplete(false)
     }
-    setForm((prev) => ({ ...prev, [field]: e.target.value }))
   }
 
   // ─── Google Places Autocomplete on the address field ──────────────
@@ -268,9 +280,19 @@ export default function CheckoutPage() {
     const scriptId = 'google-places-script'
     const initAutocomplete = () => {
       if (!addressInputRef.current || !(window as any).google) return
-      const autocomplete = new (window as any).google.maps.places.Autocomplete(addressInputRef.current, {
+      const inputEl = addressInputRef.current
+
+      const autocomplete = new (window as any).google.maps.places.Autocomplete(inputEl, {
         componentRestrictions: { country: form.countryCode.toLowerCase() },
         fields: ['address_components', 'formatted_address'],
+      })
+
+      // A plain native listener — updates a ref only, never React state,
+      // so it can never collide with Google's own per-keystroke DOM work.
+      // Just marks "the user has changed something since the last
+      // confirmed selection" for handleAddressBlur to check later.
+      inputEl.addEventListener('input', () => {
+        userEditedSinceConfirm.current = true
       })
 
       autocomplete.addListener('place_changed', () => {
@@ -282,8 +304,10 @@ export default function CheckoutPage() {
           // suggestion — Places returns an empty result in that case.
           return
         }
+        userEditedSinceConfirm.current = false
         setAddressConfirmedByAutocomplete(true)
         setManualAddressAccepted(false)
+        setAddressTouched(true)
 
         const getComponent = (type: string) =>
           components.find((c: any) => c.types.includes(type))?.long_name || ''
@@ -360,10 +384,10 @@ export default function CheckoutPage() {
             ref={addressInputRef}
             placeholder="Start typing your address..."
             defaultValue={form.line1}
-            onChange={handleChange('line1')}
+            onBlur={handleAddressBlur}
             className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full")}
           />
-          {form.line1 && !addressConfirmedByAutocomplete && (
+          {addressTouched && form.line1 && !addressConfirmedByAutocomplete && (
             <div className="mt-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
               <p className="text-xs text-amber-800 mb-2">
                 Your address doesn't match our auto-complete records. Do you ship to the address you entered?

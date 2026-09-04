@@ -2,14 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-// --- EmailJS config ---
-// Service ID is set from what you gave me. You still need to fill in:
-// 1. EMAILJS_TEMPLATE_ID — from EmailJS dashboard → Email Templates
-// 2. EMAILJS_PUBLIC_KEY  — from EmailJS dashboard → Account → General
-const EMAILJS_SERVICE_ID = 'service_g0iivoj'
-const EMAILJS_TEMPLATE_ID = 'template_1ra81pg'
-const EMAILJS_PUBLIC_KEY = 'F6VfvNJX20W8urASX'
-const FEEDBACK_RECIPIENT = 'nooradrip@gmail.com'
+const BACKEND_BASE = 'https://hijabi-bridal-cloudflare.nooradrip.workers.dev'
 
 type OrderItem = {
   name: string
@@ -55,7 +48,6 @@ function formatAddress(addr: OrderSummary['shippingAddress']) {
 
 export default function ThankYouPage() {
   const [order, setOrder] = useState<OrderSummary | null>(null)
-  const [debugCapture, setDebugCapture] = useState<string | null>(null)
   const [feedback, setFeedback] = useState('')
   const [sendStatus, setSendStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
@@ -66,22 +58,6 @@ export default function ThankYouPage() {
     } catch (err) {
       console.error('Failed to read order summary:', err)
     }
-
-    try {
-      const rawCapture = localStorage.getItem('hijabi-bridal-debug-capture')
-      if (rawCapture) setDebugCapture(rawCapture)
-    } catch (err) {
-      console.error('Failed to read debug capture:', err)
-    }
-
-    // Load EmailJS SDK once, so the feedback box can send without a page reload.
-    const script = document.createElement('script')
-    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js'
-    script.async = true
-    script.onload = () => {
-      ;(window as any).emailjs.init(EMAILJS_PUBLIC_KEY)
-    }
-    document.body.appendChild(script)
   }, [])
 
   const fullAddress = order ? formatAddress(order.shippingAddress) : null
@@ -104,18 +80,23 @@ export default function ThankYouPage() {
       : 'N/A'
 
     try {
-      const emailjs = (window as any).emailjs
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        to_email: FEEDBACK_RECIPIENT,
-        name: order?.shippingName || 'Not provided',
-        email: order?.email || 'Not provided',
-        message: feedback,
-        order_summary: orderSummaryText,
+      const response = await fetch(`${BACKEND_BASE}/send-feedback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          customerName: order?.shippingName || 'Not provided',
+          customerEmail: order?.email || undefined,
+          orderSummaryText,
+          message: feedback,
+        }),
       })
+
+      if (!response.ok) throw new Error('Failed to send')
+
       setSendStatus('sent')
       setFeedback('')
     } catch (err) {
-      console.error('EmailJS send failed:', err)
+      console.error('Feedback send failed:', err)
       setSendStatus('error')
     }
   }
@@ -179,14 +160,6 @@ export default function ThankYouPage() {
                 <p className="text-gray-700">Shipping to: {order.shippingName}</p>
               )}
               {fullAddress && <p className="text-gray-700">{fullAddress}</p>}
-            </div>
-          )}
-
-          {/* TEMPORARY DEBUG PANEL — remove once payment issue is resolved */}
-          {debugCapture && (
-            <div className="mt-8 bg-gray-100 rounded-2xl p-4">
-              <p className="font-bold text-sm mb-2">Debug: Raw PayPal Capture Response</p>
-              <pre className="text-xs overflow-x-auto whitespace-pre-wrap break-all">{debugCapture}</pre>
             </div>
           )}
 
