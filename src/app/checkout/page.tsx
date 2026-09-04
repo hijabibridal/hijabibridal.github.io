@@ -37,6 +37,8 @@ export default function CheckoutPage() {
   const router = useRouter()
   const paypalContainerRef = useRef<HTMLDivElement>(null)
   const addressInputRef = useRef<HTMLInputElement>(null)
+  const [addressConfirmedByAutocomplete, setAddressConfirmedByAutocomplete] = useState(false)
+  const [manualAddressAccepted, setManualAddressAccepted] = useState(false)
   const [sdkStatus, setSdkStatus] = useState('idle')
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
 
@@ -71,7 +73,9 @@ export default function CheckoutPage() {
     form.fullName && !isFieldInvalid('email') && !isFieldInvalid('phone') &&
     form.line1 && form.city && form.postalCode && form.countryCode
 
-  const canCheckout = requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked
+  const addressConfirmed = addressConfirmedByAutocomplete || manualAddressAccepted
+  const canCheckout =
+    requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked && addressConfirmed
 
   const REQUIRED_FIELD_LABELS: { key: keyof FormState; label: string }[] = [
     { key: 'fullName', label: 'Full Name' },
@@ -245,6 +249,9 @@ export default function CheckoutPage() {
   const handleChange = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
+    if (field === 'line1') {
+      setAddressConfirmedByAutocomplete(false)
+    }
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
   }
 
@@ -253,10 +260,10 @@ export default function CheckoutPage() {
   // enable "Places API" → generate a key) — set it below. Won't show
   // suggestions until that key exists. Restricted to whichever country
   // is currently selected, so results are relevant rather than global.
-  const GOOGLE_PLACES_API_KEY = 'YOUR_GOOGLE_PLACES_API_KEY'
+  const GOOGLE_PLACES_API_KEY = 'AIzaSyCVzmLmZNb7moxks70aP9EXm9Qd-lWKXJA'
 
   useEffect(() => {
-    if (!form.countryCode || GOOGLE_PLACES_API_KEY === 'YOUR_GOOGLE_PLACES_API_KEY') return
+    if (!form.countryCode) return
 
     const scriptId = 'google-places-script'
     const initAutocomplete = () => {
@@ -269,6 +276,14 @@ export default function CheckoutPage() {
       autocomplete.addListener('place_changed', () => {
         const place = autocomplete.getPlace()
         const components = place.address_components || []
+
+        if (!components.length) {
+          // User pressed Enter/clicked away without picking a real
+          // suggestion — Places returns an empty result in that case.
+          return
+        }
+        setAddressConfirmedByAutocomplete(true)
+        setManualAddressAccepted(false)
 
         const getComponent = (type: string) =>
           components.find((c: any) => c.types.includes(type))?.long_name || ''
@@ -340,13 +355,30 @@ export default function CheckoutPage() {
           className={fieldClass('email', "border rounded-lg px-3 py-2 text-sm")} />
         <input placeholder="Phone Number" value={form.phone} onChange={handleChange('phone')}
           className={fieldClass('phone', "border rounded-lg px-3 py-2 text-sm")} />
-        <input
-          ref={addressInputRef}
-          placeholder="Start typing your address..."
-          value={form.line1}
-          onChange={handleChange('line1')}
-          className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")}
-        />
+        <div className="sm:col-span-2">
+          <input
+            ref={addressInputRef}
+            placeholder="Start typing your address..."
+            value={form.line1}
+            onChange={handleChange('line1')}
+            className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full")}
+          />
+          {form.line1 && !addressConfirmedByAutocomplete && (
+            <div className="mt-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
+              <p className="text-xs text-amber-800 mb-2">
+                Your address doesn't match our auto-complete records. Do you ship to the address you entered?
+              </p>
+              <label className="flex items-center gap-2 text-xs text-amber-800">
+                <input
+                  type="checkbox"
+                  checked={manualAddressAccepted}
+                  onChange={(e) => setManualAddressAccepted(e.target.checked)}
+                />
+                Yes, ship to the address I entered
+              </label>
+            </div>
+          )}
+        </div>
         <input placeholder="Address Line 2 (optional)" value={form.line2} onChange={handleChange('line2')}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
         <input placeholder="City" value={form.city} onChange={handleChange('city')}
@@ -415,7 +447,7 @@ export default function CheckoutPage() {
             <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>PayPal does not share your financial information with the merchant.</span>
+            <span>We don't share your financial information with the merchant.</span>
           </div>
         </div>
       )}
