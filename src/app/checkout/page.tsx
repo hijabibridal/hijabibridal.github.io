@@ -40,7 +40,7 @@ export default function CheckoutPage() {
   const [sdkStatus, setSdkStatus] = useState('idle')
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
 
-  // Only starts flagging fields red once a country's been picked — showing
+  // Only starts flagging fields red once postal/zip code is entered —
   // everything red on a blank page reads as pressuring for info before the
   // visitor's done anything. Email/phone also check actual format, not
   // just presence.
@@ -52,7 +52,7 @@ export default function CheckoutPage() {
     if (field === 'phone') return value.replace(/\D/g, '').length < 7
     return false
   }
-  const fieldError = (field: keyof FormState) => !!form.countryCode && isFieldInvalid(field)
+  const fieldError = (field: keyof FormState) => !!form.postalCode && isFieldInvalid(field)
   const fieldClass = (field: keyof FormState, base: string) =>
     `${base} ${fieldError(field) ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`
 
@@ -415,7 +415,7 @@ export default function CheckoutPage() {
             <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>We don't share your financial information with the merchant.</span>
+            <span>PayPal does not share your financial information with the merchant.</span>
           </div>
         </div>
       )}
