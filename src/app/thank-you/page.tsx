@@ -103,21 +103,62 @@ export default function ThankYouPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* Required PayPal confirmation language */}
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
-          Thank You For Your Payment
-        </h1>
-        <p className="text-lg text-gray-800">
-          Your transaction has been completed, and a receipt for your purchase has
-          been emailed to you.
-        </p>
-        <a
-          href="https://hijabibridal.github.io/shop/category/halal-nails"
-          className="inline-block mt-6 bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
-        >
-          Continue Shopping Halal Nails
-        </a>
+      {/* TOP: required PayPal confirmation language | feedback box —
+          now side by side on desktop, so both are visible immediately
+          without scrolling. */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+        <div>
+          <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
+            Thank You For Your Payment
+          </h1>
+          <p className="text-lg text-gray-800">
+            Your transaction has been completed, and a receipt for your purchase has
+            been emailed to you.
+          </p>
+          <a
+            href="https://hijabibridal.github.io/shop/category/halal-nails"
+            className="inline-block mt-6 bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
+          >
+            Continue Shopping Halal Nails
+          </a>
+        </div>
+
+        <div className="bg-pink-50/40 rounded-2xl p-6">
+          <h3 className="font-bold text-lg mb-3">
+            Questions? Or are you just excited about your order? We're hyped too!
+            Tell us all the details!
+          </h3>
+          <textarea
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+            placeholder="Tell us what you're most excited to wear these with..."
+            rows={4}
+            className="w-full rounded-lg border border-pink-200 p-3 mb-3"
+          />
+          <button
+            onClick={handleSendFeedback}
+            disabled={sendStatus === 'sending'}
+            style={{
+              backgroundColor: '#db2777',
+              color: '#fff',
+              fontWeight: 700,
+              padding: '10px 20px',
+              borderRadius: 6,
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            {sendStatus === 'sending' ? 'Sending...' : 'Send Feedback'}
+          </button>
+          {sendStatus === 'sent' && (
+            <p className="text-sm text-green-600 mt-2">Thanks — feedback sent!</p>
+          )}
+          {sendStatus === 'error' && (
+            <p className="text-sm text-red-600 mt-2">
+              Something went wrong sending that — try again in a moment.
+            </p>
+          )}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -144,7 +185,7 @@ export default function ThankYouPage() {
                     Your purchase includes {quantityWord(item.quantity)} 120 pack of
                     Halal Nails in your color choice. Each pack contains 5 different
                     colors. A 10 sheet pack of glue tabs (240 count) is also included.
-                    Free shipping in the continental United States.
+                    Shipping is free on your order!
                   </p>
                 </div>
               ))}
@@ -162,44 +203,6 @@ export default function ThankYouPage() {
               {fullAddress && <p className="text-gray-700">{fullAddress}</p>}
             </div>
           )}
-
-          {/* Feedback box */}
-          <div className="mt-12 bg-pink-50/40 rounded-2xl p-6">
-            <h3 className="font-bold text-lg mb-3">
-              Questions? Or are you just excited about your order? We're hyped too!
-              Tell us all the details!
-            </h3>
-            <textarea
-              value={feedback}
-              onChange={(e) => setFeedback(e.target.value)}
-              placeholder="Tell us what you're most excited to wear these with..."
-              rows={4}
-              className="w-full rounded-lg border border-pink-200 p-3 mb-3"
-            />
-            <button
-              onClick={handleSendFeedback}
-              disabled={sendStatus === 'sending'}
-              style={{
-                backgroundColor: '#db2777',
-                color: '#fff',
-                fontWeight: 700,
-                padding: '10px 20px',
-                borderRadius: 6,
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              {sendStatus === 'sending' ? 'Sending...' : 'Send Feedback'}
-            </button>
-            {sendStatus === 'sent' && (
-              <p className="text-sm text-green-600 mt-2">Thanks — feedback sent!</p>
-            )}
-            {sendStatus === 'error' && (
-              <p className="text-sm text-red-600 mt-2">
-                Something went wrong sending that — try again in a moment.
-              </p>
-            )}
-          </div>
         </div>
 
         {/* RIGHT: map */}
