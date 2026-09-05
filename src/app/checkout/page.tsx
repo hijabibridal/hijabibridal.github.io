@@ -307,6 +307,7 @@ export default function CheckoutPage() {
               {form.countryCode ? (
                 <AddressAutocomplete
                   countryCode={form.countryCode}
+                  value={form.line1}
                   className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full")}
                   onManualChange={handleAddressManualChange}
                   onAddressSelect={handleAddressSelect}
