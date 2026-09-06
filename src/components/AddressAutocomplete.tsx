@@ -24,6 +24,13 @@ type AddressAutocompleteProps = {
   }) => void
 }
 
+// A crude but effective session token — groups one continuous search
+// (from first keystroke to final selection) so Google's ranking can use
+// that context, same as Google's own docs recommend for relevance.
+function generateSessionToken() {
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`
+}
+
 export default function AddressAutocomplete({
   countryCode,
   className,
@@ -35,8 +42,8 @@ export default function AddressAutocomplete({
   const [showDropdown, setShowDropdown] = useState(false)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const sessionTokenRef = useRef<string>(generateSessionToken())
 
-  // Close the dropdown on outside click.
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
@@ -59,14 +66,16 @@ export default function AddressAutocomplete({
       return
     }
 
-    // Wait 300ms after the last keystroke before actually calling the
-    // backend — avoids firing a request on every single character.
     debounceRef.current = setTimeout(async () => {
       try {
         const response = await fetch(`${BACKEND_BASE}/address-autocomplete`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ input: newValue, countryCode }),
+          body: JSON.stringify({
+            input: newValue,
+            countryCode,
+            sessionToken: sessionTokenRef.current,
+          }),
         })
         const data = await response.json()
         setSuggestions(data.suggestions || [])
@@ -78,7 +87,6 @@ export default function AddressAutocomplete({
   }
 
   const handleSelect = async (suggestion: Suggestion) => {
-    setValue(suggestion.text)
     setShowDropdown(false)
     setSuggestions([])
 
@@ -86,15 +94,28 @@ export default function AddressAutocomplete({
       const response = await fetch(`${BACKEND_BASE}/address-details`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ placeId: suggestion.placeId }),
+        body: JSON.stringify({
+          placeId: suggestion.placeId,
+          sessionToken: sessionTokenRef.current,
+        }),
       })
       const data = await response.json()
       if (data.line1 || data.city || data.postalCode) {
+        // Show the clean street address in the box, not the raw
+        // suggestion text (which includes city/state/zip) — what's
+        // displayed should match what actually gets submitted.
+        setValue(data.line1 || suggestion.text)
         onAddressSelect(data)
+      } else {
+        setValue(suggestion.text)
       }
     } catch (err) {
       console.error('Address details request failed:', err)
+      setValue(suggestion.text)
     }
+
+    // Start a fresh session for the next search.
+    sessionTokenRef.current = generateSessionToken()
   }
 
   return (
