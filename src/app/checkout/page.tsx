@@ -12,7 +12,6 @@ import {
   FLAT_RATE_AMOUNT,
 } from '@/data/paypal-countries'
 import DigitalWalletButtons from '@/components/DigitalWalletButtons'
-import AddressAutocomplete from '@/components/AddressAutocomplete'
 
 type FormState = {
   fullName: string
@@ -37,10 +36,8 @@ export default function CheckoutPage() {
   const { items, subtotal, itemCount, clearCart } = useCart()
   const router = useRouter()
   const paypalContainerRef = useRef<HTMLDivElement>(null)
-  const [addressConfirmedByAutocomplete, setAddressConfirmedByAutocomplete] = useState(false)
-  const [addressTouched, setAddressTouched] = useState(false)
-  const [manualAddressAccepted, setManualAddressAccepted] = useState(false)
   const [sdkStatus, setSdkStatus] = useState('idle')
+  const [infoConfirmed, setInfoConfirmed] = useState(false)
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
 
   // Only starts flagging fields red once postal/zip code is entered —
@@ -73,9 +70,8 @@ export default function CheckoutPage() {
     form.fullName && !isFieldInvalid('email') && !isFieldInvalid('phone') &&
     form.line1 && form.city && form.postalCode && form.countryCode
 
-  const addressConfirmed = addressConfirmedByAutocomplete || manualAddressAccepted
   const canCheckout =
-    requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked && addressConfirmed
+    requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked
 
   const REQUIRED_FIELD_LABELS: { key: keyof FormState; label: string }[] = [
     { key: 'fullName', label: 'Full Name' },
@@ -247,30 +243,29 @@ export default function CheckoutPage() {
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
   }
 
-  // Fires on every keystroke inside the address field — marks it as
-  // no longer a confirmed autocomplete selection, and shows the
-  // fallback prompt once they've typed something real.
-  const handleAddressManualChange = (value: string) => {
-    setForm((prev) => ({ ...prev, line1: value }))
-    setAddressConfirmedByAutocomplete(false)
-    setAddressTouched(true)
-  }
+  const BACKEND_BASE = 'https://hijabi-bridal-cloudflare.nooradrip.workers.dev'
 
-  const handleAddressSelect = (data: { line1: string; city: string; state: string; postalCode: string }) => {
-    setForm((prev) => ({
-      ...prev,
-      line1: data.line1 || prev.line1,
-      city: data.city || prev.city,
-      state: data.state || prev.state,
-      // Zip is deliberately left out here — confirmed with a real,
-      // reproducible test that Google's data can return the wrong zip
-      // for a correctly-matched street/city (33178 instead of the
-      // actual 33195 for the same address). Street/city/state proved
-      // reliable and stay auto-filled; zip always requires manual entry.
-    }))
-    setAddressConfirmedByAutocomplete(true)
-    setManualAddressAccepted(false)
-    setAddressTouched(true)
+  const handleConfirmInfo = async (checked: boolean) => {
+    setInfoConfirmed(checked)
+    if (!checked) return
+
+    // This is the moment we know we have real, complete customer info —
+    // the natural trigger point to start the abandoned-cart clock. If
+    // they don't complete payment within 30 minutes, this becomes the
+    // basis for a follow-up email.
+    try {
+      await fetch(`${BACKEND_BASE}/capture-partial-checkout`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: form.email,
+          customerName: form.fullName,
+          items: items.map((i) => ({ name: i.name, sku: i.sku, quantity: i.quantity })),
+        }),
+      })
+    } catch (err) {
+      console.error('Failed to capture partial checkout:', err)
+    }
   }
 
   if (itemCount === 0) {
@@ -307,37 +302,8 @@ export default function CheckoutPage() {
             <input placeholder="Phone Number" value={form.phone} onChange={handleChange('phone')}
               className={fieldClass('phone', "border rounded-lg px-3 py-2 text-sm")} />
 
-            <div className="sm:col-span-2">
-              {form.countryCode ? (
-                <AddressAutocomplete
-                  countryCode={form.countryCode}
-                  className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm w-full")}
-                  onManualChange={handleAddressManualChange}
-                  onAddressSelect={handleAddressSelect}
-                />
-              ) : (
-                <input
-                  disabled
-                  placeholder="Select a country above first..."
-                  className="border border-gray-200 bg-gray-50 rounded-lg px-3 py-2 text-sm w-full text-gray-400"
-                />
-              )}
-              {addressTouched && form.line1 && !addressConfirmedByAutocomplete && (
-                <div className="mt-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
-                  <p className="text-xs text-amber-800 mb-2">
-                    Your address doesn't match our auto-complete records. Do you ship to the address you entered?
-                  </p>
-                  <label className="flex items-center gap-2 text-xs text-amber-800">
-                    <input
-                      type="checkbox"
-                      checked={manualAddressAccepted}
-                      onChange={(e) => setManualAddressAccepted(e.target.checked)}
-                    />
-                    Yes, ship to the address I entered
-                  </label>
-                </div>
-              )}
-            </div>
+            <input placeholder="Address Line 1" value={form.line1} onChange={handleChange('line1')}
+              className={fieldClass('line1', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")} />
 
             <input placeholder="Address Line 2 (optional)" value={form.line2} onChange={handleChange('line2')}
               className="border border-gray-300 rounded-lg px-3 py-2 text-sm sm:col-span-2" />
@@ -408,7 +374,35 @@ export default function CheckoutPage() {
             </p>
           )}
 
-          {canCheckout && (
+          {canCheckout && !infoConfirmed && (
+            <div className="bg-gray-50 rounded-2xl p-5 mb-4">
+              <h3 className="font-bold text-sm mb-3">Please review your information</h3>
+              <div className="text-sm text-gray-700 space-y-1 mb-4">
+                <p><span className="font-bold">Name:</span> {form.fullName}</p>
+                <p><span className="font-bold">Email:</span> {form.email}</p>
+                <p><span className="font-bold">Phone:</span> {form.phone}</p>
+                <p>
+                  <span className="font-bold">Address:</span> {form.line1}
+                  {form.line2 ? `, ${form.line2}` : ''}, {form.city}
+                  {form.state ? `, ${form.state}` : ''} {form.postalCode}
+                </p>
+                <p><span className="font-bold">Country:</span> {SUPPORTED_COUNTRIES.find((c) => c.code === form.countryCode)?.name}</p>
+                {form.deliveryInstructions && (
+                  <p><span className="font-bold">Delivery Instructions:</span> {form.deliveryInstructions}</p>
+                )}
+              </div>
+              <label className="flex items-center gap-2 text-sm font-bold">
+                <input
+                  type="checkbox"
+                  checked={infoConfirmed}
+                  onChange={(e) => handleConfirmInfo(e.target.checked)}
+                />
+                Is this correct?
+              </label>
+            </div>
+          )}
+
+          {canCheckout && infoConfirmed && (
             <div className="mb-3 text-xs text-gray-500 space-y-1.5">
               <div className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -425,9 +419,9 @@ export default function CheckoutPage() {
             </div>
           )}
 
-          <div ref={paypalContainerRef} style={{ display: canCheckout ? 'block' : 'none' }}></div>
+          <div ref={paypalContainerRef} style={{ display: canCheckout && infoConfirmed ? 'block' : 'none' }}></div>
 
-          {canCheckout && (
+          {canCheckout && infoConfirmed && (
             <div className="flex justify-center mt-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -438,7 +432,7 @@ export default function CheckoutPage() {
             </div>
           )}
 
-          {canCheckout && (
+          {canCheckout && infoConfirmed && (
             <DigitalWalletButtons
               createOrderPayload={async () => buildOrderRequestBody()}
               onPaymentApproved={handleApprovedOrder}
@@ -462,7 +456,7 @@ export default function CheckoutPage() {
             </p>
           )}
 
-          {canCheckout && sdkStatus !== 'rendered' && sdkStatus !== 'paid' && (
+          {canCheckout && infoConfirmed && sdkStatus !== 'rendered' && sdkStatus !== 'paid' && (
             <p style={{ fontSize: 12, color: '#888' }}>paypal status: {sdkStatus}</p>
           )}
         </div>
