@@ -262,7 +262,11 @@ export default function CheckoutPage() {
       line1: data.line1 || prev.line1,
       city: data.city || prev.city,
       state: data.state || prev.state,
-      postalCode: data.postalCode || prev.postalCode,
+      // Zip is deliberately left out here — confirmed with a real,
+      // reproducible test that Google's data can return the wrong zip
+      // for a correctly-matched street/city (33178 instead of the
+      // actual 33195 for the same address). Street/city/state proved
+      // reliable and stay auto-filled; zip always requires manual entry.
     }))
     setAddressConfirmedByAutocomplete(true)
     setManualAddressAccepted(false)
@@ -398,7 +402,7 @@ export default function CheckoutPage() {
             <span>${total.toFixed(2)}</span>
           </div>
 
-          {!canCheckout && missingFields.length > 0 && (
+          {!!form.postalCode && !canCheckout && missingFields.length > 0 && (
             <p className="text-sm text-red-600 mb-4">
               Please fill in: {missingFields.join(', ')}
             </p>
