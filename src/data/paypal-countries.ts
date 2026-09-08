@@ -149,29 +149,31 @@ export const SUPPORTED_COUNTRIES = ALL_PAYPAL_COUNTRIES.filter(
 
 // --- Estimated transit time + carrier per country ---
 export const TRANSIT_TIMES: Record<string, { days: string; carrier: string }> = {
-  US: { days: '5–9 days', carrier: 'USPS' },
-  DE: { days: '8–12 days', carrier: 'DHL' },
-  FR: { days: '8–10 days', carrier: 'La Poste / Colissimo' },
-  NL: { days: '8–12 days', carrier: 'PostNL' },
-  BE: { days: '8–12 days', carrier: 'bpost' },
-  GB: { days: '4–7 days', carrier: 'Royal Mail / Evri' },
-  CA: { days: '7–12 days', carrier: 'Canada Post' },
-  AU: { days: '6–9 days', carrier: 'Australia Post' },
-  JP: { days: '3–6 days', carrier: 'Local Courier' },
-  KR: { days: '3–6 days', carrier: 'Local Courier' },
-  SG: { days: '4–7 days', carrier: 'SingPost' },
-  MY: { days: '4–7 days', carrier: 'Pos Malaysia' },
-  AT: { days: '5–10 days', carrier: 'DPD Austria' },
-  ES: { days: '7–12 days', carrier: 'Correos' },
-  IT: { days: '10–20 days', carrier: 'Local Courier' },
-  NZ: { days: '10-20 days', carrier: 'Local Courier' },
-  CH: { days: '12–18 days', carrier: 'Local Courier' }
+  US: { days: '5–9 business days', carrier: 'USPS' },
+  DE: { days: '8–12 business days', carrier: 'DHL' },
+  FR: { days: '8–10 business days', carrier: 'La Poste / Colissimo' },
+  NL: { days: '8–12 business days', carrier: 'PostNL' },
+  BE: { days: '8–12 business days', carrier: 'bpost' },
+  GB: { days: '4–7 business days', carrier: 'Royal Mail / Evri' },
+  CA: { days: '7–12 business days', carrier: 'Canada Post' },
+  AU: { days: '6–9 business days', carrier: 'Australia Post' },
+  JP: { days: '3–6 business days', carrier: 'Local Courier' },
+  KR: { days: '3–6 business days', carrier: 'Local Courier' },
+  SG: { days: '4–7 business days', carrier: 'SingPost' },
+  MY: { days: '4–7 business days', carrier: 'Pos Malaysia' },
+  AT: { days: '5–10 calendar days', carrier: 'DPD Austria' },
+  ES: { days: '7–13 calendar days', carrier: 'Correos' },
+  IT: { days: '10–20 calendar days', carrier: 'Local Courier' },
+  CH: { days: '14–18 calendar days', carrier: 'Local Courier' },
+  // NZ: ⚠️ Not added — no reliable transit time or carrier data found
+  // after two separate searches. Add this once you have a real source
+  // rather than leave a guessed figure on a live checkout page.
 }
 
 export function getTransitMessage(countryCode: string): string | null {
   const info = TRANSIT_TIMES[countryCode]
   if (!info) return null
-  return `Your package will be dispatched within 3 days and be delivered to you via ${info.carrier} in ${info.days} thereafter. Usually on the sooner end!`
+  return `Your package will be dispatched within 3 days and be delivered to you via ${info.carrier} in ${info.days} thereafter.`
 }
 
 // --- Remote-area postal code blocking ---

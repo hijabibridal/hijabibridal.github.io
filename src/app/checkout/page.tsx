@@ -299,7 +299,7 @@ export default function CheckoutPage() {
         <div>
           <h2 className="text-xl font-bold mb-2">Shipping & Contact Info</h2>
           <p className="text-sm text-gray-600 mb-4">
-            Free shipping includes customs fees for all countries and VAT for UK/EU orders — no surprise charges at delivery.
+            Your order includes customs fees for all countries and VAT for UK/EU orders. We pay it. No surprise charges at delivery.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <select value={form.countryCode} onChange={handleChange('countryCode')}
@@ -334,16 +334,6 @@ export default function CheckoutPage() {
               We don't currently deliver to your area — please check back soon!
             </p>
           )}
-          {shippingStatus === 'flat' && qualifiesForFreeShipping && (
-            <p className="text-sm text-green-700 bg-green-50 rounded-lg p-3 mb-6">
-              You've got free shipping for ordering 2 or more items!
-            </p>
-          )}
-          {shippingStatus === 'flat' && !qualifiesForFreeShipping && (
-            <p className="text-sm text-gray-700 bg-pink-50 rounded-lg p-3 mb-6">
-              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add one more item to get free shipping!
-            </p>
-          )}
           {postalBlocked && (
             <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
               {REMOTE_POSTAL_BLOCK_MESSAGE}
@@ -353,9 +343,6 @@ export default function CheckoutPage() {
             <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
               Orders shipped to this country are capped at ${purchaseCap.toFixed(2)} to avoid customs delays or unexpected duties. Please reduce your order to continue.
             </p>
-          )}
-          {!postalBlocked && transitMessage && (
-            <p className="text-sm text-gray-600 mb-6">{transitMessage}</p>
           )}
 
           <label className="block text-sm font-bold text-gray-800 mb-6">
@@ -382,10 +369,24 @@ export default function CheckoutPage() {
             ))}
           </div>
 
-          <div className="flex justify-between text-lg font-bold mb-8">
+          {shippingStatus === 'flat' && (
+            <div className="flex justify-between text-sm text-gray-600 mb-2">
+              <span>Shipping</span>
+              <span>{shippingCost === 0 ? 'FREE' : `$${shippingCost.toFixed(2)}`}</span>
+            </div>
+          )}
+
+          <div className="flex justify-between text-lg font-bold mb-2">
             <span>Total</span>
             <span>${total.toFixed(2)}</span>
           </div>
+
+          {/* Stays visible underneath the total throughout checkout,
+              including while a payment is processing — not gated by
+              canCheckout/infoConfirmed/sdkStatus. */}
+          {!postalBlocked && transitMessage && (
+            <p className="text-sm text-gray-600 mb-8">{transitMessage}</p>
+          )}
 
           {!!form.postalCode && !canCheckout && missingFields.length > 0 && (
             <p className="text-sm text-red-600 mb-4">

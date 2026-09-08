@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
+import { FLAT_RATE_AMOUNT } from '@/data/paypal-countries'
 
 export default function CartPage() {
   const { items, addItem, removeItem, updateQuantity, subtotal, itemCount } = useCart()
@@ -12,6 +13,7 @@ export default function CartPage() {
 
   const cartSlugs = new Set(items.map((i) => i.slug))
   const otherVariants = HALAL_NAILS_VARIANTS.filter((v) => !cartSlugs.has(v.slug))
+  const qualifiesForFreeShipping = itemCount >= 2
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
@@ -76,9 +78,29 @@ export default function CartPage() {
             ))}
           </div>
 
-          <div className="flex justify-between text-lg font-bold mb-8">
+          {qualifiesForFreeShipping ? (
+            <p className="font-bold text-sm text-green-700 bg-green-50 rounded-lg p-3 mb-8">
+              You've got free shipping for ordering 2 or more items!
+            </p>
+          ) : (
+            <p className="font-bold text-sm text-gray-800 bg-pink-50 rounded-lg p-3 mb-8">
+              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add one more item to get free shipping!
+            </p>
+          )}
+
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
             <span>Subtotal</span>
             <span>${subtotal.toFixed(2)}</span>
+          </div>
+
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Shipping</span>
+            <span>{qualifiesForFreeShipping ? 'FREE' : `$${FLAT_RATE_AMOUNT.toFixed(2)}`}</span>
+          </div>
+
+          <div className="flex justify-between text-lg font-bold mb-8">
+            <span>Total</span>
+            <span>${(subtotal + (qualifiesForFreeShipping ? 0 : FLAT_RATE_AMOUNT)).toFixed(2)}</span>
           </div>
 
           <button
