@@ -105,13 +105,33 @@ export const ALL_PAYPAL_COUNTRIES = [
 ]
 
 // --- Your shipping rules ---
-// SA and UAE cancelled per your instruction. FR/JP/KR/MY are here but
-// FLAGGED: order-webhook.js has no logistics channel configured for any
-// of these four yet — get codes from SPfulfillment before this goes live,
-// or remove them from this list until then.
-export const FREE_SHIPPING_COUNTRIES = ['US', 'DE', 'FR', 'NL', 'BE', 'GB', 'CA', 'AU', 'JP', 'KR', 'SG', 'MY']
-export const FLAT_RATE_COUNTRIES: string[] = []
-export const FLAT_RATE_AMOUNT = 3.0
+// SA and UAE cancelled per your instruction. No free-shipping countries
+// right now — every supported country pays the flat rate, EXCEPT orders
+// of 2+ items, which ship free (see qualifiesForFreeShipping in
+// checkout-page.tsx, applied on top of this).
+export const FREE_SHIPPING_COUNTRIES: string[] = []
+export const FLAT_RATE_COUNTRIES: string[] = ['US', 'DE', 'FR', 'NL', 'BE', 'GB', 'CH', 'IT', 'ES', 'AT', 'AU', 'JP', 'KR', 'SG', 'MY', 'CA', 'NZ']
+export const FLAT_RATE_AMOUNT = 10.0
+
+// --- Purchase caps ---
+// Maximum order (product subtotal, not including shipping) for
+// countries with low duty-free thresholds — keeps orders under the
+// point where customs duty/VAT or a customs hold becomes likely.
+// Mauritius is included now even though it's not yet in
+// FLAT_RATE_COUNTRIES above — ready to go the moment its LingXing
+// logistics code arrives.
+export const PURCHASE_CAPS: Record<string, number> = {
+  JP: 70,
+  MY: 100,
+  GB: 150,
+  KR: 150,
+  SG: 250,
+  MU: 200,
+}
+
+export function getPurchaseCap(countryCode: string): number | null {
+  return PURCHASE_CAPS[countryCode] ?? null
+}
 
 export type ShippingStatus = 'free' | 'flat' | 'unsupported'
 
@@ -129,18 +149,26 @@ export const SUPPORTED_COUNTRIES = ALL_PAYPAL_COUNTRIES.filter(
 
 // --- Estimated transit time + carrier per country ---
 export const TRANSIT_TIMES: Record<string, { days: string; carrier: string }> = {
-  US: { days: '5–9 business days', carrier: 'USPS' },
-  DE: { days: '8–12 business days', carrier: 'DHL' },
-  FR: { days: '8–10 business days', carrier: 'La Poste / Colissimo' },
-  NL: { days: '8–12 business days', carrier: 'PostNL' },
-  BE: { days: '8–12 business days', carrier: 'bpost' },
-  GB: { days: '4–7 business days', carrier: 'Royal Mail / Evri' },
-  CA: { days: '7–12 business days', carrier: 'Canada Post' },
-  AU: { days: '6–9 business days', carrier: 'Australia Post' },
-  JP: { days: '3–6 business days', carrier: 'Local Courier' },
-  KR: { days: '3–6 business days', carrier: 'Local Courier' },
-  SG: { days: '4–7 business days', carrier: 'SingPost' },
-  MY: { days: '4–7 business days', carrier: 'Pos Malaysia' },
+  US: { days: '5–9 days', carrier: 'USPS' },
+  DE: { days: '8–12 days', carrier: 'DHL' },
+  FR: { days: '8–10 days', carrier: 'La Poste / Colissimo' },
+  NL: { days: '8–12 days', carrier: 'PostNL' },
+  BE: { days: '8–12 days', carrier: 'bpost' },
+  GB: { days: '4–7 days', carrier: 'Royal Mail / Evri' },
+  CA: { days: '7–12 days', carrier: 'Canada Post' },
+  AU: { days: '6–9 days', carrier: 'Australia Post' },
+  JP: { days: '3–6 days', carrier: 'Local Courier' },
+  KR: { days: '3–6 days', carrier: 'Local Courier' },
+  SG: { days: '4–7 days', carrier: 'SingPost' },
+  MY: { days: '4–7 days', carrier: 'Pos Malaysia' },
+  AT: { days: '5–10 days', carrier: 'DPD Austria' },
+  ES: { days: '7–12 days', carrier: 'Correos' },
+  IT: { days: '10–20 days', carrier: 'Local Courier' },
+  NZ: { days: '10-20 days' carrier: 'Local Courier' },
+  CH: { days: '12–18 days', carrier: 'Local Courier' },
+  // NZ: ⚠️ Not added — no reliable transit time or carrier data found
+  // after two separate searches. Add this once you have a real source
+  // rather than leave a guessed figure on a live checkout page.
 }
 
 export function getTransitMessage(countryCode: string): string | null {

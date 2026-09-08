@@ -10,6 +10,7 @@ import {
   isRemoteBlockedPostalCode,
   REMOTE_POSTAL_BLOCK_MESSAGE,
   FLAT_RATE_AMOUNT,
+  getPurchaseCap,
 } from '@/data/paypal-countries'
 import DigitalWalletButtons from '@/components/DigitalWalletButtons'
 
@@ -61,8 +62,18 @@ export default function CheckoutPage() {
       ? isRemoteBlockedPostalCode(form.countryCode, form.postalCode)
       : false
   const transitMessage = form.countryCode ? getTransitMessage(form.countryCode) : null
-  const shippingCost = shippingStatus === 'flat' ? FLAT_RATE_AMOUNT : 0
+  // itemCount from useCart is already the sum of quantities across
+  // items (confirmed against CartContext.tsx).
+  const qualifiesForFreeShipping = itemCount >= 2
+  const shippingCost = qualifiesForFreeShipping ? 0 : shippingStatus === 'flat' ? FLAT_RATE_AMOUNT : 0
   const total = subtotal + shippingCost
+
+  // Purchase caps — keeps orders to certain countries under their
+  // duty-free threshold, to avoid customs holds or surprise VAT/duty.
+  // Based on the product subtotal, not the order total including
+  // shipping, since that's the customs-relevant transaction value.
+  const purchaseCap = form.countryCode ? getPurchaseCap(form.countryCode) : null
+  const overPurchaseCap = purchaseCap !== null && subtotal > purchaseCap
 
   // Phone is required — LingXing's fulfillment API rejects orders
   // without a recipient phone number.
@@ -71,7 +82,7 @@ export default function CheckoutPage() {
     form.line1 && form.city && form.postalCode && form.countryCode
 
   const canCheckout =
-    requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked
+    requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked && !overPurchaseCap
 
   const REQUIRED_FIELD_LABELS: { key: keyof FormState; label: string }[] = [
     { key: 'fullName', label: 'Full Name' },
@@ -286,7 +297,10 @@ export default function CheckoutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* LEFT COLUMN — shipping & contact form */}
         <div>
-          <h2 className="text-xl font-bold mb-4">Shipping & Contact Info</h2>
+          <h2 className="text-xl font-bold mb-2">Shipping & Contact Info</h2>
+          <p className="text-sm text-gray-600 mb-4">
+            Free shipping includes customs fees for all countries and VAT for UK/EU orders — no surprise charges at delivery.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <select value={form.countryCode} onChange={handleChange('countryCode')}
               className={fieldClass('countryCode', "border rounded-lg px-3 py-2 text-sm sm:col-span-2")}>
@@ -320,19 +334,24 @@ export default function CheckoutPage() {
               We don't currently deliver to your area — please check back soon!
             </p>
           )}
-          {shippingStatus === 'free' && (
+          {shippingStatus === 'flat' && qualifiesForFreeShipping && (
             <p className="text-sm text-green-700 bg-green-50 rounded-lg p-3 mb-6">
-              You've got free shipping on this order.
+              You've got free shipping for ordering 2 or more items!
             </p>
           )}
-          {shippingStatus === 'flat' && (
+          {shippingStatus === 'flat' && !qualifiesForFreeShipping && (
             <p className="text-sm text-gray-700 bg-pink-50 rounded-lg p-3 mb-6">
-              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order.
+              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add one more item to get free shipping!
             </p>
           )}
           {postalBlocked && (
             <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
               {REMOTE_POSTAL_BLOCK_MESSAGE}
+            </p>
+          )}
+          {overPurchaseCap && purchaseCap !== null && (
+            <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
+              Orders shipped to this country are capped at ${purchaseCap.toFixed(2)} to avoid customs delays or unexpected duties. Please reduce your order to continue.
             </p>
           )}
           {!postalBlocked && transitMessage && (
