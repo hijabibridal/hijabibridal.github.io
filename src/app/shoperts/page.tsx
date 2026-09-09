@@ -14,17 +14,19 @@ export default function PakistaniBridalPartnershipPage() {
     <main className="min-h-screen bg-white text-black font-sans">
 
       {/* Top Banner - swaps mobile vs. web image by breakpoint */}
-      <section className="w-full">
-        <img
-          src="/images/hijabi-bridal/banner-mobile.png"
-          alt="Shoperts x Hijabi Bridal - Your Complete Bridal Look, Perfectly Curated"
-          className="block md:hidden w-full h-auto"
-        />
-        <img
-          src="/images/hijabi-bridal/banner-web.png"
-          alt="Shoperts x Hijabi Bridal - Your Complete Bridal Look, Perfectly Curated"
-          className="hidden md:block w-full h-auto"
-        />
+      <section className="w-full px-4">
+        <div className="my-8 max-w-4xl mx-auto">
+          <img
+            src="/images/hijabi-bridal/banner-mobile.png"
+            alt="Shoperts x Hijabi Bridal - Your Complete Bridal Look, Perfectly Curated"
+            className="block md:hidden w-full h-auto rounded-2xl shadow-sm"
+          />
+          <img
+            src="/images/hijabi-bridal/banner-web.png"
+            alt="Shoperts x Hijabi Bridal - Your Complete Bridal Look, Perfectly Curated"
+            className="hidden md:block w-full h-auto rounded-2xl shadow-sm"
+          />
+        </div>
       </section>
 
       {/* Partnership Hero Announcement */}
