@@ -22,7 +22,7 @@ export default function PakistaniBridalPartnershipPage() {
             className="block md:hidden w-full h-auto rounded-2xl shadow-sm"
           />
           <img
-            src="/images/hijabi-bridal/banner-web.png"
+            src="/images/hijabi-bridal/banner-web.jpg"
             alt="Shoperts x Hijabi Bridal - Your Complete Bridal Look, Perfectly Curated"
             className="hidden md:block w-full h-auto rounded-2xl shadow-sm"
           />
