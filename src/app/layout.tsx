@@ -1,5 +1,6 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
+import Script from 'next/script'
 
 import Header from '../components/Layout/Header' 
 import Footer from '../components/Layout/Footer'
@@ -13,23 +14,13 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  // metadataBase is required for Next.js to resolve absolute URLs and for
-  // Google to correctly read og:site_name from the rendered HTML
   metadataBase: new URL('https://hijabibridal.github.io'),
-
-  // title.template applies "| Hijabi Bridal" to every child page automatically
   title: {
     default:  'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Halal Nails',
     template: '%s | Hijabi Bridal',
   },
-
   description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon. Free shipping, trusted seller.',
-
-  // applicationName is the field Next.js exposes to Google as the site name
   applicationName: 'Hijabi Bridal',
-
-  // alternates is the correct Next.js App Router way to emit hreflang tags.
-  // Putting <link> tags manually in <head> alongside this would create duplicates.
   alternates: {
     canonical: 'https://hijabibridal.github.io/',
     languages: {
@@ -37,7 +28,6 @@ export const metadata = {
       'x-default': 'https://hijabibridal.github.io/',
     },
   },
-
   openGraph: {
     siteName: 'Hijabi Bridal',
     title: 'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Dupattas',
@@ -52,14 +42,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // WebSite schema — the `name` field here is what Google uses for the
-  // Search result site name when no other signal overrides it
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Hijabi Bridal",
-    // alternateName removed — alternate names can confuse Google's site name
-    // picker and cause it to choose the wrong one (e.g. "GitHub")
     "url": "https://hijabibridal.github.io/",
     "description": "Premium Muslim wedding dresses, bridal hijabs, Muslim lehengas, and nikkah accessories curated for United States brides.",
     "potentialAction": {
@@ -93,8 +79,6 @@ export default function RootLayout({
       "Muslim lehenga",
       "Bridal hijab"
     ],
-    // Pinterest profile gives Google an independent external source to confirm
-    // "Hijabi Bridal" as the site name — this is a strong fix for the GitHub naming issue
     "sameAs": [
       "https://www.pinterest.com/HijabiBridal/"
     ]
@@ -105,7 +89,7 @@ export default function RootLayout({
       <head>
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="2LM4mclQm-UZp-Lft6E04fLlzcmmkafpqfNbMVntsqs" />
- 
+
         <meta name="p:domain_verify" content="3d6ce4e3a3471fdbc715788c9beb3a91"/>
 
         {/* Favicon & Icons */}
@@ -123,9 +107,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+      </head>
+      <body className="font-sans antialiased">
 
-        {/* Google Tag Manager */}
-        <script
+        {/* Google Tag Manager — uses Next.js Script for reliable loading on static export */}
+        <Script
+          id="gtm-script"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -134,13 +122,12 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-K885VPJ5');`,
           }}
         />
-      </head>
-      <body className="font-sans antialiased">
+
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-K885VPJ5"
-            height="0" 
-            width="0" 
+            height="0"
+            width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
@@ -150,6 +137,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </CartProvider>
+
       </body>
     </html>
   )
