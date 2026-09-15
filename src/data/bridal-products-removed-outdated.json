@@ -2345,15 +2345,10 @@ git commit -m "Your description here"
 git push origin main
 
 
-# Domain-specific commercial signals for South-Asian / modest bridal fashion
-DOMAIN_INTENT_SIGNALS = [
-    # garment types that are almost always purchase queries
-    "halal press on nails", "adhesive tabs",
-    # occasion-purchase triggers
-    "bridal", "bride", "wedding", "ramadan", "eid",
-    # descriptors that signal shopping intent in this category
-    "wudu", "easy",
-]
+python seo_pipeline_multiserp_global.py --skip US,CA          # skip multiple
+python seo_pipeline_multiserp_global.py --only DE,FR,IT,ES     # run only these (opposite of --skip)
+python seo_pipeline_multiserp_global.py                        # no flags = all 8 markets, same as before
+
 
 SEED_KEYWORDS = [
     "halal nails",
