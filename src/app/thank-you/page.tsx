@@ -49,6 +49,7 @@ function formatAddress(addr: OrderSummary['shippingAddress']) {
 export default function ThankYouPage() {
   const [order, setOrder] = useState<OrderSummary | null>(null)
   const [feedback, setFeedback] = useState('')
+  const [marketingConsent, setMarketingConsent] = useState(false)
   const [sendStatus, setSendStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   useEffect(() => {
@@ -61,6 +62,8 @@ export default function ThankYouPage() {
   }, [])
 
   const fullAddress = order ? formatAddress(order.shippingAddress) : null
+  const orderItemCount = order ? order.items.reduce((sum, i) => sum + i.quantity, 0) : 0
+  const hadFreeShipping = orderItemCount >= 2
 
   const mapEmbedSrc = fullAddress
     ? `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`
@@ -88,6 +91,7 @@ export default function ThankYouPage() {
           customerEmail: order?.email || undefined,
           orderSummaryText,
           message: feedback,
+          marketingConsent,
         }),
       })
 
@@ -95,6 +99,7 @@ export default function ThankYouPage() {
 
       setSendStatus('sent')
       setFeedback('')
+      setMarketingConsent(false)
     } catch (err) {
       console.error('Feedback send failed:', err)
       setSendStatus('error')
@@ -103,26 +108,17 @@ export default function ThankYouPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* TOP: required PayPal confirmation language | feedback box —
-          now side by side on desktop, so both are visible immediately
-          without scrolling. */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-        <div>
-          <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
-            Thank You For Your Payment
-          </h1>
-          <p className="text-lg text-gray-800">
-            Your transaction has been completed, and a receipt for your purchase has
-            been emailed to you.
-          </p>
-          <a
-            href="https://hijabibridal.github.io/shop/category/halal-nails"
-            className="inline-block mt-6 bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
-          >
-            Continue Shopping Halal Nails
-          </a>
-        </div>
+      {/* Required PayPal confirmation language */}
+      <div className="mb-10">
+        <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
+          Thank you for your order! We're so excited!!
+        </h1>
+        <p className="text-lg text-gray-800 mb-6">
+          Your transaction has been completed, and a receipt for your purchase has
+          been emailed to you.
+        </p>
 
+        {/* Feedback box — directly under the title now, full width */}
         <div className="bg-pink-50/40 rounded-2xl p-6">
           <h3 className="font-bold text-lg mb-3">
             Questions? Or are you just excited about your order? We're hyped too!
@@ -135,6 +131,14 @@ export default function ThankYouPage() {
             rows={4}
             className="w-full rounded-lg border border-pink-200 p-3 mb-3"
           />
+          <label className="flex items-center gap-2 text-sm text-gray-700 mb-3">
+            <input
+              type="checkbox"
+              checked={marketingConsent}
+              onChange={(e) => setMarketingConsent(e.target.checked)}
+            />
+            May we use your comments for marketing purposes without your name?
+          </label>
           <button
             onClick={handleSendFeedback}
             disabled={sendStatus === 'sending'}
@@ -159,6 +163,13 @@ export default function ThankYouPage() {
             </p>
           )}
         </div>
+
+        <a
+          href="https://hijabibridal.github.io/shop/category/halal-nails"
+          className="inline-block mt-6 bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
+        >
+          Continue Shopping Halal Nails
+        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -185,12 +196,20 @@ export default function ThankYouPage() {
                     Your purchase includes {quantityWord(item.quantity)} 120 pack of
                     Halal Nails in your color choice. Each pack contains 5 different
                     colors. A 10 sheet pack of glue tabs (240 count) is also included.
-                    Shipping is free on your order!
+                    {hadFreeShipping
+                      ? ' Shipping was free on your order!'
+                      : ' A flat shipping fee was applied to your order.'}
                   </p>
                 </div>
               ))}
 
               <p className="font-bold text-lg">Order Total: ${order.total}</p>
+              <p className="text-gray-700">
+                We'll email you once your order has processed and is ready to ship!
+              </p>
+              <p className="text-gray-700">
+                Questions? bridalhijabi@gmail.com
+              </p>
 
               {order.deliveryInstructions && (
                 <p className="text-gray-700">

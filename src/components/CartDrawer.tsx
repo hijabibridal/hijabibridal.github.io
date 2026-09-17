@@ -126,9 +126,6 @@ export default function CartDrawer() {
                       <Link href={v.url} className="text-xs font-bold hover:text-[#db2777]">
                         {v.color}
                       </Link>
-                      <p className="text-[11px] text-gray-500">
-                        {v.stock > 0 ? `${v.stock} in stock` : 'Out of Stock'}
-                      </p>
                     </div>
                     <button
                       disabled={v.stock <= 0}

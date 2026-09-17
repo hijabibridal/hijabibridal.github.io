@@ -65,7 +65,7 @@ export default function CheckoutPage() {
   // itemCount from useCart is already the sum of quantities across
   // items (confirmed against CartContext.tsx).
   const qualifiesForFreeShipping = itemCount >= 2
-  const shippingCost = qualifiesForFreeShipping ? 0 : shippingStatus === 'flat' ? FLAT_RATE_AMOUNT : 0
+  const shippingCost = qualifiesForFreeShipping ? 0 : FLAT_RATE_AMOUNT
   const total = subtotal + shippingCost
 
   // Purchase caps — keeps orders to certain countries under their
@@ -252,6 +252,9 @@ export default function CheckoutPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }))
+    // If they'd already confirmed their info and then change something,
+    // that confirmation is stale — make them review and confirm again.
+    setInfoConfirmed(false)
   }
 
   const BACKEND_BASE = 'https://hijabi-bridal-cloudflare.nooradrip.workers.dev'
@@ -369,12 +372,10 @@ export default function CheckoutPage() {
             ))}
           </div>
 
-          {shippingStatus === 'flat' && (
-            <div className="flex justify-between text-sm text-gray-600 mb-2">
-              <span>Shipping</span>
-              <span>{shippingCost === 0 ? 'FREE' : `$${shippingCost.toFixed(2)}`}</span>
-            </div>
-          )}
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Shipping</span>
+            <span>{shippingCost === 0 ? 'FREE' : `$${shippingCost.toFixed(2)}`}</span>
+          </div>
 
           <div className="flex justify-between text-lg font-bold mb-2">
             <span>Total</span>
@@ -422,7 +423,17 @@ export default function CheckoutPage() {
             </div>
           )}
 
-          {canCheckout && infoConfirmed && (
+          {/* Payment buttons, logos, and trust text are always visible now
+              so customers can see how they'll pay — but greyed out and
+              unclickable (via pointer-events: none) until the form is
+              actually complete and confirmed. */}
+          <div
+            style={{
+              opacity: canCheckout && infoConfirmed ? 1 : 0.4,
+              pointerEvents: canCheckout && infoConfirmed ? 'auto' : 'none',
+              transition: 'opacity 0.2s',
+            }}
+          >
             <div className="mb-3 text-xs text-gray-500 space-y-1.5">
               <div className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -437,11 +448,9 @@ export default function CheckoutPage() {
                 <span>PayPal doesn't share your financial information with the merchant.</span>
               </div>
             </div>
-          )}
 
-          <div ref={paypalContainerRef} style={{ display: canCheckout && infoConfirmed ? 'block' : 'none' }}></div>
+            <div ref={paypalContainerRef}></div>
 
-          {canCheckout && infoConfirmed && (
             <div className="flex justify-center mt-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -450,9 +459,7 @@ export default function CheckoutPage() {
                 style={{ height: 28 }}
               />
             </div>
-          )}
 
-          {canCheckout && infoConfirmed && (
             <DigitalWalletButtons
               createOrderPayload={async () => buildOrderRequestBody()}
               onPaymentApproved={handleApprovedOrder}
@@ -461,7 +468,7 @@ export default function CheckoutPage() {
                 setSdkStatus('declined')
               }}
             />
-          )}
+          </div>
 
           {sdkStatus === 'pending-review' && (
             <p className="text-sm text-amber-700 bg-amber-50 rounded-lg p-3 mt-3">
