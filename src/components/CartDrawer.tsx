@@ -28,14 +28,14 @@ export default function CartDrawer() {
       {/* Backdrop */}
       <div
         onClick={closeDrawer}
-        className={`fixed inset-0 bg-black/40 z-[60] transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/40 z-[9998] transition-opacity duration-300 ${
           isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       />
 
       {/* Sliding panel — half the viewport width on desktop, full width on mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-full sm:w-1/2 bg-white z-[70] shadow-2xl transition-transform duration-300 flex flex-col ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-1/2 bg-white z-[9999] shadow-2xl transition-transform duration-300 flex flex-col ${
           isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

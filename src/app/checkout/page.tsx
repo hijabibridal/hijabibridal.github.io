@@ -426,12 +426,20 @@ export default function CheckoutPage() {
           {/* Payment buttons, logos, and trust text are always visible now
               so customers can see how they'll pay — but greyed out and
               unclickable (via pointer-events: none) until the form is
-              actually complete and confirmed. */}
+              actually complete and confirmed.
+              isolation: 'isolate' is important here — PayPal's SDK uses
+              its own internal layering for its buttons that can ignore
+              normal page stacking order. Without this, PayPal's real
+              button can visually paint on top of other UI (like the
+              cart drawer) even while things behind it look normal. */}
           <div
             style={{
               opacity: canCheckout && infoConfirmed ? 1 : 0.4,
               pointerEvents: canCheckout && infoConfirmed ? 'auto' : 'none',
               transition: 'opacity 0.2s',
+              isolation: 'isolate',
+              position: 'relative',
+              zIndex: 0,
             }}
           >
             <div className="mb-3 text-xs text-gray-500 space-y-1.5">
