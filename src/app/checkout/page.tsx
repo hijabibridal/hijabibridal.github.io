@@ -84,17 +84,6 @@ export default function CheckoutPage() {
   const canCheckout =
     requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked && !overPurchaseCap
 
-  const REQUIRED_FIELD_LABELS: { key: keyof FormState; label: string }[] = [
-    { key: 'fullName', label: 'Full Name' },
-    { key: 'email', label: 'Email Address' },
-    { key: 'phone', label: 'Phone Number' },
-    { key: 'line1', label: 'Address Line 1' },
-    { key: 'city', label: 'City' },
-    { key: 'postalCode', label: 'Postal / Zip Code' },
-    { key: 'countryCode', label: 'Country' },
-  ]
-  const missingFields = REQUIRED_FIELD_LABELS.filter((f) => !form[f.key]).map((f) => f.label)
-
   const stateRef = useRef({ items, form, total, shippingCost })
   useEffect(() => {
     stateRef.current = { items, form, total, shippingCost }
@@ -387,12 +376,6 @@ export default function CheckoutPage() {
               canCheckout/infoConfirmed/sdkStatus. */}
           {!postalBlocked && transitMessage && (
             <p className="text-sm text-gray-600 mb-8">{transitMessage}</p>
-          )}
-
-          {!!form.postalCode && !canCheckout && missingFields.length > 0 && (
-            <p className="text-sm text-red-600 mb-4">
-              Please fill in: {missingFields.join(', ')}
-            </p>
           )}
 
           {canCheckout && !infoConfirmed && (
