@@ -291,7 +291,7 @@ export default function CheckoutPage() {
         <div>
           <h2 className="text-xl font-bold mb-2">Shipping & Contact Info</h2>
           <p className="text-sm text-gray-600 mb-4">
-            Your order includes customs fees for all countries and VAT for UK/EU orders. We pay it. No surprise charges at delivery.
+            We pay customs fees for all countries and VAT for UK/EU orders. No surprise charges at delivery.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <select value={form.countryCode} onChange={handleChange('countryCode')}
