@@ -108,73 +108,29 @@ export default function ThankYouPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* Required PayPal confirmation language */}
+      {/* Title + subtitle — always full width, on every screen size */}
       <div className="mb-10">
         <h1 className="text-3xl font-black uppercase tracking-tight mb-3">
           Thank you for your order! We're so excited!!
         </h1>
-        <p className="text-lg text-gray-800 mb-6">
+        <p className="text-lg text-gray-800">
           Your transaction has been completed, and a receipt for your purchase has
           been emailed to you.
         </p>
-
-        {/* Feedback box — directly under the title now, full width */}
-        <div className="bg-pink-50/40 rounded-2xl p-6">
-          <h3 className="font-bold text-lg mb-3">
-            Questions? Or are you just excited about your order? We're hyped too!
-            Tell us all the details!
-          </h3>
-          <textarea
-            value={feedback}
-            onChange={(e) => setFeedback(e.target.value)}
-            placeholder="Tell us what you're most excited to wear these with..."
-            rows={4}
-            className="w-full rounded-lg border border-pink-200 p-3 mb-3"
-          />
-          <label className="flex items-center gap-2 text-sm text-gray-700 mb-3">
-            <input
-              type="checkbox"
-              checked={marketingConsent}
-              onChange={(e) => setMarketingConsent(e.target.checked)}
-            />
-            May we use your comments for marketing purposes without your name?
-          </label>
-          <button
-            onClick={handleSendFeedback}
-            disabled={sendStatus === 'sending'}
-            style={{
-              backgroundColor: '#db2777',
-              color: '#fff',
-              fontWeight: 700,
-              padding: '10px 20px',
-              borderRadius: 6,
-              border: 'none',
-              cursor: 'pointer',
-            }}
-          >
-            {sendStatus === 'sending' ? 'Sending...' : 'Send Feedback'}
-          </button>
-          {sendStatus === 'sent' && (
-            <p className="text-sm text-green-600 mt-2">Thanks — feedback sent!</p>
-          )}
-          {sendStatus === 'error' && (
-            <p className="text-sm text-red-600 mt-2">
-              Something went wrong sending that — try again in a moment.
-            </p>
-          )}
-        </div>
-
-        <a
-          href="https://hijabibridal.github.io/shop/category/halal-nails"
-          className="inline-block mt-6 bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
-        >
-          Continue Shopping Halal Nails
-        </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* LEFT: order details */}
-        <div>
+      {/* Everything below uses explicit grid placement so mobile and
+          desktop can show a genuinely different order without needing
+          two separate copies of the feedback box (which would risk
+          drifting out of sync on future edits).
+          Desktop: Your Order (left, spans both rows) | Feedback (top
+          right) | Map (bottom right).
+          Mobile: Your Order, then Map, then Feedback last — controlled
+          by the order-* classes below, which desktop's explicit
+          row/col placement overrides. */}
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-10">
+        {/* Your Order */}
+        <div className="order-1 md:order-none md:col-start-1 md:row-start-1 md:row-span-2">
           <h2 className="text-xl font-bold mb-4">Your Order</h2>
 
           {!order && (
@@ -224,8 +180,56 @@ export default function ThankYouPage() {
           )}
         </div>
 
-        {/* RIGHT: map */}
-        <div>
+        {/* Feedback box — small, top of the right column on desktop;
+            last on the page on mobile */}
+        <div className="order-3 md:order-none md:col-start-2 md:row-start-1 bg-pink-50/40 rounded-2xl p-4">
+          <h3 className="font-bold text-sm mb-2">
+            Questions? Or are you just excited about your order? We're hyped too!
+            Tell us all the details!
+          </h3>
+          <textarea
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+            placeholder="Tell us what you're most excited to wear these with..."
+            rows={2}
+            className="w-full rounded-lg border border-pink-200 p-2 text-sm mb-2"
+          />
+          <label className="flex items-center gap-2 text-xs text-gray-700 mb-2">
+            <input
+              type="checkbox"
+              checked={marketingConsent}
+              onChange={(e) => setMarketingConsent(e.target.checked)}
+            />
+            May we use your comments for marketing purposes without your name?
+          </label>
+          <button
+            onClick={handleSendFeedback}
+            disabled={sendStatus === 'sending'}
+            style={{
+              backgroundColor: '#db2777',
+              color: '#fff',
+              fontWeight: 700,
+              padding: '8px 16px',
+              borderRadius: 6,
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: 13,
+            }}
+          >
+            {sendStatus === 'sending' ? 'Sending...' : 'Send Feedback'}
+          </button>
+          {sendStatus === 'sent' && (
+            <p className="text-sm text-green-600 mt-2">Thanks — feedback sent!</p>
+          )}
+          {sendStatus === 'error' && (
+            <p className="text-sm text-red-600 mt-2">
+              Something went wrong sending that — try again in a moment.
+            </p>
+          )}
+        </div>
+
+        {/* Map */}
+        <div className="order-2 md:order-none md:col-start-2 md:row-start-2">
           <h2 className="text-xl font-bold mb-4">Shipping To</h2>
           {mapEmbedSrc ? (
             <iframe
@@ -241,6 +245,16 @@ export default function ThankYouPage() {
             </div>
           )}
         </div>
+      </div>
+
+      {/* Continue shopping — all the way at the bottom now */}
+      <div className="mt-12 text-center">
+        <a
+          href="https://hijabibridal.github.io/shop/category/halal-nails"
+          className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
+        >
+          Continue Shopping Halal Nails
+        </a>
       </div>
     </div>
   )
