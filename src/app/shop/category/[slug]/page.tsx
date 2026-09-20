@@ -52,12 +52,36 @@ export default async function CategoryPage({ params }: PageProps) {
   const COLOR_PRIORITY = ['pink', 'red', 'green'];
   const TYPE_PRIORITY = ['sharara', 'muslim-lehenga', 'muslim-wedding-dresses'];
 
+  // Pinned products, per category slug — forced to the top, in this exact order,
+  // before the color/type sorting below runs. Only affects categories listed here;
+  // every other category is untouched.
+  const PINNED_PRODUCTS_BY_CATEGORY: Record<string, string[]> = {
+    'halal-nails': [
+      'halal-nails-pink-neutrals',
+      'hijabi-nails-glue-tabs',
+      'halal-nails-cool-neutrals',
+      'halal-nails-berries',
+    ],
+  };
+  const pinnedSlugs = PINNED_PRODUCTS_BY_CATEGORY[slug];
+
   const filteredProducts = productData.products
     .filter((p) => p.mainCategorySlugs.includes(slug))
     .sort((a, b) => {
+      if (pinnedSlugs) {
+        const aPinned = pinnedSlugs.indexOf(a.slug);
+        const bPinned = pinnedSlugs.indexOf(b.slug);
+        if (aPinned !== -1 || bPinned !== -1) {
+          if (aPinned !== -1 && bPinned !== -1) return aPinned - bPinned;
+          return aPinned !== -1 ? -1 : 1;
+        }
+      }
+
       const aNameRed = slug === 'red' && a.name.toLowerCase().includes('red');
       const bNameRed = slug === 'red' && b.name.toLowerCase().includes('red');
-      if (aNameRed !== bNameRed) return aNameRed ? -1 : 1;const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
+      if (aNameRed !== bNameRed) return aNameRed ? -1 : 1;
+
+      const aColorMatch = COLOR_PRIORITY.findIndex(color => a.mainCategorySlugs.includes(color));
       const bColorMatch = COLOR_PRIORITY.findIndex(color => b.mainCategorySlugs.includes(color));
       if (aColorMatch !== bColorMatch) {
         if (aColorMatch !== -1 && bColorMatch !== -1) return aColorMatch - bColorMatch;
@@ -201,7 +225,7 @@ export default async function CategoryPage({ params }: PageProps) {
                   <ol className="space-y-1.5 list-none">
                     {tocEntries.map((entry, i) => (
                       <li key={i}>
-                        <a
+                        
                           href={`#${entry.anchor}`}
                           className="text-sm font-medium text-gray-700 hover:text-pink-600 transition-colors flex items-start gap-2"
                         >

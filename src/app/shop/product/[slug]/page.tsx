@@ -260,7 +260,7 @@ export default async function ProductPage({ params }: PageProps) {
               <figure className="mb-8">
                 <figcaption className="text-gray-800 text-lg leading-relaxed border-l-4 border-pink-200 pl-6">
                   <div dangerouslySetInnerHTML={{ 
-                    __html: `<strong>${product.images[0]?.figcaption || ''}</strong><br/><br/>${introText}` 
+                    __html: `<strong>${product.images[0]?.figcaption || ''}</strong>` 
                   }} />
                 </figcaption>
               </figure>
@@ -268,11 +268,7 @@ export default async function ProductPage({ params }: PageProps) {
               {(product as any).suggestedAddOns && (product as any).suggestedAddOns.length >= 2 && (
                 <div className="mt-4 mb-8">
                   <p className="text-black font-bold mb-4 text-xl capitalize">
-                    This {
-                      product.mainCategorySlugs?.find(slug => 
-                        !colors.includes(slug.toLowerCase())
-                      )?.replace(/-/g, ' ') || 'style'
-                    } goes perfectly with these:
+                    Related Products:
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4">
@@ -296,6 +292,13 @@ export default async function ProductPage({ params }: PageProps) {
                     ))}
                   </div>
                 </div>
+              )}
+
+              {introText && (
+                <div
+                  className="text-gray-800 text-lg leading-relaxed mt-4 mb-8"
+                  dangerouslySetInnerHTML={{ __html: introText }}
+                />
               )}
 
               {/* --- SEWING PATTERN SECTION --- */}
