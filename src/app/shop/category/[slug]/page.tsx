@@ -225,7 +225,7 @@ export default async function CategoryPage({ params }: PageProps) {
                   <ol className="space-y-1.5 list-none">
                     {tocEntries.map((entry, i) => (
                       <li key={i}>
-                        
+                        <a
                           href={`#${entry.anchor}`}
                           className="text-sm font-medium text-gray-700 hover:text-pink-600 transition-colors flex items-start gap-2"
                         >
@@ -342,4 +342,4 @@ export default async function CategoryPage({ params }: PageProps) {
       )}
     </div>
   );
-} 
+}
