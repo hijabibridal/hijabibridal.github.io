@@ -1,8 +1,9 @@
 'use client'
 
+import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
 import { FLAT_RATE_AMOUNT } from '@/data/paypal-countries'
@@ -10,6 +11,43 @@ import { FLAT_RATE_AMOUNT } from '@/data/paypal-countries'
 export default function CartPage() {
   const { items, addItem, removeItem, updateQuantity, subtotal, itemCount } = useCart()
   const router = useRouter()
+  const searchParams = useSearchParams()
+
+  // Handles links like /cart?add=hnb1001:1,hnb1002:2 — used by the
+  // abandoned-cart email, which already knows exactly which SKU and
+  // quantity were left behind. Looks up the rest of the product's
+  // details (name, image, price) from HALAL_NAILS_VARIANTS by SKU,
+  // so the email only needs to encode the SKU and quantity, nothing
+  // else. Runs once on load; doesn't touch whatever's already in the
+  // cart otherwise — addItem's existing merge logic handles that.
+  useEffect(() => {
+    const addParam = searchParams.get('add')
+    if (!addParam) return
+
+    addParam.split(',').forEach((entry) => {
+      const [sku, qtyStr] = entry.split(':')
+      const quantity = parseInt(qtyStr, 10) || 1
+      const variant = HALAL_NAILS_VARIANTS.find((v) => v.sku === sku)
+      if (!variant) return
+
+      addItem({
+        slug: variant.slug,
+        name: variant.name,
+        price: BUNDLE_PRICE,
+        color: variant.color,
+        sku: variant.sku,
+        image: variant.image,
+        url: variant.url,
+      })
+      if (quantity > 1) {
+        updateQuantity(variant.slug, quantity)
+      }
+    })
+
+    // Clean the URL so a page refresh doesn't re-add the item again.
+    router.replace('/cart')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const cartSlugs = new Set(items.map((i) => i.slug))
   const otherVariants = HALAL_NAILS_VARIANTS.filter((v) => !cartSlugs.has(v.slug))
