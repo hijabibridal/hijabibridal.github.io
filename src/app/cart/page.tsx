@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -8,18 +8,14 @@ import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
 import { FLAT_RATE_AMOUNT } from '@/data/paypal-countries'
 
-export default function CartPage() {
-  const { items, addItem, removeItem, updateQuantity, subtotal, itemCount } = useCart()
+// Isolated specifically because useSearchParams() requires a Suspense
+// boundary for Next.js's static export build — without this split, the
+// build fails entirely rather than just this one piece being dynamic.
+function CartAutoAdd() {
+  const { addItem, updateQuantity } = useCart()
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  // Handles links like /cart?add=hnb1001:1,hnb1002:2 — used by the
-  // abandoned-cart email, which already knows exactly which SKU and
-  // quantity were left behind. Looks up the rest of the product's
-  // details (name, image, price) from HALAL_NAILS_VARIANTS by SKU,
-  // so the email only needs to encode the SKU and quantity, nothing
-  // else. Runs once on load; doesn't touch whatever's already in the
-  // cart otherwise — addItem's existing merge logic handles that.
   useEffect(() => {
     const addParam = searchParams.get('add')
     if (!addParam) return
@@ -44,10 +40,16 @@ export default function CartPage() {
       }
     })
 
-    // Clean the URL so a page refresh doesn't re-add the item again.
     router.replace('/cart')
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  return null
+}
+
+export default function CartPage() {
+  const { items, addItem, removeItem, updateQuantity, subtotal, itemCount } = useCart()
+  const router = useRouter()
 
   const cartSlugs = new Set(items.map((i) => i.slug))
   const otherVariants = HALAL_NAILS_VARIANTS.filter((v) => !cartSlugs.has(v.slug))
@@ -55,6 +57,9 @@ export default function CartPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
+      <Suspense fallback={null}>
+        <CartAutoAdd />
+      </Suspense>
       <h1 className="text-3xl font-black uppercase tracking-tight mb-2">Your Cart</h1>
       <p className="text-gray-600 mb-8">
         {itemCount === 0 ? 'No items yet' : `${itemCount} item${itemCount === 1 ? '' : 's'} in your cart`}
