@@ -130,9 +130,6 @@ export default function CartPage() {
                     <Link href={v.url} className="font-bold hover:text-[#db2777]">
                       {v.name}
                     </Link>
-                    <p className="text-sm text-gray-500">
-                      {v.stock > 0 ? `${v.stock} in stock` : 'Out of Stock'}
-                    </p>
                     <Link href={v.url} className="text-xs text-[#db2777] font-bold hover:underline">
                       More info →
                     </Link>
