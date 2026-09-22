@@ -1,7 +1,7 @@
 'use client'
 
 import { useCart } from '@/context/CartContext'
-import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
+import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE, BUNDLE_ORIGINAL_PRICE } from '@/data/halal-nails-variants'
 
 type AddToCartButtonProps = {
   initialSlug: string
@@ -29,10 +29,13 @@ export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
   return (
     <button
       onClick={handleClick}
-      disabled={variant.stock <= 0}
-      className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6 disabled:opacity-50 disabled:cursor-not-allowed"
+      className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6"
     >
-      {variant.stock <= 0 ? 'Out of Stock' : 'Add to Cart'}
+      ${BUNDLE_PRICE.toFixed(0)}{' '}
+      <span style={{ textDecoration: 'line-through', opacity: 0.75 }}>
+        (${BUNDLE_ORIGINAL_PRICE.toFixed(0)})
+      </span>{' '}
+      Add to Cart
     </button>
   )
 }
