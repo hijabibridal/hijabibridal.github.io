@@ -13,7 +13,7 @@ type PageProps = { params: Promise<{ slug: string }> };
 
 // Products that show the PayPal button instead of the Amazon button.
 // Add your real product slugs here once you're done testing.
-const PAYPAL_SLUGS = ['hnb1001'];
+const PAYPAL_SLUGS = ['hnb1001', 'halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
 
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
