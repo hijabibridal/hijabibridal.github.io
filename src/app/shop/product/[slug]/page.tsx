@@ -243,9 +243,7 @@ export default async function ProductPage({ params }: PageProps) {
 
               {PAYPAL_SLUGS.includes(product.slug) ? (
                 <AddToCartButton
-                  slug={product.slug}
-                  name={product.name}
-                  price={parseFloat((product as any).price) || 30.0}
+                  initialSlug={product.slug}
                 />
               ) : (
                 product.images[0]?.amazonLink && (
