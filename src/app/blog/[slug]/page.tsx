@@ -72,7 +72,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   let matchedKeyword: string;
 
-  if (categorySlugFromLink) {
+  // Nail articles always show nail products in the gallery, whatever the
+  // intro links to (e.g. the glue tabs product page instead of the category).
+  const nailSearchText = `${article.slug} ${article.pageTitle}`.toLowerCase().replace(/-/g, ' ');
+  const isNailArticle = /\bnails?\b/.test(nailSearchText);
+
+  if (isNailArticle) {
+    matchedKeyword = "halal-nails";
+  } else if (categorySlugFromLink) {
     matchedKeyword = categorySlugFromLink;
   } else {
     const keywordMap = ["hijab", "caftan", "dupatta", "lehenga", "groom", "jutti", "nails", "belt", "sharara", "dress"];
@@ -143,7 +150,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "keywords": article.description,
   };
 
-  const matchKeywords = ["dress", "lehenga", "green", "nails", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
+  const matchKeywords = ["dress", "lehenga", "green", "nail", "groom", "guests", "hijab", "dupatta", "jutti", "belt", "sharara"];
   const currentTitleLower = article.pageTitle.toLowerCase();
   const activeKeywords = matchKeywords.filter(word => currentTitleLower.includes(word));
 
