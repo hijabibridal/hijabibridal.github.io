@@ -15,6 +15,31 @@ type PageProps = { params: Promise<{ slug: string }> };
 // Add your real product slugs here once you're done testing.
 const PAYPAL_SLUGS = ['hnb1001', 'halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
 
+// Halal Nails kits sold on this site (not on Amazon). These pages get Product
+// schema for Google rich results and Merchant Center. The glue tabs are left
+// out on purpose because they are sold on Amazon.
+const NAIL_KIT_SLUGS = ['halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
+
+// Price in US dollars for each kit. Only used if the product data has no
+// price of its own. Replace each 0 with the real price, e.g. 24.99.
+// While a price is 0, that page gets no Product schema (so Google never sees
+// a wrong price).
+const NAIL_KIT_PRICES: Record<string, number> = {
+  'halal-nails-berries': 25,
+  'halal-nails-pink-neutrals': 25,
+  'halal-nails-cool-neutrals': 25,
+};
+
+// Turns a price like 24.99, "24.99" or "$24.99" into a number.
+function parsePrice(value: any): number {
+  if (typeof value === 'number') return value;
+  if (typeof value === 'string') {
+    const n = parseFloat(value.replace(/[^0-9.]/g, ''));
+    return isNaN(n) ? 0 : n;
+  }
+  return 0;
+}
+
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
     slug: p.slug 
@@ -132,6 +157,32 @@ export default async function ProductPage({ params }: PageProps) {
     "representativeOfPage": true,
   };
 
+  // --- PRODUCT SCHEMA (Halal Nails kits only) ---
+  const isNailKit = NAIL_KIT_SLUGS.includes(product.slug);
+  const kitPrice = isNailKit
+    ? (parsePrice((product as any).price) || NAIL_KIT_PRICES[product.slug] || 0)
+    : 0;
+
+  const productSchema = isNailKit && kitPrice > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": product.name,
+        "description": product.meta_description,
+        "sku": product.slug,
+        "brand": { "@type": "Brand", "name": "Halal Nails" },
+        "image": product.images.map((img: any) => `${siteUrl}/images/${String(img.url).replace(/^\//, '')}`),
+        "offers": {
+          "@type": "Offer",
+          "url": `${siteUrl}/shop/product/${product.slug}`,
+          "priceCurrency": "USD",
+          "price": kitPrice.toFixed(2),
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+        },
+      }
+    : null;
+
   // Reusable Blog Section Component
   const BlogSection = () => (
     <div className="mt-12 lg:mt-6 border-t border-pink-50 pt-8">
@@ -160,6 +211,14 @@ export default async function ProductPage({ params }: PageProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
+      {/* Product schema — Halal Nails kits only (not the Amazon glue tabs) */}
+      {productSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
       )}
 
