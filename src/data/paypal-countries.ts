@@ -154,7 +154,7 @@ export const TRANSIT_TIMES: Record<string, { days: string; carrier: string }> = 
   FR: { days: '8–10 business days', carrier: 'La Poste / Colissimo' },
   NL: { days: '8–12 business days', carrier: 'PostNL' },
   BE: { days: '8–12 business days', carrier: 'bpost' },
-  GB: { days: '4–7 business days', carrier: 'Royal Mail / Evri' },
+  GB: { days: '6-9 business days', carrier: 'Royal Mail / Evri' },
   CA: { days: '7–12 business days', carrier: 'Canada Post' },
   AU: { days: '6–9 business days', carrier: 'Australia Post' },
   JP: { days: '3–6 business days', carrier: 'Local Courier' },
