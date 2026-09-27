@@ -12,7 +12,6 @@ type OrderItem = {
 }
 
 type OrderSummary = {
-  orderId?: string
   items: OrderItem[]
   deliveryInstructions?: string
   total: string
@@ -255,45 +254,13 @@ export default function ThankYouPage() {
 
       {/* Continue shopping — all the way at the bottom now */}
       <div className="mt-12 text-center">
-        
+        <a
           href="https://hijabibridal.github.io/shop/category/halal-nails"
           className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
         >
           Continue Shopping Halal Nails
         </a>
       </div>
-
-      {/* Google Customer Reviews opt-in — feeds Google's review
-          collection so a seller-rating badge and star ratings in
-          Search can eventually appear (needs a rolling volume of
-          reviews before Google shows anything publicly). order_id
-          will be empty until checkout starts saving it — see chat. */}
-      {order && (
-        <>
-          <script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.renderOptIn = function() {
-                  window.gapi.load('surveyoptin', function() {
-                    window.gapi.surveyoptin.render({
-                      "merchant_id": 5859122851,
-                      "order_id": "${order.orderId || ''}",
-                      "email": "${order.email || ''}",
-                      "delivery_country": "${order.shippingAddress?.country_code || ''}",
-                      "estimated_delivery_date": "${(() => {
-                        const d = new Date();
-                        d.setDate(d.getDate() + 21);
-                        return d.toISOString().split('T')[0];
-                      })()}"
-                    });
-                  });
-                }
-              `,
-            }}
-          />
-        </>
-      )}
     </div>
   )
 }
