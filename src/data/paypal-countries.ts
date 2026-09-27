@@ -165,6 +165,7 @@ export const TRANSIT_TIMES: Record<string, { days: string; carrier: string }> = 
   ES: { days: '7–13 calendar days', carrier: 'Correos' },
   IT: { days: '10–20 calendar days', carrier: 'Local Courier' },
   CH: { days: '14–18 calendar days', carrier: 'Local Courier' },
+  NZ: { days: '6-10 calendar days', carrier: 'Local Courier' },
   // NZ: ⚠️ Not added — no reliable transit time or carrier data found
   // after two separate searches. Add this once you have a real source
   // rather than leave a guessed figure on a live checkout page.
