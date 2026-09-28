@@ -15,6 +15,16 @@ type PageProps = { params: Promise<{ slug: string }> };
 // Add your real product slugs here once you're done testing.
 const PAYPAL_SLUGS = ['hnb1001', 'halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
 
+// Upcoming products: show a greyed-out, unclickable "Add to Cart" with no
+// price. Slugs must match the product's slug in bridal-products.json exactly.
+// When a product is ready to sell, move its slug from here into PAYPAL_SLUGS
+// (and add it to HALAL_NAILS_VARIANTS first).
+const COMING_SOON_SLUGS = [
+  'dark-red-cat-eye-artificial-nails',
+  'white-cat-eye-hijabi-nails',
+  'pink-ombre-halal-nails',
+];
+
 // Halal Nails kits sold on this site (not on Amazon). These pages get Product
 // schema for Google rich results and Merchant Center. The glue tabs are left
 // out on purpose because they are sold on Amazon.
@@ -304,6 +314,14 @@ export default async function ProductPage({ params }: PageProps) {
                 <AddToCartButton
                   initialSlug={product.slug}
                 />
+              ) : COMING_SOON_SLUGS.includes(product.slug) ? (
+                <button
+                  disabled
+                  aria-disabled="true"
+                  className="inline-block bg-gray-300 text-gray-500 font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm w-max mb-6 cursor-not-allowed"
+                >
+                  Add to Cart
+                </button>
               ) : (
                 product.images[0]?.amazonLink && (
                   <AmazonButton
