@@ -68,6 +68,10 @@ export default function RootLayout({
       "Modest fashion",
       "Islamic wedding attire",
       "Nikkah ceremony",
+      "Cosmetology",
+      "Halal nails",
+      "Halal press on nails",
+      "Press on nails",
       "Muslim lehenga",
       "Bridal hijab"
     ],
