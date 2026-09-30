@@ -4,7 +4,12 @@ import React, { useState, useEffect } from 'react'
 export default function ProductGallery({ images, productName, fallbackLink }: any) {
   const [index, setIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
+  const [origin, setOrigin] = useState({ x: 50, y: 50 });
   const count = images?.length || 0;
+
+  // How much bigger the image gets when zoomed in the popup
+  const ZOOM_LEVEL = 2.5;
 
   // While the popup is open: Escape closes it, left/right arrow keys change
   // the image, and the page behind it can't scroll.
@@ -23,6 +28,12 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
       document.body.style.overflow = previousOverflow;
     };
   }, [isOpen, count]);
+
+  // Zoom resets whenever the image changes or the popup opens/closes
+  useEffect(() => {
+    setZoomed(false);
+    setOrigin({ x: 50, y: 50 });
+  }, [index, isOpen]);
 
   if (!images || images.length === 0) return <div className="p-10 bg-gray-50 rounded-2xl">No Image</div>;
 
@@ -43,6 +54,35 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
     e.preventDefault();
     e.stopPropagation();
     setIndex(i => (i + 1) % images.length);
+  };
+
+  // Works out which spot of the image the mouse or finger is over, so the
+  // zoom follows it
+  const updateOrigin = (clientX: number, clientY: number, el: HTMLElement) => {
+    const rect = el.getBoundingClientRect();
+    const x = Math.min(100, Math.max(0, ((clientX - rect.left) / rect.width) * 100));
+    const y = Math.min(100, Math.max(0, ((clientY - rect.top) / rect.height) * 100));
+    setOrigin({ x, y });
+  };
+
+  const handleZoomClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    if (zoomed) {
+      setZoomed(false);
+    } else {
+      updateOrigin(e.clientX, e.clientY, e.currentTarget);
+      setZoomed(true);
+    }
+  };
+
+  const handleZoomMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (zoomed) updateOrigin(e.clientX, e.clientY, e.currentTarget);
+  };
+
+  const handleZoomTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (zoomed && e.touches[0]) {
+      updateOrigin(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget);
+    }
   };
 
   return (
@@ -168,6 +208,24 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
           onClick={() => setIsOpen(false)}
           className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 md:p-12"
         >
+          {/* Zoom (magnifying glass) button, next to the X */}
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setOrigin({ x: 50, y: 50 }); setZoomed(z => !z); }}
+            aria-label={zoomed ? "Zoom out" : "Zoom in"}
+            className="absolute top-4 right-20 z-10 w-12 h-12 flex items-center justify-center
+                       bg-white/90 hover:bg-white rounded-full shadow-lg transition-all hover:scale-110"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="#db2777" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                 className="w-6 h-6">
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              <line x1="8" y1="11" x2="14" y2="11" />
+              {!zoomed && <line x1="11" y1="8" x2="11" y2="14" />}
+            </svg>
+          </button>
+
           {/* Close (X) button */}
           <button
             type="button"
@@ -184,13 +242,27 @@ export default function ProductGallery({ images, productName, fallbackLink }: an
             </svg>
           </button>
 
-          {/* The enlarged image (clicking it doesn't close the popup) */}
-          <img
-            src={mainSrc}
-            alt={activeImage.alt || productName}
-            onClick={(e) => e.stopPropagation()}
-            className="max-w-full max-h-full object-contain rounded-lg"
-          />
+          {/* The enlarged image. Click to zoom in at that spot, move to look
+              around, click again to zoom back out. */}
+          <div
+            onClick={handleZoomClick}
+            onMouseMove={handleZoomMove}
+            onTouchMove={handleZoomTouchMove}
+            className={`relative overflow-hidden rounded-lg ${zoomed ? 'cursor-zoom-out touch-none' : 'cursor-zoom-in'}`}
+          >
+            <img
+              src={mainSrc}
+              alt={activeImage.alt || productName}
+              draggable={false}
+              style={{
+                transform: zoomed ? `scale(${ZOOM_LEVEL})` : 'scale(1)',
+                transformOrigin: `${origin.x}% ${origin.y}%`,
+              }}
+              className="block object-contain select-none transition-transform duration-300
+                         max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)]
+                         md:max-w-[calc(100vw-6rem)] md:max-h-[calc(100vh-6rem)]"
+            />
+          </div>
 
           {images.length > 1 && (
             <>
