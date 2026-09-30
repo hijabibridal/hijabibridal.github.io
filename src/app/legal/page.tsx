@@ -13,7 +13,8 @@ const LegalPage = () => {
         <p>Direct Factory Sourcing & Quality Assurance</p>
 	<p></p>
         <p>For Halal Nails, we partner directly with specialized manufacturers to design and produce our product collections. Every order undergoes a manual quality check before it is packaged. By dispatching items directly from our international production facilities to you, we maintain strict quality standards.</p>
-	<p>Processing & Shipping Timelines</p>
+	<p>Shipping Cost: $10 per order. Free shipping on orders of more than two items.</p>
+    <p>Processing & Shipping Timelines</p>
 	<p>Processing & Quality Check: 1 to 3 business days.</p>
 	<p>Standard Shipping Window: 7 to 12 business days after dispatch.</p>
 	<p>Currently we ship to US, UK, Canada, Australia, France, Germany, the Netherlands, Belgium, Japan, South Korea, Singapore and Malaysia. Unfortunately, we can't ship to remote areas like Alaska, Scottish Highlands, NWT, Outback, Corsica, Baltic Islands, Wadden Islands, Okinawa Outer Islands, Jeju Island, Sentosa, East Malaysia and the like. Please check your postal code on the checkout page if you're unsure whether we ship to your area.</p>
