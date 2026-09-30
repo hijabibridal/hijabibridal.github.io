@@ -40,6 +40,14 @@ const NAIL_KIT_PRICES: Record<string, number> = {
   'halal-nails-cool-neutrals': 25,
 };
 
+// Shipping and return details for the kits, taken from the /legal page.
+// Countries the kits ship to (ISO codes; UK is GB).
+const NAIL_SHIP_COUNTRIES = ['US', 'GB', 'CA', 'AU', 'FR', 'DE', 'NL', 'BE', 'JP', 'KR', 'SG', 'MY'];
+// Shipping cost in US dollars for ONE kit: $10 per order. Orders of more than
+// two items ship free at checkout; that threshold can't be expressed in the
+// page schema, so it is set in Merchant Center / stated on the /legal page.
+const NAIL_SHIPPING_USD = 10;
+
 // Turns a price like 24.99, "24.99" or "$24.99" into a number.
 function parsePrice(value: any): number {
   if (typeof value === 'number') return value;
@@ -73,7 +81,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: product.meta_description,
       url: `${siteUrl}/shop/product/${product.slug}`,
       siteName: "Hijabi Bridal",
-      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: product.name }],
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: product.images?.[0]?.alt || product.name }],
       type: 'website',
     },
   };
@@ -189,6 +197,22 @@ export default async function ProductPage({ params }: PageProps) {
           "price": kitPrice.toFixed(2),
           "availability": "https://schema.org/InStock",
           "itemCondition": "https://schema.org/NewCondition",
+          "shippingDetails": NAIL_SHIP_COUNTRIES.map((country) => ({
+            "@type": "OfferShippingDetails",
+            "shippingRate": { "@type": "MonetaryAmount", "value": NAIL_SHIPPING_USD, "currency": "USD" },
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": country },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 7, "maxValue": 12, "unitCode": "DAY" },
+            },
+          })),
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": NAIL_SHIP_COUNTRIES,
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+            "merchantReturnLink": `${siteUrl}/legal`,
+          },
         },
       }
     : null;
