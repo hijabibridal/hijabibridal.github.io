@@ -60,12 +60,12 @@ export default function RootLayout({
     "foundingDate": "2024",
     "areaServed": {
       "@type": "Country",
-      "name": "United States"
+      "name": "United States, United Kingdom, Australia, Canada"
     },
     "knowsAbout": [
       "Muslim wedding dresses",
       "Hijabi bridal wear",
-      "Modest fashion",
+      "Islamic law",
       "Islamic wedding attire",
       "Nikkah ceremony",
       "Cosmetology",
