@@ -44,7 +44,7 @@ export default function ShuffledProductGallery({ pool, galleryIndex }: Props) {
               src={`/images/${prod.images[0].url.replace(/^\//, "")}`}
               alt={prod.name}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-top origin-top transition-transform duration-500 group-hover:scale-105"
               unoptimized
             />
           </div>
