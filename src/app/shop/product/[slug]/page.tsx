@@ -30,6 +30,15 @@ const COMING_SOON_SLUGS = [
 // out on purpose because they are sold on Amazon.
 const NAIL_KIT_SLUGS = ['halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
 
+// "Recommended Reading" on the kit pages shows only these general press-on
+// articles (in this order), not the halal/haram ones.
+const NAIL_KIT_READING_SLUGS = [
+  'how-to-remove-press-on-nails',
+  'short-press-on-nails',
+  'press-on-vs-acrylic-vs-gel-nails',
+  'can-you-reuse-press-on-nails',
+];
+
 // Price in US dollars for each kit. Only used if the product data has no
 // price of its own. Replace each 0 with the real price, e.g. 24.99.
 // While a price is 0, that page gets no Product schema (so Google never sees
@@ -112,6 +121,14 @@ export default async function ProductPage({ params }: PageProps) {
       a => !displayArticles.find(da => da.slug === a.slug)
     );
     displayArticles = [...displayArticles, ...fallbackArticles].slice(0, 3);
+  }
+
+  // Nail kits: show only the general press-on articles (if they exist in the data).
+  if (NAIL_KIT_SLUGS.includes(product.slug)) {
+    const kitReading = (blogData.articles || [])
+      .filter((art) => NAIL_KIT_READING_SLUGS.includes(art.slug))
+      .sort((x, y) => NAIL_KIT_READING_SLUGS.indexOf(x.slug) - NAIL_KIT_READING_SLUGS.indexOf(y.slug));
+    if (kitReading.length > 0) displayArticles = kitReading;
   }
 
   // Logic for Color Matches Slider
