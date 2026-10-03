@@ -60,7 +60,7 @@ export default function RootLayout({
     "foundingDate": "2024",
     "areaServed": {
       "@type": "Country",
-      "name": "United States, United Kingdom, Australia, Canada"
+      "name": "United States, United Kingdom, Australia, Canada, Dominican Republic, Germany, Austria, Belgium, France, Italy, Japan, Malaysia, Netherlands, New Zealand, Singapore, South Korea, Spain, Switzerland"
     },
     "knowsAbout": [
       "Muslim wedding dresses",
