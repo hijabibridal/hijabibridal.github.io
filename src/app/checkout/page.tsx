@@ -33,6 +33,14 @@ const EMPTY_FORM: FormState = {
   deliveryInstructions: '',
 }
 
+// True if the text contains at least one digit (checks character by character).
+function hasDigit(text: string): boolean {
+  for (const ch of text) {
+    if (ch >= '0' && ch <= '9') return true
+  }
+  return false
+}
+
 export default function CheckoutPage() {
   const { items, subtotal, itemCount, clearCart } = useCart()
   const router = useRouter()
@@ -51,7 +59,7 @@ export default function CheckoutPage() {
     if (field === 'email') return !EMAIL_PATTERN.test(value)
     if (field === 'phone') return value.replace(/\D/g, '').length < 7
     // Street address must include a number (house/building number)
-    if (field === 'line1') return !/\d/.test(value)
+    if (field === 'line1') return !hasDigit(value)
     return false
   }
   const fieldError = (field: keyof FormState) => !!form.postalCode && isFieldInvalid(field)
@@ -62,7 +70,7 @@ export default function CheckoutPage() {
   // Address Line 1 that has no digit in it (and the postal code is in,
   // so it appears together with the red border, not while still typing).
   const missingHouseNumber =
-    !!form.postalCode && form.line1.trim() !== '' && !/\d/.test(form.line1)
+    !!form.postalCode && form.line1.trim() !== '' && !hasDigit(form.line1)
 
   const shippingStatus = form.countryCode ? getShippingStatus(form.countryCode) : null
   const postalBlocked =
@@ -341,3 +349,157 @@ export default function CheckoutPage() {
           )}
           {postalBlocked && (
             <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
+              {REMOTE_POSTAL_BLOCK_MESSAGE}
+            </p>
+          )}
+          {overPurchaseCap && purchaseCap !== null && (
+            <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mb-6">
+              Orders shipped to this country are capped at ${purchaseCap.toFixed(2)} to avoid customs delays or unexpected duties. Please reduce your order to continue.
+            </p>
+          )}
+
+          <label className="block text-sm font-bold text-gray-800 mb-6">
+            Delivery Instructions
+            <textarea
+              value={form.deliveryInstructions}
+              onChange={handleChange('deliveryInstructions')}
+              placeholder="Gate code, apartment number, leave at door, etc."
+              rows={3}
+              className="block w-full mt-1 px-3 py-2 rounded-lg border border-gray-300 text-sm"
+            />
+          </label>
+        </div>
+
+        {/* RIGHT COLUMN — order summary & payment, above the fold on desktop */}
+        <div>
+          <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+          <div className="space-y-3 mb-6 border-b border-pink-100 pb-6">
+            {items.map((item) => (
+              <div key={item.slug} className="flex justify-between text-sm">
+                <span>{item.quantity} × {item.name}{item.color ? ` (${item.color})` : ''}</span>
+                <span>${(item.price * item.quantity).toFixed(2)}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Shipping</span>
+            <span>{shippingCost === 0 ? 'FREE' : `$${shippingCost.toFixed(2)}`}</span>
+          </div>
+
+          <div className="flex justify-between text-lg font-bold mb-2">
+            <span>Total</span>
+            <span>${total.toFixed(2)}</span>
+          </div>
+
+          {/* Stays visible underneath the total throughout checkout,
+              including while a payment is processing — not gated by
+              canCheckout/infoConfirmed/sdkStatus. */}
+          {!postalBlocked && transitMessage && (
+            <p className="text-sm text-gray-600 mb-8">{transitMessage}</p>
+          )}
+
+          {canCheckout && !infoConfirmed && (
+            <div className="bg-gray-50 rounded-2xl p-5 mb-4">
+              <h3 className="font-bold text-sm mb-3">Please review your information</h3>
+              <div className="text-sm text-gray-700 space-y-1 mb-4">
+                <p><span className="font-bold">Name:</span> {form.fullName}</p>
+                <p><span className="font-bold">Email:</span> {form.email}</p>
+                <p><span className="font-bold">Phone:</span> {form.phone}</p>
+                <p>
+                  <span className="font-bold">Address:</span> {form.line1}
+                  {form.line2 ? `, ${form.line2}` : ''}, {form.city}
+                  {form.state ? `, ${form.state}` : ''} {form.postalCode}
+                </p>
+                <p><span className="font-bold">Country:</span> {SUPPORTED_COUNTRIES.find((c) => c.code === form.countryCode)?.name}</p>
+                {form.deliveryInstructions && (
+                  <p><span className="font-bold">Delivery Instructions:</span> {form.deliveryInstructions}</p>
+                )}
+              </div>
+              <label className="flex items-center gap-2 text-sm font-bold">
+                <input
+                  type="checkbox"
+                  checked={infoConfirmed}
+                  onChange={(e) => handleConfirmInfo(e.target.checked)}
+                />
+                Is this correct?
+              </label>
+            </div>
+          )}
+
+          {/* Payment buttons, logos, and trust text are always visible now
+              so customers can see how they'll pay — but greyed out and
+              unclickable (via pointer-events: none) until the form is
+              actually complete and confirmed.
+              isolation: 'isolate' is important here — PayPal's SDK uses
+              its own internal layering for its buttons that can ignore
+              normal page stacking order. Without this, PayPal's real
+              button can visually paint on top of other UI (like the
+              cart drawer) even while things behind it look normal. */}
+          <div
+            style={{
+              opacity: canCheckout && infoConfirmed ? 1 : 0.4,
+              pointerEvents: canCheckout && infoConfirmed ? 'auto' : 'none',
+              transition: 'opacity 0.2s',
+              isolation: 'isolate',
+              position: 'relative',
+              zIndex: 0,
+            }}
+          >
+            <div className="mb-3 text-xs text-gray-500 space-y-1.5">
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Payments are securely processed by PayPal. Buyer Protection included.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>PayPal doesn't share your financial information with the merchant.</span>
+              </div>
+            </div>
+
+            <div ref={paypalContainerRef}></div>
+
+            <div className="flex justify-center mt-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/card_logos.png"
+                alt="We accept Visa, Mastercard, American Express, and Discover"
+                style={{ height: 28 }}
+              />
+            </div>
+
+            <DigitalWalletButtons
+              createOrderPayload={async () => buildOrderRequestBody()}
+              onPaymentApproved={handleApprovedOrder}
+              onPaymentError={(err) => {
+                console.error('Google Pay error:', err)
+                setSdkStatus('declined')
+              }}
+            />
+          </div>
+
+          {sdkStatus === 'pending-review' && (
+            <p className="text-sm text-amber-700 bg-amber-50 rounded-lg p-3 mt-3">
+              Your payment is being held for review by PayPal — this is common for a
+              first transaction on a new account. You'll be notified once it clears;
+              no charge has been finalized yet.
+            </p>
+          )}
+          {sdkStatus === 'declined' && (
+            <p className="text-sm text-red-600 bg-red-50 rounded-lg p-3 mt-3">
+              This payment was declined. Please try a different card or payment method.
+            </p>
+          )}
+
+          {canCheckout && infoConfirmed && sdkStatus !== 'rendered' && sdkStatus !== 'paid' && (
+            <p style={{ fontSize: 12, color: '#888' }}>paypal status: {sdkStatus}</p>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
