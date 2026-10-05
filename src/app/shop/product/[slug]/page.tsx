@@ -49,13 +49,52 @@ const NAIL_KIT_PRICES: Record<string, number> = {
   'halal-nails-cool-neutrals': 25,
 };
 
-// Shipping and return details for the kits, taken from the /legal page.
-// Countries the kits ship to (ISO codes; UK is GB).
-const NAIL_SHIP_COUNTRIES = ['US', 'GB', 'CA', 'AU', 'FR', 'DE', 'NL', 'BE', 'JP', 'KR', 'SG', 'MY'];
-// Shipping cost in US dollars for ONE kit: $10 per order. Orders of more than
-// two items ship free at checkout; that threshold can't be expressed in the
-// page schema, so it is set in Merchant Center / stated on the /legal page.
+// Shipping and return details for the kits.
+// Countries the kits ship to (ISO codes; UK is GB). This is the same list as
+// FLAT_RATE_COUNTRIES in the shipping settings file.
+const NAIL_SHIP_COUNTRIES = [
+  'US', 'GB', 'CA', 'AU', 'FR', 'DE', 'NL', 'BE', 'JP', 'KR', 'SG', 'MY',
+  'AT', 'ES', 'IT', 'CH', 'NZ',
+];
+// Shipping cost in US dollars for ONE kit: $10 per order. Orders over $50 ship
+// free at checkout. The page schema only carries the standard $10 rate (the
+// "free over $50" rule is set in Merchant Center and stated on the /legal
+// page).
 const NAIL_SHIPPING_USD = 10;
+
+// Delivery time per country. These are copied from TRANSIT_TIMES in the
+// shipping settings file, so if you change a time there, change it here too.
+// The longest is 20 days (Italy).
+const NAIL_TRANSIT: Record<string, string> = {
+  US: '5–9 business days',
+  DE: '8–12 business days',
+  FR: '8–10 business days',
+  NL: '8–12 business days',
+  BE: '8–12 business days',
+  GB: '6-9 business days',
+  CA: '7–12 business days',
+  AU: '6–9 business days',
+  JP: '3–6 business days',
+  KR: '3–6 business days',
+  SG: '4–7 business days',
+  MY: '4–7 business days',
+  AT: '5–10 calendar days',
+  ES: '7–13 calendar days',
+  IT: '10–20 calendar days',
+  CH: '14–18 calendar days',
+  NZ: '6-10 calendar days',
+};
+
+// Turns text like "8–12 business days" or "10–20 calendar days" into numbers.
+function parseTransit(text: string) {
+  const m = text.match(/(\d+)\s*[–-]\s*(\d+)\s*(business|calendar)/i);
+  if (!m) return null;
+  return {
+    min: parseInt(m[1], 10),
+    max: parseInt(m[2], 10),
+    business: m[3].toLowerCase() === 'business',
+  };
+}
 
 // Turns a price like 24.99, "24.99" or "$24.99" into a number.
 function parsePrice(value: any): number {
@@ -214,16 +253,40 @@ export default async function ProductPage({ params }: PageProps) {
           "price": kitPrice.toFixed(2),
           "availability": "https://schema.org/InStock",
           "itemCondition": "https://schema.org/NewCondition",
-          "shippingDetails": NAIL_SHIP_COUNTRIES.map((country) => ({
-            "@type": "OfferShippingDetails",
-            "shippingRate": { "@type": "MonetaryAmount", "value": NAIL_SHIPPING_USD, "currency": "USD" },
-            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": country },
-            "deliveryTime": {
+          "shippingDetails": NAIL_SHIP_COUNTRIES.map((country) => {
+            const transit = parseTransit(NAIL_TRANSIT[country] || '');
+            const deliveryTime: any = {
               "@type": "ShippingDeliveryTime",
               "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
-              "transitTime": { "@type": "QuantitativeValue", "minValue": 7, "maxValue": 12, "unitCode": "DAY" },
-            },
-          })),
+            };
+            if (transit) {
+              deliveryTime.transitTime = {
+                "@type": "QuantitativeValue",
+                "minValue": transit.min,
+                "maxValue": transit.max,
+                "unitCode": "DAY",
+              };
+              // Countries quoted in business days count Monday to Friday only.
+              if (transit.business) {
+                deliveryTime.businessDays = {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "https://schema.org/Monday",
+                    "https://schema.org/Tuesday",
+                    "https://schema.org/Wednesday",
+                    "https://schema.org/Thursday",
+                    "https://schema.org/Friday",
+                  ],
+                };
+              }
+            }
+            return {
+              "@type": "OfferShippingDetails",
+              "shippingRate": { "@type": "MonetaryAmount", "value": NAIL_SHIPPING_USD, "currency": "USD" },
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": country },
+              "deliveryTime": deliveryTime,
+            };
+          }),
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "applicableCountry": NAIL_SHIP_COUNTRIES,
