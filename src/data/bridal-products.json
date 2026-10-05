@@ -4531,7 +4531,9 @@
             "crueltyFree": "Yes",
             "vegan": "Yes",
             "removableForWudu": "Yes",
-            "nonToxic": "Yes"   
+            "nonToxic": "Yes",
+		    "smallBusiness": "Yes",
+            "falseNails": "Yes"
       },
       "breadcrumbs": [
         {
@@ -4632,7 +4634,9 @@
             "crueltyFree": "Yes",
             "vegan": "Yes",
             "removableForWudu": "Yes",
-            "nonToxic": "Yes"    
+            "nonToxic": "Yes",
+		    "smallBusiness": "Yes",
+            "falseNails": "Yes"    
       },
       "breadcrumbs": [
         {
@@ -4733,7 +4737,9 @@
             "crueltyFree": "Yes",
             "vegan": "Yes",
             "removableForWudu": "Yes",
-            "nonToxic": "Yes"  
+            "nonToxic": "Yes",
+		    "smallBusiness": "Yes",
+            "falseNails": "Yes"  
       },
       "breadcrumbs": [
         {
