@@ -106,6 +106,26 @@ function parsePrice(value: any): number {
   return 0;
 }
 
+// Everything in the "attributes" block of bridal-products.json is passed to
+// Google automatically, EXCEPT these keys (the page already handles them).
+const ATTRIBUTE_SKIP = ['category', 'color', 'material', 'condition', 'availability'];
+
+// Special names for a few attributes. Any other attribute gets a name made
+// from its key (for example "nailsPerKit" becomes "Nails per kit"), so you
+// can add new attributes to the JSON without changing this file.
+const ATTRIBUTE_LABELS: Record<string, string> = {
+  crueltyFree: 'Cruelty-free',
+  nonToxic: 'Non-toxic',
+  smallBusiness: 'Small business',
+  removableForWudu: 'Removable for wudu',
+};
+
+function attributeLabel(key: string): string {
+  if (ATTRIBUTE_LABELS[key]) return ATTRIBUTE_LABELS[key];
+  const spaced = key.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+}
+
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
     slug: p.slug 
@@ -233,9 +253,27 @@ export default async function ProductPage({ params }: PageProps) {
 
   // --- PRODUCT SCHEMA (Halal Nails kits only) ---
   const isNailKit = NAIL_KIT_SLUGS.includes(product.slug);
-  const kitPrice = isNailKit
+  // Prices come from the product JSON: "price" is the regular price and the
+  // optional "salePrice" is today's lower price. If the JSON has no price, the
+  // NAIL_KIT_PRICES fallback above is used.
+  const listPrice = isNailKit
     ? (parsePrice((product as any).price) || NAIL_KIT_PRICES[product.slug] || 0)
     : 0;
+  const salePrice = isNailKit ? parsePrice((product as any).salePrice) : 0;
+  const onSale = salePrice > 0 && salePrice < listPrice;
+  // The price a shopper pays today.
+  const kitPrice = onSale ? salePrice : listPrice;
+
+  // Product facts and claims from the "attributes" block in bridal-products.json.
+  const attrs: Record<string, any> = (product as any).attributes || {};
+  const additionalProps = Object.keys(attrs)
+    .filter((key) => !ATTRIBUTE_SKIP.includes(key))
+    .filter((key) => attrs[key] !== undefined && attrs[key] !== null && String(attrs[key]).trim() !== '')
+    .map((key) => ({
+      "@type": "PropertyValue",
+      "name": attributeLabel(key),
+      "value": String(attrs[key]),
+    }));
 
   const productSchema = isNailKit && kitPrice > 0
     ? {
@@ -245,12 +283,32 @@ export default async function ProductPage({ params }: PageProps) {
         "description": product.meta_description,
         "sku": product.slug,
         "brand": { "@type": "Brand", "name": "Halal Nails" },
+        // Color, material and the product facts and claims come from the
+        // "attributes" block in bridal-products.json.
+        ...(attrs.color ? { "color": String(attrs.color) } : {}),
+        ...(attrs.material ? { "material": String(attrs.material) } : {}),
+        ...(additionalProps.length > 0 ? { "additionalProperty": additionalProps } : {}),
         "image": product.images.map((img: any) => `${siteUrl}/images/${String(img.url).replace(/^\//, '')}`),
         "offers": {
           "@type": "Offer",
           "url": `${siteUrl}/shop/product/${product.slug}`,
           "priceCurrency": "USD",
           "price": kitPrice.toFixed(2),
+          // Sale pricing: the regular price is marked as the strikethrough price.
+          ...(onSale
+            ? {
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceType": "https://schema.org/StrikethroughPrice",
+                  "price": listPrice.toFixed(2),
+                  "priceCurrency": "USD",
+                },
+              }
+            : {}),
+          // Optional: add "salePriceEnds": "2026-12-31" to the JSON to state when the sale ends.
+          ...(onSale && (product as any).salePriceEnds
+            ? { "priceValidUntil": String((product as any).salePriceEnds) }
+            : {}),
           "availability": "https://schema.org/InStock",
           "itemCondition": "https://schema.org/NewCondition",
           "shippingDetails": NAIL_SHIP_COUNTRIES.map((country) => {
