@@ -56,7 +56,7 @@ export default function RootLayout({
     "name": "Hijabi Bridal",
     "url": "https://hijabibridal.github.io/",
     "logo": "https://hijabibridal.github.io/images/hero-bridal.jpg",
-    "description": "Hijabi Bridal is the premier destination for modest Muslim bridal wear in the United States. We curate premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, nikkah jewelry, and accessories available on Amazon.",
+    "description": "Hijabi Bridal is the premier destination for modest Muslim bridal wear in the United States. We curate Halal Nails, premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, nikkah jewelry, and accessories available on Amazon.",
     "foundingDate": "2024",
     "areaServed": {
       "@type": "Country",
