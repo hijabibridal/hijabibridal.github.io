@@ -173,14 +173,6 @@ export default async function ProductPage({ params }: PageProps) {
     displayArticles = [...displayArticles, ...fallbackArticles].slice(0, 3);
   }
 
-  // Nail kits: show only the general press-on articles (if they exist in the data).
-  if (NAIL_KIT_SLUGS.includes(product.slug)) {
-    const kitReading = (blogData.articles || [])
-      .filter((art) => NAIL_KIT_READING_SLUGS.includes(art.slug))
-      .sort((x, y) => NAIL_KIT_READING_SLUGS.indexOf(x.slug) - NAIL_KIT_READING_SLUGS.indexOf(y.slug));
-    if (kitReading.length > 0) displayArticles = kitReading;
-  }
-
   // Logic for Color Matches Slider
   const colors = ["red", "green", "blue", "white", "lilac", "fuschia", "champagne", "peach", "gold", "silver", "black", "pink"];
   const productColors = product.mainCategorySlugs.filter(s => colors.includes(s));
