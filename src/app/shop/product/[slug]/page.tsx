@@ -23,6 +23,8 @@ const COMING_SOON_SLUGS = [
   'dark-red-cat-eye-artificial-nails',
   'white-cat-eye-hijabi-nails',
   'pink-ombre-halal-nails',
+  'shortcake-ombre-pink-halal-nails',
+  'toffee-ombre-nude-halal-nails',
 ];
 
 // Halal Nails kits sold on this site (not on Amazon). These pages get Product
