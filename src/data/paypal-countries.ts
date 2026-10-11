@@ -107,11 +107,16 @@ export const ALL_PAYPAL_COUNTRIES = [
 // --- Your shipping rules ---
 // SA and UAE cancelled per your instruction. No free-shipping countries
 // right now — every supported country pays the flat rate, EXCEPT orders
-// of 2+ items, which ship free (see qualifiesForFreeShipping in
-// checkout-page.tsx, applied on top of this).
+// whose product subtotal reaches FREE_SHIPPING_THRESHOLD, which ship free
+// (see qualifiesForFreeShipping in the checkout page, cart page and cart
+// drawer — all three read the number below).
 export const FREE_SHIPPING_COUNTRIES: string[] = []
 export const FLAT_RATE_COUNTRIES: string[] = ['US', 'DE', 'FR', 'NL', 'BE', 'GB', 'CH', 'IT', 'ES', 'AT', 'AU', 'JP', 'KR', 'SG', 'MY', 'CA', 'NZ']
 export const FLAT_RATE_AMOUNT = 10.0
+
+// Product subtotal (before shipping) at which shipping becomes free.
+// Change this one number to change the rule everywhere.
+export const FREE_SHIPPING_THRESHOLD = 50.0
 
 // --- Purchase caps ---
 // Maximum order (product subtotal, not including shipping) for
@@ -150,7 +155,7 @@ export const SUPPORTED_COUNTRIES = ALL_PAYPAL_COUNTRIES.filter(
 // --- Estimated transit time + carrier per country ---
 export const TRANSIT_TIMES: Record<string, { days: string; carrier: string }> = {
   US: { days: '5–9 business days', carrier: 'USPS' },
-  DE: { days: '8–12 business days', carrier: 'DHL' },
+  DE: { days: '8–12 business days', carrier: 'Local Courier' },
   FR: { days: '8–10 business days', carrier: 'La Poste / Colissimo' },
   NL: { days: '8–12 business days', carrier: 'PostNL' },
   BE: { days: '8–12 business days', carrier: 'bpost' },
