@@ -10,6 +10,7 @@ import {
   isRemoteBlockedPostalCode,
   REMOTE_POSTAL_BLOCK_MESSAGE,
   FLAT_RATE_AMOUNT,
+  FREE_SHIPPING_THRESHOLD,
   getPurchaseCap,
 } from '@/data/paypal-countries'
 import DigitalWalletButtons from '@/components/DigitalWalletButtons'
@@ -78,9 +79,9 @@ export default function CheckoutPage() {
       ? isRemoteBlockedPostalCode(form.countryCode, form.postalCode)
       : false
   const transitMessage = form.countryCode ? getTransitMessage(form.countryCode) : null
-  // itemCount from useCart is already the sum of quantities across
-  // items (confirmed against CartContext.tsx).
-  const qualifiesForFreeShipping = itemCount >= 2
+  // Free shipping once the product subtotal (before shipping) reaches
+  // the threshold set in paypal-countries.ts.
+  const qualifiesForFreeShipping = subtotal >= FREE_SHIPPING_THRESHOLD
   const shippingCost = qualifiesForFreeShipping ? 0 : FLAT_RATE_AMOUNT
   const total = subtotal + shippingCost
 
@@ -182,13 +183,18 @@ export default function CheckoutPage() {
     setSdkStatus('paid')
 
     try {
-      const { items: currentItems, form: f, total: currentTotal } = stateRef.current
+      const { items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping } =
+        stateRef.current
       const orderSummary = {
         items: currentItems.map((i) => ({
           name: i.name, color: i.color || null, sku: i.sku || null, quantity: i.quantity,
         })),
         deliveryInstructions: f.deliveryInstructions,
         total: currentTotal.toFixed(2),
+        // Saved separately so the thank-you page knows whether shipping
+        // was free without having to guess from the total.
+        shippingCost: currentShipping.toFixed(2),
+        subtotal: (currentTotal - currentShipping).toFixed(2),
         shippingAddress: {
           address_line_1: f.line1, address_line_2: f.line2,
           admin_area_2: f.city, admin_area_1: f.state,
