@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
-import { FLAT_RATE_AMOUNT } from '@/data/paypal-countries'
+import { FLAT_RATE_AMOUNT, FREE_SHIPPING_THRESHOLD } from '@/data/paypal-countries'
 
 export default function CartDrawer() {
   const {
@@ -16,7 +16,7 @@ export default function CartDrawer() {
 
   const cartSlugs = new Set(items.map((i) => i.slug))
   const otherVariants = HALAL_NAILS_VARIANTS.filter((v) => !cartSlugs.has(v.slug))
-  const qualifiesForFreeShipping = itemCount >= 2
+  const qualifiesForFreeShipping = subtotal >= FREE_SHIPPING_THRESHOLD
 
   const handleCheckout = () => {
     closeDrawer()
@@ -99,11 +99,11 @@ export default function CartDrawer() {
           {items.length > 0 && (
             qualifiesForFreeShipping ? (
               <p className="font-bold text-sm text-green-700 bg-green-50 rounded-lg p-3 mt-4">
-                You've got free shipping for ordering 2 or more items!
+                You've got free shipping on orders of ${FREE_SHIPPING_THRESHOLD.toFixed(0)} or more!
               </p>
             ) : (
               <p className="font-bold text-sm text-gray-800 bg-pink-50 rounded-lg p-3 mt-4">
-                A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add one more item to get free shipping!
+                A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add ${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)} more to get free shipping!
               </p>
             )
           )}
