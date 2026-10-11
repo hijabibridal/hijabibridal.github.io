@@ -8,6 +8,7 @@ import Link from 'next/link'
 import PatternSelector from '@/components/PatternSelector';
 import AmazonButton from '@/components/AmazonButton';
 import AddToCartButton from '@/components/AddToCartButton';
+import reviewsData from '@/data/reviews.json'
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -249,6 +250,20 @@ export default async function ProductPage({ params }: PageProps) {
   // The price a shopper pays today.
   const kitPrice = onSale ? salePrice : listPrice;
 
+  // --- CUSTOMER REVIEWS ---
+  // Reviews come from reviews.json (same folder as bridal-products.json).
+  // A kit's review section and star-rating markup only appear once that kit
+  // has at least one review. With no reviews, nothing shows at all.
+  const allReviews: any[] = ((reviewsData as any).reviews || []) as any[];
+  const productReviews = allReviews
+    .filter((r: any) => r && r.productSlug === product.slug)
+    .map((r: any) => ({ ...r, rating: Number(r.rating) }))
+    .filter((r: any) => r.rating >= 1 && r.rating <= 5);
+  const reviewCount = productReviews.length;
+  const averageRating = reviewCount > 0
+    ? Math.round((productReviews.reduce((sum: number, r: any) => sum + r.rating, 0) / reviewCount) * 10) / 10
+    : 0;
+
   // Product facts and claims from the "attributes" block in bridal-products.json.
   const attrs: Record<string, any> = (product as any).attributes || {};
   const additionalProps = Object.keys(attrs)
@@ -273,6 +288,26 @@ export default async function ProductPage({ params }: PageProps) {
         ...(attrs.color ? { "color": String(attrs.color) } : {}),
         ...(attrs.material ? { "material": String(attrs.material) } : {}),
         ...(additionalProps.length > 0 ? { "additionalProperty": additionalProps } : {}),
+        // Star rating and reviews. Only added once the kit has real reviews.
+        ...(reviewCount > 0
+          ? {
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": averageRating,
+                "reviewCount": reviewCount,
+                "bestRating": 5,
+                "worstRating": 1,
+              },
+              "review": productReviews.map((r: any) => ({
+                "@type": "Review",
+                "author": { "@type": "Person", "name": r.author || "Verified customer" },
+                ...(r.date ? { "datePublished": r.date } : {}),
+                "reviewRating": { "@type": "Rating", "ratingValue": r.rating, "bestRating": 5, "worstRating": 1 },
+                ...(r.title ? { "name": r.title } : {}),
+                ...(r.text ? { "reviewBody": r.text } : {}),
+              })),
+            }
+          : {}),
         "image": product.images.map((img: any) => `${siteUrl}/images/${String(img.url).replace(/^\//, '')}`),
         "offers": {
           "@type": "Offer",
@@ -536,6 +571,38 @@ export default async function ProductPage({ params }: PageProps) {
                                [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
                     dangerouslySetInnerHTML={{ __html: remainingDescription }}
                   />
+                </div>
+              )}
+
+              {/* Customer reviews — only shown when this product has at least one review */}
+              {productReviews.length > 0 && (
+                <div className="mt-12 border-t border-pink-100 pt-8">
+                  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-2">
+                    Customer Reviews
+                  </h2>
+                  <p className="text-gray-700 mb-6">
+                    {averageRating.toFixed(1)} out of 5 · {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
+                  </p>
+                  <div className="space-y-6">
+                    {productReviews.map((r: any, index: number) => (
+                      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
+                        <div className="text-[#db2777] text-lg" aria-label={`${r.rating} out of 5 stars`}>
+                          {'★'.repeat(Math.round(r.rating))}{'☆'.repeat(5 - Math.round(r.rating))}
+                        </div>
+                        {r.title && <h3 className="font-bold text-xl mt-1">{r.title}</h3>}
+                        {r.text && <p className="text-gray-700 leading-relaxed mt-2">{r.text}</p>}
+                        {r.reply && (
+                          <div className="mt-4 border-l-4 border-pink-200 pl-4">
+                            <p className="text-sm font-bold text-gray-900">Response from Halal Nails</p>
+                            <p className="text-gray-700 leading-relaxed mt-1">{r.reply}</p>
+                          </div>
+                        )}
+                        <p className="text-sm text-gray-500 mt-3">
+                          {r.author || 'Verified customer'}{r.date ? ` · ${r.date}` : ''}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
