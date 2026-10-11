@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
-import { FLAT_RATE_AMOUNT } from '@/data/paypal-countries'
+import { FLAT_RATE_AMOUNT, FREE_SHIPPING_THRESHOLD } from '@/data/paypal-countries'
 
 // Isolated specifically because useSearchParams() requires a Suspense
 // boundary for Next.js's static export build — without this split, the
@@ -53,7 +53,7 @@ export default function CartPage() {
 
   const cartSlugs = new Set(items.map((i) => i.slug))
   const otherVariants = HALAL_NAILS_VARIANTS.filter((v) => !cartSlugs.has(v.slug))
-  const qualifiesForFreeShipping = itemCount >= 2
+  const qualifiesForFreeShipping = subtotal >= FREE_SHIPPING_THRESHOLD
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
@@ -123,11 +123,11 @@ export default function CartPage() {
 
           {qualifiesForFreeShipping ? (
             <p className="font-bold text-sm text-green-700 bg-green-50 rounded-lg p-3 mb-8">
-              You've got free shipping for ordering 2 or more items!
+              You've got free shipping on orders of ${FREE_SHIPPING_THRESHOLD.toFixed(0)} or more!
             </p>
           ) : (
             <p className="font-bold text-sm text-gray-800 bg-pink-50 rounded-lg p-3 mb-8">
-              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add one more item to get free shipping!
+              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add ${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)} more to get free shipping!
             </p>
           )}
 
