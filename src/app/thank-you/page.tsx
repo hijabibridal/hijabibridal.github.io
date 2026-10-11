@@ -15,6 +15,8 @@ type OrderSummary = {
   items: OrderItem[]
   deliveryInstructions?: string
   total: string
+  subtotal?: string
+  shippingCost?: string
   shippingAddress: {
     address_line_1?: string
     address_line_2?: string
@@ -63,7 +65,13 @@ export default function ThankYouPage() {
 
   const fullAddress = order ? formatAddress(order.shippingAddress) : null
   const orderItemCount = order ? order.items.reduce((sum, i) => sum + i.quantity, 0) : 0
-  const hadFreeShipping = orderItemCount >= 2
+  // Newer orders store the shipping amount; older ones (placed before the
+  // $50 rule) fall back to the old 2-item rule.
+  const hadFreeShipping = order
+    ? order.shippingCost !== undefined
+      ? parseFloat(order.shippingCost) === 0
+      : orderItemCount >= 2
+    : false
 
   const mapEmbedSrc = fullAddress
     ? `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`
