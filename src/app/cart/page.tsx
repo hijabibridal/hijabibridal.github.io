@@ -47,6 +47,39 @@ function CartAutoAdd() {
   return null
 }
 
+// Sends an add_to_cart event to Google Tag Manager's dataLayer so GA4 can
+// count add-to-cart clicks. `source` says which button was clicked.
+// Only the item is recorded — nothing about the customer.
+function trackAddToCart(
+  v: { sku: string; name: string; color: string },
+  source: string
+) {
+  try {
+    const w = window as any
+    w.dataLayer = w.dataLayer || []
+    w.dataLayer.push({ ecommerce: null })
+    w.dataLayer.push({
+      event: 'add_to_cart',
+      ecommerce: {
+        currency: 'USD',
+        value: BUNDLE_PRICE,
+        items: [
+          {
+            item_id: v.sku,
+            item_name: v.name,
+            item_variant: v.color,
+            price: BUNDLE_PRICE,
+            quantity: 1,
+            item_list_name: source,
+          },
+        ],
+      },
+    })
+  } catch (err) {
+    console.error('Add-to-cart tracking failed:', err)
+  }
+}
+
 export default function CartPage() {
   const { items, addItem, removeItem, updateQuantity, subtotal, itemCount } = useCart()
   const router = useRouter()
@@ -180,7 +213,7 @@ export default function CartPage() {
                 </div>
                 <button
                   disabled={v.stock <= 0}
-                  onClick={() =>
+                  onClick={() => {
                     addItem({
                       slug: v.slug,
                       name: v.name,
@@ -190,7 +223,8 @@ export default function CartPage() {
                       image: v.image,
                       url: v.url,
                     })
-                  }
+                    trackAddToCart(v, 'cart_page')
+                  }}
                   className="bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-2 px-5 rounded-full text-xs uppercase tracking-wider transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Add
