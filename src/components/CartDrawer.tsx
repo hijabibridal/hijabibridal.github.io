@@ -7,6 +7,39 @@ import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
 import { FLAT_RATE_AMOUNT, FREE_SHIPPING_THRESHOLD } from '@/data/paypal-countries'
 
+// Sends an add_to_cart event to Google Tag Manager's dataLayer so GA4 can
+// count add-to-cart clicks. `source` says which button was clicked.
+// Only the item is recorded — nothing about the customer.
+function trackAddToCart(
+  v: { sku: string; name: string; color: string },
+  source: string
+) {
+  try {
+    const w = window as any
+    w.dataLayer = w.dataLayer || []
+    w.dataLayer.push({ ecommerce: null })
+    w.dataLayer.push({
+      event: 'add_to_cart',
+      ecommerce: {
+        currency: 'USD',
+        value: BUNDLE_PRICE,
+        items: [
+          {
+            item_id: v.sku,
+            item_name: v.name,
+            item_variant: v.color,
+            price: BUNDLE_PRICE,
+            quantity: 1,
+            item_list_name: source,
+          },
+        ],
+      },
+    })
+  } catch (err) {
+    console.error('Add-to-cart tracking failed:', err)
+  }
+}
+
 export default function CartDrawer() {
   const {
     items, addItem, removeItem, updateQuantity, subtotal, itemCount,
@@ -129,12 +162,13 @@ export default function CartDrawer() {
                     </div>
                     <button
                       disabled={v.stock <= 0}
-                      onClick={() =>
+                      onClick={() => {
                         addItem({
                           slug: v.slug, name: v.name, price: BUNDLE_PRICE,
                           color: v.color, sku: v.sku, image: v.image, url: v.url,
                         })
-                      }
+                        trackAddToCart(v, 'cart_drawer')
+                      }}
                       className="bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-1.5 px-4 rounded-full text-[11px] uppercase tracking-wider transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Add
