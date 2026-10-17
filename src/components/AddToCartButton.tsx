@@ -3,6 +3,39 @@
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE, BUNDLE_ORIGINAL_PRICE } from '@/data/halal-nails-variants'
 
+// Sends an add_to_cart event to Google Tag Manager's dataLayer so GA4 can
+// count add-to-cart clicks. `source` says which button was clicked.
+// Only the item is recorded — nothing about the customer.
+function trackAddToCart(
+  v: { sku: string; name: string; color: string },
+  source: string
+) {
+  try {
+    const w = window as any
+    w.dataLayer = w.dataLayer || []
+    w.dataLayer.push({ ecommerce: null })
+    w.dataLayer.push({
+      event: 'add_to_cart',
+      ecommerce: {
+        currency: 'USD',
+        value: BUNDLE_PRICE,
+        items: [
+          {
+            item_id: v.sku,
+            item_name: v.name,
+            item_variant: v.color,
+            price: BUNDLE_PRICE,
+            quantity: 1,
+            item_list_name: source,
+          },
+        ],
+      },
+    })
+  } catch (err) {
+    console.error('Add-to-cart tracking failed:', err)
+  }
+}
+
 type AddToCartButtonProps = {
   initialSlug: string
 }
@@ -23,6 +56,7 @@ export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
       image: variant.image,
       url: variant.url,
     })
+    trackAddToCart(variant, 'product_page')
     openDrawer()
   }
 
