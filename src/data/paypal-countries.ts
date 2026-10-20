@@ -105,13 +105,14 @@ export const ALL_PAYPAL_COUNTRIES = [
 ]
 
 // --- Your shipping rules ---
-// SA and UAE cancelled per your instruction. No free-shipping countries
-// right now — every supported country pays the flat rate, EXCEPT orders
-// whose product subtotal reaches FREE_SHIPPING_THRESHOLD, which ship free
-// (see qualifiesForFreeShipping in the checkout page, cart page and cart
-// drawer — all three read the number below).
-export const FREE_SHIPPING_COUNTRIES: string[] = []
-export const FLAT_RATE_COUNTRIES: string[] = ['US', 'DE', 'FR', 'NL', 'BE', 'GB', 'CH', 'IT', 'ES', 'AT', 'AU', 'JP', 'KR', 'SG', 'MY', 'CA', 'NZ']
+// SA and UAE cancelled per your instruction.
+// - Countries in FREE_SHIPPING_COUNTRIES always ship free (any order size).
+// - Every other supported country pays the flat rate, EXCEPT orders whose
+//   product subtotal reaches FREE_SHIPPING_THRESHOLD, which ship free.
+// To add or remove a free-shipping country, edit the two lists below
+// (a country goes in one list or the other, not both).
+export const FREE_SHIPPING_COUNTRIES: string[] = ['MY', 'SG']
+export const FLAT_RATE_COUNTRIES: string[] = ['US', 'DE', 'FR', 'NL', 'BE', 'GB', 'CH', 'IT', 'ES', 'AT', 'AU', 'JP', 'KR', 'CA', 'NZ']
 export const FLAT_RATE_AMOUNT = 10.0
 
 // Product subtotal (before shipping) at which shipping becomes free.
@@ -136,6 +137,25 @@ export const PURCHASE_CAPS: Record<string, number> = {
 
 export function getPurchaseCap(countryCode: string): number | null {
   return PURCHASE_CAPS[countryCode] ?? null
+}
+
+// Readable list of the always-free countries, for the cart messages
+// (e.g. "Malaysia and Singapore"). Built from FREE_SHIPPING_COUNTRIES,
+// so it updates by itself when you change that list.
+export const FREE_SHIPPING_COUNTRY_LABEL: string = (() => {
+  const names = FREE_SHIPPING_COUNTRIES.map(
+    (code) => ALL_PAYPAL_COUNTRIES.find((c) => c.code === code)?.name ?? code
+  )
+  if (names.length <= 1) return names.join('')
+  return names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1]
+})()
+
+// The shipping fee for an order — used by the checkout page so the
+// rules live in one place. `countryCode` is empty until the customer
+// picks a country, in which case the standard rule applies.
+export function getShippingCost(countryCode: string | null | undefined, subtotal: number): number {
+  if (countryCode && FREE_SHIPPING_COUNTRIES.includes(countryCode)) return 0
+  return subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_RATE_AMOUNT
 }
 
 export type ShippingStatus = 'free' | 'flat' | 'unsupported'
