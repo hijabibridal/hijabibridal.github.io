@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
-import { FLAT_RATE_AMOUNT, FREE_SHIPPING_THRESHOLD } from '@/data/paypal-countries'
+import { FLAT_RATE_AMOUNT, FREE_SHIPPING_THRESHOLD, FREE_SHIPPING_COUNTRY_LABEL } from '@/data/paypal-countries'
 
 // Isolated specifically because useSearchParams() requires a Suspense
 // boundary for Next.js's static export build — without this split, the
@@ -160,7 +160,7 @@ export default function CartPage() {
             </p>
           ) : (
             <p className="font-bold text-sm text-gray-800 bg-pink-50 rounded-lg p-3 mb-8">
-              A ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee will be added to your order. Add ${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)} more to get free shipping!
+              Free shipping to {FREE_SHIPPING_COUNTRY_LABEL}. Other countries pay a ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee — add ${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)} more to get free shipping!
             </p>
           )}
 
@@ -171,12 +171,12 @@ export default function CartPage() {
 
           <div className="flex justify-between text-sm text-gray-600 mb-2">
             <span>Shipping</span>
-            <span>{qualifiesForFreeShipping ? 'FREE' : `$${FLAT_RATE_AMOUNT.toFixed(2)}`}</span>
+            <span>{qualifiesForFreeShipping ? 'FREE' : 'Calculated at checkout'}</span>
           </div>
 
           <div className="flex justify-between text-lg font-bold mb-8">
-            <span>Total</span>
-            <span>${(subtotal + (qualifiesForFreeShipping ? 0 : FLAT_RATE_AMOUNT)).toFixed(2)}</span>
+            <span>{qualifiesForFreeShipping ? 'Total' : 'Total before shipping'}</span>
+            <span>${subtotal.toFixed(2)}</span>
           </div>
 
           <button
