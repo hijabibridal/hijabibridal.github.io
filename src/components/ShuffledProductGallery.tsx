@@ -39,16 +39,17 @@ export default function ShuffledProductGallery({ pool, galleryIndex }: Props) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10 not-prose">
       {items.map((prod) => (
         <Link key={prod.slug} href={`/shop/product/${prod.slug}`} className="group block">
-          <div className="relative h-[192px] w-full rounded-2xl overflow-hidden shadow-sm bg-gray-50 mb-2 border border-pink-50">
-            <div className="absolute inset-y-0 inset-x-[7.5%] md:inset-x-0">
-              <Image
-                src={`/images/${prod.images[0].url.replace(/^\//, "")}`}
-                alt={prod.name}
-                fill
-                className="object-cover object-top origin-top transition-transform duration-500 group-hover:scale-105"
-                unoptimized
-              />
-            </div>
+          {/* Same box as the featured image on the blog page:
+              400px high, rounded-3xl, shadow-2xl, light gray background */}
+          <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl bg-gray-50 mb-3">
+            {/* Same image fit as the featured image: whole picture shown, 16px padding */}
+            <Image
+              src={`/images/${prod.images[0].url.replace(/^\//, "")}`}
+              alt={prod.name}
+              fill
+              className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+              unoptimized
+            />
           </div>
           <p className="text-black font-bold uppercase text-[10px] tracking-widest text-center group-hover:text-pink-600">
             {prod.name}
