@@ -225,17 +225,28 @@ export default async function ProductPage({ params }: PageProps) {
   // This prevents Google from picking suggestedAddOns or relatedProducts images
   // as the representative image in search results.
   const siteUrl = "https://hijabibridal.github.io";
-  const primaryImageUrl = `${siteUrl}/images/${product.images[0].url}`;
 
-  const imageSchema = {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "contentUrl": primaryImageUrl,
-    "url": primaryImageUrl,
-    "name": product.images[0].alt || product.name,
-    "description": product.images[0].figcaption || product.meta_description,
-    "representativeOfPage": true,
-  };
+  // One ImageObject for EVERY image on the product, so Google can read each
+  // image's alt text (as "name" and "caption") and its figure caption (as
+  // "description") straight from bridal-products.json. The first image is
+  // marked as the primary image of the page.
+  const stripTags = (text: any) => String(text || '').replace(/<[^>]+>/g, '').trim();
+
+  const imageSchema = product.images.map((img: any, idx: number) => {
+    const imgUrl = `${siteUrl}/images/${String(img.url).replace(/^\//, '')}`;
+    const altText = stripTags(img.alt) || product.name;
+    const captionText = stripTags(img.figcaption) || (idx === 0 ? stripTags(product.meta_description) : '');
+    return {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": imgUrl,
+      "url": imgUrl,
+      "name": altText,
+      "caption": altText,
+      ...(captionText ? { "description": captionText } : {}),
+      ...(idx === 0 ? { "representativeOfPage": true } : {}),
+    };
+  });
 
   // --- PRODUCT SCHEMA (Halal Nails kits only) ---
   const isNailKit = NAIL_KIT_SLUGS.includes(product.slug);
