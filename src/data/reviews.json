@@ -1,5 +1,5 @@
 {
-  "_how_to_add": "To add a review, copy the example block below into the list called reviews and fill it in. Put a comma between reviews. id must be a different number or word for every review and must never change once you have added it. productSlug must match the kit's slug exactly: halal-nails-pink-neutrals, halal-nails-cool-neutrals or halal-nails-berries. rating is a whole number from 1 to 5. date is year-month-day. text is required for Google's review feed, so always include the customer's words. reply is optional: your public response, shown under the review on the page. Only reviews inside the reviews list are used; this example is ignored. Add every review, including low ratings.",
+  "_how_to_add": "To add a review, copy the example block below into the list called reviews and fill it in. Put a comma between reviews. id must be a different number or word for every review and must never change once you have added it. productSlug must match the kit's slug exactly: halal-nails-pink-neutrals, halal-nails-cool-neutrals or halal-nails-berries. rating is a whole number from 1 to 5. date is year-month-day. text is required for Google's review feed, so always include the customer's words. reply is optional: your public response, shown under the review on the page. media is optional: the customer's photos or videos, shown under their review (two or more become a carousel). Each item is { \"type\": \"image\" or \"video\", \"url\": file name, \"alt\": optional description, \"poster\": optional still picture for a video }. Photos go in public/images/reviews/ and videos in public/videos/reviews/, and the url is written as reviews/file-name. Only reviews inside the reviews list are used; this example is ignored. Add every review, including low ratings.",
   "_example": {
     "id": "1",
     "productSlug": "halal-nails-pink-neutrals",
@@ -8,7 +8,19 @@
     "rating": 5,
     "title": "Easy to take off for wudu",
     "text": "Paste the customer's own words here.",
-    "reply": "Optional: your public response goes here."
+    "reply": "Optional: your public response goes here.",
+    "media": [
+      {
+        "type": "image",
+        "url": "reviews/aisha-1.webp",
+        "alt": "Pink Neutrals nails on a light skin tone"
+      },
+      {
+        "type": "video",
+        "url": "reviews/aisha-clip.mp4",
+        "poster": "reviews/aisha-clip.webp"
+      }
+    ]
   },
   "reviews": []
 }
