@@ -8,6 +8,7 @@ import Link from 'next/link'
 import PatternSelector from '@/components/PatternSelector';
 import AmazonButton from '@/components/AmazonButton';
 import AddToCartButton from '@/components/AddToCartButton';
+import ReviewMedia from '@/components/ReviewMedia';
 import reviewsData from '@/data/reviews.json'
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -562,6 +563,41 @@ export default async function ProductPage({ params }: PageProps) {
                 </div>
               )}
 
+              {/* Customer reviews — sits under Related Products. Only shown when this product has at least one review. A review can carry photos and videos in its "media" list. */}
+              {productReviews.length > 0 && (
+                <div className="mt-12 border-t border-pink-100 pt-8">
+                  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-2">
+                    Customer Reviews
+                  </h2>
+                  <p className="text-gray-700 mb-6">
+                    {averageRating.toFixed(1)} out of 5 · {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
+                  </p>
+                  <div className="space-y-6">
+                    {productReviews.map((r: any, index: number) => (
+                      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
+                        <div className="text-[#db2777] text-lg" aria-label={`${r.rating} out of 5 stars`}>
+                          {'★'.repeat(Math.round(r.rating))}{'☆'.repeat(5 - Math.round(r.rating))}
+                        </div>
+                        {r.title && <h3 className="font-bold text-xl mt-1">{r.title}</h3>}
+                        {r.text && <p className="text-gray-700 leading-relaxed mt-2">{r.text}</p>}
+                        {Array.isArray(r.media) && r.media.length > 0 && (
+                          <ReviewMedia media={r.media} author={r.author || 'Verified customer'} />
+                        )}
+                        {r.reply && (
+                          <div className="mt-4 border-l-4 border-pink-200 pl-4">
+                            <p className="text-sm font-bold text-gray-900">Response from Halal Nails</p>
+                            <p className="text-gray-700 leading-relaxed mt-1">{r.reply}</p>
+                          </div>
+                        )}
+                        <p className="text-sm text-gray-500 mt-3">
+                          {r.author || 'Verified customer'}{r.date ? ` · ${r.date}` : ''}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {introText && (
                 <div
                   className="text-gray-800 text-lg leading-relaxed mt-4 mb-8"
@@ -582,38 +618,6 @@ export default async function ProductPage({ params }: PageProps) {
                                [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
                     dangerouslySetInnerHTML={{ __html: remainingDescription }}
                   />
-                </div>
-              )}
-
-              {/* Customer reviews — only shown when this product has at least one review */}
-              {productReviews.length > 0 && (
-                <div className="mt-12 border-t border-pink-100 pt-8">
-                  <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-2">
-                    Customer Reviews
-                  </h2>
-                  <p className="text-gray-700 mb-6">
-                    {averageRating.toFixed(1)} out of 5 · {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
-                  </p>
-                  <div className="space-y-6">
-                    {productReviews.map((r: any, index: number) => (
-                      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
-                        <div className="text-[#db2777] text-lg" aria-label={`${r.rating} out of 5 stars`}>
-                          {'★'.repeat(Math.round(r.rating))}{'☆'.repeat(5 - Math.round(r.rating))}
-                        </div>
-                        {r.title && <h3 className="font-bold text-xl mt-1">{r.title}</h3>}
-                        {r.text && <p className="text-gray-700 leading-relaxed mt-2">{r.text}</p>}
-                        {r.reply && (
-                          <div className="mt-4 border-l-4 border-pink-200 pl-4">
-                            <p className="text-sm font-bold text-gray-900">Response from Halal Nails</p>
-                            <p className="text-gray-700 leading-relaxed mt-1">{r.reply}</p>
-                          </div>
-                        )}
-                        <p className="text-sm text-gray-500 mt-3">
-                          {r.author || 'Verified customer'}{r.date ? ` · ${r.date}` : ''}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               )}
 
