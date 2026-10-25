@@ -101,6 +101,12 @@ function parsePrice(value: any): number {
   return 0;
 }
 
+// Turns a file name from bridal-products.json into a web path.
+// "demo.mp4" -> "/videos/demo.mp4", "demo.webp" -> "/images/demo.webp".
+// Full web addresses and paths that already start with "/" are used as they are.
+const mediaUrl = (url: string, folder: 'images' | 'videos') =>
+  url.startsWith('http') || url.startsWith('/') ? url : `/${folder}/${url.replace(/^\//, '')}`;
+
 // Everything in the "attributes" block of bridal-products.json is passed to
 // Google automatically, EXCEPT these keys (the page already handles them).
 const ATTRIBUTE_SKIP = ['category', 'color', 'material', 'condition', 'availability'];
@@ -248,6 +254,29 @@ export default async function ProductPage({ params }: PageProps) {
       ...(idx === 0 ? { "representativeOfPage": true } : {}),
     };
   });
+
+  // --- PRODUCT VIDEO ---
+  // Optional. Add a "video" block to a product in bridal-products.json and the
+  // video shows right under the customer reviews (or under Related Products if
+  // there are no reviews yet). Products without a "video" block are unchanged.
+  const productVideo = (product as any).video;
+  const videoUrl = productVideo?.url ? mediaUrl(String(productVideo.url), 'videos') : null;
+  const videoPosterUrl = productVideo?.poster ? mediaUrl(String(productVideo.poster), 'images') : null;
+  const absoluteUrl = (u: string) => (u.startsWith('http') ? u : `${siteUrl}${u}`);
+
+  // Video data for Google. Only added when the video has a poster picture and
+  // an upload date, because Google needs both.
+  const videoSchema = videoUrl && videoPosterUrl && productVideo?.uploadDate
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": productVideo.title || `${product.name} video`,
+        "description": productVideo.caption || product.meta_description,
+        "thumbnailUrl": absoluteUrl(videoPosterUrl),
+        "uploadDate": String(productVideo.uploadDate),
+        "contentUrl": absoluteUrl(videoUrl),
+      }
+    : null;
 
   // --- PRODUCT SCHEMA (Halal Nails kits only) ---
   const isNailKit = NAIL_KIT_SLUGS.includes(product.slug);
@@ -432,6 +461,14 @@ export default async function ProductPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
 
+      {/* VideoObject schema — only when the product has a video with a poster and upload date */}
+      {videoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      )}
+
       {/* Tally exit-intent popup — only on AI-visualized products */}
       {product.description.includes('AI-visualized') && (
         <>
@@ -573,6 +610,24 @@ export default async function ProductPage({ params }: PageProps) {
                     {averageRating.toFixed(1)} out of 5 · {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
                   </p>
                   <ReviewList reviews={productReviews} />
+                </div>
+              )}
+
+              {/* Product video — only shown when the product has a "video" block */}
+              {videoUrl && (
+                <div className="mt-8 mb-8">
+                  <video
+                    src={videoUrl}
+                    poster={videoPosterUrl || undefined}
+                    controls
+                    playsInline
+                    preload={videoPosterUrl ? 'none' : 'metadata'}
+                    aria-label={productVideo.title || `${product.name} video`}
+                    className="w-full rounded-2xl border border-pink-100 bg-black shadow-sm"
+                  />
+                  {productVideo.caption && (
+                    <p className="mt-3 text-sm text-gray-600">{productVideo.caption}</p>
+                  )}
                 </div>
               )}
 
