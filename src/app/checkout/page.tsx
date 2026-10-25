@@ -41,6 +41,36 @@ function hasDigit(text: string): boolean {
   return false
 }
 
+// Tells Google Analytics the visitor reached checkout (the "Begin
+// checkout" step in the Purchase journey report). Only the items and
+// amount are sent — nothing the customer types into the form.
+function trackBeginCheckout(
+  cartItems: { sku?: string | null; name: string; color?: string | null; price: number; quantity: number }[],
+  value: number
+) {
+  try {
+    const w = window as any
+    w.dataLayer = w.dataLayer || []
+    w.dataLayer.push({ ecommerce: null })
+    w.dataLayer.push({
+      event: 'begin_checkout',
+      ecommerce: {
+        currency: 'USD',
+        value,
+        items: cartItems.map((i) => ({
+          item_id: i.sku || undefined,
+          item_name: i.name,
+          item_variant: i.color || undefined,
+          price: i.price,
+          quantity: i.quantity,
+        })),
+      },
+    })
+  } catch (err) {
+    console.error('Begin-checkout tracking failed:', err)
+  }
+}
+
 export default function CheckoutPage() {
   const { items, subtotal, itemCount, clearCart } = useCart()
   const router = useRouter()
@@ -48,6 +78,14 @@ export default function CheckoutPage() {
   const [sdkStatus, setSdkStatus] = useState('idle')
   const [infoConfirmed, setInfoConfirmed] = useState(false)
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
+
+  // Fires once per visit, as soon as the cart has loaded with items in it.
+  const beginCheckoutSent = useRef(false)
+  useEffect(() => {
+    if (beginCheckoutSent.current || items.length === 0) return
+    beginCheckoutSent.current = true
+    trackBeginCheckout(items, subtotal)
+  }, [items, subtotal])
 
   // Only starts flagging fields red once postal/zip code is entered —
   // everything red on a blank page reads as pressuring for info before
@@ -187,7 +225,11 @@ export default function CheckoutPage() {
       const orderSummary = {
         items: currentItems.map((i) => ({
           name: i.name, color: i.color || null, sku: i.sku || null, quantity: i.quantity,
+          price: i.price,
         })),
+        // PayPal's order number — used by the thank-you page to report the
+        // purchase to Google Analytics once.
+        orderId: order?.id || null,
         deliveryInstructions: f.deliveryInstructions,
         total: currentTotal.toFixed(2),
         // Saved separately so the thank-you page knows whether shipping
