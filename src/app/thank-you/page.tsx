@@ -9,10 +9,12 @@ type OrderItem = {
   color: string | null
   sku: string | null
   quantity: number
+  price?: number
 }
 
 type OrderSummary = {
   items: OrderItem[]
+  orderId?: string | null
   deliveryInstructions?: string
   total: string
   subtotal?: string
@@ -48,6 +50,40 @@ function formatAddress(addr: OrderSummary['shippingAddress']) {
   return [line1, line2, addr.country_code].filter(Boolean).join(' — ')
 }
 
+// Tells Google Analytics a purchase happened (the "Purchase" step in the
+// Purchase journey report). Only the PayPal order number, amounts and items
+// are sent — no name, email or address. Sent once per order, even if the
+// page is refreshed.
+function trackPurchase(order: OrderSummary) {
+  if (!order.orderId) return
+  try {
+    const key = 'hijabi-bridal-purchase-tracked'
+    if (localStorage.getItem(key) === order.orderId) return
+    const w = window as any
+    w.dataLayer = w.dataLayer || []
+    w.dataLayer.push({ ecommerce: null })
+    w.dataLayer.push({
+      event: 'purchase',
+      ecommerce: {
+        transaction_id: order.orderId,
+        currency: 'USD',
+        value: parseFloat(order.subtotal ?? order.total),
+        shipping: parseFloat(order.shippingCost ?? '0'),
+        items: order.items.map((i) => ({
+          item_id: i.sku || undefined,
+          item_name: i.name,
+          item_variant: i.color || undefined,
+          price: i.price ?? 0,
+          quantity: i.quantity,
+        })),
+      },
+    })
+    localStorage.setItem(key, order.orderId)
+  } catch (err) {
+    console.error('Purchase tracking failed:', err)
+  }
+}
+
 export default function ThankYouPage() {
   const [order, setOrder] = useState<OrderSummary | null>(null)
   const [feedback, setFeedback] = useState('')
@@ -62,6 +98,10 @@ export default function ThankYouPage() {
       console.error('Failed to read order summary:', err)
     }
   }, [])
+
+  useEffect(() => {
+    if (order) trackPurchase(order)
+  }, [order])
 
   const fullAddress = order ? formatAddress(order.shippingAddress) : null
   const orderItemCount = order ? order.items.reduce((sum, i) => sum + i.quantity, 0) : 0
