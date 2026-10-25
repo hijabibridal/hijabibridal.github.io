@@ -623,7 +623,7 @@ export default async function ProductPage({ params }: PageProps) {
                     playsInline
                     preload={videoPosterUrl ? 'none' : 'metadata'}
                     aria-label={productVideo.title || `${product.name} video`}
-                    className="w-full rounded-2xl border border-pink-100 bg-black shadow-sm"
+                    className="aspect-square w-full max-w-md rounded-2xl border border-pink-100 bg-black object-contain shadow-sm"
                   />
                   {productVideo.caption && (
                     <p className="mt-3 text-sm text-gray-600">{productVideo.caption}</p>
