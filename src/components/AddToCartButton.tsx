@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useCart } from '@/context/CartContext'
 import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE, BUNDLE_ORIGINAL_PRICE } from '@/data/halal-nails-variants'
 
@@ -36,6 +37,34 @@ function trackAddToCart(
   }
 }
 
+// Tells Google Analytics that someone viewed this product (the "View
+// product" step in the Purchase journey report). Only the item is sent.
+function trackViewItem(v: { sku: string; name: string; color: string }) {
+  try {
+    const w = window as any
+    w.dataLayer = w.dataLayer || []
+    w.dataLayer.push({ ecommerce: null })
+    w.dataLayer.push({
+      event: 'view_item',
+      ecommerce: {
+        currency: 'USD',
+        value: BUNDLE_PRICE,
+        items: [
+          {
+            item_id: v.sku,
+            item_name: v.name,
+            item_variant: v.color,
+            price: BUNDLE_PRICE,
+            quantity: 1,
+          },
+        ],
+      },
+    })
+  } catch (err) {
+    console.error('View-item tracking failed:', err)
+  }
+}
+
 type AddToCartButtonProps = {
   initialSlug: string
 }
@@ -45,6 +74,11 @@ export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
 
   const variant =
     HALAL_NAILS_VARIANTS.find((v) => v.slug === initialSlug) || HALAL_NAILS_VARIANTS[0]
+
+  useEffect(() => {
+    trackViewItem(variant)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [variant.sku])
 
   const handleClick = () => {
     addItem({
