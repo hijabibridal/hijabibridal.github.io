@@ -51,7 +51,7 @@ export const COUPONS: Coupon[] = [
   // ↓↓↓ YOUR CODES — one per line ↓↓↓
 
   // Your own test code — only works with your email typed at checkout.
-  { code: 'TEST10', type: 'percent', value: 10, emailHashes: ['89bf1e7e19db848baef4d7ad26c6a7dcc927482a58fc7c47adac3a1e93307cb6'] },
+  { code: 'CHECKING', type: 'dollar', value: 24, minSubtotal: 1, emailHashes: ['89bf1e7e19db848baef4d7ad26c6a7dcc927482a58fc7c47adac3a1e93307cb6'] },
 
   // ── SAMPLES — these three are switched off (the // at the start of each
   // line). The emails in them are made up (anna/sara/layla@example.com).
