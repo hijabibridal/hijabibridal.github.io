@@ -67,16 +67,26 @@ function trackViewItem(v: { sku: string; name: string; color: string }) {
 
 type AddToCartButtonProps = {
   initialSlug: string
+  // Where the button sits. Shows up in Analytics as the item list name:
+  // 'product_page' (default) or 'category_page'.
+  source?: string
+  // Set to false on the category page so the three buttons there don't each
+  // count as a "view product" in Analytics.
+  trackView?: boolean
 }
 
-export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
+export default function AddToCartButton({
+  initialSlug,
+  source = 'product_page',
+  trackView = true,
+}: AddToCartButtonProps) {
   const { addItem, openDrawer } = useCart()
 
   const variant =
     HALAL_NAILS_VARIANTS.find((v) => v.slug === initialSlug) || HALAL_NAILS_VARIANTS[0]
 
   useEffect(() => {
-    trackViewItem(variant)
+    if (trackView) trackViewItem(variant)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variant.sku])
 
@@ -90,7 +100,7 @@ export default function AddToCartButton({ initialSlug }: AddToCartButtonProps) {
       image: variant.image,
       url: variant.url,
     })
-    trackAddToCart(variant, 'product_page')
+    trackAddToCart(variant, source)
     openDrawer()
   }
 
