@@ -13,6 +13,7 @@ import {
   getPurchaseCap,
 } from '@/data/paypal-countries'
 import DigitalWalletButtons from '@/components/DigitalWalletButtons'
+import { applyCoupon, hashEmail } from '@/data/coupons'
 
 type FormState = {
   fullName: string
@@ -79,6 +80,23 @@ export default function CheckoutPage() {
   const [infoConfirmed, setInfoConfirmed] = useState(false)
   const [form, setForm] = useState<FormState>(EMPTY_FORM)
 
+  // Promo code — what's typed in the box, the code that has been applied
+  // (if any), and the message shown when a code doesn't work.
+  const [promoInput, setPromoInput] = useState('')
+  const [appliedCode, setAppliedCode] = useState<string | null>(null)
+  const [promoError, setPromoError] = useState('')
+
+  // The email typed in the form, scrambled (hashed) so it can be compared
+  // with a code's allowed-customer list. Updates whenever the email changes.
+  const [emailHash, setEmailHash] = useState('')
+  useEffect(() => {
+    let cancelled = false
+    hashEmail(form.email)
+      .then((h) => { if (!cancelled) setEmailHash(h) })
+      .catch(() => { if (!cancelled) setEmailHash('') })
+    return () => { cancelled = true }
+  }, [form.email])
+
   // Fires once per visit, as soon as the cart has loaded with items in it.
   const beginCheckoutSent = useRef(false)
   useEffect(() => {
@@ -120,7 +138,19 @@ export default function CheckoutPage() {
   // any country once the product subtotal (before shipping) reaches the
   // threshold set there.
   const shippingCost = getShippingCost(form.countryCode, subtotal)
-  const total = subtotal + shippingCost
+
+  // Promo code discount — comes off the items only (never shipping). The
+  // free-shipping rule and purchase caps above/below still use the full
+  // subtotal, before the discount. It's re-checked against the cart AND
+  // the email typed in the form every time, so if either changes and the
+  // code no longer qualifies (the cart drops below the code's minimum, or
+  // the email is changed to one that isn't on the code's list), the
+  // discount goes away.
+  const promo = appliedCode ? applyCoupon(appliedCode, subtotal, emailHash) : null
+  const discount = promo && promo.ok ? promo.discount : 0
+  const couponCode = promo && promo.ok ? promo.coupon.code : null
+  const promoNoLongerApplies = !!appliedCode && !!promo && !promo.ok
+  const total = Math.round((subtotal - discount + shippingCost) * 100) / 100
 
   // Purchase caps — keeps orders to certain countries under their
   // duty-free threshold, to avoid customs holds or surprise VAT/duty.
@@ -138,16 +168,18 @@ export default function CheckoutPage() {
   const canCheckout =
     requiredFieldsFilled && shippingStatus !== 'unsupported' && !postalBlocked && !overPurchaseCap
 
-  const stateRef = useRef({ items, form, total, shippingCost })
+  const stateRef = useRef({ items, form, total, shippingCost, discount, couponCode })
   useEffect(() => {
-    stateRef.current = { items, form, total, shippingCost }
-  }, [items, form, total, shippingCost])
+    stateRef.current = { items, form, total, shippingCost, discount, couponCode }
+  }, [items, form, total, shippingCost, discount, couponCode])
 
   // ─── Shared order-building logic — used by BOTH the main PayPal
   // Buttons AND Google Pay, so they stay perfectly in sync. ───────────
   function buildOrderRequestBody() {
-    const { items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping } =
-      stateRef.current
+    const {
+      items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping,
+      discount: currentDiscount, couponCode: currentCoupon,
+    } = stateRef.current
     const itemTotal = currentItems.reduce((sum, i) => sum + i.price * i.quantity, 0)
 
     const skuList = currentItems.map((i) => `${i.sku}x${i.quantity}`).join(',')
@@ -168,6 +200,8 @@ export default function CheckoutPage() {
       purchase_units: [
         {
           custom_id: customId,
+          // Shows the promo code on the order in your PayPal account.
+          ...(currentCoupon && currentDiscount > 0 && { description: `Promo code ${currentCoupon}` }),
           items: currentItems.map((i) => ({
             name: i.color ? `${i.name} (${i.color})` : i.name,
             sku: i.sku,
@@ -180,6 +214,11 @@ export default function CheckoutPage() {
             breakdown: {
               item_total: { currency_code: 'USD', value: itemTotal.toFixed(2) },
               shipping: { currency_code: 'USD', value: currentShipping.toFixed(2) },
+              // PayPal needs the discount listed here so the numbers add up:
+              // items + shipping - discount = total.
+              ...(currentDiscount > 0 && {
+                discount: { currency_code: 'USD', value: currentDiscount.toFixed(2) },
+              }),
             },
           },
           shipping: {
@@ -220,8 +259,10 @@ export default function CheckoutPage() {
     setSdkStatus('paid')
 
     try {
-      const { items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping } =
-        stateRef.current
+      const {
+        items: currentItems, form: f, total: currentTotal, shippingCost: currentShipping,
+        discount: currentDiscount, couponCode: currentCoupon,
+      } = stateRef.current
       const orderSummary = {
         items: currentItems.map((i) => ({
           name: i.name, color: i.color || null, sku: i.sku || null, quantity: i.quantity,
@@ -235,7 +276,12 @@ export default function CheckoutPage() {
         // Saved separately so the thank-you page knows whether shipping
         // was free without having to guess from the total.
         shippingCost: currentShipping.toFixed(2),
+        // Items total AFTER any promo discount (what Google Analytics
+        // reports as the purchase value).
         subtotal: (currentTotal - currentShipping).toFixed(2),
+        // Promo code details, so the thank-you page can show the savings.
+        discount: currentDiscount.toFixed(2),
+        couponCode: currentCoupon,
         shippingAddress: {
           address_line_1: f.line1, address_line_2: f.line2,
           admin_area_2: f.city, admin_area_1: f.state,
@@ -310,6 +356,22 @@ export default function CheckoutPage() {
   }
 
   const BACKEND_BASE = 'https://hijabi-bridal-cloudflare.nooradrip.workers.dev'
+
+  const handleApplyPromo = () => {
+    const result = applyCoupon(promoInput, subtotal, emailHash)
+    if (result.ok) {
+      setAppliedCode(result.coupon.code)
+      setPromoError('')
+      setPromoInput('')
+    } else {
+      setPromoError(result.reason)
+    }
+  }
+
+  const handleRemovePromo = () => {
+    setAppliedCode(null)
+    setPromoError('')
+  }
 
   const handleConfirmInfo = async (checked: boolean) => {
     setInfoConfirmed(checked)
@@ -428,6 +490,50 @@ export default function CheckoutPage() {
               </div>
             ))}
           </div>
+
+          {/* Promo code */}
+          <div className="mb-4">
+            {!couponCode ? (
+              <>
+                <div className="flex gap-2">
+                  <input
+                    placeholder="Promo code"
+                    value={promoInput}
+                    onChange={(e) => { setPromoInput(e.target.value); setPromoError('') }}
+                    onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); handleApplyPromo() } }}
+                    autoCapitalize="characters"
+                    autoComplete="off"
+                    className="flex-1 min-w-0 border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleApplyPromo}
+                    className="border border-[#db2777] text-[#db2777] hover:bg-pink-50 font-bold text-sm rounded-lg px-4 py-2"
+                  >
+                    Apply
+                  </button>
+                </div>
+                {promoError && <p className="text-sm text-red-600 mt-2">{promoError}</p>}
+                {promoNoLongerApplies && !promoError && promo && !promo.ok && (
+                  <p className="text-sm text-red-600 mt-2">{promo.reason}</p>
+                )}
+              </>
+            ) : (
+              <div className="flex items-center justify-between bg-green-50 text-green-800 text-sm rounded-lg px-3 py-2">
+                <span>Promo code <span className="font-bold">{couponCode}</span> applied</span>
+                <button type="button" onClick={handleRemovePromo} className="font-bold underline">
+                  Remove
+                </button>
+              </div>
+            )}
+          </div>
+
+          {discount > 0 && (
+            <div className="flex justify-between text-sm text-green-700 mb-2">
+              <span>Discount ({couponCode})</span>
+              <span>-${discount.toFixed(2)}</span>
+            </div>
+          )}
 
           <div className="flex justify-between text-sm text-gray-600 mb-2">
             <span>Shipping</span>
