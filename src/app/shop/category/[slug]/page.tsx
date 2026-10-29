@@ -4,6 +4,21 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import ProductCard from '@/components/ProductCard'
+import AddToCartButton from '@/components/AddToCartButton'
+import AmazonButton from '@/components/AmazonButton'
+
+// Buy buttons under each product on the halal-nails category page ONLY.
+// These two lists are the same as the ones in the product page file. If you
+// change one there (for example when a coming-soon product goes on sale),
+// change it here too.
+const PAYPAL_SLUGS = ['hnb1001', 'halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
+const COMING_SOON_SLUGS = [
+  'dark-red-cat-eye-artificial-nails',
+  'white-cat-eye-hijabi-nails',
+  'pink-ombre-halal-nails',
+  'shortcake-ombre-pink-halal-nails',
+  'toffee-ombre-nude-halal-nails',
+];
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -197,7 +212,39 @@ export default async function CategoryPage({ params }: PageProps) {
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.map((product) => (
-            <ProductCard key={product.slug} product={product} />
+            <div key={product.slug}>
+              <ProductCard product={product} />
+
+              {/* Buy button: halal-nails category only. Every other category
+                  shows the plain product card, exactly as before. */}
+              {slug === 'halal-nails' && (
+                <div className="mt-4 flex justify-center">
+                  {PAYPAL_SLUGS.includes(product.slug) ? (
+                    <AddToCartButton
+                      initialSlug={product.slug}
+                      source="category_page"
+                      trackView={false}
+                    />
+                  ) : COMING_SOON_SLUGS.includes(product.slug) ? (
+                    <button
+                      disabled
+                      aria-disabled="true"
+                      className="inline-block bg-gray-300 text-gray-500 font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm w-max mb-6 cursor-not-allowed"
+                    >
+                      Add to Cart
+                    </button>
+                  ) : (
+                    (product as any).images?.[0]?.amazonLink && (
+                      <AmazonButton
+                        href={(product as any).images[0].amazonLink}
+                        productName={product.name}
+                        productSlug={product.slug}
+                      />
+                    )
+                  )}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       ) : (
