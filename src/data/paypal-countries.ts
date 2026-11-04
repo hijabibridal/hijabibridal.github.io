@@ -127,12 +127,12 @@ export const FREE_SHIPPING_THRESHOLD = 50.0
 // FLAT_RATE_COUNTRIES above — ready to go the moment its LingXing
 // logistics code arrives.
 export const PURCHASE_CAPS: Record<string, number> = {
-  JP: 70,
-  MY: 100,
-  GB: 150,
-  KR: 150,
-  SG: 250,
-  MU: 200,
+  JP: 71,
+  MY: 101,
+  GB: 151,
+  KR: 151,
+  SG: 251,
+  MU: 201,
 }
 
 export function getPurchaseCap(countryCode: string): number | null {
