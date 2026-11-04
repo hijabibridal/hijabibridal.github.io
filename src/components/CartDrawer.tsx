@@ -136,7 +136,7 @@ export default function CartDrawer() {
               </p>
             ) : (
               <p className="font-bold text-sm text-gray-800 bg-pink-50 rounded-lg p-3 mt-4">
-                Free shipping to {FREE_SHIPPING_COUNTRY_LABEL}. Other countries pay a ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee — add ${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)} more to get free shipping!
+                ${FLAT_RATE_AMOUNT.toFixed(2)} shipping fee for international orders — add ${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)} more to get free international shipping! Free standard shipping to {FREE_SHIPPING_COUNTRY_LABEL} on all orders. We always pay customs fees.
               </p>
             )
           )}
