@@ -34,6 +34,17 @@ const COMING_SOON_SLUGS = [
 // out on purpose because they are sold on Amazon.
 const NAIL_KIT_SLUGS = ['halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals'];
 
+// Recommended Reading for the Halal Nails kit pages. These are the ONLY
+// articles shown on those pages, in this order. Each slug must match the
+// article's slug in blog-articles.json exactly.
+const NAIL_KIT_BLOG_SLUGS = [
+  'can-you-reuse-press-on-nails',
+  'press-on-vs-acrylic-vs-gel-nails',
+  'short-press-on-nails',
+  'how-to-remove-press-on-nails',
+  'halal-nail-glue-adhesive-tabs',
+];
+
 // Price in US dollars for each kit. Only used if the product data has no
 // price of its own. Replace each 0 with the real price, e.g. 24.99.
 // While a price is 0, that page gets no Product schema (so Google never sees
@@ -165,22 +176,32 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   // --- BLOG MATCHING LOGIC ---
-  const keywords = ["dress", "lehenga", "groom", "nails", "jutti", "sharara", "hijab", "dupatta", "caftan", "jewelry"];
-  const productSlugParts = product.slug.split('-');
-  
-  const matchedArticles = (blogData.articles || []).filter(article => {
-    const articleSlugParts = article.slug.split('-');
-    return keywords.some(word => 
-      productSlugParts.includes(word) && articleSlugParts.includes(word)
-    );
-  });
+  let displayArticles: any[] = [];
 
-  let displayArticles = matchedArticles.slice(0, 3);
-  if (displayArticles.length < 3) {
-    const fallbackArticles = (blogData.articles || []).filter(
-      a => !displayArticles.find(da => da.slug === a.slug)
-    );
-    displayArticles = [...displayArticles, ...fallbackArticles].slice(0, 3);
+  if (NAIL_KIT_SLUGS.includes(product.slug)) {
+    // Halal Nails kit pages: show exactly the articles in NAIL_KIT_BLOG_SLUGS,
+    // in that order. No keyword matching, no fallback articles.
+    displayArticles = NAIL_KIT_BLOG_SLUGS
+      .map((blogSlug) => (blogData.articles || []).find((a: any) => a.slug === blogSlug))
+      .filter(Boolean);
+  } else {
+    const keywords = ["dress", "lehenga", "groom", "nails", "jutti", "sharara", "hijab", "dupatta", "caftan", "jewelry"];
+    const productSlugParts = product.slug.split('-');
+
+    const matchedArticles = (blogData.articles || []).filter(article => {
+      const articleSlugParts = article.slug.split('-');
+      return keywords.some(word => 
+        productSlugParts.includes(word) && articleSlugParts.includes(word)
+      );
+    });
+
+    displayArticles = matchedArticles.slice(0, 3);
+    if (displayArticles.length < 3) {
+      const fallbackArticles = (blogData.articles || []).filter(
+        a => !displayArticles.find(da => da.slug === a.slug)
+      );
+      displayArticles = [...displayArticles, ...fallbackArticles].slice(0, 3);
+    }
   }
 
   // Logic for Color Matches Slider
