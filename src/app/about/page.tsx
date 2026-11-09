@@ -9,7 +9,7 @@ export const metadata = {
   },
 }
 export default function AboutPage() {
-  const siteUrl = "https://hijabibridal.github.io";
+  const siteUrl = "https://hijabibridal.com";
 
   // Structured Data for SEO-GEO-AEO
   const jsonLd = {
