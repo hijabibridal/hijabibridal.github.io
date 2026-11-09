@@ -14,7 +14,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://hijabibridal.github.io'),
+  metadataBase: new URL('https://hijabibridal.com'),
   title: {
     default:  'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Halal Nails',
     template: '%s',
@@ -38,13 +38,13 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Hijabi Bridal",
-    "url": "https://hijabibridal.github.io/",
+    "url": "https://hijabibridal.com/",
     "description": "Premium Muslim wedding dresses, bridal hijabs, Muslim lehengas, and nikkah accessories curated for United States brides.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://hijabibridal.github.io/shop?q={search_term_string}"
+        "urlTemplate": "https://hijabibridal.com/shop?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -54,8 +54,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Hijabi Bridal",
-    "url": "https://hijabibridal.github.io/",
-    "logo": "https://hijabibridal.github.io/images/hero-bridal.jpg",
+    "url": "https://hijabibridal.com/",
+    "logo": "https://hijabibridal.com/images/hero-bridal.jpg",
     "description": "Hijabi Bridal is the premier destination for modest Muslim bridal wear in the United States. We curate Halal Nails, premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, nikkah jewelry, and accessories available on Amazon.",
     "foundingDate": "2024",
     "areaServed": {
