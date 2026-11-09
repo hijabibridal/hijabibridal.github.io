@@ -149,8 +149,8 @@ export default async function CategoryPage({ params }: PageProps) {
     ? {
         "@context": "https://schema.org",
         "@type": "ImageObject",
-        "contentUrl": `https://hijabibridal.github.io/images/${category.imageUrl}`,
-        "url": `https://hijabibridal.github.io/images/${category.imageUrl}`,
+        "contentUrl": `https://hijabibridal.com/images/${category.imageUrl}`,
+        "url": `https://hijabibridal.com/images/${category.imageUrl}`,
         "name": category.imageAlt || category.name,
         "description": category.imageAlt || category.metaDescription,
         "representativeOfPage": true,
