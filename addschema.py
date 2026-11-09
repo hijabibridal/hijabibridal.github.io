@@ -6,7 +6,7 @@ import re
 INPUT_FILE = 'src/data/bridal-products.json'
 OUTPUT_FILE = 'src/data/bridal-products-preview.json'
 IMAGE_BASE_DIR = 'public/images/' 
-SITE_URL = "https://hijabibridal.github.io"
+SITE_URL = "https://hijabibridal.com"
 
 def find_images_flexible(product_name, slug, base_dir):
     """
