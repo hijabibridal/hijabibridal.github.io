@@ -2,7 +2,7 @@ import requests
 
 # Configuration
 API_KEY = "d90ca88b502544448689620e1c38f37d"
-HOST = "hijabibridal.github.io"
+HOST = "hijabibridal.com"
 
 payload = {
     "host": HOST,
