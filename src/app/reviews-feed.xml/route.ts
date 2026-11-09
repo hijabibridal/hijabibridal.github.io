@@ -2,12 +2,12 @@ import productData from '@/data/bridal-products.json'
 import reviewsData from '@/data/reviews.json'
 
 // Google product reviews feed (XML), built from reviews.json each time the
-// site is built. Address once deployed: https://hijabibridal.github.io/reviews-feed.xml
+// site is built. Address once deployed: https://hijabibridal.com/reviews-feed.xml
 // Submit this address to Merchant Center once you have 50 or more reviews and
 // Google has approved you for Product Ratings.
 export const dynamic = 'force-static'
 
-const SITE = 'https://hijabibridal.github.io'
+const SITE = 'https://hijabibridal.com'
 const PUBLISHER_NAME = 'Halal Nails'
 
 // Makes text safe to place inside XML.
