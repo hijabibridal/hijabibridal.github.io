@@ -32,9 +32,9 @@ export async function generateMetadata(
       title: `${article.pageTitle} | Hijabi Bridal`,
       description: article.description,
       type: "article",
-      url: `https://hijabibridal.github.io/blog/${article.slug}`,
+      url: `https://hijabibridal.com/blog/${article.slug}`,
       ...(article.featuredImageUrl
-        ? { images: [{ url: `https://hijabibridal.github.io${article.featuredImageUrl}` }] }
+        ? { images: [{ url: `https://hijabibridal.com${article.featuredImageUrl}` }] }
         : {}),
     },
   };
@@ -122,29 +122,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@type": "BlogPosting",
     "headline": article.pageTitle,
     "description": article.description,
-    "url": `https://hijabibridal.github.io/blog/${article.slug}`,
+    "url": `https://hijabibridal.com/blog/${article.slug}`,
     "datePublished": article.datePublished || "2025-01-01",
     "dateModified": article.dateModified || article.datePublished || "2026-01-01",
     "author": {
       "@type": "Organization",
       "name": "Hijabi Bridal",
-      "url": "https://hijabibridal.github.io/about",
+      "url": "https://hijabibridal.com/about",
     },
     "publisher": {
       "@type": "Organization",
       "name": "Hijabi Bridal",
-      "url": "https://hijabibridal.github.io/",
+      "url": "https://hijabibridal.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hijabibridal.github.io/images/hero-bridal.jpg",
+        "url": "https://hijabibridal.com/images/hero-bridal.jpg",
       },
     },
     "image": article.featuredImageUrl
-      ? `https://hijabibridal.github.io${article.featuredImageUrl}`
+      ? `https://hijabibridal.com${article.featuredImageUrl}`
       : undefined,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://hijabibridal.github.io/blog/${article.slug}`,
+      "@id": `https://hijabibridal.com/blog/${article.slug}`,
     },
     "inLanguage": "en-US",
     "keywords": article.description,
