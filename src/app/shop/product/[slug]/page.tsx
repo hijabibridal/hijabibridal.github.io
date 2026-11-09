@@ -149,11 +149,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const product = productData.products.find((p) => p.slug === slug);
   if (!product) return {};
 
-  const siteUrl = "https://hijabibridal.github.io"; 
+  const siteUrl = "https://hijabibridal.com"; 
   const ogImageUrl = `${siteUrl}/images/${product.og_image}`;
 
   return {
-    metadataBase: new URL("https://hijabibridal.github.io"), 
+    metadataBase: new URL("https://hijabibridal.com"), 
     title: product.title_tag || product.name,
     description: product.meta_description,
     openGraph: {
@@ -252,7 +252,7 @@ export default async function ProductPage({ params }: PageProps) {
   // Tells Google explicitly which image is the primary/canonical product image.
   // This prevents Google from picking suggestedAddOns or relatedProducts images
   // as the representative image in search results.
-  const siteUrl = "https://hijabibridal.github.io";
+  const siteUrl = "https://hijabibridal.com";
 
   // One ImageObject for EVERY image on the product, so Google can read each
   // image's alt text (as "name" and "caption") and its figure caption (as
@@ -519,7 +519,7 @@ export default async function ProductPage({ params }: PageProps) {
             <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
               {(product.breadcrumbs || []).map((bc: any, index: number) => {
                 const isLast = index === product.breadcrumbs.length - 1;
-                const internalHref = bc.item.replace("https://hijabibridal.github.io", "") || "/";
+                const internalHref = bc.item.replace("https://hijabibridal.com", "") || "/";
                 
                 return (
                   <li key={index} className="flex items-center gap-2">
