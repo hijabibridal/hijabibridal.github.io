@@ -3,7 +3,7 @@ import path from 'path';
 import productData from '../src/data/bridal-products.json' with { type: 'json' };
 import blogData from '../src/data/blog-articles.json' with { type: 'json' };
 
-const BASE_URL = 'https://hijabibridal.github.io';
+const BASE_URL = 'https://hijabibridal.com';
 const today = new Date().toISOString().split('T')[0];
 
 /**
