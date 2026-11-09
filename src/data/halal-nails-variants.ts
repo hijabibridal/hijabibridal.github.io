@@ -20,7 +20,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
     color: 'Pink Neutrals',
     image: '/images/halal-nails/attachments/pink-neutrals-halal-nails-solo.webp',
     sku: 'hnb1001',
-    url: 'https://hijabibridal.github.io/shop/product/halal-nails-pink-neutrals',
+    url: 'https://hijabibridal.com/shop/product/halal-nails-pink-neutrals',
     slug: 'halal-nails-pink-neutrals',
   },
   {
@@ -28,7 +28,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
     color: 'Cool Neutrals',
     image: '/images/halal-nails/attachments/cool-neutrals-halal-nails-solo.webp',
     sku: 'hnb1002',
-    url: 'https://hijabibridal.github.io/shop/product/halal-nails-cool-neutrals',
+    url: 'https://hijabibridal.com/shop/product/halal-nails-cool-neutrals',
     slug: 'halal-nails-cool-neutrals',
   },
   {
@@ -36,7 +36,7 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
     color: 'Autumn Berries',
     image: '/images/halal-nails/attachments/berries-halal-nails-solo.webp',
     sku: 'hnb1003',
-    url: 'https://hijabibridal.github.io/shop/product/halal-nails-berries',
+    url: 'https://hijabibridal.com/shop/product/halal-nails-berries',
     slug: 'halal-nails-berries',
   },
 ]
