@@ -303,7 +303,7 @@ export default function ThankYouPage() {
       {/* Continue shopping — all the way at the bottom now */}
       <div className="mt-12 text-center">
         <a
-          href="https://hijabibridal.github.io/shop/category/halal-nails"
+          href="https://hijabibridal.com/shop/category/halal-nails"
           className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider text-sm transition-colors"
         >
           Continue Shopping Halal Nails
