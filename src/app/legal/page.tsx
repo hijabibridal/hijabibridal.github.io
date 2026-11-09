@@ -42,7 +42,7 @@ const LegalPage = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">3. Terms of Service</h2>
         <ul className="list-disc pl-6 mb-4">
-          <li className="mb-2">Overview. This website is operated by hijabibridal.github.io. By browsing or buying from our site, you agree to these Terms of Service.</li>
+          <li className="mb-2">Overview. This website is operated by hijabibridal.com. By browsing or buying from our site, you agree to these Terms of Service.</li>
           <li className="mb-2">Product Quality & Sourcing. We describe and photograph all items as accurately as possible. Products are produced directly through our international manufacturing partners and inspected prior to dispatch.</li>
           <li className="mb-2">Billing & Orders. You agree to provide accurate email, address, phone, and payment details. We reserve the right to decline or cancel any order. If we cancel an order, we will notify you immediately by email and refund your payment in full.</li>
 	  <li className="mb-2">Local Consumer Rights. Nothing in these Terms overrides or removes any non-excludable consumer protection rights guaranteed by the laws of your country of residence.</li>
