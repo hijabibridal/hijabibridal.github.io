@@ -46,13 +46,14 @@ const NAIL_KIT_BLOG_SLUGS = [
 ];
 
 // Price in US dollars for each kit. Only used if the product data has no
-// price of its own. Replace each 0 with the real price, e.g. 24.99.
+// price of its own. Keep these the same as the real price (BUNDLE_PRICE in
+// halal-nails-variants.ts).
 // While a price is 0, that page gets no Product schema (so Google never sees
 // a wrong price).
 const NAIL_KIT_PRICES: Record<string, number> = {
-  'halal-nails-berries': 25,
-  'halal-nails-pink-neutrals': 25,
-  'halal-nails-cool-neutrals': 25,
+  'halal-nails-berries': 40,
+  'halal-nails-pink-neutrals': 40,
+  'halal-nails-cool-neutrals': 40,
 };
 
 // Shipping and return details for the kits.
@@ -301,16 +302,13 @@ export default async function ProductPage({ params }: PageProps) {
 
   // --- PRODUCT SCHEMA (Halal Nails kits only) ---
   const isNailKit = NAIL_KIT_SLUGS.includes(product.slug);
-  // Prices come from the product JSON: "price" is the regular price and the
-  // optional "salePrice" is today's lower price. If the JSON has no price, the
-  // NAIL_KIT_PRICES fallback above is used.
+  // The price comes from the product JSON ("price"). If the JSON has no
+  // price, the NAIL_KIT_PRICES fallback above is used. There is no sale
+  // price: what shoppers pay is always this one price.
   const listPrice = isNailKit
     ? (parsePrice((product as any).price) || NAIL_KIT_PRICES[product.slug] || 0)
     : 0;
-  const salePrice = isNailKit ? parsePrice((product as any).salePrice) : 0;
-  const onSale = salePrice > 0 && salePrice < listPrice;
-  // The price a shopper pays today.
-  const kitPrice = onSale ? salePrice : listPrice;
+  const kitPrice = listPrice;
 
   // --- CUSTOMER REVIEWS ---
   // Reviews come from reviews.json (same folder as bridal-products.json).
@@ -376,21 +374,6 @@ export default async function ProductPage({ params }: PageProps) {
           "url": `${siteUrl}/shop/product/${product.slug}`,
           "priceCurrency": "USD",
           "price": kitPrice.toFixed(2),
-          // Sale pricing: the regular price is marked as the strikethrough price.
-          ...(onSale
-            ? {
-                "priceSpecification": {
-                  "@type": "UnitPriceSpecification",
-                  "priceType": "https://schema.org/StrikethroughPrice",
-                  "price": listPrice.toFixed(2),
-                  "priceCurrency": "USD",
-                },
-              }
-            : {}),
-          // Optional: add "salePriceEnds": "2026-12-31" to the JSON to state when the sale ends.
-          ...(onSale && (product as any).salePriceEnds
-            ? { "priceValidUntil": String((product as any).salePriceEnds) }
-            : {}),
           "availability": "https://schema.org/InStock",
           "itemCondition": "https://schema.org/NewCondition",
           "shippingDetails": NAIL_SHIP_COUNTRIES.map((country) => {
