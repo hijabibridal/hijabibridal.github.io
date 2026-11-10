@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { useCart } from '@/context/CartContext'
-import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE, BUNDLE_ORIGINAL_PRICE } from '@/data/halal-nails-variants'
+import { HALAL_NAILS_VARIANTS, BUNDLE_PRICE } from '@/data/halal-nails-variants'
 
 // Sends an add_to_cart event to Google Tag Manager's dataLayer so GA4 can
 // count add-to-cart clicks. `source` says which button was clicked.
@@ -109,11 +109,7 @@ export default function AddToCartButton({
       onClick={handleClick}
       className="inline-block bg-[#db2777] hover:bg-[#be185d] text-white font-bold py-3 px-8 rounded-full text-center uppercase tracking-wider text-sm transition-colors w-max mb-6"
     >
-      ${BUNDLE_PRICE.toFixed(0)}{' '}
-      <span style={{ textDecoration: 'line-through', opacity: 0.75 }}>
-        (${BUNDLE_ORIGINAL_PRICE.toFixed(0)})
-      </span>{' '}
-      Add to Cart
+      ${BUNDLE_PRICE.toFixed(0)} Add to Cart
     </button>
   )
 }
