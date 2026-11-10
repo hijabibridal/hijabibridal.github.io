@@ -297,7 +297,7 @@ export default function CheckoutPage() {
     }
 
     clearCart()
-    window.location.href = 'https://hijabibridal.github.io/thank-you'
+    window.location.href = 'https://hijabibridal.com/thank-you'
   }
 
   const hasRenderedRef = useRef(false)
