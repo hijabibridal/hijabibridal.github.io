@@ -1,9 +1,12 @@
-// Change these two numbers to update pricing everywhere (product page,
+// Change this number to update pricing everywhere (product page,
 // cart, PayPal order) without touching any component code.
-// BUNDLE_PRICE is what's actually charged; BUNDLE_ORIGINAL_PRICE is
-// shown struck through for the discount effect only — never charged.
-export const BUNDLE_PRICE = 25.0
-export const BUNDLE_ORIGINAL_PRICE = 40.0
+// BUNDLE_PRICE is what's actually charged.
+export const BUNDLE_PRICE = 40.0
+
+// No longer used for display (the sale is over). Kept only so any file
+// that still imports it keeps building. Safe to delete once nothing
+// imports it.
+export const BUNDLE_ORIGINAL_PRICE = BUNDLE_PRICE
 
 export type NailVariant = {
   name: string
