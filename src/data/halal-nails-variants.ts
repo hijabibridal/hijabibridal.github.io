@@ -35,8 +35,8 @@ export const HALAL_NAILS_VARIANTS: NailVariant[] = [
     slug: 'halal-nails-cool-neutrals',
   },
   {
-    name: 'Halal Nails Autumn Berries with Halal Nail Glue',
-    color: 'Autumn Berries',
+    name: 'Halal Nails Winter Berries with Halal Nail Glue',
+    color: 'Winter Berries',
     image: '/images/halal-nails/attachments/berries-halal-nails-solo.webp',
     sku: 'hnb1003',
     url: 'https://hijabibridal.com/shop/product/halal-nails-berries',
