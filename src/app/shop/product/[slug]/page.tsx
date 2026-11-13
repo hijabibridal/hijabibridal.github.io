@@ -139,6 +139,27 @@ function attributeLabel(key: string): string {
   return spaced.charAt(0).toUpperCase() + spaced.slice(1);
 }
 
+// --- EXPANDABLE DESCRIPTION SECTIONS (pages with "nail" or "nails" in the slug) ---
+// On these pages each h2 section of the description becomes a click-to-expand
+// block. The text stays in the page's HTML, so search engines still read all
+// of it. Any section whose heading contains one of these phrases (lowercase)
+// starts open. Add or remove phrases to change which sections start open.
+const OPEN_SECTIONS = ['how to wear'];
+
+// Splits the part of the description that starts at the first <h2> into
+// { title, body } sections. If anything doesn't split cleanly it returns an
+// empty list, and the description is shown the normal way instead.
+function splitSections(html: string): { title: string; body: string }[] {
+  const chunks = html.split(/(?=<h2)/).filter((c) => c.trim() !== '');
+  const sections: { title: string; body: string }[] = [];
+  for (const chunk of chunks) {
+    const m = chunk.match(/^<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*)$/);
+    if (!m) return [];
+    sections.push({ title: m[1].trim(), body: m[2] });
+  }
+  return sections;
+}
+
 export async function generateStaticParams() {
   return productData.products.map((p) => ({ 
     slug: p.slug 
@@ -228,6 +249,11 @@ export default async function ProductPage({ params }: PageProps) {
     introText = paragraphs[0];
     remainingDescription = paragraphs.slice(1).join('<br><br>');
   }
+
+  // Expandable sections: only for pages with the word "nail" or "nails" in
+  // the slug, and only when the description has h2 sections to split.
+  const isNailPage = product.slug.split('-').some((part) => part === 'nail' || part === 'nails');
+  const descriptionSections = isNailPage && hasH2 ? splitSections(remainingDescription) : [];
 
   // FAQ parsing
   let faqs = [];
@@ -649,13 +675,49 @@ export default async function ProductPage({ params }: PageProps) {
               )}
 
               {remainingDescription && (
-                <div className="mt-4">
-                  <div 
-                    className="text-black text-lg leading-relaxed whitespace-pre-wrap 
-                               [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
-                    dangerouslySetInnerHTML={{ __html: remainingDescription }}
-                  />
-                </div>
+                descriptionSections.length > 0 ? (
+                  /* Pages with "nail" or "nails" in the slug: each h2 section is a click-to-expand block. The text is still in the page's HTML for search engines. */
+                  <div className="mt-4 border-t border-pink-100">
+                    {descriptionSections.map((section, idx) => (
+                      <details
+                        key={idx}
+                        open={OPEN_SECTIONS.some((phrase) => section.title.toLowerCase().includes(phrase))}
+                        className="group border-b border-pink-100 py-4"
+                      >
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                          <h2
+                            className="text-[#db2777] font-bold text-2xl"
+                            dangerouslySetInnerHTML={{ __html: section.title }}
+                          />
+                          <svg
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-6 w-6 shrink-0 text-[#db2777] transition-transform group-open:rotate-180"
+                          >
+                            <path d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div
+                          className="mt-4 text-black text-lg leading-relaxed whitespace-pre-wrap"
+                          dangerouslySetInnerHTML={{ __html: section.body }}
+                        />
+                      </details>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="mt-4">
+                    <div 
+                      className="text-black text-lg leading-relaxed whitespace-pre-wrap 
+                                 [&_h2]:text-[#db2777] [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-4"
+                      dangerouslySetInnerHTML={{ __html: remainingDescription }}
+                    />
+                  </div>
+                )
               )}
 
               {finalFaqs.length > 0 && (
