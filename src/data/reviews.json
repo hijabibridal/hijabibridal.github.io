@@ -22,5 +22,33 @@
       }
     ]
   },
-  "reviews": []
+  "reviews": [
+    {
+      "id": "1",
+      "productSlug": "hijabi-nails-glue-tabs",
+      "author": "A.C.",
+      "date": "2026-09-15",
+      "rating": 5,
+      "title": "Product works just as described.",
+      "text": "The product is just as described. Easy to apply and remove."
+    },
+    {
+      "id": "2",
+      "productSlug": "hijabi-nails-glue-tabs",
+      "author": "Cynthia M.",
+      "date": "2026-09-24",
+      "rating": 5,
+      "title": "Wonderful nails!",
+      "text": "I love the color of these nails."
+    },
+    {
+      "id": "3",
+      "productSlug": "hijabi-nails-glue-tabs",
+      "author": "Amanda F.",
+      "date": "2026-11-03",
+      "rating": 5,
+      "title": "Good for Muslims",
+      "text": "I got these for my daughters so they can wear fake nails too. Yes it is a pain to take time to take them off to make wudu but they don't hurt to take off. They said they can fall off easily if you're too rough with them though."
+    }
+  ]
 }
