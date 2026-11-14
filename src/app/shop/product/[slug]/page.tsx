@@ -144,6 +144,7 @@ function attributeLabel(key: string): string {
 // block. The text stays in the page's HTML, so search engines still read all
 // of it. Any section whose heading contains one of these phrases (lowercase)
 // starts open. Add or remove phrases to change which sections start open.
+// (FAQs on every product are click-to-expand too, all closed to start with.)
 const OPEN_SECTIONS = ['how to wear'];
 
 // Splits the part of the description that starts at the first <h2> into
@@ -250,8 +251,9 @@ export default async function ProductPage({ params }: PageProps) {
     remainingDescription = paragraphs.slice(1).join('<br><br>');
   }
 
-  // Expandable sections: only for pages with the word "nail" or "nails" in
-  // the slug, and only when the description has h2 sections to split.
+  // Expandable description sections: only for pages with the word "nail" or
+  // "nails" in the slug, and only when the description has h2 sections to
+  // split.
   const isNailPage = product.slug.split('-').some((part) => part === 'nail' || part === 'nails');
   const descriptionSections = isNailPage && hasH2 ? splitSections(remainingDescription) : [];
 
@@ -725,16 +727,31 @@ export default async function ProductPage({ params }: PageProps) {
                   <h2 className="text-[#db2777] font-black text-3xl uppercase tracking-tighter mb-6">
                     Frequently Asked Questions
                   </h2>
-                  <div className="space-y-6">
+                  {/* Each question is a click-to-expand block, closed to start with. The answers are still in the page's HTML for search engines. */}
+                  <div className="border-t border-pink-100">
                     {finalFaqs.map((faq: any, index: number) => (
-                      <div key={index} className="bg-pink-50/30 p-6 rounded-2xl text-black">
-                        <h3 className="font-bold text-xl mb-2">
-                          {faq.name}
-                        </h3>
-                        <p className="text-gray-700 leading-relaxed">
+                      <details key={index} className="group border-b border-pink-100 py-4">
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                          <h3 className="font-bold text-xl text-black">
+                            {faq.name}
+                          </h3>
+                          <svg
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-6 w-6 shrink-0 text-[#db2777] transition-transform group-open:rotate-180"
+                          >
+                            <path d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <p className="mt-3 text-gray-700 leading-relaxed">
                           {faq.acceptedAnswer.text}
                         </p>
-                      </div>
+                      </details>
                     ))}
                   </div>
                 </div>
