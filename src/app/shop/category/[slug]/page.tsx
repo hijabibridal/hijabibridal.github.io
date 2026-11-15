@@ -16,6 +16,8 @@ const COMING_SOON_SLUGS = [
   'dark-red-cat-eye-artificial-nails',
   'white-cat-eye-hijabi-nails',
   'pink-ombre-halal-nails',
+  'jelly-glass-halal-nails-black',
+  'velvet-nails-press-on-larimar-halal-nails',
   'shortcake-ombre-pink-halal-nails',
   'toffee-ombre-nude-halal-nails',
 ];
