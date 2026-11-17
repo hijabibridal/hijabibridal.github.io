@@ -4,7 +4,7 @@ const LegalPage = () => {
       <section className="mb-8">
         <h1 className="text-3xl font-bold mb-6">Legal</h1>
         <p className="mb-6">
-          Thanks for dropping by! Legally we're required to let you know a few things. So please have a look. This notice applies to Halal Nails shipped by Hijabi Bridal. For all other product categories, Amazon terms and conditions apply.
+          Thanks for dropping by! Legally we're required to let you know a few things. So please have a look. This notice applies to Halal Nails shipped by Hijabi Bridal. For all other products, Amazon and other affilate site terms and conditions apply.
         </p>
       </section>
 
