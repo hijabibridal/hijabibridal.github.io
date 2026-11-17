@@ -34,7 +34,7 @@ const COMING_SOON_SLUGS = [
 // Halal Nails kits sold on this site (not on Amazon). These pages get Product
 // schema for Google rich results and Merchant Center. The glue tabs are left
 // out on purpose because they are sold on Amazon.
-const NAIL_KIT_SLUGS = ['halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals', 'jelly-glass-halal-nails-black', 'velvet-nails-press-on-larimar-halal-nails',];
+const NAIL_KIT_SLUGS = ['halal-nails-berries', 'halal-nails-pink-neutrals', 'halal-nails-cool-neutrals', 'jelly-glass-halal-nails-black', 'ayeshas-nail-rings', 'velvet-nails-press-on-larimar-halal-nails',];
 
 // Recommended Reading for the Halal Nails kit pages. These are the ONLY
 // articles shown on those pages, in this order. Each slug must match the
