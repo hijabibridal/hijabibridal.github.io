@@ -6,6 +6,26 @@ type Props = {
   productSlug: string;
 };
 
+// STORE NAMES
+// The button says "Purchase on Amazon.com" unless a product's link contains
+// one of the pieces of text in this list. To add a company, add a line with
+// part of its link (the website name is enough) and the name you want shown
+// on the button. Example:
+//   { linkContains: 'someoneelse.com', name: 'SomeoneElse' },
+// The link itself still goes in "amazonLink" in bridal-products.json.
+const STORE_NAMES: { linkContains: string; name: string }[] = [
+  // Add new companies here, one line each.
+  { linkContains: 'ayeshanails.com', name: 'AyeshaNails.com' },
+];
+
+const DEFAULT_STORE_NAME = 'Amazon.com';
+
+function storeNameFor(href: string): string {
+  const link = href.toLowerCase();
+  const match = STORE_NAMES.find((store) => link.includes(store.linkContains.toLowerCase()));
+  return match ? match.name : DEFAULT_STORE_NAME;
+}
+
 export default function AmazonButton({ href, productName, productSlug }: Props) {
   return (
     <a
@@ -27,7 +47,7 @@ export default function AmazonButton({ href, productName, productSlug }: Props) 
         }
       }}
     >
-      Purchase on Amazon.com
+      Purchase on {storeNameFor(href)}
     </a>
   );
 }
