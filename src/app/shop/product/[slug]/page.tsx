@@ -29,7 +29,6 @@ const COMING_SOON_SLUGS = [
   'velvet-nails-press-on-larimar-halal-nails',
   'jelly-glass-halal-nails-black',
   'toffee-ombre-nude-halal-nails',
-  'ayeshas-nail-rings',
 ];
 
 // Halal Nails kits sold on this site (not on Amazon). These pages get Product
