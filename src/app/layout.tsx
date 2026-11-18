@@ -27,9 +27,6 @@ export const metadata = {
     description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon.',
     type: 'website',
   },
-  other: {
-    'fo-verify': '03861d8d-0256-4bce-a6cd-06298dd6ffe3',
-  },
 }
 
 export default function RootLayout({
