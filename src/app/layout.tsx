@@ -16,7 +16,7 @@ const poppins = Poppins({
 export const metadata = {
   metadataBase: new URL('https://hijabibridal.com'),
   title: {
-    default:  'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Halal Nails',
+    default: 'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Halal Nails',
     template: '%s',
   },
   description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon. Free shipping, trusted seller.',
@@ -26,6 +26,9 @@ export const metadata = {
     title: 'Hijabi Bridal | Muslim Wedding Dresses, Muslim Lehengas & Dupattas',
     description: 'Shop premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, dupattas and more — curated for US brides on Amazon.',
     type: 'website',
+  },
+  other: {
+    'fo-verify': '03861d8d-0256-4bce-a6cd-06298dd6ffe3',
   },
 }
 
