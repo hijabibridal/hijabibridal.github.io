@@ -58,10 +58,26 @@ export default function RootLayout({
     "logo": "https://hijabibridal.com/images/hero-bridal.jpg",
     "description": "Hijabi Bridal is the premier destination for modest Muslim bridal wear in the United States. We curate Halal Nails, premium Muslim wedding dresses, Muslim lehengas, bridal hijabs, nikkah jewelry, and accessories available on Amazon.",
     "foundingDate": "2024",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States, United Kingdom, Australia, Canada, Dominican Republic, Germany, Austria, Belgium, France, Italy, Japan, Malaysia, Netherlands, New Zealand, Singapore, South Korea, Spain, Switzerland"
-    },
+    "areaServed": [
+      { "@type": "Country", "name": "US" },
+      { "@type": "Country", "name": "GB" },
+      { "@type": "Country", "name": "AU" },
+      { "@type": "Country", "name": "CA" },
+      { "@type": "Country", "name": "DO" },
+      { "@type": "Country", "name": "DE" },
+      { "@type": "Country", "name": "AT" },
+      { "@type": "Country", "name": "BE" },
+      { "@type": "Country", "name": "FR" },
+      { "@type": "Country", "name": "IT" },
+      { "@type": "Country", "name": "JP" },
+      { "@type": "Country", "name": "MY" },
+      { "@type": "Country", "name": "NL" },
+      { "@type": "Country", "name": "NZ" },
+      { "@type": "Country", "name": "SG" },
+      { "@type": "Country", "name": "KR" },
+      { "@type": "Country", "name": "ES" },
+      { "@type": "Country", "name": "CH" }
+    ],
     "knowsAbout": [
       "Muslim wedding dresses",
       "Hijabi bridal wear",
