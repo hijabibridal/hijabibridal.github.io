@@ -25,17 +25,34 @@ export async function generateMetadata(
   const article = typedBlogData?.articles?.find((a: any) => a.slug === slug);
   if (!article) return {};
 
+  const pageTitle = `${article.pageTitle} | Hijabi Bridal`;
+  const imageUrl = article.featuredImageUrl
+    ? `https://hijabibridal.com${article.featuredImageUrl}`
+    : null;
+  // Alt text for the share image: the article's own image alt text, or the
+  // article title if it has none.
+  const imageAlt = article.featuredImageAlt || article.pageTitle;
+
   return {
-    title: `${article.pageTitle} | Hijabi Bridal`,
+    title: pageTitle,
     description: article.description,
     openGraph: {
-      title: `${article.pageTitle} | Hijabi Bridal`,
+      title: pageTitle,
       description: article.description,
       type: "article",
       url: `https://hijabibridal.com/blog/${article.slug}`,
-      ...(article.featuredImageUrl
-        ? { images: [{ url: `https://hijabibridal.com${article.featuredImageUrl}` }] }
+      siteName: "Hijabi Bridal",
+      ...(article.datePublished ? { publishedTime: article.datePublished } : {}),
+      ...(article.dateModified || article.datePublished
+        ? { modifiedTime: article.dateModified || article.datePublished }
         : {}),
+      ...(imageUrl ? { images: [{ url: imageUrl, alt: imageAlt }] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: article.description,
+      ...(imageUrl ? { images: [{ url: imageUrl, alt: imageAlt }] } : {}),
     },
   };
 }
