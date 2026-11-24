@@ -118,8 +118,10 @@ function parsePrice(value: any): number {
 // Turns a file name from bridal-products.json into a web path.
 // "demo.mp4" -> "/videos/demo.mp4", "demo.webp" -> "/images/demo.webp".
 // Full web addresses and paths that already start with "/" are used as they are.
-const mediaUrl = (url: string, folder: 'images' | 'videos') =>
-  url.startsWith('http') || url.startsWith('/') ? url : `/${folder}/${url.replace(/^\//, '')}`;
+const mediaUrl = (url: string, folder: 'images' | 'videos') => {
+  if (url.startsWith('http') || url.startsWith('/')) return url;
+  const clean = url.replace(/^\//, '');
+  return folder === 'videos' ? `/images/videos/${clean}` : `/${folder}/${clean}`;
 
 // Everything in the "attributes" block of bridal-products.json is passed to
 // Google automatically, EXCEPT these keys (the page already handles them).
@@ -648,14 +650,15 @@ export default async function ProductPage({ params }: PageProps) {
               )}
 
               {/* Product video — only shown when the product has a "video" block */}
-              {videoUrl && (
-                <div className="mt-8 mb-8">
-                  <video
+              <video
                     src={videoUrl}
                     poster={videoPosterUrl || undefined}
-                    controls
+                    autoPlay
+                    muted
+                    loop
                     playsInline
-                    preload={videoPosterUrl ? 'none' : 'metadata'}
+                    controls
+                    preload="metadata"
                     aria-label={productVideo.title || `${product.name} video`}
                     className="aspect-square w-full max-w-md rounded-2xl border border-pink-100 bg-black object-contain shadow-sm"
                   />
