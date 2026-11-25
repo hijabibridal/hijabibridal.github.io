@@ -679,7 +679,7 @@
         "caption": "Clip and shape to customize Halal Nails length. Works well for short nails and short nail beds. Made of soft virgin ABS plastic that's dyed all the way through. Shapes just like real nails!",
         "uploadDate": "2026-11-24T00:00:00-04:00"
       },
-      "htmlBody": "",
+      "htmlBody": "htmlBody": "<p><div class=\"my-8 flex flex-col items-center\"><video src=\"/images/videos/custom_fake_nails.mp4\" poster=\"/images/custom_fake_nails.webp\" autoPlay muted loop playsInline controls preload=\"metadata\" aria-label=\"Make custom fake nails\" class=\"aspect-square w-full max-w-md rounded-2xl border border-pink-100 bg-black object-contain shadow-sm\"></video><p class=\"mt-3 text-sm text-gray-600\">Clip and file to customize Halal Nails. Just like real nails!</p></div><p><a href=\"https://hijabibridal.com/shop/product/halal-nails-berries\" class=\"text-[#db2777] font-bold hover:underline\">Shop our Halal Nails Winter Berries Kit.</a></p>",
       "FAQ_schema": "",
       "datePublished": "2026-11-24",
       "dateModified": "2026-11-24"
