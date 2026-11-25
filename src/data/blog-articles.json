@@ -679,8 +679,8 @@
         "caption": "Clip and shape to customize Halal Nails length. Works well for short nails and short nail beds. Made of soft virgin ABS plastic that's dyed all the way through. Shapes just like real nails!",
         "uploadDate": "2026-11-24T00:00:00-04:00"
       },
-      "htmlBody": "<p>Every nail bed has a slightly different length and curve. Watch how quickly you can clip and shape our short Halal Nails to make custom fake nails look just the way you want to make YOUR fingertips look elegant.</p><div class=\"my-8 flex flex-col items-center\"><video src=\"/images/videos/custom_fake_nails.mp4\" poster=\"/images/custom_fake_nails.webp\" autoPlay muted loop playsInline controls preload=\"metadata\" aria-label=\"Make custom fake nails\" class=\"aspect-square w-full max-w-md rounded-2xl border border-pink-100 bg-black object-contain shadow-sm\"></video><p class=\"mt-3 text-sm text-gray-600\">Clip and shape to customize Halal Nails. Just like real nails!</p></div><p><a href=\"https://hijabibridal.com/shop/product/halal-nails-berries\" class=\"text-[#db2777] font-bold hover:underline\">Shop our Halal Nails Winter Berries Kit.</a></p><h2>How to Shape Your Press-On Nails</h2><p>Start by sizing all ten nails before applying your silicone adhesive tabs. Apply the nails then use standard nail clippers to trim excess length, then smooth the free edge in one direction with a fine-grit nail file for a seamless, natural finish.</p>",
-      "FAQ_schema": "[{\"@type\": \"Question\", \"name\": \"Can you customize Halal Nails?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes! Our short, high-quality virgin plastic press-on nails can be trimmed with standard nail clippers and shaped with a nail file just like natural nails without chipping the paint or cracking or splitting the nail.\"}}]",
+      "htmlBody": "",
+      "FAQ_schema": "",
       "datePublished": "2026-11-24",
       "dateModified": "2026-11-24"
     }    
