@@ -244,7 +244,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </p>
       </header>
 
-      {article.featuredImageUrl && (
+      {/* Featured image on the article page. Add "hideFeaturedImage": true to an article in blog-articles.json to leave it off this page (for example a video watch page). The image is still used for the blog list card, the share image and the article's structured data. */}
+      {article.featuredImageUrl && !article.hideFeaturedImage && (
         <div className="mb-10 rounded-3xl overflow-hidden shadow-2xl relative bg-gray-50 h-[400px]">
           {article.productUrl ? (
             <Link href={article.productUrl.startsWith('/') ? article.productUrl : `/${article.productUrl}`} className="group cursor-pointer">
